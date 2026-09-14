@@ -1,0 +1,31 @@
+{
+  "status": "failed",
+  "error_type": "BudgetAdmissionError",
+  "message": "Comparison budget rejected before dispatch: arm_tokens",
+  "seconds": 447.2969999999914,
+  "accounting_before": {
+    "llm_requests": 3,
+    "total_tokens": 22445,
+    "llm_cost_usd": 0.028058100000000002,
+    "unresolved_reservation_usd": 0.0,
+    "usage_incomplete": false,
+    "web_requests": 0,
+    "web_payg_upper_usd": 0.0,
+    "token_count_requests": 0,
+    "arm_requests": 0,
+    "arm_tokens": 0
+  },
+  "accounting_after": {
+    "llm_requests": 18,
+    "total_tokens": 365566,
+    "llm_cost_usd": 0.3684514,
+    "unresolved_reservation_usd": 0.0,
+    "usage_incomplete": false,
+    "web_requests": 2,
+    "web_payg_upper_usd": 0.016,
+    "token_count_requests": 3,
+    "arm_requests": 15,
+    "arm_tokens": 343121
+  },
+  "needs_citation_review": null
+}

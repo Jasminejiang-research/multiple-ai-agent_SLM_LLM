@@ -1,0 +1,116 @@
+{
+  "audit_version": "saved-grounding-json-format-v1",
+  "created_at_utc": "2026-09-07T12:10:49.575633+00:00",
+  "case_id": "ai_education",
+  "logical_task_id": "research.v1",
+  "generation_stage": "grounding",
+  "model_calls": 0,
+  "source_files": {
+    "raw_response": {
+      "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v1\\run_01\\audit\\02_research_generate.raw.txt",
+      "sha256": "5c756866e750fa475c62c9a99b2fd78ffd1b20cc0300f2f18a14c5b78eb3522e",
+      "bytes": 24343
+    },
+    "service_usage": {
+      "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v1\\run_01\\audit\\02_research_generate.usage.json",
+      "sha256": "f681f919103ac2684fc256cf1da1a5696a35c414c7e9dffcd278d6847cdbceda",
+      "bytes": 601
+    },
+    "event_log": {
+      "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v1\\run_01\\probe\\research_probe\\events.jsonl",
+      "sha256": "6c92077be1f1dec83ec3c62d18e6861d71071674f61302f9b5c89ad283290029",
+      "bytes": 262812
+    },
+    "tokenizer": {
+      "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-v1\\setup\\tokenizer.json",
+      "sha256": "e2bad66439538cb4d5a7580680932432ed9ece9d3b8577e675512bdf11599253",
+      "bytes": 7153421
+    },
+    "tokenizer_provenance": {
+      "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-v1\\setup\\tokenizer_provenance.json",
+      "sha256": "0500b8581924b769f08212f3b45428a1024e7d334b997fc6ecec19b0ff16e7a4",
+      "bytes": 400
+    }
+  },
+  "exact_response_events": [
+    {
+      "event_id": "8a6592e1-545b-403b-af25-48fd5f716aff",
+      "kind": "physical_provider_diagnostic",
+      "occurred_at_utc": "2026-09-07T10:39:04.573298+00:00",
+      "exact_text_paths": [
+        [
+          "diagnostic",
+          "response",
+          "message",
+          "content"
+        ]
+      ]
+    },
+    {
+      "event_id": "825a1f4b-854b-4aa7-aafe-3e3aa7269b4a",
+      "kind": "call",
+      "occurred_at_utc": "2026-09-07T10:39:04.578120+00:00",
+      "exact_text_paths": [
+        [
+          "raw_output"
+        ]
+      ]
+    }
+  ],
+  "tokenizer_provenance": {
+    "model": "ibm-granite/granite-4.0-h-micro",
+    "revision": "d5f01a3ea75f088947be3aae039f4ad52837dfde",
+    "tokenizer_url": "https://huggingface.co/ibm-granite/granite-4.0-h-micro/resolve/d5f01a3ea75f088947be3aae039f4ad52837dfde/tokenizer.json",
+    "tokenizer_sha256": "e2bad66439538cb4d5a7580680932432ed9ece9d3b8577e675512bdf11599253",
+    "downloaded_at_utc": "2026-09-06T21:31:28.3178743Z"
+  },
+  "reproduction": {
+    "executable": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+    "script": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\validation\\audit_grounding_minify.py",
+    "script_sha256": "105a731581948336e5b0bc2e97e8f938ac1be5a087702511245105be50413e76",
+    "argv": [
+      "-B",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\validation\\audit_grounding_minify.py",
+      "--repo",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM",
+      "--output",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\validation"
+    ]
+  },
+  "service_measurement": {
+    "prompt_eval_count": 10806,
+    "output_tokens": 6055,
+    "finish_reason": "stop",
+    "total_seconds": 1240.198808,
+    "prefill_seconds": 213.896647,
+    "decode_seconds": 1026.199964,
+    "generation_tokens_per_second": 5.900409483935628,
+    "decode_fraction": 0.8274479521996122
+  },
+  "offline_comparison": {
+    "raw_characters": 23877,
+    "compact_characters": 19530,
+    "raw_reencoded_tokens": 6000,
+    "compact_reencoded_tokens": 4801,
+    "token_difference": 1199,
+    "fraction_of_raw_reencoded_tokens": 0.19983333333333334,
+    "service_minus_raw_reencoded_tokens": 55,
+    "json_values_equal": true,
+    "duplicate_raw_keys": false,
+    "annotation_groups": 7,
+    "claim_occurrences": 17,
+    "compact_utf8_sha256": "ccbaa691da7ca85756bac000a575def0e5c184309c1043fdc9e4eb35b0397ac0"
+  },
+  "hypothetical_projection": {
+    "saved_decode_seconds_if_generation_rate_unchanged": 203.20623564591247,
+    "actual_new_request_measured": false
+  },
+  "limitations": [
+    "6000 versus 6055 is offline re-encoding versus service-reported generation usage, not two conflicting service measurements.",
+    "The 55-token difference is not attributed to EOS, special tokens, or other causes without direct evidence.",
+    "Only JSON formatting changes. Every parsed field, string, metadata value, claim and reference remains unchanged.",
+    "The saved response failed canonical claim-identity validation. JSON equivalence does not make it a valid plan.",
+    "The time projection holds the measured decode rate constant; it is not actual model time saved, a latency guarantee, or proof of a full plan within 90 minutes.",
+    "Schema format bytes are not counted as input tokens. No provider call or historical artifact mutation is performed."
+  ]
+}

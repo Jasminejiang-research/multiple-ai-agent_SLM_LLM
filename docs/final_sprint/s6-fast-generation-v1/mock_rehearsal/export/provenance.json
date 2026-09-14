@@ -1,0 +1,68 @@
+{
+  "version": "s4-export-v1",
+  "kind": "synthetic_rehearsal",
+  "planned_rows": 8,
+  "inputs": [
+    {
+      "planned_id": "ai_education-A",
+      "path": "runs/ai_education-A/7d4a7dd0b7da4043bc2dfd959a767e6a/events.jsonl",
+      "sha256": "ede7ca78c88c03969a1acdf6e827f1650df10b5e0d79182537689e47573434d4"
+    },
+    {
+      "planned_id": "ai_education-D",
+      "path": "runs/ai_education-D/36b96cdf44ef42d88039837fa64ddbea/events.jsonl",
+      "sha256": "9b6b7629f580bce2b4b1ccd45a7a8f4abb61d846db79d270b8945438d45d65cd"
+    },
+    {
+      "planned_id": "ai_education-B",
+      "path": "runs/ai_education-B/486721ad0c194b78ba612b621a471b08/events.jsonl",
+      "sha256": "6c8587cef0a0924257caaedff5117f6bde86bf858f1d67c0ec7096525daf4a2d"
+    },
+    {
+      "planned_id": "ai_education-C",
+      "path": "runs/ai_education-C/274a619d129544d2b720acfed07a8826/events.jsonl",
+      "sha256": "c5e7ad8f4515fe874e0d9363b7bb97c35bd0d218fa2ab81dc812ef980e19864e"
+    },
+    {
+      "planned_id": "intelligent_ring-C",
+      "path": "runs/intelligent_ring-C/8c1016289d674a00944f9ba50e59755d/events.jsonl",
+      "sha256": "12770a2af0a02c59c1a183d04365d98d0fc0689542675a7cfd4da2c195b1f12d"
+    },
+    {
+      "planned_id": "intelligent_ring-B",
+      "path": "runs/intelligent_ring-B/f8a4eb3117b74d68a1c6cf3851479cf3/events.jsonl",
+      "sha256": "35a9f843587cb26258288eb5debf6a52e61a5b8f2c514eac26148276060ecb62"
+    },
+    {
+      "planned_id": "intelligent_ring-D",
+      "path": "runs/intelligent_ring-D/183d00be471049a5a75cace99744d0ae/events.jsonl",
+      "sha256": "68f2f2371db30d452e20e560b2502fb971a4ac4479f14da6f178bc78d330ee07"
+    },
+    {
+      "planned_id": "intelligent_ring-A",
+      "path": "runs/intelligent_ring-A/17625e16d9f74d21b50fb88eb3ec2ff1/events.jsonl",
+      "sha256": "bf845332b18088b2d2e4f1b2774827f34d4e115db80d1d3aa61fe6c8460f396e"
+    }
+  ],
+  "plan_sha256": "9b3f9375a643a6c6871e141010bb5b97d5c847543142b54a4832966471d33ca7",
+  "schedule_sha256": "465b755b0ad815aa629058695286a4991512ab966252c8f00068fa8005c2d21a",
+  "human_source": null,
+  "human_files": {},
+  "figure_count": 0,
+  "quality_results_available": 0,
+  "outputs": {
+    "attempts.csv": "15bcdfee7af62f36f47466b5ae08bfefb4a2719ca3a38b83638e0dab3c8ebe81",
+    "condition_summary.csv": "3878ad70420669addb4b26f5fb6a0bb2ea519a327180dc065bfc11946304dac4",
+    "failure_analysis.csv": "e75b996e1ca66b8d1dd96fc02a0f21c1d78fdb73440b0ead98ad782b85799e0e",
+    "handoffs.csv": "acc93480579d83ec414fbc424cbd4f248c79362b10c508dfecd2e75b3a52dc02",
+    "hidden_repeat_consistency.csv": "d06462c8e2c9d1f13786b9cdac0861852940abde138c9def566b931c49725f24",
+    "logical_tasks.csv": "3712d282f9e011b59118bd002f005ff69867565ab59a200f3d27b9a5196940fe",
+    "nodes.csv": "001fd2be8eda4d8f2aba87edbf3fcab412895534429e83021313ee7e0730e41f",
+    "paired_cases.csv": "921e5113cebdde3140f17169bbc646e17925e3ad43dc3610b066dfe0472f0bd3",
+    "paired_summary.csv": "d4a8e9e8b21f8ab7535e94409af9d25220aa995f373c0f00375b06e761b335b5",
+    "results_tables.md": "287f0798222b554356970ea484e3f7ae80c5e11fae0f5f2b099b58aef6f1f8b5",
+    "role_metrics.csv": "28d63dfd6bf18ef4ba8e507d9d23b35d93dfa09c9f83b88d93ead1931bd07269",
+    "route_trace.csv": "b33b451e4b87e98524e4880d141743313ec6cc94b60fb2c1a0cd1c222edf2b42",
+    "run_metrics.csv": "131dbd3257a301f926b5dd1bb5ffde326fb90f238ca4ed36f5acb8786247c2a2"
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "text": "Scenario meaning: The pilot tests if AI Tutor can provide more timely, personalized business-case reasoning feedback than existing study methods for MBA students. Risk: Uncertainty around adoption, cost-effectiveness, and learning impact. Decision: Based on low-end deterministic values, the pilot may not be financially viable (monthly loss of $6,000, ending cash of $30,000, break-even at 500 users)."
+}

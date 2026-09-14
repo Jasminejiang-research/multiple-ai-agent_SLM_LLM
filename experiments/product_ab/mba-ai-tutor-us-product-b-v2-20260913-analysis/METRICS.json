@@ -1,0 +1,263 @@
+{
+  "classification": "one_case_one_run_per_arm_exploratory_product_comparison",
+  "results": {
+    "arms": {
+      "B": {
+        "status": "accepted_with_issues",
+        "output_path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\mba-ai-tutor-us-product-b-v2-20260913\\B\\2026-09-13_ai_tutor_for_mba_students_product_ab_mba_ai_tutor_us_product_b_v2_20260913_b.md",
+        "audit_path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\mba-ai-tutor-us-product-b-v2-20260913\\B\\2026-09-13_ai_tutor_for_mba_students_product_ab_mba_ai_tutor_us_product_b_v2_20260913_b_audit.md",
+        "product_acceptance": {
+          "policy": "product-per-agent-one-correction-v1",
+          "corrections_allowed_per_agent": 1,
+          "corrections": {
+            "finance": 1,
+            "writer": 1,
+            "revision": 1
+          },
+          "correction_events": [
+            {
+              "stage": "finance",
+              "reason": "Invalid FinanceAssumptions output: revenue_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures\nunit_economics_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            },
+            {
+              "stage": "writer",
+              "reason": "Invalid ProposalDraftBatch1 output: ['target_customer']: ['target_customer']: target_customer: unknown source IDs ['web-3cda0b88a7c74848fcd7f4008dce776']; use exact provided IDs only; if evidence does not support the claim set evidence_status=\"needs_validation\" and clear claim.source_ids; never guess a replacement or change claim_type to an evidence status"
+            },
+            {
+              "stage": "revision",
+              "reason": "Invalid RevisedProposalBatch3 output: ['business_model']: business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            }
+          ],
+          "unresolved_issues": [
+            {
+              "stage": "finance",
+              "message": "Invalid FinanceAssumptions output: revenue_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures\nunit_economics_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            },
+            {
+              "stage": "finance",
+              "message": "revenue_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures\nunit_economics_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            },
+            {
+              "stage": "writer",
+              "message": "Invalid ProposalDraftBatch3 output: ['business_model']: business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            },
+            {
+              "stage": "writer",
+              "message": "['business_model']: business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            },
+            {
+              "stage": "writer",
+              "message": "business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            },
+            {
+              "stage": "critic",
+              "message": "business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            },
+            {
+              "stage": "revision",
+              "message": "Invalid LocalRepair_RevisedProposalBatch3 output: ['business_model']: business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            },
+            {
+              "stage": "revision",
+              "message": "['business_model']: business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            },
+            {
+              "stage": "revision",
+              "message": "Customer Validation Gap: Precise unmet needs, frequency, urgency, and willingness to pay of MBA students for an AI tutor remain unquantified and unsupported."
+            },
+            {
+              "stage": "revision",
+              "message": "Market Sizing Gap: Total Addressable Market (TAM), Serviceable Available Market (SAM), and Serviceable Obtainable Market (SOM) for an AI Tutor for MBA students are unquantified and unsupported."
+            },
+            {
+              "stage": "revision",
+              "message": "Vague Product Definition: Specific product features, delivery model, and unique pedagogical approach are undefined."
+            },
+            {
+              "stage": "revision",
+              "message": "Undefined Business Model & Financials: Key financial metrics (pricing, conversion rates, costs, margins, CAC, CLTV) are undefined and lack a quantitative model."
+            },
+            {
+              "stage": "revision",
+              "message": "Weak Go-to-Market Strategy: Lacks concrete customer acquisition logic, specific budgets, or expected conversion rates."
+            },
+            {
+              "stage": "revision",
+              "message": "Unquantified Regulatory Risk: Potential regulatory considerations or accreditation requirements for AI-enabled educational tools in US higher education are unknown."
+            },
+            {
+              "stage": "export",
+              "message": "business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            }
+          ],
+          "status": "accepted_with_issues"
+        },
+        "seconds": 398.7649999999994,
+        "accounting_before": {
+          "llm_requests": 0,
+          "total_tokens": 0,
+          "llm_cost_usd": 0.0,
+          "unresolved_reservation_usd": 0.0,
+          "usage_incomplete": false,
+          "web_requests": 0,
+          "web_payg_upper_usd": 0.0,
+          "token_count_requests": 0,
+          "arm_requests": 0,
+          "arm_tokens": 0
+        },
+        "accounting_after": {
+          "llm_requests": 17,
+          "total_tokens": 348078,
+          "llm_cost_usd": 0.3131198,
+          "unresolved_reservation_usd": 0.0,
+          "usage_incomplete": false,
+          "web_requests": 2,
+          "web_payg_upper_usd": 0.016,
+          "token_count_requests": 0,
+          "arm_requests": 17,
+          "arm_tokens": 348078
+        },
+        "needs_citation_review": null
+      }
+    },
+    "accounting": {
+      "llm_requests": 17,
+      "total_tokens": 348078,
+      "llm_cost_usd": 0.3131198,
+      "unresolved_reservation_usd": 0.0,
+      "usage_incomplete": false,
+      "web_requests": 2,
+      "web_payg_upper_usd": 0.016,
+      "token_count_requests": 0,
+      "arm_requests": 17,
+      "arm_tokens": 348078
+    },
+    "completed_at": "2026-09-13T11:45:38.313649+00:00"
+  },
+  "arms": {
+    "B": {
+      "status": "accepted_with_issues",
+      "seconds": 398.7649999999994,
+      "completed_responses": 17,
+      "usage": {
+        "candidates_token_count": 38248,
+        "prompt_token_count": 253216,
+        "thoughts_token_count": 56614,
+        "total_token_count": 348078
+      },
+      "model_cost_usd": 0.3131198,
+      "last_step": "export",
+      "completed_sections": 13,
+      "missing_sections": [],
+      "checkpoints": [
+        {
+          "batch": 1,
+          "path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\mba-ai-tutor-us-product-b-v2-20260913\\B\\writer_checkpoints\\41353552880988d55b7f8a2a497db209\\batch-1.json"
+        },
+        {
+          "batch": 2,
+          "path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\mba-ai-tutor-us-product-b-v2-20260913\\B\\writer_checkpoints\\41353552880988d55b7f8a2a497db209\\batch-2.json"
+        },
+        {
+          "batch": 3,
+          "path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\mba-ai-tutor-us-product-b-v2-20260913\\B\\writer_checkpoints\\41353552880988d55b7f8a2a497db209\\batch-3.json"
+        },
+        {
+          "batch": 4,
+          "path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\mba-ai-tutor-us-product-b-v2-20260913\\B\\writer_checkpoints\\41353552880988d55b7f8a2a497db209\\batch-4.json"
+        }
+      ],
+      "language_errors": {},
+      "section_characters": {
+        "executive_summary": 940,
+        "problem": 1030,
+        "target_customer": 1059,
+        "market_opportunity": 1191,
+        "solution": 852,
+        "value_proposition": 971,
+        "competitor_analysis": 1213,
+        "business_model": 1106,
+        "go_to_market_strategy": 1026,
+        "financial_assumptions": 1682,
+        "risks_and_mitigations": 2170,
+        "implementation_roadmap": 1581,
+        "appendix": 1887
+      },
+      "critic_ran": true,
+      "revision_ran": true,
+      "graph_nodes": [
+        "critic",
+        "export",
+        "finance",
+        "rag_retrieval",
+        "research",
+        "revision",
+        "seal_writer_recovery",
+        "strategy",
+        "supervisor",
+        "validator",
+        "writer"
+      ],
+      "web_sources": 10,
+      "missing_source_dates": 10,
+      "rag_documents": [
+        "investor_proposal_template.md",
+        "tam_sam_som.md",
+        "porter_five_forces.md"
+      ],
+      "evidence_status_counts": {
+        "assumption": 32,
+        "needs_validation": 10,
+        "unsupported": 14
+      },
+      "citation_failures": [],
+      "raw_writer_attempts": [
+        {
+          "call": "007",
+          "batch": 1,
+          "schema_valid": true,
+          "validation_error": "['target_customer']: target_customer: unknown source IDs ['web-3cda0b88a7c74848fcd7f4008dce776']; use exact provided IDs only; if evidence does not support the claim set evidence_status=\"needs_validation\" and clear claim.source_ids; never guess a replacement or change claim_type to an evidence status",
+          "quality_valid": false
+        },
+        {
+          "call": "008",
+          "batch": 1,
+          "kind": "local_section_patch",
+          "quality_valid": null,
+          "validation_note": "Partial correction: do not validate as a full batch. Merged checkpoints determine acceptance."
+        },
+        {
+          "call": "009",
+          "batch": 2,
+          "schema_valid": true,
+          "quality_valid": true,
+          "quality_scope": "Language and citation shape only; not full evidence provenance or financial acceptance. Consult checkpoints/failure."
+        },
+        {
+          "call": "010",
+          "batch": 3,
+          "schema_valid": true,
+          "quality_valid": true,
+          "quality_scope": "Language and citation shape only; not full evidence provenance or financial acceptance. Consult checkpoints/failure."
+        },
+        {
+          "call": "011",
+          "batch": 4,
+          "schema_valid": true,
+          "quality_valid": true,
+          "quality_scope": "Language and citation shape only; not full evidence provenance or financial acceptance. Consult checkpoints/failure."
+        },
+        {
+          "call": "016",
+          "batch": 4,
+          "kind": "local_section_patch",
+          "quality_valid": null,
+          "validation_note": "Partial correction: do not validate as a full batch. Merged checkpoints determine acceptance."
+        }
+      ],
+      "rejections": []
+    }
+  },
+  "response_token_sum": 348078,
+  "response_tokens_match_ledger": true
+}

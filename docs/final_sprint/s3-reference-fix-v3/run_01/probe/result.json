@@ -1,0 +1,126 @@
+{
+  "case_id": "ai_education",
+  "formal_eligible": false,
+  "formal_runs_started": 0,
+  "gemini_calls": 0,
+  "public_config_changed": false,
+  "complete_proposal_produced": false,
+  "phases": {
+    "native_schema_probe": {
+      "status": "passed",
+      "requested_entries": 100,
+      "schema_max_items": 2,
+      "observed_entries": 2,
+      "distinct_entries": 2,
+      "wire_alias_passed": true,
+      "raw_response": {
+        "model": "granite-h-micro-32k",
+        "created_at": "2026-09-07T08:40:01.1840498Z",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"financial_value_ids\": [\n    \"starting_cash\",\n    \"months\"\n  ],\n  \"verbatim_parent_text\": \"Demand requires validation.\"\n}"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 6757364500,
+        "load_duration": 2105494800,
+        "prompt_eval_count": 72,
+        "prompt_eval_duration": 1796385000,
+        "eval_count": 33,
+        "eval_duration": 2849238000
+      },
+      "claim": "Observed maxItems behavior only; proposal uniqueness is independently validated in code.",
+      "budget": {
+        "max_requests": 28,
+        "max_total_tokens": 446128,
+        "request_count": 1,
+        "retry_count": 0,
+        "remaining_requests": 27,
+        "remaining_tokens": 446023,
+        "exhausted": false,
+        "charged_total_tokens": 105,
+        "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+        "actual_prompt_tokens_known": 72,
+        "actual_output_tokens_known": 33,
+        "actual_total_tokens_known": 105,
+        "usage_missing_calls": 0,
+        "transport_retry_count": 0,
+        "structure_repair_request_count": 0,
+        "revision_request_count": 0,
+        "run_elapsed_seconds": 6.812999999994645,
+        "node_elapsed_seconds": null,
+        "node_scope_id": null
+      }
+    },
+    "research_probe": {
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "market_trends[0]: claim content anchor not found",
+      "budget": {
+        "max_requests": 27,
+        "max_total_tokens": 446023,
+        "request_count": 2,
+        "retry_count": 0,
+        "remaining_requests": 25,
+        "remaining_tokens": 428748,
+        "exhausted": false,
+        "charged_total_tokens": 17275,
+        "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+        "actual_prompt_tokens_known": 11607,
+        "actual_output_tokens_known": 5668,
+        "actual_total_tokens_known": 17275,
+        "usage_missing_calls": 0,
+        "transport_retry_count": 0,
+        "structure_repair_request_count": 1,
+        "revision_request_count": 0,
+        "run_elapsed_seconds": 888.8589999999676,
+        "node_elapsed_seconds": null,
+        "node_scope_id": null
+      }
+    },
+    "full_d": {
+      "status": "not_run",
+      "reason": "native/Research prerequisite did not pass"
+    }
+  },
+  "status": "failed",
+  "elapsed_seconds": 902.875,
+  "budget": {
+    "this_run_request_count": 3,
+    "this_run_charged_total_tokens": 17380,
+    "this_run_elapsed_seconds": 902.875,
+    "cumulative_request_count": 11,
+    "cumulative_charged_total_tokens": 71252,
+    "cumulative_elapsed_seconds": 4487.671000000002
+  },
+  "resources": {
+    "status": "passed",
+    "reason": null,
+    "sample_count": 125,
+    "sample_interval_seconds": 5.0,
+    "baseline": {
+      "ram_total_bytes": 16969424896,
+      "ram_available_bytes": 6697066496,
+      "pagefile_used_bytes": 400556032,
+      "gpu_used_bytes": 0,
+      "gpu_total_bytes": 2147483648,
+      "loaded_models": [],
+      "missing": {}
+    },
+    "maximum_observed_sample_gap_seconds": 8.078000000008615,
+    "min_available_ram_bytes": 3714478080,
+    "peak_ram_used_bytes": 13254946816,
+    "peak_gpu_used_bytes": 0,
+    "peak_pagefile_used_bytes": 411041792,
+    "peak_pagefile_delta_bytes": 10485760,
+    "missing_observations": []
+  },
+  "server_stop": {
+    "status": "owned_process_tree_terminated",
+    "pid": 544,
+    "lease_released": false,
+    "restart_requires_explicit_reconciliation": true
+  },
+  "deadline_fired": false,
+  "http_requests": 3
+}

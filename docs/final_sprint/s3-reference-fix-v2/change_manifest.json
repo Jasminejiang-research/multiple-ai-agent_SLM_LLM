@@ -1,0 +1,57 @@
+{
+  "changes": [
+    {
+      "path": "evaluation/s2_fixtures.py",
+      "before_sha256": "8faf2394ed6d5c4dd9f488de2525d8b39b05f854aa820f02083b2b61cae09347",
+      "after_sha256": "5c07dba2d632051a9de73a38db84f107d354505372c90de3d0657da72b6f4e22"
+    },
+    {
+      "path": "schemas/contract_outputs.py",
+      "before_sha256": "54564c7d3cb2cfc69bffa4ee5f00554a8ece157a7906b1d32b2ef3b3665309e1",
+      "after_sha256": "c4f995c72f43260e5f5ca37847c7bb052ff3affbcea5fc69dabbe7367a9acfb3"
+    },
+    {
+      "path": "slm/tests/test_granite_s3.py",
+      "before_sha256": "bb10bd951b881e306f492c2f6a24e168b79858f0de8922e3d3d3961b0596959d",
+      "after_sha256": "b2f308f87978af60a69e58c8d293dbb20da3f3a429d97c16140211675d48b5b2"
+    },
+    {
+      "path": "tests/test_generation_constraints.py",
+      "before_sha256": "0c1f50949a13d82bafd4d10ea006b00ac313a02701a0a9e729726ea0f891bb22",
+      "after_sha256": "5c0c61c2f5a7cb0772c521d73ac9d49196ae3c7febdece43b0f6d7f378d88468"
+    },
+    {
+      "path": "tests/test_grounding_generation.py",
+      "before_sha256": null,
+      "after_sha256": "862dc00c3dfb87d55581dd8aa3e4fe73a51f2a8140bfcd403a713797f5eb1fec"
+    },
+    {
+      "path": "tests/test_s2_review.py",
+      "before_sha256": "7656ecba67865101333cd0a55325d8ba8c2dff18a5e62c0abc9508c84255cee7",
+      "after_sha256": "1b1e4d0b492d05d6f2b180fdd3750f13134628d272f9ce86738019c91aa90de8"
+    },
+    {
+      "path": "tests/test_s4_evaluation.py",
+      "before_sha256": "b164d985115e384d39f8707d15269a60baf895946fa690eba94bf205821ce3e3",
+      "after_sha256": "44d424772f992b97216f3eaeea9984be20e0899a7f894405d856775d6d40a690"
+    },
+    {
+      "path": "workflow/contract_generation.py",
+      "before_sha256": "591e41434c6cb6b583f03889cfa103424208561458fa9df621acd5b5520a15ec",
+      "after_sha256": "dbf661d0d2628924e8c93d5d4d6b904bf364bc93febe2181f4881572a5dce7e2"
+    },
+    {
+      "path": "workflow/generation_constraints.py",
+      "before_sha256": "ed058028d4fc3dd33d0aafb2a1435fd6066c52a8b94c654047d83d86dd5b6cd2",
+      "after_sha256": "0adff2ffdfd5c4cfc77aa0b86347ee1d2cf5603881812ba7c176c106e348014f"
+    },
+    {
+      "path": "workflow/grounding_generation.py",
+      "before_sha256": null,
+      "after_sha256": "164789ba770c766927fb66a5b85b38e2d262c6424df2e32b794e405d5a73d9cc"
+    }
+  ],
+  "baseline_file_count": 251,
+  "prior_version": "s3-reference-fix-v1",
+  "public_budget_config_changed": false
+}

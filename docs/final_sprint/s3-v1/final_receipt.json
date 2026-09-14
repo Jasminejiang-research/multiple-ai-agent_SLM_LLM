@@ -1,0 +1,279 @@
+{
+  "package": "S3",
+  "status": "blocked_pending_user_decision",
+  "engineering_implemented": true,
+  "real_preflight": "no_go",
+  "recorded_at_utc": "2026-09-06T22:21:05.6961806Z",
+  "target": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM",
+  "offline_passed": 586,
+  "live_deselected": 25,
+  "subtests_passed": 3,
+  "preserved_source_file_count": 270,
+  "preserved_history": [
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/data/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/data/app.db",
+      "sha256": "4b34295d7591afdd35c845af57fdfa78c6bfbc22a7174abf9d3ba1618a6d1e53",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-09_amazon_20260709_145830_613114.md",
+      "sha256": "05df1a582ad8a58f4f4d486908a2777348592a3619ec6bcdbf3f68a9b2a07da2",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-09_picnic_20260709_135307.md",
+      "sha256": "2d06ad96b844650adc672315545a08fa306c9f7028705204c13cacbf8486ba38",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-16_apple_20260716_222015_607708.md",
+      "sha256": "16557dd651287f87e32ebb6a94df6676b12ff8249e8ad2854442e05cccd51f9a",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-17_apple_20260717_071222_225614.md",
+      "sha256": "283ee05076a0c604731cae9fb851adc0eb50418e332b91563f122ee90dafbdf2",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-23_picnic_20260723_130748_072819.md",
+      "sha256": "971b1a3e8bd9dc694e374f557c42198f5612a4f57cf72082f62efcf484071c97",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-28_apple_20260728_162013_501427.md",
+      "sha256": "6f0f67fac960855a427e07d6d3eb85b303c7081a9cefb9c5619bb120aacc1d3d",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-28_apple_20260728_170057_965025.md",
+      "sha256": "33fd7b0995345b514cb76d40b6149ad058bded8edc898bb2a0f4977436add6ea",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/picnic_fashion_20260708_211408.md",
+      "sha256": "a2231675d5e8e5f93c2dfa6b1553f9ed328145eb8e8c17e179aa5ce3ddebcc2c",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/picnic_fashion_20260709_055540.md",
+      "sha256": "8b8a0c12e3eb0526bf5adfc3d95a6aff49acf211796207fdc5347aa6eb51f52f",
+      "unchanged": true
+    }
+  ],
+  "authority_documents": [
+    {
+      "path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/sprint_plan_.md",
+      "sha256": "42c3a1e4574335b720e268e6d05f05f4af53a98a1d0d533ee752e950784e2b8b",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/@ai_agent_evaluation_metrics_spec.md",
+      "sha256": "e16d7f74999c49cb120d9d3ee224b0bba9e23e86abfec15c0d7de4ae47dff005",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/@multiple_ai_agent_optimization.md",
+      "sha256": "54d1b23a55543b882f55e8711da5326d7b9d3efb367755f1cee6442c6e4958c9",
+      "unchanged": true
+    }
+  ],
+  "final_expected_hashes": {
+    "docs/final_sprint/s3-v1/setup/tokenizer.json": "e2bad66439538cb4d5a7580680932432ed9ece9d3b8577e675512bdf11599253",
+    "docs/final_sprint/s3-v1/collect_evidence.py": "bff490a332e27ad788d5581db3127832a37d1f25b1b46bc01c504b1dfa218ef6",
+    "docs/final_sprint/s3-v1/setup/tokenizer_provenance.json": "0500b8581924b769f08212f3b45428a1024e7d334b997fc6ecec19b0ff16e7a4",
+    "slm/granite_provider.py": "883bd5a87c61d55931e5f21b694abaf4af663b7011b9ded7726ba5c6cb3a3bc3",
+    "docs/final_sprint/s3-v1/setup/server.stdout.log": "931111efb0264927b4ed5b39d81a4da7f4885b6d5c0c24f8885389076f0ca7a9",
+    "docs/final_sprint/s3-v1/stage_validation.txt": "02683beb136e01bddcf49a345f9f5e5428ca6dd519515e10b13898c09904ca05",
+    "slm/Modelfile.granite-h-micro-32k": "d350467edbc97aea40b0635904c63786b26dccf8021c3f41f2e816998ed765c5",
+    "slm/owned_ollama.py": "0b50ce35fa184f31c7284237902369d46213d19674d487cdc00a4269c1ec56bd",
+    "docs/final_sprint/s3-v1/S2_STATUS_ARCHIVE.md": "37315feb0e313d7639bf21ab9a9e89fda0ccd27167eaef3f0d66f83f60643538",
+    "slm/tests/test_granite_s3.py": "3783292062472f5a49de15f5d593a7cd60d7552ba0229f00e5bd456ed7dddc94",
+    "docs/final_sprint/s3-v1/setup/model_pull.log": "2110dae7bc521c03f094a7abbab336e61d0907aaffe05ad42b3ea65183ab60d9",
+    "docs/final_sprint/s3-v1/HANDOFF.md": "95cef0093a0f67ac52c1189d938b5e5326b0eb643d31df3cc76c0c5d23ca3d50",
+    "slm/README.md": "b3d60c5e339a5503a0db185ffc4a0378b66cec7dcaeb9dce6388eb221d9c3579",
+    "slm/resource_monitor.py": "21a977a850b4f1256a7c8839f0f55fd7279df58335c5025a801add24a6876bf5",
+    "slm/start_granite.ps1": "e95570021843b6a87cc57b2d58c99ffcc83d3074da720b12f33e62e2510e3d29",
+    "docs/final_sprint/s3-v1/setup/server_owner.json": "871ae25ebfea2d2b2fdc925fcbfa6932685c1a3c24398713d844af0b52774ee2",
+    "slm/granite_preflight.py": "910180a6fcff454f4cdfaba1204deadef39b8f82d4d54d5e9bf6ec6c6c39d436",
+    "docs/final_sprint/s3-v1/setup/model_show.json": "9e8027665fefadc6fd0e85b3538bab6b52570df0c96712c3a5ff6f6e3a490fa1",
+    "slm/granite_config.py": "3c852687859d82bc054f1400a40ec1b717f46e3ccce4d372e96c75ec2b5dded5",
+    "docs/final_sprint_status.md": "e63bc777d42053c61c0f7c6a920d479800aef091172ab8d6ec1a7e8d555f9356",
+    "docs/final_sprint/s3-v1/setup/initial_start.ps1": "3ed1ad2dde293e0d9a8cde0e45152ac7a23d145b7d5b02c0463726af665adf7e",
+    "docs/final_sprint/s3-v1/setup/model_create.log": "5a19b86fcb900b856e420123d6c86b3c8a8c1e7dc72989633b3e65df81c9adb1",
+    "docs/final_sprint/s3-v1/setup/server.stderr.log": "21c859ae8c2432feab9481c5587ed7e107b9cafaa9ffca2f06bab30b62713084",
+    "slm/configs/granite_preflight_v1.json": "12b9688b7da10d4ea7705bd6f94958f2daa66030d5a9df811c208d0a5602965e"
+  },
+  "report_files": [
+    {
+      "path": "docs/final_sprint/s3-v1/change_manifest.json",
+      "sha256": "47daf1381ccc457c9d6677e9e89855b2da34a48cc6c4524901f1a9f9ef05ddb0"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/collect_evidence.py",
+      "sha256": "bff490a332e27ad788d5581db3127832a37d1f25b1b46bc01c504b1dfa218ef6"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/evidence_audit.json",
+      "sha256": "6b2231a833c2172acd1fe6f34511fb3697016f5d89c11fb0c6fff5ab8817f090"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/final_docs_receipt.json",
+      "sha256": "4ea061b7467b9864fb85825790f9c523eb5a27a5bda7c979fab5aff07c7f2e6b"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/final_validation.txt",
+      "sha256": "b9d6cb0144cf76bb1fbce2ac0dea4f9be7bd73324660f442dd54ef52cf8c59ca"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/HANDOFF.md",
+      "sha256": "95cef0093a0f67ac52c1189d938b5e5326b0eb643d31df3cc76c0c5d23ca3d50"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/installation_receipt.json",
+      "sha256": "d1c89e6e9ac8e97f8c3f87289e553035a23f752154e28598e01c952796d8cadf"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/pid_fix_receipt.json",
+      "sha256": "9a9606a0ab63380b28ef540f9415f5cf24219b42ce00d0f72ad0333d41410f3d"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/S2_STATUS_ARCHIVE.md",
+      "sha256": "37315feb0e313d7639bf21ab9a9e89fda0ccd27167eaef3f0d66f83f60643538"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/shutdown_end_check.json",
+      "sha256": "05e0f119bdf0b4961448195c2910a48fcd474bb433852ee5c0725eaf9ac6b07b"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/stage_validation.txt",
+      "sha256": "02683beb136e01bddcf49a345f9f5e5428ca6dd519515e10b13898c09904ca05"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/startup_fix_receipt.json",
+      "sha256": "8779861b6621e7c41008c935b50686a9038df76d9840f035dbbc8ee49a6b967f"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/target_validation.txt",
+      "sha256": "6bdb454eb3bca2dee2f7af2957d30b45f7ad8ce801720d9b7a98631fb31970b3"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/real_preflight_01/events.jsonl",
+      "sha256": "fc2ced8400bd4f2a0ac0799f33da368a5bfafc25761a26805c5c27429b1b677c"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/real_preflight_01/result.json",
+      "sha256": "02afb02e7bda12f1ebb4c9aa592b4b426bbec00ce71744e4602f27c6b0b3c3f8"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/real_preflight_02/events.jsonl",
+      "sha256": "1886675066c37d50248c960a3f388694415f9d9d4e544964bca965203ae1743b"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/real_preflight_02/result.json",
+      "sha256": "e39c0c987589b5c3297d3b4bc9a690f82b1f2059d5c23ed2b009218d330bfab5"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/real_preflight_03/events.jsonl",
+      "sha256": "62eefed9a983c01b58a32b2a063341564e53e57ef73334c26bb638af1fc0c619"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/real_preflight_03/result.json",
+      "sha256": "5f2fe9bf0fac98c4e8006d0f042c5b0b46ec13b72ca9bc1821f9adead5c4803d"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/real_preflight_03/context/events.jsonl",
+      "sha256": "d6794e0d4fe40ba0a483accac1c97f2260c52b91330f670c943d4d47f34cb5a3"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/real_preflight_03/warmup/events.jsonl",
+      "sha256": "045ce8bf94dd8de2b44083604f0d6f7c0c88791a7a150e364ea4f0fa7e51abcc"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/initial_start.ps1",
+      "sha256": "3ed1ad2dde293e0d9a8cde0e45152ac7a23d145b7d5b02c0463726af665adf7e"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/model_create.log",
+      "sha256": "5a19b86fcb900b856e420123d6c86b3c8a8c1e7dc72989633b3e65df81c9adb1"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/model_pull.log",
+      "sha256": "2110dae7bc521c03f094a7abbab336e61d0907aaffe05ad42b3ea65183ab60d9"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/model_show.json",
+      "sha256": "9e8027665fefadc6fd0e85b3538bab6b52570df0c96712c3a5ff6f6e3a490fa1"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/server_owner.json",
+      "sha256": "871ae25ebfea2d2b2fdc925fcbfa6932685c1a3c24398713d844af0b52774ee2"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/server.stderr.log",
+      "sha256": "21c859ae8c2432feab9481c5587ed7e107b9cafaa9ffca2f06bab30b62713084"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/server.stdout.log",
+      "sha256": "931111efb0264927b4ed5b39d81a4da7f4885b6d5c0c24f8885389076f0ca7a9"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/tokenizer_provenance.json",
+      "sha256": "0500b8581924b769f08212f3b45428a1024e7d334b997fc6ecec19b0ff16e7a4"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/tokenizer.json",
+      "sha256": "e2bad66439538cb4d5a7580680932432ed9ece9d3b8577e675512bdf11599253"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup_02/server_owner.json",
+      "sha256": "6efe811ed1c1650301bd03039b871e7a9874350c2a0f56382acb32f1d4020f1e"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup_02/server.stderr.log",
+      "sha256": "fd2d1e04aa164ab406c3eb06f192f43f6bc4971180f7f4786070a6abc1979c94"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup_02/server.stdout.log",
+      "sha256": "702dcd453ce982de759efc04f1a9b6f9ca0647b2526e79919820c8cacb95895a"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup_03/server_owner.json",
+      "sha256": "518d2cc1f2de931c21132a52de9b9894606ba4fb59911acc04c9f4084c2279e8"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup_03/server.stderr.log",
+      "sha256": "23b0725733bec2facef0837c3d1b8a7507feee7534bb11abe281826e16e4c4d2"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup_03/server.stdout.log",
+      "sha256": "117b69891e57fadae3aa78229f3ddbd4d2f08ae03613bb25ec3d4a7670f5a182"
+    }
+  ],
+  "physical_model_calls": 2,
+  "gemini_calls": 0,
+  "formal_runs_started": 0,
+  "next_package": "S4",
+  "next_package_started": false,
+  "shutdown_end_check": {
+    "recorded_at_utc": "2026-09-06T22:21:05.6240570Z",
+    "remaining_ollama_processes": [],
+    "endpoint_reachable": false,
+    "quarantined_leases": [
+      {
+        "Name": "2fb24565ac96fa6667ae7aac126b1d1c01bd9ec999315b419e6010a19e5d9461.lease.json",
+        "Length": 137
+      }
+    ]
+  }
+}

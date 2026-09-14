@@ -1,0 +1,284 @@
+{
+  "package": "S1",
+  "status": "complete",
+  "recorded_at_utc": "2026-09-06T20:53:36.9669385Z",
+  "target": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM",
+  "validations": [
+    {
+      "name": "dependencies",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "passed": true
+    },
+    {
+      "name": "S1 targeted tests",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "passed": true
+    },
+    {
+      "name": "all offline tests",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "passed": true
+    },
+    {
+      "name": "S1 audit",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "passed": true
+    },
+    {
+      "name": "S0 integrity",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "passed": true
+    },
+    {
+      "name": "formal freeze guard",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "passed": true
+    }
+  ],
+  "installed_files": [
+    {
+      "path": "agents/research.py",
+      "sha256": "6805fd7a317f9c3449f05d78a7281b3872cb974aed69a71f96fae54f95c05bd4",
+      "verified": true
+    },
+    {
+      "path": "docs/final_sprint_status.md",
+      "sha256": "9bc4ba9d5572cf48c3ae1ca720618e37354f5e273c1dd5a651ee3eba218a1946",
+      "verified": true
+    },
+    {
+      "path": "docs/final_sprint/s1-v1/examples/contract_audit.json",
+      "sha256": "32f8182ac8094985cafab750cea7b63d7ad7698c5ef457c5a3224354bfdd8658",
+      "verified": true
+    },
+    {
+      "path": "docs/final_sprint/s1-v1/examples/packet_example.json",
+      "sha256": "36927c1c73b27bc5c2b9868e75325ad6bf5bdfa5b88f9c0cc54ae9bd825fce50",
+      "verified": true
+    },
+    {
+      "path": "docs/final_sprint/s1-v1/examples/proposal_schema.json",
+      "sha256": "515dfc756d35fa1aa83032d7cbb2f058ea4d0849304e0a888573960a8efceaa1",
+      "verified": true
+    },
+    {
+      "path": "docs/final_sprint/s1-v1/HANDOFF.md",
+      "sha256": "913788f39640586eb931ff179b37af91b3618f559d89c06db74967644d44a51f",
+      "verified": true
+    },
+    {
+      "path": "docs/final_sprint/s1-v1/S0_STATUS_ARCHIVE.md",
+      "sha256": "b50e322d873cc11228c0f0b64caf9bddf6993b1c4bd77bdc8244c4d73584aaa1",
+      "verified": true
+    },
+    {
+      "path": "evaluation/s1.py",
+      "sha256": "d50627903a6d99a94c4930bcc261c7dfb4e92bf60cde7beb2fae4125eb7a7f51",
+      "verified": true
+    },
+    {
+      "path": "rag/knowledge_base.py",
+      "sha256": "bb504c1c26c8757955e7fb93babadf303e1bb795067a7bbb8f372163a117e0bc",
+      "verified": true
+    },
+    {
+      "path": "rag/retriever.py",
+      "sha256": "a2c48994d2ec6d82ff9c6f9d6c0e0656cce752aa01165e708b6731f66e3cbbcf",
+      "verified": true
+    },
+    {
+      "path": "schemas/contract_outputs.py",
+      "sha256": "454ece510c6ecd8f372fc70f9c7176899f13d29221662f1b74d76c96b5a7c911",
+      "verified": true
+    },
+    {
+      "path": "schemas/evidence.py",
+      "sha256": "bac43ef43dc74c16226f41ab0d3976d628635df3f5c34024d8d3bf1f93cc1ee9",
+      "verified": true
+    },
+    {
+      "path": "schemas/financial.py",
+      "sha256": "6ff1f3cc87e0f597aa1771063b7a5700db525bbfdb77b75413ee4469ef742963",
+      "verified": true
+    },
+    {
+      "path": "slm/client.py",
+      "sha256": "85576fe684d8ccabdee3f58737aa9bc3a34c7a8b997c91e60282e141b78a5b93",
+      "verified": true
+    },
+    {
+      "path": "slm/factories.py",
+      "sha256": "860e1ae3467c4a8c76108997f9d6d13cf0aa49b58a48da8e83840bc2460ac304",
+      "verified": true
+    },
+    {
+      "path": "slm/schema_contract.py",
+      "sha256": "a5fa5343a88db6863ba1746659afcdf61a552a72f3bc14a5df697ac5d90ae23f",
+      "verified": true
+    },
+    {
+      "path": "slm/tests/test_s1_contract_adapters.py",
+      "sha256": "cf562412d54e36f30c1ddf4a54a257c5c26e2a6078d9847c86efd1225cc8b400",
+      "verified": true
+    },
+    {
+      "path": "tests/test_s1_contract.py",
+      "sha256": "842a50bd15462e9df5888af5bc3761a05f8246f7d148f605f3b7f008a43be29b",
+      "verified": true
+    },
+    {
+      "path": "tools/tavily_search.py",
+      "sha256": "36d8499406b7dcb02645037df7498a8153342706355a863f010335928feb991e",
+      "verified": true
+    },
+    {
+      "path": "tools/web_search.py",
+      "sha256": "024b459e2ac12aa4add5d4ab87e42756c51bdd8555eb19b794af99604d61ed75",
+      "verified": true
+    },
+    {
+      "path": "workflow/contract_context.py",
+      "sha256": "fd9b301e07e0154ad0c1dde88355025eec8ad7e0de855426fcbffc8314108782",
+      "verified": true
+    },
+    {
+      "path": "workflow/contract_generation.py",
+      "sha256": "21d6b7642d54b8711390983e8af2d6ffedc51c01ab83543472a3c2703500b692",
+      "verified": true
+    },
+    {
+      "path": "workflow/evidence_policy.py",
+      "sha256": "138d28e8701ce4653ad9628b6f5ba9efb78f677fe989a5598cdafa2dc14a259c",
+      "verified": true
+    },
+    {
+      "path": "workflow/finance_contract.py",
+      "sha256": "1d0c642ec6c0e708afe086430aa5584cb4dd83dd02e8a1eb30d85a54c7d8be09",
+      "verified": true
+    },
+    {
+      "path": "workflow/gemini_schema.py",
+      "sha256": "46d3233b5691a3556e69a0eef8d8e75a5781b33263276660595055a4e6b9fd54",
+      "verified": true
+    },
+    {
+      "path": "workflow/generation_batches.py",
+      "sha256": "ed6391a1bb943305b52ee5949b0e9a1bf24f5a4631df640d083652541001c098",
+      "verified": true
+    },
+    {
+      "path": "workflow/grounding.py",
+      "sha256": "7791ae4554ba8a9d49841753c907fed06347e87bc8409fa934687124e4d5b5a1",
+      "verified": true
+    },
+    {
+      "path": "workflow/llm_client.py",
+      "sha256": "8671afa0995f098d1641d2bfba5dbc871aa511ca61841f66a0f45a381de0a652",
+      "verified": true
+    },
+    {
+      "path": "workflow/nodes.py",
+      "sha256": "9a34bf4809feba90d4970dea136a7f0d6ab8afc90aec9d06d0c1aa36c5e36cd6",
+      "verified": true
+    },
+    {
+      "path": "workflow/schema_contract.py",
+      "sha256": "6ff659ba1f4ab2e644a0b633801499ead6d45a4f38e62000fdf0e8f8ae9b7fef",
+      "verified": true
+    },
+    {
+      "path": "workflow/state.py",
+      "sha256": "e1901aa08e62e89911139b7dfe9ef526acc6d44ab8886337b06006d7583a4e53",
+      "verified": true
+    }
+  ],
+  "authority_documents": [
+    {
+      "path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/sprint_plan_.md",
+      "sha256": "42c3a1e4574335b720e268e6d05f05f4af53a98a1d0d533ee752e950784e2b8b",
+      "matches_s0": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/@ai_agent_evaluation_metrics_spec.md",
+      "sha256": "e16d7f74999c49cb120d9d3ee224b0bba9e23e86abfec15c0d7de4ae47dff005",
+      "matches_s0": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/@multiple_ai_agent_optimization.md",
+      "sha256": "54d1b23a55543b882f55e8711da5326d7b9d3efb367755f1cee6442c6e4958c9",
+      "matches_s0": true
+    }
+  ],
+  "preserved_history": [
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/data/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/data/app.db",
+      "sha256": "4b34295d7591afdd35c845af57fdfa78c6bfbc22a7174abf9d3ba1618a6d1e53",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-09_amazon_20260709_145830_613114.md",
+      "sha256": "05df1a582ad8a58f4f4d486908a2777348592a3619ec6bcdbf3f68a9b2a07da2",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-09_picnic_20260709_135307.md",
+      "sha256": "2d06ad96b844650adc672315545a08fa306c9f7028705204c13cacbf8486ba38",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-16_apple_20260716_222015_607708.md",
+      "sha256": "16557dd651287f87e32ebb6a94df6676b12ff8249e8ad2854442e05cccd51f9a",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-17_apple_20260717_071222_225614.md",
+      "sha256": "283ee05076a0c604731cae9fb851adc0eb50418e332b91563f122ee90dafbdf2",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-23_picnic_20260723_130748_072819.md",
+      "sha256": "971b1a3e8bd9dc694e374f557c42198f5612a4f57cf72082f62efcf484071c97",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-28_apple_20260728_162013_501427.md",
+      "sha256": "6f0f67fac960855a427e07d6d3eb85b303c7081a9cefb9c5619bb120aacc1d3d",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-28_apple_20260728_170057_965025.md",
+      "sha256": "33fd7b0995345b514cb76d40b6149ad058bded8edc898bb2a0f4977436add6ea",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/picnic_fashion_20260708_211408.md",
+      "sha256": "a2231675d5e8e5f93c2dfa6b1553f9ed328145eb8e8c17e179aa5ce3ddebcc2c",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/picnic_fashion_20260709_055540.md",
+      "sha256": "8b8a0c12e3eb0526bf5adfc3d95a6aff49acf211796207fdc5347aa6eb51f52f",
+      "unchanged": true
+    }
+  ],
+  "model_calls": 0,
+  "formal_runs_started": 0,
+  "next_package": "S2",
+  "next_package_started": false
+}

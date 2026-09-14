@@ -1,0 +1,14 @@
+{
+  "observed_at_utc": "2026-09-07T07:47:30.6271456Z",
+  "available_ram_bytes": 7210401792,
+  "pagefile_usage": [
+    {
+      "Name": "C:\\pagefile.sys",
+      "CurrentUsage": 394
+    }
+  ],
+  "model_processes": 0,
+  "listeners": 0,
+  "active_leases": 0,
+  "public_config_sha256": "4e8bec9bd8f951c07268b2cedf78858e14194bb20168bba2bb197576ce8ae63f"
+}

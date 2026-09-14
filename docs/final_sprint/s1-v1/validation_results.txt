@@ -1,0 +1,128 @@
+S1 installed and validated at 2026-09-06T20:52:23.1361312Z
+All commands run from target repository. All model tests are offline mocks; no live generation.
+
+COMMAND: python -B -m pip check
+No broken requirements found.
+EXIT: 0; expected: 0
+
+COMMAND: python -B -m pytest -q tests/test_s1_contract.py slm/tests/test_s1_contract_adapters.py -p no:cacheprovider
+........................................................................ [ 96%]
+...                                                                      [100%]
+75 passed in 3.63s
+EXIT: 0; expected: 0
+
+COMMAND: python -B -m pytest -q tests slm/tests -p no:cacheprovider
+........................................................................ [ 15%]
+..................................................................... [ 31%]
+........................................................................ [ 47%]
+........................................................................ [ 63%]
+........................................................................ [ 79%]
+........................................................................ [ 95%]
+......................                                                   [100%]
+451 passed, 25 deselected, 3 subtests passed in 60.06s (0:01:00)
+EXIT: 0; expected: 0
+
+COMMAND: python -B -m evaluation.s1
+{
+  "package": "S1",
+  "kind": "offline_contract_audit",
+  "model_calls": 0,
+  "contract_version": "proposal-grounding-v1-s1",
+  "prompt_version": "grounded-generation-v1-s1",
+  "finance_version": "s0-case-formulas-v1",
+  "proposal_schema_sha256": "a19c27e3dc5a4669051bde870c0d32e9815bf690384a881638fcf9301d37762f",
+  "batches": [
+    {
+      "fields": [
+        "executive_summary",
+        "problem",
+        "target_customer",
+        "market_opportunity"
+      ],
+      "schema_sha256": "f99f91f0535c7376f2b01ce02a17963e105c250791104b324e032078e78febdc"
+    },
+    {
+      "fields": [
+        "solution",
+        "value_proposition",
+        "competitor_analysis"
+      ],
+      "schema_sha256": "fddc40203f1b547dd3ebeb2345b9eee5c3d8763240f9e0129cb94ba563311ec0"
+    },
+    {
+      "fields": [
+        "business_model",
+        "go_to_market_strategy",
+        "financial_assumptions"
+      ],
+      "schema_sha256": "2d718a1ef7eb346214fe8c21b8576e8d59420884637694bd82c9b69e371f9a26"
+    },
+    {
+      "fields": [
+        "risks_and_mitigations",
+        "implementation_roadmap",
+        "appendix"
+      ],
+      "schema_sha256": "0805de98b463c1e0f0fbd422d858a761502c90219fe7a94154f30b04e8dedd8d"
+    }
+  ],
+  "formal_execution_allowed": false,
+  "next_dependencies": [
+    "S2 gates/budget/events",
+    "S3 Granite preflight",
+    "S4 runner",
+    "case and runtime freeze"
+  ]
+}
+Verified two cases, four common conditions, 13 complete sections, 4/3/3/3 batches and frozen Decimal formulas.
+EXIT: 0; expected: 0
+
+COMMAND: python -B -m evaluation.s0
+{
+  "status": "valid_preparation",
+  "errors": [],
+  "pending": [
+    "formal code/model/config freeze is pending",
+    "runtime freeze missing: code_snapshot_hash",
+    "runtime freeze missing: prompt_version",
+    "runtime freeze missing: schema_version",
+    "runtime freeze missing: model_config_version",
+    "runtime freeze missing: max_output_tokens",
+    "runtime freeze missing: run_max_requests",
+    "runtime freeze missing: run_max_total_tokens",
+    "acceptance pending: S1",
+    "acceptance pending: S2",
+    "acceptance pending: S3_D_preflight",
+    "acceptance pending: S4",
+    "ai_education: complete brief/evidence awaiting user review",
+    "intelligent_ring: complete brief/evidence awaiting user review"
+  ],
+  "formal_execution_allowed": false,
+  "require_frozen": false
+}
+EXIT: 0; expected: 0
+
+COMMAND: python -B -m evaluation.s0 --require-frozen
+{
+  "status": "valid_preparation",
+  "errors": [],
+  "pending": [
+    "formal code/model/config freeze is pending",
+    "runtime freeze missing: code_snapshot_hash",
+    "runtime freeze missing: prompt_version",
+    "runtime freeze missing: schema_version",
+    "runtime freeze missing: model_config_version",
+    "runtime freeze missing: max_output_tokens",
+    "runtime freeze missing: run_max_requests",
+    "runtime freeze missing: run_max_total_tokens",
+    "acceptance pending: S1",
+    "acceptance pending: S2",
+    "acceptance pending: S3_D_preflight",
+    "acceptance pending: S4",
+    "ai_education: complete brief/evidence awaiting user review",
+    "intelligent_ring: complete brief/evidence awaiting user review"
+  ],
+  "formal_execution_allowed": false,
+  "require_frozen": true
+}
+EXIT: 2; expected: 2

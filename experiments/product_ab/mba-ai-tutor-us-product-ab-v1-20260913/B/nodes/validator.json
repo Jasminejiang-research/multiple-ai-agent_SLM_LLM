@@ -1,0 +1,12 @@
+{
+  "missing_info": [],
+  "current_step": "input_validator",
+  "product_acceptance": {
+    "policy": "product-per-agent-one-correction-v1",
+    "corrections_allowed_per_agent": 1,
+    "corrections": {},
+    "correction_events": [],
+    "unresolved_issues": [],
+    "status": "accepted"
+  }
+}

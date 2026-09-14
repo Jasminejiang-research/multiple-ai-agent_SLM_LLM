@@ -1,0 +1,251 @@
+{
+  "observed_at_utc": "2026-09-07T07:01:31.222565+00:00",
+  "status": "failed",
+  "complete_proposal_produced": false,
+  "elapsed_seconds": 2121.2030000000086,
+  "failed_node": {
+    "node": "research.generate",
+    "error_type": "StructuredOutputValidationError",
+    "status": "failed"
+  },
+  "budget": {
+    "max_requests": 36,
+    "max_total_tokens": 500000,
+    "request_count": 2,
+    "retry_count": 0,
+    "remaining_requests": 34,
+    "remaining_tokens": 476097,
+    "exhausted": false,
+    "charged_total_tokens": 23903,
+    "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+    "actual_prompt_tokens_known": 7519,
+    "actual_output_tokens_known": 16384,
+    "actual_total_tokens_known": 23903,
+    "usage_missing_calls": 0,
+    "transport_retry_count": 0,
+    "structure_repair_request_count": 1,
+    "revision_request_count": 0,
+    "run_elapsed_seconds": 2110.4529999999795,
+    "node_elapsed_seconds": null,
+    "node_scope_id": null
+  },
+  "deadline_fired": false,
+  "resources": {
+    "status": "passed",
+    "reason": null,
+    "sample_count": 293,
+    "sample_interval_seconds": 5.0,
+    "baseline": {
+      "ram_total_bytes": 16969424896,
+      "ram_available_bytes": 6084894720,
+      "pagefile_used_bytes": 405798912,
+      "gpu_used_bytes": 0,
+      "gpu_total_bytes": 2147483648,
+      "loaded_models": [],
+      "missing": {}
+    },
+    "maximum_observed_sample_gap_seconds": 8.34399999998277,
+    "min_available_ram_bytes": 3783307264,
+    "peak_ram_used_bytes": 13186117632,
+    "peak_gpu_used_bytes": 0,
+    "peak_pagefile_used_bytes": 425721856,
+    "peak_pagefile_delta_bytes": 19922944,
+    "missing_observations": []
+  },
+  "server_stop": {
+    "status": "owned_process_tree_terminated",
+    "pid": 21568,
+    "lease_released": false,
+    "restart_requires_explicit_reconciliation": true
+  },
+  "requests": [
+    {
+      "attempt_id": "929dad68-9d06-4fe3-901c-b5f75b0e0387",
+      "purpose": "generate",
+      "status": "invalid_output",
+      "elapsed_seconds": 1076.9679999999935,
+      "prompt_tokens": 3739,
+      "output_tokens": 8192,
+      "total_tokens": 11931,
+      "finish_reason": "length",
+      "error_type": "StructuredOutputValidationError",
+      "started_at_utc": "2026-09-07T06:23:29.993124+00:00",
+      "ended_at_utc": "2026-09-07T06:41:26.968725+00:00",
+      "http_status": 200,
+      "input_count_delta": 0,
+      "gpu_layers": 0,
+      "usage_raw": {
+        "model": "granite-h-micro-32k",
+        "created_at": "2026-09-07T06:41:26.9610296Z",
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 1076922462600,
+        "load_duration": 4676125100,
+        "prompt_eval_count": 3739,
+        "prompt_eval_cached_count": null,
+        "prompt_eval_duration": 104119965000,
+        "eval_count": 8192,
+        "eval_duration": 968078461000,
+        "timing_unit": "nanoseconds",
+        "requested_gpu_layers": 0,
+        "prefill_rate_basis": "all_input_tokens_cache_count_unavailable",
+        "prefill_tokens_per_second": 35.91049996991451,
+        "generation_tokens_per_second": 8.462124021990817
+      },
+      "raw_characters": 38449,
+      "raw_sha256": "930e5c078a0e3b497692983e4e89a47f114c27be06f6c0a76a0ffd7e93b61358",
+      "json_parse_error": "Unterminated string starting at: line 40 column 36176 (char 38440)",
+      "financial_array_start": 2275,
+      "financial_array_has_closing_bracket": false,
+      "complete_string_values_in_unclosed_array": 2110,
+      "most_common_values": [
+        [
+          "average_paying_users",
+          527
+        ],
+        [
+          "months",
+          527
+        ],
+        [
+          "fixed_operating_cost",
+          264
+        ],
+        [
+          "marketing_cost",
+          264
+        ],
+        [
+          "one_time_setup",
+          264
+        ],
+        [
+          "starting_cash",
+          263
+        ],
+        [
+          "subscription_price",
+          1
+        ]
+      ],
+      "raw_output_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-capability-v1\\run_01\\audit\\research_attempt_1.raw.txt",
+      "native_response_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-capability-v1\\run_01\\audit\\research_attempt_1.native_response.json"
+    },
+    {
+      "attempt_id": "5becda2c-645a-4133-8fb4-b6311e7d98a9",
+      "purpose": "structure_repair",
+      "status": "invalid_output",
+      "elapsed_seconds": 1033.2190000000119,
+      "prompt_tokens": 3780,
+      "output_tokens": 8192,
+      "total_tokens": 11972,
+      "finish_reason": "length",
+      "error_type": "StructuredOutputValidationError",
+      "started_at_utc": "2026-09-07T06:41:26.989065+00:00",
+      "ended_at_utc": "2026-09-07T06:58:40.197398+00:00",
+      "http_status": 200,
+      "input_count_delta": 0,
+      "gpu_layers": 0,
+      "usage_raw": {
+        "model": "granite-h-micro-32k",
+        "created_at": "2026-09-07T06:58:40.1887204Z",
+        "done": true,
+        "done_reason": "length",
+        "total_duration": 1033163415800,
+        "load_duration": 6148000,
+        "prompt_eval_count": 3780,
+        "prompt_eval_cached_count": null,
+        "prompt_eval_duration": 26232409000,
+        "eval_count": 8192,
+        "eval_duration": 1006759507000,
+        "timing_unit": "nanoseconds",
+        "requested_gpu_layers": 0,
+        "prefill_rate_basis": "all_input_tokens_cache_count_unavailable",
+        "prefill_tokens_per_second": 144.09656391069535,
+        "generation_tokens_per_second": 8.136997905697452
+      },
+      "raw_characters": 39435,
+      "raw_sha256": "5cfa63888bba1684964bc3f98db7169592a084165fbfeeae699732bd7d047193",
+      "json_parse_error": "Unterminated string starting at: line 40 column 37082 (char 39434)",
+      "financial_array_start": 2363,
+      "financial_array_has_closing_bracket": false,
+      "complete_string_values_in_unclosed_array": 2143,
+      "most_common_values": [
+        [
+          "average_paying_users",
+          306
+        ],
+        [
+          "months",
+          306
+        ],
+        [
+          "fixed_operating_cost",
+          306
+        ],
+        [
+          "marketing_cost",
+          306
+        ],
+        [
+          "one_time_setup",
+          306
+        ],
+        [
+          "starting_cash",
+          306
+        ],
+        [
+          "variable_cost",
+          306
+        ],
+        [
+          "subscription_price",
+          1
+        ]
+      ],
+      "raw_output_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-capability-v1\\run_01\\audit\\research_attempt_2.raw.txt",
+      "native_response_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-capability-v1\\run_01\\audit\\research_attempt_2.native_response.json"
+    }
+  ],
+  "snapshot_file_count": 182,
+  "snapshot_mismatches": [],
+  "original_source_file_count": 180,
+  "original_source_mismatches": [],
+  "public_config_sha256": "4e8bec9bd8f951c07268b2cedf78858e14194bb20168bba2bb197576ce8ae63f",
+  "public_config_unchanged": true,
+  "formal_eligible": false,
+  "formal_runs_started": 0,
+  "gemini_calls": 0,
+  "proposal_files": [],
+  "logical_tasks": [
+    {
+      "logical_task_id": "research.v1",
+      "role": "research",
+      "artifact_version": 1,
+      "schema_sha256": "bc41f168a11cb5e50a3da79e438b1df7466f8c896fb31e8886548cf9da7413ac",
+      "packet_sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+      "batch_number": null,
+      "first_physical_attempt_passed": false,
+      "first_output_passed": false,
+      "attempts": [
+        {
+          "index": 1,
+          "purpose": "generate",
+          "passed": false,
+          "prompt_sha256": "23da0cbb7f977bde7bb5fa364a6ad436a67391c0fc98822f4972cb55725fe412",
+          "error_type": "StructuredOutputValidationError",
+          "error": "provider output truncated"
+        },
+        {
+          "index": 2,
+          "purpose": "structure_repair",
+          "passed": false,
+          "prompt_sha256": "c4e70cc5a220047c390f7bcdb948d7a004881012e2545744ab70e11fd8c4fb58",
+          "error_type": "StructuredOutputValidationError",
+          "error": "provider output truncated"
+        }
+      ]
+    }
+  ]
+}

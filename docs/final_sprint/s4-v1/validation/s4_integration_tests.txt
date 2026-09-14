@@ -1,0 +1,72 @@
+........................................................................ [ 11%]
+..................................................................... [ 22%]
+........................................................................ [ 34%]
+........................................................................ [ 45%]
+........................................................................ [ 57%]
+........................................................................ [ 69%]
+..............................................................F......... [ 80%]
+.......F................................................................ [ 92%]
+................................................                         [100%]
+================================== FAILURES ===================================
+_______ test_partial_response_failure_is_durable_and_blocks_dependents ________
+
+tmp_path = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-integration-v1/test_partial_response_failure_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001C1D157C590>
+config = GraniteConfig(endpoint='http://127.0.0.1:11434', model_alias='granite-h-micro-32k', source_model='hf.co/ibm-granite/gr...econds=1200.0, run_seconds=5400.0, request_seconds=1200.0, sample_seconds=5.0, status='preflight_candidate_not_frozen')
+context = <workflow.contract_context.ContractContext object at 0x000001C1D157F620>
+
+    def test_partial_response_failure_is_durable_and_blocks_dependents(tmp_path,monkeypatch,config,context):
+        raw=dict(model=config.model_alias,message={"content":"{\n"},done=False)
+        def incomplete(request,index):
+            providers[0].last_diagnostic=dict(http_status=200,response=raw,endpoint="/api/chat")
+            raise ProviderFailure("OllamaMissingCompletion",request_finished=False)
+        runner,providers=make_runner(tmp_path,monkeypatch,config,context,before=incomplete)
+        result=runner.run()
+        assert result["status"]=="no_go" and result["model_calls"]==1
+        assert result["phases"]["warmup"]["error_type"]=="OllamaMissingCompletion"
+        events=replay_events(tmp_path/"run/warmup/events.jsonl")["events"]
+        diagnostics=[e["payload"] for e in events if e["kind"]=="native_provider_diagnostic"]
+>       assert diagnostics==[dict(http_status=200,response=raw,endpoint="/api/chat")]
+E       AssertionError: assert [{'attempt_id... '/api/chat'}] == [{'http_statu... '/api/chat'}]
+E         
+E         At index 0 diff: {'attempt_id': '5f676e0a-94b4-4739-b85a-4beee2f85f4b', 'diagnostic': {'http_status': 200, 'response': {'model': 'granite-h-micro-32k', 'message': {'content': '{\n'}, 'done': False}, 'endpoint': '/api/chat'}} != {'http_status': 200, 'response': {'model': 'granite-h-micro-32k', 'message': {'content': '{\n'}, 'done': False}, 'endpoint': '/api/chat'}
+E         Left contains one more item: {'http_status': 200, 'response': {'model': 'granite-h-micro-32k', 'message': {'content': '{\n'}, 'done': False}, 'endpoint': '/api/chat'}
+E         Use -v to get more diff
+
+slm\tests\test_granite_s3.py:312: AssertionError
+___________________ test_existing_code_does_not_import_slm ____________________
+
+    def test_existing_code_does_not_import_slm() -> None:
+        violations: list[str] = []
+    
+        for python_file in _python_files_outside_slm():
+            tree = ast.parse(
+                python_file.read_text(encoding="utf-8-sig"),
+                filename=str(python_file),
+            )
+            for node in ast.walk(tree):
+                imported_modules: list[str] = []
+                if isinstance(node, ast.Import):
+                    imported_modules.extend(alias.name for alias in node.names)
+                elif isinstance(node, ast.ImportFrom) and node.module:
+                    imported_modules.append(node.module)
+    
+                if any(
+                    module_name == "slm" or module_name.startswith("slm.")
+                    for module_name in imported_modules
+                ):
+                    relative_path = python_file.relative_to(REPOSITORY_ROOT)
+                    violations.append(f"{relative_path}:{node.lineno}")
+    
+>       assert not violations, (
+            "Existing code must not import the isolated slm package: "
+            + ", ".join(violations)
+        )
+E       AssertionError: Existing code must not import the isolated slm package: evaluation\s4_resources.py:5, evaluation\s4_runner.py:294, evaluation\s4_runner.py:423, evaluation\s4_runner.py:424, evaluation\s4_runner.py:425, evaluation\s4_runner.py:426
+E       assert not ['evaluation\\s4_resources.py:5', 'evaluation\\s4_runner.py:294', 'evaluation\\s4_runner.py:423', 'evaluation\\s4_runner.py:424', 'evaluation\\s4_runner.py:425', 'evaluation\\s4_runner.py:426']
+
+..\..\multiple-ai-agent_SLM_LLM\slm\tests\test_isolation.py:232: AssertionError
+=========================== short test summary info ===========================
+FAILED slm/tests/test_granite_s3.py::test_partial_response_failure_is_durable_and_blocks_dependents
+FAILED slm/tests/test_isolation.py::test_existing_code_does_not_import_slm - ...
+2 failed, 619 passed, 25 deselected, 3 subtests passed in 122.41s (0:02:02)

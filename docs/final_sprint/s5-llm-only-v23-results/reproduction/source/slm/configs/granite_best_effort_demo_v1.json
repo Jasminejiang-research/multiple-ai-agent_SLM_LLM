@@ -1,0 +1,29 @@
+{
+  "mode": "slm_best_effort_demo",
+  "endpoint": "http://127.0.0.1:11434",
+  "model_alias": "granite-h-micro-32k",
+  "source_model": "hf.co/ibm-granite/granite-4.0-h-micro-GGUF:Q4_K_M",
+  "quantization": "Q4_K_M",
+  "context_tokens": 32768,
+  "model_config_version": "granite-h-micro-q4km-32k-best-effort-demo-v1",
+  "gpu_layers": 0,
+  "context_probe_mode": "chat",
+  "temperature": 0,
+  "max_requests": 10,
+  "max_total_tokens": 80000,
+  "run_seconds": 1800,
+  "request_seconds": 300,
+  "max_prompt_chars": 12000,
+  "sample_seconds": 5,
+  "role_output_tokens": {
+    "research": 128,
+    "research_critic": 96,
+    "strategy": 128,
+    "strategy_critic": 96,
+    "finance": 128,
+    "finance_critic": 96,
+    "writer": 640,
+    "final_critic": 96
+  },
+  "status": "authorized_nonformal_product_demo"
+}

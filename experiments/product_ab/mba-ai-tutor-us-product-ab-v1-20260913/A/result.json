@@ -1,0 +1,59 @@
+{
+  "status": "accepted_with_issues",
+  "output_path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\mba-ai-tutor-us-product-ab-v1-20260913\\A\\proposal.md",
+  "audit_path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\mba-ai-tutor-us-product-ab-v1-20260913\\A\\audit_report.md",
+  "product_acceptance": {
+    "policy": "product-per-agent-one-correction-v1",
+    "corrections_allowed_per_agent": 1,
+    "corrections": {
+      "A": 1
+    },
+    "correction_events": [
+      {
+        "stage": "A",
+        "reason": "Invalid BusinessProposal output: funding_ask: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures\nfinancial_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures\nkey_metrics: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      }
+    ],
+    "unresolved_issues": [
+      {
+        "stage": "A",
+        "message": "Invalid BusinessProposal output: financial_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "A",
+        "message": "financial_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "A_export",
+        "message": "financial_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      }
+    ],
+    "status": "accepted_with_issues"
+  },
+  "seconds": 44.89100000000326,
+  "accounting_before": {
+    "llm_requests": 0,
+    "total_tokens": 0,
+    "llm_cost_usd": 0.0,
+    "unresolved_reservation_usd": 0.0,
+    "usage_incomplete": false,
+    "web_requests": 0,
+    "web_payg_upper_usd": 0.0,
+    "token_count_requests": 0,
+    "arm_requests": 0,
+    "arm_tokens": 0
+  },
+  "accounting_after": {
+    "llm_requests": 3,
+    "total_tokens": 22445,
+    "llm_cost_usd": 0.028058100000000002,
+    "unresolved_reservation_usd": 0.0,
+    "usage_incomplete": false,
+    "web_requests": 0,
+    "web_payg_upper_usd": 0.0,
+    "token_count_requests": 0,
+    "arm_requests": 3,
+    "arm_tokens": 22445
+  },
+  "needs_citation_review": null
+}

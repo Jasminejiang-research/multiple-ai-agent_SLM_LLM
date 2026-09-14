@@ -1,0 +1,204 @@
+{
+  "package": "S4",
+  "scope": "engineering_and_offline_only",
+  "formal_runs_started": 0,
+  "actual_model_calls": 0,
+  "D_preflight_started": false,
+  "public_budget_changed": false,
+  "planned_formal_slots": 8,
+  "synthetic_attempts": 86,
+  "synthetic_completed": 8,
+  "provider_counts_are_synthetic": true,
+  "human_reviews_filled": 0,
+  "dependencies": {
+    "pytest": "9.1.1",
+    "pydantic": "2.13.4",
+    "streamlit": "1.58.0",
+    "altair": "6.2.1",
+    "google-genai": "2.8.0",
+    "langgraph": "1.2.2",
+    "sqlalchemy": "2.0.51"
+  },
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "evaluation.s4",
+        "dry-run",
+        "--case-root",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s0-v1",
+        "--output-dir",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\dry_run"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "command_logs/01_dry-run.txt",
+      "sha256": "763d86b87faacf43d683f5126bd3bdb8a41551a39a7d3cb1fae742eefd1193a5"
+    },
+    {
+      "command": [
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "evaluation.s4",
+        "status",
+        "--experiment",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\dry_run"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "command_logs/02_status.txt",
+      "sha256": "763d86b87faacf43d683f5126bd3bdb8a41551a39a7d3cb1fae742eefd1193a5"
+    },
+    {
+      "command": [
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "evaluation.s4",
+        "resume",
+        "--experiment",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\dry_run"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "command_logs/03_resume.txt",
+      "sha256": "763d86b87faacf43d683f5126bd3bdb8a41551a39a7d3cb1fae742eefd1193a5"
+    },
+    {
+      "command": [
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "evaluation.s4",
+        "check-freeze",
+        "--experiment",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\dry_run"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "log": "command_logs/04_check-freeze.txt",
+      "sha256": "95b62a56bc625efffe0529addc9b548aedb59c83d5446a8f0069b272001f5176"
+    },
+    {
+      "command": [
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "evaluation.s4",
+        "execute",
+        "--experiment",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\dry_run"
+      ],
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "log": "command_logs/05_execute.txt",
+      "sha256": "dd532fb1d1b4b3f7f2f6bb3be488ef3e1d5017fac1f018b854fd48a3fdfd7ec9"
+    },
+    {
+      "command": [
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "evaluation.s4",
+        "export",
+        "--experiment",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\dry_run",
+        "--output-dir",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\dry_export",
+        "--no-figures"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "command_logs/06_export.txt",
+      "sha256": "ad5e279e4c78aea84eacb574918f3b3d3c53b69f55dcee557fd2ef24357fa289"
+    },
+    {
+      "command": [
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "evaluation.s4",
+        "blind-pack",
+        "--experiment",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\dry_run",
+        "--output-dir",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\review_templates"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "command_logs/07_blind-pack.txt",
+      "sha256": "c43eeb88a6354a55f0e1e95bd9f51c38a12632d4d7b0c1af53f2a7deba77ed4b"
+    },
+    {
+      "command": [
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "evaluation.s4",
+        "rehearsal",
+        "--case-root",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s0-v1",
+        "--output-dir",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\synthetic_rehearsal"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "command_logs/08_rehearsal.txt",
+      "sha256": "09f0b57769fafccfca50c0b1b5640c1232a2ec065292e2bafb11cd65171b83b2"
+    },
+    {
+      "command": [
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "evaluation.s4",
+        "resume",
+        "--experiment",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\synthetic_rehearsal"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "command_logs/09_resume.txt",
+      "sha256": "09f0b57769fafccfca50c0b1b5640c1232a2ec065292e2bafb11cd65171b83b2"
+    },
+    {
+      "command": [
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "evaluation.s4",
+        "blind-pack",
+        "--experiment",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\synthetic_rehearsal",
+        "--output-dir",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\synthetic_blind_pack"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "command_logs/10_blind-pack.txt",
+      "sha256": "a3b3e4b9ffa46f15edc3db1a8a16a67d7232a848cf92e4d94dc29da9bf498a7a"
+    },
+    {
+      "command": [
+        "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "evaluation.s4",
+        "export",
+        "--experiment",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\synthetic_rehearsal",
+        "--output-dir",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\synthetic_export",
+        "--human-pack",
+        "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\docs\\final_sprint\\s4-v1\\synthetic_blind_pack"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "command_logs/11_export.txt",
+      "sha256": "2fce440be3a1f902f98eb93bb7f89970a5af693e8d11f5bc4602e1bf0efbbbd1"
+    }
+  ]
+}

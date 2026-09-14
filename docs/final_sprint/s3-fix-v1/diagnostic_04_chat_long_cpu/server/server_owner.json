@@ -1,0 +1,9 @@
+{
+  "pid": 26640,
+  "started_at_utc": "2026-09-06T22:40:43.8217619Z",
+  "endpoint": "http://127.0.0.1:11434",
+  "num_parallel": 1,
+  "max_loaded_models": 1,
+  "context_length": 32768,
+  "generation_calls": 0
+}

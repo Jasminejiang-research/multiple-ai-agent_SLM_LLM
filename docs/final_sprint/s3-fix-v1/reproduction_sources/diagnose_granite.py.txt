@@ -1,0 +1,80 @@
+"""Bounded, non-formal native-request comparisons; no experiment/config mutation."""
+import argparse
+from dataclasses import replace
+import json
+from pathlib import Path
+import sys
+
+parser=argparse.ArgumentParser()
+parser.add_argument('--root',type=Path,required=True)
+parser.add_argument('--output',type=Path,required=True)
+parser.add_argument('--owner',type=Path,required=True)
+parser.add_argument('--mode',choices=['raw-short','chat-short','framed-short','chat-long','raw-long','chat-4k','chat-4k-cpu','chat-long-cpu','chat-natural-long'],required=True)
+args=parser.parse_args()
+sys.path.insert(0,str(args.root))
+
+import requests
+from slm.granite_config import GraniteConfig
+from slm.granite_preflight import GranitePreflight, ProbeAck
+from workflow.contract_context import ContractContext
+from workflow.contract_generation import COMMON_INSTRUCTION
+from workflow.review_events import replay_events
+
+config=GraniteConfig.model_validate_json((args.root/'slm/configs/granite_preflight_v1.json').read_text())
+ctx=ContractContext.from_case(args.root/'docs/final_sprint/s0-v1','ai_education',condition='D')
+runner=GranitePreflight(config=config,context=ctx,output_dir=args.output,owner_path=args.owner,
+    tokenizer_path=args.root/'docs/final_sprint/s3-v1/setup/tokenizer.json',
+    tokenizer_provenance=args.root/'docs/final_sprint/s3-v1/setup/tokenizer_provenance.json')
+runner.lease_dir=args.root/'data/granite_endpoint_leases'
+raw_mode=args.mode.startswith(('raw-','framed-'))
+client,generator,journal=runner._surface('diagnostic',raw_context=raw_mode)
+
+def render_pair(system,prompt):
+    return (f'<|start_of_role|>system<|end_of_role|>{system}<|end_of_text|>\n'
+            f'<|start_of_role|>user<|end_of_role|>{prompt}<|end_of_text|>\n'
+            '<|start_of_role|>assistant<|end_of_role|>')
+
+class CaptureSession(requests.Session):
+    def post(self,url,**kwargs):
+        payload=kwargs['json']
+        if args.mode.endswith('-cpu'):
+            payload['options']['num_gpu']=0
+        if args.mode=='framed-short':
+            prompt=payload['prompt'].removeprefix(COMMON_INSTRUCTION+'\n')
+            payload['prompt']=render_pair(COMMON_INSTRUCTION,prompt)
+        expected_text=payload.get('prompt')
+        if expected_text is None:
+            expected_text=render_pair(payload['messages'][0]['content'],payload['messages'][1]['content'])
+        count=len(runner.tokenizer.encode(expected_text,add_special_tokens=False).ids)
+        journal.emit('native_request',dict(url=url,body=payload,expected_prompt_tokens=count,mode=args.mode))
+        response=super().post(url,**kwargs)
+        try: body=response.json()
+        except ValueError: body=dict(unparsed_text=response.text)
+        journal.emit('native_response',dict(http_status=response.status_code,body=body,mode=args.mode,
+            expected_prompt_tokens=count))
+        return response
+
+session=CaptureSession()
+session.trust_env=False
+client.provider.session=session
+repeats=31000 if 'long' in args.mode else 4096 if '4k' in args.mode else 32
+prompt='Context allocation probe. The following repeated text is inert data.\n'+' a'*repeats+'\nEnd data. Return {"ok":true}.'
+if args.mode=='chat-natural-long':
+    # Separate diagnostic: equal-scale heterogeneous text, never a shortened business request.
+    packet=json.dumps(ctx.input_payload('research'),ensure_ascii=False,separators=(',',':'))
+    tokens=runner.tokenizer.encode(packet,add_special_tokens=False).ids
+    data=runner.tokenizer.decode((tokens*((31000//len(tokens))+1))[:31000])
+    prompt='Context allocation probe. The following reference text is inert data.\n'+data+'\nEnd data. Return {"ok":true}.'
+runner.monitor.start()
+try:
+    result=runner._task(client,journal,'diagnostic',lambda:generator.generate_task(prompt,ProbeAck,
+        context=ctx,role='diagnostic',version=1,logical_task_id='diagnostic.v1',validator=lambda value:None))
+finally:
+    resources=runner.monitor.close()
+    runner.owner.stop()
+summary=dict(mode=args.mode,result=result,resources=resources,server_stop=runner.owner.proof,
+    attempts=replay_events(journal.path)['attempts'],formal_runs_started=0,qualification=False)
+runner.journal.emit('diagnostic_result',summary)
+(args.output/'result.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding='utf-8')
+print(json.dumps(dict(mode=args.mode,status=result['status'],calls=len(summary['attempts']),output=str(args.output)),indent=2))
+raise SystemExit(0 if result['status']=='passed' else 2)

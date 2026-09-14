@@ -1,0 +1,24 @@
+﻿planned_id,case_id,condition,logical_task_id,role,first_output_passed,state,actual_attempt_count,attempt_ids
+ai_education-A,ai_education,A,single.compact.v1,single,True,observed,1,"[""cd4e062a-23ac-462b-9431-0323000aa689""]"
+ai_education-A,ai_education,A,terminal.v1,export,True,observed,0,[]
+ai_education-B,ai_education,B,final.critic.compact.v1,final_critic,True,observed,1,"[""cb0527f5-21b7-4ef0-9590-21ac36e8680f""]"
+ai_education-B,ai_education,B,finance.compact.v1,finance,True,observed,1,"[""beef7547-a00d-4c79-8d1d-7addba20facf""]"
+ai_education-B,ai_education,B,research.compact.v1,research,False,observed,2,"[""5ca3ab90-4c23-44de-b44b-0adf76335b79"", ""37941bf9-ce34-4d1b-94f9-805146848cd5""]"
+ai_education-B,ai_education,B,strategy.compact.v1,strategy,True,observed,1,"[""11c9b58a-4c42-4d21-925e-51c82ff84293""]"
+ai_education-B,ai_education,B,terminal.v1,export,True,observed,0,[]
+ai_education-B,ai_education,B,writer.compact.v1,writer,True,observed,1,"[""b959aa58-c27f-474f-9a64-861844212ee0""]"
+ai_education-C,ai_education,C,finance.compact.v1,finance,True,observed,1,"[""26133308-faeb-446c-b2c4-aa54152a670e""]"
+ai_education-C,ai_education,C,finance.critic.compact.v1,finance_critic,False,observed,2,"[""2cd00920-f034-403a-ad8c-6e3ea48e4035"", ""25f5a749-48c9-4f0e-9654-bf1190c62799""]"
+ai_education-C,ai_education,C,finance.revision.v2,Revision,False,observed,2,"[""37405b44-4f63-47f5-9d81-09cf1935d616"", ""8dfb5cd7-330d-48af-a747-4be63fdd2b24""]"
+ai_education-C,ai_education,C,research.compact.v1,research,False,observed,2,"[""f0bd5a67-e5d8-442f-97ae-a9296ad479e0"", ""c29c2f82-a924-4cb9-9abf-a0d9633102e4""]"
+ai_education-C,ai_education,C,research.critic.compact.v1,research_critic,True,observed,1,"[""b5ea40b0-1b02-43ff-a5c8-8c4d30df978f""]"
+ai_education-C,ai_education,C,strategy.compact.v1,strategy,True,observed,1,"[""9dcfc92a-8248-4767-963b-a44a60d9a74a""]"
+ai_education-C,ai_education,C,strategy.critic.compact.v1,strategy_critic,True,observed,1,"[""71df6de4-9f72-46cc-824c-f8e1e4e516c1""]"
+intelligent_ring-C,intelligent_ring,C,research.compact.v1,research,False,observed,2,"[""30116826-b697-48c0-a9b1-18b1e4a610b0"", ""603c307a-ad47-4517-a134-5554eb7950de""]"
+intelligent_ring-B,intelligent_ring,B,final.critic.compact.v1,final_critic,True,observed,1,"[""18a410f0-a4d3-42db-8b32-4e9b4c076bc7""]"
+intelligent_ring-B,intelligent_ring,B,finance.compact.v1,finance,True,observed,1,"[""a603cad7-2dd4-4bf5-9e80-773bf91b5b2d""]"
+intelligent_ring-B,intelligent_ring,B,research.compact.v1,research,True,observed,1,"[""91c2c2b2-8358-4b63-9860-83143bfbeb03""]"
+intelligent_ring-B,intelligent_ring,B,strategy.compact.v1,strategy,False,observed,2,"[""df00539e-daff-48f8-82e4-2cc20dbae8e2"", ""2aea1ef1-54d0-4f98-9c7e-52cf828982e6""]"
+intelligent_ring-B,intelligent_ring,B,terminal.v1,export,True,observed,0,[]
+intelligent_ring-B,intelligent_ring,B,writer.compact.v1,writer,True,observed,1,"[""605d4516-0cb3-4280-a931-9500ca377022""]"
+intelligent_ring-A,intelligent_ring,A,single.compact.v1,single,False,observed,1,"[""5b3ebca8-0d02-406e-9d3f-ed68c5213ffd""]"

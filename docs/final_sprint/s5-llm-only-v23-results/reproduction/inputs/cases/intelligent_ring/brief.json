@@ -1,0 +1,145 @@
+{
+  "company_or_product_name": "Apple intelligent ring category-entry scenario (hypothetical)",
+  "industry": "Consumer hardware / smart rings / general wellness",
+  "target_customer": "US adult smartphone users considering a screen-free wellness wearable; iPhone affinity is a segment hypothesis, not demonstrated willingness to buy.",
+  "problem": "Assess whether an additional ring form factor would meet a distinct wellness tracking need despite existing wearables and competitor products. Unmet demand and incremental customer value are unverified.",
+  "solution": "Evaluate a hypothetical ring and companion app for general wellness trends and sleep/activity feedback. Do not assert that Apple has announced this product, that integrations already exist, or that the proposed device diagnoses or treats disease.",
+  "business_model": "Hypothetical hardware sale plus optional monthly analytics subscription; compare the trade-off to competitors using supplied sources and clearly marked modeling assumptions.",
+  "geography": "United States only; bounded pilot category-entry proposal",
+  "proposal_goal": "Prepare a management consulting proposal recommending go / conditional go / no-go for a bounded ring pilot, with differentiation, financial scenarios, risks and a staged roadmap.",
+  "stage": "Hypothetical category study derived from the legacy APPLE example. No Apple product roadmap, internal budget, supplier quote, regulatory clearance or test evidence is supplied.",
+  "known_competitors": [
+    "Oura membership offering",
+    "Samsung Galaxy Ring (2024 launch reference)"
+  ],
+  "additional_context": {
+    "language": "English",
+    "horizon": "12 months after hypothetical launch; no claim that projections are forecasts",
+    "evidence_policy": "Use only the supplied frozen packet. No real-time browsing. Distinguish externally supported facts, brief assumptions, calculations and recommendations. Unknown market size or costs must remain unknown, with a validation action.",
+    "output_requirements": "Produce the common complete 13-section proposal, trace decision-critical claims to packet source IDs and anchors, show confidence reasons and assumptions, and provide a reasoned go / conditional go / no-go recommendation.",
+    "financial_policy": "All numeric inputs below are Codex-proposed scenario assumptions approved by the user for the frozen experiment, not external facts or external facts. USD nominal, taxes/interest/discounting excluded; no currency conversion; no invented CAC/churn or supplier quotes."
+  },
+  "decision_questions": [
+    "Is there a defensible ring use case beyond existing wearable offerings?",
+    "How do hardware plus subscription and no-subscription approaches affect the assumed business model?",
+    "How sensitive are year-one contribution and funding needs to unit volume?",
+    "Which engineering, privacy, safety, supply-chain and applicable regulatory checks must precede commercial claims?"
+  ],
+  "constraints": [
+    "No medical diagnosis, disease prediction or clinical efficacy claim for the proposed product.",
+    "Do not imply automatic FDA exemption or clearance; the source is a limited general-wellness guidance summary.",
+    "No assumed access to Apple installed-base figures, privileged integrations, brand conversion rate or internal data.",
+    "12-month pilot scenario, with discovery, engineering validation, limited pilot and conditional launch milestones; budget is a modeling assumption, not an actual Apple allocation."
+  ],
+  "financial_inputs": {
+    "starting_cash": {
+      "value": 1000000,
+      "unit": "USD",
+      "currency": "USD",
+      "period": "opening",
+      "origin": "assumption",
+      "review_status": "approved",
+      "source_ids": []
+    },
+    "hardware_price": {
+      "value": 299,
+      "unit": "USD/device",
+      "currency": "USD",
+      "period": "sale",
+      "origin": "assumption",
+      "review_status": "approved",
+      "source_ids": []
+    },
+    "unit_manufacturing_cost": {
+      "value": 140,
+      "unit": "USD/device",
+      "currency": "USD",
+      "period": "sale",
+      "origin": "assumption",
+      "review_status": "approved",
+      "source_ids": []
+    },
+    "unit_logistics_cost": {
+      "value": 15,
+      "unit": "USD/device",
+      "currency": "USD",
+      "period": "sale",
+      "origin": "assumption",
+      "review_status": "approved",
+      "source_ids": []
+    },
+    "unit_warranty_return_reserve": {
+      "value": 15,
+      "unit": "USD/device",
+      "currency": "USD",
+      "period": "sale",
+      "origin": "assumption",
+      "review_status": "approved",
+      "source_ids": []
+    },
+    "subscription_price": {
+      "value": 4.99,
+      "unit": "USD/subscriber/month",
+      "currency": "USD",
+      "period": "month",
+      "origin": "assumption",
+      "review_status": "approved",
+      "source_ids": []
+    },
+    "subscription_variable_cost": {
+      "value": 1,
+      "unit": "USD/subscriber/month",
+      "currency": "USD",
+      "period": "month",
+      "origin": "assumption",
+      "review_status": "approved",
+      "source_ids": []
+    },
+    "subscription_attach_rate": {
+      "value": 0.4,
+      "unit": "fraction",
+      "currency": null,
+      "period": "year_1",
+      "origin": "assumption",
+      "review_status": "approved",
+      "source_ids": []
+    },
+    "average_paid_subscription_months": {
+      "value": 6,
+      "unit": "months/subscriber",
+      "currency": null,
+      "period": "year_1",
+      "origin": "assumption",
+      "review_status": "approved",
+      "source_ids": []
+    },
+    "fixed_launch_cost": {
+      "value": 350000,
+      "unit": "USD",
+      "currency": "USD",
+      "period": "year_1",
+      "origin": "assumption",
+      "review_status": "approved",
+      "source_ids": []
+    },
+    "marketing_cost": {
+      "value": 90000,
+      "unit": "USD",
+      "currency": "USD",
+      "period": "year_1",
+      "origin": "assumption",
+      "review_status": "approved",
+      "source_ids": []
+    },
+    "units_sold": {
+      "low": 500,
+      "base": 1000,
+      "high": 2000,
+      "unit": "devices",
+      "period": "year_1",
+      "origin": "assumption",
+      "review_status": "approved"
+    },
+    "cost_scope": "Fixed launch cost includes tooling, team, design and compliance preparation; marketing is separate. Unit reserve is an expense allowance, not both a revenue reduction and a cost. No unsold inventory or receivable timing modeled; cash is simplified scenario cash, not a full working-capital model."
+  }
+}

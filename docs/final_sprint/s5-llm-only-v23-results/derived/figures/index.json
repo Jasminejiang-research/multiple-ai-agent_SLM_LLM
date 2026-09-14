@@ -1,0 +1,101 @@
+[
+  {
+    "metric": "completion",
+    "observed_values": 8,
+    "spec": "completion.vl.json",
+    "standalone_preview": "completion.html"
+  },
+  {
+    "metric": "mvp30_material",
+    "observed_values": 6,
+    "spec": "mvp30_material.vl.json",
+    "standalone_preview": "mvp30_material.html"
+  },
+  {
+    "metric": "valid_plan60",
+    "observed_values": 6,
+    "spec": "valid_plan60.vl.json",
+    "standalone_preview": "valid_plan60.html"
+  },
+  {
+    "metric": "first_mvp30_material_seconds",
+    "observed_values": 3,
+    "spec": "first_mvp30_material_seconds.vl.json",
+    "standalone_preview": "first_mvp30_material_seconds.html"
+  },
+  {
+    "metric": "first_contract",
+    "observed_values": 6,
+    "spec": "first_contract.vl.json",
+    "standalone_preview": "first_contract.html"
+  },
+  {
+    "metric": "handoff",
+    "observed_values": 4,
+    "spec": "handoff.vl.json",
+    "standalone_preview": "handoff.html"
+  },
+  {
+    "metric": "review_token_share",
+    "observed_values": 4,
+    "spec": "review_token_share.vl.json",
+    "standalone_preview": "review_token_share.html"
+  },
+  {
+    "metric": "first_valid_plan_seconds",
+    "observed_values": 3,
+    "spec": "first_valid_plan_seconds.vl.json",
+    "standalone_preview": "first_valid_plan_seconds.html"
+  },
+  {
+    "metric": "request_count",
+    "observed_values": 6,
+    "spec": "request_count.vl.json",
+    "standalone_preview": "request_count.html"
+  },
+  {
+    "metric": "total_tokens",
+    "observed_values": 6,
+    "spec": "total_tokens.vl.json",
+    "standalone_preview": "total_tokens.html"
+  },
+  {
+    "metric": "transport_retry_count",
+    "observed_values": 6,
+    "spec": "transport_retry_count.vl.json",
+    "standalone_preview": "transport_retry_count.html"
+  },
+  {
+    "metric": "peak_ram_bytes",
+    "observed_values": 6,
+    "spec": "peak_ram_bytes.vl.json",
+    "standalone_preview": "peak_ram_bytes.html"
+  },
+  {
+    "metric": "peak_vram_bytes",
+    "observed_values": 6,
+    "spec": "peak_vram_bytes.vl.json",
+    "standalone_preview": "peak_vram_bytes.html"
+  },
+  {
+    "metric": "peak_pagefile_bytes",
+    "observed_values": 6,
+    "spec": "peak_pagefile_bytes.vl.json",
+    "standalone_preview": "peak_pagefile_bytes.html"
+  },
+  {
+    "metric": "role_request_count",
+    "observed_values": 23,
+    "spec": "role_request_count.vl.json"
+  },
+  {
+    "metric": "role_total_tokens",
+    "observed_values": 23,
+    "spec": "role_total_tokens.vl.json"
+  },
+  {
+    "metric": "role_first_contract",
+    "observed_values": 23,
+    "spec": "role_first_contract.vl.json"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "package": "S3",
+  "status": "no_go",
+  "phases": {
+    "initialization": {
+      "status": "failed",
+      "error_type": "TypeError"
+    }
+  },
+  "model_calls": 0,
+  "formal_runs_started": 0,
+  "next_package_started": false,
+  "server_stop": {
+    "status": "owned_process_tree_terminated",
+    "pid": 7828,
+    "lease_released": false,
+    "restart_requires_explicit_reconciliation": true
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "g1": {
+    "claims": [
+      {
+        "claim_id": "research.v1.g1.c1",
+        "parent_claim_id": null,
+        "claim_text": "US adult learners aged 18+ in MBA programs represent a niche but growing segment; historical graduate degree completions indicate demand but not addressable demand for a new AI-driven service.",
+        "claim_type": "factual",
+        "claim_domain": "market_trends",
+        "evidence_status": "assumption",
+        "source_support": "direct",
+        "source_quality": 0.85,
+        "source_recency": 0.8,
+        "support_assessed_by": "model_proposed",
+        "critic_status": "not_reviewed",
+        "decision_critical": true,
+        "high_impact": true,
+        "conflict": false,
+        "pruned": false,
+        "major_issue": false,
+        "confidence": "medium",
+        "confidence_reason": "assumption_dominant",
+        "financial_value_ids": [],
+        "premise": "NCES data shows 880,200 master's degrees in 2021-22, 23% in business fields, but these are broader than MBA and do not confirm demand for a specialized AI tutor. Evidence from EDU-02 shows 16% growth ",
+        "artifact_version": 1,
+        "body_span_id": "bf6abceffc5f21e01_68d8ff4f",
+        "evidence_span_ids": ["ef6abceffc5f21e01_1"]
+      }
+    ],
+    "confidence_reason": "assumption_dominant",
+    "confidence": "medium"
+  },
+  "g2": {
+    "claims": [
+      {
+        "claim_id": "research.v1.g2.c1",
+        "parent_claim_id": null,
+        "claim_text": "MBA students require timely, personalized case-reasoning feedback beyond generic tutoring; willingness-to-pay for a $19/month subscription is unverified but a premium subscription model may be viable.",
+        "claim_type": "factual",
+        "claim_domain": "customer_notes",
+        "evidence_status": "assumption",
+        "source_support": "direct",
+        "source_quality": 0.85,
+        "source_recency": 0.8,
+        "support_assessed_by": "model_proposed",
+        "critic_status": "not_reviewed",
+        "decision_critical": true,
+        "high_impact": true,
+        "conflict": false,
+        "pruned": false,
+        "major_issue": false,
+        "confidence": "medium",
+        "confidence_reason": "assumption_dominant",
+        "financial_value_ids": [],
+        "premise": "Khanmigo pricing shows $4/month for comparable tutoring; AI Tutor proposes $19/month with case-specific coaching, suggesting potential premium pricing if willingness-to-pay can be validated.",
+        "artifact_version": 1,
+        "body_span_id": "bf6abceffc5f21e01_d0759b77",
+        "evidence_span_ids": ["ef6abceffc5f21e01_2"]
+      }
+    ],
+    "confidence_reason": "assumption_dominant",
+    "confidence": "medium"
+  },
+  "g3": {
+    "claims": [
+      {
+        "claim_id": "research.v1.g3.c1",
+        "parent_claim_id": null,
+        "claim_text": "Khanmigo provides adjacent tutoring but not MBA-specific case coaching; differentiation hinges on MBA case relevance and personalized feedback.",
+        "claim_type": "factual",
+        "claim_domain": "competitor_assumptions",
+        "evidence_status": "assumption",
+        "source_support": "direct",
+        "source_quality": 0.85,
+        "source_recency": 0.8,
+        "support_assessed_by": "model_proposed",
+        "critic_status": "not_reviewed",
+        "decision_critical": true,
+        "high_impact": true,
+        "conflict": false,
+        "pruned": false,
+        "major_issue": false,
+        "confidence": "medium",
+        "confidence_reason": "assumption_dominant",
+        "financial_value_ids": [],
+        "premise": "EDU-01 pricing shows Khanmigo's broader offering; no evidence of MBA-focused alternatives, creating a potential differentiation opportunity.",
+        "artifact_version": 1,
+        "body_span_id": "bf6abceffc5f21e01_30522a74",
+        "evidence_span_ids": ["ef6abceffc5f21e01_13"]
+      }
+    ],
+    "confidence_reason": "assumption_dominant",
+    "confidence": "medium"
+  },
+  "g4": {
+    "claims": [
+      {
+        "claim_id": "research.v1.g4.c1",
+        "parent_claim_id": null,
+        "claim_text": "Evidence gaps include validation of MBA enrollment demand beyond graduate completions, willingness-to-pay for $19/month subscription, compliance with FERPA and data privacy for adult learners, and implementation costs for content licenses.",
+        "claim_type": "assumption",
+        "claim_domain": "unsupported_claims",
+        "evidence_status": "unsupported",
+        "source_support": "none",
+        "source_quality": 0.0,
+        "source_recency": null,
+        "support_assessed_by": "model_proposed",
+        "critic_status": "not_reviewed",
+        "decision_critical": true,
+        "high_impact": true,
+        "conflict": false,
+        "pruned": false,
+        "major_issue": true,
+        "confidence": "low",
+        "confidence_reason": "no_evidence",
+        "financial_value_ids": [],
+        "premise": "No data provided on MBA-specific demand, willingness-to-pay, privacy compliance, or content licensing costs.",
+        "artifact_version": 1,
+        "body_span_id": "bf6abceffc5f21e01_460f18a6",
+        "evidence_span_ids": []
+      }
+    ]
+  }
+}

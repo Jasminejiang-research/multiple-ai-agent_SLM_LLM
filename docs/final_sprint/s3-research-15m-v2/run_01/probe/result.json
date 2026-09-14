@@ -1,0 +1,313 @@
+{
+  "case_id": "ai_education",
+  "formal_eligible": false,
+  "formal_runs_started": 0,
+  "gemini_calls": 0,
+  "complete_proposal_produced": false,
+  "complete_d_passed": false,
+  "public_config_changed": false,
+  "research_artifact_produced": false,
+  "research_probe_passed": false,
+  "scope": "Research generation only: body + grounding + the existing one shared structure repair; no Critic, semantic revision, Strategy, Finance, Writer or full D.",
+  "production_scope_note": "Production Research parent deadline also covers its existing Critic and conditional revision.",
+  "probe_deadline_seconds": 900.0,
+  "inherited_allowance": {
+    "source_result": {
+      "result_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\run_01\\probe\\result.json",
+      "sha256": "fad1180433a4e151a1824aabd05de32b06378928ce48d28c7302f59e3ae1e808",
+      "source_status": "failed"
+    },
+    "pool_limits": {
+      "request_count": 36,
+      "charged_total_tokens": 500000,
+      "elapsed_seconds": 5400.0
+    },
+    "pool_used": {
+      "request_count": 5,
+      "charged_total_tokens": 115489,
+      "elapsed_seconds": 4401.4220000000205
+    },
+    "pool_known_usage": {
+      "actual_prompt_tokens_known": 25776,
+      "actual_output_tokens_known": 3790,
+      "actual_total_tokens_known": 29566,
+      "usage_missing_calls": 1
+    },
+    "all_history_used": {
+      "request_count": 21,
+      "charged_total_tokens": 412058,
+      "elapsed_seconds": 14594.904999999999
+    },
+    "source_per_plan_budget": {
+      "max_requests": 34,
+      "max_total_tokens": 409083,
+      "request_count": 3,
+      "retry_count": 0,
+      "remaining_requests": 31,
+      "remaining_tokens": 384511,
+      "exhausted": false,
+      "charged_total_tokens": 24572,
+      "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+      "actual_prompt_tokens_known": 21485,
+      "actual_output_tokens_known": 3087,
+      "actual_total_tokens_known": 24572,
+      "usage_missing_calls": 0,
+      "transport_retry_count": 0,
+      "structure_repair_request_count": 1,
+      "revision_request_count": 0,
+      "run_elapsed_seconds": 813.7029999999795,
+      "node_elapsed_seconds": null,
+      "node_scope_id": null,
+      "node_role": null,
+      "node_effective_seconds": null,
+      "node_deadline_run_elapsed_seconds": null,
+      "effective_deadline_run_elapsed_seconds": 1196.9689999999828,
+      "effective_request_timeout_seconds": 383.26600000000326,
+      "research_profile_version": "research-brief-v1",
+      "research_total_seconds": 1196.9689999999828,
+      "research_output_caps": {
+        "body": 640,
+        "grounding": 2304,
+        "single": 2304
+      },
+      "configured_max_output_tokens": 8192,
+      "effective_max_output_tokens": null
+    },
+    "source_budget_scope": "finished_research_component_not_whole_pool",
+    "source_this_probe": {
+      "request_count": 3,
+      "charged_total_tokens": 24572,
+      "elapsed_seconds": 816.7339999999967,
+      "known_usage": {
+        "actual_prompt_tokens_known": 21485,
+        "actual_output_tokens_known": 3087,
+        "actual_total_tokens_known": 24572,
+        "usage_missing_calls": 0
+      },
+      "budget_snapshot": {
+        "max_requests": 34,
+        "max_total_tokens": 409083,
+        "request_count": 3,
+        "retry_count": 0,
+        "remaining_requests": 31,
+        "remaining_tokens": 384511,
+        "exhausted": false,
+        "charged_total_tokens": 24572,
+        "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+        "actual_prompt_tokens_known": 21485,
+        "actual_output_tokens_known": 3087,
+        "actual_total_tokens_known": 24572,
+        "usage_missing_calls": 0,
+        "transport_retry_count": 0,
+        "structure_repair_request_count": 1,
+        "revision_request_count": 0,
+        "run_elapsed_seconds": 813.7029999999795,
+        "node_elapsed_seconds": null,
+        "node_scope_id": null,
+        "node_role": null,
+        "node_effective_seconds": null,
+        "node_deadline_run_elapsed_seconds": null,
+        "effective_deadline_run_elapsed_seconds": 1196.9689999999828,
+        "effective_request_timeout_seconds": 383.26600000000326,
+        "research_profile_version": "research-brief-v1",
+        "research_total_seconds": 1196.9689999999828,
+        "research_output_caps": {
+          "body": 640,
+          "grounding": 2304,
+          "single": 2304
+        },
+        "configured_max_output_tokens": 8192,
+        "effective_max_output_tokens": null
+      }
+    },
+    "source_inherited_allowance": {
+      "source_result": {
+        "result_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v2\\run_01\\probe\\result.json",
+        "sha256": "2da32281d8d0ea01917ba5bef29496d79ee86ed2258be4ae05519fe531d61c5f",
+        "source_status": "resource_stopped"
+      },
+      "pool_limits": {
+        "request_count": 36,
+        "charged_total_tokens": 500000,
+        "elapsed_seconds": 5400.0
+      },
+      "pool_used": {
+        "request_count": 2,
+        "charged_total_tokens": 90917,
+        "elapsed_seconds": 3584.6880000000237
+      },
+      "pool_known_usage": {
+        "actual_prompt_tokens_known": 4291,
+        "actual_output_tokens_known": 703,
+        "actual_total_tokens_known": 4994,
+        "usage_missing_calls": 1
+      },
+      "all_history_used": {
+        "request_count": 18,
+        "charged_total_tokens": 387486,
+        "elapsed_seconds": 13778.171000000002
+      },
+      "source_per_plan_budget": {
+        "max_requests": 36,
+        "max_total_tokens": 500000,
+        "request_count": 2,
+        "retry_count": 0,
+        "remaining_requests": 34,
+        "remaining_tokens": 409083,
+        "exhausted": false,
+        "charged_total_tokens": 90917,
+        "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+        "actual_prompt_tokens_known": 4291,
+        "actual_output_tokens_known": 703,
+        "actual_total_tokens_known": 4994,
+        "usage_missing_calls": 1,
+        "transport_retry_count": 0,
+        "structure_repair_request_count": 0,
+        "revision_request_count": 0,
+        "run_elapsed_seconds": 3581.6410000000033,
+        "node_elapsed_seconds": null,
+        "node_scope_id": null
+      },
+      "unknown_usage_policy": "Retain every unknown-call reservation; known subtotals are not total actual usage. All-history known usage before this pool was not supplied and is not fabricated."
+    },
+    "source_chain": [
+      {
+        "result_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\run_01\\probe\\result.json",
+        "sha256": "fad1180433a4e151a1824aabd05de32b06378928ce48d28c7302f59e3ae1e808",
+        "source_status": "failed"
+      },
+      {
+        "result_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v2\\run_01\\probe\\result.json",
+        "sha256": "2da32281d8d0ea01917ba5bef29496d79ee86ed2258be4ae05519fe531d61c5f",
+        "source_status": "resource_stopped"
+      }
+    ],
+    "unknown_usage_policy": "Retain every unknown-call reservation; known subtotals are not total actual usage. All-history known usage before this pool was not supplied and is not fabricated."
+  },
+  "remaining_before_probe": {
+    "max_requests": 31,
+    "max_total_tokens": 384511,
+    "pool_remaining_seconds": 998.5779999999795,
+    "probe_seconds": 900.0
+  },
+  "status": "timeout",
+  "error_type": "WallClockExceeded",
+  "error": "shared node/run wall-clock budget exhausted",
+  "elapsed_seconds": 1628.6410000000033,
+  "inference_elapsed_seconds": 1389.0160000000033,
+  "cleanup_elapsed_seconds": 239.625,
+  "resources": {
+    "status": "failed",
+    "reason": "resource_observation_gap",
+    "sample_count": 86,
+    "sample_interval_seconds": 5.0,
+    "baseline": {
+      "ram_total_bytes": 16969424896,
+      "ram_available_bytes": 6100058112,
+      "pagefile_used_bytes": 787865600,
+      "gpu_used_bytes": 0,
+      "gpu_total_bytes": 2147483648,
+      "loaded_models": [],
+      "missing": {}
+    },
+    "maximum_observed_sample_gap_seconds": 908.1410000000033,
+    "maximum_allowed_sample_gap_seconds": 15.0,
+    "observation_gap_count": 1,
+    "observation_gaps": [
+      {
+        "gap_seconds": 908.1410000000033,
+        "threshold_seconds": 15.0,
+        "previous_elapsed_seconds": 482.3279999999795,
+        "current_elapsed_seconds": 1390.4689999999828
+      }
+    ],
+    "min_available_ram_bytes": 3418673152,
+    "peak_ram_used_bytes": 13550751744,
+    "peak_gpu_used_bytes": 0,
+    "peak_pagefile_used_bytes": 787865600,
+    "peak_pagefile_delta_bytes": 0,
+    "missing_observations": []
+  },
+  "server_stop": {
+    "status": "termination_unconfirmed",
+    "error_type": "CalledProcessError",
+    "pid": 24092,
+    "lease_released": false,
+    "restart_requires_explicit_reconciliation": true
+  },
+  "power_cleanup": "released",
+  "deadline_fired": false,
+  "http_requests": 2,
+  "this_probe": {
+    "request_count": 2,
+    "charged_total_tokens": 58479,
+    "elapsed_seconds": 1628.6410000000033,
+    "known_usage": {
+      "actual_prompt_tokens_known": 4399,
+      "actual_output_tokens_known": 442,
+      "actual_total_tokens_known": 4841,
+      "usage_missing_calls": 1
+    },
+    "budget_snapshot": {
+      "max_requests": 31,
+      "max_total_tokens": 384511,
+      "request_count": 2,
+      "retry_count": 0,
+      "remaining_requests": 29,
+      "remaining_tokens": 326032,
+      "exhausted": false,
+      "charged_total_tokens": 58479,
+      "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+      "actual_prompt_tokens_known": 4399,
+      "actual_output_tokens_known": 442,
+      "actual_total_tokens_known": 4841,
+      "usage_missing_calls": 1,
+      "transport_retry_count": 0,
+      "structure_repair_request_count": 0,
+      "revision_request_count": 0,
+      "run_elapsed_seconds": 1624.4220000000205,
+      "node_elapsed_seconds": null,
+      "node_scope_id": null,
+      "node_role": null,
+      "node_effective_seconds": null,
+      "node_deadline_run_elapsed_seconds": null,
+      "effective_deadline_run_elapsed_seconds": 895.7810000000172,
+      "effective_request_timeout_seconds": 0,
+      "research_profile_version": "research-minimal-v2",
+      "research_total_seconds": 895.7810000000172,
+      "research_output_caps": {
+        "body": 640,
+        "grounding": 2304,
+        "single": 2304
+      },
+      "configured_max_output_tokens": 8192,
+      "effective_max_output_tokens": null
+    }
+  },
+  "pool_cumulative": {
+    "request_count": 7,
+    "charged_total_tokens": 173968,
+    "elapsed_seconds": 6030.063000000024,
+    "known_usage": {
+      "actual_prompt_tokens_known": 30175,
+      "actual_output_tokens_known": 4232,
+      "actual_total_tokens_known": 34407,
+      "usage_missing_calls": 2
+    }
+  },
+  "all_history_cumulative": {
+    "request_count": 23,
+    "charged_total_tokens": 470537,
+    "elapsed_seconds": 16223.546000000002,
+    "known_usage_before_current_pool": null,
+    "known_usage_note": "Only current-pool known subtotals are available; older unknown usage is retained in charges."
+  },
+  "pool_remaining": {
+    "request_count": 29,
+    "charged_total_tokens": 326032,
+    "elapsed_seconds": 0
+  },
+  "unknown_usage_policy": "Retain every unknown-call reservation; known subtotals are not total actual usage. All-history known usage before this pool was not supplied and is not fabricated.",
+  "within_probe_deadline": false,
+  "within_pool_generation_deadline": false
+}

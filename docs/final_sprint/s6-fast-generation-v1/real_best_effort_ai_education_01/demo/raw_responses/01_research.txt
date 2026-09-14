@@ -1,0 +1,2 @@
+{
+  "text": "Market: US adults aged 18+ enrolled in or applying to MBA programs; potential institutional buyers are business-school instructors. [EDU-01-C1, EDU-02-C1, EDU-02-C2, EDU-03-C1]\nCustomer: Business graduate students seeking timely, personalized business-case reasoning feedback. [EDU-01-C1, EDU-02-C1, EDU-02-C2, EDU-03-C1]\nAlternative: Khanmigo AI tutoring service with personalized coaching, district tools, and professional learning. [EDU-01

@@ -1,0 +1,18 @@
+{
+  "model": "granite-h-micro-32k",
+  "created_at": "2026-09-07T10:18:24.1063593Z",
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 217371785500,
+  "load_duration": 3621479000,
+  "prompt_eval_count": 4243,
+  "prompt_eval_cached_count": null,
+  "prompt_eval_duration": 116868249000,
+  "eval_count": 923,
+  "eval_duration": 96855525000,
+  "timing_unit": "nanoseconds",
+  "requested_gpu_layers": 0,
+  "prefill_rate_basis": "all_input_tokens_cache_count_unavailable",
+  "prefill_tokens_per_second": 36.30584043404295,
+  "generation_tokens_per_second": 9.529657704090706
+}

@@ -1,0 +1,9 @@
+{
+  "recorded_at_utc": "2026-09-07T13:39:16.138039+00:00",
+  "status": "resource_stopped",
+  "user_confirmed_manual_interruption": true,
+  "complete_plan": false,
+  "history_files_verified": 2943,
+  "result_sha256": "2da32281d8d0ea01917ba5bef29496d79ee86ed2258be4ae05519fe531d61c5f",
+  "audit_sha256": "51346063f87951992c2dbd9bffc77f6320af73dd36d16af4cde00c007faa2ae3"
+}

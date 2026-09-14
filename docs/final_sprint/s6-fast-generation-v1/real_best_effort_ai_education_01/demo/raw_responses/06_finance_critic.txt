@@ -1,0 +1,4 @@
+{
+  "score": 2,
+  "issues": "1. Unsupported financial values: Monthly loss of $6,000 and ending cash of $30,000 are not substantiated with evidence IDs. 2. Unverified claim: Break-even at 500 users lacks supporting data."
+}

@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-09-06T21:45:22.9354399Z",
+  "verified_updates": [
+    {
+      "path": "slm/owned_ollama.py",
+      "before_sha256": "19561a2e5249ba30ee042a6cfcb76f101f2ee588983bb2d3076166f1c4db1f15",
+      "after_sha256": "0b50ce35fa184f31c7284237902369d46213d19674d487cdc00a4269c1ec56bd"
+    },
+    {
+      "path": "slm/granite_preflight.py",
+      "before_sha256": "e28b3e226ec50d6c7f1443c9b50cd1a3236d3a7ef46d0a01952563ed41468256",
+      "after_sha256": "910180a6fcff454f4cdfaba1204deadef39b8f82d4d54d5e9bf6ec6c6c39d436"
+    },
+    {
+      "path": "slm/tests/test_granite_s3.py",
+      "before_sha256": "87f08139d89cb499780ff5d7c8c993775bdcebd7889051adf13ab0a13a743902",
+      "after_sha256": "3783292062472f5a49de15f5d593a7cd60d7552ba0229f00e5bd456ed7dddc94"
+    }
+  ],
+  "next_package_started": false
+}

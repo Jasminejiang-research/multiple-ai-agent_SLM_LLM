@@ -1,0 +1,489 @@
+{
+  "classification": "one_case_one_run_per_arm_exploratory_product_comparison",
+  "results": {
+    "arms": {
+      "A": {
+        "status": "accepted_with_issues",
+        "output_path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\berlin-restaurant-waste-product-ab-v1-20260912\\A\\proposal.md",
+        "audit_path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\berlin-restaurant-waste-product-ab-v1-20260912\\A\\audit_report.md",
+        "product_acceptance": {
+          "policy": "product-per-agent-one-correction-v1",
+          "corrections_allowed_per_agent": 1,
+          "corrections": {
+            "A": 1
+          },
+          "correction_events": [
+            {
+              "stage": "A",
+              "reason": "Invalid BusinessProposal output: financial_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            }
+          ],
+          "unresolved_issues": [
+            {
+              "stage": "A",
+              "message": "Invalid BusinessProposal output: financial_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            },
+            {
+              "stage": "A",
+              "message": "financial_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            },
+            {
+              "stage": "A_export",
+              "message": "financial_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+            }
+          ],
+          "status": "accepted_with_issues"
+        },
+        "seconds": 54.92200000002049,
+        "accounting_before": {
+          "llm_requests": 0,
+          "total_tokens": 0,
+          "llm_cost_usd": 0.0,
+          "unresolved_reservation_usd": 0.0,
+          "usage_incomplete": false,
+          "web_requests": 0,
+          "web_payg_upper_usd": 0.0,
+          "token_count_requests": 0,
+          "arm_requests": 0,
+          "arm_tokens": 0
+        },
+        "accounting_after": {
+          "llm_requests": 3,
+          "total_tokens": 24150,
+          "llm_cost_usd": 0.033629599999999996,
+          "unresolved_reservation_usd": 0.0,
+          "usage_incomplete": false,
+          "web_requests": 0,
+          "web_payg_upper_usd": 0.0,
+          "token_count_requests": 0,
+          "arm_requests": 3,
+          "arm_tokens": 24150
+        },
+        "needs_citation_review": null
+      },
+      "B": {
+        "status": "accepted_with_issues",
+        "output_path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\berlin-restaurant-waste-product-ab-v1-20260912\\B\\2026-09-12_berlin_restaurant_ingredient_waste_forecasting_saas_product_ab_berlin_restaurant_waste_product_ab_v1_20260912_b.md",
+        "audit_path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\berlin-restaurant-waste-product-ab-v1-20260912\\B\\2026-09-12_berlin_restaurant_ingredient_waste_forecasting_saas_product_ab_berlin_restaurant_waste_product_ab_v1_20260912_b_audit.md",
+        "product_acceptance": {
+          "policy": "product-per-agent-one-correction-v1",
+          "corrections_allowed_per_agent": 1,
+          "corrections": {
+            "research": 1,
+            "revision": 1
+          },
+          "correction_events": [
+            {
+              "stage": "research",
+              "reason": "Invalid ResearchAnalysis output: market_trends[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[1]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[2]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[3]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[1]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncompetitor_assumptions[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncompetitor_assumptions[1]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead"
+            },
+            {
+              "stage": "revision",
+              "reason": "Invalid RevisedProposalBatch1 output: ['executive_summary', 'market_opportunity', 'problem', 'target_customer']: ['executive_summary', 'problem', 'target_customer', 'market_opportunity']: executive_summary: web-ba0fa3909a5b4b38a6d853546eb780b5 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nproblem: web-ba0fa3909a5b4b38a6d853546eb780b5 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\ntarget_customer: web-c15f234c15bb4010bf09d9100b32da3f is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nmarket_opportunity: web-ba0fa3909a5b4b38a6d853546eb780b5 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+            }
+          ],
+          "unresolved_issues": [
+            {
+              "stage": "revision",
+              "message": "Invalid LocalRepair_RevisedProposalBatch1 output: ['executive_summary', 'market_opportunity', 'problem', 'target_customer']: ['executive_summary', 'problem', 'target_customer', 'market_opportunity']: executive_summary: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nproblem: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\ntarget_customer: web-c15f234c15bb4010bf09d9100b32da3f is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nmarket_opportunity: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+            },
+            {
+              "stage": "revision",
+              "message": "['executive_summary', 'market_opportunity', 'problem', 'target_customer']: ['executive_summary', 'problem', 'target_customer', 'market_opportunity']: executive_summary: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nproblem: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\ntarget_customer: web-c15f234c15bb4010bf09d9100b32da3f is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nmarket_opportunity: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+            },
+            {
+              "stage": "revision",
+              "message": "Quantification of the specific scale and causes of ingredient waste in Berlin restaurants, and their urgency/willingness to pay for a SaaS solution, remains unquantified."
+            },
+            {
+              "stage": "revision",
+              "message": "Specific product features, data inputs, integration requirements, operating workflow, and unique differentiators for the SaaS solution are still undefined assumptions."
+            },
+            {
+              "stage": "revision",
+              "message": "A comprehensive quantitative financial model, including specific figures for pricing, costs, customer acquisition, projected revenue, unit economics, and break-even analysis, is still needed."
+            },
+            {
+              "stage": "revision",
+              "message": "The claim that Germany generates approximately 10.8 million tonnes of food waste annually as of 2022 is unsupported by the provided evidence."
+            },
+            {
+              "stage": "revision",
+              "message": "The claim that operators are encouraged to invest in demand forecasting to meet waste reduction targets is unsupported by the provided evidence."
+            },
+            {
+              "stage": "revision",
+              "message": "The claim that smaller independent outlets may lack the scale to absorb upfront capital and training costs incurred by investing in waste reduction strategies is unsupported by the provided evidence."
+            },
+            {
+              "stage": "revision",
+              "message": "The claim that Germany recorded 433 million overnight stays between January and October 2024 is unsupported by the provided evidence."
+            },
+            {
+              "stage": "revision",
+              "message": "Several critical sources (e.g., Mordor Intelligence, MarketDataForecast) are of 'unknown' quality, impacting the overall credibility of some claims."
+            },
+            {
+              "stage": "export",
+              "message": "['executive_summary', 'problem', 'target_customer', 'market_opportunity']: executive_summary: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nproblem: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\ntarget_customer: web-c15f234c15bb4010bf09d9100b32da3f is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nmarket_opportunity: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+            }
+          ],
+          "status": "accepted_with_issues"
+        },
+        "seconds": 433.64100000000326,
+        "accounting_before": {
+          "llm_requests": 3,
+          "total_tokens": 24150,
+          "llm_cost_usd": 0.033629599999999996,
+          "unresolved_reservation_usd": 0.0,
+          "usage_incomplete": false,
+          "web_requests": 0,
+          "web_payg_upper_usd": 0.0,
+          "token_count_requests": 0,
+          "arm_requests": 0,
+          "arm_tokens": 0
+        },
+        "accounting_after": {
+          "llm_requests": 19,
+          "total_tokens": 365098,
+          "llm_cost_usd": 0.3568974,
+          "unresolved_reservation_usd": 0.0,
+          "usage_incomplete": false,
+          "web_requests": 2,
+          "web_payg_upper_usd": 0.016,
+          "token_count_requests": 2,
+          "arm_requests": 16,
+          "arm_tokens": 340948
+        },
+        "needs_citation_review": null
+      }
+    },
+    "accounting": {
+      "llm_requests": 19,
+      "total_tokens": 365098,
+      "llm_cost_usd": 0.3568974,
+      "unresolved_reservation_usd": 0.0,
+      "usage_incomplete": false,
+      "web_requests": 2,
+      "web_payg_upper_usd": 0.016,
+      "token_count_requests": 2,
+      "arm_requests": 16,
+      "arm_tokens": 340948
+    },
+    "completed_at": "2026-09-12T12:15:35.331649+00:00"
+  },
+  "arms": {
+    "A": {
+      "status": "accepted_with_issues",
+      "seconds": 54.92200000002049,
+      "completed_responses": 3,
+      "usage": {
+        "candidates_token_count": 5186,
+        "prompt_token_count": 12157,
+        "thoughts_token_count": 6807,
+        "total_token_count": 24150
+      },
+      "model_cost_usd": 0.033629599999999996,
+      "schema_valid": true,
+      "markdown_characters": 12736,
+      "heading_count": 14,
+      "financial_assumptions": {
+        "pricing_model": "Tiered subscription model, with pricing based on the number of restaurant locations and/or monthly transaction volume, offering both monthly and annual payment options with discounts for annual commitments.",
+        "average_revenue_per_customer": "Qualitative, expected to be competitive within the SMB SaaS market, providing a clear ROI for restaurants through waste reduction.",
+        "gross_margin": "Qualitative, expected to be high, typical for SaaS products (e.g., 70-85%), as the primary costs are software development, maintenance, and cloud infrastructure.",
+        "customer_acquisition_cost": "Qualitative, initially higher due to direct sales and education required for early adopters, but expected to decrease as word-of-mouth and channel partnerships scale.",
+        "monthly_burn_rate": "Qualitative, covering a lean founding team, essential infrastructure, and initial marketing efforts to achieve product-market fit.",
+        "runway_months": null,
+        "break_even_timeline": "Qualitative, expected to reach cash flow break-even within 24-36 months, driven by achieving a critical mass of paying customers and efficient customer acquisition."
+      }
+    },
+    "B": {
+      "status": "accepted_with_issues",
+      "seconds": 433.64100000000326,
+      "completed_responses": 16,
+      "usage": {
+        "candidates_token_count": 40208,
+        "prompt_token_count": 240501,
+        "thoughts_token_count": 60239,
+        "total_token_count": 340948
+      },
+      "model_cost_usd": 0.3232678,
+      "last_step": "export",
+      "completed_sections": 13,
+      "missing_sections": [],
+      "checkpoints": [
+        {
+          "batch": 1,
+          "path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\berlin-restaurant-waste-product-ab-v1-20260912\\B\\writer_checkpoints\\91e34e56b923d0ef1c782c84f92e947c\\batch-1.json"
+        },
+        {
+          "batch": 2,
+          "path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\berlin-restaurant-waste-product-ab-v1-20260912\\B\\writer_checkpoints\\91e34e56b923d0ef1c782c84f92e947c\\batch-2.json"
+        },
+        {
+          "batch": 3,
+          "path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\berlin-restaurant-waste-product-ab-v1-20260912\\B\\writer_checkpoints\\91e34e56b923d0ef1c782c84f92e947c\\batch-3.json"
+        },
+        {
+          "batch": 4,
+          "path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\berlin-restaurant-waste-product-ab-v1-20260912\\B\\writer_checkpoints\\91e34e56b923d0ef1c782c84f92e947c\\batch-4.json"
+        }
+      ],
+      "language_errors": {},
+      "section_characters": {
+        "executive_summary": 1325,
+        "problem": 1400,
+        "target_customer": 1194,
+        "market_opportunity": 1371,
+        "solution": 559,
+        "value_proposition": 867,
+        "competitor_analysis": 825,
+        "business_model": 1119,
+        "go_to_market_strategy": 1378,
+        "financial_assumptions": 1551,
+        "risks_and_mitigations": 1852,
+        "implementation_roadmap": 1466,
+        "appendix": 1461
+      },
+      "critic_ran": true,
+      "revision_ran": true,
+      "graph_nodes": [
+        "critic",
+        "export",
+        "finance",
+        "rag_retrieval",
+        "research",
+        "revision",
+        "seal_writer_recovery",
+        "strategy",
+        "supervisor",
+        "validator",
+        "writer"
+      ],
+      "web_sources": 10,
+      "missing_source_dates": 10,
+      "rag_documents": [
+        "investor_proposal_template.md",
+        "unit_economics.md",
+        "tam_sam_som.md"
+      ],
+      "evidence_status_counts": {
+        "sourced_fact": 6,
+        "unsupported": 17,
+        "assumption": 25,
+        "needs_validation": 11
+      },
+      "citation_failures": [
+        {
+          "section": "executive_summary",
+          "claim_index": 0,
+          "claim_text": "The German government and the EU have established mandatory targets for food waste reduction, including a 30% per capita reduction for out-of-home catering by 2030.",
+          "claim_type": "regulatory",
+          "evidence_status": "sourced_fact",
+          "content_has_marker": true,
+          "key_claim_has_marker": false,
+          "available_source_ids": [
+            "web-b9d07e319b454e6aa36adc6b3f555ecf",
+            "web-c15f234c15bb4010bf09d9100b32da3f",
+            "web-7aeb3565e45f4d948ec6e095f1058443",
+            "source_935657010e7dbfe204fd7a16",
+            "web-9facc20b6e0d46e190a34b223152035c",
+            "web-e9510330572845d9aac35ca7e729fe09",
+            "web-ba0fa3909a5b4b38a6d853546eb780b5",
+            "web-66852f06b98d414f888d58b53bb0406f",
+            "source_149ace0bd2cda36e247617ca",
+            "web-22f60defaa1340e18b4ba186cfb1ddc2",
+            "source_057c447ddcac1bc32d61245f",
+            "web-4543c70cb25c44ea80fc1d72e472cca2",
+            "web-bd383d1955ca4cc2a847ae4a1e7810e6"
+          ],
+          "unknown_source_ids": [],
+          "reasons": [
+            "missing_key_claim_citation"
+          ]
+        },
+        {
+          "section": "executive_summary",
+          "claim_index": 1,
+          "claim_text": "Berlin's restaurant scene is experiencing a strong and increasing trend towards sustainability, ethical food choices, and awareness of food waste.",
+          "claim_type": "trend",
+          "evidence_status": "sourced_fact",
+          "content_has_marker": true,
+          "key_claim_has_marker": false,
+          "available_source_ids": [
+            "web-b9d07e319b454e6aa36adc6b3f555ecf",
+            "web-c15f234c15bb4010bf09d9100b32da3f",
+            "web-7aeb3565e45f4d948ec6e095f1058443",
+            "source_935657010e7dbfe204fd7a16",
+            "web-9facc20b6e0d46e190a34b223152035c",
+            "web-e9510330572845d9aac35ca7e729fe09",
+            "web-ba0fa3909a5b4b38a6d853546eb780b5",
+            "web-66852f06b98d414f888d58b53bb0406f",
+            "source_149ace0bd2cda36e247617ca",
+            "web-22f60defaa1340e18b4ba186cfb1ddc2",
+            "source_057c447ddcac1bc32d61245f",
+            "web-4543c70cb25c44ea80fc1d72e472cca2",
+            "web-bd383d1955ca4cc2a847ae4a1e7810e6"
+          ],
+          "unknown_source_ids": [],
+          "reasons": [
+            "missing_key_claim_citation"
+          ]
+        },
+        {
+          "section": "problem",
+          "claim_index": 0,
+          "claim_text": "The German government aims to combat food waste, with mandatory EU reduction targets applying to member states, including a 30% per capita reduction for out-of-home catering by 2030.",
+          "claim_type": "regulatory",
+          "evidence_status": "sourced_fact",
+          "content_has_marker": false,
+          "key_claim_has_marker": false,
+          "available_source_ids": [
+            "web-b9d07e319b454e6aa36adc6b3f555ecf",
+            "web-c15f234c15bb4010bf09d9100b32da3f",
+            "web-7aeb3565e45f4d948ec6e095f1058443",
+            "source_935657010e7dbfe204fd7a16",
+            "web-9facc20b6e0d46e190a34b223152035c",
+            "web-e9510330572845d9aac35ca7e729fe09",
+            "web-ba0fa3909a5b4b38a6d853546eb780b5",
+            "web-66852f06b98d414f888d58b53bb0406f",
+            "source_149ace0bd2cda36e247617ca",
+            "web-22f60defaa1340e18b4ba186cfb1ddc2",
+            "source_057c447ddcac1bc32d61245f",
+            "web-4543c70cb25c44ea80fc1d72e472cca2",
+            "web-bd383d1955ca4cc2a847ae4a1e7810e6"
+          ],
+          "unknown_source_ids": [],
+          "reasons": [
+            "missing_content_citation",
+            "missing_key_claim_citation"
+          ]
+        },
+        {
+          "section": "target_customer",
+          "claim_index": 0,
+          "claim_text": "Berlin's restaurant scene is experiencing a strong trend towards sustainability, ethical food choices, and awareness of food waste.",
+          "claim_type": "customer",
+          "evidence_status": "sourced_fact",
+          "content_has_marker": true,
+          "key_claim_has_marker": false,
+          "available_source_ids": [
+            "web-b9d07e319b454e6aa36adc6b3f555ecf",
+            "web-c15f234c15bb4010bf09d9100b32da3f",
+            "web-7aeb3565e45f4d948ec6e095f1058443",
+            "source_935657010e7dbfe204fd7a16",
+            "web-9facc20b6e0d46e190a34b223152035c",
+            "web-e9510330572845d9aac35ca7e729fe09",
+            "web-ba0fa3909a5b4b38a6d853546eb780b5",
+            "web-66852f06b98d414f888d58b53bb0406f",
+            "source_149ace0bd2cda36e247617ca",
+            "web-22f60defaa1340e18b4ba186cfb1ddc2",
+            "source_057c447ddcac1bc32d61245f",
+            "web-4543c70cb25c44ea80fc1d72e472cca2",
+            "web-bd383d1955ca4cc2a847ae4a1e7810e6"
+          ],
+          "unknown_source_ids": [],
+          "reasons": [
+            "missing_key_claim_citation"
+          ]
+        },
+        {
+          "section": "target_customer",
+          "claim_index": 1,
+          "claim_text": "Berlin was ranked second among the world’s most vegan-friendly cities, with vegan-friendly listings growing by 7% in 2024.",
+          "claim_type": "customer",
+          "evidence_status": "sourced_fact",
+          "content_has_marker": true,
+          "key_claim_has_marker": false,
+          "available_source_ids": [
+            "web-b9d07e319b454e6aa36adc6b3f555ecf",
+            "web-c15f234c15bb4010bf09d9100b32da3f",
+            "web-7aeb3565e45f4d948ec6e095f1058443",
+            "source_935657010e7dbfe204fd7a16",
+            "web-9facc20b6e0d46e190a34b223152035c",
+            "web-e9510330572845d9aac35ca7e729fe09",
+            "web-ba0fa3909a5b4b38a6d853546eb780b5",
+            "web-66852f06b98d414f888d58b53bb0406f",
+            "source_149ace0bd2cda36e247617ca",
+            "web-22f60defaa1340e18b4ba186cfb1ddc2",
+            "source_057c447ddcac1bc32d61245f",
+            "web-4543c70cb25c44ea80fc1d72e472cca2",
+            "web-bd383d1955ca4cc2a847ae4a1e7810e6"
+          ],
+          "unknown_source_ids": [],
+          "reasons": [
+            "missing_key_claim_citation"
+          ]
+        },
+        {
+          "section": "market_opportunity",
+          "claim_index": 0,
+          "claim_text": "The German government and the EU have established mandatory targets for food waste reduction, including a 30% per capita reduction for out-of-home catering by 2030.",
+          "claim_type": "regulatory",
+          "evidence_status": "sourced_fact",
+          "content_has_marker": true,
+          "key_claim_has_marker": false,
+          "available_source_ids": [
+            "web-b9d07e319b454e6aa36adc6b3f555ecf",
+            "web-c15f234c15bb4010bf09d9100b32da3f",
+            "web-7aeb3565e45f4d948ec6e095f1058443",
+            "source_935657010e7dbfe204fd7a16",
+            "web-9facc20b6e0d46e190a34b223152035c",
+            "web-e9510330572845d9aac35ca7e729fe09",
+            "web-ba0fa3909a5b4b38a6d853546eb780b5",
+            "web-66852f06b98d414f888d58b53bb0406f",
+            "source_149ace0bd2cda36e247617ca",
+            "web-22f60defaa1340e18b4ba186cfb1ddc2",
+            "source_057c447ddcac1bc32d61245f",
+            "web-4543c70cb25c44ea80fc1d72e472cca2",
+            "web-bd383d1955ca4cc2a847ae4a1e7810e6"
+          ],
+          "unknown_source_ids": [],
+          "reasons": [
+            "missing_key_claim_citation"
+          ]
+        }
+      ],
+      "raw_writer_attempts": [
+        {
+          "call": "010",
+          "batch": 1,
+          "schema_valid": true,
+          "quality_valid": true,
+          "quality_scope": "Language and citation shape only; not full evidence provenance or financial acceptance. Consult checkpoints/failure."
+        },
+        {
+          "call": "011",
+          "batch": 2,
+          "schema_valid": true,
+          "quality_valid": true,
+          "quality_scope": "Language and citation shape only; not full evidence provenance or financial acceptance. Consult checkpoints/failure."
+        },
+        {
+          "call": "012",
+          "batch": 3,
+          "schema_valid": true,
+          "quality_valid": true,
+          "quality_scope": "Language and citation shape only; not full evidence provenance or financial acceptance. Consult checkpoints/failure."
+        },
+        {
+          "call": "013",
+          "batch": 4,
+          "schema_valid": true,
+          "quality_valid": true,
+          "quality_scope": "Language and citation shape only; not full evidence provenance or financial acceptance. Consult checkpoints/failure."
+        },
+        {
+          "call": "016",
+          "batch": 4,
+          "kind": "local_section_patch",
+          "quality_valid": null,
+          "validation_note": "Partial correction: do not validate as a full batch. Merged checkpoints determine acceptance."
+        }
+      ],
+      "rejections": []
+    }
+  },
+  "response_token_sum": 365098,
+  "response_tokens_match_ledger": true
+}

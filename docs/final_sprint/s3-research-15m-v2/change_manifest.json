@@ -1,0 +1,35 @@
+{
+  "created_at_utc": "2026-09-07T14:24:29.364098+00:00",
+  "changes": [
+    {
+      "path": "tests/test_brief_research_profile.py",
+      "before_sha256": "49e7f18c30cb12c6bb80772cc0df52501612cf5700cb9e0aae00a60bacd9a95e",
+      "after_sha256": "614657c4d2a44650e4b29e4e6dc1d79af8029eb287f88469ef69b1624782fc45"
+    },
+    {
+      "path": "tests/test_generation_constraints.py",
+      "before_sha256": "5c0c61c2f5a7cb0772c521d73ac9d49196ae3c7febdece43b0f6d7f378d88468",
+      "after_sha256": "cba323b1034808154fe3754a6168cb1a99fbfb9b496fff545dcf416570a490da"
+    },
+    {
+      "path": "workflow/contract_generation.py",
+      "before_sha256": "df36d174c6ed27b62f46c6a20476c27faca1010d64b2bd13677df6c1dd2d809d",
+      "after_sha256": "f075a91f1e00b605f03ad415726661f4be3cd7a956d634ec156b97918d237e35"
+    },
+    {
+      "path": "workflow/generation_constraints.py",
+      "before_sha256": "852400559a31b51f47e30f52e91d87a9559a93cef0de342c0a9fd5be14e61541",
+      "after_sha256": "9081e151b48a3a2ecb8781ea72839f6b40defa4b51758988024322c8e077228a"
+    },
+    {
+      "path": "workflow/research_limits.py",
+      "before_sha256": "3263d90d39d546a5d13273a18fca7c240229f4d542cf1e50c505d0fd7b84f614",
+      "after_sha256": "59d82575267e1ee2e10e1908de7020a4245890e7e1727a310f733008b5f93c8b"
+    },
+    {
+      "path": "workflow/research_profile.py",
+      "before_sha256": "8d65322dd8bd79494836325df059945b7b9035bf2114e1e966aead5637f9a01d",
+      "after_sha256": "2b1f8daf18b1c36ad31ef8a4776a1a42cf22ec8a55a2788b7cbf19d291ca9ffb"
+    }
+  ]
+}

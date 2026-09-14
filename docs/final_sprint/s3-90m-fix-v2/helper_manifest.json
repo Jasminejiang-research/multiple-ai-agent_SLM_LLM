@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "trial_runner.py",
+      "sha256": "a22d939ce9513a176fa33d776bf5ccdb1ea7b30d47ac3edc7ff96c8a78d9e406"
+    },
+    {
+      "path": "cleanup_owned.py",
+      "sha256": "891f23e038e81040796a66aebb004c78afea77acd64f81e2e28e1970c8444b26"
+    },
+    {
+      "path": "Invoke-RecoveryTrial.ps1",
+      "sha256": "2872321ef795feb3b890b028c9eaad15f3e0712caadfab4777fe8f548b1e526e"
+    },
+    {
+      "path": "trial_config.json",
+      "sha256": "611af3115aeb9029ac2133e08bb6a6868a5ecfde7dca6d2e644771ffc385c224"
+    },
+    {
+      "path": "support/capability_base.py",
+      "sha256": "62407a17e1ce4cea5736c3e6588185aee5a5b56b37ba1c8db9142ad62ac47445"
+    },
+    {
+      "path": "budget_carryover.json",
+      "sha256": "e626ef7603705dc45d7b4af18faa27cac5040628860145f6bcb625eac3561f17"
+    }
+  ]
+}

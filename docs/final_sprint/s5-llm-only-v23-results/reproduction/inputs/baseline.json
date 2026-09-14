@@ -1,0 +1,217 @@
+{
+  "recorded_at_utc": "2026-09-06T20:18:49.913981+00:00",
+  "workspace": "C:/Users/JasmineJiang/Projects/multiple-ai-agent_SLM_LLM",
+  "python": {
+    "executable": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+    "version": "3.12.10"
+  },
+  "packages": {
+    "pytest": "9.1.1",
+    "pydantic": "2.13.4",
+    "langgraph": "1.2.2",
+    "SQLAlchemy": "2.0.51",
+    "google-genai": "2.8.0",
+    "streamlit": "1.58.0",
+    "openai": "2.48.0",
+    "python-dotenv": "1.2.2",
+    "chromadb": "1.5.9"
+  },
+  "pip_check": {
+    "returncode": 0,
+    "stdout": "No broken requirements found.",
+    "stderr": ""
+  },
+  "git_head": {
+    "returncode": 0,
+    "stdout": "4a256c060f39eb1ade754677e9897a94e923bb00",
+    "stderr": ""
+  },
+  "git_branch": {
+    "returncode": 0,
+    "stdout": "codex/final-sprint",
+    "stderr": ""
+  },
+  "git_status": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "settings": [
+    {
+      "file": ".env",
+      "name": "GEMINI_API_KEY",
+      "configured": true
+    },
+    {
+      "file": ".env",
+      "name": "GOOGLE_API_KEY",
+      "configured": true
+    },
+    {
+      "file": ".env",
+      "name": "TAVILY_API_KEY",
+      "configured": true
+    },
+    {
+      "file": ".env",
+      "name": "LLM_RUN_MAX_REQUESTS",
+      "value": "51"
+    },
+    {
+      "file": ".env",
+      "name": "LLM_RUN_MAX_TOTAL_TOKENS",
+      "value": "600000"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_BASE_URL",
+      "value": "https://api.siliconflow.com/v1"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_MODEL_NAME",
+      "value": "Qwen/Qwen2.5-7B-Instruct"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_API_KEY",
+      "configured": true
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_STRUCTURED_MODE",
+      "value": "json_object"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_MAX_PROMPT_CHARS",
+      "value": "90000"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_MAX_OUTPUT_TOKENS",
+      "value": "4096"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_REQUEST_TIMEOUT",
+      "value": "300"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_RUN_MAX_REQUESTS",
+      "value": "18"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_RUN_MAX_TOTAL_TOKENS",
+      "value": "300000"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_CONTEXT_PROBE",
+      "value": "1"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_CHUNKED_WRITER",
+      "value": "1"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_PRUNED_SCHEMAS",
+      "value": "1"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_INPUT_USD_PER_MILLION_TOKENS",
+      "value": "0.0"
+    },
+    {
+      "file": "slm/.env.slm",
+      "name": "SLM_OUTPUT_USD_PER_MILLION_TOKENS",
+      "value": "0.0"
+    }
+  ],
+  "history_inventory": [
+    {
+      "directory": "data",
+      "exists": true,
+      "files": [
+        {
+          "path": "data/.gitkeep",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "directory": "outputs",
+      "exists": false,
+      "files": []
+    },
+    {
+      "directory": "slm/data",
+      "exists": false,
+      "files": []
+    },
+    {
+      "directory": "slm/outputs",
+      "exists": false,
+      "files": []
+    }
+  ],
+  "ollama": {
+    "executable": "C:\\Users\\JasmineJiang\\AppData\\Local\\Programs\\Ollama\\ollama.EXE",
+    "generation_requests": 0,
+    "version": {
+      "status": "unavailable",
+      "reason": "URLError",
+      "detail": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"
+    },
+    "tags": {
+      "status": "unavailable",
+      "reason": "URLError",
+      "detail": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"
+    },
+    "ps": {
+      "status": "unavailable",
+      "reason": "URLError",
+      "detail": "<urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>"
+    },
+    "manifest_directory_exists": true,
+    "installed_manifests": []
+  },
+  "authority_documents": [
+    {
+      "authority_path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/sprint_plan_.md",
+      "sha256": "42c3a1e4574335b720e268e6d05f05f4af53a98a1d0d533ee752e950784e2b8b",
+      "repository_copy": "docs/final_sprint/sprint_plan_.md",
+      "repository_copy_matches": true
+    },
+    {
+      "authority_path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/@ai_agent_evaluation_metrics_spec.md",
+      "sha256": "e16d7f74999c49cb120d9d3ee224b0bba9e23e86abfec15c0d7de4ae47dff005",
+      "repository_copy": "docs/final_sprint/@ai_agent_evaluation_metrics_spec.md",
+      "repository_copy_matches": true
+    },
+    {
+      "authority_path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/@multiple_ai_agent_optimization.md",
+      "sha256": "54d1b23a55543b882f55e8711da5326d7b9d3efb367755f1cee6442c6e4958c9",
+      "repository_copy": "docs/final_sprint/@multiple_ai_agent_optimization.md",
+      "repository_copy_matches": true
+    }
+  ],
+  "gemini_account": {
+    "status": "user_reported_prior_top_up_unverified",
+    "user_instruction": "Do not investigate quota in S0; user expects prior top-up to cover the experiment.",
+    "free_or_paid": null,
+    "rpm": null,
+    "tpm": null,
+    "rpd": null,
+    "remaining_credit": null,
+    "model_api_requests_in_s0": 0,
+    "new_payments_in_s0": 0,
+    "sprint_spend_constraint_cny_approx": 50
+  }
+}

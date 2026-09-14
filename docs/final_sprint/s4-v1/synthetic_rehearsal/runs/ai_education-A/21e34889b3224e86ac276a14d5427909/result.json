@@ -1,0 +1,227 @@
+{
+  "run_id": "21e34889b3224e86ac276a14d5427909",
+  "status": "completed",
+  "error": null,
+  "workflow_version": "single-agent-common-contract-v1",
+  "condition": "A",
+  "mock_only": true,
+  "budget": {
+    "max_requests": 64,
+    "max_total_tokens": 20000000,
+    "request_count": 4,
+    "retry_count": 0,
+    "remaining_requests": 60,
+    "remaining_tokens": 19999940,
+    "exhausted": false,
+    "charged_total_tokens": 60,
+    "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+    "actual_prompt_tokens_known": 40,
+    "actual_output_tokens_known": 20,
+    "actual_total_tokens_known": 60,
+    "usage_missing_calls": 0,
+    "transport_retry_count": 0,
+    "structure_repair_request_count": 0,
+    "revision_request_count": 0,
+    "run_elapsed_seconds": 0.17100000000209548,
+    "node_elapsed_seconds": null,
+    "node_scope_id": null
+  },
+  "terminal_contract_passed": true,
+  "terminal_contract_state": "passed",
+  "first_valid_plan_seconds": 0.14000000001396984,
+  "scorable_artifact_ref": {
+    "artifact_id": "single.effective",
+    "artifact_version": 1,
+    "sha256": "80c579d7952b4c37c20a28fc88130b40a3ef727b6042a22c0561c9b3c12d0eeb"
+  },
+  "effective_artifacts": {
+    "single": {
+      "artifact_id": "single.effective",
+      "artifact_version": 1,
+      "sha256": "80c579d7952b4c37c20a28fc88130b40a3ef727b6042a22c0561c9b3c12d0eeb"
+    }
+  },
+  "reports": {},
+  "gates": {},
+  "issues": [],
+  "needs_human_review": false,
+  "blocking": false,
+  "external_ready": false,
+  "external_readiness_reason": "human review/Gold approval not performed by S2",
+  "branches": {},
+  "route_trace": [
+    {
+      "node": "single.generate",
+      "status": "completed",
+      "route": null,
+      "budget": {
+        "max_requests": 64,
+        "max_total_tokens": 20000000,
+        "request_count": 4,
+        "retry_count": 0,
+        "remaining_requests": 60,
+        "remaining_tokens": 19999940,
+        "exhausted": false,
+        "charged_total_tokens": 60,
+        "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+        "actual_prompt_tokens_known": 40,
+        "actual_output_tokens_known": 20,
+        "actual_total_tokens_known": 60,
+        "usage_missing_calls": 0,
+        "transport_retry_count": 0,
+        "structure_repair_request_count": 0,
+        "revision_request_count": 0,
+        "run_elapsed_seconds": 0.14000000001396984,
+        "node_elapsed_seconds": 0.125,
+        "node_scope_id": "21e34889b3224e86ac276a14d5427909.single"
+      }
+    },
+    {
+      "node": "single.effective",
+      "status": "completed",
+      "route": null,
+      "budget": {
+        "max_requests": 64,
+        "max_total_tokens": 20000000,
+        "request_count": 4,
+        "retry_count": 0,
+        "remaining_requests": 60,
+        "remaining_tokens": 19999940,
+        "exhausted": false,
+        "charged_total_tokens": 60,
+        "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+        "actual_prompt_tokens_known": 40,
+        "actual_output_tokens_known": 20,
+        "actual_total_tokens_known": 60,
+        "usage_missing_calls": 0,
+        "transport_retry_count": 0,
+        "structure_repair_request_count": 0,
+        "revision_request_count": 0,
+        "run_elapsed_seconds": 0.15599999998812564,
+        "node_elapsed_seconds": null,
+        "node_scope_id": null
+      }
+    },
+    {
+      "node": "terminal",
+      "status": "completed",
+      "route": null,
+      "budget": {
+        "max_requests": 64,
+        "max_total_tokens": 20000000,
+        "request_count": 4,
+        "retry_count": 0,
+        "remaining_requests": 60,
+        "remaining_tokens": 19999940,
+        "exhausted": false,
+        "charged_total_tokens": 60,
+        "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+        "actual_prompt_tokens_known": 40,
+        "actual_output_tokens_known": 20,
+        "actual_total_tokens_known": 60,
+        "usage_missing_calls": 0,
+        "transport_retry_count": 0,
+        "structure_repair_request_count": 0,
+        "revision_request_count": 0,
+        "run_elapsed_seconds": 0.17100000000209548,
+        "node_elapsed_seconds": null,
+        "node_scope_id": null
+      }
+    }
+  ],
+  "handoffs": [
+    {
+      "handoff_id": "frozen_inputs->single.generate:packet",
+      "run_id": "21e34889b3224e86ac276a14d5427909",
+      "upstream_node": "frozen_inputs",
+      "downstream_node": "single.generate",
+      "required_artifact_id": "packet",
+      "required_artifact_version": 1,
+      "required_artifact_hash": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+      "dependency_ids": [
+        "packet"
+      ],
+      "branch_rule": "always",
+      "expected": true,
+      "status": "succeeded",
+      "received_artifact_ref": {
+        "artifact_id": "packet",
+        "artifact_version": 1,
+        "sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03"
+      },
+      "occurred_at_utc": "2026-09-06T23:35:03.392124+00:00",
+      "within_budget": true,
+      "failure_reason": null
+    },
+    {
+      "handoff_id": "frozen_inputs->single.generate:brief",
+      "run_id": "21e34889b3224e86ac276a14d5427909",
+      "upstream_node": "frozen_inputs",
+      "downstream_node": "single.generate",
+      "required_artifact_id": "brief",
+      "required_artifact_version": 1,
+      "required_artifact_hash": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+      "dependency_ids": [
+        "brief"
+      ],
+      "branch_rule": "always",
+      "expected": true,
+      "status": "succeeded",
+      "received_artifact_ref": {
+        "artifact_id": "brief",
+        "artifact_version": 1,
+        "sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4"
+      },
+      "occurred_at_utc": "2026-09-06T23:35:03.393125+00:00",
+      "within_budget": true,
+      "failure_reason": null
+    },
+    {
+      "handoff_id": "single.generate->single.effective:single.initial",
+      "run_id": "21e34889b3224e86ac276a14d5427909",
+      "upstream_node": "single.generate",
+      "downstream_node": "single.effective",
+      "required_artifact_id": "single.initial",
+      "required_artifact_version": 1,
+      "required_artifact_hash": "80c579d7952b4c37c20a28fc88130b40a3ef727b6042a22c0561c9b3c12d0eeb",
+      "dependency_ids": [
+        "single.initial"
+      ],
+      "branch_rule": "always",
+      "expected": true,
+      "status": "succeeded",
+      "received_artifact_ref": {
+        "artifact_id": "single.initial",
+        "artifact_version": 1,
+        "sha256": "80c579d7952b4c37c20a28fc88130b40a3ef727b6042a22c0561c9b3c12d0eeb"
+      },
+      "occurred_at_utc": "2026-09-06T23:35:03.517095+00:00",
+      "within_budget": true,
+      "failure_reason": null
+    },
+    {
+      "handoff_id": "single.effective->terminal:single.effective",
+      "run_id": "21e34889b3224e86ac276a14d5427909",
+      "upstream_node": "single.effective",
+      "downstream_node": "terminal",
+      "required_artifact_id": "single.effective",
+      "required_artifact_version": 1,
+      "required_artifact_hash": "80c579d7952b4c37c20a28fc88130b40a3ef727b6042a22c0561c9b3c12d0eeb",
+      "dependency_ids": [
+        "single.effective"
+      ],
+      "branch_rule": "always",
+      "expected": true,
+      "status": "succeeded",
+      "received_artifact_ref": {
+        "artifact_id": "single.effective",
+        "artifact_version": 1,
+        "sha256": "80c579d7952b4c37c20a28fc88130b40a3ef727b6042a22c0561c9b3c12d0eeb"
+      },
+      "occurred_at_utc": "2026-09-06T23:35:03.530491+00:00",
+      "within_budget": true,
+      "failure_reason": null
+    }
+  ],
+  "collaboration_applicability": "not_applicable"
+}

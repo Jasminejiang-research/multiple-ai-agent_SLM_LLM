@@ -1,0 +1,43 @@
+"""Summarize preserved real evidence; does not call a model or approve a gate."""
+import argparse
+from copy import deepcopy
+import hashlib
+import json
+from pathlib import Path
+
+p=argparse.ArgumentParser()
+p.add_argument('--root',type=Path,required=True)
+p.add_argument('--output',type=Path,required=True)
+args=p.parse_args()
+base=args.root/'docs/final_sprint/s3-fix-v1'
+def read(path): return json.loads(path.read_text(encoding='utf-8-sig'))
+def native(run,kind):
+    path=base/run/'probe/diagnostic/events.jsonl'
+    return next(json.loads(line)['payload'] for line in path.read_text().splitlines() if json.loads(line)['kind']==kind)
+gpu=native('diagnostic_02_chat_long','native_request')
+cpu=native('diagnostic_04_chat_long_cpu','native_request')
+normalized=deepcopy(cpu['body'])
+assert normalized['options'].pop('num_gpu')==0
+assert normalized==gpu['body']
+assert cpu['expected_prompt_tokens']==gpu['expected_prompt_tokens']==31344
+reports=[]
+for run in ('diagnostic_01_raw_short','diagnostic_02_chat_long','diagnostic_03_chat_4k','diagnostic_04_chat_long_cpu'):
+    result=read(base/run/'probe/result.json')
+    item=dict(run=run,mode=result['mode'],result=result['result'],resources=result['resources'],calls=len(result['attempts']))
+    item['native_response']=native(run,'native_response')
+    reports.append(item)
+warmup=read(base/'installed_cpu_warmup/probe/result.json')
+result=dict(package='S3',scope='audit_and_precise_repair',status='runtime_mitigation_verified_budget_decision_pending',
+    same_native_payload_except_num_gpu=True,compared_expected_input_tokens=31344,
+    compared_change={'options.num_gpu':'omitted (auto) -> 0 (CPU)'},
+    root_cause_boundary='The failure is reproduced on mixed CPU/GPU inference and absent on the CPU-only control. This does not identify or fix a specific upstream kernel.',
+    diagnostics=reports,installed_warmup=warmup,installed_payload_replay=read(base/'installed_request_replay.json'),
+    repair_real_calls=sum(r['calls'] for r in reports)+warmup['model_calls'],gemini_calls=0,formal_runs_started=0,
+    complete_proposal_produced=False,real_components='not_run_budget_conflict',complete_d_smoke='not_run_budget_conflict',
+    budget_changed=False,next_package_started=False,
+    timing_limitations='CPU control included a brief offline 43-test run (8.08s) and tokenizer sizing. These timings are diagnostic observations, not isolated performance benchmarks.',
+    verification=dict(staged_full_suite='596 passed, 25 deselected, 3 subtests passed in 93.73s',installed_targeted_suite='48 passed in 4.16s'),
+    dependencies='No packages/runtime/model weights installed or upgraded in this repair.')
+if args.output.exists(): raise SystemExit('Existing audit must not be overwritten')
+args.output.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+print(json.dumps({k:result[k] for k in ('status','same_native_payload_except_num_gpu','repair_real_calls','complete_proposal_produced','budget_changed')}))

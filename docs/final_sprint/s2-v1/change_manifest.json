@@ -1,0 +1,97 @@
+[
+  {
+    "path": "agents/component_critic.py",
+    "before_sha256": null,
+    "after_sha256": "86bf4b8642d9bc32bc43935e7b34fc2f96ba00a5ca11446c02e39771722c2808"
+  },
+  {
+    "path": "docs/final_sprint_status.md",
+    "before_sha256": "9bc4ba9d5572cf48c3ae1ca720618e37354f5e273c1dd5a651ee3eba218a1946",
+    "after_sha256": "37315feb0e313d7639bf21ab9a9e89fda0ccd27167eaef3f0d66f83f60643538"
+  },
+  {
+    "path": "docs/final_sprint/s2-v1/HANDOFF.md",
+    "before_sha256": null,
+    "after_sha256": "e5f2146bf32a34a044a7ff6d9f9a61d353fc28ea03579a8e73bbcbf56199f02c"
+  },
+  {
+    "path": "docs/final_sprint/s2-v1/S1_STATUS_ARCHIVE.md",
+    "before_sha256": null,
+    "after_sha256": "9bc4ba9d5572cf48c3ae1ca720618e37354f5e273c1dd5a651ee3eba218a1946"
+  },
+  {
+    "path": "evaluation/s2_fixtures.py",
+    "before_sha256": null,
+    "after_sha256": "cd2e28bdb852493a07521551365fbff37aeea00561d28463dd7cd940c12a4a63"
+  },
+  {
+    "path": "evaluation/s2.py",
+    "before_sha256": null,
+    "after_sha256": "e897f60286f8f2b6009a20addf3d9bbb1d0dbdb81f5ff5084c6b6d6a4f7bde78"
+  },
+  {
+    "path": "schemas/review_events.py",
+    "before_sha256": null,
+    "after_sha256": "d20f8de503302dba60641c81bc1b85025a0d7325f7983f7fbfd254bf39739fe0"
+  },
+  {
+    "path": "schemas/review.py",
+    "before_sha256": null,
+    "after_sha256": "74660a28f879dd54749f91180ccaa7e1661a569f4e6245bce910b4b27da4fb57"
+  },
+  {
+    "path": "slm/factories.py",
+    "before_sha256": "860e1ae3467c4a8c76108997f9d6d13cf0aa49b58a48da8e83840bc2460ac304",
+    "after_sha256": "1e30e899ac8dce4d71ef627a6e0c7af8f6b377ed15796db354b94179e4ba017c"
+  },
+  {
+    "path": "slm/tests/test_s2_contract_adapters.py",
+    "before_sha256": null,
+    "after_sha256": "9fa6d86139a872a2e29d60f5a294741259918ba93ed8839644c254d607981159"
+  },
+  {
+    "path": "tests/test_s2_review.py",
+    "before_sha256": null,
+    "after_sha256": "7656ecba67865101333cd0a55325d8ba8c2dff18a5e62c0abc9508c84255cee7"
+  },
+  {
+    "path": "workflow/contract_generation.py",
+    "before_sha256": "21d6b7642d54b8711390983e8af2d6ffedc51c01ab83543472a3c2703500b692",
+    "after_sha256": "6efd236c5a057236d659adc0773a1d2a28de99da1d7a5a07ca5cb64b53976da5"
+  },
+  {
+    "path": "workflow/multi_agent_graph.py",
+    "before_sha256": "475f25c6030eb70f100be757f376d5737dff6530f22fc4d4e0c9d1520ca7dfac",
+    "after_sha256": "87593ff44845aeb9514770df791b771c534d6ee00061e466154035ddf528fa57"
+  },
+  {
+    "path": "workflow/review_config.py",
+    "before_sha256": null,
+    "after_sha256": "926c1102cda8f8f1ea452f21e3b6b0c872e67cf9048cf8f23d09fada6942a114"
+  },
+  {
+    "path": "workflow/review_events.py",
+    "before_sha256": null,
+    "after_sha256": "8ec4e37b94f8ea2d2a1bbcdfe427a8c737abdd367a08c1861174e2e51986d26c"
+  },
+  {
+    "path": "workflow/review_graph.py",
+    "before_sha256": null,
+    "after_sha256": "02163f97bf6ab321ea826e5def7babd524896664e80b8a87883ccd95aafdc0c4"
+  },
+  {
+    "path": "workflow/review_handoffs.py",
+    "before_sha256": null,
+    "after_sha256": "43d41f549f92f48a7b7b46e8bb074b38d4757f5ed06bcaa2641998348bafee63"
+  },
+  {
+    "path": "workflow/review_providers.py",
+    "before_sha256": null,
+    "after_sha256": "dfc3f96e463789e2d5f013db23242ce0765a8c97ec6e73f8c6b6fe95971b50ee"
+  },
+  {
+    "path": "workflow/review_runtime.py",
+    "before_sha256": null,
+    "after_sha256": "b2076ab33fffa91879458ec42050b4415c9930d848ae18e6163cdb735ce9af0c"
+  }
+]

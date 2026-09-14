@@ -1,0 +1,247 @@
+{
+  "analysis_summary": "The analysis is based solely on the provided frozen evidence packet. No external data or real-time browsing was used. All claims are traced to source anchors in the packet. The analysis covers market trends, customers, competition, assumptions, financial projections, and recommendations for proceeding with the pilot. Confidence levels are assigned based on evidence support, and evidence gaps are identified.",
+  "market_trends": [
+    {
+      "topic": "Adult education market size",
+      "finding": "The exact market size for adult learners in the US is unknown; only historical graduate completions are available.",
+      "rationale": "Source EDU-02 provides historical graduate degree completions (880,200 master’s degrees in 2021‑22). However, this does not directly translate to current or future adult MBA‑specific demand. The source is limited to historical data and does not account for current enrollment trends, demographic shifts, or willingness to pay for AI‑driven tutoring.",
+      "claims": [
+        {
+          "claim_id": "market_trends.market_size_unknown",
+          "parent_claim_id": null,
+          "claim_text": "Exact market size for adult MBA education is unknown.",
+          "claim_type": "assumption",
+          "claim_domain": "market_trends",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-02"],
+          "source_support": "partial",
+          "source_quality": 0.6,
+          "source_recency": 0.8,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "assumption_dominant",
+          "verbatim_parent_text": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "source_anchors": [
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C1",
+              "line_start": 299,
+              "line_end": 299,
+              "snapshot_sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+              "quote": "Last Updated: May 2024"
+            },
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C2",
+              "line_start": 342,
+              "line_end": 342,
+              "snapshot_sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+              "quote": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as business, management, marketing, and related support services, as well as culinary, entertainment, and personal services."
+            }
+          ],
+          "financial_value_ids": ["base.monthly_revenue", "base.monthly_operating_result", "base.ending_cash", "base.annual_cash_change", "high.ending_cash", "high.annual_cash_change", "high.break_even_users", "high.monthly_revenue", "high.monthly_operating_result", "high.annual_cash_change", "low.ending_cash", "low.annual_cash_change", "low.break_even_users", "low.monthly_revenue", "low.monthly_operating_result", "low.annual_cash_change"],
+          "premise": "To assess market potential, we need current demand metrics beyond historical totals. Historical data alone cannot validate the hypothesis that adult learners need personalized MBA case coaching.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant"
+    },
+    {
+      "topic": "Student willingness to pay",
+      "finding": "Willingness to pay for AI‑specific MBA tutoring is not quantified; competitor pricing is limited to a generic $4/month plan.",
+      "rationale": "Source EDU-01 shows Khanmigo pricing at $4/month, but this is a competitor benchmark, not a target customer willingness‑to‑pay estimate for the hypothetical AI Tutor product. The packet does not provide survey data, pricing surveys, or willingness‑to‑pay studies for adult MBA students.",
+      "claims": [
+        {
+          "claim_id": "customer_willingness_assumption",
+          "parent_claim_id": null,
+          "claim_text": "Adult learners are willing to pay $19/month for AI‑specific MBA tutoring.",
+          "claim_type": "assumption",
+          "claim_domain": "customer_willingness",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-01"],
+          "source_support": "partial",
+          "source_quality": 0.5,
+          "source_recency": 0.8,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "assumption_dominant",
+          "verbatim_parent_text": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 22,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you"
+            }
+          ],
+          "financial_value_ids": ["subscription_price"],
+          "premise": "Assuming a $19/month price is needed to evaluate cash flow, but no market data validates this price point among target customers.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant"
+    },
+    {
+      "topic": "Competitive differentiation",
+      "finding": "Khanmigo is the only competitor identified; its offering is adjacent (general tutoring) and not an MBA case‑coaching substitute.",
+      "rationale": "Source EDU-01 lists Khanmigo pricing and features, indicating it is a competitor but not a direct MBA‑specific alternative. The packet does not enumerate other potential competitors (e.g., other AI tutoring platforms, industry‑specific case libraries). This limits the ability to assess true differentiation and market share risk.",
+      "claims": [
+        {
+          "claim_id": "competition_differentiation",
+          "parent_claim_id": null,
+          "claim_text": "Khanmigo is the primary competitor; differentiation must be proven beyond generic tutoring.",
+          "claim_type": "assumption",
+          "claim_domain": "competition",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-01"],
+          "source_support": "partial",
+          "source_quality": 0.5,
+          "source_recency": 0.8,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "assumption_dominant",
+          "verbatim_parent_text": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 22,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you"
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "Without a clear list of direct competitors, we cannot quantify differentiation advantages or market share erosion risk.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant"
+    }
+  ],
+  "customer_notes": [
+    {
+      "topic": "Target customer profile",
+      "finding": "Pilot targets US adults aged 18+ enrolled/applying to MBA programs; school data access is restricted by privacy laws.",
+      "rationale": "Source EDU-02 provides historical graduate degree completions but does not address current enrollment trends, demographic characteristics, or institutional willingness to adopt a new AI‑driven tool. The privacy constraints (FERPA) are noted in source EDU-03, limiting data collection possibilities.",
+      "claims": [
+        {
+          "claim_id": "customer_profile_assumption",
+          "parent_claim_id": null,
+          "claim_text": "The pilot will enroll adult learners who have applied to MBA programs and cannot access school records without explicit permission.",
+          "claim_type": "assumption",
+          "claim_domain": "customer",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-02", "EDU-03"],
+          "source_support": "partial",
+          "source_quality": 0.6,
+          "source_recency": 0.8,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "assumption_dominant",
+          "verbatim_parent_text": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "source_anchors": [
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C1",
+              "line_start": 299,
+              "line_end": 299,
+              "snapshot_sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+              "quote": "Last Updated: May 2024"
+            },
+            {
+              "source_id": "EDU-03",
+              "chunk_id": "EDU-03-C1",
+              "line_start": 54,
+              "line_end": 54,
+              "snapshot_sha256": "1fc5afa18f74989ee9bd9208790148bf03dd8e84376b7afacca5ec4089e280c1",
+              "quote": "What is FERPA?"
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "The pilot design depends on enrollment data access, which is legally constrained; this assumption must be validated before scaling.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant"
+    }
+  ],
+  "competitor_assumptions": [
+    {
+      "topic": "Number of direct competitors",
+      "finding": "Only Khanmigo is explicitly identified as a competitor; other potential AI tutoring platforms are not listed.",
+      "rationale": "Source EDU-01 enumerates Khanmigo pricing and features, establishing a single direct competitor. Absence of additional competitors means the differentiation analysis is based on a single benchmark, limiting confidence in market positioning.",
+      "claims": [
+        {
+          "claim_id": "competitor_count_assumption",
+          "parent_claim_id": null,
+          "claim_text": "There is only one direct competitor (Khanmigo); no other significant AI tutoring platforms are known.",
+          "claim_type": "assumption",
+          "claim_domain": "competitor_count",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-01"],
+          "source_support": "partial",
+          "source_quality": 0.5,
+          "source_recency": 0.8,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "assumption_dominant",
+          "verbatim_parent_text": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 22,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you"
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "Without a comprehensive competitor list, we cannot perform a robust SWOT or market‑share analysis.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant"
+    }
+  ],
+  "needs_human_review": [
+    "Validate the $19/month subscription price through customer surveys or pilot sign‑ups.",
+    "Conduct a market‑size study using current enrollment data (FERPA‑compliant) to quantify demand.",
+    "Identify and benchmark additional AI tutoring competitors beyond Khanmigo.",
+    "Obtain explicit permissions to access school enrollment and demographic data for pilot participants.",
+    "Define measurable pilot criteria (e.g., retention >70%, NPS >50) before scaling."
+  ]
+}

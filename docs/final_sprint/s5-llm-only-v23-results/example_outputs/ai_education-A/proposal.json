@@ -1,0 +1,999 @@
+{
+  "role": "single",
+  "artifact_version": 1,
+  "case_id": "ai_education",
+  "packet_sha256": "a673664f362509f9d9ccd10c281fc279112bc491807add2489adb27000d0d10c",
+  "brief_sha256": "71adecf347d25bd8a349846f1f1cd97efe522fc45786b6f36552f0b3fbb7102d",
+  "contract_version": "proposal-grounding-v5-two-stage",
+  "payload": {
+    "title": "AI Tutor for MBA Students Proposal",
+    "global_source_ids": [
+      "EDU-01",
+      "EDU-03"
+    ],
+    "executive_summary": {
+      "title": "Executive Summary",
+      "content": "This proposal assesses a staged launch for an AI Tutor for MBA Students, focusing on differentiation and cash needs.",
+      "key_claims": [
+        {
+          "claim_id": "ES01",
+          "parent_claim_id": null,
+          "claim_text": "This proposal assesses a staged launch for an AI Tutor for MBA Students, focusing on differentiation and cash needs.",
+          "claim_type": "recommendation",
+          "claim_domain": "The proposal's goal is to prepare an investor-facing assessment for a staged launch, differentiation, and cash requirements.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "contextual",
+          "source_quality": 0.8,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "This proposal assesses a staged launch for an AI Tutor for MBA Students, focusing on differentiation and cash needs.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "The proposal aims to guide investment decisions for a staged launch.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "problem": {
+      "title": "Problem",
+      "content": "The pilot tests if students need more timely, personalized business-case reasoning feedback than current arrangements.",
+      "key_claims": [
+        {
+          "claim_id": "P01",
+          "parent_claim_id": null,
+          "claim_text": "The pilot tests if students need more timely, personalized business-case reasoning feedback than current arrangements.",
+          "claim_type": "assumption",
+          "claim_domain": "The problem statement explicitly defines this as a demand hypothesis, not a verified market fact.",
+          "evidence_status": "assumption",
+          "source_ids": [],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "The pilot tests if students need more timely, personalized business-case reasoning feedback than current arrangements.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "This is a demand hypothesis, not a verified market fact, requiring validation.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "target_customer": {
+      "title": "Target Customer",
+      "content": "US adults 18+ in MBA/business graduate programs or applying, with instructors as potential institutional buyers.",
+      "key_claims": [
+        {
+          "claim_id": "TC01",
+          "parent_claim_id": null,
+          "claim_text": "US adults 18+ in MBA/business graduate programs or applying, with instructors as potential institutional buyers.",
+          "claim_type": "factual",
+          "claim_domain": "The target customer is explicitly defined as US adults aged 18+ enrolled in or applying to MBA/business graduate programs, with instructors as potential buyers.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 1.0,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "US adults 18+ in MBA/business graduate programs or applying, with instructors as potential institutional buyers.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    },
+    "market_opportunity": {
+      "title": "Market Opportunity",
+      "content": "Graduate completion counts establish historical volume but not demand, TAM, or willingness to pay for this service.",
+      "key_claims": [
+        {
+          "claim_id": "MO01",
+          "parent_claim_id": null,
+          "claim_text": "Graduate completion counts establish historical volume but not demand, TAM, or willingness to pay for this service.",
+          "claim_type": "factual",
+          "claim_domain": "The constraints explicitly state not to infer MBA enrollment, TAM, willingness to pay, or growth rates from NCES business degree completions.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 1.0,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "Graduate completion counts establish historical volume but not demand, TAM, or willingness to pay for this service.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    },
+    "solution": {
+      "title": "Solution",
+      "content": "An English-language AI case-coaching service offers guided questions, evidence-aware feedback, and practice.",
+      "key_claims": [
+        {
+          "claim_id": "S01",
+          "parent_claim_id": null,
+          "claim_text": "An English-language AI case-coaching service offers guided questions, evidence-aware feedback, and practice.",
+          "claim_type": "factual",
+          "claim_domain": "The solution is defined as an English-language AI case-coaching service providing guided questions, evidence-aware feedback, and practice.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 1.0,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "An English-language AI case-coaching service offers guided questions, evidence-aware feedback, and practice.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    },
+    "value_proposition": {
+      "title": "Value Proposition",
+      "content": "Differentiation from broad tutoring comes from an MBA-specific offering with specialized content and feedback.",
+      "key_claims": [
+        {
+          "claim_id": "VP01",
+          "parent_claim_id": null,
+          "claim_text": "Differentiation from broad tutoring comes from an MBA-specific offering with specialized content and feedback.",
+          "claim_type": "recommendation",
+          "claim_domain": "The decision question asks how an MBA-specific offering should differentiate from low-price broad tutoring.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "contextual",
+          "source_quality": 0.8,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "Differentiation from broad tutoring comes from an MBA-specific offering with specialized content and feedback.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "An MBA-specific focus is recommended for differentiation against broader, lower-priced tutoring options.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "competitor_analysis": {
+      "title": "Competitor Analysis",
+      "content": "Khanmigo is an adjacent tutoring benchmark at $4/month or $44/year, not a direct MBA substitute [EDU-01].",
+      "key_claims": [
+        {
+          "claim_id": "CA01",
+          "parent_claim_id": null,
+          "claim_text": "Khanmigo is an adjacent tutoring benchmark at $4/month or $44/year, not a direct MBA substitute [EDU-01].",
+          "claim_type": "factual",
+          "claim_domain": "Khanmigo's pricing is stated in E01, and the brief identifies it as an adjacent benchmark, not an MBA substitute.",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 1.0,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "Khanmigo is an adjacent tutoring benchmark at $4/month or $44/year, not a direct MBA substitute [EDU-01].",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "business_model": {
+      "title": "Business Model",
+      "content": "Direct monthly subscription is the base financial scenario, excluding institutional licensing revenue.",
+      "key_claims": [
+        {
+          "claim_id": "BM01",
+          "parent_claim_id": null,
+          "claim_text": "Direct monthly subscription is the base financial scenario, excluding institutional licensing revenue.",
+          "claim_type": "factual",
+          "claim_domain": "The business model is defined as a direct monthly subscription for the base financial scenario, with institutional licensing as a separate option contributing zero to the base.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 1.0,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "Direct monthly subscription is the base financial scenario, excluding institutional licensing revenue.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    },
+    "go_to_market_strategy": {
+      "title": "Go-to-Market Strategy",
+      "content": "A staged launch involves 3 months discovery/prototype, 3 months limited pilot, then conditional scaling.",
+      "key_claims": [
+        {
+          "claim_id": "GTM01",
+          "parent_claim_id": null,
+          "claim_text": "A staged launch involves 3 months discovery/prototype, 3 months limited pilot, then conditional scaling.",
+          "claim_type": "factual",
+          "claim_domain": "The constraints specify a 3-month discovery/prototype, 3-month limited pilot, and conditional scaling.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 1.0,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "A staged launch involves 3 months discovery/prototype, 3 months limited pilot, then conditional scaling.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    },
+    "financial_assumptions": {
+      "title": "Financial Assumptions",
+      "content": "Achieving operating break-even requires 500 average paying users monthly over 12 months.",
+      "key_claims": [
+        {
+          "claim_id": "FA01",
+          "parent_claim_id": null,
+          "claim_text": "Achieving operating break-even requires 500 average paying users monthly over 12 months.",
+          "claim_type": "projection",
+          "claim_domain": "The financial results show that the break-even users for all scenarios (low, base, high) is 500 customers.",
+          "evidence_status": "assumption",
+          "source_ids": [],
+          "source_support": "direct",
+          "source_quality": 1.0,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "Achieving operating break-even requires 500 average paying users monthly over 12 months.",
+          "source_anchors": [],
+          "financial_value_ids": [
+            "low.break_even_users",
+            "base.break_even_users",
+            "high.break_even_users"
+          ],
+          "premise": "This is a calculated break-even point based on assumed costs and pricing.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant",
+      "financial_values": [
+        {
+          "value_id": "low.monthly_revenue",
+          "value": "1900.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.low",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.monthly_variable_cost",
+          "value": "400.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.low",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.monthly_contribution",
+          "value": "1500.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.low",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.monthly_operating_result",
+          "value": "-6000.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "low.monthly_contribution",
+            "fixed_operating_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_operating_result",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.annual_cash_change",
+          "value": "-90000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "months",
+            "low.monthly_operating_result",
+            "one_time_setup"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.ending_cash",
+          "value": "30000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "low.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.break_even_users",
+          "value": "500",
+          "unit": "customers",
+          "currency": null,
+          "period": "monthly average over 12 months",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_operating_cost",
+            "marketing_cost",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/break_even_users",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_revenue",
+          "value": "4750.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.base",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_variable_cost",
+          "value": "1000.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.base",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_contribution",
+          "value": "3750.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.base",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_operating_result",
+          "value": "-3750.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "base.monthly_contribution",
+            "fixed_operating_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_operating_result",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.annual_cash_change",
+          "value": "-63000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "months",
+            "base.monthly_operating_result",
+            "one_time_setup"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.ending_cash",
+          "value": "57000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "base.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.break_even_users",
+          "value": "500",
+          "unit": "customers",
+          "currency": null,
+          "period": "monthly average over 12 months",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_operating_cost",
+            "marketing_cost",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/break_even_users",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_revenue",
+          "value": "9500.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.high",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_variable_cost",
+          "value": "2000.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.high",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_contribution",
+          "value": "7500.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.high",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_operating_result",
+          "value": "0.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "high.monthly_contribution",
+            "fixed_operating_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_operating_result",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.annual_cash_change",
+          "value": "-18000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "months",
+            "high.monthly_operating_result",
+            "one_time_setup"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.ending_cash",
+          "value": "102000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "high.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.break_even_users",
+          "value": "500",
+          "unit": "customers",
+          "currency": null,
+          "period": "monthly average over 12 months",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_operating_cost",
+            "marketing_cost",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/break_even_users",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        }
+      ]
+    },
+    "risks_and_mitigations": {
+      "title": "Risks and Mitigations",
+      "content": "FERPA compliance is critical for any school data ingestion, requiring careful privacy review [EDU-03].",
+      "key_claims": [
+        {
+          "claim_id": "RM01",
+          "parent_claim_id": null,
+          "claim_text": "FERPA compliance is critical for any school data ingestion, requiring careful privacy review [EDU-03].",
+          "claim_type": "factual",
+          "claim_domain": "FERPA is a federal law governing education records, and the constraints state no school-record ingestion before permission and privacy review.",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-03"
+          ],
+          "source_support": "direct",
+          "source_quality": 1.0,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "FERPA compliance is critical for any school data ingestion, requiring careful privacy review [EDU-03].",
+          "source_anchors": [
+            {
+              "source_id": "EDU-03",
+              "chunk_id": "EDU-03-C1",
+              "line_start": 54,
+              "line_end": 55,
+              "snapshot_sha256": "1fc5afa18f74989ee9bd9208790148bf03dd8e84376b7afacca5ec4089e280c1",
+              "quote": "What is FERPA?\nThe Family Educational Rights and Privacy Act (FERPA) is a federal law that affords parents the right to have access to their children’s education records, the right to seek to have the records amended, and the right to have some control over the disclosure of personally identifiable information from the education records. When a student turns 18 years old, or enters a postsecondary institution at any age, the rights under FERPA transfer from the parents to the student (“eligible student”). The FERPA statute is found at 20 U.S.C. § 1232g and the FERPA regulations are found at 34 CFR Part 99."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-03"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "implementation_roadmap": {
+      "title": "Implementation Roadmap",
+      "content": "Interviews, content licenses, school data permissions, and learning-outcome tests are needed before expansion.",
+      "key_claims": [
+        {
+          "claim_id": "IR01",
+          "parent_claim_id": null,
+          "claim_text": "Interviews, content licenses, school data permissions, and learning-outcome tests are needed before expansion.",
+          "claim_type": "recommendation",
+          "claim_domain": "The decision questions explicitly ask which interviews, content licenses, school data permissions, and learning-outcome tests are needed before expansion.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "contextual",
+          "source_quality": 0.8,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "Interviews, content licenses, school data permissions, and learning-outcome tests are needed before expansion.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "These steps are necessary validations before scaling the service.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "appendix": {
+      "title": "Appendix",
+      "content": "This section provides supplementary information and detailed data supporting the proposal's claims.",
+      "key_claims": [
+        {
+          "claim_id": "A01",
+          "parent_claim_id": null,
+          "claim_text": "This section provides supplementary information and detailed data supporting the proposal's claims.",
+          "claim_type": "factual",
+          "claim_domain": "The appendix typically contains supporting information and data.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.7,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "This section provides supplementary information and detailed data supporting the proposal's claims.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    }
+  },
+  "confidence_changes": [
+    {
+      "artifact_version": 1,
+      "location": "problem",
+      "previous": "high",
+      "current": "medium",
+      "reason": "assumption_dominant",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "problem.key_claims[0]",
+      "previous": "high",
+      "current": "medium",
+      "reason": "assumption_dominant",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "target_customer",
+      "previous": "high",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "target_customer.key_claims[0]",
+      "previous": "high",
+      "current": "low",
+      "reason": "no_evidence",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "market_opportunity",
+      "previous": "high",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "market_opportunity.key_claims[0]",
+      "previous": "high",
+      "current": "low",
+      "reason": "no_evidence",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "solution",
+      "previous": "high",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "solution.key_claims[0]",
+      "previous": "high",
+      "current": "low",
+      "reason": "no_evidence",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "business_model",
+      "previous": "high",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "business_model.key_claims[0]",
+      "previous": "high",
+      "current": "low",
+      "reason": "no_evidence",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "go_to_market_strategy",
+      "previous": "high",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "go_to_market_strategy.key_claims[0]",
+      "previous": "high",
+      "current": "low",
+      "reason": "no_evidence",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "financial_assumptions",
+      "previous": "high",
+      "current": "medium",
+      "reason": "assumption_dominant",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "financial_assumptions.key_claims[0]",
+      "previous": "high",
+      "current": "medium",
+      "reason": "assumption_dominant",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "appendix",
+      "previous": "low",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    }
+  ],
+  "pruned": false,
+  "unresolved_major": false,
+  "confidence_basis": "proposed_support_structurally_checked_not_human_gold"
+}

@@ -1,0 +1,213 @@
+{
+  "finance_assumptions": {
+    "financial_model": null,
+    "analysis_summary": "The financial assumptions for the AI Tutor for MBA Students are currently qualitative due to the absence of specific financial data, business model details, and market research on MBA student willingness to pay or specific cost drivers. The analysis relies on general industry trends and strategic recommendations, acknowledging that all quantitative figures would be speculative without further validation. Key areas requiring immediate research include pricing strategy, customer acquisition costs, operational expenses, and the overall market size for this specific niche within the US higher education sector.",
+    "revenue_assumptions": [
+      {
+        "topic": "Revenue Model",
+        "assumption": "The primary revenue model is assumed to be a direct-to-consumer (D2C) subscription-based service for individual MBA students in the United States, potentially with tiered pricing based on features or usage levels.",
+        "rationale": "This model is a common approach for EdTech services and was suggested in the strategy analysis. However, the specific pricing, conversion rates, and customer acquisition volumes are currently unsupplied.",
+        "confidence": "low",
+        "needs_validation": [
+          "Confirmation of the preferred business model (D2C vs. B2B or hybrid)",
+          "Specific pricing tiers and monthly subscription rates",
+          "Estimated customer acquisition volume and conversion rates"
+        ]
+      },
+      {
+        "topic": "Institutional Partnerships Revenue",
+        "assumption": "A secondary revenue stream could emerge from B2B partnerships with MBA programs or universities, where the AI tutor is licensed or integrated as an endorsed supplementary resource.",
+        "rationale": "The strategy analysis suggests investigating institutional partnerships for legitimacy and distribution. However, the feasibility, pricing models for institutions, and potential revenue share are entirely unconfirmed.",
+        "confidence": "low",
+        "needs_validation": [
+          "Feasibility and structure of B2B partnership models",
+          "Pricing models for institutional licenses or integrations",
+          "Projected adoption rates by universities"
+        ]
+      },
+      {
+        "topic": "Customer Acquisition & Growth",
+        "assumption": "Initial customer acquisition will primarily target individual MBA students through digital channels and academic forums, with growth dependent on effective marketing and positive word-of-mouth.",
+        "rationale": "The go-to-market strategy suggests direct engagement. However, specific customer acquisition costs (CAC), conversion rates, and the overall addressable market size for MBA students are unknown.",
+        "confidence": "low",
+        "needs_validation": [
+          "Detailed customer acquisition strategy and associated costs",
+          "Market size and penetration rates for MBA students",
+          "Projected customer growth trajectory"
+        ]
+      }
+    ],
+    "cost_assumptions": [
+      {
+        "topic": "AI Development & Maintenance Costs",
+        "assumption": "Significant investment will be required for the initial development, ongoing enhancement, and maintenance of the AI tutor's core technology, including large language model (LLM) integration, specialized pedagogical algorithms, and infrastructure.",
+        "rationale": "Developing a high-quality, specialized AI tutor is inherently R&D intensive. Specific cost breakdowns for development, infrastructure, and ongoing maintenance are unsupplied.",
+        "confidence": "low",
+        "needs_validation": [
+          "Detailed budget for AI development and infrastructure",
+          "Ongoing operational costs for AI model hosting and maintenance",
+          "Cost of content creation and curriculum integration"
+        ]
+      },
+      {
+        "topic": "Operational & Support Costs",
+        "assumption": "Operational costs will include customer support, platform hosting, data storage, and administrative overhead. Human oversight for academic integrity and quality assurance will also be a key cost component.",
+        "rationale": "Any SaaS product requires operational support. The strategy analysis highlights the importance of academic integrity and human oversight, implying associated costs. Specific staffing, tooling, and infrastructure costs are unknown.",
+        "confidence": "low",
+        "needs_validation": [
+          "Staffing plan and associated salary costs for operations and support",
+          "Estimated costs for customer support tools and services",
+          "Detailed breakdown of platform hosting and data management expenses"
+        ]
+      },
+      {
+        "topic": "Marketing & Customer Acquisition Costs (CAC)",
+        "assumption": "Costs will be incurred for marketing campaigns, digital advertising, and sales efforts to reach and convert MBA students, both individually and potentially through institutional channels.",
+        "rationale": "Customer acquisition is essential for growth. The go-to-market strategy suggests direct marketing. However, specific marketing budgets, channel costs, and CAC targets are unsupplied.",
+        "confidence": "low",
+        "needs_validation": [
+          "Marketing budget allocation across different channels",
+          "Target Customer Acquisition Cost (CAC)",
+          "Sales and business development costs for institutional partnerships"
+        ]
+      },
+      {
+        "topic": "Regulatory & Compliance Costs",
+        "assumption": "Ongoing costs will be associated with monitoring and ensuring compliance with evolving federal and state regulations concerning AI in education, data privacy (e.g., FERPA), and academic integrity in the United States.",
+        "rationale": "The research analysis highlights a rapidly evolving regulatory landscape. Compliance will require legal counsel, policy implementation, and potential certification efforts. Specific costs are unknown.",
+        "confidence": "low",
+        "needs_validation": [
+          "Legal and compliance consulting fees",
+          "Costs associated with data privacy and security measures",
+          "Potential costs for university certifications or endorsements"
+        ]
+      }
+    ],
+    "unit_economics_assumptions": [
+      {
+        "topic": "Pricing Strategy",
+        "assumption": "The price per unit (monthly subscription fee) for the AI Tutor will need to be competitive with existing academic support alternatives and reflect the perceived value of personalized, MBA-specific learning assistance.",
+        "rationale": "The business model is unsupplied, and MBA student willingness to pay is unknown. Pricing will be a critical determinant of revenue and must be validated through market research.",
+        "confidence": "low",
+        "needs_validation": [
+          "Market research on MBA student willingness to pay for AI tutoring",
+          "Competitive pricing analysis of alternative learning support services",
+          "Value proposition assessment to justify pricing"
+        ]
+      },
+      {
+        "topic": "Gross Margin",
+        "assumption": "The gross margin per unit will depend on the monthly subscription price and the variable costs associated with serving each active user, such as AI inference costs, content licensing, and direct customer support.",
+        "rationale": "Without defined pricing or variable costs, the gross margin is entirely speculative. It is a critical metric for profitability and scalability.",
+        "confidence": "low",
+        "needs_validation": [
+          "Detailed breakdown of variable costs per active user",
+          "Target gross margin percentage",
+          "Impact of usage patterns on variable costs"
+        ]
+      },
+      {
+        "topic": "Customer Acquisition Cost (CAC)",
+        "assumption": "The Customer Acquisition Cost (CAC) will be influenced by the chosen marketing channels, the effectiveness of campaigns, and the conversion rates from prospects to paying subscribers.",
+        "rationale": "The go-to-market strategy is qualitative, and specific marketing budgets are unknown. The CAC will be a key driver of profitability and requires validation.",
+        "confidence": "low",
+        "needs_validation": [
+          "Target CAC for individual MBA students",
+          "Breakdown of marketing and sales expenses per acquired customer",
+          "Impact of brand perception on CAC"
+        ]
+      },
+      {
+        "topic": "Customer Lifetime Value (LTV) & Retention",
+        "assumption": "Customer Lifetime Value (LTV) will be determined by the average subscription duration (retention rate) and the average revenue per user (ARPU) over that period. High retention will be crucial given the likely high CAC.",
+        "rationale": "Retention rates for MBA students are unknown, and the ARPU is dependent on the unconfirmed pricing strategy. LTV is essential for assessing the viability of the business model.",
+        "confidence": "low",
+        "needs_validation": [
+          "Expected monthly or annual customer churn rate",
+          "Average subscription duration for MBA students",
+          "Strategies to maximize customer retention"
+        ]
+      }
+    ],
+    "break_even_discussion": "Achieving break-even for the AI Tutor for MBA Students would depend on a critical balance of several key financial assumptions. The primary drivers would be the volume of paying MBA student subscribers, the monthly subscription price, the variable cost associated with serving each student (e.g., AI inference costs, direct support), and the total monthly fixed costs (e.g., AI development, operational overhead, marketing, compliance). A higher number of subscribers at a competitive price, coupled with efficient variable costs and controlled fixed expenses, would accelerate reaching break-even. Conversely, low adoption rates, aggressive pricing pressure, high variable costs, or significant fixed overheads would extend the time to profitability. The break-even point is highly sensitive to the initial investment in AI development and the effectiveness of customer acquisition efforts.",
+    "assumption_notice": "All financial figures are assumptions for planning discussion, not forecasts.",
+    "unsupported_financial_claims": [
+      {
+        "claim": "The willingness of MBA students to pay for an AI tutor service.",
+        "why_unsupported": "The user brief explicitly states this has not been supplied, and no pricing or willingness-to-pay data for MBA students is in the provided sources.",
+        "needed_evidence": [
+          "Pricing sensitivity analysis for MBA students",
+          "Market research on perceived value of AI tutoring for MBA programs"
+        ]
+      },
+      {
+        "claim": "Plausible commercial models, pricing, conversion rates, customer counts, costs, or margins for the AI Tutor.",
+        "why_unsupported": "The user brief explicitly states the business model has not been supplied, and no financial data is available in the provided sources.",
+        "needed_evidence": [
+          "Market research on subscription models in higher education EdTech",
+          "Financial modeling based on comparable services",
+          "Cost analysis for AI development and deployment"
+        ]
+      },
+      {
+        "claim": "The specific market size for AI tutors targeting MBA students in the United States.",
+        "why_unsupported": "While the general US AI education market size is provided, it is not segmented for higher education or MBA students specifically.",
+        "needed_evidence": [
+          "Market segmentation report for AI in higher education",
+          "Demand forecasting for specialized AI learning tools for MBA programs"
+        ]
+      },
+      {
+        "claim": "The precise unmet learning needs, frequency, and urgency of MBA students requiring additional learning support.",
+        "why_unsupported": "The user brief explicitly states these have not been supplied, and the provided web research does not offer specific data for MBA students. This impacts demand and thus potential revenue.",
+        "needed_evidence": [
+          "Detailed market research on MBA student learning challenges",
+          "Surveys on MBA student demand for AI tutors",
+          "Interviews with MBA students regarding academic support needs"
+        ]
+      },
+      {
+        "claim": "Specific product features, delivery model, pedagogical approach, integrations, and differentiation for the AI Tutor.",
+        "why_unsupported": "The user brief explicitly states these have not been supplied. These details directly impact development costs, value proposition, and thus pricing potential.",
+        "needed_evidence": [
+          "User research on desired AI tutor features for MBA students",
+          "Competitive analysis of existing AI learning tools",
+          "Expert consultation on effective AI pedagogy for higher education"
+        ]
+      },
+      {
+        "claim": "Information regarding the legal position of such a service or potential institutional partnerships with MBA programs.",
+        "why_unsupported": "The user brief mentions legal position as unconfirmed, and the provided sources discuss general regulatory trends but not specific legal standing for a commercial AI tutor or partnership models. This impacts potential revenue streams and compliance costs.",
+        "needed_evidence": [
+          "Legal review of AI in education regulations",
+          "Research on university policies regarding third-party AI tools",
+          "Analysis of potential partnership models with MBA institutions"
+        ]
+      }
+    ],
+    "needs_human_review": [
+      "Confirmation of the preferred business model (D2C subscription, B2B institutional licensing, or hybrid) and specific pricing strategy.",
+      "Input on the target customer's willingness to pay for an AI tutor service for MBA students.",
+      "Guidance on the desired core features, pedagogical approach, and differentiation for the AI Tutor, which will inform development costs and value.",
+      "Detailed estimates for key cost drivers, including AI development, operational overhead, and customer acquisition costs.",
+      "Strategy for addressing the low perception of AI benefits in education among the US public and the low adoption rate among higher education faculty, impacting customer acquisition.",
+      "Guidance on navigating the complex and evolving regulatory landscape for AI in US higher education, particularly concerning data privacy and academic integrity, which will affect compliance costs and partnership potential."
+    ]
+  },
+  "current_step": "finance",
+  "product_acceptance": {
+    "policy": "product-per-agent-one-correction-v1",
+    "corrections_allowed_per_agent": 1,
+    "corrections": {
+      "research": 1
+    },
+    "correction_events": [
+      {
+        "stage": "research",
+        "reason": "Invalid ResearchAnalysis output: market_trends[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[1]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[2]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[3]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[1]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[2]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[3]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncompetitor_assumptions[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncompetitor_assumptions[2]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead"
+      }
+    ],
+    "unresolved_issues": [],
+    "status": "accepted"
+  }
+}

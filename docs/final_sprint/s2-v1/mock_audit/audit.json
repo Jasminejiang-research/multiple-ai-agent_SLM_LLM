@@ -1,0 +1,94 @@
+{
+  "synthetic_only": true,
+  "actual_model_calls": 0,
+  "formal_runs_started": 0,
+  "routes": [
+    {
+      "condition": "A",
+      "route": "pass",
+      "status": "completed",
+      "requests": 4,
+      "blocking": false,
+      "branches": {},
+      "all_handoffs_passed": true
+    },
+    {
+      "condition": "B",
+      "route": "pass",
+      "status": "completed",
+      "requests": 8,
+      "blocking": false,
+      "branches": {
+        "final": "skip_revision"
+      },
+      "all_handoffs_passed": true
+    },
+    {
+      "condition": "B",
+      "route": "revision",
+      "status": "completed",
+      "requests": 12,
+      "blocking": true,
+      "branches": {
+        "final": "revise_once"
+      },
+      "all_handoffs_passed": true
+    },
+    {
+      "condition": "C",
+      "route": "pass",
+      "status": "completed",
+      "requests": 11,
+      "blocking": false,
+      "branches": {
+        "research": "skip_revision",
+        "strategy": "skip_revision",
+        "finance": "skip_revision",
+        "final": "skip_revision"
+      },
+      "all_handoffs_passed": true
+    },
+    {
+      "condition": "C",
+      "route": "revision",
+      "status": "completed",
+      "requests": 18,
+      "blocking": true,
+      "branches": {
+        "research": "revise_once",
+        "strategy": "revise_once",
+        "finance": "revise_once",
+        "final": "revise_once"
+      },
+      "all_handoffs_passed": true
+    },
+    {
+      "condition": "D",
+      "route": "pass",
+      "status": "completed",
+      "requests": 11,
+      "blocking": false,
+      "branches": {
+        "research": "skip_revision",
+        "strategy": "skip_revision",
+        "finance": "skip_revision",
+        "final": "skip_revision"
+      },
+      "all_handoffs_passed": true
+    },
+    {
+      "condition": "D",
+      "route": "revision",
+      "status": "completed",
+      "requests": 18,
+      "blocking": true,
+      "branches": {
+        "research": "revise_once",
+        "strategy": "revise_once",
+        "finance": "revise_once",
+        "final": "revise_once"
+      },
+      "all_handoffs_passed": true
+    }
+  ]
+}

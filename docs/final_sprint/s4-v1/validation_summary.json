@@ -1,0 +1,36 @@
+{
+  "baseline": {
+    "passed": 596,
+    "deselected": 25,
+    "subtests_passed": 3,
+    "seconds": 87.57
+  },
+  "targeted_after_initial_fixes": {
+    "passed": 114,
+    "seconds": 47.77
+  },
+  "targeted_after_terminal_and_import_tests": {
+    "passed": 122,
+    "seconds": 58.43
+  },
+  "integration": {
+    "passed": 623,
+    "deselected": 25,
+    "subtests_passed": 3,
+    "seconds": 122.84
+  },
+  "supplemental_reviewed_streamlit_render": {
+    "passed": 1,
+    "seconds": 9.02
+  },
+  "coverage_note": "Supplemental UI test was added after full-suite collection; final installed S4 tests include it.",
+  "earlier_failures": [
+    "initial S4 five failures: cross-case fixture value ID, absent psutil, failed handoff classification, dependent anonymous fixture count, legacy error text",
+    "one pytest setup attempt used a missing temporary parent directory (44 passed, 70 setup errors); corrected invocation, no source regression",
+    "first integration: 619 passed, two compatibility failures (native diagnostic event duplication and S4 adapter isolation boundary); both fixed"
+  ],
+  "live_tests": "25 deselected by existing not-live policy",
+  "actual_model_calls": 0,
+  "D_preflight_started": false,
+  "installed_validation": "see installed_validation.txt and preservation_audit.json after installation"
+}

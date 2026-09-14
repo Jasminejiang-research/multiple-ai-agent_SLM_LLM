@@ -1,0 +1,93 @@
+"""Assemble measured S4 records; do not fill any human judgment or formal result."""
+import json
+from pathlib import Path
+import re
+import shutil
+
+from evaluation.s4_runner import ROOT,code_inventory,runtime_inventory,AUTHORITY_ROOT,AUTHORITY_NAMES
+from evaluation.s4_io import file_hash,read_json,write_json
+from install_s4 import CODE,TARGET
+
+out=ROOT/"docs/final_sprint/s4-v1"
+validation=out/"validation"
+validation.mkdir(exist_ok=False)
+logs=["s4_baseline_tests.txt","s4_targeted_tests.txt","s4_targeted_tests_v2.txt",
+      "s4_targeted_tests_v3.txt","s4_targeted_tests_v4.txt","s4_integration_tests.txt",
+      "s4_integration_tests_v2.txt","s4_ui_final.txt","s4_cli_audit_run.txt"]
+for name in logs:shutil.copyfile(ROOT/name,validation/name)
+assert "623 passed, 25 deselected, 3 subtests passed" in (ROOT/"s4_integration_tests_v2.txt").read_text(encoding="utf-8-sig")
+assert "1 passed" in (ROOT/"s4_ui_final.txt").read_text(encoding="utf-8-sig")
+summary=dict(baseline=dict(passed=596,deselected=25,subtests_passed=3,seconds=87.57),
+    targeted_after_initial_fixes=dict(passed=114,seconds=47.77),
+    targeted_after_terminal_and_import_tests=dict(passed=122,seconds=58.43),
+    integration=dict(passed=623,deselected=25,subtests_passed=3,seconds=122.84),
+    supplemental_reviewed_streamlit_render=dict(passed=1,seconds=9.02),
+    coverage_note="Supplemental UI test was added after full-suite collection; final installed S4 tests include it.",
+    earlier_failures=["initial S4 five failures: cross-case fixture value ID, absent psutil, failed handoff classification, dependent anonymous fixture count, legacy error text",
+        "one pytest setup attempt used a missing temporary parent directory (44 passed, 70 setup errors); corrected invocation, no source regression",
+        "first integration: 619 passed, two compatibility failures (native diagnostic event duplication and S4 adapter isolation boundary); both fixed"],
+    live_tests="25 deselected by existing not-live policy",actual_model_calls=0,D_preflight_started=False,
+    installed_validation="see installed_validation.txt and preservation_audit.json after installation")
+write_json(out/"validation_summary.json",summary)
+write_json(out/"version_manifest.json",dict(package="S4",status="engineering_and_offline_complete",
+    authority_files={str(AUTHORITY_ROOT/name):file_hash(AUTHORITY_ROOT/name) for name in AUTHORITY_NAMES},
+    source_files={name:file_hash(ROOT/name) for name in CODE},runtime=runtime_inventory(),
+    actual_worktree_code_inventory=code_inventory(),
+    public_config_sha256=file_hash(ROOT/"slm/configs/granite_preflight_cpu_v2.json"),
+    code_frozen_for_formal_experiments=False,formal_run_count=0,public_budget_change_authorized=False,
+    additional_artifact_files={p.relative_to(out).as_posix():file_hash(p) for p in out.rglob("*") if p.is_file()}))
+shutil.copyfile(TARGET/"docs/final_sprint_status.md",out/"PREVIOUS_S3_STATUS.md")
+(out/"reproduction").mkdir()
+for name in ("install_s4.py","prepare_s4_handoff.py"):
+    shutil.copyfile(ROOT/name,out/"reproduction"/(name+".txt"))
+status_text='''# Final sprint 执行交接
+
+更新时间：2026-09-07（Europe/Berlin）。当前工作包：**S4 工程与离线验证**。状态：**complete（仅本次授权的工程/离线范围）**。S0–S2 已完成；S3 CPU 规避修复仍有效，但完整 D 验收未通过。**公共预算与 D 预检继续暂缓；S5 未启动，正式实验 0/8，本轮真实模型调用 0。**
+
+## 最新完成与验收
+
+- 八槽位运行器、固定种子分块顺序、追加落盘、预算停止、恢复与不确定请求处理已实现。成功/失败行均不自动重跑；正式执行门保持锁定。
+- 执行状态、终端检查、可评分最终稿、人工处理状态分开。首次完整契约时间与 Export 确定性任务有独立记录；已有可评分失败稿可以内部导出。
+- run/node/role/attempt/handoff、原始 provider usage、visible/thinking/total、失败调用、重试/repair/Revision 与 RAM/VRAM/pagefile 分项汇总。未触发、漏采、零分母和失败有不同状态。
+- 匿名六维评分与共享 Gold Ledger、正文/声明/财务明细候选定位、覆盖确认和严格导入已实现。8 份可评分时约 2 份隐藏复评，仅增加评分副本；Gold 只核验一次 canonical 输出。人工字段保持待填。
+- B−A、C−B、C−D 的逐 case 原值、配对差、均值/中位数/IQR、改善计数、等权比例与图表脚本可复算。无人工结论时不产生伪质量或 claim 结果。
+- 原 Streamlit 新增只读 S4 Experiment Review，展示 Gemini 优化路径和新增节点；旧产品/历史兼容，D 继续 CLI。没有开发新前端或迁移 DB。
+
+## 实际验证
+
+- 现有基线：**596 passed、25 deselected、3 subtests passed，87.57 秒**。
+- 修复后完整整合回归：**623 passed、25 deselected、3 subtests passed，122.84 秒**。
+- 补充 Streamlit 新节点/待审提示/离线图表实际渲染：**1 passed，9.02 秒**。
+- CLI 验收：8 个正式槽位全部 not_run；另外 8 条 synthetic 流程完成，共 86 次 mock attempt；实际模型调用为 0。所有质量与 Gold 人工结论为空。安装后目标复核见本包 installed_validation.txt。
+- 初轮测试失败与修复、一次 pytest 临时目录入口错误都保留在 validation/；完整命令、退出码与输出 hash 在 offline_audit.json。未安装/升级依赖，图表复用现有 Altair。
+
+## 路径与保留
+
+主交接：`docs/final_sprint/s4-v1/HANDOFF.md`；证据索引：同目录 `EVIDENCE_MAP.md`。
+
+实现：`evaluation/s4*.py`，以及 `app.py`、`workflow/review_graph.py`、`workflow/review_runtime.py`。修正 `evaluation/s2_fixtures.py` 的跨 case 测试 ID；`slm/tests/test_isolation.py` 只对 S4 实验适配层列出精确边界，并实测旧产品不加载 SLM。新增 `tests/test_s4_evaluation.py`。
+
+材料：本包 `dry_run/`、`review_templates/`、`synthetic_rehearsal/`、`synthetic_blind_pack/`、`synthetic_export/`。所有 synthetic 内容均为工程证据，不能用于论文模型结果。隐藏映射在评分包 private/，评分者只接收 reviewer/。
+
+版本/安装：`version_manifest.json`、`code_install_receipt.json`、`before/`、`before_inventory.json`、`preservation_audit.json`。前次完整状态保存在 `PREVIOUS_S3_STATUS.md`。已有未提交修改与历史 S0/S1/S2/S3 数据保留，未 commit。
+
+## 当前阻塞及下一入口
+
+1. **公共预算暂缓**：CPU v2 仍是 1024 输出、18 请求、160000 总 token、90000 字符、32768 context、1200/5400 秒。Finance 明细 1919/2552 tokens 的 S3 测量仍是未解决问题；8192 公共候选未经批准，没有应用。
+2. **完整 D 预检暂缓**：S3 只有真实 31K CPU 规避与 warmup 证据；Research/ComponentCritic/Finance/Writer 业务组件与完整 D smoke 未运行，SLM 仍无真实完整计划书。
+3. 两 case 完整 brief/财务情景/证据批准、Gemini 可执行额度与消费记录、各条件 smoke、最终代码/配置冻结尚未齐备；当前 check-freeze 必须阻止正式执行。
+4. 六维评分、隐藏复评与全部决策关键声明 Gold 审计待真实输出后由人工完成；没有把预留 1 小时当完成证据。
+
+下一编号工作包为 **S5**，本轮不自动进入。用户恢复公共预算/D工作时先继续 S3，读取 `s3-fix-v1/BUDGET_PROPOSAL.md`、`s3-fix-v1/HANDOFF.md`；待依赖满足后由用户要求 S5。S5 同时读取本包 HANDOFF、S0 协议/rubric 和 `evaluation/s4_runner.py` 的正式门禁。不能用 mock、warmup 或节点探针替代完整 D。
+
+已验证的只读入口（在目标仓库使用现有 .venv/Scripts/python.exe）：
+
+```powershell
+./.venv/Scripts/python.exe -B -m evaluation.s4 status --experiment docs/final_sprint/s4-v1/dry_run
+./.venv/Scripts/python.exe -B -m evaluation.s4 check-freeze --experiment docs/final_sprint/s4-v1/dry_run
+```
+
+第二条当前预期退出 2，这是正确的依赖锁状态。更多实际命令及 raw→CSV→图表/评分包路径见 HANDOFF。没有向桌面正式结果目录创建占位论文/PPT或结果。
+'''
+(ROOT/"docs/final_sprint_status.md").write_text(status_text,encoding="utf-8")
+print("Prepared measured handoff and version/preservation inputs; no formal freeze or human values filled.")

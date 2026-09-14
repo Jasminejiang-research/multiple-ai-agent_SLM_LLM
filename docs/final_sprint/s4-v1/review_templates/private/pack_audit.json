@@ -1,0 +1,12 @@
+{
+  "kind": "formal_plan",
+  "canonical_outputs": 0,
+  "rating_copies": 0,
+  "hidden_repeats": 0,
+  "human_ratings_filled": 0,
+  "human_gold_verdicts_filled": 0,
+  "actual_model_calls": 0,
+  "rating_phase": "all copies; identities in private/ only",
+  "gold_phase": "canonical copies only after ratings",
+  "missing_canonical_outputs": 8
+}

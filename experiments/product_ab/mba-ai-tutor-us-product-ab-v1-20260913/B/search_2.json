@@ -1,0 +1,55 @@
+{
+  "query": "United States AI in higher education regulatory guidance",
+  "results": [
+    {
+      "title": "Artificial Intelligence in Education",
+      "url": "https://education.mn.gov/MDE/dse/tech/AI/AIEd",
+      "publisher": "education.mn.gov",
+      "published_date": null,
+      "summary": "Review of Guidance from Seven States on AI in Education (Digital Promise): This resource includes a review of AI guidance documents from California, North Carolina, Ohio, Virginia, Washington state, and West Virginia. The review summarizes common themes, identifies opportunities and risks, and offers recommendations about how districts should incorporate AI into education. [...] The use of Artificial Intelligence (AI) is quickly and powerfully transforming education, but that speed and power comes with great responsibility. As such, guidelines should distinguish between AI as a learning aid versus a replacement for thinking. The following list provides some guiding principles for responsible AI use in education to address this. These guiding principles are based on the U.S. Department of Education’s (ED) Office of Educational Technology report, Artificial Intelligence [...] Empowering Education Leaders: A Toolkit for Safe, Ethical, and Equitable AI Integration (Office of Educational Technology, US Department of Education): This toolkit helps education leaders decide how to use AI in student learning. The AI Report explains key terms, shows major opportunities, and outlines important risks. This document builds on that information and links it to practical guidance for creating school and district AI policies. It also summarizes the Federal laws needed to ensure",
+      "relevance_score": 0.7763013,
+      "source_quality": "official",
+      "stale": false
+    },
+    {
+      "title": "Comparative analysis of artificial intelligence policies in ...",
+      "url": "https://link.springer.com/article/10.1007/s10791-025-09745-5",
+      "publisher": "link.springer.com",
+      "published_date": null,
+      "summary": ".\")]. Educational leaders are crafting policies to regulate and guide AI use across campuses, focusing on fostering innovation while safeguarding against potential risk. For instance, the European Union's General Data Protection Regulation (GDPR) significantly impacts how universities manage AI systems that involve personal data . In the United States, guidelines from organizations such as EDUCAUSE and the American Council on Education are shaping AI policy frameworks in [...] Drafting an official AI policy, including as many of these elements as possible ensures comprehensive guidance and support for instructors and students, promoting a clear understanding of the ethical, legal, and practical considerations of AI use. This approach fosters a well-rounded educational environment, encouraging the responsible and effective integration of AI technologies in higher education [22, 26:110–21.\"), 31].\n\n## 5 Discussion\n\n### 5.1 United States [...] Twenty-three universities (7%) referred their students to various academic policies for further information on AI. As noted in the previous section, the most common academic policy was Academic Integrity. Within this guidance, the students also provided specific information regarding the potential implications and misuse of AI tools. For example, Old Dominion University (United States) advised students to “understand the importance of privacy, as AI tools often require access to data to",
+      "relevance_score": 0.70287734,
+      "source_quality": "unknown",
+      "stale": false
+    },
+    {
+      "title": "AI in Education | State Policy Trends, Guidance and ...",
+      "url": "https://www.ecs.org/ai-in-education-state-policy-trends",
+      "publisher": "www.ecs.org",
+      "published_date": null,
+      "summary": "as it reshapes our schools, communities and workforce. This resource compiles recent state legislative and regulatory developments governing AI-powered tools in education settings across the United States. [...] Federal executive orders issued between 2025 and early 2026 have produced a national framework for AI in education, encouraged federal agencies to develop action plans and created a task force to support K–12 AI instruction. Against this backdrop, states have moved quickly to pass their own legislation, addressing everything from basic governance requirements to specific permitted and prohibited uses of AI in school settings.\n\nThis resource covers: [...] Which states have required school districts and postsecondary institutions to adopt formal AI use policies.\n How states are drawing lines around what AI can and cannot do in education environments.\n How data security frameworks are evolving to address the particular risks AI introduces in K–12 and higher education settings.\n A growing body of state law targeting AI-generated deepfakes and their intersection with student safety and campus conduct policies.",
+      "relevance_score": 0.6884899,
+      "source_quality": "unknown",
+      "stale": false
+    },
+    {
+      "title": "AI in Education Legislation: 2026 State Policy Trends | MultiState",
+      "url": "https://www.multistate.us/insider/2026/4/9/how-states-are-regulating-ai-in-education-this-legislative-session",
+      "publisher": "www.multistate.us",
+      "published_date": null,
+      "summary": "Regulations addressing AI in classrooms establish boundaries for technology use, with states like Oklahoma and Maryland requiring human oversight and banning AI from making high-stakes decisions about students.\n Several states are adding artificial intelligence curriculum requirements to graduation standards, with Georgia and Mississippi requiring computer science credits that include AI instruction starting in the late 2020s. [...] Protecting student data has been a large concern for lawmakers, schools, and parents. In 2026, states are focusing on regulations regarding AI features and privacy in educational technology, broader human oversight of AI, and parental consent to data collection. These proposals highlight increasing awareness around privacy and how student data is collected, used, and possibly incorporated into artificial intelligence training models.\n\nKey Bills: [...] Maryland (MD SB 720 and MD HB 1057) – Requires the State Department of Education to issue AI guidance, mandates local school systems to adopt AI policies and promote AI literacy, integrates AI into workforce standards and educator training, establishes a statewide collaborative to study AI in K-12 education, and requires designated AI coordinators and university-supported certification of compliant AI tools. Passed 1st Chamber",
+      "relevance_score": 0.66959417,
+      "source_quality": "unknown",
+      "stale": false
+    },
+    {
+      "title": "Rights and Regulations: A Case Study on Guidelines for AI Use in Education – UAB Institute for Human Rights Blog",
+      "url": "https://sites.uab.edu/humanrights/2025/11/13/rights-and-regulations-a-case-study-on-guidelines-for-ai-use-in-education",
+      "publisher": "sites.uab.edu",
+      "published_date": null,
+      "summary": "In April of this year, an executive order was signed promoting AI competency in students and establishing a Task Force on Artificial Intelligence Education. In response, the U.S. Department of Education has released potential priorities for grants funding the integration of AI into education: “evidence-based literacy, expanding education choice, and returning education to the states”. While these statements are an encouraging acknowledgement of the need to turn our attention to the use of [...] The federal government’s failure to acknowledge AI’s limitations when it comes to privacy, ethics, and functionality in education creates a vacuum devoid of guidelines or regulations on AI’s educational use. A lack of parameters has raised concerns about academic misconduct, plagiarism, privacy breaches, algorithmic bias, and the dogmatic acceptance of generated information that may be inaccurate or unreliable. Complete bans fail to address AI’s potential when used responsibly and create [...] to the use of Artificial Intelligence in academia, they fail to provide tangible guidelines or policies that effectively promote the proper use of AI in schools. These statements also fall short of acknowledging the need for regulation and limitations on AI’s role in academia; in fact, “America’s AI Action Plan” highlights the administration’s aversion towards regulation by providing that states should not have access to federal funding on AI-related matters should they implement “burdensome AI",
+      "relevance_score": 0.6519982,
+      "source_quality": "research_org",
+      "stale": false
+    }
+  ]
+}

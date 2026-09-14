@@ -1,0 +1,27 @@
+[
+  {
+    "path": "slm/granite_provider.py",
+    "before_sha256": "883bd5a87c61d55931e5f21b694abaf4af663b7011b9ded7726ba5c6cb3a3bc3",
+    "after_sha256": "7f230f829dca980d354cb53e5adadc2ca5d7225dbb181c83f567e21aafee8f21"
+  },
+  {
+    "path": "slm/granite_preflight.py",
+    "before_sha256": "910180a6fcff454f4cdfaba1204deadef39b8f82d4d54d5e9bf6ec6c6c39d436",
+    "after_sha256": "7e8cba94f60b36c6d6d17a2aeabbb006440917e461557222bb8db71def15ef31"
+  },
+  {
+    "path": "slm/granite_config.py",
+    "before_sha256": "3c852687859d82bc054f1400a40ec1b717f46e3ccce4d372e96c75ec2b5dded5",
+    "after_sha256": "40e816d73b09eda3b3318beb51fc6c1b50577d7bbfa7b54be9039d9c1e064961"
+  },
+  {
+    "path": "slm/tests/test_granite_s3.py",
+    "before_sha256": "3783292062472f5a49de15f5d593a7cd60d7552ba0229f00e5bd456ed7dddc94",
+    "after_sha256": "6e2d972a43dc89849d859cb441bbfaa1a53bc9e95cdcf2e6375050fd1adef93f"
+  },
+  {
+    "path": "slm/configs/granite_preflight_cpu_v2.json",
+    "before_sha256": null,
+    "after_sha256": "4e8bec9bd8f951c07268b2cedf78858e14194bb20168bba2bb197576ce8ae63f"
+  }
+]

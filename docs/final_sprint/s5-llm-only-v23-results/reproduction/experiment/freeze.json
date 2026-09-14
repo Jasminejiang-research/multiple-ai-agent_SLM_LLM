@@ -1,0 +1,735 @@
+{
+  "status": "frozen",
+  "execution_branch": "llm_only_after_D_no_go",
+  "plan_sha256": "d2441c60bbdd77ccbcf684f861fc5203a63d48973f5ac8e235b696789c1f9c3d",
+  "approvals": {
+    "cases": "approved",
+    "common_budget": "approved",
+    "D_preflight": "approved_no_go_omit_D",
+    "gemini_quota_and_spend": "approved",
+    "S1": "passed",
+    "S2": "passed",
+    "S4": "passed",
+    "S6": "passed",
+    "formal_execution": "approved"
+  },
+  "approval_records": {
+    "cases": {
+      "path": "docs\\final_sprint\\s5-llm-only-v23\\scope_decision.json",
+      "sha256": "dabbbd67d589b8bc68dbdb1725805f066ca1a8bf086055460667cb598d232a92"
+    },
+    "common_budget": {
+      "path": "docs\\final_sprint\\s5-llm-only-v23\\scope_decision.json",
+      "sha256": "dabbbd67d589b8bc68dbdb1725805f066ca1a8bf086055460667cb598d232a92"
+    },
+    "D_preflight": {
+      "path": "docs\\final_sprint\\s5-llm-only-v23\\scope_decision.json",
+      "sha256": "dabbbd67d589b8bc68dbdb1725805f066ca1a8bf086055460667cb598d232a92"
+    },
+    "formal_execution": {
+      "path": "docs\\final_sprint\\s5-llm-only-v23\\scope_decision.json",
+      "sha256": "dabbbd67d589b8bc68dbdb1725805f066ca1a8bf086055460667cb598d232a92"
+    },
+    "gemini_quota_and_spend": {
+      "path": "docs\\final_sprint\\s6-fast-generation-v1\\LLM_ONLY_S5_INLINE_CITATION_AUTHORIZATION.json",
+      "sha256": "34d9d9f26f167d1ba2c5ea00a2ac7625440a9b8d9e541b0adf3f6d751068b224"
+    },
+    "S1": {
+      "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\PROTOCOL_MANIFEST.json",
+      "sha256": "acb4b429f83bc99daacb7e2be17bd94ba4e8cfa949eac52b8b09cd05cee1471b"
+    },
+    "S2": {
+      "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\PROTOCOL_MANIFEST.json",
+      "sha256": "acb4b429f83bc99daacb7e2be17bd94ba4e8cfa949eac52b8b09cd05cee1471b"
+    },
+    "S4": {
+      "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\VERSION_MANIFEST.json",
+      "sha256": "f028b99fe14b8377d43626382f96f6660bf0e5a3cfc092cdd3c9f0ae9678a975"
+    },
+    "S6": {
+      "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\VERSION_MANIFEST.json",
+      "sha256": "f028b99fe14b8377d43626382f96f6660bf0e5a3cfc092cdd3c9f0ae9678a975"
+    }
+  },
+  "configs": {
+    "A": {
+      "condition": "A",
+      "run_kind": "formal",
+      "provider": "gemini",
+      "model_exact_id": "gemini-2.5-flash",
+      "model_config_version": "gemini-2.5-flash-standard-32k-s6-compact-dual-lineage-v23",
+      "max_requests": 18,
+      "max_total_tokens": 160000,
+      "max_output_tokens": 8192,
+      "max_prompt_chars": 26000,
+      "node_seconds": 1200.0,
+      "run_seconds": 3600.0,
+      "request_seconds": 420.0,
+      "transport_retries": 0,
+      "temperature": 0,
+      "thinking_budget": 1024,
+      "context_tokens": 32768,
+      "protocol_version": "compact-json-wire-v1-s6",
+      "mvp_seconds": 1800.0,
+      "config_version": "review-run-v26-s6-compact-gemini-8192-dual-declared-lineage"
+    },
+    "B": {
+      "condition": "B",
+      "run_kind": "formal",
+      "provider": "gemini",
+      "model_exact_id": "gemini-2.5-flash",
+      "model_config_version": "gemini-2.5-flash-standard-32k-s6-compact-dual-lineage-v23",
+      "max_requests": 18,
+      "max_total_tokens": 160000,
+      "max_output_tokens": 8192,
+      "max_prompt_chars": 26000,
+      "node_seconds": 1200.0,
+      "run_seconds": 3600.0,
+      "request_seconds": 420.0,
+      "transport_retries": 0,
+      "temperature": 0,
+      "thinking_budget": 1024,
+      "context_tokens": 32768,
+      "protocol_version": "compact-json-wire-v1-s6",
+      "mvp_seconds": 1800.0,
+      "config_version": "review-run-v26-s6-compact-gemini-8192-dual-declared-lineage"
+    },
+    "C": {
+      "condition": "C",
+      "run_kind": "formal",
+      "provider": "gemini",
+      "model_exact_id": "gemini-2.5-flash",
+      "model_config_version": "gemini-2.5-flash-standard-32k-s6-compact-dual-lineage-v23",
+      "max_requests": 18,
+      "max_total_tokens": 160000,
+      "max_output_tokens": 8192,
+      "max_prompt_chars": 26000,
+      "node_seconds": 1200.0,
+      "run_seconds": 3600.0,
+      "request_seconds": 420.0,
+      "transport_retries": 0,
+      "temperature": 0,
+      "thinking_budget": 1024,
+      "context_tokens": 32768,
+      "protocol_version": "compact-json-wire-v1-s6",
+      "mvp_seconds": 1800.0,
+      "config_version": "review-run-v26-s6-compact-gemini-8192-dual-declared-lineage"
+    }
+  },
+  "code_inventory": {
+    "agents/__init__.py": "676057fb3ead1ab66257a53115f27b0a2f293c0ac93f2c6c827e3c7768f325b3",
+    "agents/base.py": "6c98a81fb1112cb722299e42b1721a592330dc5e4f5971a511d90d33cf66f056",
+    "agents/component_critic.py": "f2ee1b1e5e7b3eac74ae542dad653ea5822ac09b7d0335a6d55a94023a5b2426",
+    "agents/critic.py": "71f532facfed379f141a367ac1168b195a14493db5d0986a2578de3364986a1a",
+    "agents/finance.py": "ce35ef5faf01a74bdc33addc4351a5a0c538698d29f96dd676b6d5437cb298d8",
+    "agents/research.py": "6805fd7a317f9c3449f05d78a7281b3872cb974aed69a71f96fae54f95c05bd4",
+    "agents/strategy.py": "96b7813f48e9fe0979cd965111c73bc5df5004a1dfd1c669208015b6a485724d",
+    "agents/supervisor.py": "5c6411fc0cab86d3dc4b36d7b8012545f2ffbeb34ea8c32918d9e37644bc3c56",
+    "agents/writer.py": "f8ad9fd91fad6a60055a733be7dbf5378982bedbb070be0677198daeb1ec2d00",
+    "app.py": "11401368ff243ce999ac0f91d3d4f98542d864c3127d7bf7e7d3192f605586a9",
+    "evaluation/__init__.py": "aab2aa0f23c6dcab1ca8271518c05bdf4331058059986b36aaddb83694b491cc",
+    "evaluation/s0.py": "2625280b91141a5c58262ec9424ed5fb6dff3367e36937ee585eb6d60a83c443",
+    "evaluation/s1.py": "d50627903a6d99a94c4930bcc261c7dfb4e92bf60cde7beb2fae4125eb7a7f51",
+    "evaluation/s2.py": "e897f60286f8f2b6009a20addf3d9bbb1d0dbdb81f5ff5084c6b6d6a4f7bde78",
+    "evaluation/s2_fixtures.py": "b78c767abde0f45e83c7d9a1d10e7696b06b01cd6951c7d46e2deb9878684b94",
+    "evaluation/s4.py": "b5019c9c1dfa6ee65a395247fd10caac93d31755e4e3912c1a850d597e69c149",
+    "evaluation/s4_audit.py": "53d38aab0c3ed989b8c8775796667c8d8b6e6958f9e4c1d82d0b25da7be42d86",
+    "evaluation/s4_blind.py": "83c46d7f7a7b16de1e032aab006ed06abc392706ce0a7b3a59c5730c1d859b15",
+    "evaluation/s4_export.py": "3ef72218d821b4d78ae8a01804ac362b20490f37c344dda7ebaad4c6815fe453",
+    "evaluation/s4_io.py": "7375b67466b506c3d06dfcadc5e1854494231874769e10d8334a9c65a4e37968",
+    "evaluation/s4_metrics.py": "25993e4de7ac841d909092cbe4bb0142a181f1a0eae49aee07ba619d9b255719",
+    "evaluation/s4_resources.py": "ac43d50dcfa244739c1800f6ac0503b543f81bac3ec83b515ecc2076120d7b44",
+    "evaluation/s4_runner.py": "4f121c57d5174edf802f0c70fb8675c3b2723ff24b4f6cd7a383e8177017692c",
+    "evaluation/s4_statistics.py": "96d907d8ab775ce0844dc7c5c5425bf5bc342ee1fced2d03c9ada4d01fffffe2",
+    "evaluation/s4_ui.py": "163af0ea338cdbfd0ba4bfd62a3fc58909c9d4eb54b711bbc23bf8bb809744b9",
+    "evaluation/s5.py": "8f2df4de5246031b1c2012101520239d9ffd0edb773173d056b4064a8c79ba4a",
+    "evaluation/s5_export.py": "8a18b129d7658ee31ac280694948a8e986a67afeeb1773694c65902f88967935",
+    "evaluation/s5_llm_only.py": "2d09f29d30611b2b328167a4168be688d91096dcf6d933147c23d9875a5fb2d9",
+    "evaluation/s5_preparation.py": "d96119f1139ad4a095fda82f9f29e9d168def0cf0b6f45013b857016184b0834",
+    "evaluation/s5_review.py": "12335ad7b3cb95027cc622d93184831394dbee2b5dabba10c5842040bf2e77a0",
+    "evaluation/s5_smoke_budget.py": "c7bfbd2cd427430bd0e2090f6bb538180c1eac361b107ff2dcbc1ae189864099",
+    "evaluation/two_stage_fixtures.py": "0b29bc339781aa41969b3c081d57c38dcad06134f17299ab858f15029e2ba5f5",
+    "prompts/basic_critic.md": "91f98329ed003e7b26579b80a4d7b48f0a9c83e61846f903cf2277406816073f",
+    "prompts/critic_agent.md": "70534b3785389daf4c8f89a4fe57d3fdd8c19190e4a6b2fb064c7c515997cefd",
+    "prompts/finance_agent.md": "7faaba7bd0c5c352d64874f4a118847ae8e93f403f8fd4b1d1efb8d734121fd2",
+    "prompts/planner.md": "75b9f13a835ed41ade3695cb815b7fed9985dd69f5b2cc632c9dcb9f334ea43c",
+    "prompts/research_agent.md": "098792035b65969f24b11f30d850c87e3b9387da417ef3981a4fe40c637eb1b2",
+    "prompts/revision.md": "6ca880e31d7ccc516813e92d1b4f3859c1165b6792a29cfac76fe0b9bf78ac93",
+    "prompts/section_writer.md": "1f28766a5f9c473208c396440db9028d5d050cf05b9f9d2b4b9ccc9949baad3e",
+    "prompts/single_agent_proposal.md": "4ef6d8f1e5003685c93a2154cbe5345c3473285969fe63c7ef8f785d440a7d56",
+    "prompts/strategy_agent.md": "7366f460d6764ac8c9a0d917a8f6bc5a121e7c61ebd2c78e606bcedc4996d046",
+    "prompts/supervisor.md": "dbe9fe183401801fd4141c33cf505ab3b1926ee41da558b2dc3b9cc1977fcc9d",
+    "prompts/writer_agent.md": "dc1f118a26f768e2944757c1ab7aef6565278f09f886da59c469b621a654ab3f",
+    "rag/__init__.py": "32a98ceb2cebc0d89b8e1d940934449abab363b2ba98a5cd2a286d6f63eb3545",
+    "rag/citation_checker.py": "c5fa174072817cd7e93cd65ec047e119bfbdf94c8fb0a99acb66b900586a4a85",
+    "rag/evidence_filter.py": "9dcad46e511f1e7b8b624f82ecd791f08765d10d7f9cc3da68be50e491d4988d",
+    "rag/index.py": "71390a21255ef5e2827873e36b9f936f4a345fe112a0fd34fecdcabe42d31272",
+    "rag/knowledge_base.py": "bb504c1c26c8757955e7fb93babadf303e1bb795067a7bbb8f372163a117e0bc",
+    "rag/loaders.py": "c0efa49b1e714315b000216c8f79d997c9250a9bc46bffd37e008261232ad63c",
+    "rag/retriever.py": "a2c48994d2ec6d82ff9c6f9d6c0e0656cce752aa01165e708b6731f66e3cbbcf",
+    "requirements.txt": "de09c81d26f378e60f535fe1aeaef0221265ae4d1ec1a1b86c80bce3f09e994b",
+    "schemas/__init__.py": "6bd2a1978626c07c2b9b3eb78f3fb36f90351d72e0358f6cb86c2878d15a59cf",
+    "schemas/agent_outputs.py": "72d966a7ed501694c3e683a94bc3243fe7ae66079bc393e875fbcb04421653e5",
+    "schemas/compact_wire.py": "02853582d77ee8e0d1b6238cd3506b616b5875379a76fc809309ca71593cb0d0",
+    "schemas/contract_outputs.py": "9f16ba0af9907183c0b1200af331faa76052da8da4ecc6e3aaecbc11d1d7a936",
+    "schemas/evidence.py": "a78900f486238cf77d445a60146b3fcb72efa60d35bef471a21bca30b7adc824",
+    "schemas/financial.py": "6ff1f3cc87e0f597aa1771063b7a5700db525bbfdb77b75413ee4469ef742963",
+    "schemas/proposal_schema.py": "9c972f788bf1dcee54586920e63b60951e63cbe83eb61d8d852f891d6898566e",
+    "schemas/review.py": "3b7646d0e51dbfdfea963de889ca43ab846ab51fc17a440438944278c4f45dba",
+    "schemas/review_events.py": "77f9133023d30c9fdce769798fb807392ef769ce0c598ee035d5dfbf62fc9e23",
+    "schemas/source.py": "5ad214a2c761bedaf1427e97a261ec708ad623048293e0f43064725e6a2c0e1a",
+    "schemas/workflow.py": "1ccba08cf6f7216cea4ffd3779885d373fc3aa32c5a46e128e1461bb6842fa39",
+    "slm/__init__.py": "1883d8e65c018de51a254807139127c1adbe7d9914522f9cb96f7d0944278f4b",
+    "slm/BEST_EFFORT_DEMO.md": "af23c8a3686e6d9d04ae8e5fe97fcb9b76a343b0d3dbed50c10731af68c42935",
+    "slm/best_effort_demo.py": "710c1a1a0fa97661b81b7fa25d12bf2635e174275876e17e72944fbafe537bc3",
+    "slm/cli.py": "5eebe30c81bcb3807148b9ab9fb41a677260240df806a590d449eb02beef2099",
+    "slm/client.py": "85576fe684d8ccabdee3f58737aa9bc3a34c7a8b997c91e60282e141b78a5b93",
+    "slm/config.py": "15f30d05939934bb68cfaad1761e2035345f663af6039381a8cd9817de803e98",
+    "slm/configs/granite_best_effort_demo_v1.json": "dc689a7ddf8fcf58f625468fb126abf3bb2d5349a93532bd62aa85ee81815340",
+    "slm/configs/granite_preflight_compact_s6.json": "a42df429b55b1ff989b44b6e2abd242000782493c86f2287e729c48f72724d4f",
+    "slm/configs/granite_preflight_cpu_v2.json": "4e8bec9bd8f951c07268b2cedf78858e14194bb20168bba2bb197576ce8ae63f",
+    "slm/configs/granite_preflight_v1.json": "12b9688b7da10d4ea7705bd6f94958f2daa66030d5a9df811c208d0a5602965e",
+    "slm/examples/ai_education.json": "695f937a90976d063db89caf079f4541ad8d31b67f08115a94c2cf991d1b5a6c",
+    "slm/examples/apple_intelligent_ring.json": "958d96daffa34ec64494424f268d8935e5331633eca5f0f861d721703fdb7293",
+    "slm/factories.py": "1e30e899ac8dce4d71ef627a6e0c7af8f6b377ed15796db354b94179e4ba017c",
+    "slm/granite_config.py": "9a823d86bf59b3c3aa5e32b5c275ae1079001a0083c4b00adb3cf5afc5cba900",
+    "slm/granite_preflight.py": "19c81f5e751d4ec38ad901abc1a2cda8b87ddf5827262bd0e07f7265d83610b0",
+    "slm/granite_provider.py": "7f230f829dca980d354cb53e5adadc2ca5d7225dbb181c83f567e21aafee8f21",
+    "slm/owned_ollama.py": "978e533c2e73f11831d0c33d256fec58fd62339fe029507a9287c49858fc8f6d",
+    "slm/pipeline.py": "9894b2f8f90cca3886b08907d332c0f750b7347c40e381cd4acfbb0b15e42542",
+    "slm/preflight_slm.py": "26328c28c5d5bd615990d538ccd57a605df75c9ac9e2a35457a3a8a3db315b1c",
+    "slm/pruning.py": "eefe6fd1f4d7f2fda47d1c70d3cb556419153a7f5de3d1cc27cb1e7d693dd837",
+    "slm/README.md": "b3d60c5e339a5503a0db185ffc4a0378b66cec7dcaeb9dce6388eb221d9c3579",
+    "slm/resource_monitor.py": "852201b86f30c510b5b9fbf3cd1ea8fb52678e811d934e363ca5f97e428443df",
+    "slm/schema_contract.py": "a5fa5343a88db6863ba1746659afcdf61a552a72f3bc14a5df697ac5d90ae23f",
+    "slm/start_granite.ps1": "e95570021843b6a87cc57b2d58c99ffcc83d3074da720b12f33e62e2510e3d29",
+    "slm/windows_awake.py": "ed28e280e2e83e83b8b615a3920b3e7e92ed1880baddccc648697b13869e9799",
+    "slm/windows_memory.py": "36c39974b7a0e831d4a5b8471544f90b4722ebfadb263fab6d0ee400068c2eb7",
+    "slm/windows_process.py": "37a7dc92ee011c9490ccba642f39c31e0b4f32e97980235a28afc0e72c0a414b",
+    "storage/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "storage/db.py": "e565753b54a5be8968298c8b08c6e33eaeb0b4cde48d75e360697b602e01b559",
+    "storage/models.py": "dca2f3b36d4b60b4db3b523b8d1d09dd790c0326b62ca7b6ea833c8c14ccffdf",
+    "storage/repositories.py": "9364068b4bd8ad28ab54d71510b2fd1228fa96defe44ec0b320a2b7ec471b4ba",
+    "storage/sqlite_store.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tools/__init__.py": "fa03e4946fd3b05c373e8f3d8c01c96ef92044db862f44de4db54e176ce60d4d",
+    "tools/recency.py": "e7a7e750003b418f034f08a2e33a917e9d9dd32a5c98f318bce203acd5901159",
+    "tools/source_quality.py": "494c74d25a924de89b930e5e33982f030a51bc6559183208be0df98701a09fa2",
+    "tools/tavily_search.py": "36d8499406b7dcb02645037df7498a8153342706355a863f010335928feb991e",
+    "tools/web_search.py": "024b459e2ac12aa4add5d4ab87e42756c51bdd8555eb19b794af99604d61ed75",
+    "workflow/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "workflow/compact_protocol.py": "dd256c54f4fb9ca678df97c1b56eb90f59684fb7e7b038706612edb148a041fd",
+    "workflow/compact_views.py": "3037cf7f8ac0585330b440b75f955c2b87c63b2dd84ca0063501be61e80675a6",
+    "workflow/contract_context.py": "af668228cc25db4ce00edd69e988090570fd7e7f7c45ca99761192677a465476",
+    "workflow/contract_generation.py": "1f1f70f8865044f298f7c8528fe49954f25c07637f4448fec2f65643428ae28b",
+    "workflow/evidence_policy.py": "138d28e8701ce4653ad9628b6f5ba9efb78f677fe989a5598cdafa2dc14a259c",
+    "workflow/finance_contract.py": "1d0c642ec6c0e708afe086430aa5584cb4dd83dd02e8a1eb30d85a54c7d8be09",
+    "workflow/gemini_schema.py": "46d3233b5691a3556e69a0eef8d8e75a5781b33263276660595055a4e6b9fd54",
+    "workflow/generation_batches.py": "ed6391a1bb943305b52ee5949b0e9a1bf24f5a4631df640d083652541001c098",
+    "workflow/generation_constraints.py": "9081e151b48a3a2ecb8781ea72839f6b40defa4b51758988024322c8e077228a",
+    "workflow/graph.py": "0cee9d8acbcb9bcfdfd5bad85cdd2bdc59e0e11cf67151b454ec0b726f4607d7",
+    "workflow/grounding.py": "035367423a53caf903470b9f853f2955a85939c08ec0d23a1a37c19ceafea97f",
+    "workflow/grounding_generation.py": "164789ba770c766927fb66a5b85b38e2d262c6424df2e32b794e405d5a73d9cc",
+    "workflow/llm.py": "e9984f35a82e912bf7fb711a160abc72c3c59157e94533e4cb9fa63b17c537f6",
+    "workflow/llm_client.py": "8671afa0995f098d1641d2bfba5dbc871aa511ca61841f66a0f45a381de0a652",
+    "workflow/logging.py": "46e092f97c04fc826b673ba8f208e017df6b2dc7a4248ceef78f4537baa024f7",
+    "workflow/multi_agent_graph.py": "87593ff44845aeb9514770df791b771c534d6ee00061e466154035ddf528fa57",
+    "workflow/multi_agent_nodes.py": "13a8df70e43bc60925a5156b01a73ecb9208c866fa4dd9f5e43bd0e4c822239a",
+    "workflow/nodes.py": "9a34bf4809feba90d4970dea136a7f0d6ab8afc90aec9d06d0c1aa36c5e36cd6",
+    "workflow/preflight.py": "66a4f297cab5a494a2cecc9bba3a3b9f11c91d1aa920fc0a73c83bafebaec72f",
+    "workflow/research_limits.py": "59d82575267e1ee2e10e1908de7020a4245890e7e1727a310f733008b5f93c8b",
+    "workflow/research_profile.py": "2b1f8daf18b1c36ad31ef8a4776a1a42cf22ec8a55a2788b7cbf19d291ca9ffb",
+    "workflow/review_config.py": "8e4b717e3bef2c500e675eae053080e0ae2af528fe174e9f111b33efaff5b214",
+    "workflow/review_events.py": "8ec4e37b94f8ea2d2a1bbcdfe427a8c737abdd367a08c1861174e2e51986d26c",
+    "workflow/review_graph.py": "fcf227eeb727c25db02f45e80bf18267de62d93d7addb88cc66507f787b081f9",
+    "workflow/review_handoffs.py": "43d41f549f92f48a7b7b46e8bb074b38d4757f5ed06bcaa2641998348bafee63",
+    "workflow/review_providers.py": "ee9cf01da5505958477111eadd700acbbe69441336d4cb794e02f337aa75fc35",
+    "workflow/review_runtime.py": "32f6c53ecfeaa2062d13b037e89b22caefe854e6665d44195b0b28b64a95da79",
+    "workflow/run_budget.py": "83ae29c56d8ee63730b236657fa2bfd9256cfaab897d8697f19a78dce84d4aa8",
+    "workflow/schema_contract.py": "cc719ff595be5573d43d03f2d593334b2f8c1df9d785d99490bc6a3c47d8d28b",
+    "workflow/state.py": "e1901aa08e62e89911139b7dfe9ef526acc6d44ab8886337b06006d7583a4e53",
+    "workflow/two_stage_generation.py": "2773974e8eb387cbcfe18d67e86ec8de6918c0dac77474c226c49f1d3ee77c3a"
+  },
+  "pre_smoke_code_inventory": {
+    "agents/__init__.py": "676057fb3ead1ab66257a53115f27b0a2f293c0ac93f2c6c827e3c7768f325b3",
+    "agents/base.py": "6c98a81fb1112cb722299e42b1721a592330dc5e4f5971a511d90d33cf66f056",
+    "agents/component_critic.py": "f2ee1b1e5e7b3eac74ae542dad653ea5822ac09b7d0335a6d55a94023a5b2426",
+    "agents/critic.py": "71f532facfed379f141a367ac1168b195a14493db5d0986a2578de3364986a1a",
+    "agents/finance.py": "ce35ef5faf01a74bdc33addc4351a5a0c538698d29f96dd676b6d5437cb298d8",
+    "agents/research.py": "6805fd7a317f9c3449f05d78a7281b3872cb974aed69a71f96fae54f95c05bd4",
+    "agents/strategy.py": "96b7813f48e9fe0979cd965111c73bc5df5004a1dfd1c669208015b6a485724d",
+    "agents/supervisor.py": "5c6411fc0cab86d3dc4b36d7b8012545f2ffbeb34ea8c32918d9e37644bc3c56",
+    "agents/writer.py": "f8ad9fd91fad6a60055a733be7dbf5378982bedbb070be0677198daeb1ec2d00",
+    "app.py": "11401368ff243ce999ac0f91d3d4f98542d864c3127d7bf7e7d3192f605586a9",
+    "evaluation/__init__.py": "aab2aa0f23c6dcab1ca8271518c05bdf4331058059986b36aaddb83694b491cc",
+    "evaluation/s0.py": "2625280b91141a5c58262ec9424ed5fb6dff3367e36937ee585eb6d60a83c443",
+    "evaluation/s1.py": "d50627903a6d99a94c4930bcc261c7dfb4e92bf60cde7beb2fae4125eb7a7f51",
+    "evaluation/s2.py": "e897f60286f8f2b6009a20addf3d9bbb1d0dbdb81f5ff5084c6b6d6a4f7bde78",
+    "evaluation/s2_fixtures.py": "b78c767abde0f45e83c7d9a1d10e7696b06b01cd6951c7d46e2deb9878684b94",
+    "evaluation/s4.py": "b5019c9c1dfa6ee65a395247fd10caac93d31755e4e3912c1a850d597e69c149",
+    "evaluation/s4_audit.py": "53d38aab0c3ed989b8c8775796667c8d8b6e6958f9e4c1d82d0b25da7be42d86",
+    "evaluation/s4_blind.py": "83c46d7f7a7b16de1e032aab006ed06abc392706ce0a7b3a59c5730c1d859b15",
+    "evaluation/s4_export.py": "3ef72218d821b4d78ae8a01804ac362b20490f37c344dda7ebaad4c6815fe453",
+    "evaluation/s4_io.py": "7375b67466b506c3d06dfcadc5e1854494231874769e10d8334a9c65a4e37968",
+    "evaluation/s4_metrics.py": "25993e4de7ac841d909092cbe4bb0142a181f1a0eae49aee07ba619d9b255719",
+    "evaluation/s4_resources.py": "ac43d50dcfa244739c1800f6ac0503b543f81bac3ec83b515ecc2076120d7b44",
+    "evaluation/s4_runner.py": "4f121c57d5174edf802f0c70fb8675c3b2723ff24b4f6cd7a383e8177017692c",
+    "evaluation/s4_statistics.py": "96d907d8ab775ce0844dc7c5c5425bf5bc342ee1fced2d03c9ada4d01fffffe2",
+    "evaluation/s4_ui.py": "163af0ea338cdbfd0ba4bfd62a3fc58909c9d4eb54b711bbc23bf8bb809744b9",
+    "evaluation/s5.py": "8f2df4de5246031b1c2012101520239d9ffd0edb773173d056b4064a8c79ba4a",
+    "evaluation/s5_export.py": "8a18b129d7658ee31ac280694948a8e986a67afeeb1773694c65902f88967935",
+    "evaluation/s5_llm_only.py": "2d09f29d30611b2b328167a4168be688d91096dcf6d933147c23d9875a5fb2d9",
+    "evaluation/s5_preparation.py": "d96119f1139ad4a095fda82f9f29e9d168def0cf0b6f45013b857016184b0834",
+    "evaluation/s5_review.py": "12335ad7b3cb95027cc622d93184831394dbee2b5dabba10c5842040bf2e77a0",
+    "evaluation/s5_smoke_budget.py": "c7bfbd2cd427430bd0e2090f6bb538180c1eac361b107ff2dcbc1ae189864099",
+    "evaluation/two_stage_fixtures.py": "0b29bc339781aa41969b3c081d57c38dcad06134f17299ab858f15029e2ba5f5",
+    "prompts/basic_critic.md": "91f98329ed003e7b26579b80a4d7b48f0a9c83e61846f903cf2277406816073f",
+    "prompts/critic_agent.md": "70534b3785389daf4c8f89a4fe57d3fdd8c19190e4a6b2fb064c7c515997cefd",
+    "prompts/finance_agent.md": "7faaba7bd0c5c352d64874f4a118847ae8e93f403f8fd4b1d1efb8d734121fd2",
+    "prompts/planner.md": "75b9f13a835ed41ade3695cb815b7fed9985dd69f5b2cc632c9dcb9f334ea43c",
+    "prompts/research_agent.md": "098792035b65969f24b11f30d850c87e3b9387da417ef3981a4fe40c637eb1b2",
+    "prompts/revision.md": "6ca880e31d7ccc516813e92d1b4f3859c1165b6792a29cfac76fe0b9bf78ac93",
+    "prompts/section_writer.md": "1f28766a5f9c473208c396440db9028d5d050cf05b9f9d2b4b9ccc9949baad3e",
+    "prompts/single_agent_proposal.md": "4ef6d8f1e5003685c93a2154cbe5345c3473285969fe63c7ef8f785d440a7d56",
+    "prompts/strategy_agent.md": "7366f460d6764ac8c9a0d917a8f6bc5a121e7c61ebd2c78e606bcedc4996d046",
+    "prompts/supervisor.md": "dbe9fe183401801fd4141c33cf505ab3b1926ee41da558b2dc3b9cc1977fcc9d",
+    "prompts/writer_agent.md": "dc1f118a26f768e2944757c1ab7aef6565278f09f886da59c469b621a654ab3f",
+    "rag/__init__.py": "32a98ceb2cebc0d89b8e1d940934449abab363b2ba98a5cd2a286d6f63eb3545",
+    "rag/citation_checker.py": "c5fa174072817cd7e93cd65ec047e119bfbdf94c8fb0a99acb66b900586a4a85",
+    "rag/evidence_filter.py": "9dcad46e511f1e7b8b624f82ecd791f08765d10d7f9cc3da68be50e491d4988d",
+    "rag/index.py": "71390a21255ef5e2827873e36b9f936f4a345fe112a0fd34fecdcabe42d31272",
+    "rag/knowledge_base.py": "bb504c1c26c8757955e7fb93babadf303e1bb795067a7bbb8f372163a117e0bc",
+    "rag/loaders.py": "c0efa49b1e714315b000216c8f79d997c9250a9bc46bffd37e008261232ad63c",
+    "rag/retriever.py": "a2c48994d2ec6d82ff9c6f9d6c0e0656cce752aa01165e708b6731f66e3cbbcf",
+    "requirements.txt": "de09c81d26f378e60f535fe1aeaef0221265ae4d1ec1a1b86c80bce3f09e994b",
+    "schemas/__init__.py": "6bd2a1978626c07c2b9b3eb78f3fb36f90351d72e0358f6cb86c2878d15a59cf",
+    "schemas/agent_outputs.py": "72d966a7ed501694c3e683a94bc3243fe7ae66079bc393e875fbcb04421653e5",
+    "schemas/compact_wire.py": "02853582d77ee8e0d1b6238cd3506b616b5875379a76fc809309ca71593cb0d0",
+    "schemas/contract_outputs.py": "9f16ba0af9907183c0b1200af331faa76052da8da4ecc6e3aaecbc11d1d7a936",
+    "schemas/evidence.py": "a78900f486238cf77d445a60146b3fcb72efa60d35bef471a21bca30b7adc824",
+    "schemas/financial.py": "6ff1f3cc87e0f597aa1771063b7a5700db525bbfdb77b75413ee4469ef742963",
+    "schemas/proposal_schema.py": "9c972f788bf1dcee54586920e63b60951e63cbe83eb61d8d852f891d6898566e",
+    "schemas/review.py": "3b7646d0e51dbfdfea963de889ca43ab846ab51fc17a440438944278c4f45dba",
+    "schemas/review_events.py": "77f9133023d30c9fdce769798fb807392ef769ce0c598ee035d5dfbf62fc9e23",
+    "schemas/source.py": "5ad214a2c761bedaf1427e97a261ec708ad623048293e0f43064725e6a2c0e1a",
+    "schemas/workflow.py": "1ccba08cf6f7216cea4ffd3779885d373fc3aa32c5a46e128e1461bb6842fa39",
+    "slm/__init__.py": "1883d8e65c018de51a254807139127c1adbe7d9914522f9cb96f7d0944278f4b",
+    "slm/BEST_EFFORT_DEMO.md": "af23c8a3686e6d9d04ae8e5fe97fcb9b76a343b0d3dbed50c10731af68c42935",
+    "slm/best_effort_demo.py": "710c1a1a0fa97661b81b7fa25d12bf2635e174275876e17e72944fbafe537bc3",
+    "slm/cli.py": "5eebe30c81bcb3807148b9ab9fb41a677260240df806a590d449eb02beef2099",
+    "slm/client.py": "85576fe684d8ccabdee3f58737aa9bc3a34c7a8b997c91e60282e141b78a5b93",
+    "slm/config.py": "15f30d05939934bb68cfaad1761e2035345f663af6039381a8cd9817de803e98",
+    "slm/configs/granite_best_effort_demo_v1.json": "dc689a7ddf8fcf58f625468fb126abf3bb2d5349a93532bd62aa85ee81815340",
+    "slm/configs/granite_preflight_compact_s6.json": "a42df429b55b1ff989b44b6e2abd242000782493c86f2287e729c48f72724d4f",
+    "slm/configs/granite_preflight_cpu_v2.json": "4e8bec9bd8f951c07268b2cedf78858e14194bb20168bba2bb197576ce8ae63f",
+    "slm/configs/granite_preflight_v1.json": "12b9688b7da10d4ea7705bd6f94958f2daa66030d5a9df811c208d0a5602965e",
+    "slm/examples/ai_education.json": "695f937a90976d063db89caf079f4541ad8d31b67f08115a94c2cf991d1b5a6c",
+    "slm/examples/apple_intelligent_ring.json": "958d96daffa34ec64494424f268d8935e5331633eca5f0f861d721703fdb7293",
+    "slm/factories.py": "1e30e899ac8dce4d71ef627a6e0c7af8f6b377ed15796db354b94179e4ba017c",
+    "slm/granite_config.py": "9a823d86bf59b3c3aa5e32b5c275ae1079001a0083c4b00adb3cf5afc5cba900",
+    "slm/granite_preflight.py": "19c81f5e751d4ec38ad901abc1a2cda8b87ddf5827262bd0e07f7265d83610b0",
+    "slm/granite_provider.py": "7f230f829dca980d354cb53e5adadc2ca5d7225dbb181c83f567e21aafee8f21",
+    "slm/owned_ollama.py": "978e533c2e73f11831d0c33d256fec58fd62339fe029507a9287c49858fc8f6d",
+    "slm/pipeline.py": "9894b2f8f90cca3886b08907d332c0f750b7347c40e381cd4acfbb0b15e42542",
+    "slm/preflight_slm.py": "26328c28c5d5bd615990d538ccd57a605df75c9ac9e2a35457a3a8a3db315b1c",
+    "slm/pruning.py": "eefe6fd1f4d7f2fda47d1c70d3cb556419153a7f5de3d1cc27cb1e7d693dd837",
+    "slm/README.md": "b3d60c5e339a5503a0db185ffc4a0378b66cec7dcaeb9dce6388eb221d9c3579",
+    "slm/resource_monitor.py": "852201b86f30c510b5b9fbf3cd1ea8fb52678e811d934e363ca5f97e428443df",
+    "slm/schema_contract.py": "a5fa5343a88db6863ba1746659afcdf61a552a72f3bc14a5df697ac5d90ae23f",
+    "slm/start_granite.ps1": "e95570021843b6a87cc57b2d58c99ffcc83d3074da720b12f33e62e2510e3d29",
+    "slm/windows_awake.py": "ed28e280e2e83e83b8b615a3920b3e7e92ed1880baddccc648697b13869e9799",
+    "slm/windows_memory.py": "36c39974b7a0e831d4a5b8471544f90b4722ebfadb263fab6d0ee400068c2eb7",
+    "slm/windows_process.py": "37a7dc92ee011c9490ccba642f39c31e0b4f32e97980235a28afc0e72c0a414b",
+    "storage/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "storage/db.py": "e565753b54a5be8968298c8b08c6e33eaeb0b4cde48d75e360697b602e01b559",
+    "storage/models.py": "dca2f3b36d4b60b4db3b523b8d1d09dd790c0326b62ca7b6ea833c8c14ccffdf",
+    "storage/repositories.py": "9364068b4bd8ad28ab54d71510b2fd1228fa96defe44ec0b320a2b7ec471b4ba",
+    "storage/sqlite_store.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tools/__init__.py": "fa03e4946fd3b05c373e8f3d8c01c96ef92044db862f44de4db54e176ce60d4d",
+    "tools/recency.py": "e7a7e750003b418f034f08a2e33a917e9d9dd32a5c98f318bce203acd5901159",
+    "tools/source_quality.py": "494c74d25a924de89b930e5e33982f030a51bc6559183208be0df98701a09fa2",
+    "tools/tavily_search.py": "36d8499406b7dcb02645037df7498a8153342706355a863f010335928feb991e",
+    "tools/web_search.py": "024b459e2ac12aa4add5d4ab87e42756c51bdd8555eb19b794af99604d61ed75",
+    "workflow/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "workflow/compact_protocol.py": "dd256c54f4fb9ca678df97c1b56eb90f59684fb7e7b038706612edb148a041fd",
+    "workflow/compact_views.py": "3037cf7f8ac0585330b440b75f955c2b87c63b2dd84ca0063501be61e80675a6",
+    "workflow/contract_context.py": "af668228cc25db4ce00edd69e988090570fd7e7f7c45ca99761192677a465476",
+    "workflow/contract_generation.py": "1f1f70f8865044f298f7c8528fe49954f25c07637f4448fec2f65643428ae28b",
+    "workflow/evidence_policy.py": "138d28e8701ce4653ad9628b6f5ba9efb78f677fe989a5598cdafa2dc14a259c",
+    "workflow/finance_contract.py": "1d0c642ec6c0e708afe086430aa5584cb4dd83dd02e8a1eb30d85a54c7d8be09",
+    "workflow/gemini_schema.py": "46d3233b5691a3556e69a0eef8d8e75a5781b33263276660595055a4e6b9fd54",
+    "workflow/generation_batches.py": "ed6391a1bb943305b52ee5949b0e9a1bf24f5a4631df640d083652541001c098",
+    "workflow/generation_constraints.py": "9081e151b48a3a2ecb8781ea72839f6b40defa4b51758988024322c8e077228a",
+    "workflow/graph.py": "0cee9d8acbcb9bcfdfd5bad85cdd2bdc59e0e11cf67151b454ec0b726f4607d7",
+    "workflow/grounding.py": "035367423a53caf903470b9f853f2955a85939c08ec0d23a1a37c19ceafea97f",
+    "workflow/grounding_generation.py": "164789ba770c766927fb66a5b85b38e2d262c6424df2e32b794e405d5a73d9cc",
+    "workflow/llm.py": "e9984f35a82e912bf7fb711a160abc72c3c59157e94533e4cb9fa63b17c537f6",
+    "workflow/llm_client.py": "8671afa0995f098d1641d2bfba5dbc871aa511ca61841f66a0f45a381de0a652",
+    "workflow/logging.py": "46e092f97c04fc826b673ba8f208e017df6b2dc7a4248ceef78f4537baa024f7",
+    "workflow/multi_agent_graph.py": "87593ff44845aeb9514770df791b771c534d6ee00061e466154035ddf528fa57",
+    "workflow/multi_agent_nodes.py": "13a8df70e43bc60925a5156b01a73ecb9208c866fa4dd9f5e43bd0e4c822239a",
+    "workflow/nodes.py": "9a34bf4809feba90d4970dea136a7f0d6ab8afc90aec9d06d0c1aa36c5e36cd6",
+    "workflow/preflight.py": "66a4f297cab5a494a2cecc9bba3a3b9f11c91d1aa920fc0a73c83bafebaec72f",
+    "workflow/research_limits.py": "59d82575267e1ee2e10e1908de7020a4245890e7e1727a310f733008b5f93c8b",
+    "workflow/research_profile.py": "2b1f8daf18b1c36ad31ef8a4776a1a42cf22ec8a55a2788b7cbf19d291ca9ffb",
+    "workflow/review_config.py": "8e4b717e3bef2c500e675eae053080e0ae2af528fe174e9f111b33efaff5b214",
+    "workflow/review_events.py": "8ec4e37b94f8ea2d2a1bbcdfe427a8c737abdd367a08c1861174e2e51986d26c",
+    "workflow/review_graph.py": "fcf227eeb727c25db02f45e80bf18267de62d93d7addb88cc66507f787b081f9",
+    "workflow/review_handoffs.py": "43d41f549f92f48a7b7b46e8bb074b38d4757f5ed06bcaa2641998348bafee63",
+    "workflow/review_providers.py": "ee9cf01da5505958477111eadd700acbbe69441336d4cb794e02f337aa75fc35",
+    "workflow/review_runtime.py": "32f6c53ecfeaa2062d13b037e89b22caefe854e6665d44195b0b28b64a95da79",
+    "workflow/run_budget.py": "83ae29c56d8ee63730b236657fa2bfd9256cfaab897d8697f19a78dce84d4aa8",
+    "workflow/schema_contract.py": "cc719ff595be5573d43d03f2d593334b2f8c1df9d785d99490bc6a3c47d8d28b",
+    "workflow/state.py": "e1901aa08e62e89911139b7dfe9ef526acc6d44ab8886337b06006d7583a4e53",
+    "workflow/two_stage_generation.py": "2773974e8eb387cbcfe18d67e86ec8de6918c0dac77474c226c49f1d3ee77c3a"
+  },
+  "evidence_files": {
+    "cases/ai_education/brief.json": "71adecf347d25bd8a349846f1f1cd97efe522fc45786b6f36552f0b3fbb7102d",
+    "cases/ai_education/case.json": "abe984b5a1eef7a8b950608c4c7859a4184ee22ab789f08fa2d41804ec89367d",
+    "cases/ai_education/packet.json": "41dc2ed22aaa04895bf90b6a29f7c07749214683b050c1d2f9a4539c7237df9a",
+    "cases/ai_education/sources/EDU-01.html": "4610a0f39c00948b7f351c11fc515bb3191463e1d66f89c0380b523527c99fad",
+    "cases/ai_education/sources/EDU-01.txt": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+    "cases/ai_education/sources/EDU-02.html": "bf48404477a10c46e90e57e6aa3273c8cc0b12c6efb0d0566f9f877363dfb6c7",
+    "cases/ai_education/sources/EDU-02.txt": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+    "cases/ai_education/sources/EDU-03.html": "fbc7edd3eb3c00da33217503899b04417cc384bbbff84aa5fb28fa61a262dec8",
+    "cases/ai_education/sources/EDU-03.txt": "1fc5afa18f74989ee9bd9208790148bf03dd8e84376b7afacca5ec4089e280c1",
+    "cases/intelligent_ring/brief.json": "dac67857282ea5b0452906799a5e5e4a307b040382f8931dd01338a4ff56a468",
+    "cases/intelligent_ring/case.json": "243c7dc0afc217c8f7386924e73612ccc09f30facd7412f27eb5f5fbcbe802dd",
+    "cases/intelligent_ring/packet.json": "1c557359764ae9b9ba75600feca9d72f754ec896a2a09c27c207a7b2fa6b3fcb",
+    "cases/intelligent_ring/sources/RING-01.html": "74136c50cdaca9e74e49d5ac8a2f310ac18345a02a43c6916e0cb377f5bd9393",
+    "cases/intelligent_ring/sources/RING-01.txt": "ff589967d9e74baba83c9a0e3a352555f0d763b360db6db89bddda3425aecc33",
+    "cases/intelligent_ring/sources/RING-02.html": "305e3b18b5807826bc48e23b7612ed48d396281857e62ab36c5361239940da87",
+    "cases/intelligent_ring/sources/RING-02.txt": "47b488ea8ffb6ab49519015ea09ac9649af29c5f2ded226f7e30e1f5d778b67e",
+    "cases/intelligent_ring/sources/RING-03.html": "ba9eadee8266517fcae0b0fe724683b086e7e4116588a2b9242577b02197dea0",
+    "cases/intelligent_ring/sources/RING-03.txt": "0b2dcc5c6bd1bfe76346171fe7d05aa0b47b14f31b38ed8415e31d27737b9e70"
+  },
+  "preflight_reports": {
+    "D": {
+      "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\D_PREFLIGHT_ATTEMPT_03.json",
+      "sha256": "988ffee8a1afc58b213b2a935ddb7fb32d8a5c95519f72021811409f37b4f879"
+    },
+    "A": {
+      "path": "docs\\final_sprint\\s5-llm-only-v23\\smokes\\ai_education-A\\result.json",
+      "sha256": "797b73c0f8a3632640d0c6f209de4d340934c67f93ba707a1337ea5224d818fb"
+    },
+    "B": {
+      "path": "docs\\final_sprint\\s5-llm-only-v23\\smokes\\ai_education-B\\result.json",
+      "sha256": "6ea2ed4e80aaf3aa0e604a51203b36bc7c45570710c8da0156ea14e40e10a0ce"
+    },
+    "C": {
+      "path": "docs\\final_sprint\\s5-llm-only-v23\\smokes\\ai_education-C\\result.json",
+      "sha256": "599a42de09051fcdc0c8195b3ddd341d3e4a8b0caa681a7e8e20996a7365c947"
+    }
+  },
+  "authority_files": {
+    "C:\\Users\\JasmineJiang\\Desktop\\s4\\hu-3.Intelligent System\\@final presentation\\sprint_plan_.md": "22963a09eae624c2c72e0a0d1e807cdf066255ee3e9f5abd5a21e19b820643c1",
+    "C:\\Users\\JasmineJiang\\Desktop\\s4\\hu-3.Intelligent System\\@final presentation\\@ai_agent_evaluation_metrics_spec_v2_fast_generation.md": "23407504f7bb9924529ec16f83df3d556d32dba1901d1354868306d1b087182a",
+    "C:\\Users\\JasmineJiang\\Desktop\\s4\\hu-3.Intelligent System\\@final presentation\\@multiple_ai_agent_optimization.md": "7e532ecd69e7ccb90a36e66dc2a84d6479b17ccb4e433eee745757a712a344bd"
+  },
+  "total_request_limit": 108,
+  "total_token_limit": 960000,
+  "cost_limits_usd": {
+    "smoke": 1.2,
+    "formal": 2.4,
+    "combined": 3.6,
+    "conservative_rate_per_million_tokens": 2.5
+  },
+  "comparison_policy": {
+    "reported": [
+      "B-A",
+      "C-B"
+    ],
+    "unavailable": {
+      "C-D": "D_preflight_no_go"
+    },
+    "success_subset_substitution": false
+  },
+  "excluded_nonformal_artifacts": {
+    "best_effort_demo": {
+      "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\BEST_EFFORT_DEMO_RESULT.json",
+      "sha256": "6db414ba817fc1acee6c53d5738c1fa5369b87f4a4afc18bb569e326510c98e1",
+      "formal_eligible": false,
+      "c_minus_d_comparison_eligible": false
+    }
+  },
+  "smoke_actual": {
+    "status": "passed",
+    "requests": 17,
+    "prompt_tokens": 55279,
+    "output_tokens": 16772,
+    "total_tokens": 87076,
+    "cost_usd": 0.0960762
+  },
+  "prior_nonformal_spend": {
+    "records": [
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v1\\smoke_summary.json",
+        "sha256": "15d891309b7ae1f0e842da08f36a0c4a442bb948d3921ca38e64729ccc3d861c",
+        "requests": 2,
+        "total_tokens": 9410,
+        "cost_usd": 0.0106792
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v2\\smoke_summary.json",
+        "sha256": "3c5ca075127fed22d37b7d9ac6f9ab7dd5a2d79af1fe90685f361505fa04bb53",
+        "requests": 2,
+        "total_tokens": 22192,
+        "cost_usd": 0.0426342
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v3\\smoke_summary.json",
+        "sha256": "0abdd4fc2b1d75a33bb35409da3b734e3a1ee9c378751f5ae00b78f82ef32bf4",
+        "requests": 1,
+        "total_tokens": 6818,
+        "cost_usd": 0.0105352
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v4\\smoke_summary.json",
+        "sha256": "17050f2800535b43153ed0dca4045afa94dc506dd69e098a39b2d4162fc57619",
+        "requests": 1,
+        "total_tokens": 11358,
+        "cost_usd": 0.0213682
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v5\\smoke_summary.json",
+        "sha256": "78bc862d1e8980f0f7926857acc2ac67f9dcc2dd68831747278c375a3d02320e",
+        "requests": 1,
+        "total_tokens": 6302,
+        "cost_usd": 0.0087282
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v6\\smoke_summary.json",
+        "sha256": "ff2678ee227116996a17b036f8aba7aa20ec7d8e889501a0aa961d4a51a18917",
+        "requests": 1,
+        "total_tokens": 6201,
+        "cost_usd": 0.0083833
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v7\\smoke_summary.json",
+        "sha256": "c83f44ed5181d0420048265509cc2ddc935093158edd2886adb5bf77b7edd874",
+        "requests": 1,
+        "total_tokens": 5796,
+        "cost_usd": 0.0073532
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v8\\smoke_summary.json",
+        "sha256": "7d273c950155a0cca9df8b2932c48eb5d10a3656920ae4d93ac80039cf3e4f02",
+        "requests": 1,
+        "total_tokens": 5634,
+        "cost_usd": 0.006935
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v9\\smoke_summary.json",
+        "sha256": "f8e9f0f227e67a5923eb68b2656d8020ed4472ce92ddd5535f7db913035e6c0a",
+        "requests": 1,
+        "total_tokens": 5994,
+        "cost_usd": 0.0077558
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v10\\smoke_summary.json",
+        "sha256": "f6a8bca768a97dfa32d7a866120a455583f08e7c132be4bf490cb9534af71cc2",
+        "requests": 4,
+        "total_tokens": 18605,
+        "cost_usd": 0.0236831
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v11\\smoke_summary.json",
+        "sha256": "765708af6f199ad6d5d7e2e7bf71456eb2b9b3c97d2ae000bc8aee9e2641b5d8",
+        "requests": 2,
+        "total_tokens": 9744,
+        "cost_usd": 0.0134238
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v12\\smoke_summary.json",
+        "sha256": "1297e1cb726e5725f41e186726204e89cca70fce617710c68d597d7a576c4356",
+        "requests": 1,
+        "total_tokens": 5907,
+        "cost_usd": 0.0075097
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v13\\smoke_summary.json",
+        "sha256": "c2a8c3eedc9da555c0da693be5aa163953920b23b9a9c4d0ce0bcea1933f907d",
+        "requests": 1,
+        "total_tokens": 6199,
+        "cost_usd": 0.0082639
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v14\\smoke_summary.json",
+        "sha256": "3345b242c0e2bc164499cee875b8f4da75f9b4c00f48232269dce362a492bf7c",
+        "requests": 1,
+        "total_tokens": 6300,
+        "cost_usd": 0.0084636
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v15\\smoke_summary.json",
+        "sha256": "831464eb3e594af1b358e2dcdcd895fc6df47887d7e2d661142ad0295f819523",
+        "requests": 2,
+        "total_tokens": 10283,
+        "cost_usd": 0.0145909
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v16\\smoke_summary.json",
+        "sha256": "6cd16f5ea918204d00d2190d5e3be54ba5c5682a5743de943ff6cc05c2401276",
+        "requests": 4,
+        "total_tokens": 23031,
+        "cost_usd": 0.0295891
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v17\\smoke_summary.json",
+        "sha256": "13c44c4f8e04a9a88d1ebb7d9d6df7a963b9b146bbc255e5dc04b416e8875bfd",
+        "requests": 4,
+        "total_tokens": 25001,
+        "cost_usd": 0.0337309
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v18\\smoke_summary.json",
+        "sha256": "fbd26a4d602027419ec2c9b0f83780c5dde6ee9f4a90b4de7de726cf0c5dd917",
+        "requests": 4,
+        "total_tokens": 23173,
+        "cost_usd": 0.0292577
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v20\\smoke_summary.json",
+        "sha256": "f70c40d6532a9eef691033a60b0965e83ff4ee1c9c53016831620fdafea6e74b",
+        "requests": 5,
+        "total_tokens": 29038,
+        "cost_usd": 0.0335802
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v21\\smoke_summary.json",
+        "sha256": "5e6e26d6acc5117bd10152462dfcc2aaa576b8ad5ad494e13b2b95c3d3582326",
+        "requests": 6,
+        "total_tokens": 34227,
+        "cost_usd": 0.0412001
+      },
+      {
+        "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v22\\smoke_summary.json",
+        "sha256": "66747bf06b94252514b202641c4f92ce9a9d4b3fa4e3e517e06bffaf014a196e",
+        "requests": 5,
+        "total_tokens": 32053,
+        "cost_usd": 0.0379541
+      }
+    ],
+    "requests": 50,
+    "total_tokens": 303266,
+    "cost_usd": 0.4056194,
+    "scope": "all preserved s5-llm-only-vN smoke summaries; immutable lifetime accounting; an explicitly authorized epoch may define a separate active ceiling"
+  },
+  "smoke_budget_epoch_authorization": {
+    "version": "s5-smoke-budget-epoch-v1",
+    "approved": true,
+    "starts_at_experiment_version": 20,
+    "preserve_lifetime_history": true,
+    "unchanged_hard_limits": {
+      "requests": 54,
+      "total_tokens": 480000,
+      "cost_usd": 1.2
+    },
+    "authorization_record": {
+      "path": "C:/Users/JasmineJiang/Projects/multiple-ai-agent_SLM_LLM/docs/final_sprint/s6-fast-generation-v1/LLM_ONLY_S5_V20_BUDGET_EPOCH_AUTHORIZATION.json",
+      "sha256": "3505db7d24c3bf729dbf54b29cbeff5313a56343a679a26d39716617ee924df7"
+    }
+  },
+  "smoke_budget_baseline": {
+    "version": "s5-smoke-budget-baseline-v1",
+    "mode": "authorized_epoch",
+    "starts_at_experiment_version": 20,
+    "authorization_record": {
+      "path": "C:/Users/JasmineJiang/Projects/multiple-ai-agent_SLM_LLM/docs/final_sprint/s6-fast-generation-v1/LLM_ONLY_S5_V20_BUDGET_EPOCH_AUTHORIZATION.json",
+      "sha256": "3505db7d24c3bf729dbf54b29cbeff5313a56343a679a26d39716617ee924df7"
+    },
+    "lifetime_prior": {
+      "requests": 50,
+      "total_tokens": 303266,
+      "cost_usd": 0.4056194
+    },
+    "active_prior": {
+      "requests": 16,
+      "total_tokens": 95318,
+      "cost_usd": 0.1127344
+    },
+    "excluded_prior": {
+      "requests": 34,
+      "total_tokens": 207948,
+      "cost_usd": 0.292885
+    },
+    "active_record_paths": [
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v20\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v21\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v22\\smoke_summary.json"
+    ],
+    "excluded_record_paths": [
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v1\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v2\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v3\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v4\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v5\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v6\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v7\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v8\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v9\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v10\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v11\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v12\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v13\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v14\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v15\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v16\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v17\\smoke_summary.json",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v18\\smoke_summary.json"
+    ],
+    "history_preserved": true
+  },
+  "runtime_versions": {
+    "python": "3.12.14",
+    "packages": {
+      "google-genai": "2.8.0",
+      "langgraph": "1.2.2",
+      "pydantic": "2.13.4",
+      "sqlalchemy": "2.0.51",
+      "streamlit": "1.58.0",
+      "requests": "2.34.2",
+      "tokenizers": "0.23.1"
+    }
+  },
+  "model_metadata": {
+    "A-C": {
+      "provider": "gemini",
+      "model_exact_id": "gemini-2.5-flash",
+      "service_tier": "standard",
+      "thinking_budget": 1024,
+      "mechanical_claim_repair": "conservative-claim-repair-v11-s5-finance-assumption-notice",
+      "terminal_punctuation_exact_parent_match": true,
+      "text_equals_claim_required": true,
+      "selected_evidence_id_inline_mirroring": true,
+      "inline_mirroring_owner": "deterministic_adapter",
+      "credential_source_variable": "GOOGLE_API_KEY",
+      "paid_tools": false
+    },
+    "D": {
+      "formal_execution": "not_run_preflight_no_go"
+    }
+  },
+  "source_records": {
+    "authorization": {
+      "path": "docs\\final_sprint\\s6-fast-generation-v1\\LLM_ONLY_S5_INLINE_CITATION_AUTHORIZATION.json",
+      "sha256": "34d9d9f26f167d1ba2c5ea00a2ac7625440a9b8d9e541b0adf3f6d751068b224"
+    },
+    "gemini_smoke_approval": {
+      "path": "docs\\final_sprint\\s6-fast-generation-v1\\LLM_ONLY_S5_INLINE_CITATION_AUTHORIZATION.json",
+      "sha256": "34d9d9f26f167d1ba2c5ea00a2ac7625440a9b8d9e541b0adf3f6d751068b224"
+    },
+    "D_no_go": {
+      "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\D_PREFLIGHT_ATTEMPT_03.json",
+      "sha256": "988ffee8a1afc58b213b2a935ddb7fb32d8a5c95519f72021811409f37b4f879"
+    }
+  },
+  "jointly_frozen_conditions": [
+    "A",
+    "B",
+    "C"
+  ],
+  "smoke_summary": {
+    "path": "docs\\final_sprint\\s5-llm-only-v23\\smoke_summary.json",
+    "sha256": "f069cbb12fb1e20552484cf96788ee445b4302b06deb45632756912d0d6b539f"
+  }
+}

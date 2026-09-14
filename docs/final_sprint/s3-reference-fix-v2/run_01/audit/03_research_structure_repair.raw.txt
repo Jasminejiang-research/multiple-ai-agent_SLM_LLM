@@ -1,0 +1,207 @@
+{
+  "analysis_summary": "Based on the provided evidence packet and user brief, the following market analysis for the AI Tutor for MBA Students pilot is conducted. All claims are traced to exact source anchors in the packet.",
+  "market_trends": [
+    {
+      "topic": "Graduate degree completions in the US",
+      "finding": "Historical data shows a 16% increase in master's degrees from 2011-12 to 2021-22, but this does not directly indicate demand for an MBA-specific AI tutoring service.",
+      "rationale": "The increase reflects overall graduate enrollment growth, not necessarily demand for personalized AI coaching.",
+      "claims": [
+        {
+          "claim_id": "market_trends_1",
+          "parent_claim_id": null,
+          "claim_text": "Graduate degree completions are increasing",
+          "claim_type": "factual",
+          "claim_domain": "market_trends",
+          "evidence_status": "sourced_fact",
+          "source_ids": ["EDU-02"],
+          "source_support": "direct",
+          "source_quality": 0.5,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "partial_support",
+          "content_anchor": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as business, management, marketing, and related services. NOTE: Data are for the 50 states and the District of Columbia. The fields shown are the five programs in which the largest numbers of master’s degrees were conferred in 2021–22. Data are for postsecondary institutions participating in Title IV federal financial aid programs and U.S. service academies. Data in this figure are based on the 2020 Classification of Instructional Programs. Some data have been revised from previously published figures. Figures are plotted based on unrounded data. In 2021–22, postsecondary institutions conferred 880,200 master’s degrees. Of the master’s degrees conferred, 69 percent were concentrated in five fields of study: business (205,800 degrees, 23 percent) ...",
+          "source_anchors": [
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C1",
+              "line_start": 299,
+              "line_end": 299,
+              "snapshot_sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+              "quote": "Last Updated: May 2024"
+            },
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C2",
+              "line_start": 342,
+              "line_end": 342,
+              "snapshot_sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+              "quote": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as business, management, marketing, and related services, as well as culinary, entertainment, and personal services."
+            }
+          ],
+          "financial_value_ids": ["base.monthly_revenue", "base.monthly_operating_result", "base.ending_cash", "base.break_even_users", "high.monthly_revenue", "high.monthly_operating_result", "high.ending_cash", "high.break_even_users", "low.monthly_revenue", "low.monthly_operating_result", "low.ending_cash", "low.break_even_users"],
+          "premise": "Understanding overall graduate degree trends provides context for potential demand but cannot be directly translated into MBA-specific demand without further validation.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "partial_support",
+      "confidence": "medium"
+    },
+    {
+      "topic": "Competitive landscape",
+      "finding": "Khanmigo is a known competitor in adjacent tutoring space, but its pricing and target audience are not directly comparable to an MBA-specific AI tutoring service.",
+      "rationale": "While Khanmigo offers tutoring, the service is not tailored to MBA students and lacks MBA-specific case coaching features.",
+      "claims": [
+        {
+          "claim_id": "competitor_assumptions_1",
+          "parent_claim_id": null,
+          "claim_text": "Khanmigo is a competitor but not a direct MBA substitute",
+          "claim_type": "assumption",
+          "claim_domain": "competition",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-01"],
+          "source_support": "direct",
+          "source_quality": 0.5,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "differentiation_mba",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 22,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you"
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "Assuming Khanmigo's pricing and positioning, the service must differentiate through MBA-specific features to capture demand.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant",
+      "confidence": "medium"
+    }
+  ],
+  "customer_notes": [
+    {
+      "topic": "Target customer profile",
+      "finding": "The service targets US adults aged 18+ enrolled in or applying to MBA programs, with business-school instructors as potential institutional buyers.",
+      "rationale": "The brief explicitly defines the target audience as US adults enrolled in or applying to MBA programs, with instructors as potential buyers.",
+      "claims": [
+        {
+          "claim_id": "customer_notes_1",
+          "parent_claim_id": null,
+          "claim_text": "Target customers are US MBA applicants/instructors",
+          "claim_type": "factual",
+          "claim_domain": "customer_notes",
+          "evidence_status": "sourced_fact",
+          "source_ids": ["EDU-02"],
+          "source_support": "direct",
+          "source_quality": 0.5,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "target_customer",
+          "source_anchors": [
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C1",
+              "line_start": 299,
+              "line_end": 299,
+              "snapshot_sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+              "quote": "Last Updated: May 2024"
+            },
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C2",
+              "line_start": 342,
+              "line_end": 342,
+              "snapshot_sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+              "quote": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as business, management, marketing, and related services, as well as culinary, entertainment, and personal services."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "Clear definition of target customers guides pricing, positioning, and marketing strategies.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "directly_supported",
+      "confidence": "high"
+    }
+  ],
+  "competitor_assumptions": [
+    {
+      "topic": "Differentiation from Khanmigo",
+      "finding": "The service must differentiate from Khanmigo by offering MBA-specific case coaching and personalized feedback.",
+      "rationale": "Khanmigo provides general tutoring but lacks MBA-specific case studies and industry-relevant feedback loops.",
+      "claims": [
+        {
+          "claim_id": "differentiation_mba",
+          "parent_claim_id": null,
+          "claim_text": "The service must differentiate from Khanmigo through MBA-specific features",
+          "claim_type": "assumption",
+          "claim_domain": "competitor_assumptions",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-01"],
+          "source_support": "direct",
+          "source_quality": 0.5,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "differentiation_mba",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 22,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you"
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "To capture demand, the product must address the unique needs of MBA students that general tutoring platforms cannot fulfill.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant",
+      "confidence": "high"
+    }
+  ],
+  "needs_human_review": [
+    "Validate assumptions about subscription pricing and cost structure with market research.",
+    "Conduct interviews with MBA program directors to assess willingness to pay for AI tutoring.",
+    "Obtain licensing agreements for case studies to confirm content availability and cost.",
+    "Perform a pilot study to gather learning outcome data before full-scale launch."
+  ]
+}

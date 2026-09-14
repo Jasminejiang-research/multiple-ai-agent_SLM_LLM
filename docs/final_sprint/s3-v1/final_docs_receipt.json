@@ -1,0 +1,31 @@
+{
+  "recorded_at_utc": "2026-09-06T22:21:02.6779530Z",
+  "verified_updates": [
+    {
+      "path": "docs/final_sprint_status.md",
+      "before_sha256": "b0fdb16876c0f111d172d2bed3b0131bfb86550b327e1d499585cd6aa7b1c9da",
+      "after_sha256": "e63bc777d42053c61c0f7c6a920d479800aef091172ab8d6ec1a7e8d555f9356"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/HANDOFF.md",
+      "before_sha256": "bccae2e0bb4fb584bbccb1829e9bfdfd016b6376bd31bf0651b8961f68322fe6",
+      "after_sha256": "95cef0093a0f67ac52c1189d938b5e5326b0eb643d31df3cc76c0c5d23ca3d50"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/collect_evidence.py",
+      "before_sha256": null,
+      "after_sha256": "bff490a332e27ad788d5581db3127832a37d1f25b1b46bc01c504b1dfa218ef6"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/server.stdout.log",
+      "before_sha256": null,
+      "after_sha256": "931111efb0264927b4ed5b39d81a4da7f4885b6d5c0c24f8885389076f0ca7a9"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/server.stderr.log",
+      "before_sha256": null,
+      "after_sha256": "21c859ae8c2432feab9481c5587ed7e107b9cafaa9ffca2f06bab30b62713084"
+    }
+  ],
+  "next_package_started": false
+}

@@ -1,0 +1,1 @@
+S4 offline CLI audit passed: 8 untouched formal slots, 8 synthetic workflows, no real model calls.

@@ -1,0 +1,224 @@
+{
+  "model": "gemini-2.5-flash",
+  "contents": "# Role\n\nYou are the Finance Agent for Open Proposal Agent.\n\n# Objective\n\nCreate structured financial assumptions for the validated business brief. Produce revenue assumptions, cost assumptions, unit economics assumptions, and a break-even discussion that downstream Writer and Critic agents can use. Do not write the full proposal.\n\n# Inputs\n\nYou will receive a JSON object with:\n\n- `user_brief`, containing fields such as `company_or_product_name`, `industry`, `target_customer`, `problem`, `solution`, `business_model`, `geography`, `proposal_goal`, and optional context.\n- optional prior analysis packets, such as `research_analysis` and `strategy_analysis`, when available.\n\n# Allowed Actions\n\n- Frame revenue assumptions based on the provided business model and strategy context.\n- Frame cost assumptions such as product delivery, operations, customer acquisition, support, and fixed overhead.\n- Frame unit economics assumptions such as pricing, gross margin, CAC, retention, payback, or usage-based cost drivers.\n- Discuss break-even qualitatively by naming the assumptions that would determine it.\n- Mark confidence as `high`, `medium`, or `low` based only on the available input.\n- Put evidence-dependent financial claims into `unsupported_financial_claims`.\n- Add assumptions that need user confirmation to `needs_human_review`; keep the list to at most 8 items by merging related confirmation questions.\n\n# Forbidden Actions\n\n- Do not write a full business proposal.\n- Do not write proposal sections such as Executive Summary, Financial Assumptions, or Appendix.\n- Do not present numbers as accurate forecasts, guaranteed outcomes, investment advice, or verified projections.\n- Do not invent market size, revenue, customer counts, CAC, margin, growth rate, or break-even dates as facts.\n- Do not call tools, calculators, web research, RAG, databases, or external APIs.\n- Do not give legal, tax, securities, accounting, or investment advice.\n\n# Output Schema\n\nReturn valid JSON only. Do not wrap the JSON in Markdown.\n\nThe JSON must match this shape:\n\n```json\n{\n  \"analysis_summary\": \"string\",\n  \"revenue_assumptions\": [\n    {\n      \"topic\": \"string\",\n      \"assumption\": \"string\",\n      \"rationale\": \"string\",\n      \"confidence\": \"medium\",\n      \"needs_validation\": [\"string\"]\n    }\n  ],\n  \"cost_assumptions\": [\n    {\n      \"topic\": \"string\",\n      \"assumption\": \"string\",\n      \"rationale\": \"string\",\n      \"confidence\": \"medium\",\n      \"needs_validation\": [\"string\"]\n    }\n  ],\n  \"unit_economics_assumptions\": [\n    {\n      \"topic\": \"string\",\n      \"assumption\": \"string\",\n      \"rationale\": \"string\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\"string\"]\n    }\n  ],\n  \"break_even_discussion\": \"string\",\n  \"assumption_notice\": \"All financial figures are assumptions for planning discussion, not forecasts.\",\n  \"unsupported_financial_claims\": [\n    {\n      \"claim\": \"string\",\n      \"why_unsupported\": \"string\",\n      \"needed_evidence\": [\"string\"]\n    }\n  ],\n  \"needs_human_review\": [\"string\"]\n}\n```\n\n# Quality Criteria\n\n- Keep financial assumptions concise, practical, and grounded in the provided brief or analysis packets.\n- Clearly separate assumption framing from verified financial data.\n- Use cautious wording such as \"assume\", \"could\", \"would depend on\", and \"needs validation\".\n- Make the output useful for a later Writer Agent without giving it unverified financial facts disguised as certainty.\n- Preserve the Finance Agent boundary: finance assumptions only, not full proposal writing.\n\n# Failure Behavior\n\nIf the input lacks enough detail, still return a valid `FinanceAssumptions`. Use low confidence, add the uncertainty to `needs_human_review`, and place evidence-dependent statements in `unsupported_financial_claims` instead of inventing numbers.\n\n\n# Finance Input JSON\n\n```json\n{\n  \"user_brief\": {\n    \"company_or_product_name\": \"Berlin Restaurant Ingredient Waste Forecasting SaaS\",\n    \"industry\": \"Restaurant operations software and food-waste forecasting\",\n    \"target_customer\": \"Restaurants in Berlin\",\n    \"problem\": \"Restaurants may need better forecasts to reduce ingredient waste. The scale, causes, current workflows, urgency and willingness to pay have not been supplied and must be researched or labeled as assumptions.\",\n    \"solution\": \"A conventional forecasting SaaS product for restaurant ingredient purchasing and waste reduction. Data inputs, forecast horizon, integration requirements, operating workflow and differentiation have not been supplied and must be researched or labeled as assumptions.\",\n    \"business_model\": \"SaaS. Pricing, contract term, sales model, implementation fees, customer counts, costs and margins were not supplied and must be researched or treated as explicit assumptions.\",\n    \"geography\": \"Berlin, Germany\",\n    \"proposal_goal\": \"请通过完整产品链路生成中文商业计划书，评估传统预测型 SaaS 的商业可行性、实施、风险和财务假设。\",\n    \"output_language\": \"zh-CN\",\n    \"additional_context\": \"Only the concept, Berlin restaurant scope, SaaS model, and preference for a traditional forecasting product were supplied. Do not preset or confirm market size, waste rates, customer demand, named competitors, prices, costs, forecast accuracy, integrations, legal conclusions, financial outcomes or partnerships. Research dynamically where the product path supports it; otherwise label assumptions. Favor commercially practical conventional forecasting and workflow integration rather than inventing advanced AI novelty. Cite only evidence actually supplied to the writer. Do not use a frozen case, case whitelist, prewritten evidence pack or manually supplied financial model. Produce substantive sections. Formal plans must be English and must exclude audit metadata; audit records must be separate.\",\n    \"original_user_idea\": \"柏林餐厅食材浪费预测 SaaS - 采用传统行业传统预测产品\"\n  },\n  \"research_analysis\": {\n    \"evidence_notice\": \"Program provenance: user brief and unsourced findings are unverified hypotheses, not established facts. Only sourced_fact entries with eligible_external source IDs may be considered evidence candidates; their text must still support the claim. This is not independent fact verification.\",\n    \"analysis_summary\": \"The proposed Berlin Restaurant Ingredient Waste Forecasting SaaS aims to address potential inefficiencies in ingredient management for restaurants in Berlin. The German and EU regulatory landscape indicates a strong push for food waste reduction, with mandatory targets for out-of-home catering. Berlin's dining sector also shows a growing trend towards sustainability and digital adoption, with some German chains already using AI for inventory forecasting. However, critical details such as the specific scale and causes of waste in Berlin restaurants, their current operational workflows, the urgency of the problem, and their willingness to pay for a SaaS solution remain unquantified and require further validation. The proposed solution's specific features, integration requirements, and business model specifics are also currently assumptions.\",\n    \"market_trends\": [\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"Food Waste Regulation and Targets\",\n        \"finding\": \"Evidence suggests that the German government and the EU have established mandatory targets for food waste reduction, including a 30% per capita reduction for out-of-home catering by 2030.\",\n        \"rationale\": \"Unverified sources indicate that the German government aims to combat food waste at all levels, with mandatory EU reduction targets applying to member states. For out-of-home catering, a 30% reduction per capita must be achieved. The EU Waste Framework Directive (revised 2025) reportedly focuses on food waste, setting common rules and mandatory reduction targets. Germany is said to generate approximately 10.8 million tonnes of food waste annually (as of 2022).\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"Sustainability and Ethical Dining in Berlin\",\n        \"finding\": \"Unverified information suggests Berlin's restaurant scene is experiencing a strong and increasing trend towards sustainability, ethical food choices, and awareness of food waste.\",\n        \"rationale\": \"Unverified sources suggest Berlin is a hub for plant-based dining, reportedly ranked second among the world’s most vegan-friendly cities, with vegan-friendly listings growing by 7% in 2024. The 'slow dining' movement in Berlin is described as emphasizing intention, food education, food waste, and strong relationships with local farmers to support ethical food choices and counter overproduction.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"Digital Adoption and Demand Forecasting\",\n        \"finding\": \"Unverified reports indicate accelerating digital adoption in the German foodservice market, with some mid-sized chains reportedly using AI for inventory forecasting. Operators are also encouraged to invest in demand forecasting to meet waste reduction targets.\",\n        \"rationale\": \"Unverified sources state that more than half of mid-sized chains in Germany are using AI for inventory forecasting. To comply with a reported 50% food waste reduction target by 2030, operators are suggested to invest in demand forecasting, portion optimization, and donation logistics.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"Tourism and Restaurant Demand\",\n        \"finding\": \"Unverified data suggests strong tourism in Germany, including Berlin, is driving robust demand for out-of-home consumption, which could potentially increase ingredient turnover.\",\n        \"rationale\": \"Unverified sources indicate strong tourism is driving restaurant foot traffic demand nationally, with peaks in Berlin. Germany reportedly recorded 433 million overnight stays between January and October 2024, signaling robust demand for out-of-home consumption.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"customer_notes\": [\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"Sustainability Focus\",\n        \"finding\": \"Unverified information suggests Berlin restaurants are increasingly conscious of food waste and sustainability, aligning with ethical food choices and local sourcing.\",\n        \"rationale\": \"Unverified sources indicate Berlin restaurants are building strong relationships with local farmers to support ethical food choices and counter food overproduction. The city's reported prominence as a vegan-friendly hub further suggests a general inclination towards sustainable practices.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"Cost and Investment Barriers\",\n        \"finding\": \"Unverified reports suggest smaller independent restaurants may face challenges in absorbing the upfront capital and training costs associated with new waste reduction strategies.\",\n        \"rationale\": \"Unverified sources state that smaller independent outlets may lack the scale to absorb upfront capital and training costs incurred by investing in procurement, menu engineering, and supplier audits to meet waste reduction benchmarks.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"assumption\",\n        \"source_ids\": [],\n        \"topic\": \"Willingness to Pay for Forecasting SaaS\",\n        \"finding\": \"Berlin restaurants' willingness to pay for a forecasting SaaS that demonstrably reduces ingredient waste and associated costs, and helps meet regulatory targets, is currently an assumption.\",\n        \"rationale\": \"The user brief explicitly states that willingness to pay has not been supplied and must be researched or labeled as assumptions. This is a logical inference based on the problem statement and market trends, but lacks direct evidence.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"assumption\",\n        \"source_ids\": [],\n        \"topic\": \"Current Workflows and Urgency\",\n        \"finding\": \"The specific current workflows for ingredient management and the perceived urgency among Berlin restaurants to adopt new forecasting solutions are currently unknown assumptions.\",\n        \"rationale\": \"The user brief explicitly states that current workflows and urgency have not been supplied and must be researched or labeled as assumptions.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"competitor_assumptions\": [\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"AI-powered Food Waste Monitoring Systems\",\n        \"finding\": \"Unverified reports indicate that AI-powered food waste monitoring systems are already in use in the German foodservice market, suggesting existing solutions for waste tracking and optimization.\",\n        \"rationale\": \"Unverified sources mention that Compass Group partnered with Winnow to install AI-powered food waste monitoring systems across the UK and Germany. This technology reportedly uses smart scales and image recognition to track discarded items, helping chefs optimize portioning and inventory.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"General Gastro Waste Management Services\",\n        \"finding\": \"Unverified information suggests companies offer comprehensive gastro waste management services that handle disposal, recovery, and reuse of food waste for restaurants.\",\n        \"rationale\": \"Unverified sources indicate FCC Environment CEE provides professional gastro waste management, reportedly focusing on efficient disposal, legal compliance, sustainability goals, and cost-efficient operations, including recovery and reuse of kitchen leftovers.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"assumption\",\n        \"source_ids\": [],\n        \"topic\": \"Internal Forecasting Methods\",\n        \"finding\": \"It is an assumption that many Berlin restaurants currently employ manual or rudimentary internal methods for ingredient purchasing and inventory management, which may be inefficient.\",\n        \"rationale\": \"The user brief identifies 'restaurants may need better forecasts to reduce ingredient waste' as the problem, implying current methods are suboptimal. This is an assumption without direct evidence of specific restaurant practices.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"unsupported_claims\": [\n      {\n        \"claim\": \"The specific scale and causes of ingredient waste in Berlin restaurants.\",\n        \"why_unsupported\": \"The user brief explicitly states that the scale and causes of waste have not been supplied. While national food waste figures are available from unverified sources, specific data for Berlin restaurants and the underlying causes (e.g., over-ordering, poor storage, menu changes) are not provided.\",\n        \"needed_evidence\": [\n          \"Specific food waste statistics for Berlin restaurants\",\n          \"Common causes of ingredient waste in Berlin's foodservice sector\"\n        ]\n      },\n      {\n        \"claim\": \"The urgency and willingness of Berlin restaurants to pay for a forecasting SaaS.\",\n        \"why_unsupported\": \"The user brief explicitly states that urgency and willingness to pay have not been supplied. While regulatory pressure and sustainability trends from unverified sources suggest a need, the financial readiness and perceived urgency for a SaaS solution are not evidenced.\",\n        \"needed_evidence\": [\n          \"Market research on Berlin restaurant budget allocation for software\",\n          \"Surveys on perceived urgency of waste reduction solutions among Berlin restaurateurs\"\n        ]\n      },\n      {\n        \"claim\": \"Specific data inputs, forecast horizon, integration requirements, operating workflow, and differentiation of the proposed SaaS.\",\n        \"why_unsupported\": \"The user brief states these aspects of the solution have not been supplied and must be researched or labeled as assumptions. No external evidence was provided to define these specifics for the proposed SaaS.\",\n        \"needed_evidence\": [\n          \"Industry standards for restaurant forecasting SaaS features\",\n          \"Common integration points for restaurant software (POS, inventory systems)\",\n          \"User requirements for forecast horizon and workflow\"\n        ]\n      },\n      {\n        \"claim\": \"Pricing, contract term, sales model, implementation fees, customer counts, costs, and margins for the SaaS.\",\n        \"why_unsupported\": \"The user brief explicitly states these business model details were not supplied and must be researched or treated as explicit assumptions. No external evidence was provided to define these financial and operational specifics.\",\n        \"needed_evidence\": [\n          \"Pricing benchmarks for similar SaaS products in the German market\",\n          \"Typical SaaS contract terms and sales models for B2B software\",\n          \"Cost structures and margin expectations for software companies in the industry\"\n        ]\n      }\n    ],\n    \"needs_human_review\": [\n      \"Quantification of the specific financial impact of ingredient waste on Berlin restaurants.\",\n      \"Detailed understanding of existing ingredient purchasing and inventory management workflows in Berlin restaurants.\",\n      \"Identification of specific integration requirements for a conventional forecasting SaaS with common restaurant POS/inventory systems in Berlin.\",\n      \"Validation of the perceived urgency and budget allocation for waste reduction software among target customers.\",\n      \"Further research into local Berlin-specific competitors offering ingredient forecasting SaaS solutions.\",\n      \"Clarification on the exact definition of 'conventional forecasting product' to ensure alignment with market expectations and capabilities.\"\n    ]\n  },\n  \"strategy_analysis\": {\n    \"analysis_summary\": \"The Berlin Restaurant Ingredient Waste Forecasting SaaS aims to help restaurants reduce ingredient waste by providing a conventional forecasting solution. The market shows regulatory pressure for food waste reduction and a growing trend towards sustainability and digital adoption in Berlin's dining sector. However, critical details regarding the specific scale and causes of waste, current operational workflows, urgency, willingness to pay, and specific solution features remain unquantified assumptions. The strategy focuses on leveraging regulatory compliance and sustainability trends while acknowledging significant unknowns in customer pain points and business model specifics.\",\n    \"value_proposition\": [\n      {\n        \"topic\": \"Core Value Proposition\",\n        \"recommendation\": \"Position the SaaS as a practical solution for Berlin restaurants to significantly reduce ingredient waste and associated operational costs through improved forecasting.\",\n        \"rationale\": \"The core problem identified is potential inefficiencies in ingredient management leading to waste. A forecasting SaaS directly addresses this by optimizing purchasing, which should lead to cost savings and waste reduction.\",\n        \"confidence\": \"medium\"\n      },\n      {\n        \"topic\": \"Regulatory Compliance & Sustainability\",\n        \"recommendation\": \"Emphasize the product's role in helping restaurants meet mandatory EU/German food waste reduction targets and enhance their brand image as sustainable and ethically conscious establishments.\",\n        \"rationale\": \"Research indicates strong regulatory pressure for food waste reduction and a growing trend towards sustainability and ethical dining in Berlin, making compliance and brand image key drivers.\",\n        \"confidence\": \"medium\"\n      },\n      {\n        \"topic\": \"Operational Efficiency & Simplicity\",\n        \"recommendation\": \"Highlight the ease of use and integration of a 'conventional forecasting product' to streamline ingredient purchasing workflows and improve overall kitchen efficiency without requiring complex AI expertise.\",\n        \"rationale\": \"The user brief specifies a preference for a 'traditional forecasting product,' implying a focus on practical, accessible solutions that improve existing workflows rather than introducing overly complex new technologies. This addresses potential barriers for smaller restaurants.\",\n        \"confidence\": \"medium\"\n      }\n    ],\n    \"business_model_logic\": [\n      {\n        \"topic\": \"Revenue Model\",\n        \"recommendation\": \"Implement a recurring SaaS subscription model, potentially tiered based on factors such as restaurant size (e.g., number of locations, covers), usage volume, or feature sets.\",\n        \"rationale\": \"The user brief explicitly states a 'SaaS' business model. Tiered subscriptions are a common and flexible approach for B2B software, allowing for scalability and catering to diverse customer needs and budgets.\",\n        \"confidence\": \"medium\"\n      },\n      {\n        \"topic\": \"Value-Based Pricing\",\n        \"recommendation\": \"Develop a pricing strategy that clearly links the subscription cost to the demonstrable savings achieved through waste reduction, making the ROI evident to potential customers.\",\n        \"rationale\": \"Given the potential cost and investment barriers for smaller independent restaurants, a strong value proposition tied to tangible cost savings will be crucial for adoption and justifying the recurring fee.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"topic\": \"Sales & Onboarding Model\",\n        \"recommendation\": \"Initially focus on a direct sales approach with a strong emphasis on product demonstrations and a streamlined onboarding process to minimize upfront training costs and accelerate time-to-value for Berlin restaurants.\",\n        \"rationale\": \"Direct sales allow for personalized engagement to address specific restaurant needs and build trust. Minimizing onboarding friction is vital, especially for smaller businesses with limited resources for new software implementation.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"gtm_strategy\": [\n      {\n        \"topic\": \"Target Customer Segmentation\",\n        \"recommendation\": \"Prioritize early adoption by Berlin restaurants that are already sustainability-conscious, larger establishments with more complex inventory needs, or those actively seeking to comply with food waste regulations.\",\n        \"rationale\": \"These segments are more likely to perceive the urgency of the problem, have allocated budgets for operational improvements, and align with the identified market trends in Berlin (sustainability, digital adoption, regulatory pressure).\",\n        \"confidence\": \"medium\"\n      },\n      {\n        \"topic\": \"Pilot Programs & Case Studies\",\n        \"recommendation\": \"Launch pilot programs with a select group of Berlin restaurants to gather concrete data on waste reduction, cost savings, and operational improvements, which can then be leveraged as compelling case studies.\",\n        \"rationale\": \"Tangible evidence of ROI and successful implementation will be critical for building credibility, overcoming skepticism, and driving broader market adoption in a new, localized market.\",\n        \"confidence\": \"high\"\n      },\n      {\n        \"topic\": \"Localized Marketing & Partnerships\",\n        \"recommendation\": \"Develop marketing campaigns tailored to the Berlin restaurant scene, highlighting local sustainability initiatives and potentially partnering with local restaurant associations, food suppliers, or culinary schools.\",\n        \"rationale\": \"A localized approach will resonate better with target customers. Partnerships can provide trusted channels for market entry and validation within the Berlin foodservice community.\",\n        \"confidence\": \"medium\"\n      },\n      {\n        \"topic\": \"Educational Content & Workshops\",\n        \"recommendation\": \"Offer educational content, webinars, or workshops on food waste reduction best practices and the benefits of forecasting, positioning the company as a thought leader in the Berlin market.\",\n        \"rationale\": \"This strategy helps to educate potential customers on the problem and solution, builds brand awareness, and establishes expertise, which can be particularly effective in a market where urgency and current workflows are unknown.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"moat_hypotheses\": [\n      {\n        \"topic\": \"Data Network Effect (Local)\",\n        \"recommendation\": \"Hypothesize that as more Berlin restaurants adopt the SaaS, the aggregated and anonymized local data will improve the accuracy and relevance of forecasting for all users within Berlin, creating a proprietary data advantage.\",\n        \"rationale\": \"A larger dataset specific to Berlin's unique culinary landscape, seasonal demands, and supply chain dynamics could lead to superior forecasting models compared to generic solutions, making the product more valuable over time.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"topic\": \"High Switching Costs through Integration\",\n        \"recommendation\": \"Hypothesize that deep, seamless integration with common restaurant Point-of-Sale (POS), inventory management, and supplier ordering systems in Berlin will create significant switching costs for customers.\",\n        \"rationale\": \"Once the forecasting SaaS becomes an integral part of a restaurant's daily operational workflow, the effort and disruption involved in migrating to a competitor's solution would be substantial, thus retaining customers.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"topic\": \"Local Market Specialization & Support\",\n        \"recommendation\": \"Hypothesize that a strong focus on the specific needs, regulations, and cultural nuances of the Berlin restaurant market, coupled with localized customer support, will build strong customer loyalty and deter generic competitors.\",\n        \"rationale\": \"Specializing in a specific geography allows for tailored features, compliance with local regulations, and personalized support that larger, more generalized competitors may struggle to replicate effectively.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"unsupported_market_data\": [\n      {\n        \"claim\": \"The specific scale and causes of ingredient waste in Berlin restaurants.\",\n        \"why_unsupported\": \"The user brief explicitly states that the scale and causes of waste have not been supplied. While national food waste figures are available from unverified sources, specific data for Berlin restaurants and the underlying causes (e.g., over-ordering, poor storage, menu changes) are not provided.\",\n        \"needed_evidence\": [\n          \"Specific food waste statistics for Berlin restaurants\",\n          \"Common causes of ingredient waste in Berlin's foodservice sector\"\n        ]\n      },\n      {\n        \"claim\": \"The urgency and willingness of Berlin restaurants to pay for a forecasting SaaS.\",\n        \"why_unsupported\": \"The user brief explicitly states that urgency and willingness to pay have not been supplied. While regulatory pressure and sustainability trends from unverified sources suggest a need, the financial readiness and perceived urgency for a SaaS solution are not evidenced.\",\n        \"needed_evidence\": [\n          \"Market research on Berlin restaurant budget allocation for software\",\n          \"Surveys on perceived urgency of waste reduction solutions among Berlin restaurateurs\"\n        ]\n      },\n      {\n        \"claim\": \"Specific data inputs, forecast horizon, integration requirements, operating workflow, and differentiation of the proposed SaaS.\",\n        \"why_unsupported\": \"The user brief states these aspects of the solution have not been supplied and must be researched or labeled as assumptions. No external evidence was provided to define these specifics for the proposed SaaS.\",\n        \"needed_evidence\": [\n          \"Industry standards for restaurant forecasting SaaS features\",\n          \"Common integration points for restaurant software (POS, inventory systems)\",\n          \"User requirements for forecast horizon and workflow\"\n        ]\n      },\n      {\n        \"claim\": \"Pricing, contract term, sales model, implementation fees, customer counts, costs, and margins for the SaaS.\",\n        \"why_unsupported\": \"The user brief explicitly states these business model details were not supplied and must be researched or treated as explicit assumptions. No external evidence was provided to define these financial and operational specifics.\",\n        \"needed_evidence\": [\n          \"Pricing benchmarks for similar SaaS products in the German market\",\n          \"Typical SaaS contract terms and sales models for B2B software\",\n          \"Cost structures and margin expectations for software companies in the industry\"\n        ]\n      }\n    ],\n    \"needs_human_review\": [\n      \"Quantification of the specific financial impact of ingredient waste on Berlin restaurants.\",\n      \"Detailed understanding of existing ingredient purchasing and inventory management workflows in Berlin restaurants.\",\n      \"Identification of specific integration requirements for a conventional forecasting SaaS with common restaurant POS/inventory systems in Berlin.\",\n      \"Validation of the perceived urgency and budget allocation for waste reduction software among target customers.\",\n      \"Further research into local Berlin-specific competitors offering ingredient forecasting SaaS solutions.\",\n      \"Clarification on the exact definition of 'conventional forecasting product' to ensure alignment with market expectations and capabilities.\"\n    ]\n  },\n  \"supervisor_task\": {\n    \"task_id\": \"finance_task\",\n    \"agent_role\": \"finance\",\n    \"objective\": \"Build cautious revenue, cost, unit-economics, and break-even assumptions with explicit validation gaps.\",\n    \"input_requirements\": [\n      \"user_brief\",\n      \"research_analysis\",\n      \"strategy_analysis\"\n    ],\n    \"expected_output\": \"A schema-validated FinanceAssumptions packet.\",\n    \"depends_on\": [\n      \"research_task\",\n      \"strategy_task\"\n    ]\n  },\n  \"evidence_catalog\": [\n    {\n      \"source_id\": \"web-e9510330572845d9aac35ca7e729fe09\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-b9d07e319b454e6aa36adc6b3f555ecf\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-c15f234c15bb4010bf09d9100b32da3f\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-7aeb3565e45f4d948ec6e095f1058443\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-22f60defaa1340e18b4ba186cfb1ddc2\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-ba0fa3909a5b4b38a6d853546eb780b5\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-66852f06b98d414f888d58b53bb0406f\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-bd383d1955ca4cc2a847ae4a1e7810e6\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-4543c70cb25c44ea80fc1d72e472cca2\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-9facc20b6e0d46e190a34b223152035c\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    }\n  ]\n}\n```\n# Shared financial calculation contract\nFinancial numbers are assumptions, not forecasts. For quantitative company projections populate financial_model with explicitly justified monthly scenarios. Never invent evidence or user confirmation. Restricted customer funds are separate from operating cash and revenue. Use {{fin:scenario_id.metric}} references, not independently written amounts/rates/unit counts in financial, business-model, go-to-market, funding and KPI text. The program calculates these metrics: units, price, variable_cost, fixed_cost, operating_cash, restricted_funds, revenue, gross_profit, cash_flow, gross_margin_pct, break_even_units, runway_months. If a required metric is not modeled or inputs are unavailable explicitly say needs validation, do not invent a number. When financial_model is null, keep projections qualitative. If the legacy runway_months field exists, return null; it is calculated from the first financial_model scenario. Explain negative cash flow as a deficit, never make it positive. Keep currency and period consistent with the referenced scenario.\n\n# Evidence provenance\nThe user brief is a user-provided hypothesis, not external evidence. Analysis packets contain model inferences, not independently verified facts. Framework/template RAG supports methods only, not market sizes, local law or demand. Only eligible_external sources may support jurisdiction-dependent sourced_fact claims and their actual text must directly support the claim. Unknown dates, weak authority or unconfirmed jurisdiction require qualification, evidence_status=\"needs_validation\", empty claim.source_ids and low confidence. Never put an evidence status into claim_type. Do not claim first/only/no competitors without comprehensive evidence.\n\n# Locked Financial Plan (program-owned)\n{\n  \"mode\": \"qualitative\",\n  \"reason\": \"Critical financial inputs such as pricing, customer counts, operational costs, and margins for the SaaS product have not been supplied and are explicitly identified as unsupported claims requiring further research or explicit assumptions. Without these foundational quantitative inputs, a defensible financial model cannot be constructed, necessitating a qualitative approach.\",\n  \"financial_model\": null\n}\nThis locked plan overrides the general populate-financial_model and null-model guidance above. The effective model is the locked plan, not the narrative response field. \nReturn financial_model=null in the narrative response; the program attaches the locked model. Do not create, rename or change scenarios. No {{fin:...}} references or quantitative financial projections are permitted in qualitative mode. Unsupported metrics (including CAC, CLTV and funding allocation percentages) must remain qualitative. Use price and fixed_cost as calculation keys, not input field names price_per_unit or monthly_fixed_cost.\n\n\n# Schema List-Size Contract (generated automatically)\n\n- `cost_assumptions`: 1 to 6 items.\n- `*.needs_validation (3 fields)`: at most 5 items.\n- `financial_model.scenarios`: 1 to 4 items.\n- `needs_human_review`: at most 8 items.\n- `revenue_assumptions`: 1 to 6 items.\n- `unit_economics_assumptions`: 1 to 6 items.\n- `unsupported_financial_claims`: at most 8 items.\n- `unsupported_financial_claims[].needed_evidence`: 1 to 5 items.\n\nMerge duplicate or closely related entries to satisfy maximums. Do not silently truncate or remove essential dependencies.\n\n# Schema Enum Contract (generated automatically)\n\n- `*.confidence (3 fields)`: exactly one of \"high\", \"medium\", \"low\".\n\nThese lists are closed. Never invent a value that describes the surrounding section or field name; pick the closest listed member, or \"general\" when one is offered and nothing else fits.",
+  "config": {
+    "temperature": 0.2,
+    "max_output_tokens": 16384,
+    "response_mime_type": "application/json",
+    "response_schema": {
+      "properties": {
+        "financial_model": {
+          "anyOf": [
+            {
+              "properties": {
+                "scenarios": {
+                  "items": {
+                    "properties": {
+                      "scenario_id": {
+                        "type": "string"
+                      },
+                      "period_label": {
+                        "type": "string"
+                      },
+                      "currency": {
+                        "type": "string"
+                      },
+                      "unit_label": {
+                        "type": "string"
+                      },
+                      "monthly_units": {
+                        "type": "number"
+                      },
+                      "price_per_unit": {
+                        "type": "number"
+                      },
+                      "variable_cost_per_unit": {
+                        "type": "number"
+                      },
+                      "monthly_fixed_cost": {
+                        "type": "number"
+                      },
+                      "opening_operating_cash": {
+                        "type": "number"
+                      },
+                      "restricted_customer_funds": {
+                        "type": "number"
+                      },
+                      "assumption_basis": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "scenario_id",
+                      "period_label",
+                      "currency",
+                      "unit_label",
+                      "monthly_units",
+                      "price_per_unit",
+                      "variable_cost_per_unit",
+                      "monthly_fixed_cost",
+                      "opening_operating_cash",
+                      "restricted_customer_funds",
+                      "assumption_basis"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "scenarios"
+              ],
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "analysis_summary": {
+          "type": "string"
+        },
+        "revenue_assumptions": {
+          "items": {
+            "properties": {
+              "topic": {
+                "type": "string"
+              },
+              "assumption": {
+                "type": "string"
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "needs_validation": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "topic",
+              "assumption",
+              "rationale"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "cost_assumptions": {
+          "items": {
+            "properties": {
+              "topic": {
+                "type": "string"
+              },
+              "assumption": {
+                "type": "string"
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "needs_validation": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "topic",
+              "assumption",
+              "rationale"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "unit_economics_assumptions": {
+          "items": {
+            "properties": {
+              "topic": {
+                "type": "string"
+              },
+              "assumption": {
+                "type": "string"
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "needs_validation": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "topic",
+              "assumption",
+              "rationale"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "break_even_discussion": {
+          "type": "string"
+        },
+        "assumption_notice": {
+          "type": "string"
+        },
+        "unsupported_financial_claims": {
+          "items": {
+            "properties": {
+              "claim": {
+                "type": "string"
+              },
+              "why_unsupported": {
+                "type": "string"
+              },
+              "needed_evidence": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "claim",
+              "why_unsupported",
+              "needed_evidence"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "needs_human_review": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "analysis_summary",
+        "revenue_assumptions",
+        "cost_assumptions",
+        "unit_economics_assumptions",
+        "break_even_discussion",
+        "assumption_notice"
+      ],
+      "type": "object"
+    }
+  }
+}

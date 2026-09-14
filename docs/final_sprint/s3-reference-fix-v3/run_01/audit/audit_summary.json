@@ -1,0 +1,337 @@
+{
+  "observed_at_utc": "2026-09-07T08:57:36.945864+00:00",
+  "phases": {
+    "native_schema_probe": {
+      "status": "passed",
+      "observed_entries": 2,
+      "distinct_entries": 2,
+      "calls": [
+        {
+          "attempt_id": "a4f2831c-8262-4bfe-9648-df7bcd9be3bc",
+          "role": "schema_probe",
+          "purpose": "generate",
+          "status": "succeeded",
+          "elapsed_seconds": 6.812999999994645,
+          "prompt_tokens": 72,
+          "output_tokens": 33,
+          "total_tokens": 105,
+          "finish_reason": "stop",
+          "error_type": null
+        }
+      ]
+    },
+    "research_probe": {
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "market_trends[0]: claim content anchor not found",
+      "calls": [
+        {
+          "attempt_id": "0b306f11-c738-4bd9-8f0a-f509f57f773d",
+          "role": "research",
+          "purpose": "generate",
+          "status": "invalid_output",
+          "elapsed_seconds": 516.25,
+          "prompt_tokens": 5419,
+          "output_tokens": 3132,
+          "total_tokens": 8551,
+          "finish_reason": "stop",
+          "error_type": "StructuredOutputValidationError"
+        },
+        {
+          "attempt_id": "7560274f-2369-4c24-a63c-10f55a4501eb",
+          "role": "research",
+          "purpose": "structure_repair",
+          "status": "succeeded",
+          "elapsed_seconds": 372.5469999999623,
+          "prompt_tokens": 6188,
+          "output_tokens": 2536,
+          "total_tokens": 8724,
+          "finish_reason": "stop",
+          "error_type": null
+        }
+      ]
+    },
+    "full_d": {
+      "status": "not_started"
+    }
+  },
+  "latest_sample": {
+    "elapsed_seconds": 898.8129999999946,
+    "ram_available_bytes": 4081061888,
+    "pagefile_delta_bytes": 10485760,
+    "time": "2026-09-07T08:54:52.128098+00:00"
+  },
+  "final": {
+    "status": "failed",
+    "complete_proposal_produced": false,
+    "proposal_directory": null,
+    "budget": {
+      "this_run_request_count": 3,
+      "this_run_charged_total_tokens": 17380,
+      "this_run_elapsed_seconds": 902.875,
+      "cumulative_request_count": 11,
+      "cumulative_charged_total_tokens": 71252,
+      "cumulative_elapsed_seconds": 4487.671000000002
+    },
+    "resources": {
+      "status": "passed",
+      "reason": null,
+      "sample_count": 125,
+      "sample_interval_seconds": 5.0,
+      "baseline": {
+        "ram_total_bytes": 16969424896,
+        "ram_available_bytes": 6697066496,
+        "pagefile_used_bytes": 400556032,
+        "gpu_used_bytes": 0,
+        "gpu_total_bytes": 2147483648,
+        "loaded_models": [],
+        "missing": {}
+      },
+      "maximum_observed_sample_gap_seconds": 8.078000000008615,
+      "min_available_ram_bytes": 3714478080,
+      "peak_ram_used_bytes": 13254946816,
+      "peak_gpu_used_bytes": 0,
+      "peak_pagefile_used_bytes": 411041792,
+      "peak_pagefile_delta_bytes": 10485760,
+      "missing_observations": []
+    },
+    "deadline_fired": false,
+    "http_requests": 3,
+    "server_stop": {
+      "status": "owned_process_tree_terminated",
+      "pid": 544,
+      "lease_released": false,
+      "restart_requires_explicit_reconciliation": true
+    }
+  },
+  "server_tail": [
+    "slot      release: id  0 | task 3174 | stop processing: n_tokens = 8723, truncated = 0",
+    "srv  update_slots: all slots are idle"
+  ],
+  "attempts": [
+    {
+      "phase": "native_schema_probe",
+      "attempt_id": "a4f2831c-8262-4bfe-9648-df7bcd9be3bc",
+      "role": "schema_probe",
+      "purpose": "generate",
+      "status": "succeeded",
+      "elapsed_seconds": 6.812999999994645,
+      "prompt_tokens": 72,
+      "output_tokens": 33,
+      "total_tokens": 105,
+      "finish_reason": "stop",
+      "error_type": null,
+      "raw_file": "01_schema_probe_generate.raw.txt",
+      "raw_sha256": "7e40dc4d73898a009859cbeb0f0a7807b56e2a0eab68963cd741ec71185aa595",
+      "detected_reference_score_issues": [],
+      "detected_grounding_issues": [],
+      "usage_file": "01_schema_probe_generate.usage.json",
+      "usage_sha256": "609901217a48ef4e3079820033ceeba28b8c2658495aedc1174ad0d5280c6f7a"
+    },
+    {
+      "phase": "research_probe",
+      "attempt_id": "0b306f11-c738-4bd9-8f0a-f509f57f773d",
+      "role": "research",
+      "purpose": "generate",
+      "status": "invalid_output",
+      "elapsed_seconds": 516.25,
+      "prompt_tokens": 5419,
+      "output_tokens": 3132,
+      "total_tokens": 8551,
+      "finish_reason": "stop",
+      "error_type": "StructuredOutputValidationError",
+      "raw_file": "02_research_generate.raw.txt",
+      "raw_sha256": "e49b091de73e3653cfbdf322da2e61b497eac0b3101106af3ee221fde862f0ab",
+      "detected_reference_score_issues": [
+        {
+          "path": "$.market_trends[0].claims[0].financial_value_ids",
+          "problem": "invalid or repeated financial references",
+          "repeated": [
+            [
+              "high.annual_cash_change",
+              2
+            ],
+            [
+              "low.annual_cash_change",
+              2
+            ]
+          ],
+          "unknown": [],
+          "observed_items": 16,
+          "maximum_items": 31,
+          "excerpt": [
+            "base.monthly_revenue",
+            "base.monthly_operating_result",
+            "base.ending_cash",
+            "base.annual_cash_change"
+          ]
+        }
+      ],
+      "detected_grounding_issues": [
+        {
+          "path": "$.market_trends[0].claims[0].verbatim_parent_text",
+          "problem": "parent text not copied verbatim from parent prose",
+          "observed": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "The exact market size for adult learners in the US is unknown; only historical graduate completions are available."
+        },
+        {
+          "path": "$.market_trends[1].claims[0].verbatim_parent_text",
+          "problem": "parent text not copied verbatim from parent prose",
+          "observed": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "Willingness to pay for AI‑specific MBA tutoring is not quantified; competitor pricing is limited to a generic $4/month p"
+        },
+        {
+          "path": "$.market_trends[2].claims[0].verbatim_parent_text",
+          "problem": "parent text not copied verbatim from parent prose",
+          "observed": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "Khanmigo is the only competitor identified; its offering is adjacent (general tutoring) and not an MBA case‑coaching sub"
+        },
+        {
+          "path": "$.customer_notes[0].claims[0].verbatim_parent_text",
+          "problem": "parent text not copied verbatim from parent prose",
+          "observed": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "Pilot targets US adults aged 18+ enrolled/applying to MBA programs; school data access is restricted by privacy laws."
+        },
+        {
+          "path": "$.competitor_assumptions[0].claims[0].verbatim_parent_text",
+          "problem": "parent text not copied verbatim from parent prose",
+          "observed": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "Only Khanmigo is explicitly identified as a competitor; other potential AI tutoring platforms are not listed."
+        }
+      ],
+      "usage_file": "02_research_generate.usage.json",
+      "usage_sha256": "45ddccbd52fc5a4d97f7d671183ac8779f20a2ef4535d560282d0523d6cb1a0b"
+    },
+    {
+      "phase": "research_probe",
+      "attempt_id": "7560274f-2369-4c24-a63c-10f55a4501eb",
+      "role": "research",
+      "purpose": "structure_repair",
+      "status": "succeeded",
+      "elapsed_seconds": 372.5469999999623,
+      "prompt_tokens": 6188,
+      "output_tokens": 2536,
+      "total_tokens": 8724,
+      "finish_reason": "stop",
+      "error_type": null,
+      "raw_file": "03_research_structure_repair.raw.txt",
+      "raw_sha256": "c785fb395ade8ebec96fc53899a0e47d9d425cb3541c2deceb842ad0c505130e",
+      "detected_reference_score_issues": [],
+      "detected_grounding_issues": [
+        {
+          "path": "$.market_trends[0].claims[0].verbatim_parent_text",
+          "problem": "parent text not copied verbatim from parent prose",
+          "observed": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "Historical graduate degree completions provide limited insight into demand for a specialized AI tutoring service. The US"
+        },
+        {
+          "path": "$.market_trends[0].claims[1].verbatim_parent_text",
+          "problem": "parent text not copied verbatim from parent prose",
+          "observed": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "Historical graduate degree completions provide limited insight into demand for a specialized AI tutoring service. The US"
+        },
+        {
+          "path": "$.market_trends[0].claims[0].source_anchors[0].quote",
+          "problem": "quote not found verbatim at supplied frozen lines",
+          "observed": "Last Updated: May 2024\n|\nSuggested citation\nDownload PDF\nDownload PDF\nBetween 2011–12 and 2021–22, the total number of m",
+          "frozen_excerpt": "Last Updated: May 2024"
+        },
+        {
+          "path": "$.market_trends[0].claims[1].source_anchors[0].quote",
+          "problem": "quote not found verbatim at supplied frozen lines",
+          "observed": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world‑class conte",
+          "frozen_excerpt": "For you"
+        },
+        {
+          "path": "$.customer_notes[0].claims[0].verbatim_parent_text",
+          "problem": "parent text not copied verbatim from parent prose",
+          "observed": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "The pilot focuses on US adults aged 18+ enrolled/applying to MBA programs, constrained by privacy laws (FERPA) that rest"
+        },
+        {
+          "path": "$.customer_notes[0].claims[0].source_anchors[0].quote",
+          "problem": "quote not found verbatim at supplied frozen lines",
+          "observed": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world‑class conte",
+          "frozen_excerpt": "For you"
+        },
+        {
+          "path": "$.competitor_assumptions[0].claims[0].verbatim_parent_text",
+          "problem": "parent text not copied verbatim from parent prose",
+          "observed": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "Only Khanmigo is explicitly identified as a competitor offering general tutoring with adjacent features. No competitor i"
+        },
+        {
+          "path": "$.competitor_assumptions[0].claims[0].source_anchors[0].quote",
+          "problem": "quote not found verbatim at supplied frozen lines",
+          "observed": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world‑class conte",
+          "frozen_excerpt": "For you"
+        }
+      ],
+      "usage_file": "03_research_structure_repair.usage.json",
+      "usage_sha256": "e5f4bdb8200c5856630fe7b9f025331ca50fd76800b874e5737256f9405ccd28"
+    }
+  ],
+  "preservation": {
+    "installed_file_count": 254,
+    "installed_mismatches": [],
+    "backup_mismatches": [],
+    "runtime_file_count": 254,
+    "runtime_mismatches": [],
+    "prior_trial_evidence_unchanged": true,
+    "archive_sha256": "158b6aa920eb7803e26ff1c5c789f1fd726dd6d8ee703757995d40426d709571"
+  }
+}

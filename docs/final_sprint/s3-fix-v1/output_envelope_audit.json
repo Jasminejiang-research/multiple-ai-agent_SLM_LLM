@@ -1,0 +1,103 @@
+{
+  "kind": "offline_contract_sizing_not_model_output",
+  "max_output_tokens": 1024,
+  "qualification": false,
+  "cases": {
+    "ai_education": {
+      "required_financial_rows": 21,
+      "financial_ledger_only": {
+        "chars": 7622,
+        "tokens": 1919
+      },
+      "synthetic_references": {
+        "research": {
+          "chars": 4550,
+          "tokens": 1107
+        },
+        "strategy": {
+          "chars": 6055,
+          "tokens": 1472
+        },
+        "finance": {
+          "chars": 12583,
+          "tokens": 3104
+        },
+        "writer": {
+          "chars": 26725,
+          "tokens": 6694
+        }
+      },
+      "writer_batches": [
+        {
+          "batch": 1,
+          "chars": 5902,
+          "tokens": 1474
+        },
+        {
+          "batch": 2,
+          "chars": 4382,
+          "tokens": 1094
+        },
+        {
+          "batch": 3,
+          "chars": 12048,
+          "tokens": 3023
+        },
+        {
+          "batch": 4,
+          "chars": 4396,
+          "tokens": 1105
+        }
+      ]
+    },
+    "intelligent_ring": {
+      "required_financial_rows": 27,
+      "financial_ledger_only": {
+        "chars": 10703,
+        "tokens": 2552
+      },
+      "synthetic_references": {
+        "research": {
+          "chars": 5375,
+          "tokens": 1227
+        },
+        "strategy": {
+          "chars": 7155,
+          "tokens": 1632
+        },
+        "finance": {
+          "chars": 16489,
+          "tokens": 3857
+        },
+        "writer": {
+          "chars": 33407,
+          "tokens": 7821
+        }
+      },
+      "writer_batches": [
+        {
+          "batch": 1,
+          "chars": 7010,
+          "tokens": 1626
+        },
+        {
+          "batch": 2,
+          "chars": 5213,
+          "tokens": 1208
+        },
+        {
+          "batch": 3,
+          "chars": 15960,
+          "tokens": 3770
+        },
+        {
+          "batch": 4,
+          "chars": 5227,
+          "tokens": 1219
+        }
+      ]
+    }
+  },
+  "formal_runs_started": 0,
+  "interpretation": "The financial ledger is contract-validated. Full synthetic fixtures are illustrative size examples, not accepted business artifacts. Token counts use compact canonical JSON, not a proof of the absolute minimum across every possible serialization. No generation or scope/config changes."
+}

@@ -1,0 +1,102 @@
+{
+  "version": "s5-llm-only-thinking-budget-authorization-v5",
+  "approved_at": "2026-09-07",
+  "approved": true,
+  "execution_branch": "llm_only_after_D_no_go",
+  "objective": "Within unchanged token and actual-spend ceilings, make Gemini produce a strictly accepted, evidence-bounded, academically defensible business plan.",
+  "authorization_delta": "The user explicitly authorized file changes for prompt, schema, or generation strategy without increasing token or actual-spend limits, and explicitly authorized sending the frozen AI education brief, evidence excerpts and short IDs, and 21 financial inputs and results to Google Gemini API for A/B/C smoke. The v4 explicit prompt contract was semantically effective, but Gemini dynamic thinking consumed 6397 tokens and left only 1767 candidate tokens before MAX_TOKENS. This fresh attempt freezes a 1024-token thinking budget inside the unchanged 8192 max_output_tokens limit.",
+  "external_data_authorization": {
+    "approved": true,
+    "destination": "Google Gemini API",
+    "purpose": "AI education A/B/C nonformal smoke",
+    "payload": [
+      "frozen AI education brief",
+      "frozen evidence excerpts and short IDs",
+      "21 case-specific financial inputs and deterministic results"
+    ],
+    "sensitivity_acknowledged": "may contain internal business and financial information"
+  },
+  "prompt_change": {
+    "approved": true,
+    "prompt_version": "compact-generation-v3-s5-explicit-contract",
+    "changed_from_v4": false,
+    "schema_changed": false,
+    "wire_changed": false,
+    "evaluation_rules_changed": false,
+    "generation_graph_changed": false
+  },
+  "generation_strategy_change": {
+    "approved": true,
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "thinking_budget": 1024,
+    "include_thoughts": false,
+    "basis": "Google Gemini 2.5 Flash documented minimal/low thinking budget; allocation is inside the unchanged response cap",
+    "max_output_tokens_unchanged": 8192
+  },
+  "academic_defensibility": {
+    "strict_local_validation_retained": true,
+    "frozen_evidence_ids_only": true,
+    "unsupported_or_assumption_label_required_without_support": true,
+    "deterministic_case_specific_finance_retained": true,
+    "critic_scoring_retained": true,
+    "force_accept_invalid_output": false
+  },
+  "output_change": {
+    "max_output_tokens_per_physical_response": 8192,
+    "increased_from_v2_v3_or_v4": false,
+    "applies_to_provider": "gemini",
+    "applies_to_conditions": ["A", "B", "C"]
+  },
+  "preserve_previous_failed_smoke": true,
+  "previous_failed_smokes": [
+    {"path": "docs/final_sprint/s5-llm-only-v1/smoke_summary.json", "sha256": "15d891309b7ae1f0e842da08f36a0c4a442bb948d3921ca38e64729ccc3d861c", "requests": 2, "total_tokens": 9410, "cost_usd": 0.0106792},
+    {"path": "docs/final_sprint/s5-llm-only-v2/smoke_summary.json", "sha256": "3c5ca075127fed22d37b7d9ac6f9ab7dd5a2d79af1fe90685f361505fa04bb53", "requests": 2, "total_tokens": 22192, "cost_usd": 0.0426342},
+    {"path": "docs/final_sprint/s5-llm-only-v3/smoke_summary.json", "sha256": "0abdd4fc2b1d75a33bb35409da3b734e3a1ee9c378751f5ae00b78f82ef32bf4", "requests": 1, "total_tokens": 6818, "cost_usd": 0.0105352},
+    {"path": "docs/final_sprint/s5-llm-only-v4/smoke_summary.json", "sha256": "17050f2800535b43153ed0dca4045afa94dc506dd69e098a39b2d4162fc57619", "requests": 1, "total_tokens": 11358, "cost_usd": 0.0213682}
+  ],
+  "prior_nonformal_spend": {
+    "requests": 6,
+    "total_tokens": 49778,
+    "cost_usd": 0.0852168,
+    "included_in_smoke_and_combined_ceiling_enforcement": true
+  },
+  "preserve_planned_rows": 8,
+  "formal_conditions": ["A", "B", "C"],
+  "formal_run_count": 6,
+  "D_planned_rows": ["ai_education-D", "intelligent_ring-D"],
+  "D_row_state": "not_run_preflight_no_go",
+  "formal_Granite_calls": 0,
+  "best_effort_demo": {"formal_eligible": false, "c_minus_d_comparison_eligible": false},
+  "confirmed_cases": {
+    "ai_education": {"case_specific_financial_values": 21},
+    "intelligent_ring": {"case_specific_financial_values": 27}
+  },
+  "comparison_policy": {
+    "reported": ["B-A", "C-B"],
+    "unavailable": {"C-D": "D_preflight_no_go"},
+    "success_subset_substitution": false
+  },
+  "smoke": {
+    "case_id": "ai_education",
+    "conditions": ["A", "B", "C"],
+    "formal_eligible": false,
+    "cumulative_max_requests_including_v1_through_v4": 54,
+    "cumulative_max_total_tokens_including_v1_through_v4": 480000,
+    "cumulative_max_cost_usd_including_v1_through_v4": 1.2,
+    "paid_tools": false,
+    "rerun_policy": "fresh_v5_only; never overwrite v1/v2/v3/v4"
+  },
+  "formal": {
+    "randomization_seed": 20260906,
+    "preserve_original_row_order": true,
+    "per_run": {"max_requests": 18, "max_total_tokens": 160000, "max_seconds": 3600},
+    "aggregate": {"max_requests": 108, "max_total_tokens": 960000, "max_cost_usd": 2.4},
+    "rerun_failed_or_unknown": false,
+    "overwrite_results": false
+  },
+  "combined_smoke_and_formal_max_tokens": 1440000,
+  "combined_smoke_and_formal_max_cost_usd": 3.6,
+  "post_run_outputs": ["automatic metrics", "anonymous rating packet", "unjudged shared Gold Ledger candidates"],
+  "user_approval": "明确确认并授权将冻结的 AI education brief、证据摘录/短ID及21项财务输入与结果发送至 Google Gemini API，用于执行 A/B/C smoke；这些内容可能包含内部商业与财务信息。此前已确认授权修改文件，以在 token 与实际花费预算不变的情况下确保 Gemini 输出可接受、学术可辩护的商业计划书。"
+}

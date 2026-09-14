@@ -1,0 +1,16 @@
+{
+  "scope": "ai_education_slm_nonformal_4h",
+  "approved": false,
+  "approved_limits": {
+    "run_seconds": 14400,
+    "node_seconds": 14400,
+    "request_seconds": 14400,
+    "max_output_tokens": 8192,
+    "max_requests": 36,
+    "max_total_tokens": 500000,
+    "max_prompt_chars": 90000
+  },
+  "time_limit_14400_explicitly_approved": true,
+  "remaining_decision": "output/request/token/node limits await user reply",
+  "user_time_instruction": "用户批准AI教育SLM生成计划书的时间上限为4小时"
+}

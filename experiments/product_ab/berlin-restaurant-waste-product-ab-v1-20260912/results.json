@@ -1,0 +1,172 @@
+{
+  "arms": {
+    "A": {
+      "status": "accepted_with_issues",
+      "output_path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\berlin-restaurant-waste-product-ab-v1-20260912\\A\\proposal.md",
+      "audit_path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\berlin-restaurant-waste-product-ab-v1-20260912\\A\\audit_report.md",
+      "product_acceptance": {
+        "policy": "product-per-agent-one-correction-v1",
+        "corrections_allowed_per_agent": 1,
+        "corrections": {
+          "A": 1
+        },
+        "correction_events": [
+          {
+            "stage": "A",
+            "reason": "Invalid BusinessProposal output: financial_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+          }
+        ],
+        "unresolved_issues": [
+          {
+            "stage": "A",
+            "message": "Invalid BusinessProposal output: financial_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+          },
+          {
+            "stage": "A",
+            "message": "financial_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+          },
+          {
+            "stage": "A_export",
+            "message": "financial_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+          }
+        ],
+        "status": "accepted_with_issues"
+      },
+      "seconds": 54.92200000002049,
+      "accounting_before": {
+        "llm_requests": 0,
+        "total_tokens": 0,
+        "llm_cost_usd": 0.0,
+        "unresolved_reservation_usd": 0.0,
+        "usage_incomplete": false,
+        "web_requests": 0,
+        "web_payg_upper_usd": 0.0,
+        "token_count_requests": 0,
+        "arm_requests": 0,
+        "arm_tokens": 0
+      },
+      "accounting_after": {
+        "llm_requests": 3,
+        "total_tokens": 24150,
+        "llm_cost_usd": 0.033629599999999996,
+        "unresolved_reservation_usd": 0.0,
+        "usage_incomplete": false,
+        "web_requests": 0,
+        "web_payg_upper_usd": 0.0,
+        "token_count_requests": 0,
+        "arm_requests": 3,
+        "arm_tokens": 24150
+      },
+      "needs_citation_review": null
+    },
+    "B": {
+      "status": "accepted_with_issues",
+      "output_path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\berlin-restaurant-waste-product-ab-v1-20260912\\B\\2026-09-12_berlin_restaurant_ingredient_waste_forecasting_saas_product_ab_berlin_restaurant_waste_product_ab_v1_20260912_b.md",
+      "audit_path": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\docs\\comparisons\\berlin-restaurant-waste-product-ab-v1-20260912\\B\\2026-09-12_berlin_restaurant_ingredient_waste_forecasting_saas_product_ab_berlin_restaurant_waste_product_ab_v1_20260912_b_audit.md",
+      "product_acceptance": {
+        "policy": "product-per-agent-one-correction-v1",
+        "corrections_allowed_per_agent": 1,
+        "corrections": {
+          "research": 1,
+          "revision": 1
+        },
+        "correction_events": [
+          {
+            "stage": "research",
+            "reason": "Invalid ResearchAnalysis output: market_trends[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[1]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[2]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[3]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[1]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncompetitor_assumptions[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncompetitor_assumptions[1]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead"
+          },
+          {
+            "stage": "revision",
+            "reason": "Invalid RevisedProposalBatch1 output: ['executive_summary', 'market_opportunity', 'problem', 'target_customer']: ['executive_summary', 'problem', 'target_customer', 'market_opportunity']: executive_summary: web-ba0fa3909a5b4b38a6d853546eb780b5 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nproblem: web-ba0fa3909a5b4b38a6d853546eb780b5 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\ntarget_customer: web-c15f234c15bb4010bf09d9100b32da3f is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nmarket_opportunity: web-ba0fa3909a5b4b38a6d853546eb780b5 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+          }
+        ],
+        "unresolved_issues": [
+          {
+            "stage": "revision",
+            "message": "Invalid LocalRepair_RevisedProposalBatch1 output: ['executive_summary', 'market_opportunity', 'problem', 'target_customer']: ['executive_summary', 'problem', 'target_customer', 'market_opportunity']: executive_summary: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nproblem: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\ntarget_customer: web-c15f234c15bb4010bf09d9100b32da3f is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nmarket_opportunity: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+          },
+          {
+            "stage": "revision",
+            "message": "['executive_summary', 'market_opportunity', 'problem', 'target_customer']: ['executive_summary', 'problem', 'target_customer', 'market_opportunity']: executive_summary: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nproblem: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\ntarget_customer: web-c15f234c15bb4010bf09d9100b32da3f is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nmarket_opportunity: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+          },
+          {
+            "stage": "revision",
+            "message": "Quantification of the specific scale and causes of ingredient waste in Berlin restaurants, and their urgency/willingness to pay for a SaaS solution, remains unquantified."
+          },
+          {
+            "stage": "revision",
+            "message": "Specific product features, data inputs, integration requirements, operating workflow, and unique differentiators for the SaaS solution are still undefined assumptions."
+          },
+          {
+            "stage": "revision",
+            "message": "A comprehensive quantitative financial model, including specific figures for pricing, costs, customer acquisition, projected revenue, unit economics, and break-even analysis, is still needed."
+          },
+          {
+            "stage": "revision",
+            "message": "The claim that Germany generates approximately 10.8 million tonnes of food waste annually as of 2022 is unsupported by the provided evidence."
+          },
+          {
+            "stage": "revision",
+            "message": "The claim that operators are encouraged to invest in demand forecasting to meet waste reduction targets is unsupported by the provided evidence."
+          },
+          {
+            "stage": "revision",
+            "message": "The claim that smaller independent outlets may lack the scale to absorb upfront capital and training costs incurred by investing in waste reduction strategies is unsupported by the provided evidence."
+          },
+          {
+            "stage": "revision",
+            "message": "The claim that Germany recorded 433 million overnight stays between January and October 2024 is unsupported by the provided evidence."
+          },
+          {
+            "stage": "revision",
+            "message": "Several critical sources (e.g., Mordor Intelligence, MarketDataForecast) are of 'unknown' quality, impacting the overall credibility of some claims."
+          },
+          {
+            "stage": "export",
+            "message": "['executive_summary', 'problem', 'target_customer', 'market_opportunity']: executive_summary: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nproblem: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\ntarget_customer: web-c15f234c15bb4010bf09d9100b32da3f is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\nmarket_opportunity: web-4543c70cb25c44ea80fc1d72e472cca2 is unverified, not verified local evidence for regulatory; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+          }
+        ],
+        "status": "accepted_with_issues"
+      },
+      "seconds": 433.64100000000326,
+      "accounting_before": {
+        "llm_requests": 3,
+        "total_tokens": 24150,
+        "llm_cost_usd": 0.033629599999999996,
+        "unresolved_reservation_usd": 0.0,
+        "usage_incomplete": false,
+        "web_requests": 0,
+        "web_payg_upper_usd": 0.0,
+        "token_count_requests": 0,
+        "arm_requests": 0,
+        "arm_tokens": 0
+      },
+      "accounting_after": {
+        "llm_requests": 19,
+        "total_tokens": 365098,
+        "llm_cost_usd": 0.3568974,
+        "unresolved_reservation_usd": 0.0,
+        "usage_incomplete": false,
+        "web_requests": 2,
+        "web_payg_upper_usd": 0.016,
+        "token_count_requests": 2,
+        "arm_requests": 16,
+        "arm_tokens": 340948
+      },
+      "needs_citation_review": null
+    }
+  },
+  "accounting": {
+    "llm_requests": 19,
+    "total_tokens": 365098,
+    "llm_cost_usd": 0.3568974,
+    "unresolved_reservation_usd": 0.0,
+    "usage_incomplete": false,
+    "web_requests": 2,
+    "web_payg_upper_usd": 0.016,
+    "token_count_requests": 2,
+    "arm_requests": 16,
+    "arm_tokens": 340948
+  },
+  "completed_at": "2026-09-12T12:15:35.331649+00:00"
+}

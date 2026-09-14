@@ -1,0 +1,76 @@
+{
+  "version": "s6-process-lease-reconciliation-v1",
+  "reconciled_at": "2026-09-07T21:00:22.0314502+02:00",
+  "decision": {
+    "pid_17860": "not_project_legacy_do_not_stop",
+    "pid_18776": "not_project_legacy_do_not_stop",
+    "lease": "archived_as_orphaned_inflight_or_unknown",
+    "usage": "retained_unknown_no_refund"
+  },
+  "legacy_project_process": {
+    "pid": 24092,
+    "created_utc": "2026-09-07T14:26:02.3386430Z",
+    "command_line": "\"C:\\Users\\JasmineJiang\\AppData\\Local\\Programs\\Ollama\\ollama.exe\" serve",
+    "endpoint": "http://127.0.0.1:11434",
+    "present_at_reconciliation": false,
+    "run_id": "3258e23b-3f38-4270-8562-21a092563e42",
+    "attempt_id": "e27cb739-26b5-45e4-985b-b583abd3c383",
+    "prior_stop_status": "termination_unconfirmed",
+    "prior_lease_released": false
+  },
+  "observed_current_processes": [
+    {
+      "pid": 17860,
+      "parent_pid": 15200,
+      "created_local": "2026-09-07T19:59:32.406225+02:00",
+      "image": "C:\\Users\\JasmineJiang\\AppData\\Local\\Programs\\Ollama\\ollama app.exe",
+      "command_line": "\"C:\\Users\\JasmineJiang\\AppData\\Local\\Programs\\Ollama\\ollama app.exe\"",
+      "listener": "127.0.0.1:56498",
+      "classification": "Ollama Desktop parent; creation and identity do not match the project-owned legacy process",
+      "action": "left_running"
+    },
+    {
+      "pid": 18776,
+      "parent_pid": 17860,
+      "created_local": "2026-09-07T19:59:35.369242+02:00",
+      "image": "C:\\Users\\JasmineJiang\\AppData\\Local\\Programs\\Ollama\\ollama.exe",
+      "command_line": "C:\\Users\\JasmineJiang\\AppData\\Local\\Programs\\Ollama\\ollama.exe serve",
+      "listener": "127.0.0.1:11434",
+      "classification": "Ollama Desktop child; creation and parent chain do not match the project-owned legacy process",
+      "action": "left_running"
+    }
+  ],
+  "lease_archive": {
+    "original_path": "data/granite_endpoint_leases/2fb24565ac96fa6667ae7aac126b1d1c01bd9ec999315b419e6010a19e5d9461.lease.json",
+    "archive_path": "data/granite_endpoint_leases/archive/2026-09-07/s3-research-15m-v2_3258e23b_2fb24565_inflight_or_unknown.lease.json",
+    "archived_at": "2026-09-07T20:59:44.6098147+02:00",
+    "bytes": 137,
+    "sha256_before": "c185cb7770cf89f12a168ed27c9d09c6000c9cb38df43198de8cac93bd6f475a",
+    "sha256_after": "c185cb7770cf89f12a168ed27c9d09c6000c9cb38df43198de8cac93bd6f475a",
+    "active_path_absent_after": true,
+    "archive_present_after": true,
+    "status_retained": "inflight_or_unknown",
+    "refund_applied": false,
+    "deleted": false
+  },
+  "evidence": {
+    "server_owner": {
+      "path": "docs/final_sprint/s3-research-15m-v2/run_01/server/server_owner.json",
+      "sha256": "0bfe0af3138ff6dba9bc0928ff0a81e59d2f5e05f27c88a1a8c6192e2f222801"
+    },
+    "native_identity": {
+      "path": "docs/final_sprint/s3-research-15m-v2/run_01/server/server_owner.json.native_identity.json",
+      "sha256": "03a86a44d66cd2296522a69a976c937b1f3473eabd3e2cca1b329697210c9546"
+    },
+    "events": {
+      "path": "docs/final_sprint/s3-research-15m-v2/run_01/probe/events.jsonl",
+      "sha256": "1e5203835249e7ec13ad2d62d4cdf5b5a46b0228fd086d76b5ea95ca2121d99f",
+      "ownership_lines": [1, 2],
+      "stop_lines": [108, 110]
+    },
+    "result": {
+      "path": "docs/final_sprint/s3-research-15m-v2/run_01/probe/result.json",
+      "sha256": "aa7edfeef219ac2bc9526ac8316a9c55f78148228640e24c590711db01557d68"
+    }
+  }
+}

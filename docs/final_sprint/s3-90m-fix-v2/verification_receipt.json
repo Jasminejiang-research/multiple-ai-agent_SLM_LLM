@@ -1,0 +1,13 @@
+{
+  "recorded_at_utc": "2026-09-07T12:16:56.120449+00:00",
+  "full_regression": "782 passed, 25 deselected, 3 subtests passed in 177.13s (0:02:57)",
+  "installed_validation": "132 passed in 8.73s",
+  "helper_validation": "26 passed in 3.35s",
+  "installed_and_frozen_files_verified": 268,
+  "historical_files_verified_unchanged": 2943,
+  "public_budget_unchanged": true,
+  "model_calls_after_v2_fix": 0,
+  "formal_runs_started": 0,
+  "complete_plan_demonstrated": false,
+  "next_run_authorization": "pending"
+}

@@ -1,0 +1,29 @@
+{
+  "reason": "Retain raw zero consumption for unrun slots while excluding not-run/partial metrics from complete paired comparisons and aggregate means.",
+  "staged_tests": "28 passed in 16.52s",
+  "files": [
+    {
+      "path": "evaluation/s4_statistics.py",
+      "before_sha256": "4091f1a931032e549f7a0b8d1531fe349cf1b77676b156ae4ab343bddb648dae",
+      "after_sha256": "7c2321da33886b095ae3d758fc4e10d04e3928399a0c623831d87b19559a4bf5"
+    },
+    {
+      "path": "evaluation/s4_export.py",
+      "before_sha256": "311ed6d541a077fc86149b10e6719299c1670a9df56a025c954a1a7340676d58",
+      "after_sha256": "0ad433200f7063994019fb7dd0a7e694f0cc9f6bd8a4b5271db3984dea0914ab"
+    },
+    {
+      "path": "evaluation/s4_ui.py",
+      "before_sha256": "6cf225042a14858b5389cc441031a517e09fd870dd945d4ebb6a27704953b8bd",
+      "after_sha256": "a354f58e934ef9a414223e24c22b8c969751951f03827c776634bbed2ecc61c2"
+    },
+    {
+      "path": "tests/test_s4_evaluation.py",
+      "before_sha256": "fa3bffbce47325572c6a95b2d424ac2449a6bcfa67ea2423a2eb722b2727f3f3",
+      "after_sha256": "b164d985115e384d39f8707d15269a60baf895946fa690eba94bf205821ce3e3"
+    }
+  ],
+  "model_calls": 0,
+  "formal_runs_started": 0,
+  "existing_raw_events_unchanged": true
+}

@@ -1,0 +1,12 @@
+{
+  "observed_at_utc": "2026-09-07T09:44:32.1644760Z",
+  "model_process_count": 0,
+  "port_11434_listener_count": 0,
+  "active_lease_count": 0,
+  "archived_lease": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-two-stage-v1\\run_01\\audit\\terminated_unknown_request.lease.json",
+  "archived_lease_sha256": "811708bd94058a3b1da50cfa6dc5adc7e08ff262d4e7af627edc43c89368d602",
+  "request_outcome": "cancelled; provider token usage unavailable; original full reservation retained",
+  "reconciliation": "Verified no model process or endpoint listener; archived only the matching run/attempt lease without changing request outcome or retrying",
+  "post_stop_pagefile_query_succeeded": true,
+  "post_stop_pagefile_current_usage_mib": 366.0
+}

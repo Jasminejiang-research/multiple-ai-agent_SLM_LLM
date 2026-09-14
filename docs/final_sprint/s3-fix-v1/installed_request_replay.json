@@ -1,0 +1,12 @@
+{
+  "kind": "offline_exact_native_request_replay",
+  "status": "passed",
+  "real_new_calls": 0,
+  "entire_native_payload_identical": true,
+  "expected_input_tokens": 31344,
+  "recorded_output_tokens": 17,
+  "recorded_response_validated": true,
+  "context_probe_token_count_delta": 0,
+  "source": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-fix-v1\\diagnostic_04_chat_long_cpu\\probe\\diagnostic\\events.jsonl",
+  "scope": "Proves the installed fix emits the already successful request; not a new real preflight or full D qualification."
+}

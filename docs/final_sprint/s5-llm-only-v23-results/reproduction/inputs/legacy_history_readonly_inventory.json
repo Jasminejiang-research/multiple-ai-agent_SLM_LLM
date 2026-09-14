@@ -1,0 +1,84 @@
+[
+  {
+    "directory": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/data",
+    "exists": true,
+    "files": [
+      {
+        "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/data/.gitkeep",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/data/app.db",
+        "bytes": 18685952,
+        "sha256": "4b34295d7591afdd35c845af57fdfa78c6bfbc22a7174abf9d3ba1618a6d1e53"
+      }
+    ]
+  },
+  {
+    "directory": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs",
+    "exists": true,
+    "files": [
+      {
+        "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/.gitkeep",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-09_amazon_20260709_145830_613114.md",
+        "bytes": 17506,
+        "sha256": "05df1a582ad8a58f4f4d486908a2777348592a3619ec6bcdbf3f68a9b2a07da2"
+      },
+      {
+        "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-09_picnic_20260709_135307.md",
+        "bytes": 19447,
+        "sha256": "2d06ad96b844650adc672315545a08fa306c9f7028705204c13cacbf8486ba38"
+      },
+      {
+        "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-16_apple_20260716_222015_607708.md",
+        "bytes": 17715,
+        "sha256": "16557dd651287f87e32ebb6a94df6676b12ff8249e8ad2854442e05cccd51f9a"
+      },
+      {
+        "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-17_apple_20260717_071222_225614.md",
+        "bytes": 14697,
+        "sha256": "283ee05076a0c604731cae9fb851adc0eb50418e332b91563f122ee90dafbdf2"
+      },
+      {
+        "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-23_picnic_20260723_130748_072819.md",
+        "bytes": 12999,
+        "sha256": "971b1a3e8bd9dc694e374f557c42198f5612a4f57cf72082f62efcf484071c97"
+      },
+      {
+        "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-28_apple_20260728_162013_501427.md",
+        "bytes": 29444,
+        "sha256": "6f0f67fac960855a427e07d6d3eb85b303c7081a9cefb9c5619bb120aacc1d3d"
+      },
+      {
+        "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-28_apple_20260728_170057_965025.md",
+        "bytes": 26549,
+        "sha256": "33fd7b0995345b514cb76d40b6149ad058bded8edc898bb2a0f4977436add6ea"
+      },
+      {
+        "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/picnic_fashion_20260708_211408.md",
+        "bytes": 11815,
+        "sha256": "a2231675d5e8e5f93c2dfa6b1553f9ed328145eb8e8c17e179aa5ce3ddebcc2c"
+      },
+      {
+        "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/picnic_fashion_20260709_055540.md",
+        "bytes": 10649,
+        "sha256": "8b8a0c12e3eb0526bf5adfc3d95a6aff49acf211796207fdc5347aa6eb51f52f"
+      }
+    ]
+  },
+  {
+    "directory": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/slm/data",
+    "exists": false,
+    "files": []
+  },
+  {
+    "directory": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/slm/outputs",
+    "exists": false,
+    "files": []
+  }
+]

@@ -1,0 +1,182 @@
+{
+  "analysis_summary": "The analysis assesses market demand for an AI tutoring service targeted at MBA students, using only the provided evidence packet. It identifies key assumptions, market context, competitive landscape, and financial projections, while explicitly noting evidence gaps and assumptions.",
+  "market_trends": [
+    {
+      "topic": "Adult MBA Learner Market",
+      "finding": "Historical graduate degree completions provide limited insight into demand for a specialized AI tutoring service. The US Department of Education data shows a 16% increase in master's degrees (2011-22) but does not reflect enrollment or demand for MBA-specific AI coaching. The pilot targets US adults aged 18+ enrolled/applying to MBA programs, constrained by privacy laws (FERPA) that restrict school data access. No existing competitor explicitly offers MBA-specific AI tutoring, positioning the service as differentiated.",
+      "rationale": "The evidence packet includes source EDU-02 (nces.ed.gov) which reports graduate degree completions (880,200 master's in 2021-22) and defines business degrees broadly to include MBA-relevant fields. However, this data cannot establish current demand for a targeted AI tutoring service. The lack of competitor offerings in this niche creates an opportunity.",
+      "claims": [
+        {
+          "claim_id": "C1",
+          "parent_claim_id": null,
+          "claim_text": "Historical graduate completion counts cannot establish demand for a specialized AI tutoring service.",
+          "claim_type": "assumption",
+          "claim_domain": "market_trends",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-02"],
+          "source_support": "partial",
+          "source_quality": 0.5,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "assumption_dominant",
+          "verbatim_parent_text": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "source_anchors": [
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C1",
+              "line_start": 299,
+              "line_end": 299,
+              "snapshot_sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+              "quote": "Last Updated: May 2024\n|\nSuggested citation\nDownload PDF\nDownload PDF\nBetween 2011–12 and 2021–22, the total number of master’s degrees conferred increased by 16 percent, from 756,000 to 880,200 degrees. During this time, the number of doctor’s degrees conferred increased 20 percent, from 170,200 to 203,900 degrees.\nIn 2021–22, postsecondary institutions in the United States1 conferred 1.1 million graduate degrees, an increase of 17 percent since 2011–12. These included 880,200 master’s degrees and 203,900 doctor’s degrees in 2021–22."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "The pilot must validate demand rather than assume it based on generic enrollment statistics. Historical data are insufficient to quantify willingness to pay or adoption rates for a niche AI MBA tutoring product.",
+          "artifact_version": 1
+        },
+        {
+          "claim_id": "C2",
+          "parent_claim_id": null,
+          "claim_text": "No existing competitor offers MBA-specific AI case‑coaching, creating a differentiation opportunity.",
+          "claim_type": "assumption",
+          "claim_domain": "market_trends",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-01"],
+          "source_support": "partial",
+          "source_quality": 0.5,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "assumption_dominant",
+          "verbatim_parent_text": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 22,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world‑class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "Khanmigo’s generic tutoring offering (as shown in EDU-01) does not address MBA‑specific case reasoning, indicating a potential market gap for a focused solution.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant",
+      "confidence": "low"
+    }
+  ],
+  "customer_notes": [
+    {
+      "topic": "Target Customer Profile",
+      "finding": "The pilot focuses on US adults aged 18+ enrolled/applying to MBA programs, constrained by privacy laws (FERPA) that restrict school data access. No existing competitor explicitly targets this niche, reinforcing the differentiation opportunity.",
+      "rationale": "The evidence packet (source EDU-01) describes the service as an English‑language AI case‑coaching platform for MBA students, with no competitor listed that provides this exact combination of features and target audience.",
+      "claims": [
+        {
+          "claim_id": "C3",
+          "parent_claim_id": null,
+          "claim_text": "The target customer is US adults aged 18+ enrolled/applying to MBA programs, constrained by privacy laws (FERPA) that limit school data access.",
+          "claim_type": "assumption",
+          "claim_domain": "customer_notes",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-01"],
+          "source_support": "partial",
+          "source_quality": 0.5,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "assumption_dominant",
+          "verbatim_parent_text": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 22,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world‑class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "FERPA restricts the collection of student education records after age 18, limiting the ability to integrate school enrollment data. This legal constraint shapes the data collection strategy and potential revenue model.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant",
+      "confidence": "low"
+    }
+  ],
+  "competitor_assumptions": [
+    {
+      "topic": "Competitive Landscape",
+      "finding": "Only Khanmigo is explicitly identified as a competitor offering general tutoring with adjacent features. No competitor is listed that provides MBA‑specific case‑coaching, reinforcing the differentiation opportunity.",
+      "rationale": "The evidence packet (source EDU-01) lists Khanmigo as a competitor with pricing information, but does not describe its MBA‑specific capabilities. This gap indicates a potential market opportunity for a focused solution.",
+      "claims": [
+        {
+          "claim_id": "C4",
+          "parent_claim_id": null,
+          "claim_text": "Only Khanmigo is explicitly identified as a competitor offering general tutoring; no competitor provides MBA‑specific case‑coaching.",
+          "claim_type": "assumption",
+          "claim_domain": "competitor_assumptions",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-01"],
+          "source_support": "partial",
+          "source_quality": 0.5,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "assumption_dominant",
+          "verbatim_parent_text": "What can historical graduate completion counts establish, and what can they not establish about demand? (source: EDU-02-C1).",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 22,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world‑class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "The absence of a direct competitor in the MBA‑specific AI tutoring space creates a validation need for market demand and willingness to pay.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant",
+      "confidence": "low"
+    }
+  ],
+  "needs_human_review": [
+    "Validate the financial assumptions (subscription price, variable cost, fixed costs) with actual market data or expert input.",
+    "Conduct interviews with MBA program directors or current AI tutoring users to refine willingness‑to‑pay estimates.",
+    "Obtain explicit permissions from educational institutions to access enrollment or usage data, respecting FERPA constraints.",
+    "Perform a pilot with a defined sample size (e.g., 100‑500 users) to gather empirical data on usage, retention, and learning outcomes."
+  ]
+}

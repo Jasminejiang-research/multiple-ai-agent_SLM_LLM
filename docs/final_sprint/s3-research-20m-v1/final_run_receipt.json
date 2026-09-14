@@ -1,0 +1,14 @@
+{
+  "finalized_at_utc": "2026-09-07T14:15:24.268088+00:00",
+  "result_sha256": "fad1180433a4e151a1824aabd05de32b06378928ce48d28c7302f59e3ae1e808",
+  "integrity_audit_sha256": "08cb3e804b4b4745e3e494856feed682f6f72546a62eb3fdc9a29324f4beceff",
+  "research_artifact_produced": false,
+  "research_probe_verified": false,
+  "critic_verified": false,
+  "complete_d_verified": false,
+  "runtime_files_verified": 272,
+  "old_history_files_verified": 3279,
+  "public_config_changed": false,
+  "process_cleanup_status": "owned_process_tree_terminated",
+  "power_cleanup": "released"
+}

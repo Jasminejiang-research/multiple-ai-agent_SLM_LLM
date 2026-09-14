@@ -1,0 +1,147 @@
+{
+  "created_at_utc": "2026-09-07T10:10:27.656349+00:00",
+  "audit_kind": "offline_reconstruction_of_saved_real_research_body",
+  "real_model_calls": 0,
+  "execution": {
+    "working_directory": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime",
+    "executable": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+    "argv": [
+      "-B",
+      "-c",
+      "import sys; source=sys.stdin.read(); exec(compile(source, \"<efficiency_audit>\", \"exec\"))"
+    ],
+    "stdin_script": "import hashlib, importlib.util, json, os, sys\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom tokenizers import Tokenizer\nfrom workflow.contract_context import ContractContext\nfrom workflow.contract_generation import ContractGenerator\nfrom workflow.generation_constraints import bounded_response_model, financial_reference_contract\nfrom workflow.schema_contract import schema_enum_contract\nfrom workflow.llm_client import schema_cardinality_contract\nfrom schemas.contract_outputs import ContractResearchAnalysis, CONTRACT_VERSION\nfrom slm.granite_provider import render_granite_pair\nroot = Path.cwd()\noriginal = Path('C:/Users/JasmineJiang/Projects/multiple-ai-agent_SLM_LLM')\nreport_path = root.parent / 'validation/prompt_efficiency.json'\nif report_path.exists():\n    raise FileExistsError('Refuse to overwrite an existing efficiency audit')\nbody_path = original / 'docs/final_sprint/s3-two-stage-v1/run_01/audit/01_research_generate.raw.txt'\nusage_path = original / 'docs/final_sprint/s3-two-stage-v1/run_01/audit/01_research_generate.usage.json'\ntokenizer_path = original / 'docs/final_sprint/s3-v1/setup/tokenizer.json'\ninput_paths = [body_path, usage_path, tokenizer_path,\n    *[root / 'docs/final_sprint/s0-v1/cases/ai_education' / name for name in ('brief.json','packet.json','case.json')]]\nsource_names = ('workflow/contract_generation.py', 'workflow/two_stage_generation.py',\n                'workflow/contract_context.py', 'workflow/finance_contract.py',\n                'workflow/generation_constraints.py', 'workflow/schema_contract.py',\n                'workflow/llm_client.py', 'schemas/contract_outputs.py', 'slm/granite_provider.py')\nsource_paths = [base / name for base in (original, root) for name in source_names]\ndef digest(path): return hashlib.sha256(path.read_bytes()).hexdigest()\nfingerprints = {str(path): digest(path) for path in input_paths + source_paths}\nbody = json.loads(body_path.read_text(encoding='utf-8'))\nusage = json.loads(usage_path.read_text(encoding='utf-8'))\nassert usage['eval_count'] == 941 and usage['done_reason'] == 'stop'\nctx = ContractContext.from_case(root/'docs/final_sprint/s0-v1', 'ai_education', condition='D')\ntokenizer = Tokenizer.from_file(str(tokenizer_path))\ndef module(name, path):\n    spec = importlib.util.spec_from_file_location(name, path)\n    mod = importlib.util.module_from_spec(spec)\n    sys.modules[name] = mod\n    spec.loader.exec_module(mod)\n    return mod\nold_stage = module('efficiency_old_stage', original/'workflow/two_stage_generation.py')\nold_generator = module('efficiency_old_generator', original/'workflow/contract_generation.py')\nassert old_generator.PROMPT_VERSION == 'grounded-generation-v5-two-stage'\nold_plan = old_stage.SelectionPlan(ContractResearchAnalysis, body, ctx)\nold_schema = bounded_response_model(old_plan.schema, ctx.finance.value_ids, packet=ctx.packet)\nold_base = (f'{old_generator.PROMPT_VERSION}\\n{old_generator.ROLE_INSTRUCTION[\"research\"]}\\nartifact_version=1.\\n' +\n            json.dumps(ctx.input_payload('research'), ensure_ascii=False, separators=(',',':')))\ndef contracts(schema):\n    return ('\\n\\n' + schema_enum_contract(schema) + '\\n\\n' + schema_cardinality_contract(schema) +\n            '\\n\\n' + financial_reference_contract(ctx.finance.value_ids))\nold_grounding_prompt = old_base + '\\n\\n' + old_plan.prompt() + contracts(old_schema)\nold_body_schema = bounded_response_model(old_stage.draft_model(ContractResearchAnalysis), ctx.finance.value_ids, packet=ctx.packet)\nold_body_prompt = old_base + '\\n\\n' + old_stage.BODY_INSTRUCTION + contracts(old_body_schema)\nclass Captured(Exception): pass\nclass CaptureClient:\n    def __init__(self): self.calls = []\n    def generate_structured_once(self, prompt, schema, **kwargs):\n        self.calls.append((prompt, schema, kwargs))\n        if schema.__generation_stage__ == 'body': return schema.model_validate(body)\n        raise Captured('Offline boundary: provider is never called')\nclient = CaptureClient()\ntry: ContractGenerator(client).generate(ctx, 'research')\nexcept Captured: pass\nassert len(client.calls) == 2\nnew_grounding_prompt, new_schema, new_options = client.calls[1]\nnew_plan = new_schema.__selection_plan__\ndef metric(text):\n    return {'characters': len(text), 'utf8_bytes': len(text.encode('utf-8')),\n            'tokenizer_tokens': len(tokenizer.encode(text, add_special_tokens=False).ids)}\ndef render(system, prompt):\n    return render_granite_pair([{'role':'system','content':system},{'role':'user','content':prompt}])\ndef schema_text(schema): return json.dumps(schema.model_json_schema(), ensure_ascii=False, separators=(',',':'))\nold_render = render(old_generator.COMMON_INSTRUCTION, old_grounding_prompt)\nnew_render = render(new_options['system_instruction'], new_grounding_prompt)\nold_body_render = render(old_generator.COMMON_INSTRUCTION+'\\n'+old_stage.BODY_INSTRUCTION, old_body_prompt)\nnew_body_render = render(client.calls[0][2]['system_instruction'], client.calls[0][0])\nold_prefix = os.path.commonprefix([old_body_render, old_render])\nnew_prefix = os.path.commonprefix([new_body_render, new_render])\nchecks = dict(complete_frozen_body_equal=old_plan.body == new_plan.body,\n              complete_audit_catalog_equal=old_plan.catalog() == new_plan.catalog(),\n              groups_equal=old_plan.groups == new_plan.groups,\n              body_candidates_equal=old_plan.body_spans == new_plan.body_spans,\n              evidence_candidates_equal=old_plan.evidence_spans == new_plan.evidence_spans,\n              new_phase_system_identical=client.calls[0][2]['system_instruction'] == new_options['system_instruction'])\nassert all(checks.values())\nchanged_during_audit = [path for path, expected in fingerprints.items() if digest(Path(path)) != expected]\nassert not changed_during_audit, changed_during_audit\nresult = dict(\n    created_at_utc=datetime.now(timezone.utc).isoformat(),\n    audit_kind='offline_reconstruction_of_saved_real_research_body', real_model_calls=0,\n    execution={'working_directory':str(root), 'executable':sys.executable,\n        'argv':['-B','-c','import sys; source=sys.stdin.read(); exec(compile(source, \"<efficiency_audit>\", \"exec\"))'],\n        'stdin_script':source, 'stdin_script_sha256':hashlib.sha256(source.encode('utf-8')).hexdigest()},\n    file_sha256=fingerprints,\n    input_identity={'case_id':ctx.case_id,'brief_sha256':ctx.brief_sha256,'packet_sha256':ctx.packet_sha256,\n        'canonical_contract_version':CONTRACT_VERSION,'body_sha256':new_plan.body_sha256,\n        'historical_actual_output_tokens':usage['eval_count'],'historical_duration_seconds':usage['total_duration']/1e9,\n        'historical_prefill_tokens_per_second':usage['prefill_tokens_per_second'],\n        'historical_generation_tokens_per_second':usage['generation_tokens_per_second']},\n    metrics_basis={'input':'Official saved tokenizer on the complete rendered Granite system/user chat template, including role delimiters and generation prefix; reconstructed counts, not a new provider usage measurement.',\n        'native_schema':'Compact JSON serialized schema sent as Ollama format; tokenizer token count is a schema size comparison only and is NOT added to prompt input or reported as actual inference usage.',\n        'prefix':'Longest character prefix of stage-one and stage-two rendered text; tokenizer length describes cache-reuse opportunity only. No cache hit, throughput gain, or ninety-minute completion is asserted.',\n        'invariants':'No frozen brief, packet, body, candidate, canonical field, or validation obligation removed. Existing body was reused only for offline comparison; this is not a completed Research/model run.'},\n    before={'prompt_version':old_generator.PROMPT_VERSION,'grounding_chat_input':metric(old_render),\n        'body_chat_input':metric(old_body_render),'selection_prompt':metric(old_plan.prompt()),\n        'native_schema':metric(schema_text(old_schema)), 'shared_stage_prefix':metric(old_prefix)},\n    after={'prompt_version':__import__('workflow.contract_generation',fromlist=['PROMPT_VERSION']).PROMPT_VERSION,\n        'grounding_chat_input':metric(new_render),'body_chat_input':metric(new_body_render),\n        'selection_prompt':metric(new_plan.prompt()),'native_schema':metric(schema_text(new_schema)),\n        'shared_stage_prefix':metric(new_prefix)},\n    candidates={'annotation_groups':len(new_plan.groups),'body_spans':len(new_plan.body_spans),\n                'evidence_spans':len(new_plan.evidence_spans),'inherited_claim_lookup_count':len(new_plan.inherited_claim_evidence)},\n    checks=checks,\n    validation={'targeted_final_command':['-B','-m','pytest','tests/test_generation_efficiency.py','tests/test_two_stage_generation.py','-q','-p','no:cacheprovider'],\n        'targeted_final_result':'35 passed in 4.78s',\n        'prior_iteration_result':'1 failed, 34 passed in 4.93s; fixture reused one claim ID in multiple parents, and mutation changed one occurrence only. Test was corrected to mutate all same-ID occurrences before asserting the unchanged lineage gate; production validation was not changed.'})\nresult['savings']={'grounding_input_tokens':result['before']['grounding_chat_input']['tokenizer_tokens']-result['after']['grounding_chat_input']['tokenizer_tokens'],\n    'native_schema_characters':result['before']['native_schema']['characters']-result['after']['native_schema']['characters']}\nreport_path.parent.mkdir(parents=True, exist_ok=True)\nwith report_path.open('x', encoding='utf-8') as output:\n    json.dump(result, output, ensure_ascii=False, indent=2)\nprint(json.dumps({'report':str(report_path),'before':result['before'],'after':result['after'],'checks':checks,'sha256':digest(report_path)},indent=2))\n",
+    "stdin_script_sha256": "99d9bc9996dae2628cf97d2673eb3d6f735b3e93c07228a7eb8d8d86bf87d59a"
+  },
+  "file_sha256": {
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-two-stage-v1\\run_01\\audit\\01_research_generate.raw.txt": "5e0d5b81e6b9ba5fb2b48b6759b76531fcf58e87a5e2db4cda84a208ec483929",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-two-stage-v1\\run_01\\audit\\01_research_generate.usage.json": "6044b790c170d439e99f4f718a08a94a5cb5f30047214bfe052823a13dde590c",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-v1\\setup\\tokenizer.json": "e2bad66439538cb4d5a7580680932432ed9ece9d3b8577e675512bdf11599253",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime\\docs\\final_sprint\\s0-v1\\cases\\ai_education\\brief.json": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime\\docs\\final_sprint\\s0-v1\\cases\\ai_education\\packet.json": "cdba62bc126f232b1a9be7e340c8ec68706efc0473bfceddb262177d9ea82228",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime\\docs\\final_sprint\\s0-v1\\cases\\ai_education\\case.json": "b5b48a4356d0007f84d445ee9dca9fcd3dd4a9da51086bcad9ba0ce79c5ff1d0",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\workflow\\contract_generation.py": "de5e495b2fa8e67d98e95123daff74557e7b523eb0d8ac2596da345e7f5e46f9",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\workflow\\two_stage_generation.py": "317e0cdbde00ce04e8a9849493e5e88b293c929c52b3af30e6196d411cabee21",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\workflow\\contract_context.py": "fd9b301e07e0154ad0c1dde88355025eec8ad7e0de855426fcbffc8314108782",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\workflow\\finance_contract.py": "1d0c642ec6c0e708afe086430aa5584cb4dd83dd02e8a1eb30d85a54c7d8be09",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\workflow\\generation_constraints.py": "0adff2ffdfd5c4cfc77aa0b86347ee1d2cf5603881812ba7c176c106e348014f",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\workflow\\schema_contract.py": "6ff659ba1f4ab2e644a0b633801499ead6d45a4f38e62000fdf0e8f8ae9b7fef",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\workflow\\llm_client.py": "8671afa0995f098d1641d2bfba5dbc871aa511ca61841f66a0f45a381de0a652",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\schemas\\contract_outputs.py": "9f16ba0af9907183c0b1200af331faa76052da8da4ecc6e3aaecbc11d1d7a936",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\slm\\granite_provider.py": "7f230f829dca980d354cb53e5adadc2ca5d7225dbb181c83f567e21aafee8f21",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime\\workflow\\contract_generation.py": "d1338ca71e0df61b337d841684bfbdafb2a40eec0a783ed1b6e2a26ffbdd8d76",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime\\workflow\\two_stage_generation.py": "ac8f30fb059135167d7522e0fa49da7d286c73d3b6d078681bb38dfbfb06283e",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime\\workflow\\contract_context.py": "fd9b301e07e0154ad0c1dde88355025eec8ad7e0de855426fcbffc8314108782",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime\\workflow\\finance_contract.py": "1d0c642ec6c0e708afe086430aa5584cb4dd83dd02e8a1eb30d85a54c7d8be09",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime\\workflow\\generation_constraints.py": "0adff2ffdfd5c4cfc77aa0b86347ee1d2cf5603881812ba7c176c106e348014f",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime\\workflow\\schema_contract.py": "6ff659ba1f4ab2e644a0b633801499ead6d45a4f38e62000fdf0e8f8ae9b7fef",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime\\workflow\\llm_client.py": "8671afa0995f098d1641d2bfba5dbc871aa511ca61841f66a0f45a381de0a652",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime\\schemas\\contract_outputs.py": "9f16ba0af9907183c0b1200af331faa76052da8da4ecc6e3aaecbc11d1d7a936",
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-90m-fix-stage\\runtime\\slm\\granite_provider.py": "7f230f829dca980d354cb53e5adadc2ca5d7225dbb181c83f567e21aafee8f21"
+  },
+  "input_identity": {
+    "case_id": "ai_education",
+    "brief_sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+    "packet_sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+    "canonical_contract_version": "proposal-grounding-v5-two-stage",
+    "body_sha256": "767a188588eeeafd5b4ce1d1ae39f737d83377093080140047f7a1530d8ccd01",
+    "historical_actual_output_tokens": 941,
+    "historical_duration_seconds": 230.1301734,
+    "historical_prefill_tokens_per_second": 35.154702252754994,
+    "historical_generation_tokens_per_second": 9.055590363816378
+  },
+  "metrics_basis": {
+    "input": "Official saved tokenizer on the complete rendered Granite system/user chat template, including role delimiters and generation prefix; reconstructed counts, not a new provider usage measurement.",
+    "native_schema": "Compact JSON serialized schema sent as Ollama format; tokenizer token count is a schema size comparison only and is NOT added to prompt input or reported as actual inference usage.",
+    "prefix": "Longest character prefix of stage-one and stage-two rendered text; tokenizer length describes cache-reuse opportunity only. No cache hit, throughput gain, or ninety-minute completion is asserted.",
+    "invariants": "No frozen brief, packet, body, candidate, canonical field, or validation obligation removed. Existing body was reused only for offline comparison; this is not a completed Research/model run."
+  },
+  "before": {
+    "prompt_version": "grounded-generation-v5-two-stage",
+    "grounding_chat_input": {
+      "characters": 45581,
+      "utf8_bytes": 45630,
+      "tokenizer_tokens": 13016
+    },
+    "body_chat_input": {
+      "characters": 18723,
+      "utf8_bytes": 18770,
+      "tokenizer_tokens": 4353
+    },
+    "selection_prompt": {
+      "characters": 25810,
+      "utf8_bytes": 25812,
+      "tokenizer_tokens": 7908
+    },
+    "native_schema": {
+      "characters": 57417,
+      "utf8_bytes": 57417,
+      "tokenizer_tokens": 17702
+    },
+    "shared_stage_prefix": {
+      "characters": 2016,
+      "utf8_bytes": 2016,
+      "tokenizer_tokens": 386
+    }
+  },
+  "after": {
+    "prompt_version": "grounded-generation-v6-compact-two-stage",
+    "grounding_chat_input": {
+      "characters": 39744,
+      "utf8_bytes": 39793,
+      "tokenizer_tokens": 11899
+    },
+    "body_chat_input": {
+      "characters": 18170,
+      "utf8_bytes": 18217,
+      "tokenizer_tokens": 4243
+    },
+    "selection_prompt": {
+      "characters": 19766,
+      "utf8_bytes": 19768,
+      "tokenizer_tokens": 6757
+    },
+    "native_schema": {
+      "characters": 47701,
+      "utf8_bytes": 47701,
+      "tokenizer_tokens": 12152
+    },
+    "shared_stage_prefix": {
+      "characters": 15392,
+      "utf8_bytes": 15439,
+      "tokenizer_tokens": 3629
+    }
+  },
+  "candidates": {
+    "annotation_groups": 10,
+    "body_spans": 52,
+    "evidence_spans": 48,
+    "inherited_claim_lookup_count": 0
+  },
+  "checks": {
+    "complete_frozen_body_equal": true,
+    "complete_audit_catalog_equal": true,
+    "groups_equal": true,
+    "body_candidates_equal": true,
+    "evidence_candidates_equal": true,
+    "new_phase_system_identical": true
+  },
+  "validation": {
+    "targeted_final_command": [
+      "-B",
+      "-m",
+      "pytest",
+      "tests/test_generation_efficiency.py",
+      "tests/test_two_stage_generation.py",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "targeted_final_result": "35 passed in 4.78s",
+    "prior_iteration_result": "1 failed, 34 passed in 4.93s; fixture reused one claim ID in multiple parents, and mutation changed one occurrence only. Test was corrected to mutate all same-ID occurrences before asserting the unchanged lineage gate; production validation was not changed."
+  },
+  "savings": {
+    "grounding_input_tokens": 1117,
+    "native_schema_characters": 9716
+  }
+}

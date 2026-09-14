@@ -1,0 +1,20 @@
+{
+  "at_utc": "2026-09-07T13:58:01.396669+00:00",
+  "reason": "Remove contradictory nonempty financial-reference prompt for brief Research before any real call",
+  "changes": [
+    {
+      "path": "tests/test_brief_research_profile.py",
+      "sha256": "49e7f18c30cb12c6bb80772cc0df52501612cf5700cb9e0aae00a60bacd9a95e"
+    },
+    {
+      "path": "workflow/contract_generation.py",
+      "sha256": "df36d174c6ed27b62f46c6a20476c27faca1010d64b2bd13677df6c1dd2d809d"
+    },
+    {
+      "path": "workflow/generation_constraints.py",
+      "sha256": "852400559a31b51f47e30f52e91d87a9559a93cef0de342c0a9fd5be14e61541"
+    }
+  ],
+  "model_calls": 0,
+  "runtime_verified": 272
+}

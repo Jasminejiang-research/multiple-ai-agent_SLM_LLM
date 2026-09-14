@@ -1,0 +1,9 @@
+{
+  "observed_at_utc": "2026-09-07T08:02:30.7624232Z",
+  "model_process_count": 0,
+  "listeners": 0,
+  "lease_files": [
+    null
+  ],
+  "public_config_sha256": "4e8bec9bd8f951c07268b2cedf78858e14194bb20168bba2bb197576ce8ae63f"
+}

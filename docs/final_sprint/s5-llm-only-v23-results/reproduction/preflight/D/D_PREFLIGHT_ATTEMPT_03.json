@@ -1,0 +1,76 @@
+{
+  "version": "s6-d-preflight-attempt-v1",
+  "attempt": 3,
+  "status": "no_go",
+  "record_label": "nonformal_engineering_preflight_failure",
+  "formal_experiment_result": false,
+  "c_minus_d_comparison_eligible": false,
+  "classification": "real_model_compact_outputs_truncated_at_frozen_role_caps",
+  "record_amendment": {
+    "amended_on": "2026-09-07",
+    "prior_sha256": "951480b3c5d35988c24c7e8ee7918d16db6392bfa1dfa32768273eebcadc7f2f",
+    "scope": "classification-only clarification requested by the user; measured values and immutable raw result are unchanged"
+  },
+  "authorization_path": "docs/final_sprint/s6-fast-generation-v1/D_PREFLIGHT_AUTHORIZATION.json",
+  "authorization_sha256": "bde417c859a34781d53672a3c7697d18221da40d3b8486ccf2dfb8002d63dd42",
+  "case_id": "ai_education",
+  "condition": "D",
+  "model": "granite-h-micro-32k@eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+  "cpu_only": true,
+  "context_tokens": 32768,
+  "formal_runs_started": 0,
+  "approved_hard_limits": {
+    "max_seconds": 3600,
+    "max_requests": 18,
+    "max_total_tokens": 160000,
+    "max_output_tokens_per_call": 1800,
+    "lower_role_caps_apply": true
+  },
+  "cumulative_actual": {
+    "requests": 10,
+    "known_prompt_tokens": 24738,
+    "known_output_tokens": 6079,
+    "charged_total_tokens": 30817,
+    "active_elapsed_seconds": 1233.531,
+    "remaining_requests": 8,
+    "remaining_tokens": 129183,
+    "within_all_hard_limits": true
+  },
+  "phase_status": {
+    "warmup": "passed_from_preserved_attempt_02",
+    "context": "passed_from_preserved_attempt_02",
+    "components": "failed",
+    "smoke": "not_run_due_to_prior_feasibility_gate"
+  },
+  "component_results": {
+    "research": {"calls": 2, "role_output_cap": 450, "statuses": ["invalid_output", "invalid_output"], "finish_reasons": ["length", "length"], "total_tokens": 3367},
+    "research_critic": {"calls": 2, "role_output_cap": 180, "statuses": ["invalid_output", "invalid_output"], "finish_reasons": ["length", "length"], "total_tokens": 2589},
+    "finance": {"calls": 2, "role_output_cap": 600, "statuses": ["invalid_output", "invalid_output"], "finish_reasons": ["length", "length"], "total_tokens": 4324},
+    "writer": {"calls": 2, "role_output_cap": 1800, "statuses": ["invalid_output", "invalid_output"], "finish_reasons": ["length", "length"], "total_tokens": 7558}
+  },
+  "repair_policy": "Each component received its initial call plus exactly one structure-repair call. There was no third attempt, transport retry, semantic revision or hidden retry.",
+  "resources": {
+    "status": "passed",
+    "combined_sample_count": 242,
+    "minimum_available_ram_bytes": 4857692160,
+    "peak_gpu_used_bytes": 9437184,
+    "maximum_observed_sample_gap_seconds": 5.42200000000048
+  },
+  "cleanup": {
+    "owned_pid": 9660,
+    "owned_process_alive_after": false,
+    "endpoint_listener_count_after": 0,
+    "active_lease_count_after": 0,
+    "server_stop": "owned_process_tree_terminated",
+    "checked_at": "2026-09-07T21:52:47.2832007+02:00"
+  },
+  "result_path": "docs/final_sprint/s6-fast-generation-v1/real_preflight_d_ai_education_03/probe/result.json",
+  "result_sha256": "9a675099cc1dc0ff06bbcf8f61e0b9c551353e0fc7b3d94dc409ac0be639c6b9",
+  "raw_result_accounting_note": "The immutable raw result's cumulative total_tokens/request_count are correct. Its prompt_tokens/output_tokens fields include restored prior calls but not current segment values because the display aggregation fix was installed only after this run. The exact known prompt/output totals above were recomputed from all ten durable final call events; no raw evidence was edited.",
+  "downstream_gate": {
+    "gemini_smokes_executed": false,
+    "joint_refreeze_performed": false,
+    "formal_s5_started": false,
+    "reason": "D did not pass; changing role output caps, model or experiment/budget scope requires user confirmation."
+  }
+}

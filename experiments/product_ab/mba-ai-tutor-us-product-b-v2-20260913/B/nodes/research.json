@@ -1,0 +1,297 @@
+{
+  "research_analysis": {
+    "evidence_notice": "Program provenance: user brief and unsourced findings are unverified hypotheses, not established facts. Only sourced_fact entries with eligible_external source IDs may be considered evidence candidates; their text must still support the claim. This is not independent fact verification.",
+    "analysis_summary": "The user brief outlines a concept for an AI Tutor for MBA students in the United States, addressing a perceived need for additional learning support. However, critical details regarding specific unmet needs, willingness to pay, product features, business model, and competitive landscape are not supplied and require further research or explicit assumptions. The provided web research offers some insights into the existence of human tutors for MBA-level subjects and the growing integration of AI into MBA curricula, suggesting a potential market for AI-powered educational tools. All findings are treated as hypotheses or assumptions due to the nature of the brief and the limitations of the provided web evidence.",
+    "market_trends": [
+      {
+        "evidence_status": "needs_validation",
+        "source_ids": [
+          "web-6374a2fd53764e0f9f6564049e224df1"
+        ],
+        "topic": "AI in Education and Tutoring",
+        "finding": "There is an emerging trend of AI companies developing AI tutoring systems, specifically for subjects like statistics, which are relevant to MBA curricula.",
+        "rationale": "xAI is actively hiring 'AI Tutors - Statistics Specialists' to enhance their AI technologies through high-quality inputs, labels, and annotations, indicating investment in AI-driven tutoring solutions. This suggests a broader industry movement towards AI-powered educational support.",
+        "confidence": "low"
+      },
+      {
+        "evidence_status": "needs_validation",
+        "source_ids": [
+          "web-f2353c3b3f524642a8791fe7b30f4b4b",
+          "web-5ea92ade43c64ff8a3bf7cd02d141c70"
+        ],
+        "topic": "Integration of AI into MBA Curricula",
+        "finding": "Universities in the United States are increasingly integrating Artificial Intelligence, analytics, and data-driven decision-making into their MBA programs.",
+        "rationale": "Northeastern University offers a STEM-designated AI MBA, and the University of Mount Union offers an MBA with a concentration in AI, both designed to equip future leaders with AI understanding and application skills. This trend suggests a growing familiarity and need for AI-related tools within the MBA student demographic.",
+        "confidence": "low"
+      },
+      {
+        "evidence_status": "assumption",
+        "source_ids": [],
+        "topic": "Demand for Supplemental Learning Support",
+        "finding": "MBA students in the United States likely seek supplemental learning support for challenging subjects, creating a potential market for tutoring services.",
+        "rationale": "The existence of numerous human tutors offering services in MBA-relevant subjects (e.g., Statistics, Accounting, Economics, Finance, Operations Management) implies an underlying demand for additional academic assistance among students pursuing these degrees. The user brief also explicitly states that MBA students 'may need additional learning support'.",
+        "confidence": "low"
+      }
+    ],
+    "customer_notes": [
+      {
+        "evidence_status": "needs_validation",
+        "source_ids": [
+          "web-65921ba135484ea0af97cb98d563d24a",
+          "web-530290197b4949b4837e916e467ca268",
+          "web-3cda0b88a7c748548fcd7f4008dce776"
+        ],
+        "topic": "Specific Subject Support Needs",
+        "finding": "MBA students in the United States may require tutoring support in subjects such as Mathematics, Statistics, Management in Information Systems, Accounting, Operations Management, Actuarial Sciences, Economics, and Finance.",
+        "rationale": "Multiple human tutors, including current MBA students, advertise professional tutoring services for these specific subjects, indicating common areas where MBA students seek assistance. This suggests these are pain points for the target customer.",
+        "confidence": "low"
+      },
+      {
+        "evidence_status": "assumption",
+        "source_ids": [],
+        "topic": "Preference for Flexible and Accessible Tutoring",
+        "finding": "MBA students, often balancing studies with other commitments, may value flexible, on-demand, and potentially remote tutoring options.",
+        "rationale": "The prevalence of 'Online Statistics Tutor' and 'Remote Part-Time Math Tutor' roles in the job market and individual tutor profiles suggests a demand for accessible learning support that fits into varied schedules. An AI tutor could potentially meet this need for flexibility.",
+        "confidence": "low"
+      },
+      {
+        "evidence_status": "assumption",
+        "source_ids": [],
+        "topic": "Willingness to Pay for Tutoring",
+        "finding": "MBA students are likely willing to pay for high-quality tutoring services, especially for critical or challenging subjects, though the precise price sensitivity is unknown.",
+        "rationale": "The existence of professional tutors charging hourly rates (e.g., $70/hr mentioned in one source for a private tutor) implies a market where students are accustomed to paying for supplemental education. However, the specific willingness to pay for an AI tutor versus a human tutor, or the perceived value, is an assumption.",
+        "confidence": "low"
+      }
+    ],
+    "competitor_assumptions": [
+      {
+        "evidence_status": "needs_validation",
+        "source_ids": [
+          "web-65921ba135484ea0af97cb98d563d24a",
+          "web-530290197b4949b4837e916e467ca268",
+          "web-3cda0b88a7c748548fcd7f4008dce776",
+          "web-5fed7d7d1795460ca0d7968df829ad9c"
+        ],
+        "topic": "Existing Human Tutoring Services",
+        "finding": "Numerous individual human tutors and tutoring companies currently offer services to MBA students in the United States, covering a range of subjects.",
+        "rationale": "LinkedIn profiles and tutoring platforms show individuals (some with MBA backgrounds) and companies providing professional tutoring in subjects relevant to MBA curricula (e.g., Statistics, Economics, Accounting). These human tutors represent a direct substitute for an AI tutor.",
+        "confidence": "low"
+      },
+      {
+        "evidence_status": "needs_validation",
+        "source_ids": [
+          "web-6374a2fd53764e0f9f6564049e224df1"
+        ],
+        "topic": "Emerging AI Tutoring Solutions",
+        "finding": "Large AI companies, such as xAI, are developing their own AI tutoring capabilities, potentially becoming direct competitors or setting market expectations for AI-powered learning tools.",
+        "rationale": "xAI is actively hiring AI Tutors, indicating a strategic move into developing advanced AI for educational support. While not explicitly stated as an MBA-specific tutor, their focus on subjects like statistics suggests a broad application that could extend to higher education.",
+        "confidence": "low"
+      },
+      {
+        "evidence_status": "assumption",
+        "source_ids": [],
+        "topic": "University-Provided Academic Support",
+        "finding": "MBA programs and universities likely offer their own academic support services, such as teaching assistants, writing centers, or peer tutoring, which serve as indirect competitors.",
+        "rationale": "It is a common practice for higher education institutions to provide academic resources to their students. One source mentions a 'Teaching Assistant' role at a university, which supports students in statistical data analysis. These services, while not AI-powered, address similar student needs.",
+        "confidence": "low"
+      }
+    ],
+    "unsupported_claims": [
+      {
+        "claim": "The precise unmet needs, frequency, urgency, and willingness to pay of MBA students for additional learning support.",
+        "why_unsupported": "The user brief explicitly states these details have not been supplied. The provided web research indicates a general demand for tutoring in specific subjects but does not quantify these aspects.",
+        "needed_evidence": [
+          "Market research on MBA student pain points",
+          "Surveys on willingness to pay for AI tutoring",
+          "Demand analysis for specific MBA subjects"
+        ]
+      },
+      {
+        "claim": "Specific product features, delivery model, pedagogy, integrations, and differentiation of the AI Tutor.",
+        "why_unsupported": "The user brief explicitly states these details have not been supplied. The web research provides no information on the proposed solution's specifics.",
+        "needed_evidence": [
+          "Product development roadmap",
+          "User experience research",
+          "Competitive feature analysis"
+        ]
+      },
+      {
+        "claim": "The specific business model, including pricing, conversion rates, customer counts, costs, or margins.",
+        "why_unsupported": "The user brief explicitly states the business model has not been supplied and warns against treating any financial figures as user-confirmed. The web research does not provide this information.",
+        "needed_evidence": [
+          "Market pricing benchmarks for AI education tools",
+          "Cost analysis for AI development and operation",
+          "Financial modeling and projections"
+        ]
+      },
+      {
+        "claim": "The overall market size or demand for an AI Tutor for MBA students in the United States.",
+        "why_unsupported": "The user brief explicitly states not to treat market size or demand as confirmed facts. The web research indicates the existence of tutors and AI in education but does not quantify the market opportunity.",
+        "needed_evidence": [
+          "Market sizing reports for AI in higher education",
+          "Demand studies for MBA student support services",
+          "Enrollment statistics for US MBA programs"
+        ]
+      }
+    ],
+    "needs_human_review": [
+      "What specific subjects within the MBA curriculum are most challenging for students, and therefore most in need of AI tutoring support?",
+      "What is the perceived value and willingness to pay for an AI tutor compared to human tutors among MBA students?",
+      "What are the key features and pedagogical approaches that would differentiate an AI tutor for MBA students from existing solutions or general AI tools?",
+      "Are there any specific regulatory considerations or accreditation requirements for AI-enabled educational tools in the United States higher education sector?",
+      "What are the potential institutional partnership opportunities with MBA programs or universities for an AI tutor solution?"
+    ]
+  },
+  "web_sources": [
+    {
+      "title": "xAI hiring Statistics Tutor in United States | LinkedIn",
+      "url": "https://www.linkedin.com/jobs/view/statistics-tutor-at-xai-4310471203",
+      "publisher": "www.linkedin.com",
+      "published_date": null,
+      "summary": "### Statistics Tutor. # Statistics Tutor. #### xAI United States 1 day ago See who xAI has hired for this role. xAI’s mission is to create AI systems that can accurately understand the universe and aid humanity in its pursuit of knowledge. All engineers are expected to have strong communication skills. As an AI Tutor - Statistics Specialist, you’ll play a key role in advancing xAI’s mission by enhancing our AI technologies through high-quality inputs, labels, and annotations using specialized software. You’ll collaborate with our technical team to train models on human interactions, problem-solving, and discussions; refine annotation tools; and select/create challenging problems in statistics to boost performance. All of our AI Tutor roles potentially involve gathering or providing data in text, voice, and video formats, including annotations, audio recordings, or video sessions—tasks with which candidates must be comfortable. * Play a pivotal role in supporting and contributing to the training of new tasks, working closely with the technical staff to ensure the successful development and implementation of cutting-edge initiatives/technologies. * Previous AI Tutoring experience and/or experience teaching college-level statistics courses. * The Palo Alto option is an in-office role requiring 5 days per week; remote positions require strong self-motivation. The posted pay range is intended for U.S.-based candidates and depends on factors including relevant experience, skills, education, geographic location, and qualifications. Get notified about new Statistics Tutor jobs in **United States**. Sign in to create job alert. ## Similar jobs. * Federal Work Study Literacy or Math Tutor. ### Federal Work Study Literacy or Math Tutor. ### AI Economics Tutor. * Remote Part-Time Math Tutor (9 hrs/week). ### Remote Part-Time Math Tutor (9 hrs/week). * K-12 Math and ELA Tutor (5PM-8PM EST). ### K-12 Math and ELA Tutor (5PM-8PM EST). #### Tutored by Teachers. ### Math Tutor (Remote). #### Tutor Me Education. ### Online Math Tutor. ### Remote Math Tutor. + Washington State Department of Health jobs. + West Anaheim Medical Center jobs. + Yuma Regional Medical Center jobs. + University of Rhode Island jobs. + University of the People jobs. Know when new jobs open up. Never miss a job alert with the new LinkedIn app for Windows.",
+      "relevance_score": 0.6580885,
+      "source_quality": "unknown",
+      "stale": false,
+      "source_id": "web-6374a2fd53764e0f9f6564049e224df1",
+      "agent_name": "Market Research Agent",
+      "query": "MBA student AI tutor demand statistics United States",
+      "retrieved_at": "2026-09-13T11:39:05.934349Z"
+    },
+    {
+      "title": "Mason Bray - Bachelor Degree in Mathematics and Finance and Current MBA Student - Applied Tutoring",
+      "url": "https://www.linkedin.com/in/mason-bray-3b49831bb",
+      "publisher": "www.linkedin.com",
+      "published_date": null,
+      "summary": "## Experience\n### Professional Tutor  \nApplied Tutoring  \nJun 2022 - Present   \nTuscaloosa, Alabama, United States  \nProfessional Tutor in Mathematics, Statistics, Management in Information Systems, Accounting, Operations Management, Actuarial Sciences, and Economics. Additionally providing professional tutoring for the ACT and GRE. [...] ### Teaching Assistant  \nThe University of Alabama  \nAug 2022 - May 2025   \nTuscaloosa, Alabama, United States  \nTeaching Assistant for Professor Jennifer McMillan and Professor Bruce Barrett, instructing students for Statistical Data Analysis (ST 260)\n\n### Joyride Driver  \nJOYRIDE TRANSPORTATION  \nJul 2022 - Aug 2024   \nTuscaloosa, Alabama, United States  \nTransportation and service to customers\n\n### Associate  \nMathnasium - The Math Learning Center  \nMay 2018 - Mar 2022   \nUnited States [...] # Mason Bray\nBachelor Degree in Mathematics and Finance and Current MBA Student\nTuscaloosa, Alabama, United States, US  \n44 connections, 45 followers\n\n## About\nGraduate student at the Manderson Graduate School of Business pursuing an MBA with a…",
+      "relevance_score": 0.52962893,
+      "source_quality": "unknown",
+      "stale": false,
+      "source_id": "web-65921ba135484ea0af97cb98d563d24a",
+      "agent_name": "Market Research Agent",
+      "query": "MBA student AI tutor demand statistics United States",
+      "retrieved_at": "2026-09-13T11:39:05.934349Z"
+    },
+    {
+      "title": "Online Statistics Tutor - Online MBA Statistics Tutor for Statistics help, +17208200963 or +923002562296 Whatsapp Statisticstutor.company - Statistics for Dummies",
+      "url": "https://www.linkedin.com/in/statisticstutor",
+      "publisher": "www.linkedin.com",
+      "published_date": null,
+      "summary": "# Online Statistics Tutor\nOnline MBA Statistics Tutor for Statistics help, +17208200963 or +923002562296 Whatsapp Statisticstutor.company\nNewark, New Jersey, United States, US  \nN/A connections, 2 followers\n\n## About\nOnline Statistics Tutor Company (OSTC) for Statistics help, SPSS, Probability, Assignment… [...] ## People Also Viewed\n- James Rutor (TutorsOrMentors.com) - \n- Chiemeka Ezeogu (New Yorkers for safe Transit) - \n- Hannah Borum (Bespoke Education) - \n- Jennifer Priestley. Ph.D. (Marist School) - \n- Warren Powell (Rutgers Business School) - \n- Felix Meschke (The University of Kansas School of Business) - \n- Douglas Jones (Rutgers Business School) - \n- Gopesh Anand (Gies College of Business - University of Illinois Urbana-Champaign) - [...] ## Experience\n### Online tutor for Statistics  \nStatistics for Dummies  \nOct 2009 - Present   \nN/A  \nI am the owner of Statistics for Dummies and My role is to offer an online course for Statistics for MBA and GCSE level in India, Pakistan, USA, UK and Dubai.\n\n### Online tutor  \nElementary Statistics Course  \nJul 2005 - Oct 2007   \nN/A  \nI offer my self and manage team of statistics tutoring worldwide.\n\n## Education\n### Indiana University of PA  \nN/A  \n2000 - 2003  \nNone",
+      "relevance_score": 0.44145688,
+      "source_quality": "unknown",
+      "stale": false,
+      "source_id": "web-530290197b4949b4837e916e467ca268",
+      "agent_name": "Market Research Agent",
+      "query": "MBA student AI tutor demand statistics United States",
+      "retrieved_at": "2026-09-13T11:39:05.934349Z"
+    },
+    {
+      "title": "Shameer Deen, MBA",
+      "url": "https://www.linkedin.com/in/shameerd",
+      "publisher": "www.linkedin.com",
+      "published_date": null,
+      "summary": "# Shameer Deen, MBA\nPareto.AI\nFort Lauderdale, Florida, United States, US  \n384 connections, 385 followers\n\n## About\nI am an educator, AI trainer, and tutor with a General MBA and dual Bachelor of Science…\n\n## Experience\nN/A\n\n## Education\n### Jacksonville University  \nN/A  \n2016 - 2017  \nNone\n\n### N/A  \nN/A  \n2010 - 2014  \nNone\n\n## Publications\nMarketing360\nN/A • Published on N/A\n\n## Honors & Awards\nWho's Who Among Students in American Universities & Colleges\n- • January [...] ## Activity\n- Just a reminder that if you know anyone that needs summer tutoring, please check my Facebook page and you can send a message there  \nShared by Shameer Deen, MBA  \nView Post  \nActivity Image\n\n- Your warm intros aren't failing where you think. You think it's the conversation. It's the click after. When someone agrees to a warm intro, they…  \nLiked by Shameer Deen, MBA  \nView Post  \nActivity Image [...] - Back in October 2025, I published an essay on Medium examining one of the more prominent figures in Guyanese folklore—the Land Master—approached not…  \nShared by Shameer Deen, MBA  \nView Post  \nActivity Image\n\n- Spring Semester Tutoring Available The Spring semester is the perfect time to build strong foundations, stay ahead of coursework, and prepare…  \nPosted by Shameer Deen, MBA  \nView Post  \nActivity Image",
+      "relevance_score": 0.36779293,
+      "source_quality": "unknown",
+      "stale": false,
+      "source_id": "web-5fed7d7d1795460ca0d7968df829ad9c",
+      "agent_name": "Market Research Agent",
+      "query": "MBA student AI tutor demand statistics United States",
+      "retrieved_at": "2026-09-13T11:39:05.934349Z"
+    },
+    {
+      "title": "Rushil Private Tutor from Sunnyvale, United States - $70/hr",
+      "url": "https://www.tutorocean.com/tutor/Rushil123",
+      "publisher": "www.tutorocean.com",
+      "published_date": null,
+      "summary": "Title: Rushil Private Tutor from Sunnyvale, United States - $70/hr\n# Private Tutor With A Speciality In Math. ## Tutor Information. My name is Rushil and I am offering my local tutoring services this coming academic year. I offer help in the following subjects: Essay Drafting, Coding, Homework Help, and Study Consultation To All Grade Levels Students & FamiliesI can also help with; K -12 Math, and English, Statistics, Economics, Finance, and Accounting, Computer Systems, Python, R, and Microsoft Excel. • My rate will depend on the factors such as the grade-level and subject I am tutoring, group sessions or individual sessions, and the frequency of student sessions. My rates will be very fair, and will be in accordance with the market value for these services. A little about myself: I am currently pursuing an MBA degree at Santa Clara University, I have completed most of my coursework in the program, and anticipate to graduate shortly. I completed my Bachelor’s of Science Degree at UC Davis in 2019 where I majored in Applied Economics and did a minor in Statistics. I have worked mostly in accounting, but I have lots of tutoring experience under my belt. Specifically, I have over three years of professional tutoring experience. I have tutored Macroeconomics as peer tutor at UC Davis during my last quarter, and I and I have worked for several tutoring agencies. I have taught all grade levels. I have also held my private tutoring practice for quite while, but I recently took a little pause during the last year. As a tutor, I believe my biggest strengths are my ability to remain patient and my ability to connect with and understand my students while successfully monitoring progress. Tutoring has been very rewarding for me as it has always been fulfilling to see my students grow and mature overtime. It is also very fulfilling to acquaint and bond with my students on a personal level. ## Subjects. ## Levels. ## Education. ### Santa Clara University. ### UC Davis. ## Work Experience. I assisted the Georgia Tech Student Athletes with their homework in the subjects of Accounting, Linear Programming, Statistics, Finance, and Economics. ### Koncept Education. K-12 Englis and Math.",
+      "relevance_score": 0.07092566,
+      "source_quality": "unknown",
+      "stale": false,
+      "source_id": "web-3cda0b88a7c748548fcd7f4008dce776",
+      "agent_name": "Market Research Agent",
+      "query": "MBA student AI tutor demand statistics United States",
+      "retrieved_at": "2026-09-13T11:39:05.934349Z"
+    },
+    {
+      "title": "From idea to launch: A simple guide for tech entrepreneurs",
+      "url": "https://damore-mckim.northeastern.edu/resources/cc-what-is-an-mba-in-ai",
+      "publisher": "damore-mckim.northeastern.edu",
+      "published_date": null,
+      "summary": "An AI MBA builds on traditional MBA fundamentals while layering in artificial intelligence, analytics, and data‑driven decision‑making. The result is a STEM‑designated MBA designed for future leaders who want to guide teams, influence strategy, and lead responsibly in an AI‑driven world. [...] An AI MBA integrates artificial intelligence, analytics, and emerging technologies directly into MBA coursework. You build strong foundations in areas such as finance, marketing, operations, strategy, and leadership, while also learning how data and AI shape modern decision-making. [...] Yes. A STEM-designated AI MBA program offers meaningful advantages for international students studying in the United States.\n\nThe full-time AI MBA at D'Amore-McKim is compliant with F-1 and J-1 visa requirements. If you study on an F-1 visa, you may also be eligible to apply for theOptional Practical Training STEM extension, allowing up to 36 months of work authorization in the U.S. after completing their degree.\n\n That added flexibility can:",
+      "relevance_score": 0.31732097,
+      "source_quality": "research_org",
+      "stale": false,
+      "source_id": "web-f2353c3b3f524642a8791fe7b30f4b4b",
+      "agent_name": "Competitor Agent",
+      "query": "AI tutor services regulation United States MBA",
+      "retrieved_at": "2026-09-13T11:39:07.384408Z"
+    },
+    {
+      "title": "Online MBA in Artificial Intelligence | University of Mount Union",
+      "url": "https://www.mountunion.edu/academics/graduate-degrees/mba-artificial-intelligence",
+      "publisher": "www.mountunion.edu",
+      "published_date": null,
+      "summary": "The University of Mount Union prohibits discrimination on the basis of race, gender, gender identity or expression, sex, sexual orientation, religion, age, color, creed, national or ethnic origin, veteran status, marital or parental status, pregnancy, disability, or genetic information in student admissions, financial aid, educational or athletic programs, or employment as now or may hereafter be required by university policy and federal or state law. Inquiries regarding compliance may be [...] Artificial intelligence is transforming the way the world works—and the leaders of tomorrow will be those who can harness its power with purpose. Mount Union’s MBA with a concentration in AI is designed to empower professionals to lead organizations through the evolving landscape of innovation and strategy. Whether you're guiding teams, launching initiatives, or driving digital transformation, this program equips you with the insight, ethics, and strategic fluency to lead confidently in an [...] Whether you're streamlining operations, launching innovative products, or shaping big-picture strategy, Mount Union’s MBA in Artificial Intelligence gives you the tools to confidently lead in a tech-driven world. This program is ideal for professionals who want to understand and apply AI—not code it—so they can guide teams, make smarter decisions, and drive meaningful change.",
+      "relevance_score": 0.24261406,
+      "source_quality": "research_org",
+      "stale": false,
+      "source_id": "web-5ea92ade43c64ff8a3bf7cd02d141c70",
+      "agent_name": "Competitor Agent",
+      "query": "AI tutor services regulation United States MBA",
+      "retrieved_at": "2026-09-13T11:39:07.384408Z"
+    },
+    {
+      "title": "AI in Law | Executive Education at USC Gould School of Law",
+      "url": "https://gould.usc.edu/academics/executive-education/ai-in-law",
+      "publisher": "gould.usc.edu",
+      "published_date": null,
+      "summary": "Following her doctoral work, Dr. Ingersoll was an assistant professor of Entrepreneurship & Strategy at the University of Utah’s Eccles School of Business, where her research examined how advanced technologies affect innovation, organizational performance, and high-stakes professional services. She taught strategy, analytics, and innovation at the undergraduate, M.B.A., and executive education levels.\n\n### Tuition\n\nReduced Pricing [...] USC Gould Executive Education offers specialized partnerships with organizations to build legal skills that are essential to your business growth and success. Collaborate with us to create custom, engaging learning experiences in targeted areas of law to meet your organization's unique professional development goals. To learn more, reach out to execed@law.usc.edu.  \n  \nProfessional Development Tuition Assistance [...] Before joining Cornerstone Research, Dr. Ingersoll served as a senior leader at a global legal services and consulting provider, overseeing enterprise AI and innovation strategy across product, engineering, security, and operations functions. Previously, she was Practice Innovation Counsel at Ogletree Deakins, focusing on AI product integration and firmwide governance.",
+      "relevance_score": 0.083418936,
+      "source_quality": "research_org",
+      "stale": false,
+      "source_id": "web-51f4438a8ec64393960160428cf2a290",
+      "agent_name": "Competitor Agent",
+      "query": "AI tutor services regulation United States MBA",
+      "retrieved_at": "2026-09-13T11:39:07.384408Z"
+    },
+    {
+      "title": "Southwestern Law School Launches Schoolwide Introduction to AI & Law Program for 2026 in Partnership with Wickard.ai | Southwestern Law School",
+      "url": "https://www.swlaw.edu/swlawblog/202601/southwestern-law-school-launches-schoolwide-introduction-ai-law-program-2026",
+      "publisher": "www.swlaw.edu",
+      "published_date": null,
+      "summary": "Los Angeles, CA- Southwestern Law School announced today the launch of Introduction to AI & Law, a new schoolwide program designed to equip law students at every stage of their legal education with practical, job-ready training in artificial intelligence and its role in modern legal practice.\n\nThe program, developed in partnership with Wickard.ai, reflects the rapid integration of artificial intelligence across law firms, in house legal departments, courts, and regulated industries. [...] Introduction to AI & Law is open to all J.D. and LL.M. students at Southwestern Law School. Instruction focuses on how AI is used in legal practice, including research, drafting, and litigation support, as well as identifying and managing risks such as hallucinations, confidentiality concerns, and ethical and professional responsibility obligations. The program emphasizes practical, practice ready skills. [...] Wickard.ai is the nation’s leading provider of legal AI education and training. In 2025, Wickard pioneered AI curriculum development at nine law schools across the country, including designing and teaching the nation’s first required AI course at Case Western Reserve University School of Law. Wickard also launched the first legal AI education program in East Africa at Addis Ababa University School of Law, advancing its mission to equip lawyers and law students worldwide with the skills needed",
+      "relevance_score": 0.0281809,
+      "source_quality": "research_org",
+      "stale": false,
+      "source_id": "web-d94efe7695aa460f9c041e648487fe79",
+      "agent_name": "Competitor Agent",
+      "query": "AI tutor services regulation United States MBA",
+      "retrieved_at": "2026-09-13T11:39:07.384408Z"
+    },
+    {
+      "title": "Touro Law - Leading the Future",
+      "url": "https://www.tourolaw.edu/abouttourolaw/featured-content/90/profile",
+      "publisher": "www.tourolaw.edu",
+      "published_date": null,
+      "summary": "skip to main content\n\n#### Menu\n\nTouro University Logo\n\n Touro One\n TLC Web\n TLC Email\n Make a Gift\n\n# Leading the Future\n\n## Learn more about the program that's right for you\n\n\n\n## Request Information",
+      "relevance_score": 0.014021744,
+      "source_quality": "research_org",
+      "stale": false,
+      "source_id": "web-b8804864ec094b0dbd6398c940072821",
+      "agent_name": "Competitor Agent",
+      "query": "AI tutor services regulation United States MBA",
+      "retrieved_at": "2026-09-13T11:39:07.384408Z"
+    }
+  ],
+  "web_search_warnings": [],
+  "current_step": "research",
+  "product_acceptance": {
+    "policy": "product-per-agent-one-correction-v1",
+    "corrections_allowed_per_agent": 1,
+    "corrections": {},
+    "correction_events": [],
+    "unresolved_issues": [],
+    "status": "accepted"
+  }
+}

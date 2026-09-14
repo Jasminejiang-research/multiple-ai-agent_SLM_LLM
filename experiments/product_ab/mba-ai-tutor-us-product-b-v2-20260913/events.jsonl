@@ -1,0 +1,51 @@
+{"at": "2026-09-13T11:38:59.548828+00:00", "arm": "B", "kind": "arm_start"}
+{"at": "2026-09-13T11:38:59.598116+00:00", "arm": "B", "kind": "node_complete", "node": "validator"}
+{"at": "2026-09-13T11:38:59.605448+00:00", "arm": "B", "kind": "node_complete", "node": "supervisor"}
+{"at": "2026-09-13T11:38:59.713416+00:00", "arm": "B", "kind": "llm_dispatch", "call": 1, "reserved_usd": 0.125145, "admission": {"input_bound": 7550, "output_bound": 49152, "total_bound": 56702, "reserved_usd": 0.125145, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:39:02.607890+00:00", "arm": "B", "kind": "llm_response", "call": 1, "tokens": 1070, "cost_usd": 0.0013968, "seconds": 2.8910000000032596}
+{"at": "2026-09-13T11:39:02.607890+00:00", "arm": "B", "kind": "web_dispatch", "query": "MBA student AI tutor demand statistics United States", "allowed_domains": null, "recency": "last_12_months"}
+{"at": "2026-09-13T11:39:05.934349+00:00", "arm": "B", "kind": "web_response", "results": 5}
+{"at": "2026-09-13T11:39:05.934349+00:00", "arm": "B", "kind": "web_dispatch", "query": "AI tutor services regulation United States MBA", "allowed_domains": null, "recency": "last_12_months"}
+{"at": "2026-09-13T11:39:07.384408+00:00", "arm": "B", "kind": "web_response", "results": 5}
+{"at": "2026-09-13T11:39:07.384408+00:00", "arm": "B", "kind": "llm_dispatch", "call": 2, "reserved_usd": 0.1338426, "admission": {"input_bound": 36542, "output_bound": 49152, "total_bound": 85694, "reserved_usd": 0.1338426, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:39:26.667502+00:00", "arm": "B", "kind": "llm_response", "call": 2, "tokens": 11988, "cost_usd": 0.0122292, "seconds": 19.28200000000652}
+{"at": "2026-09-13T11:39:26.677602+00:00", "arm": "B", "kind": "node_complete", "node": "research"}
+{"at": "2026-09-13T11:39:26.763656+00:00", "arm": "B", "kind": "llm_dispatch", "call": 3, "reserved_usd": 0.1312758, "admission": {"input_bound": 27986, "output_bound": 49152, "total_bound": 77138, "reserved_usd": 0.1312758, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:39:48.167520+00:00", "arm": "B", "kind": "llm_response", "call": 3, "tokens": 10250, "cost_usd": 0.013877, "seconds": 21.40700000000652}
+{"at": "2026-09-13T11:39:48.212128+00:00", "arm": "B", "kind": "node_complete", "node": "strategy"}
+{"at": "2026-09-13T11:39:48.297672+00:00", "arm": "B", "kind": "llm_dispatch", "call": 4, "reserved_usd": 0.1315905, "admission": {"input_bound": 29035, "output_bound": 49152, "total_bound": 78187, "reserved_usd": 0.1315905, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:39:53.340662+00:00", "arm": "B", "kind": "llm_response", "call": 4, "tokens": 6079, "cost_usd": 0.0039159, "seconds": 5.0460000000020955}
+{"at": "2026-09-13T11:39:53.349259+00:00", "arm": "B", "kind": "llm_dispatch", "call": 5, "reserved_usd": 0.13503510000000002, "admission": {"input_bound": 40517, "output_bound": 49152, "total_bound": 89669, "reserved_usd": 0.13503510000000002, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:40:10.648188+00:00", "arm": "B", "kind": "llm_response", "call": 5, "tokens": 11275, "cost_usd": 0.011601700000000001, "seconds": 17.296999999991385}
+{"at": "2026-09-13T11:40:10.648188+00:00", "arm": "B", "kind": "llm_dispatch", "call": 6, "reserved_usd": 0.13959570000000002, "admission": {"input_bound": 55719, "output_bound": 49152, "total_bound": 104871, "reserved_usd": 0.13959570000000002, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:40:33.697905+00:00", "arm": "B", "kind": "llm_response", "call": 6, "tokens": 16121, "cost_usd": 0.0172157, "seconds": 23.047000000005937}
+{"at": "2026-09-13T11:40:33.700558+00:00", "arm": "B", "kind": "node_complete", "node": "finance"}
+{"at": "2026-09-13T11:40:34.353267+00:00", "arm": "B", "kind": "node_complete", "node": "rag_retrieval"}
+{"at": "2026-09-13T11:40:34.464291+00:00", "arm": "B", "kind": "llm_dispatch", "call": 7, "reserved_usd": 0.15225539999999999, "admission": {"input_bound": 97918, "output_bound": 49152, "total_bound": 147070, "reserved_usd": 0.15225539999999999, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:40:57.441597+00:00", "arm": "B", "kind": "llm_response", "call": 7, "tokens": 27293, "cost_usd": 0.0204485, "seconds": 22.985000000000582}
+{"at": "2026-09-13T11:40:57.448782+00:00", "arm": "B", "kind": "llm_dispatch", "call": 8, "reserved_usd": 0.13669379999999998, "admission": {"input_bound": 46046, "output_bound": 49152, "total_bound": 95198, "reserved_usd": 0.13669379999999998, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:41:24.718696+00:00", "arm": "B", "kind": "llm_response", "call": 8, "tokens": 17674, "cost_usd": 0.019974, "seconds": 27.264999999999418}
+{"at": "2026-09-13T11:41:24.783006+00:00", "arm": "B", "kind": "llm_dispatch", "call": 9, "reserved_usd": 0.15204810000000002, "admission": {"input_bound": 97227, "output_bound": 49152, "total_bound": 146379, "reserved_usd": 0.15204810000000002, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:41:58.990795+00:00", "arm": "B", "kind": "llm_response", "call": 9, "tokens": 30560, "cost_usd": 0.0286336, "seconds": 34.21899999999732}
+{"at": "2026-09-13T11:41:58.998245+00:00", "arm": "B", "kind": "llm_dispatch", "call": 10, "reserved_usd": 0.1520589, "admission": {"input_bound": 97263, "output_bound": 49152, "total_bound": 146415, "reserved_usd": 0.1520589, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:42:28.499632+00:00", "arm": "B", "kind": "llm_response", "call": 10, "tokens": 28962, "cost_usd": 0.0246232, "seconds": 29.5}
+{"at": "2026-09-13T11:42:28.516198+00:00", "arm": "B", "kind": "llm_dispatch", "call": 11, "reserved_usd": 0.1520544, "admission": {"input_bound": 97248, "output_bound": 49152, "total_bound": 146400, "reserved_usd": 0.1520544, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:42:47.565406+00:00", "arm": "B", "kind": "llm_response", "call": 11, "tokens": 26135, "cost_usd": 0.0175645, "seconds": 19.063000000009197}
+{"at": "2026-09-13T11:42:47.597728+00:00", "arm": "B", "kind": "node_complete", "node": "writer"}
+{"at": "2026-09-13T11:42:47.615491+00:00", "arm": "B", "kind": "node_complete", "node": "seal_writer_recovery"}
+{"at": "2026-09-13T11:42:47.697752+00:00", "arm": "B", "kind": "llm_dispatch", "call": 12, "reserved_usd": 0.147285, "admission": {"input_bound": 81350, "output_bound": 49152, "total_bound": 130502, "reserved_usd": 0.147285, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:43:21.598403+00:00", "arm": "B", "kind": "llm_response", "call": 12, "tokens": 27785, "cost_usd": 0.026426099999999998, "seconds": 33.90600000000268}
+{"at": "2026-09-13T11:43:21.616175+00:00", "arm": "B", "kind": "node_complete", "node": "critic"}
+{"at": "2026-09-13T11:43:21.710449+00:00", "arm": "B", "kind": "llm_dispatch", "call": 13, "reserved_usd": 0.1480869, "admission": {"input_bound": 84023, "output_bound": 49152, "total_bound": 133175, "reserved_usd": 0.1480869, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:44:08.850503+00:00", "arm": "B", "kind": "llm_response", "call": 13, "tokens": 31946, "cost_usd": 0.0369364, "seconds": 47.14100000000326}
+{"at": "2026-09-13T11:44:08.866035+00:00", "arm": "B", "kind": "llm_dispatch", "call": 14, "reserved_usd": 0.147807, "admission": {"input_bound": 83090, "output_bound": 49152, "total_bound": 132242, "reserved_usd": 0.147807, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:44:37.680972+00:00", "arm": "B", "kind": "llm_response", "call": 14, "tokens": 27070, "cost_usd": 0.0248432, "seconds": 28.812000000005355}
+{"at": "2026-09-13T11:44:37.697669+00:00", "arm": "B", "kind": "llm_dispatch", "call": 15, "reserved_usd": 0.1478178, "admission": {"input_bound": 83126, "output_bound": 49152, "total_bound": 132278, "reserved_usd": 0.1478178, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:45:01.391876+00:00", "arm": "B", "kind": "llm_response", "call": 15, "tokens": 25289, "cost_usd": 0.0203753, "seconds": 23.671999999991385}
+{"at": "2026-09-13T11:45:01.414473+00:00", "arm": "B", "kind": "llm_dispatch", "call": 16, "reserved_usd": 0.1491201, "admission": {"input_bound": 87467, "output_bound": 49152, "total_bound": 136619, "reserved_usd": 0.1491201, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:45:15.031572+00:00", "arm": "B", "kind": "llm_response", "call": 16, "tokens": 23836, "cost_usd": 0.014034599999999998, "seconds": 13.60899999999674}
+{"at": "2026-09-13T11:45:15.081542+00:00", "arm": "B", "kind": "llm_dispatch", "call": 17, "reserved_usd": 0.14781329999999998, "admission": {"input_bound": 83111, "output_bound": 49152, "total_bound": 132263, "reserved_usd": 0.14781329999999998, "method": "utf8_upper_bound_not_measured_tokens", "measured_content_tokens": null}}
+{"at": "2026-09-13T11:45:38.253042+00:00", "arm": "B", "kind": "llm_response", "call": 17, "tokens": 24745, "cost_usd": 0.0190241, "seconds": 23.171999999991385}
+{"at": "2026-09-13T11:45:38.279999+00:00", "arm": "B", "kind": "node_complete", "node": "revision"}
+{"at": "2026-09-13T11:45:38.298452+00:00", "arm": "B", "kind": "node_complete", "node": "export"}
+{"at": "2026-09-13T11:45:38.313649+00:00", "arm": "B", "kind": "arm_end", "status": "accepted_with_issues"}

@@ -1,0 +1,49 @@
+{
+  "version": "s6-gemini-smoke-approval-v1",
+  "status": "approved_with_hard_caps_not_yet_executed",
+  "approved_at": "2026-09-07",
+  "approval_basis": "User explicitly requested that the assistant state the expected calls and maximum fee, then approve the smoke.",
+  "scope": {
+    "case_id": "ai_education",
+    "conditions": ["A", "B", "C"],
+    "provider": "gemini",
+    "model_exact_id": "gemini-2.5-flash",
+    "service_tier": "standard",
+    "grounding_or_paid_tools": false,
+    "formal_eligible": false
+  },
+  "calls": {
+    "normal_pass_path": {"A": 1, "B": 5, "C": 8, "total": 14},
+    "all_semantic_revisions_path": {"A": 1, "B": 6, "C": 12, "total": 19},
+    "absolute_hard_cap": {"per_smoke": 18, "three_smokes_total": 54}
+  },
+  "tokens": {
+    "normal_planning_envelope": {
+      "input": 48700,
+      "output_including_thinking": 9540,
+      "total": 58240
+    },
+    "absolute_hard_cap": {"per_smoke_total": 160000, "three_smokes_total": 480000}
+  },
+  "pricing_usd_per_million_tokens": {
+    "input_text": 0.30,
+    "output_including_thinking": 2.50,
+    "source": "https://ai.google.dev/gemini-api/docs/pricing"
+  },
+  "cost_usd": {
+    "normal_planning_envelope": 0.03846,
+    "absolute_conservative_maximum": 1.20,
+    "maximum_method": "Treat all 480000 capped tokens as output tokens at the higher standard-tier rate.",
+    "tax_currency_conversion_excluded": true
+  },
+  "hard_conditions": [
+    "No model substitution",
+    "No priority tier",
+    "No Google Search, Maps, or other paid tool",
+    "No calls beyond the three AI education A/B/C non-formal smokes",
+    "Stop before any request that would exceed 54 requests, 480000 total tokens, or USD 1.20",
+    "Unknown usage is retained conservatively and is not refunded",
+    "Any scope or fee-cap change requires user confirmation"
+  ],
+  "execution_state": "not_started"
+}

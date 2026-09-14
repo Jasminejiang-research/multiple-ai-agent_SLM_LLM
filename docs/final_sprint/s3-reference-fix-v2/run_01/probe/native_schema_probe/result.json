@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "requested_entries": 100,
+  "schema_max_items": 2,
+  "observed_entries": 2,
+  "distinct_entries": 1,
+  "raw_response": {
+    "model": "granite-h-micro-32k",
+    "created_at": "2026-09-07T08:15:42.8066768Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\n  \"financial_value_ids\": [\n    \"starting_cash\",\n    \"starting_cash\" ]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 5138114200,
+    "load_duration": 2103230900,
+    "prompt_eval_count": 53,
+    "prompt_eval_duration": 1359393000,
+    "eval_count": 22,
+    "eval_duration": 1670671000
+  },
+  "claim": "Observed maxItems behavior only; proposal uniqueness is independently validated in code.",
+  "budget": {
+    "max_requests": 31,
+    "max_total_tokens": 462136,
+    "request_count": 1,
+    "retry_count": 0,
+    "remaining_requests": 30,
+    "remaining_tokens": 462061,
+    "exhausted": false,
+    "charged_total_tokens": 75,
+    "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+    "actual_prompt_tokens_known": 53,
+    "actual_output_tokens_known": 22,
+    "actual_total_tokens_known": 75,
+    "usage_missing_calls": 0,
+    "transport_retry_count": 0,
+    "structure_repair_request_count": 0,
+    "revision_request_count": 0,
+    "run_elapsed_seconds": 5.187999999994645,
+    "node_elapsed_seconds": null,
+    "node_scope_id": null
+  }
+}

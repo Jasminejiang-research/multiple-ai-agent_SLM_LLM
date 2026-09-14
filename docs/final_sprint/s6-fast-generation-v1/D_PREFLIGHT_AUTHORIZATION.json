@@ -1,0 +1,32 @@
+{
+  "version": "s6-d-preflight-authorization-v1",
+  "authorized_at": "2026-09-07",
+  "approved": true,
+  "formal_eligible": false,
+  "user_instruction": "我批准 D 非正式预检：AI education × D、Granite CPU/32K、最长3600秒、最多18次请求、总计160,000 tokens、单次输出最多1,800 tokens。请验证11434已释放后执行D预检，再执行已批准的Gemini A/B/C smoke并共同重冻结；不要启动正式S5。",
+  "case_id": "ai_education",
+  "condition": "D",
+  "provider": "local",
+  "model_exact_id": "granite-h-micro-32k@eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+  "context_tokens": 32768,
+  "hard_limits": {
+    "run_seconds": 3600,
+    "max_requests": 18,
+    "max_total_tokens": 160000,
+    "max_output_tokens_per_request": 1800
+  },
+  "proposal_path": "docs/final_sprint/s6-fast-generation-v1/D_PREFLIGHT_PROPOSAL.json",
+  "proposal_sha256": "fa08cd572dc04ce758ad0ebcb492d39384383d0cfef9a605674247dac1a31c42",
+  "endpoint_gate": {
+    "endpoint": "http://127.0.0.1:11434",
+    "checked_at": "2026-09-07T21:09:51.0368937+02:00",
+    "listeners": 0,
+    "active_project_leases": 0,
+    "passed": true
+  },
+  "prohibitions": [
+    "No formal S5 execution",
+    "No model, context, protocol, case, or budget expansion",
+    "No reset or refund of historical unknown usage"
+  ]
+}

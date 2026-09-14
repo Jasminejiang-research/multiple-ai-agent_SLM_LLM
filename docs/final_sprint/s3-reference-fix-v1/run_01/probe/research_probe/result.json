@@ -1,0 +1,26 @@
+{
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "market_trends[0]: claim content anchor not found",
+  "budget": {
+    "max_requests": 33,
+    "max_total_tokens": 476022,
+    "request_count": 2,
+    "retry_count": 0,
+    "remaining_requests": 31,
+    "remaining_tokens": 462136,
+    "exhausted": false,
+    "charged_total_tokens": 13886,
+    "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+    "actual_prompt_tokens_known": 9131,
+    "actual_output_tokens_known": 4755,
+    "actual_total_tokens_known": 13886,
+    "usage_missing_calls": 0,
+    "transport_retry_count": 0,
+    "structure_repair_request_count": 1,
+    "revision_request_count": 0,
+    "run_elapsed_seconds": 696.3910000000033,
+    "node_elapsed_seconds": null,
+    "node_scope_id": null
+  }
+}

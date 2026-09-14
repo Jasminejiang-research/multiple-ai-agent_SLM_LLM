@@ -1,0 +1,26 @@
+{
+  "ready": false,
+  "blockers": [
+    "formal freeze pending (S4 is engineering/offline only)",
+    "approval/evidence pending: cases",
+    "approval/evidence pending: common_budget",
+    "approval/evidence pending: D_preflight",
+    "approval/evidence pending: gemini_quota_and_spend",
+    "approval/evidence pending: S1",
+    "approval/evidence pending: S2",
+    "approval/evidence pending: S4",
+    "approval/evidence pending: formal_execution",
+    "actual code/prompt/config working-tree snapshot not frozen or changed",
+    "Python/provider/framework runtime versions not frozen or changed",
+    "ai_education: complete case/brief awaits user approval",
+    "intelligent_ring: complete case/brief awaits user approval",
+    "complete input/snapshot inventory not frozen or changed",
+    "complete explicit A-D configs pending",
+    "approved experiment stop limit pending: total_request_limit",
+    "approved experiment stop limit pending: total_token_limit",
+    "complete D real preflight and matching common config pending",
+    "A real smoke with matching common config pending",
+    "B real smoke with matching common config pending",
+    "C real smoke with matching common config pending"
+  ]
+}

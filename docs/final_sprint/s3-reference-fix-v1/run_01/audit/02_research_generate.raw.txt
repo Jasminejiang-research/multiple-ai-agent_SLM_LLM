@@ -1,0 +1,148 @@
+{
+  "analysis_summary": "Based on the provided evidence packet, the analysis assesses market trends, customers, competition, and financial viability for an AI tutoring service targeted at MBA students. The analysis is grounded in the supplied evidence, with all claims traceable to specific source IDs and anchors. The financial assumptions are proposed by the model and await user approval. The analysis identifies key gaps in evidence and outlines the necessary steps for validation before proceeding to a full launch.",
+  "market_trends": [
+    {
+      "topic": "Adult MBA enrollment trends",
+      "finding": "Historical data shows a 16% increase in master's degrees (including MBA-equivalent programs) from 2011-22, but this does not directly translate to addressable demand for the proposed AI tutoring service.",
+      "rationale": "The source (EDU-02) provides historical graduate degree completions but does not specify MBA enrollments or addressable demand for personalized AI coaching. The data is limited to overall graduate degree trends, not MBA-specific demand.",
+      "claims": [
+        {
+          "claim_id": "market_trends_mba_enrollment",
+          "parent_claim_id": null,
+          "claim_text": "Historical MBA enrollment growth does not guarantee demand for AI tutoring service.",
+          "claim_type": "assumption",
+          "claim_domain": "market_trends",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-02"],
+          "source_support": "partial",
+          "source_quality": 0.7,
+          "source_recency": 0.8,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "Between 2011–22, the total number of master’s degrees conferred increased by 16 percent, from 756,000 to 880,200 degrees. In 2021–22, postsecondary institutions conferred 880,200 master’s degrees. Of the master’s degrees conferred, 69 percent were concentrated in five fields of study: business (205,800 degrees, 23 percent).",
+          "source_anchors": [
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C1",
+              "line_start": 299,
+              "line_end": 305,
+              "snapshot_sha256": "bf48404477a10c46e90e57e6aa3273c8cc0b12c6efb0d0566f9f877363dfb6c7",
+              "quote": "Between 2011–12 and 2021–22, the total number of master’s degrees conferred increased by 16 percent, from 756,000 to 880,200 degrees. During this time, the number of doctor’s degrees conferred increased 20 percent, from 170,200 to 203,900 degrees. In 2021–22, postsecondary institutions in the United States1 conferred 1.1 million graduate degrees, an increase of 17 percent since 2011–12. These included 880,200 master’s degrees and 203,900 doctor’s degrees in 2021–22."
+            }
+          ],
+          "financial_value_ids": ["base.monthly_revenue", "base.monthly_variable_cost", "base.monthly_operating_result", "base.ending_cash", "base.annual_cash_change", "base.break_even_users", "high.monthly_revenue", "high.monthly_variable_cost", "high.monthly_operating_result", "high.ending_cash", "high.annual_cash_change", "high.break_even_users", "low.monthly_revenue", "low.monthly_variable_cost", "low.monthly_operating_result", "low.ending_cash", "low.annual_cash_change", "low.break_even_users", "starting_cash", "fixed_operating_cost", "marketing_cost", "one_time_setup", "subscription_price", "average_paying_users.base", "average_paying_users.high", "average_paying_users.low", "months", "one_time_setup", "variable_cost", "fixed_operating_cost", "marketing_cost"],
+          "premise": "Assuming historical MBA enrollment growth translates to demand for AI tutoring is an unsupported assumption. The evidence does not differentiate between overall graduate degree completions and MBA-specific demand, nor does it provide data on willingness to pay or adoption rates for AI tutoring in this segment.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant",
+      "confidence": "medium"
+    }
+  ],
+  "customer_notes": [
+    {
+      "topic": "Target customer characteristics",
+      "finding": "The target market consists of US adults aged 18+ enrolled in or applying to MBA programs, with business-school instructors as potential institutional buyers. However, the evidence does not provide specific data on the size of this segment, willingness to pay for AI tutoring, or adoption rates.",
+      "rationale": "The evidence packet includes historical graduate degree completions (EDU-02) but lacks granular data on MBA enrollments, market size, or consumer behavior relevant to AI tutoring. The target customer segment is defined broadly without quantifiable metrics.",
+      "claims": [
+        {
+          "claim_id": "customer_characteristics",
+          "parent_claim_id": null,
+          "claim_text": "Target customer segment lacks quantifiable data on size, willingness to pay, and adoption rates.",
+          "claim_type": "assumption",
+          "claim_domain": "customer_notes",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-02"],
+          "source_support": "partial",
+          "source_quality": 0.7,
+          "source_recency": 0.8,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "The target customer is defined as US adults aged 18+ enrolled in or applying to MBA/business graduate programs; business-school instructors are potential institutional buyers.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C1",
+              "line_start": 299,
+              "line_end": 305,
+              "snapshot_sha256": "bf48404477a10c46e90e57e6aa3273c8cc0b12c6efb0d0566f9f877363dfb6c7",
+              "quote": "Between 2011–12 and 2021–22, the total number of master’s degrees conferred increased by 16 percent, from 756,000 to 880,200 degrees. In 2021–22, postsecondary institutions in the United States1 conferred 1.1 million graduate degrees, an increase of 17 percent since 2011–12. These included 880,200 master’s degrees and 203,900 doctor’s degrees in 2021–22."
+            }
+          ],
+          "financial_value_ids": ["base.monthly_revenue", "base.monthly_variable_cost", "base.monthly_operating_result", "base.ending_cash", "base.annual_cash_change", "base.break_even_users", "high.monthly_revenue", "high.monthly_variable_cost", "high.monthly_operating_result", "high.ending_cash", "high.annual_cash_change", "high.break_even_users", "low.monthly_revenue", "low.monthly_variable_cost", "low.monthly_operating_result", "low.ending_cash", "low.annual_cash_change", "low.break_even_users", "starting_cash", "fixed_operating_cost", "marketing_cost", "one_time_setup", "subscription_price", "average_paying_users.base", "average_paying_users.high", "average_paying_users.low", "months", "one_time_setup", "variable_cost"],
+          "premise": "Without concrete data on the target segment's size, willingness to pay, or adoption rates, assumptions about market demand and financial viability remain speculative. The evidence packet does not validate these critical assumptions.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "no_evidence",
+      "confidence": "low"
+    }
+  ],
+  "competitor_assumptions": [
+    {
+      "topic": "Competitor landscape",
+      "finding": "The only competitor mentioned is Khanmigo, which offers adjacent tutoring services but is not demonstrated to substitute for MBA-specific case coaching. No detailed competitor analysis is provided.",
+      "rationale": "The competitor list (competitor_assumptions) contains only Khanmigo, which is described as an adjacent tutoring service without evidence of substitutability for MBA-specific case coaching. The evidence packet does not provide a comprehensive competitor analysis, limiting the ability to assess differentiation and competitive positioning.",
+      "claims": [
+        {
+          "claim_id": "competitor_assumptions_khanmigo",
+          "parent_claim_id": null,
+          "claim_text": "Khanmigo is the only known competitor; its services are adjacent but not a direct substitute for MBA-specific case coaching.",
+          "claim_type": "assumption",
+          "claim_domain": "competitor_assumptions",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-01"],
+          "source_support": "direct",
+          "source_quality": 0.85,
+          "source_recency": 0.9,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "competitor_assumptions",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you $4/month $44/year Save $4 w/ annual Write and debate with guided prompts and immediate feedback. Advance in your career with coaching. Hone coding skills with real-time feedback. Access your chat history. Select plan *Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": ["subscription_price", "marketing_cost"],
+          "premise": "Assuming Khanmigo is the only competitor without further validation is an unsupported assumption. The evidence packet lacks a detailed competitor landscape, which is critical for assessing differentiation and competitive positioning.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant",
+      "confidence": "medium"
+    }
+  ],
+  "needs_human_review": [
+    "Validate MBA enrollment data and addressable demand for AI tutoring.",
+    "Conduct willingness-to-pay surveys among target customers.",
+    "Perform a detailed competitor analysis beyond Khanmigo.",
+    "Gather quantitative data on adoption rates and user engagement for AI tutoring in MBA programs.",
+    "Validate financial assumptions with actual user data or pilot results."
+  ]
+}

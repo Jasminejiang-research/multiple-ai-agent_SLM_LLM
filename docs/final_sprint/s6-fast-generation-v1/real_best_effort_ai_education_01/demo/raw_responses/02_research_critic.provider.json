@@ -1,0 +1,17 @@
+{
+  "model": "granite-h-micro-32k",
+  "created_at": "2026-09-07T20:24:09.7985731Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"score\": 3,\n  \"issues\": \"1. Target definition could be more precise about the specific enrollment status of US adults. 2. Alternative description lacks supporting evidence ID.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10694890400,
+  "load_duration": 3267500,
+  "prompt_eval_count": 277,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 6884984000,
+  "eval_count": 42,
+  "eval_duration": 3755122000
+}

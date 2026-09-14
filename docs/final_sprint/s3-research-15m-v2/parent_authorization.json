@@ -1,0 +1,21 @@
+{
+  "scope": "ai_education_slm_independent_90m_validation",
+  "approved": true,
+  "approved_limits": {
+    "run_seconds": 5400.0,
+    "node_seconds": 5400.0,
+    "request_seconds": 5400.0,
+    "max_output_tokens": 8192,
+    "max_requests": 36,
+    "max_total_tokens": 500000,
+    "max_prompt_chars": 90000
+  },
+  "expected_model_digest": "eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+  "expected_ollama_version": "0.33.2",
+  "formal_eligible": false,
+  "approved_at_utc": "2026-09-07T12:19:05.490945+00:00",
+  "user_confirmation": "批准新的90分钟完整D复测",
+  "approved_question": "一次新的独立90分钟完整D复测（AI教育、同一SLM、单次8192 tokens、最多36请求/50万tokens，旧消耗保留）",
+  "approval_source": "Explicit user reply to the bounded validation proposal in the current task",
+  "old_consumption_preserved": true
+}

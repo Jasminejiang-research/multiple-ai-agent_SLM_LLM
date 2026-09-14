@@ -1,0 +1,2 @@
+{"event_id": "3d1d4f6efffd470f82d584e159ee338e", "occurred_at_utc": "2026-09-08T11:38:50.125380+00:00", "kind": "policy_not_run", "planned_id": "ai_education-D", "state": "not_run_preflight_no_go", "reason": "user-approved LLM-only branch after preserved D no_go"}
+{"event_id": "646cfa52377546778f02c2dcc7d0ae7b", "occurred_at_utc": "2026-09-08T11:38:50.127372+00:00", "kind": "policy_not_run", "planned_id": "intelligent_ring-D", "state": "not_run_preflight_no_go", "reason": "user-approved LLM-only branch after preserved D no_go"}

@@ -1,0 +1,42 @@
+"""Offline sizing of the verified finance ledger and illustrative fixtures."""
+import argparse
+import json
+from pathlib import Path
+import sys
+
+parser=argparse.ArgumentParser()
+parser.add_argument('--root',type=Path,required=True)
+parser.add_argument('--output',type=Path,required=True)
+args=parser.parse_args()
+sys.path.insert(0,str(args.root))
+from workflow.contract_context import ContractContext
+from workflow.generation_batches import CONTRACT_BATCH_MODELS
+from evaluation.s2_fixtures import synthetic_artifact
+from slm.granite_preflight import load_context_tokenizer
+
+tokenizer=load_context_tokenizer(args.root/'docs/final_sprint/s3-v1/setup/tokenizer.json',
+    args.root/'docs/final_sprint/s3-v1/setup/tokenizer_provenance.json')
+config=json.loads((args.root/'slm/configs/granite_preflight_v1.json').read_text())
+def size(data):
+    text=json.dumps(data,ensure_ascii=False,separators=(',',':'))
+    return dict(chars=len(text),tokens=len(tokenizer.encode(text,add_special_tokens=False).ids))
+result=dict(kind='offline_contract_sizing_not_model_output',max_output_tokens=config['max_output_tokens'],
+    qualification=False,cases={},formal_runs_started=0,
+    interpretation='The financial ledger is contract-validated. Full synthetic fixtures are illustrative size examples, not accepted business artifacts. Token counts use compact canonical JSON, not a proof of the absolute minimum across every possible serialization. No generation or scope/config changes.')
+for case in ('ai_education','intelligent_ring'):
+    ctx=ContractContext.from_case(args.root/'docs/final_sprint/s0-v1',case,condition='D')
+    ledger=ctx.finance.expected_values()
+    ctx.finance.validate(ledger)
+    rows=[row.model_dump(mode='json') for row in ledger]
+    fixtures={role:synthetic_artifact(ctx,role,version=1,inputs={}) for role in ('research','strategy','finance','writer')}
+    info=dict(required_financial_rows=len(rows),financial_ledger_only=size(rows),
+        synthetic_references={role:size(data) for role,data in fixtures.items()},writer_batches=[])
+    # Only the ledger is treated as a frozen required structure; fixtures are size examples.
+    for index,schema in enumerate(CONTRACT_BATCH_MODELS,1):
+        data={key:fixtures['writer'][key] for key in schema.model_fields}
+        info['writer_batches'].append(dict(batch=index,**size(data)))
+    result['cases'][case]=info
+if args.output.exists(): raise SystemExit('Refuse to replace an existing audit')
+args.output.parent.mkdir(parents=True,exist_ok=True)
+args.output.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+print(json.dumps(result,ensure_ascii=False,indent=2))

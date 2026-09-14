@@ -1,0 +1,5 @@
+{
+  "financial_value_ids": [
+    "starting_cash",
+    "starting_cash" ]
+}

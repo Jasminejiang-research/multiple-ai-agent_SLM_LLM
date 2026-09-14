@@ -1,0 +1,9 @@
+{
+  "observed_at_utc": "2026-09-07T07:01:32.7774697Z",
+  "model_processes": 0,
+  "listeners": 0,
+  "active_leases": 0,
+  "inference_calls": 2,
+  "formal_runs_started": 0,
+  "gemini_calls": 0
+}

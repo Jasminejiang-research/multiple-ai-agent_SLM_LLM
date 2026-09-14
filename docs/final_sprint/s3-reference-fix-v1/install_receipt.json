@@ -1,0 +1,53 @@
+{
+  "installed_at_utc": "2026-09-07T07:46:45.9384896Z",
+  "changes": [
+    {
+      "path": "evaluation/s2_fixtures.py",
+      "before_sha256": "37ed5fb6f3cc1bf2a23e874dffc2c4f616363943e00eeece02490277fb0e4496",
+      "after_sha256": "8faf2394ed6d5c4dd9f488de2525d8b39b05f854aa820f02083b2b61cae09347"
+    },
+    {
+      "path": "schemas/contract_outputs.py",
+      "before_sha256": "454ece510c6ecd8f372fc70f9c7176899f13d29221662f1b74d76c96b5a7c911",
+      "after_sha256": "54564c7d3cb2cfc69bffa4ee5f00554a8ece157a7906b1d32b2ef3b3665309e1"
+    },
+    {
+      "path": "schemas/evidence.py",
+      "before_sha256": "bac43ef43dc74c16226f41ab0d3976d628635df3f5c34024d8d3bf1f93cc1ee9",
+      "after_sha256": "a78900f486238cf77d445a60146b3fcb72efa60d35bef471a21bca30b7adc824"
+    },
+    {
+      "path": "slm/tests/test_granite_s3.py",
+      "before_sha256": "6e2d972a43dc89849d859cb441bbfaa1a53bc9e95cdcf2e6375050fd1adef93f",
+      "after_sha256": "bb10bd951b881e306f492c2f6a24e168b79858f0de8922e3d3d3961b0596959d"
+    },
+    {
+      "path": "tests/test_s1_contract.py",
+      "before_sha256": "842a50bd15462e9df5888af5bc3761a05f8246f7d148f605f3b7f008a43be29b",
+      "after_sha256": "3b4a68b26b4e0bc0961540ef23a1705c7df141996598bf80856d39b1f42c7e1a"
+    },
+    {
+      "path": "workflow/contract_generation.py",
+      "before_sha256": "6efd236c5a057236d659adc0773a1d2a28de99da1d7a5a07ca5cb64b53976da5",
+      "after_sha256": "591e41434c6cb6b583f03889cfa103424208561458fa9df621acd5b5520a15ec"
+    },
+    {
+      "path": "workflow/generation_constraints.py",
+      "before_sha256": null,
+      "after_sha256": "ed058028d4fc3dd33d0aafb2a1435fd6066c52a8b94c654047d83d86dd5b6cd2"
+    },
+    {
+      "path": "tests/test_generation_constraints.py",
+      "before_sha256": null,
+      "after_sha256": "0c1f50949a13d82bafd4d10ea006b00ac313a02701a0a9e729726ea0f891bb22"
+    },
+    {
+      "path": "slm/tests/test_reference_bounds.py",
+      "before_sha256": null,
+      "after_sha256": "1c2363233c4becfe8868c21d1678c236d8b195398b6ed44e31e22bb99440c01a"
+    }
+  ],
+  "runtime_files": 251,
+  "model_calls": 0,
+  "public_config_changed": false
+}

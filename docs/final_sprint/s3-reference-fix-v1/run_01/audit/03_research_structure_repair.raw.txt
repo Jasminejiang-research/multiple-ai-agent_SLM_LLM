@@ -1,0 +1,187 @@
+{
+  "analysis_summary": "Based on the provided evidence packet, the following market analysis for the AI Tutor for MBA Students pilot is conducted. All claims are traced to source IDs and anchors from the packet. Financial assumptions are proposed by the model and await user approval. Evidence gaps are identified.",
+  "market_trends": [
+    {
+      "topic": "Adult MBA Learner Market",
+      "finding": "The US market for adult learners pursuing MBA degrees is modest, with only ~880,000 master's degrees conferred annually (source EDU-02). This represents a limited addressable market for a paid subscription service.",
+      "rationale": "Source EDU-02 provides historical graduate degree completions, showing a 16% increase from 2011-22 but no indication of future growth or MBA-specific demand.",
+      "claims": [
+        {
+          "claim_id": "market_trends_adult_mba_demand",
+          "parent_claim_id": null,
+          "claim_text": "The adult MBA learner market is limited and not growing rapidly.",
+          "claim_type": "factual",
+          "claim_domain": "market_trends",
+          "evidence_status": "sourced_fact",
+          "source_ids": ["EDU-02"],
+          "source_support": "direct",
+          "source_quality": 0.85,
+          "source_recency": 0.8,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "partial_support",
+          "content_anchor": "Between 2011–22, the total number of master’s degrees conferred increased by 16 percent, from 756,000 to 880,200 degrees. In 2021–22, postsecondary institutions conferred 880,200 master’s degrees (source EDU-02).",
+          "source_anchors": [
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C1",
+              "line_start": 299,
+              "line_end": 305,
+              "snapshot_sha256": "bf48404477a10c46e90e57e6aa3273c8cc0b12c6efb0d0566f9f877363dfb6c7",
+              "quote": "Between 2011–12 and 2021–22, the total number of master’s degrees conferred increased by 16 percent, from 756,000 to 880,200 degrees."
+            }
+          ],
+          "financial_value_ids": ["base.monthly_revenue", "base.monthly_variable_cost", "base.monthly_operating_result", "base.ending_cash"],
+          "premise": "Assuming a subscription price of $19/month, the maximum potential monthly revenue is $19 * 880,200 ≈ $16.7M. However, the market is limited by low demand for personalized MBA tutoring services.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "partial_support"
+    },
+    {
+      "topic": "Competitive Landscape",
+      "finding": "Khanmigo is a direct competitor offering general tutoring with AI capabilities, but it is not specifically designed for MBA case studies (source EDU-01).",
+      "rationale": "Source EDU-01 lists Khanmigo pricing and describes it as an adjacent tutoring benchmark, not an MBA substitute.",
+      "claims": [
+        {
+          "claim_id": "competitor_khanmigo",
+          "parent_claim_id": null,
+          "claim_text": "Khanmigo competes with the proposed AI Tutor for MBA students, but lacks MBA-specific content.",
+          "claim_type": "factual",
+          "claim_domain": "competitor_assumptions",
+          "evidence_status": "sourced_fact",
+          "source_ids": ["EDU-01"],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": 0.9,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "Khanmigo pricing",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "4610a0f39c00948b7f351c11fc515bb3191463e1d66f89c0380b523527c99fad",
+              "quote": "For you $4/month $44/year Save $4 w/ annual Write and debate with guided prompts and immediate feedback. Advance in your career with coaching. Access your chat history. Select plan *Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": ["subscription_price"],
+          "premise": "The similarity in pricing and AI tutoring model suggests Khanmigo is a relevant competitor, though MBA-specific differentiation is needed.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "directly_supported"
+    }
+  ],
+  "customer_notes": [
+    {
+      "topic": "Target Customer Characteristics",
+      "finding": "The pilot targets US adults aged 18+ enrolled in or applying to MBA programs, with business-school instructors as potential institutional buyers.",
+      "rationale": "The brief specifies the target audience and constraints (source packet).",
+      "claims": [
+        {
+          "claim_id": "customer_profile",
+          "parent_claim_id": null,
+          "claim_text": "Target customers are US adults pursuing or applying to MBA programs, with instructors as institutional buyers.",
+          "claim_type": "factual",
+          "claim_domain": "customer_notes",
+          "evidence_status": "sourced_fact",
+          "source_ids": ["packet"],
+          "source_support": "direct",
+          "source_quality": 1.0,
+          "source_recency": 0.9,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "US adults aged 18+ enrolled in or applying to MBA/business graduate programs; business-school instructors are potential institutional buyers.",
+          "source_anchors": [
+            {
+              "source_id": "packet",
+              "chunk_id": "packet",
+              "line_start": 1,
+              "line_end": 5,
+              "snapshot_sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+              "quote": "Analyze market trends, customers and competition. Use evidence immediately from the supplied packet; distinguish supported candidate facts and hypotheses."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "Understanding the exact customer segment is critical for pricing, positioning, and go-to-market strategy.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "directly_supported"
+    }
+  ],
+  "competitor_assumptions": [
+    {
+      "topic": "Competitor Differentiation",
+      "finding": "The pilot must differentiate from general tutoring services like Khanmigo by offering MBA-specific case coaching and evidence-aware feedback.",
+      "rationale": "Competitor analysis shows Khanmigo’s broader tutoring approach (source EDU-01).",
+      "claims": [
+        {
+          "claim_id": "differentiation_mandatory",
+          "parent_claim_id": null,
+          "claim_text": "The AI Tutor must provide MBA-specific case coaching and evidence-aware feedback to differentiate from Khanmigo.",
+          "claim_type": "assumption",
+          "claim_domain": "competitor_assumptions",
+          "evidence_status": "assumption",
+          "source_ids": ["EDU-01"],
+          "source_support": "partial",
+          "source_quality": 0.75,
+          "source_recency": 0.85,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "partial_support",
+          "content_anchor": "Khanmigo pricing",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "4610a0f39c00948b7f351c11fc515bb3191463e1d66f89c0380b523527c99fad",
+              "quote": "For you $4/month $44/year Save $4 w/ annual Write and debate with guided prompts and immediate feedback. Advance in your career with coaching. Access your chat history. Select plan *Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": ["subscription_price"],
+          "premise": "Without MBA-specific content, the product risks being a commodity competitor.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "partial_support"
+    }
+  ],
+  "needs_human_review": [
+    "Verification of MBA enrollment trends and willingness-to-pay data",
+    "Validation of learning outcome metrics for AI tutoring",
+    "Compliance assessment for FERPA and data privacy",
+    "Finalization of pricing and subscription model based on market feedback"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "installed_at_utc": "2026-09-07T10:13:21.519064+00:00",
+  "changes": [
+    {
+      "path": "slm/granite_preflight.py",
+      "before_sha256": "20664da0a9992678534f7dd9c1c94395b4ae94c9522a55742e6a9c21097ee9bb",
+      "after_sha256": "9a72287a8be6a11d23fd74dc55025e6092835c9c3b238e8e2755f9dd31bb7604"
+    },
+    {
+      "path": "slm/owned_ollama.py",
+      "before_sha256": "0b50ce35fa184f31c7284237902369d46213d19674d487cdc00a4269c1ec56bd",
+      "after_sha256": "978e533c2e73f11831d0c33d256fec58fd62339fe029507a9287c49858fc8f6d"
+    },
+    {
+      "path": "slm/resource_monitor.py",
+      "before_sha256": "21a977a850b4f1256a7c8839f0f55fd7279df58335c5025a801add24a6876bf5",
+      "after_sha256": "8317fdbd8647ad486deede45eeb36bf872f3fb76e621eb8d9db65e5214e5cb58"
+    },
+    {
+      "path": "slm/tests/test_owned_native_process.py",
+      "before_sha256": null,
+      "after_sha256": "d5109925affaadaf7755d740ea26a8cf07f2ea6fa86a75cca6222e10f50d6ce7"
+    },
+    {
+      "path": "slm/tests/test_windows_memory.py",
+      "before_sha256": null,
+      "after_sha256": "3d90d3e764c8b88a92be179f7869c27fc0618d9ab5d29c8674a4749664d4bfac"
+    },
+    {
+      "path": "slm/windows_memory.py",
+      "before_sha256": null,
+      "after_sha256": "36c39974b7a0e831d4a5b8471544f90b4722ebfadb263fab6d0ee400068c2eb7"
+    },
+    {
+      "path": "slm/windows_process.py",
+      "before_sha256": null,
+      "after_sha256": "37a7dc92ee011c9490ccba642f39c31e0b4f32e97980235a28afc0e72c0a414b"
+    },
+    {
+      "path": "tests/test_generation_efficiency.py",
+      "before_sha256": null,
+      "after_sha256": "f17331e8be4886ddc491e7a18af39a64429c42239bc69920fbd328a1071fb6f4"
+    },
+    {
+      "path": "workflow/contract_generation.py",
+      "before_sha256": "de5e495b2fa8e67d98e95123daff74557e7b523eb0d8ac2596da345e7f5e46f9",
+      "after_sha256": "d1338ca71e0df61b337d841684bfbdafb2a40eec0a783ed1b6e2a26ffbdd8d76"
+    },
+    {
+      "path": "workflow/two_stage_generation.py",
+      "before_sha256": "317e0cdbde00ce04e8a9849493e5e88b293c929c52b3af30e6196d411cabee21",
+      "after_sha256": "ac8f30fb059135167d7522e0fa49da7d286c73d3b6d078681bb38dfbfb06283e"
+    }
+  ],
+  "runtime_files_verified": 261,
+  "model_calls": 0,
+  "previous_uncommitted_versions_backed_up": true,
+  "public_budget_config_changed": false
+}

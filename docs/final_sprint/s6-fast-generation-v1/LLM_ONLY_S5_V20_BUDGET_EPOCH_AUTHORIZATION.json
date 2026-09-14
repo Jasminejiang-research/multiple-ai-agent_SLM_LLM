@@ -1,0 +1,22 @@
+{
+  "version": "s5-smoke-budget-epoch-v1",
+  "approved": true,
+  "approved_at": "2026-09-08",
+  "authorization_source": "Explicit current user message in the S5 continuation task",
+  "user_message_verbatim": "v20的A/B/C实验，预算不受到测试/修改代码的影响，Gemini token预算上限仍然不变，但是不必把前面的预算都算进来。",
+  "interpretation_disclosed_to_user": "The active smoke allowance starts at v20, including all v20 physical requests and every later attempt. Earlier spend is excluded from this active allowance only and remains in the immutable lifetime ledger. Offline tests and code changes consume no Gemini API quota. Every new-version smoke still reruns A/B/C in a fresh directory.",
+  "starts_at_experiment_version": 20,
+  "preserve_lifetime_history": true,
+  "unchanged_hard_limits": {"requests": 54, "total_tokens": 480000, "cost_usd": 1.2},
+  "formal_limits_unchanged": {"per_run_requests": 18, "per_run_total_tokens": 160000, "per_run_seconds": 3600, "requests": 108, "total_tokens": 960000, "cost_usd": 2.4},
+  "active_smoke_plus_formal_limits_unchanged": {"total_tokens": 1440000, "cost_usd": 3.6},
+  "max_output_tokens": 8192,
+  "thinking_budget": 1024,
+  "model": "gemini-2.5-flash",
+  "provider": "gemini",
+  "paid_tools": false,
+  "excluded_prior_verified_spend": {"requests": 34, "total_tokens": 207948, "cost_usd": 0.292885},
+  "already_used_in_active_epoch": {"requests": 5, "total_tokens": 29038, "cost_usd": 0.0335802},
+  "v20_summary_sha256": "f70c40d6532a9eef691033a60b0965e83ff4ee1c9c53016831620fdafea6e74b",
+  "scope_unchanged": "S5 frozen two cases, original eight planned rows, six formal A/B/C, permanent D no-go, B-A and C-B only, C-D unavailable; no formal failure reruns or historical reclassification"
+}

@@ -1,0 +1,82 @@
+{
+  "version": "eight-slot-s6-compact-v1",
+  "experiment_id": "bf45950efc2442d0b14040b654b26792",
+  "randomization_seed": 20260906,
+  "kind": "synthetic_rehearsal",
+  "case_root": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s0-v1",
+  "protocol_sha256": "bfceac15d1456194eb32679520cff120d6887a768e58d18afdae9d79adebd981",
+  "rows": [
+    {
+      "planned_id": "ai_education-A",
+      "case_id": "ai_education",
+      "condition": "A",
+      "order": 1,
+      "packet_sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+      "brief_sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+      "canonical": false
+    },
+    {
+      "planned_id": "ai_education-D",
+      "case_id": "ai_education",
+      "condition": "D",
+      "order": 2,
+      "packet_sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+      "brief_sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+      "canonical": false
+    },
+    {
+      "planned_id": "ai_education-B",
+      "case_id": "ai_education",
+      "condition": "B",
+      "order": 3,
+      "packet_sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+      "brief_sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+      "canonical": false
+    },
+    {
+      "planned_id": "ai_education-C",
+      "case_id": "ai_education",
+      "condition": "C",
+      "order": 4,
+      "packet_sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+      "brief_sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+      "canonical": false
+    },
+    {
+      "planned_id": "intelligent_ring-C",
+      "case_id": "intelligent_ring",
+      "condition": "C",
+      "order": 5,
+      "packet_sha256": "c523326ed764670291a02307e328449ea5e5f31b03d376e97cedbecb79da54ab",
+      "brief_sha256": "16eed95643e13d2ce677fd3211c444278b5fe555ebe7a1421b3f466122c8b817",
+      "canonical": false
+    },
+    {
+      "planned_id": "intelligent_ring-B",
+      "case_id": "intelligent_ring",
+      "condition": "B",
+      "order": 6,
+      "packet_sha256": "c523326ed764670291a02307e328449ea5e5f31b03d376e97cedbecb79da54ab",
+      "brief_sha256": "16eed95643e13d2ce677fd3211c444278b5fe555ebe7a1421b3f466122c8b817",
+      "canonical": false
+    },
+    {
+      "planned_id": "intelligent_ring-D",
+      "case_id": "intelligent_ring",
+      "condition": "D",
+      "order": 7,
+      "packet_sha256": "c523326ed764670291a02307e328449ea5e5f31b03d376e97cedbecb79da54ab",
+      "brief_sha256": "16eed95643e13d2ce677fd3211c444278b5fe555ebe7a1421b3f466122c8b817",
+      "canonical": false
+    },
+    {
+      "planned_id": "intelligent_ring-A",
+      "case_id": "intelligent_ring",
+      "condition": "A",
+      "order": 8,
+      "packet_sha256": "c523326ed764670291a02307e328449ea5e5f31b03d376e97cedbecb79da54ab",
+      "brief_sha256": "16eed95643e13d2ce677fd3211c444278b5fe555ebe7a1421b3f466122c8b817",
+      "canonical": false
+    }
+  ]
+}

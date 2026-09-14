@@ -1,0 +1,196 @@
+{
+  "package": "S3",
+  "status": "implementation_installed_real_preflight_pending",
+  "recorded_at_utc": "2026-09-06T21:42:12.6387879Z",
+  "validations": [
+    {
+      "command": "-B -m pip check",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "-B -m pytest -q slm/tests/test_granite_s3.py -p no:cacheprovider",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "-B -m evaluation.s0",
+      "exit_code": 0,
+      "expected_exit": 0
+    },
+    {
+      "command": "-B -m evaluation.s0 --require-frozen",
+      "exit_code": 2,
+      "expected_exit": 2
+    }
+  ],
+  "installed_files": [
+    {
+      "path": "slm/granite_config.py",
+      "sha256": "3c852687859d82bc054f1400a40ec1b717f46e3ccce4d372e96c75ec2b5dded5"
+    },
+    {
+      "path": "slm/granite_preflight.py",
+      "sha256": "76b5fe85f17bf1257219198ff798df0fa289cb7b98a75ed53a36de0ca53c5289"
+    },
+    {
+      "path": "slm/granite_provider.py",
+      "sha256": "883bd5a87c61d55931e5f21b694abaf4af663b7011b9ded7726ba5c6cb3a3bc3"
+    },
+    {
+      "path": "slm/Modelfile.granite-h-micro-32k",
+      "sha256": "d350467edbc97aea40b0635904c63786b26dccf8021c3f41f2e816998ed765c5"
+    },
+    {
+      "path": "slm/owned_ollama.py",
+      "sha256": "f541751670467af4b0ccc6e018d00ec9b8483b3209463b5de1645761ca76c2c0"
+    },
+    {
+      "path": "slm/README.md",
+      "sha256": "b3d60c5e339a5503a0db185ffc4a0378b66cec7dcaeb9dce6388eb221d9c3579"
+    },
+    {
+      "path": "slm/resource_monitor.py",
+      "sha256": "21a977a850b4f1256a7c8839f0f55fd7279df58335c5025a801add24a6876bf5"
+    },
+    {
+      "path": "slm/start_granite.ps1",
+      "sha256": "d1bc2aefed45605ad05df3ed11222b377931f387cfa9f305e06439b0d7bdf1ee"
+    },
+    {
+      "path": "slm/configs/granite_preflight_v1.json",
+      "sha256": "12b9688b7da10d4ea7705bd6f94958f2daa66030d5a9df811c208d0a5602965e"
+    },
+    {
+      "path": "slm/tests/test_granite_s3.py",
+      "sha256": "fc5c8805fa164f9d996f0f819aec58c239c60ed55ec9a8b4a1e5a68595aeded0"
+    },
+    {
+      "path": "docs/final_sprint_status.md",
+      "sha256": "b0fdb16876c0f111d172d2bed3b0131bfb86550b327e1d499585cd6aa7b1c9da"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/HANDOFF.md",
+      "sha256": "bccae2e0bb4fb584bbccb1829e9bfdfd016b6376bd31bf0651b8961f68322fe6"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/S2_STATUS_ARCHIVE.md",
+      "sha256": "37315feb0e313d7639bf21ab9a9e89fda0ccd27167eaef3f0d66f83f60643538"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/stage_validation.txt",
+      "sha256": "02683beb136e01bddcf49a345f9f5e5428ca6dd519515e10b13898c09904ca05"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/initial_start.ps1",
+      "sha256": "3ed1ad2dde293e0d9a8cde0e45152ac7a23d145b7d5b02c0463726af665adf7e"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/model_create.log",
+      "sha256": "5a19b86fcb900b856e420123d6c86b3c8a8c1e7dc72989633b3e65df81c9adb1"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/model_pull.log",
+      "sha256": "2110dae7bc521c03f094a7abbab336e61d0907aaffe05ad42b3ea65183ab60d9"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/model_show.json",
+      "sha256": "9e8027665fefadc6fd0e85b3538bab6b52570df0c96712c3a5ff6f6e3a490fa1"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/server_owner.json",
+      "sha256": "871ae25ebfea2d2b2fdc925fcbfa6932685c1a3c24398713d844af0b52774ee2"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/tokenizer_provenance.json",
+      "sha256": "0500b8581924b769f08212f3b45428a1024e7d334b997fc6ecec19b0ff16e7a4"
+    },
+    {
+      "path": "docs/final_sprint/s3-v1/setup/tokenizer.json",
+      "sha256": "e2bad66439538cb4d5a7580680932432ed9ece9d3b8577e675512bdf11599253"
+    }
+  ],
+  "authority_documents": [
+    {
+      "path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/sprint_plan_.md",
+      "sha256": "42c3a1e4574335b720e268e6d05f05f4af53a98a1d0d533ee752e950784e2b8b",
+      "matches_s0": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/@ai_agent_evaluation_metrics_spec.md",
+      "sha256": "e16d7f74999c49cb120d9d3ee224b0bba9e23e86abfec15c0d7de4ae47dff005",
+      "matches_s0": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/@multiple_ai_agent_optimization.md",
+      "sha256": "54d1b23a55543b882f55e8711da5326d7b9d3efb367755f1cee6442c6e4958c9",
+      "matches_s0": true
+    }
+  ],
+  "preserved_source_file_count": 270,
+  "preserved_history": [
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/data/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/data/app.db",
+      "sha256": "4b34295d7591afdd35c845af57fdfa78c6bfbc22a7174abf9d3ba1618a6d1e53",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-09_amazon_20260709_145830_613114.md",
+      "sha256": "05df1a582ad8a58f4f4d486908a2777348592a3619ec6bcdbf3f68a9b2a07da2",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-09_picnic_20260709_135307.md",
+      "sha256": "2d06ad96b844650adc672315545a08fa306c9f7028705204c13cacbf8486ba38",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-16_apple_20260716_222015_607708.md",
+      "sha256": "16557dd651287f87e32ebb6a94df6676b12ff8249e8ad2854442e05cccd51f9a",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-17_apple_20260717_071222_225614.md",
+      "sha256": "283ee05076a0c604731cae9fb851adc0eb50418e332b91563f122ee90dafbdf2",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-23_picnic_20260723_130748_072819.md",
+      "sha256": "971b1a3e8bd9dc694e374f557c42198f5612a4f57cf72082f62efcf484071c97",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-28_apple_20260728_162013_501427.md",
+      "sha256": "6f0f67fac960855a427e07d6d3eb85b303c7081a9cefb9c5619bb120aacc1d3d",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-28_apple_20260728_170057_965025.md",
+      "sha256": "33fd7b0995345b514cb76d40b6149ad058bded8edc898bb2a0f4977436add6ea",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/picnic_fashion_20260708_211408.md",
+      "sha256": "a2231675d5e8e5f93c2dfa6b1553f9ed328145eb8e8c17e179aa5ce3ddebcc2c",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/picnic_fashion_20260709_055540.md",
+      "sha256": "8b8a0c12e3eb0526bf5adfc3d95a6aff49acf211796207fdc5347aa6eb51f52f",
+      "unchanged": true
+    }
+  ],
+  "model_calls": 0,
+  "formal_runs_started": 0,
+  "next_package_started": false
+}

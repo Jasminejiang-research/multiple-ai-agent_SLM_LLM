@@ -1,0 +1,67 @@
+"""Finalize installed S4 evidence and measured status after all authorized checks."""
+import json
+from pathlib import Path
+import re
+import shutil
+import subprocess
+
+from evaluation.s4_io import read_csv,read_json,file_hash,write_json
+from install_s4 import STAGE,TARGET,PACKAGE,CODE
+
+out=TARGET/PACKAGE
+text=(out/"installed_validation_final.txt").read_text(encoding="utf-8-sig")
+assert "82 passed in 22.26s" in text
+rows=read_csv(out/"synthetic_export_final/run_metrics.csv")
+assert len(rows)==8 and all(row["academic_quality"]==row["claim_grounding"]==row["high_impact_unsupported"]=="" for row in rows)
+assert all(row["complete_pairs"]=="0" for row in read_csv(out/"dry_export_final/paired_summary.csv") if row["metric"]=="request_count")
+installed_status=read_json(out/"installed_status.json")
+assert installed_status["formal_runs_started"]==0 and all(row["execution"]=="not_run" for row in installed_status["rows"])
+assert read_json(out/"installed_freeze_check.json")["ready"] is False
+for relative in CODE:
+    assert file_hash(TARGET/relative)==file_hash(STAGE/relative),relative
+
+handoff=(STAGE/PACKAGE/"HANDOFF.md").read_text(encoding="utf-8")
+handoff=handoff.replace("installed_validation.txt","installed_validation_final.txt")
+handoff=handoff.replace("`dry_export/`","`dry_export_final/`").replace("`synthetic_export/`","`synthetic_export_final/`")
+handoff=handoff.replace("`version_manifest.json`","`final_version_manifest.json`")
+handoff+='''
+## 最终安装验收（2026-09-07）
+
+完整离线整合：623 passed、25 deselected、3 subtests passed，122.84 秒；补充 UI 渲染 1 passed，9.02 秒。末次状态统计专项 28 passed，16.52 秒；目标目录最终 S4/UI/SLM 相关复核 **82 passed，22.26 秒**。
+
+未运行槽位的原始零请求/零 token 保留，但不计入完整资源配对；部分内存峰值只作观测下界，不能当完整配对值。完成率仍保留全部计划行。当前有效派生材料为 `dry_export_final/` 和 `synthetic_export_final/`；早先导出保留作开发审计，不用于最终比较。
+
+最终修复回执与旧源码在 `amendments/statistic_states/`；当前代码/运行时/材料 hash 在 `final_version_manifest.json`，验证汇总在 `final_validation.json`。原始 synthetic events、正式未运行计划、S0–S3材料及旧用户修改保持。正式0/8，真实模型调用0，预算/D/S5状态未改变。
+'''
+status=(STAGE/"docs/final_sprint_status.md").read_text(encoding="utf-8")
+status=status.replace("安装后目标复核见本包 installed_validation.txt。","安装后最终目标复核 **82 passed，22.26 秒**，见本包 installed_validation_final.txt。")
+status=status.replace("`synthetic_export/`","`synthetic_export_final/`")
+status=status.replace("`version_manifest.json`、`code_install_receipt.json`","`final_version_manifest.json`、`code_install_receipt.json`、`amendments/statistic_states/receipt.json`")
+status=status.replace("- 初轮测试失败与修复", "- 最终状态统计专项 **28 passed，16.52 秒**：未运行零资源和部分采样不能成为完整配对；原始值保留，完成率分母不变。当前派生导出以 dry_export_final/、synthetic_export_final/ 为准，旧导出保留作审计。\n- 初轮测试失败与修复")
+
+docs_receipt=[]
+for relative,data in (("docs/final_sprint_status.md",status),(str(PACKAGE/"HANDOFF.md"),handoff)):
+    before=file_hash(TARGET/relative)
+    (STAGE/relative).write_text(data,encoding="utf-8")
+    shutil.copyfile(STAGE/relative,TARGET/relative)
+    docs_receipt.append(dict(path=relative,before_sha256=before,after_sha256=file_hash(TARGET/relative)))
+write_json(out/"final_docs_receipt.json",docs_receipt)
+shutil.copyfile(STAGE/"s4_state_statistics_final.txt",out/"validation/s4_state_statistics_final.txt")
+shutil.copyfile(STAGE/"finalize_s4.py",out/"reproduction/finalize_s4.py.txt")
+write_json(out/"final_validation.json",dict(integration=dict(passed=623,deselected=25,subtests_passed=3,seconds=122.84),
+    supplemental_ui=dict(passed=1,seconds=9.02),state_statistics=dict(passed=28,seconds=16.52),
+    installed_affected_suite=dict(passed=82,seconds=22.26),formal_slots=8,formal_started=0,actual_model_calls=0,
+    synthetic_runs=8,synthetic_attempts=86,quality_scores_filled=0,gold_verdicts_filled=0,
+    final_exports=["dry_export_final","synthetic_export_final"],
+    note="Full integration preceded final missing-state filtering; all affected S4/UI/SLM tests passed again on the final installed source."))
+commit=subprocess.run(["git","rev-parse","HEAD"],cwd=TARGET,capture_output=True,text=True,check=True).stdout.strip()
+git_status=subprocess.run(["git","status","--short"],cwd=TARGET,capture_output=True,text=True,check=True).stdout
+(out/"git_status_final.txt").write_text(git_status,encoding="utf-8")
+base=read_json(out/"version_manifest.json")
+write_json(out/"final_version_manifest.json",dict(package="S4",status="engineering_and_offline_complete",
+    git_commit=commit,git_commit_created=False,formal_freeze=False,
+    source_files={p:file_hash(TARGET/p) for p in CODE},status_sha256=file_hash(TARGET/"docs/final_sprint_status.md"),
+    runtime=base["runtime"],authority_files=base["authority_files"],
+    public_config_sha256=file_hash(TARGET/"slm/configs/granite_preflight_cpu_v2.json"),
+    artifacts={p.relative_to(out).as_posix():file_hash(p) for p in out.rglob("*") if p.is_file()}))
+print("Final installed evidence checked: 82 tests passed; zero formal/model calls; no human score/Gold values filled.")

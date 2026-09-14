@@ -1,0 +1,583 @@
+{
+  "$defs": {
+    "ContractFinancialSection": {
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "content": {
+          "minLength": 40,
+          "title": "Content",
+          "type": "string"
+        },
+        "key_claims": {
+          "items": {
+            "$ref": "#/$defs/GroundedClaim"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Key Claims",
+          "type": "array"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "confidence_reason": {
+          "enum": [
+            "no_evidence",
+            "partial_support",
+            "conflict",
+            "assumption_dominant",
+            "pruned",
+            "critic_unresolved",
+            "directly_supported"
+          ],
+          "title": "Confidence Reason",
+          "type": "string"
+        },
+        "financial_values": {
+          "items": {
+            "$ref": "#/$defs/FinancialValue"
+          },
+          "minItems": 1,
+          "title": "Financial Values",
+          "type": "array"
+        }
+      },
+      "required": [
+        "title",
+        "content",
+        "key_claims",
+        "source_ids",
+        "confidence",
+        "confidence_reason",
+        "financial_values"
+      ],
+      "title": "ContractFinancialSection",
+      "type": "object"
+    },
+    "ContractSection": {
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "content": {
+          "minLength": 40,
+          "title": "Content",
+          "type": "string"
+        },
+        "key_claims": {
+          "items": {
+            "$ref": "#/$defs/GroundedClaim"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Key Claims",
+          "type": "array"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "confidence_reason": {
+          "enum": [
+            "no_evidence",
+            "partial_support",
+            "conflict",
+            "assumption_dominant",
+            "pruned",
+            "critic_unresolved",
+            "directly_supported"
+          ],
+          "title": "Confidence Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "content",
+        "key_claims",
+        "source_ids",
+        "confidence",
+        "confidence_reason"
+      ],
+      "title": "ContractSection",
+      "type": "object"
+    },
+    "FinancialValue": {
+      "additionalProperties": false,
+      "properties": {
+        "value_id": {
+          "title": "Value Id",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "currency": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Currency"
+        },
+        "period": {
+          "title": "Period",
+          "type": "string"
+        },
+        "origin": {
+          "enum": [
+            "user_input",
+            "external_benchmark",
+            "calculated_result",
+            "assumption"
+          ],
+          "title": "Origin",
+          "type": "string"
+        },
+        "input_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Input Ids",
+          "type": "array"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "formula_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Formula Id"
+        },
+        "rounding_policy": {
+          "enum": [
+            "money_2dp_half_up",
+            "ratio_4dp_half_up",
+            "integer_exact",
+            "exact"
+          ],
+          "title": "Rounding Policy",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "value",
+            "not_applicable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Reason"
+        }
+      },
+      "required": [
+        "value_id",
+        "value",
+        "unit",
+        "currency",
+        "period",
+        "origin",
+        "input_ids",
+        "source_ids",
+        "formula_id",
+        "rounding_policy",
+        "status",
+        "reason"
+      ],
+      "title": "FinancialValue",
+      "type": "object"
+    },
+    "GroundedClaim": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "minLength": 1,
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "parent_claim_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Parent Claim Id"
+        },
+        "claim_text": {
+          "minLength": 1,
+          "title": "Claim Text",
+          "type": "string"
+        },
+        "claim_type": {
+          "enum": [
+            "factual",
+            "assumption",
+            "recommendation",
+            "projection"
+          ],
+          "title": "Claim Type",
+          "type": "string"
+        },
+        "claim_domain": {
+          "minLength": 1,
+          "title": "Claim Domain",
+          "type": "string"
+        },
+        "evidence_status": {
+          "enum": [
+            "sourced_fact",
+            "needs_validation",
+            "assumption",
+            "unsupported"
+          ],
+          "title": "Evidence Status",
+          "type": "string"
+        },
+        "source_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Ids",
+          "type": "array"
+        },
+        "source_support": {
+          "enum": [
+            "direct",
+            "partial",
+            "contextual",
+            "none"
+          ],
+          "title": "Source Support",
+          "type": "string"
+        },
+        "source_quality": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Source Quality",
+          "type": "number"
+        },
+        "source_recency": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Source Recency"
+        },
+        "support_assessed_by": {
+          "const": "model_proposed",
+          "title": "Support Assessed By",
+          "type": "string"
+        },
+        "critic_status": {
+          "enum": [
+            "not_reviewed",
+            "passed",
+            "unresolved",
+            "unverified_after_revision"
+          ],
+          "title": "Critic Status",
+          "type": "string"
+        },
+        "decision_critical": {
+          "title": "Decision Critical",
+          "type": "boolean"
+        },
+        "high_impact": {
+          "title": "High Impact",
+          "type": "boolean"
+        },
+        "conflict": {
+          "title": "Conflict",
+          "type": "boolean"
+        },
+        "pruned": {
+          "title": "Pruned",
+          "type": "boolean"
+        },
+        "major_issue": {
+          "title": "Major Issue",
+          "type": "boolean"
+        },
+        "confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "confidence_reason": {
+          "enum": [
+            "no_evidence",
+            "partial_support",
+            "conflict",
+            "assumption_dominant",
+            "pruned",
+            "critic_unresolved",
+            "directly_supported"
+          ],
+          "title": "Confidence Reason",
+          "type": "string"
+        },
+        "content_anchor": {
+          "minLength": 1,
+          "title": "Content Anchor",
+          "type": "string"
+        },
+        "source_anchors": {
+          "items": {
+            "$ref": "#/$defs/SourceAnchor"
+          },
+          "title": "Source Anchors",
+          "type": "array"
+        },
+        "financial_value_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Financial Value Ids",
+          "type": "array"
+        },
+        "premise": {
+          "title": "Premise",
+          "type": "string"
+        },
+        "artifact_version": {
+          "minimum": 1,
+          "title": "Artifact Version",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "claim_id",
+        "parent_claim_id",
+        "claim_text",
+        "claim_type",
+        "claim_domain",
+        "evidence_status",
+        "source_ids",
+        "source_support",
+        "source_quality",
+        "source_recency",
+        "support_assessed_by",
+        "critic_status",
+        "decision_critical",
+        "high_impact",
+        "conflict",
+        "pruned",
+        "major_issue",
+        "confidence",
+        "confidence_reason",
+        "content_anchor",
+        "source_anchors",
+        "financial_value_ids",
+        "premise",
+        "artifact_version"
+      ],
+      "title": "GroundedClaim",
+      "type": "object"
+    },
+    "SourceAnchor": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        },
+        "chunk_id": {
+          "minLength": 1,
+          "title": "Chunk Id",
+          "type": "string"
+        },
+        "line_start": {
+          "minimum": 1,
+          "title": "Line Start",
+          "type": "integer"
+        },
+        "line_end": {
+          "minimum": 1,
+          "title": "Line End",
+          "type": "integer"
+        },
+        "snapshot_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Snapshot Sha256",
+          "type": "string"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "chunk_id",
+        "line_start",
+        "line_end",
+        "snapshot_sha256",
+        "quote"
+      ],
+      "title": "SourceAnchor",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Same thirteen named sections as ProposalDraft, with strict v1 provenance.",
+  "properties": {
+    "title": {
+      "description": "Working proposal title.",
+      "maxLength": 120,
+      "minLength": 2,
+      "title": "Title",
+      "type": "string"
+    },
+    "global_source_ids": {
+      "description": "Deduplicated source IDs cited across all proposal sections.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Global Source Ids",
+      "type": "array"
+    },
+    "executive_summary": {
+      "$ref": "#/$defs/ContractSection"
+    },
+    "problem": {
+      "$ref": "#/$defs/ContractSection"
+    },
+    "target_customer": {
+      "$ref": "#/$defs/ContractSection"
+    },
+    "market_opportunity": {
+      "$ref": "#/$defs/ContractSection"
+    },
+    "solution": {
+      "$ref": "#/$defs/ContractSection"
+    },
+    "value_proposition": {
+      "$ref": "#/$defs/ContractSection"
+    },
+    "competitor_analysis": {
+      "$ref": "#/$defs/ContractSection"
+    },
+    "business_model": {
+      "$ref": "#/$defs/ContractSection"
+    },
+    "go_to_market_strategy": {
+      "$ref": "#/$defs/ContractSection"
+    },
+    "financial_assumptions": {
+      "$ref": "#/$defs/ContractFinancialSection"
+    },
+    "risks_and_mitigations": {
+      "$ref": "#/$defs/ContractSection"
+    },
+    "implementation_roadmap": {
+      "$ref": "#/$defs/ContractSection"
+    },
+    "appendix": {
+      "$ref": "#/$defs/ContractSection"
+    }
+  },
+  "required": [
+    "title",
+    "executive_summary",
+    "problem",
+    "target_customer",
+    "market_opportunity",
+    "solution",
+    "value_proposition",
+    "competitor_analysis",
+    "business_model",
+    "go_to_market_strategy",
+    "financial_assumptions",
+    "risks_and_mitigations",
+    "implementation_roadmap",
+    "appendix"
+  ],
+  "title": "ContractProposal",
+  "type": "object"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "tasks": [
+    {
+      "phase": "research_probe",
+      "logical_task_id": "research.v1",
+      "completed": false,
+      "first_output_passed": false,
+      "body_and_catalog_verified": true,
+      "status": "body_only_or_failed_selections_not_complete"
+    }
+  ],
+  "model_calls": 0,
+  "expanded_text_is_not_model_token_usage": true,
+  "human_semantic_support": "not_assessed"
+}

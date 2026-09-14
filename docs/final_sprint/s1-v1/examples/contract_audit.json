@@ -1,0 +1,962 @@
+{
+  "package": "S1",
+  "kind": "offline_contract_audit",
+  "model_calls": 0,
+  "contract_version": "proposal-grounding-v1-s1",
+  "prompt_version": "grounded-generation-v1-s1",
+  "finance_version": "s0-case-formulas-v1",
+  "proposal_schema_sha256": "a19c27e3dc5a4669051bde870c0d32e9815bf690384a881638fcf9301d37762f",
+  "batches": [
+    {
+      "fields": [
+        "executive_summary",
+        "problem",
+        "target_customer",
+        "market_opportunity"
+      ],
+      "schema_sha256": "f99f91f0535c7376f2b01ce02a17963e105c250791104b324e032078e78febdc"
+    },
+    {
+      "fields": [
+        "solution",
+        "value_proposition",
+        "competitor_analysis"
+      ],
+      "schema_sha256": "fddc40203f1b547dd3ebeb2345b9eee5c3d8763240f9e0129cb94ba563311ec0"
+    },
+    {
+      "fields": [
+        "business_model",
+        "go_to_market_strategy",
+        "financial_assumptions"
+      ],
+      "schema_sha256": "2d718a1ef7eb346214fe8c21b8576e8d59420884637694bd82c9b69e371f9a26"
+    },
+    {
+      "fields": [
+        "risks_and_mitigations",
+        "implementation_roadmap",
+        "appendix"
+      ],
+      "schema_sha256": "0805de98b463c1e0f0fbd422d858a761502c90219fe7a94154f30b04e8dedd8d"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "ai_education",
+      "conditions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "packet_sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+      "brief_sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+      "packet_review_status": "pending",
+      "snapshot_validation": "passed",
+      "source_count": 3,
+      "chunk_count": 5,
+      "finance_reference_kind": "deterministically_calculated_from_pending_scenario_assumptions_not_model_output",
+      "finance_reference_values": [
+        {
+          "value_id": "low.monthly_revenue",
+          "value": "1900.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.low",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.monthly_variable_cost",
+          "value": "400.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.low",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.monthly_contribution",
+          "value": "1500.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.low",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.monthly_operating_result",
+          "value": "-6000.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "low.monthly_contribution",
+            "fixed_operating_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_operating_result",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.annual_cash_change",
+          "value": "-90000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "months",
+            "low.monthly_operating_result",
+            "one_time_setup"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.ending_cash",
+          "value": "30000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "low.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.break_even_users",
+          "value": "500",
+          "unit": "customers",
+          "currency": null,
+          "period": "monthly average over 12 months",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_operating_cost",
+            "marketing_cost",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/break_even_users",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_revenue",
+          "value": "4750.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.base",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_variable_cost",
+          "value": "1000.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.base",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_contribution",
+          "value": "3750.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.base",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_operating_result",
+          "value": "-3750.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "base.monthly_contribution",
+            "fixed_operating_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_operating_result",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.annual_cash_change",
+          "value": "-63000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "months",
+            "base.monthly_operating_result",
+            "one_time_setup"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.ending_cash",
+          "value": "57000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "base.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.break_even_users",
+          "value": "500",
+          "unit": "customers",
+          "currency": null,
+          "period": "monthly average over 12 months",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_operating_cost",
+            "marketing_cost",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/break_even_users",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_revenue",
+          "value": "9500.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.high",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_variable_cost",
+          "value": "2000.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.high",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_contribution",
+          "value": "7500.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.high",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_operating_result",
+          "value": "0.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "high.monthly_contribution",
+            "fixed_operating_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_operating_result",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.annual_cash_change",
+          "value": "-18000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "months",
+            "high.monthly_operating_result",
+            "one_time_setup"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.ending_cash",
+          "value": "102000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "high.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.break_even_users",
+          "value": "500",
+          "unit": "customers",
+          "currency": null,
+          "period": "monthly average over 12 months",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_operating_cost",
+            "marketing_cost",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/break_even_users",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        }
+      ]
+    },
+    {
+      "case_id": "intelligent_ring",
+      "conditions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "packet_sha256": "c523326ed764670291a02307e328449ea5e5f31b03d376e97cedbecb79da54ab",
+      "brief_sha256": "16eed95643e13d2ce677fd3211c444278b5fe555ebe7a1421b3f466122c8b817",
+      "packet_review_status": "pending",
+      "snapshot_validation": "passed",
+      "source_count": 3,
+      "chunk_count": 7,
+      "finance_reference_kind": "deterministically_calculated_from_pending_scenario_assumptions_not_model_output",
+      "finance_reference_values": [
+        {
+          "value_id": "low.hardware_revenue",
+          "value": "149500.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.low",
+            "hardware_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/hardware_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.hardware_variable_cost",
+          "value": "85000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.low",
+            "unit_manufacturing_cost",
+            "unit_logistics_cost",
+            "unit_warranty_return_reserve"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/hardware_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.subscription_paid_months",
+          "value": "1200.0",
+          "unit": "subscriber-months",
+          "currency": null,
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.low",
+            "subscription_attach_rate",
+            "average_paid_subscription_months"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_paid_months",
+          "rounding_policy": "exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.subscription_revenue",
+          "value": "5988.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "low.subscription_paid_months",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.subscription_variable_cost_total",
+          "value": "1200.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "low.subscription_paid_months",
+            "subscription_variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_variable_cost_total",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.annual_contribution",
+          "value": "69288.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "low.hardware_revenue",
+            "low.hardware_variable_cost",
+            "low.subscription_revenue",
+            "low.subscription_variable_cost_total"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/annual_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.annual_cash_change",
+          "value": "-370712.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "low.annual_contribution",
+            "fixed_launch_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.ending_cash",
+          "value": "629288.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "low.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.break_even_units",
+          "value": "3176",
+          "unit": "devices",
+          "currency": null,
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_launch_cost",
+            "marketing_cost",
+            "hardware_price",
+            "unit_manufacturing_cost",
+            "unit_logistics_cost",
+            "unit_warranty_return_reserve",
+            "subscription_attach_rate",
+            "average_paid_subscription_months",
+            "subscription_price",
+            "subscription_variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/break_even_units",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.hardware_revenue",
+          "value": "299000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.base",
+            "hardware_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/hardware_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.hardware_variable_cost",
+          "value": "170000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.base",
+            "unit_manufacturing_cost",
+            "unit_logistics_cost",
+            "unit_warranty_return_reserve"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/hardware_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.subscription_paid_months",
+          "value": "2400.0",
+          "unit": "subscriber-months",
+          "currency": null,
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.base",
+            "subscription_attach_rate",
+            "average_paid_subscription_months"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_paid_months",
+          "rounding_policy": "exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.subscription_revenue",
+          "value": "11976.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "base.subscription_paid_months",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.subscription_variable_cost_total",
+          "value": "2400.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "base.subscription_paid_months",
+            "subscription_variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_variable_cost_total",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.annual_contribution",
+          "value": "138576.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "base.hardware_revenue",
+            "base.hardware_variable_cost",
+            "base.subscription_revenue",
+            "base.subscription_variable_cost_total"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/annual_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.annual_cash_change",
+          "value": "-301424.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "base.annual_contribution",
+            "fixed_launch_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.ending_cash",
+          "value": "698576.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "base.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.break_even_units",
+          "value": "3176",
+          "unit": "devices",
+          "currency": null,
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_launch_cost",
+            "marketing_cost",
+            "hardware_price",
+            "unit_manufacturing_cost",
+            "unit_logistics_cost",
+            "unit_warranty_return_reserve",
+            "subscription_attach_rate",
+            "average_paid_subscription_months",
+            "subscription_price",
+            "subscription_variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/break_even_units",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.hardware_revenue",
+          "value": "598000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.high",
+            "hardware_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/hardware_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.hardware_variable_cost",
+          "value": "340000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.high",
+            "unit_manufacturing_cost",
+            "unit_logistics_cost",
+            "unit_warranty_return_reserve"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/hardware_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.subscription_paid_months",
+          "value": "4800.0",
+          "unit": "subscriber-months",
+          "currency": null,
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.high",
+            "subscription_attach_rate",
+            "average_paid_subscription_months"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_paid_months",
+          "rounding_policy": "exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.subscription_revenue",
+          "value": "23952.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "high.subscription_paid_months",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.subscription_variable_cost_total",
+          "value": "4800.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "high.subscription_paid_months",
+            "subscription_variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_variable_cost_total",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.annual_contribution",
+          "value": "277152.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "high.hardware_revenue",
+            "high.hardware_variable_cost",
+            "high.subscription_revenue",
+            "high.subscription_variable_cost_total"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/annual_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.annual_cash_change",
+          "value": "-162848.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "high.annual_contribution",
+            "fixed_launch_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.ending_cash",
+          "value": "837152.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "high.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.break_even_units",
+          "value": "3176",
+          "unit": "devices",
+          "currency": null,
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_launch_cost",
+            "marketing_cost",
+            "hardware_price",
+            "unit_manufacturing_cost",
+            "unit_logistics_cost",
+            "unit_warranty_return_reserve",
+            "subscription_attach_rate",
+            "average_paid_subscription_months",
+            "subscription_price",
+            "subscription_variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/break_even_units",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        }
+      ]
+    }
+  ],
+  "formal_execution_allowed": false,
+  "next_dependencies": [
+    "S2 gates/budget/events",
+    "S3 Granite preflight",
+    "S4 runner",
+    "case and runtime freeze"
+  ]
+}

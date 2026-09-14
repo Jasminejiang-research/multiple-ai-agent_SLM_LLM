@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-09-07T06:22:42.0188541Z",
+  "available_ram_bytes": 6451490816,
+  "pagefile_usage_mb": [
+    {
+      "Name": "C:\\pagefile.sys",
+      "CurrentUsage": 387
+    }
+  ],
+  "ollama_processes": 0,
+  "endpoint_listeners": 0,
+  "active_leases": 0,
+  "public_config_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\slm\\configs\\granite_preflight_cpu_v2.json",
+  "public_config_sha256": "4e8bec9bd8f951c07268b2cedf78858e14194bb20168bba2bb197576ce8ae63f",
+  "formal_runs_started": 0,
+  "gemini_calls": 0
+}

@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "research_runner.py",
+      "sha256": "c5b4ed33465f2fb5429b70ca191c930a9ca9c7588df01ff0332dd76ca4eff62b"
+    },
+    {
+      "path": "cleanup_owned.py",
+      "sha256": "891f23e038e81040796a66aebb004c78afea77acd64f81e2e28e1970c8444b26"
+    },
+    {
+      "path": "Invoke-RecoveryTrial.ps1",
+      "sha256": "0e64efdb5d4a573d0e5ac03c00540327f7046950e2fcbb6785786815af774659"
+    },
+    {
+      "path": "trial_config.json",
+      "sha256": "b2d11cf6e20281767b6d2fa839c0cf1a8c508329dbe1f02c4d1e7e0c0e5a77ad"
+    },
+    {
+      "path": "support/capability_base.py",
+      "sha256": "62407a17e1ce4cea5736c3e6588185aee5a5b56b37ba1c8db9142ad62ac47445"
+    },
+    {
+      "path": "budget_carryover.json",
+      "sha256": "5967196a3a390ee1b467f9568b42c4fc64895b233d35aa0429d6669fe3e8002b"
+    }
+  ]
+}

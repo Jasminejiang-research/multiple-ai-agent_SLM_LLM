@@ -1,0 +1,11 @@
+{
+  "case_id": "intelligent_ring",
+  "case_version": "case-v1-s0",
+  "candidate_category": "intelligent_ring",
+  "review_status": "pending",
+  "approval_record": null,
+  "brief_sha256": "16eed95643e13d2ce677fd3211c444278b5fe555ebe7a1421b3f466122c8b817",
+  "packet_sha256": "c523326ed764670291a02307e328449ea5e5f31b03d376e97cedbecb79da54ab",
+  "proposed_by": "Codex; user has not approved names, complete brief, financial assumptions or evidence",
+  "formal_execution_allowed": false
+}

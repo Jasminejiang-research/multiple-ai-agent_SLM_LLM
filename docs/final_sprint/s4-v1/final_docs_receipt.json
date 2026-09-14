@@ -1,0 +1,12 @@
+[
+  {
+    "path": "docs/final_sprint_status.md",
+    "before_sha256": "6212dc0f7e209eaedc06b555f0de500698c0a7a16123422d3152f13dfad810bf",
+    "after_sha256": "1b2bc7e6684f74cae3d78d991efd92afa6deeb21c83f2d4a16a053082a01e5c8"
+  },
+  {
+    "path": "docs\\final_sprint\\s4-v1\\HANDOFF.md",
+    "before_sha256": "e798b442ac5f40df08ad1a668a7ab45ee60626c2804884a75f3ed2e8e686f887",
+    "after_sha256": "33a8e6533ba5e1f66505505ae1abd2ab841b8a99af3329de77057a0941d51e10"
+  }
+]

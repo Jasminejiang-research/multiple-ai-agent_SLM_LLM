@@ -1,0 +1,147 @@
+{
+  "critique_report": {
+    "overall_score": 3.5,
+    "issues": [
+      {
+        "section": "Market Opportunity",
+        "severity": "medium",
+        "issue_type": "unsupported_market_claim",
+        "description": "The market size projection for the US AI education market is broad and not specifically segmented for higher education or MBA students, making its direct relevance to the proposed niche unclear. This issue is also present in the Executive Summary.",
+        "suggested_fix": "Conduct market research to segment the AI education market specifically for MBA students or provide a clear justification for using the broader market as a proxy."
+      },
+      {
+        "section": "Target Customer",
+        "severity": "high",
+        "issue_type": "unclear_customer",
+        "description": "The proposal uses AI usage statistics for K-12 students (aged 13-17) to infer familiarity among MBA students. This is a significant demographic mismatch and weakens the understanding of the actual target customer's behavior.",
+        "suggested_fix": "Conduct specific research on AI tool usage and familiarity among MBA students."
+      },
+      {
+        "section": "Market Opportunity",
+        "severity": "medium",
+        "issue_type": "missing_evidence",
+        "description": "The claim about growing demand for personalization in education relies on sources with 'unknown' and 'blog' quality, which may not be sufficiently authoritative.",
+        "suggested_fix": "Seek more authoritative, peer-reviewed, or official sources to support the claim about the demand for personalization in education."
+      },
+      {
+        "section": "Market Opportunity",
+        "severity": "medium",
+        "issue_type": "missing_evidence",
+        "description": "The assertion about the rapid improvement of AI tutor technology is supported by a 'blog' quality source, which may not be considered robust evidence.",
+        "suggested_fix": "Replace the 'blog' source with a more authoritative source (e.g., academic research, industry reports) to substantiate the claim about technological advancements."
+      },
+      {
+        "section": "Solution",
+        "severity": "critical",
+        "issue_type": "logic_gap",
+        "description": "The proposal lacks specific details on the AI Tutor's core product features, delivery model, pedagogical approach, and integrations, making it impossible to evaluate its viability or differentiation.",
+        "suggested_fix": "Define the minimum viable product (MVP) features, how it will be delivered, its educational philosophy, and key integrations based on initial market research or assumptions to be validated."
+      },
+      {
+        "section": "Value Proposition",
+        "severity": "high",
+        "issue_type": "logic_gap",
+        "description": "The value proposition promises personalized learning and enhanced academic integrity, but the 'Solution' section explicitly states that specific product features are currently undefined, creating a logical inconsistency.",
+        "suggested_fix": "Define the specific product features that will enable personalized learning and academic integrity to support the value proposition."
+      },
+      {
+        "section": "Value Proposition",
+        "severity": "medium",
+        "issue_type": "missing_evidence",
+        "description": "The claim about a general demand for personalization in education lacks a direct citation in this section, weakening its support within the value proposition.",
+        "suggested_fix": "Add the relevant source IDs (e.g., web-39e08b8d6d21405c8584d780b52bd6d0, web-9e74c3d345af4e698bd83b60aa894056) to this claim for consistency."
+      },
+      {
+        "section": "Competitor Analysis",
+        "severity": "high",
+        "issue_type": "unclear_customer",
+        "description": "The competitor analysis uses general student usage data for ChatGPT (66%) to describe MBA students, which may not accurately reflect the usage patterns or competitive landscape within the MBA demographic.",
+        "suggested_fix": "Seek specific data on AI tool usage among MBA students to accurately assess the competitive threat from general-purpose AI tools."
+      },
+      {
+        "section": "Competitor Analysis",
+        "severity": "medium",
+        "issue_type": "missing_evidence",
+        "description": "The claim regarding universities developing or endorsing their own AI learning tools and requiring certifications relies on a source of 'unknown' quality, which may not be sufficiently reliable.",
+        "suggested_fix": "Replace the 'unknown' quality source with a more authoritative source (e.g., official university statements, education policy reports) to support this competitive factor."
+      },
+      {
+        "section": "Business Model",
+        "severity": "critical",
+        "issue_type": "financial_inconsistency",
+        "description": "The business model section outlines a subscription model but explicitly states that specific pricing, conversion rates, and customer acquisition volumes are unconfirmed, making the financial viability speculative.",
+        "suggested_fix": "Develop initial pricing hypotheses, conversion rate assumptions, and customer acquisition volume targets based on comparable EdTech services or preliminary market research, and clearly state them as assumptions to be validated."
+      },
+      {
+        "section": "Go-to-Market Strategy",
+        "severity": "high",
+        "issue_type": "weak_gtm",
+        "description": "The initial go-to-market strategy relies on assumed MBA student engagement channels and preferences without specific validation, making the approach speculative.",
+        "suggested_fix": "Conduct market research to identify the most effective digital channels, academic forums, and student networks for reaching and engaging MBA students."
+      },
+      {
+        "section": "Financial Assumptions",
+        "severity": "critical",
+        "issue_type": "financial_inconsistency",
+        "description": "The financial assumptions section is purely qualitative, with no concrete figures, units, or timeframes provided, making any financial assessment impossible.",
+        "suggested_fix": "Develop initial quantitative financial assumptions for revenue (e.g., estimated subscription price, target subscriber numbers), costs (e.g., development budget, operational expenses), and unit economics (e.g., target CAC, LTV) to provide a basis for financial projections. Clearly state these as assumptions to be validated."
+      }
+    ],
+    "must_fix_before_export": [
+      "Solution: The proposal lacks specific details on the AI Tutor's core product features, delivery model, pedagogical approach, and integrations, making it impossible to evaluate its viability or differentiation.",
+      "Business Model: The business model section outlines a subscription model but explicitly states that specific pricing, conversion rates, and customer acquisition volumes are unconfirmed, making the financial viability speculative.",
+      "Financial Assumptions: The financial assumptions section is purely qualitative, with no concrete figures, units, or timeframes provided, making any financial assessment impossible.",
+      "Target Customer: The proposal uses AI usage statistics for K-12 students (aged 13-17) to infer familiarity among MBA students. This is a significant demographic mismatch.",
+      "Value Proposition: The value proposition promises personalized learning and enhanced academic integrity, but the 'Solution' section explicitly states that specific product features are currently undefined, creating a logical inconsistency.",
+      "Competitor Analysis: The competitor analysis uses general student usage data for ChatGPT (66%) to describe MBA students, which may not accurately reflect the usage patterns or competitive landscape within the MBA demographic.",
+      "Go-to-Market Strategy: The initial go-to-market strategy relies on assumed MBA student engagement channels and preferences without specific validation, making the approach speculative.",
+      "Market Opportunity: The market size projection for the US AI education market is broad and not specifically segmented for higher education or MBA students, making its direct relevance to the proposed niche unclear."
+    ]
+  },
+  "current_step": "critic",
+  "product_acceptance": {
+    "policy": "product-per-agent-one-correction-v1",
+    "corrections_allowed_per_agent": 1,
+    "corrections": {
+      "research": 1,
+      "writer": 1
+    },
+    "correction_events": [
+      {
+        "stage": "research",
+        "reason": "Invalid ResearchAnalysis output: market_trends[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[1]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[2]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[3]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[1]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[2]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[3]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncompetitor_assumptions[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncompetitor_assumptions[2]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead"
+      },
+      {
+        "stage": "writer",
+        "reason": "Invalid ProposalDraftBatch3 output: ['go_to_market_strategy']: ['go_to_market_strategy']: go_to_market_strategy: web-236a31a2f5a04bcb8b4ae6d39dee9e37 is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\ngo_to_market_strategy: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      }
+    ],
+    "unresolved_issues": [
+      {
+        "stage": "writer",
+        "message": "Invalid LocalRepair_ProposalDraftBatch3 output: ['go_to_market_strategy']: go_to_market_strategy: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "writer",
+        "message": "['go_to_market_strategy']: go_to_market_strategy: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "writer",
+        "message": "Invalid ProposalDraftBatch4 output: ['risks_and_mitigations']: ['risks_and_mitigations']: risks_and_mitigations: web-236a31a2f5a04bcb8b4ae6d39dee9e37 is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+      },
+      {
+        "stage": "writer",
+        "message": "['risks_and_mitigations']: ['risks_and_mitigations']: risks_and_mitigations: web-236a31a2f5a04bcb8b4ae6d39dee9e37 is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+      },
+      {
+        "stage": "writer",
+        "message": "['risks_and_mitigations']: risks_and_mitigations: web-236a31a2f5a04bcb8b4ae6d39dee9e37 is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+      },
+      {
+        "stage": "critic",
+        "message": "go_to_market_strategy: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      }
+    ],
+    "status": "accepted_with_issues"
+  }
+}

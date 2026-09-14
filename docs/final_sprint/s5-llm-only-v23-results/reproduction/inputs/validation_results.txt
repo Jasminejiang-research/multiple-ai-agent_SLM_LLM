@@ -1,0 +1,70 @@
+Baseline regression: 362 passed, 25 deselected, 3 subtests passed in 56.73s.
+Staged S0 tests: 14 passed in 1.28s.
+Installed verification follows; explicit process exit codes are preserved.
+[
+  {
+    "command": [
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "evaluation.s0"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true,
+    "stdout": "{\n  \"status\": \"valid_preparation\",\n  \"errors\": [],\n  \"pending\": [\n    \"formal code/model/config freeze is pending\",\n    \"runtime freeze missing: code_snapshot_hash\",\n    \"runtime freeze missing: prompt_version\",\n    \"runtime freeze missing: schema_version\",\n    \"runtime freeze missing: model_config_version\",\n    \"runtime freeze missing: max_output_tokens\",\n    \"runtime freeze missing: run_max_requests\",\n    \"runtime freeze missing: run_max_total_tokens\",\n    \"acceptance pending: S1\",\n    \"acceptance pending: S2\",\n    \"acceptance pending: S3_D_preflight\",\n    \"acceptance pending: S4\",\n    \"ai_education: complete brief/evidence awaiting user review\",\n    \"intelligent_ring: complete brief/evidence awaiting user review\"\n  ],\n  \"formal_execution_allowed\": false,\n  \"require_frozen\": false\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "evaluation.s0",
+      "--require-frozen"
+    ],
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "passed": true,
+    "stdout": "{\n  \"status\": \"valid_preparation\",\n  \"errors\": [],\n  \"pending\": [\n    \"formal code/model/config freeze is pending\",\n    \"runtime freeze missing: code_snapshot_hash\",\n    \"runtime freeze missing: prompt_version\",\n    \"runtime freeze missing: schema_version\",\n    \"runtime freeze missing: model_config_version\",\n    \"runtime freeze missing: max_output_tokens\",\n    \"runtime freeze missing: run_max_requests\",\n    \"runtime freeze missing: run_max_total_tokens\",\n    \"acceptance pending: S1\",\n    \"acceptance pending: S2\",\n    \"acceptance pending: S3_D_preflight\",\n    \"acceptance pending: S4\",\n    \"ai_education: complete brief/evidence awaiting user review\",\n    \"intelligent_ring: complete brief/evidence awaiting user review\"\n  ],\n  \"formal_execution_allowed\": false,\n  \"require_frozen\": true\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_s0_preparation.py",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true,
+    "stdout": "..............                                                           [100%]\n14 passed in 1.11s\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "all_preexisting_legacy_files_hash_unchanged": true
+  },
+  {
+    "installed_files": 34,
+    "recorded_at_utc": "2026-09-06T20:27:31.429362+00:00",
+    "s0_model_calls": 0,
+    "all_verification_passed": true
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "model": "granite-h-micro-32k",
+  "created_at": "2026-09-07T20:23:59.0739192Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"text\": \"Market: US adults aged 18+ enrolled in or applying to MBA programs; potential institutional buyers are business-school instructors. [EDU-01-C1, EDU-02-C1, EDU-02-C2, EDU-03-C1]\\nCustomer: Business graduate students seeking timely, personalized business-case reasoning feedback. [EDU-01-C1, EDU-02-C1, EDU-02-C2, EDU-03-C1]\\nAlternative: Khanmigo AI tutoring service with personalized coaching, district tools, and professional learning. [EDU-01"
+  },
+  "done": true,
+  "done_reason": "length",
+  "total_duration": 31518193500,
+  "load_duration": 2104866800,
+  "prompt_eval_count": 816,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 18123623000,
+  "eval_count": 128,
+  "eval_duration": 11278753000
+}

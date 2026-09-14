@@ -1,0 +1,15 @@
+$ErrorActionPreference='Stop'
+$targetRoot='C:/Users/JasmineJiang/Projects/multiple-ai-agent_SLM_LLM'
+$runRoot=Join-Path $targetRoot 'docs/final_sprint/s3-fix-v1/installed_cpu_warmup'
+if (Test-Path -LiteralPath $runRoot) { throw 'Existing real run must not be overwritten' }
+Push-Location -LiteralPath $targetRoot
+try {
+    & './slm/start_granite.ps1' -OutputDirectory (Join-Path $runRoot 'server')
+    & './.venv/Scripts/python.exe' -B -m slm.granite_preflight --phase warmup `
+        --config './slm/configs/granite_preflight_cpu_v2.json' `
+        --output-dir (Join-Path $runRoot 'probe') --server-owner (Join-Path $runRoot 'server/server_owner.json') `
+        --tokenizer './docs/final_sprint/s3-v1/setup/tokenizer.json' `
+        --tokenizer-provenance './docs/final_sprint/s3-v1/setup/tokenizer_provenance.json'
+    $code=$LASTEXITCODE
+} finally { Pop-Location }
+exit $code

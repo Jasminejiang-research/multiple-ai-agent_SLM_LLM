@@ -1,0 +1,99 @@
+{
+  "created_at": "2026-09-07T18:09:07.2166067Z",
+  "source_root": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM",
+  "formal_runs_started": 0,
+  "files": [
+    {
+      "path": "agents\\component_critic.py",
+      "sha256": "821d04a600b83df93d6c434e6c92f99a5a2373f4f26df6e57844fc21f508e9df",
+      "bytes": 3427
+    },
+    {
+      "path": "evaluation\\s2_fixtures.py",
+      "sha256": "5e8d5d3a5327c9b40478dfcdaee521b4e8965b10c921fe33b37fe8acbda0ff8f",
+      "bytes": 7022
+    },
+    {
+      "path": "evaluation\\s4_export.py",
+      "sha256": "0ad433200f7063994019fb7dd0a7e694f0cc9f6bd8a4b5271db3984dea0914ab",
+      "bytes": 13344
+    },
+    {
+      "path": "evaluation\\s4_metrics.py",
+      "sha256": "4238747a1c2fa5a2ae4feb6498dfd8ca3212f02ff00379970a2b4c3d64ac4124",
+      "bytes": 11053
+    },
+    {
+      "path": "evaluation\\s4_runner.py",
+      "sha256": "9cde6e27880bb975a873959a9c2ad1978a1b550e02541eacbbb18ac86d61f89f",
+      "bytes": 26693
+    },
+    {
+      "path": "evaluation\\s4_ui.py",
+      "sha256": "a354f58e934ef9a414223e24c22b8c969751951f03827c776634bbed2ecc61c2",
+      "bytes": 4722
+    },
+    {
+      "path": "schemas\\contract_outputs.py",
+      "sha256": "9f16ba0af9907183c0b1200af331faa76052da8da4ecc6e3aaecbc11d1d7a936",
+      "bytes": 4824
+    },
+    {
+      "path": "schemas\\review.py",
+      "sha256": "74660a28f879dd54749f91180ccaa7e1661a569f4e6245bce910b4b27da4fb57",
+      "bytes": 4021
+    },
+    {
+      "path": "schemas\\review_events.py",
+      "sha256": "8b68b1909360bb6abe5fed343683a76b9bca4ab3db0d05070544e5280ff71eaf",
+      "bytes": 2221
+    },
+    {
+      "path": "slm\\granite_config.py",
+      "sha256": "40e816d73b09eda3b3318beb51fc6c1b50577d7bbfa7b54be9039d9c1e064961",
+      "bytes": 2745
+    },
+    {
+      "path": "workflow\\contract_context.py",
+      "sha256": "fd9b301e07e0154ad0c1dde88355025eec8ad7e0de855426fcbffc8314108782",
+      "bytes": 13195
+    },
+    {
+      "path": "workflow\\contract_generation.py",
+      "sha256": "f075a91f1e00b605f03ad415726661f4be3cd7a956d634ec156b97918d237e35",
+      "bytes": 20676
+    },
+    {
+      "path": "workflow\\review_config.py",
+      "sha256": "3ce577d065b0032d656a49a684ea366a2407c90226309d1f5e5fdea4bb0b9caa",
+      "bytes": 1657
+    },
+    {
+      "path": "workflow\\review_graph.py",
+      "sha256": "c8e311e830541a829dc85e93e0ff2fd86fae44d40e34bbb0a72cfc5d0acc784e",
+      "bytes": 20444
+    },
+    {
+      "path": "workflow\\review_runtime.py",
+      "sha256": "d2db3b2d8cfed2823d0acb0b9dfb928d231638bc12f1c560877bd6209578d7ec",
+      "bytes": 18855
+    },
+    {
+      "path": "docs\\final_sprint_status.md",
+      "sha256": "08ba40c4c0cdccac211acf11b669eb44784f543f7cefdb422cba78d4bf3c3398",
+      "bytes": 30022
+    }
+  ],
+  "supplemental_before_copies": [
+    {
+      "path": "before/tests_test_s2_review.py",
+      "sha256": "f23a16dfc832c1875482d8a2da4520ffa81efd4408ec67b3fc4824a887e58319",
+      "bytes": 22122
+    },
+    {
+      "path": "before/tests_test_s4_evaluation.py",
+      "sha256": "8a21ad50ab888d0a065ab057ad4c600ac46d6b3e2affd7c33bc93e5ecb702da5",
+      "bytes": 22596
+    }
+  ]
+}

@@ -1,0 +1,1084 @@
+{
+  "role": "writer",
+  "artifact_version": 1,
+  "case_id": "intelligent_ring",
+  "packet_sha256": "7deb2172fcb2ed46ab93f04d24285e094167c634f42abe006c343372f4463e6b",
+  "brief_sha256": "dac67857282ea5b0452906799a5e5e4a307b040382f8931dd01338a4ff56a468",
+  "contract_version": "proposal-grounding-v5-two-stage",
+  "payload": {
+    "title": "Apple Intelligent Ring Category-Entry Proposal",
+    "global_source_ids": [
+      "RING-03",
+      "RING-01"
+    ],
+    "executive_summary": {
+      "title": "Executive Summary",
+      "content": "This proposal recommends a conditional go for a bounded ring pilot to assess market viability.",
+      "key_claims": [
+        {
+          "claim_id": "EXS001",
+          "parent_claim_id": null,
+          "claim_text": "This proposal recommends a conditional go for a bounded ring pilot to assess market viability.",
+          "claim_type": "recommendation",
+          "claim_domain": "The proposal aims to provide a clear direction for a potential new product category entry.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.8,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "This proposal recommends a conditional go for a bounded ring pilot to assess market viability.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "A conditional go allows for further validation before full commitment.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "problem": {
+      "title": "Problem",
+      "content": "Assessing if an additional ring form factor meets distinct wellness needs is crucial.",
+      "key_claims": [
+        {
+          "claim_id": "PRB001",
+          "parent_claim_id": null,
+          "claim_text": "Assessing if an additional ring form factor meets distinct wellness needs is crucial.",
+          "claim_type": "factual",
+          "claim_domain": "The problem statement highlights the need to verify unmet demand and incremental customer value.",
+          "evidence_status": "needs_validation",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.7,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "Assessing if an additional ring form factor meets distinct wellness needs is crucial.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    },
+    "target_customer": {
+      "title": "Target Customer",
+      "content": "Target customers are US adult smartphone users considering a screen-free wellness wearable.",
+      "key_claims": [
+        {
+          "claim_id": "CUS001",
+          "parent_claim_id": null,
+          "claim_text": "Target customers are US adult smartphone users considering a screen-free wellness wearable.",
+          "claim_type": "assumption",
+          "claim_domain": "This defines the primary demographic and their preference for a specific wearable form factor.",
+          "evidence_status": "assumption",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.7,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "Target customers are US adult smartphone users considering a screen-free wellness wearable.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "The target customer is defined by their existing tech usage and interest in a specific type of wellness device.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "market_opportunity": {
+      "title": "Market Opportunity",
+      "content": "General wellness products are low-risk devices that promote a healthy lifestyle [RING-03].",
+      "key_claims": [
+        {
+          "claim_id": "MKT001",
+          "parent_claim_id": null,
+          "claim_text": "General wellness products are low-risk devices that promote a healthy lifestyle [RING-03].",
+          "claim_type": "factual",
+          "claim_domain": "The FDA guidance document defines general wellness products as low-risk devices for healthy lifestyles.",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "RING-03"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "General wellness products are low-risk devices that promote a healthy lifestyle [RING-03].",
+          "source_anchors": [
+            {
+              "source_id": "RING-03",
+              "chunk_id": "RING-03-C2",
+              "line_start": 80,
+              "line_end": 85,
+              "snapshot_sha256": "0b2dcc5c6bd1bfe76346171fe7d05aa0b47b14f31b38ed8415e31d27737b9e70",
+              "quote": "Guidance Issuing Office\nCenter for Devices and Radiological Health\nThe Food and Drug Administration (FDA) is issuing this guidance document to provide clarity to industry and FDA staff on the Center for Devices and Radiological Health's (CDRH's) compliance policy for low risk products that promote a healthy lifestyle (general wellness products).1 This guidance does not apply to products (e.g., drugs, biologics, dietary supplements, foods, or cosmetics) regulated by other FDA Centers or to combination products.2\nSection 3060(a) of the 21st Century Cures Act (Cures Act) amended section 520 of the Federal Food, Drug, and Cosmetic Act (FD&C Act) on December 13, 2016, removing certain software functions, including those intended for maintaining or encouraging a healthy lifestyle that are unrelated to the diagnosis, cure, mitigation, prevention, or treatment of a disease or condition, from the definition of device in section 201(h) of the FD&C Act. Section 520(o)(1)(B) of the FD&C Act, states that software that is intended \"for maintaining or encouraging a healthy lifestyle and is unrelated to the diagnosis, cure, mitigation, prevention, or treatment of a disease or condition\" is not a device under section 201(h) of the FD&C Act.\nThis guidance clarifies FDA's interpretation of this provision and its application to general wellness products.\n1 This guidance does not change or rescind any requirements of the Federal Food, Drug, and Cosmetic Act (FD&C Act) or any applicable regulations. This guidance also does not preclude FDA from consulting with the Consumer Product Safety Commission (CPSC) as to whether a general wellness product is a consumer product under CPSC's authority or a device. FDA may coordinate with other agencies and authorities, such as the CPSC, to determine jurisdiction over products. If a product is a device under section 201(h) of the FD&C Act, it is generally excluded from CPSC's authority over \"consumer products\" under the Consumer Product Safety Act (15 U.S.C. § 2052(a)(5)(ii)(H)). However, CPSC and FDA may both have jurisdiction over certain medical devices under other statutory authorities the CPSC administers."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "RING-03"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "solution": {
+      "title": "Solution",
+      "content": "Evaluate a hypothetical ring and companion app for general wellness trends and sleep/activity feedback.",
+      "key_claims": [
+        {
+          "claim_id": "SOL001",
+          "parent_claim_id": null,
+          "claim_text": "Evaluate a hypothetical ring and companion app for general wellness trends and sleep/activity feedback.",
+          "claim_type": "recommendation",
+          "claim_domain": "The solution focuses on a bounded evaluation without asserting product existence or medical claims.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.8,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "Evaluate a hypothetical ring and companion app for general wellness trends and sleep/activity feedback.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "This evaluation will determine the feasibility and market fit of the proposed device.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "value_proposition": {
+      "title": "Value Proposition",
+      "content": "The proposed ring offers screen-free wellness tracking and personalized insights for users.",
+      "key_claims": [
+        {
+          "claim_id": "VAL001",
+          "parent_claim_id": null,
+          "claim_text": "The proposed ring offers screen-free wellness tracking and personalized insights for users.",
+          "claim_type": "assumption",
+          "claim_domain": "This highlights the core benefits and differentiation from existing screen-based wearables.",
+          "evidence_status": "assumption",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.7,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "The proposed ring offers screen-free wellness tracking and personalized insights for users.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "The value proposition assumes a demand for screen-free wellness tracking and personalized insights.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "competitor_analysis": {
+      "title": "Competitor Analysis",
+      "content": "Oura offers a smart ring with a required monthly or annual membership for full data access [RING-01] [RING-01].",
+      "key_claims": [
+        {
+          "claim_id": "COM001",
+          "parent_claim_id": null,
+          "claim_text": "Oura offers a smart ring with a required monthly or annual membership for full data access [RING-01] [RING-01].",
+          "claim_type": "factual",
+          "claim_domain": "Oura's business model includes a subscription for advanced features and insights.",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "RING-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "Oura offers a smart ring with a required monthly or annual membership for full data access [RING-01] [RING-01].",
+          "source_anchors": [
+            {
+              "source_id": "RING-01",
+              "chunk_id": "RING-01-C1",
+              "line_start": 15,
+              "line_end": 18,
+              "snapshot_sha256": "ff589967d9e74baba83c9a0e3a352555f0d763b360db6db89bddda3425aecc33",
+              "quote": "Last updated: September 1, 2026\nOura Membership gives you deeper access to accurate data and information about your body, allowing you to make more informed decisions and lead a healthier life. For new members, your first month of membership comes with your ring purchase.\nOura Membership and Oura Ring work hand-in-hand, empowering you to prioritize your long-term health goals and build healthy habits that will last a lifetime. With an active membership, you can track numerous biometrics and receive personalized insights from Oura to help you understand what your body needs.\nOura Membership only applies to Gen3 and newer."
+            },
+            {
+              "source_id": "RING-01",
+              "chunk_id": "RING-01-C2",
+              "line_start": 57,
+              "line_end": 59,
+              "snapshot_sha256": "ff589967d9e74baba83c9a0e3a352555f0d763b360db6db89bddda3425aecc33",
+              "quote": "How Much Does Oura Membership Cost?\nOura Membership is available for $5.99/month and $69.99/year in the US, and 5.99 €/month and 69.99 €/year in the European Union. All other membership pricing varies by region and currency. Any applicable taxes are calculated based on your local tax laws and regulations. You can see country-specific pricing in Membership Hub.\nNew members receive one included month of Oura Membership. Oura Membership is tied to your Oura account, not your physical Oura Ring. If you purchase an additional ring with an existing Oura account, you will not receive another complimentary month of Oura Membership."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "RING-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "business_model": {
+      "title": "Business Model",
+      "content": "The business model assumes hypothetical hardware sale plus optional monthly analytics subscription.",
+      "key_claims": [
+        {
+          "claim_id": "MOD001",
+          "parent_claim_id": null,
+          "claim_text": "The business model assumes hypothetical hardware sale plus optional monthly analytics subscription.",
+          "claim_type": "assumption",
+          "claim_domain": "This defines the core revenue streams for the proposed product.",
+          "evidence_status": "assumption",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.8,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "The business model assumes hypothetical hardware sale plus optional monthly analytics subscription.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "The business model is based on a one-time hardware purchase and a recurring subscription for enhanced features.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "go_to_market_strategy": {
+      "title": "Go-to-Market Strategy",
+      "content": "A bounded pilot category-entry proposal in the US is recommended for initial market testing.",
+      "key_claims": [
+        {
+          "claim_id": "GTM001",
+          "parent_claim_id": null,
+          "claim_text": "A bounded pilot category-entry proposal in the US is recommended for initial market testing.",
+          "claim_type": "recommendation",
+          "claim_domain": "This strategy minimizes risk by focusing on a specific geography and limited scale.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.8,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "A bounded pilot category-entry proposal in the US is recommended for initial market testing.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "A pilot approach allows for gathering real-world data and refining the product before a wider launch.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "financial_assumptions": {
+      "title": "Financial Assumptions",
+      "content": "Annual contribution for the base scenario is $138,576.00 in year one.",
+      "key_claims": [
+        {
+          "claim_id": "ECO002",
+          "parent_claim_id": null,
+          "claim_text": "Annual contribution for the base scenario is $138,576.00 in year one.",
+          "claim_type": "factual",
+          "claim_domain": "Calculated as total revenue minus total variable costs.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "Annual contribution for the base scenario is $138,576.00 in year one.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support",
+      "financial_values": [
+        {
+          "value_id": "low.hardware_revenue",
+          "value": "149500.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.low",
+            "hardware_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/hardware_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.hardware_variable_cost",
+          "value": "85000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.low",
+            "unit_manufacturing_cost",
+            "unit_logistics_cost",
+            "unit_warranty_return_reserve"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/hardware_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.subscription_paid_months",
+          "value": "1200.0",
+          "unit": "subscriber-months",
+          "currency": null,
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.low",
+            "subscription_attach_rate",
+            "average_paid_subscription_months"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_paid_months",
+          "rounding_policy": "exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.subscription_revenue",
+          "value": "5988.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "low.subscription_paid_months",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.subscription_variable_cost_total",
+          "value": "1200.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "low.subscription_paid_months",
+            "subscription_variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_variable_cost_total",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.annual_contribution",
+          "value": "69288.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "low.hardware_revenue",
+            "low.hardware_variable_cost",
+            "low.subscription_revenue",
+            "low.subscription_variable_cost_total"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/annual_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.annual_cash_change",
+          "value": "-370712.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "low.annual_contribution",
+            "fixed_launch_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.ending_cash",
+          "value": "629288.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "low.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.break_even_units",
+          "value": "3176",
+          "unit": "devices",
+          "currency": null,
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_launch_cost",
+            "marketing_cost",
+            "hardware_price",
+            "unit_manufacturing_cost",
+            "unit_logistics_cost",
+            "unit_warranty_return_reserve",
+            "subscription_attach_rate",
+            "average_paid_subscription_months",
+            "subscription_price",
+            "subscription_variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/break_even_units",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.hardware_revenue",
+          "value": "299000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.base",
+            "hardware_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/hardware_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.hardware_variable_cost",
+          "value": "170000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.base",
+            "unit_manufacturing_cost",
+            "unit_logistics_cost",
+            "unit_warranty_return_reserve"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/hardware_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.subscription_paid_months",
+          "value": "2400.0",
+          "unit": "subscriber-months",
+          "currency": null,
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.base",
+            "subscription_attach_rate",
+            "average_paid_subscription_months"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_paid_months",
+          "rounding_policy": "exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.subscription_revenue",
+          "value": "11976.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "base.subscription_paid_months",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.subscription_variable_cost_total",
+          "value": "2400.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "base.subscription_paid_months",
+            "subscription_variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_variable_cost_total",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.annual_contribution",
+          "value": "138576.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "base.hardware_revenue",
+            "base.hardware_variable_cost",
+            "base.subscription_revenue",
+            "base.subscription_variable_cost_total"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/annual_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.annual_cash_change",
+          "value": "-301424.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "base.annual_contribution",
+            "fixed_launch_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.ending_cash",
+          "value": "698576.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "base.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.break_even_units",
+          "value": "3176",
+          "unit": "devices",
+          "currency": null,
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_launch_cost",
+            "marketing_cost",
+            "hardware_price",
+            "unit_manufacturing_cost",
+            "unit_logistics_cost",
+            "unit_warranty_return_reserve",
+            "subscription_attach_rate",
+            "average_paid_subscription_months",
+            "subscription_price",
+            "subscription_variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/break_even_units",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.hardware_revenue",
+          "value": "598000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.high",
+            "hardware_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/hardware_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.hardware_variable_cost",
+          "value": "340000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.high",
+            "unit_manufacturing_cost",
+            "unit_logistics_cost",
+            "unit_warranty_return_reserve"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/hardware_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.subscription_paid_months",
+          "value": "4800.0",
+          "unit": "subscriber-months",
+          "currency": null,
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "units_sold.high",
+            "subscription_attach_rate",
+            "average_paid_subscription_months"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_paid_months",
+          "rounding_policy": "exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.subscription_revenue",
+          "value": "23952.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "high.subscription_paid_months",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.subscription_variable_cost_total",
+          "value": "4800.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "high.subscription_paid_months",
+            "subscription_variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/subscription_variable_cost_total",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.annual_contribution",
+          "value": "277152.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "high.hardware_revenue",
+            "high.hardware_variable_cost",
+            "high.subscription_revenue",
+            "high.subscription_variable_cost_total"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/annual_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.annual_cash_change",
+          "value": "-162848.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "high.annual_contribution",
+            "fixed_launch_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.ending_cash",
+          "value": "837152.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "high.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.break_even_units",
+          "value": "3176",
+          "unit": "devices",
+          "currency": null,
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_launch_cost",
+            "marketing_cost",
+            "hardware_price",
+            "unit_manufacturing_cost",
+            "unit_logistics_cost",
+            "unit_warranty_return_reserve",
+            "subscription_attach_rate",
+            "average_paid_subscription_months",
+            "subscription_price",
+            "subscription_variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/intelligent_ring/break_even_units",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        }
+      ]
+    },
+    "risks_and_mitigations": {
+      "title": "Risks and Mitigations",
+      "content": "Unverified demand and incremental customer value pose significant risks to market entry.",
+      "key_claims": [
+        {
+          "claim_id": "RSK001",
+          "parent_claim_id": null,
+          "claim_text": "Unverified demand and incremental customer value pose significant risks to market entry.",
+          "claim_type": "factual",
+          "claim_domain": "The problem statement highlights these as key unknowns that need to be addressed.",
+          "evidence_status": "needs_validation",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.7,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "Unverified demand and incremental customer value pose significant risks to market entry.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    },
+    "implementation_roadmap": {
+      "title": "Implementation Roadmap",
+      "content": "The 12-month pilot scenario includes discovery, engineering validation, and conditional launch milestones.",
+      "key_claims": [
+        {
+          "claim_id": "IMP001",
+          "parent_claim_id": null,
+          "claim_text": "The 12-month pilot scenario includes discovery, engineering validation, and conditional launch milestones.",
+          "claim_type": "factual",
+          "claim_domain": "This outlines the phased approach for product development and market introduction.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.8,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "The 12-month pilot scenario includes discovery, engineering validation, and conditional launch milestones.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    },
+    "appendix": {
+      "title": "Appendix",
+      "content": "The appendix contains detailed financial calculations and supporting regulatory guidance.",
+      "key_claims": [
+        {
+          "claim_id": "APP001",
+          "parent_claim_id": null,
+          "claim_text": "The appendix contains detailed financial calculations and supporting regulatory guidance.",
+          "claim_type": "factual",
+          "claim_domain": "This section serves as a repository for supplementary information and evidence.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "The appendix contains detailed financial calculations and supporting regulatory guidance.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    }
+  },
+  "confidence_changes": [
+    {
+      "artifact_version": 1,
+      "location": "problem",
+      "previous": "medium",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "problem.key_claims[0]",
+      "previous": "medium",
+      "current": "low",
+      "reason": "no_evidence",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "financial_assumptions",
+      "previous": "low",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "risks_and_mitigations",
+      "previous": "high",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "risks_and_mitigations.key_claims[0]",
+      "previous": "high",
+      "current": "low",
+      "reason": "no_evidence",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "implementation_roadmap",
+      "previous": "medium",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "implementation_roadmap.key_claims[0]",
+      "previous": "medium",
+      "current": "low",
+      "reason": "no_evidence",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "appendix",
+      "previous": "high",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "appendix.key_claims[0]",
+      "previous": "high",
+      "current": "low",
+      "reason": "no_evidence",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    }
+  ],
+  "pruned": false,
+  "unresolved_major": false,
+  "confidence_basis": "proposed_support_structurally_checked_not_human_gold"
+}

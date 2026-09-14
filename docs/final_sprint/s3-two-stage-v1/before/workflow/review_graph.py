@@ -1,0 +1,359 @@
+"""S2 A/B/C/D LangGraph with bounded conditional review/revision and durable evidence.
+
+Instances execute once. S4 owns formal scheduling and interrupted-run reconciliation.
+Legacy graphs, data and SQLite tables remain unchanged.
+"""
+from __future__ import annotations
+
+from dataclasses import replace
+import json
+from typing import TypedDict
+from uuid import uuid4
+
+from langgraph.graph import END, StateGraph
+
+from agents.component_critic import ComponentCritic
+from workflow.contract_generation import ContractGenerator
+from workflow.grounding import apply_confidence, claims_in
+from workflow.review_events import EventJournal
+from workflow.review_handoffs import HandoffLedger, reference
+from workflow.review_runtime import (BoundedClient, RunCancelled, WallClockExceeded, SharedBudgetStop)
+from workflow.run_budget import RunBudgetExceededError
+
+
+class ReviewGraphState(TypedDict, total=False):
+    stop: bool
+    route: str
+    status: str
+
+
+class ReviewWorkflow:
+    def __init__(self, context, *, config, provider, output_dir, run_id=None, planned_id=None,
+                 session_factory=None, cancel=None, clock=None, local_lease=None, formal_permit=None):
+        if context.condition != config.condition:
+            raise ValueError("condition mismatch")
+        if config.run_kind == "formal":
+            from evaluation.s4_runner import FormalPermit
+            if not isinstance(formal_permit, FormalPermit):
+                raise ValueError("formal experiment runner requires S4/S5 freeze gates and a claimed planned row")
+            formal_permit.validate(context, config, run_id, planned_id)
+        if config.provider != "mock":
+            if config.condition == "D" and config.provider != "local":
+                raise ValueError("D cannot fall back to Gemini")
+            if config.condition != "D" and (config.provider != "gemini" or config.model_exact_id != "gemini-2.5-flash"):
+                raise ValueError("A/B/C use the planned Gemini 2.5 Flash model")
+        self.context, self.config = context, config
+        self.run_id = run_id or str(uuid4())
+        self.session_factory = session_factory
+        if session_factory:
+            from storage.repositories import create_run
+            with session_factory() as session:
+                create_run(session, run_id=self.run_id, workflow_version=config.workflow_version,
+                    prompt_version="review-workflow-v1-s2", model_name=config.model_exact_id, input_brief=context.brief)
+                session.commit()
+        self.journal = EventJournal(output_dir, self.run_id, session_factory=session_factory)
+        kwargs = {} if clock is None else dict(clock=clock)
+        self.client = BoundedClient(provider, config, self.journal, cancel=cancel, local_lease=local_lease,
+            planned_id=planned_id, **kwargs)
+        self.generator = ContractGenerator(self.client, task_sink=lambda task: self.journal.emit("logical_task", task),
+                                           attempt_scope=self.client.attempt_scope)
+        self.critic = ComponentCritic(self.generator)
+        self.handoffs = HandoffLedger(self.journal)
+        self.artifacts = {}
+        self.reports = {}
+        self.gates = {}
+        self.issues = []
+        self.trace = []
+        self.error = None
+        self.status = "created"
+        self.used = False
+        self.terminal_contract_passed = False
+        self.terminal_contract_checked = False
+        self.first_valid_plan_seconds = None
+        self.roles = ("single",) if config.condition == "A" else ("research", "strategy", "finance", "writer")
+        self.dependencies = {"single": (), "research": (), "strategy": ("research",),
+            "finance": ("research", "strategy"), "writer": ("research", "strategy", "finance")}
+        self.branches = {role: "unknown" for role in config.reviewed_roles}
+        self.journal.emit("run", dict(status="created", config=config.model_dump(mode="json"),
+            config_sha256=config.sha256, workflow_version=config.workflow_version,
+            case_id=context.case_id, packet_sha256=context.packet_sha256, brief_sha256=context.brief_sha256,
+            mock_only=config.provider == "mock", formal_runs_started=int(config.run_kind == "formal")))
+        self.packet_ref = dict(artifact_id="packet", artifact_version=1, sha256=context.packet_sha256)
+        self.brief_ref = dict(artifact_id="brief", artifact_version=1, sha256=context.brief_sha256)
+        self._declare_handoffs()
+        self.handoffs.publish(self.packet_ref)
+        self.handoffs.publish(self.brief_ref)
+        self.journal.emit("branch_inventory", self.branches)
+        self.graph = self._build_graph()
+
+    @staticmethod
+    def review_role(role):
+        return "final" if role == "writer" else role
+
+    def reviewed(self, role):
+        return self.review_role(role) in self.config.reviewed_roles
+
+    def _declare_inputs(self, node, dependencies, *, branch="always", previous=None, feedback=None):
+        for item in ("packet", "brief"):
+            self.handoffs.expect("frozen_inputs", node, item, branch_rule=branch)
+        for role in dependencies:
+            self.handoffs.expect(f"{role}.effective", node, f"{role}.effective", branch_rule=branch)
+        if previous:
+            self.handoffs.expect(f"{previous}.generate", node, f"{previous}.initial", branch_rule=branch)
+        if feedback:
+            self.handoffs.expect(f"{feedback}.critic", node, f"{feedback}.critique", branch_rule=branch)
+
+    def _declare_handoffs(self):
+        for role in self.roles:
+            self._declare_inputs(f"{role}.generate", self.dependencies[role])
+            if self.reviewed(role):
+                self._declare_inputs(f"{role}.critic", (), previous=role)
+                self.handoffs.expect(f"{role}.critic", f"{role}.gate", f"{role}.critique")
+                self.handoffs.expect(f"{role}.gate", f"{role}.effective", f"{role}.gate")
+            else:
+                self.handoffs.expect(f"{role}.generate", f"{role}.effective", f"{role}.initial")
+        last = self.roles[-1]
+        self.handoffs.expect(f"{last}.effective", "terminal", f"{last}.effective")
+
+    def _ref(self, key):
+        return self.handoffs.available[key]
+
+    def _save_artifact(self, role, stage, artifact):
+        self.context.verify_artifact(artifact)
+        key = f"{role}.{stage}"
+        self.artifacts[key] = artifact
+        ref = reference(key, artifact.version, artifact.as_dict())
+        self.journal.emit("artifact", dict(stage=stage, artifact_ref=ref, artifact=artifact.as_dict()))
+        self.handoffs.publish(ref)
+        if role in ("single", "writer"):
+            self.client.check()
+            if self.first_valid_plan_seconds is None:
+                self.first_valid_plan_seconds = self.client.clock() - self.client.started
+            self.journal.emit("complete_plan_contract", dict(passed=True, artifact_ref=ref,
+                elapsed_seconds=self.client.clock()-self.client.started, stage=stage))
+        return ref
+
+    def _upstream(self, role):
+        return tuple(self.artifacts[f"{r}.effective"] for r in self.dependencies[role])
+
+    def _inputs(self, role, *, previous=False, feedback=False):
+        refs = [self.packet_ref, self.brief_ref]
+        refs.extend(self._ref(f"{r}.effective") for r in self.dependencies[role])
+        if previous:
+            refs.append(self._ref(f"{role}.initial"))
+        if feedback:
+            refs.append(self._ref(f"{role}.critique"))
+        return refs
+
+    def _generate(self, role):
+        self.client.begin_node(role)
+        refs = self._inputs(role)
+        self.handoffs.receive(f"{role}.generate", refs)
+        self.client.input_refs = refs
+        artifact = self.generator.generate(self.context, role, upstream=self._upstream(role))
+        self._save_artifact(role, "initial", artifact)
+
+    def _critic(self, role):
+        refs = [self.packet_ref, self.brief_ref, self._ref(f"{role}.initial")]
+        self.handoffs.receive(f"{role}.critic", refs)
+        self.client.input_refs = refs
+        report = self.critic.review(self.context, self.artifacts[f"{role}.initial"],
+            role=self.review_role(role), artifact_id=f"{role}.initial")
+        self.reports[role] = report
+        payload = report.as_dict()
+        self.journal.emit("critique", payload)
+        self.handoffs.publish(reference(f"{role}.critique", 1, payload))
+
+    def _gate(self, role):
+        self.handoffs.receive(f"{role}.gate", [self._ref(f"{role}.critique")])
+        report = self.reports[role]
+        gate = report.gate(budget_snapshot=self.client.snapshot())
+        self.gates[role] = gate
+        self.journal.emit("gate", gate)
+        self.handoffs.publish(reference(f"{role}.gate", 1, gate))
+        self.issues.extend(dict(**issue.model_dump(mode="json"), review_role=report.role,
+            status="unresolved", review_artifact_id=report.artifact_id) for issue in report.issues)
+        revise = report.revision_required
+        self.branches[report.role] = "revise_once" if revise else "skip_revision"
+        self.journal.emit("branch_inventory", self.branches)
+        if revise:
+            branch = f"{role}.gate=revise_once"
+            self._declare_inputs(f"{role}.revision", self.dependencies[role], branch=branch, previous=role, feedback=role)
+            self.handoffs.expect(f"{role}.gate", f"{role}.revision", f"{role}.gate", branch_rule=branch)
+            self.handoffs.expect(f"{role}.revision", f"{role}.effective", f"{role}.revision", branch_rule=branch)
+        else:
+            self.handoffs.expect(f"{role}.generate", f"{role}.effective", f"{role}.initial", branch_rule=f"{role}.gate=pass")
+        return {"route": "revise" if revise else "pass"}
+
+    def _revision(self, role):
+        gate = self.gates[role]
+        if gate["revision_count"] != 0:
+            raise ValueError("second semantic revision is prohibited")
+        gate["revision_count"] = 1  # Triggered once even if the first call fails.
+        self.journal.emit("gate", gate)
+        refs = self._inputs(role, previous=True, feedback=True) + [self._ref(f"{role}.gate")]
+        self.handoffs.receive(f"{role}.revision", refs)
+        self.client.input_refs = refs
+        report = self.reports[role]
+        revised = self.generator.generate(self.context, role, upstream=self._upstream(role),
+            previous=self.artifacts[f"{role}.initial"], version=2,
+            revision_feedback=report.model_dump(mode="json"),
+            unresolved_major=any(i.severity in ("high", "critical") for i in report.issues))
+        self._save_artifact(role, "revision", revised)
+        gate["semantic_verification_status"] = "unverified_after_revision"
+        for issue in self.issues:
+            if issue["review_role"] == report.role:
+                issue["status"] = "unverified_after_revision"
+        self.journal.emit("gate", gate)
+
+    def _effective(self, role):
+        stage = "revision" if f"{role}.revision" in self.artifacts else "initial"
+        refs = [self._ref(f"{role}.{stage}")]
+        if self.reviewed(role):
+            refs.append(self._ref(f"{role}.gate"))
+        self.handoffs.receive(f"{role}.effective", refs)
+        artifact = self.artifacts[f"{role}.{stage}"]
+        # Apply code-owned semantic limitations to every occurrence; never mutate saved initial/revision.
+        major = [i for i in self.issues if i["severity"] in ("high", "critical")]
+        affected = {cid for issue in major for cid in issue["affected_claim_ids"]}
+        candidate = artifact.payload()
+        for claim in claims_in(candidate):
+            if claim.claim_id in affected or claim.parent_claim_id in affected:
+                claim.major_issue = True
+                claim.critic_status = "unverified_after_revision"
+        unresolved = artifact.unresolved_major or bool(major)
+        candidate, changes = apply_confidence(candidate, self.context.packet, version=artifact.version,
+            pruned=artifact.pruned, unresolved=unresolved)
+        effective = replace(artifact, payload_json=candidate.model_dump_json(), unresolved_major=unresolved,
+            changes_json=json.dumps(json.loads(artifact.changes_json) + [c.model_dump() for c in changes]))
+        self._save_artifact(role, "effective", effective)
+        self.client.check()
+        self.client.end_node("completed")
+
+    def _guard(self, name, action):
+        def node(state):
+            try:
+                self.client.check()
+                result = action() or {}
+                self.client.check()
+                route = dict(node=name, status="completed", route=result.get("route"), budget=self.client.snapshot())
+                if name.endswith(".gate"):
+                    role = name.split(".")[0]
+                    route.update(rule="overall_score < 7.0 OR any high/critical issue",
+                        gate=json.loads(json.dumps(self.gates[role])), issues=self.reports[role].as_dict()["issues"])
+                self.trace.append(route)
+                self.journal.emit("route", self.trace[-1])
+                return result
+            except (Exception, KeyboardInterrupt) as exc:
+                self.status = ("cancelled" if isinstance(exc, (RunCancelled, KeyboardInterrupt)) else
+                    "timeout" if isinstance(exc, TimeoutError) else
+                    "budget_exhausted" if isinstance(exc, (RunBudgetExceededError, SharedBudgetStop)) else "failed")
+                self.error = dict(node=name, error_type=type(exc).__name__, status=self.status)
+                self.journal.emit("failure", self.error)
+                self.trace.append(dict(node=name, status=self.status, route="stop"))
+                self.journal.emit("route", self.trace[-1])
+                parent = name.split(".")[0]
+                if parent in self.gates:
+                    self.gates[parent]["decision"] = "stop_budget" if self.status in ("budget_exhausted", "timeout") else "stop_failure"
+                    self.journal.emit("gate", self.gates[parent])
+                return dict(stop=True, status=self.status)
+        return node
+
+    def _terminal(self):
+        self.terminal_contract_checked = True
+        task = dict(logical_task_id="terminal.v1", role="export", artifact_version=1,
+                    attempts=[], first_output_passed=False)
+        self.journal.emit("logical_task", task)
+        role = self.roles[-1]
+        try:
+            self.handoffs.receive("terminal", [self._ref(f"{role}.effective")])
+            artifact = self.artifacts[f"{role}.effective"]
+            self.context.export(artifact, self.journal.directory / "internal_export")
+            self.client.check()
+        except Exception as exc:
+            task.update(attempts=[dict(index=1, passed=False, error_type=type(exc).__name__)])
+            self.journal.emit("logical_task",task)
+            self.journal.emit("terminal_contract",dict(passed=False,error_type=type(exc).__name__))
+            raise
+        task.update(attempts=[dict(index=1, passed=True, error_type=None)],first_output_passed=True)
+        self.journal.emit("logical_task",task)
+        self.terminal_contract_passed = True
+        self.journal.emit("terminal_contract", dict(passed=True, artifact_ref=self._ref(f"{role}.effective"),
+            elapsed_seconds=self.client.clock()-self.client.started))
+        self.status = "completed"
+
+    def _finish(self, state):
+        if self.client.node_started is not None:
+            self.client.end_node(self.status)
+        self.handoffs.finish(self.status)
+        last = self.roles[-1]
+        final_key = next((f"{last}.{s}" for s in ("effective", "revision", "initial") if f"{last}.{s}" in self.artifacts), None)
+        self.result = dict(run_id=self.run_id, status=self.status, error=self.error, workflow_version=self.config.workflow_version,
+            condition=self.config.condition, mock_only=self.config.provider == "mock", budget=self.client.snapshot(),
+            terminal_contract_passed=self.terminal_contract_passed,
+            terminal_contract_state="passed" if self.terminal_contract_passed else "failed" if self.terminal_contract_checked else "not_checked",
+            first_valid_plan_seconds=self.first_valid_plan_seconds,
+            scorable_artifact_ref=self._ref(final_key) if final_key else None,
+            effective_artifacts={r: self._ref(f"{r}.effective") for r in self.roles if f"{r}.effective" in self.artifacts},
+            reports={r: report.as_dict() for r, report in self.reports.items()}, gates=self.gates, issues=self.issues,
+            needs_human_review=any(i["severity"] in ("high", "critical") for i in self.issues),
+            blocking=any(i["severity"] == "critical" for i in self.issues), external_ready=False,
+            external_readiness_reason="human review/Gold approval not performed by S2",
+            branches=self.branches, route_trace=self.trace, handoffs=list(self.handoffs.rows.values()),
+            collaboration_applicability="not_applicable" if self.config.condition == "A" else "applicable")
+        self.journal.emit("run_result", self.result)
+        (self.journal.directory / "result.json").write_text(json.dumps(self.result, ensure_ascii=False, indent=2), encoding="utf-8")
+        if self.session_factory:
+            from storage.repositories import update_run_status, get_run
+            with self.session_factory() as session:
+                update_run_status(session, self.run_id, self.status)
+                # Keep missing usage explicit; the detailed events remain in NodeOutput JSON.
+                snapshot = self.client.snapshot()
+                missing = snapshot["usage_missing_calls"] > 0
+                get_run(session, self.run_id).token_usage = dict(request_count=snapshot["request_count"],
+                    retry_count=snapshot["transport_retry_count"],
+                    prompt_tokens=None if missing else snapshot["actual_prompt_tokens_known"],
+                    output_tokens=None if missing else snapshot["actual_output_tokens_known"],
+                    total_tokens=None if missing else snapshot["actual_total_tokens_known"],
+                    usage_missing_reason="one or more calls has incomplete usage" if missing else None,
+                    s2_budget=snapshot)
+                session.commit()
+        return {"status": self.status}
+
+    def _build_graph(self):
+        graph = StateGraph(ReviewGraphState)
+        def connect(source, destination):
+            graph.add_conditional_edges(source, lambda state: "stop" if state.get("stop") else "next",
+                {"stop": "finish", "next": destination})
+        for index, role in enumerate(self.roles):
+            graph.add_node(f"{role}.generate", self._guard(f"{role}.generate", lambda r=role: self._generate(r)))
+            graph.add_node(f"{role}.effective", self._guard(f"{role}.effective", lambda r=role: self._effective(r)))
+            if self.reviewed(role):
+                for label, method in (("critic", self._critic), ("gate", self._gate), ("revision", self._revision)):
+                    graph.add_node(f"{role}.{label}", self._guard(f"{role}.{label}", lambda r=role, m=method: m(r)))
+                connect(f"{role}.generate", f"{role}.critic")
+                connect(f"{role}.critic", f"{role}.gate")
+                graph.add_conditional_edges(f"{role}.gate", lambda s: "stop" if s.get("stop") else s["route"],
+                    {"stop": "finish", "revise": f"{role}.revision", "pass": f"{role}.effective"})
+                connect(f"{role}.revision", f"{role}.effective")
+            else:
+                connect(f"{role}.generate", f"{role}.effective")
+            connect(f"{role}.effective", f"{self.roles[index+1]}.generate" if index+1 < len(self.roles) else "terminal")
+        graph.add_node("terminal", self._guard("terminal", self._terminal))
+        graph.add_node("finish", self._finish)
+        graph.add_edge("terminal", "finish")
+        graph.add_edge("finish", END)
+        graph.set_entry_point(f"{self.roles[0]}.generate")
+        return graph.compile()
+
+    def run(self):
+        if self.used:
+            raise ValueError("run already started; do not replay physical calls or reset allowances")
+        self.used = True
+        self.status = "running"
+        self.graph.invoke({"stop": False}, config={"recursion_limit": 64})
+        return self.result
+
+
+def build_review_workflow(context, **kwargs):
+    return ReviewWorkflow(context, **kwargs)

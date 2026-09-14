@@ -1,0 +1,34 @@
+{
+  "prompt_version": "compact-generation-v1-s6",
+  "wire_version": "compact-json-wire-v1-s6",
+  "context_version": "deterministic-role-view-v1-s6",
+  "config_version": "review-run-v2-s6-compact",
+  "instruction_limit": 500,
+  "instructions": {
+    "research": {"chars": 242, "utf8_bytes": 242},
+    "strategy": {"chars": 263, "utf8_bytes": 263},
+    "finance": {"chars": 269, "utf8_bytes": 269},
+    "single": {"chars": 263, "utf8_bytes": 263},
+    "writer": {"chars": 265, "utf8_bytes": 265},
+    "research_critic": {"chars": 267, "utf8_bytes": 267},
+    "strategy_critic": {"chars": 267, "utf8_bytes": 267},
+    "finance_critic": {"chars": 266, "utf8_bytes": 266},
+    "final_critic": {"chars": 264, "utf8_bytes": 264},
+    "revision": {"chars": 208, "utf8_bytes": 208}
+  },
+  "wire_schemas": {
+    "research": {"sha256": "e58aa5fdbb0ae4860039e528ca4ce8a3578e578a14f78ddddd8ed48a25f5a3ea", "utf8_bytes": 2933},
+    "strategy": {"sha256": "f03ece7ea45e546ba20a964c66cfa9ef0cef74057cd4f53b02121cb1e9aeeade", "utf8_bytes": 3013},
+    "finance": {"sha256": "154804d95fc42431ace46e41d768769e2ec69753543828b9b080cfbe6f34ce67", "utf8_bytes": 3168},
+    "single": {"sha256": "9b4e8792a66111c201233eb5ebdb386e350061e5c93d8a7a685637034aac5df7", "utf8_bytes": 2629},
+    "writer": {"sha256": "9b4e8792a66111c201233eb5ebdb386e350061e5c93d8a7a685637034aac5df7", "utf8_bytes": 2629},
+    "critic": {"sha256": "abb312d1fe349f966159e110f74d87a5091e52f963dd4ce48ee41fc9f54f2692", "utf8_bytes": 1134},
+    "patch": {"sha256": "a861d379c862670f548742fbb47607b46a043cfe4b9a80a370750063726497c7", "utf8_bytes": 1920}
+  },
+  "role_input_tokens": {"research": 2500, "research_critic": 2000, "strategy": 2600, "strategy_critic": 2000, "finance": 3000, "finance_critic": 2000, "writer": 6500, "single": 6500, "final_critic": 3500, "revision": 1800},
+  "role_output_tokens": {"research": 450, "research_critic": 180, "strategy": 500, "strategy_critic": 180, "finance": 600, "finance_critic": 180, "writer": 1800, "single": 1800, "final_critic": 250, "revision": 300},
+  "role_seconds": {"research": 240, "research_critic": 90, "strategy": 240, "strategy_critic": 90, "finance": 300, "finance_critic": 90, "writer": 420, "single": 420, "final_critic": 150, "revision": 180},
+  "mvp30_seconds": 1800,
+  "valid_plan_seconds": 3600,
+  "finance_rows": {"ai_education": 21, "intelligent_ring": 27, "basis": "user-confirmed case-specific frozen formulas"}
+}

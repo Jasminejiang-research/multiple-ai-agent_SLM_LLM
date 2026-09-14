@@ -1,0 +1,282 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Sun, 13 Sep 2026 11:28:49 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=45803",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "{\n  \"evidence_notice\": \"All sourced findings are based on the provided 'Controlled Web Research Sources JSON'. Some sources have limitations such as unknown publication dates, unconfirmed jurisdictions, or unconfirmed source authority, which impact the confidence level of the findings. User brief statements are treated as hypotheses unless explicitly supported by external evidence.\",\n  \"analysis_summary\": \"The United States AI education market is experiencing significant growth, with a projected value of $39.83 billion by 2035. While AI tutors show promise for personalization and efficiency, particularly in K-12 education, there is a notable adoption gap among higher education faculty and a relatively low perception of AI's benefits in education among the general US public. The regulatory landscape for AI in education is rapidly evolving at both federal and state levels, focusing on governance, data privacy, academic integrity, and human oversight. Specific demand, willingness to pay, detailed problem statements, product features, and a defined business model for an AI tutor targeting MBA students in the US remain unconfirmed and require further research.\",\n  \"market_trends\": [\n    {\n      \"evidence_status\": \"sourced_fact\",\n      \"source_ids\": [\"web-57da4247bdb54dd99b32029fe644c91b\"],\n      \"topic\": \"AI in Education Market Growth\",\n      \"finding\": \"The US AI education market is projected to grow from $2.73 billion to $39.83 billion by 2035, with a Compound Annual Growth Rate (CAGR) of 34.8%.\",\n      \"rationale\": \"Precedence Research data indicates substantial growth in the US AI education market, although this is a general market figure and not specific to higher education or MBA students.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"evidence_status\": \"sourced_fact\",\n      \"source_ids\": [\"web-57da4247bdb54dd99b32029fe644c91b\", \"web-ba3fef6a51f946d1a50970f9ee82838f\", \"web-00ec92ece8e14231883ddb1c6047a8dd\", \"web-4bb0c35573164184b0269f72942c77e8\", \"web-4c21a24af9ac4d20b5a44bf7a0119335\", \"web-ed9a3af5fe2540aeb26f0694cfd28c16\"],\n      \"topic\": \"Evolving Regulatory Landscape for AI in Education\",\n      \"finding\": \"All 50 US states have introduced legislation on AI, and federal executive orders have established a national framework for AI in education. Educational leaders in higher education are actively crafting policies focusing on innovation, academic integrity, data privacy, and human oversight.\",\n      \"rationale\": \"Multiple sources confirm widespread legislative and policy development at both state and federal levels concerning AI in education, including specific guidance for higher education institutions.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"evidence_status\": \"sourced_fact\",\n      \"source_ids\": [\"web-9e74c3d345af4e698bd83b60aa894056\", \"web-39e08b8d6d21405c8584d780b52bd6d0\"],\n      \"topic\": \"Increasing Demand for Personalized Education\",\n      \"finding\": \"There is a growing demand for more personalization within the educational system, a need that AI tutors are well-positioned to address by offering tailored learning experiences.\",\n      \"rationale\": \"Sources indicate a societal shift towards greater demand for personalization in education, and AI tutors are identified as a critical intervention to meet these demands, particularly in STEM education for high school students.\",\n      \"confidence\": \"low\"\n    },\n    {\n      \"evidence_status\": \"sourced_fact\",\n      \"source_ids\": [\"web-9e74c3d345af4e698bd83b60aa894056\"],\n      \"topic\": \"Rapid Improvement of AI Tutor Technology\",\n      \"finding\": \"The underlying technology for AI tutors is improving at a rapid pace, leading to enhanced quality and the potential for AI tutors to become primary drivers of change in formal education.\",\n      \"rationale\": \"Observations from Stanford's Lean Launchpad class highlight the speed at which students can create compelling AI tutors and the rapid improvement in their quality.\",\n      \"confidence\": \"low\"\n    }\n  ],\n  \"customer_notes\": [\n    {\n      \"evidence_status\": \"sourced_fact\",\n      \"source_ids\": [\"web-57da4247bdb54dd99b32029fe644c91b\", \"web-236a31a2f5a04bcb8b4ae6d39dee9e37\"],\n      \"topic\": \"General Student AI Usage\",\n      \"finding\": \"Over half of US students aged 13-17 have used AI for research, and ChatGPT leads student usage at 66%, indicating a general familiarity and adoption of AI tools among students.\",\n      \"rationale\": \"Pew Research and other data show significant AI tool usage among K-12 and general student populations, suggesting a baseline comfort with AI for academic purposes.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"evidence_status\": \"sourced_fact\",\n      \"source_ids\": [\"web-236a31a2f5a04bcb8b4ae6d39dee9e37\"],\n      \"topic\": \"US Perception of AI in Education\",\n      \"finding\": \"Only 39% of respondents in the United States consider AI beneficial in education, which is significantly lower compared to many other countries.\",\n      \"rationale\": \"A global survey indicates a relatively low positive perception of AI in education within the US, which could impact adoption rates for new AI-powered learning tools.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"evidence_status\": \"sourced_fact\",\n      \"source_ids\": [\"web-236a31a2f5a04bcb8b4ae6d39dee9e37\"],\n      \"topic\": \"Higher Education Faculty AI Adoption Gap\",\n      \"finding\": \"Only 22% of higher education faculty regularly use generative AI, compared to 83% of K-12 teachers, revealing a major adoption gap within the higher education sector.\",\n      \"rationale\": \"This significant disparity suggests potential challenges in integrating AI tutors into the existing higher education environment and gaining faculty endorsement or support.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"evidence_status\": \"sourced_fact\",\n      \"source_ids\": [\"web-22a440c045674c219e988a462c13f36c\"],\n      \"topic\": \"Concerns about AI Misuse and Academic Integrity\",\n      \"finding\": \"Teachers express concerns about students using AI to cheat (78%) and have noticed an increase in plagiarism or AI misuse (66%), highlighting a need for clear guidelines and ethical considerations for AI tutor use.\",\n      \"rationale\": \"Teacher surveys indicate widespread worry regarding academic misconduct associated with AI tools, which is a critical factor for any AI-enabled educational solution.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"evidence_status\": \"assumption\",\n      \"source_ids\": [],\n      \"topic\": \"MBA Student Specific Needs and Willingness to Pay\",\n      \"finding\": \"The precise unmet learning support needs, frequency, urgency, and willingness to pay among MBA students in the United States for an AI tutor are currently unknown.\",\n      \"rationale\": \"The user brief explicitly states that these details have not been supplied, and the provided web research does not offer specific data for MBA students.\",\n      \"confidence\": \"low\"\n    }\n  ],\n  \"competitor_assumptions\": [\n    {\n      \"evidence_status\": \"sourced_fact\",\n      \"source_ids\": [\"web-236a31a2f5a04bcb8b4ae6d39dee9e37\"],\n      \"topic\": \"Existing General AI Tools as Substitutes\",\n      \"finding\": \"General-purpose AI tools like ChatGPT are already widely used by students (66% usage) and could serve as readily available, potentially free, substitutes for a dedicated AI tutor.\",\n      \"rationale\": \"The high adoption rate of ChatGPT among students suggests it is a de facto competitor for various academic support needs, even if not specifically designed as a tutor.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"evidence_status\": \"assumption\",\n      \"source_ids\": [],\n      \"topic\": \"Traditional Academic Support Services\",\n      \"finding\": \"Traditional human tutoring services, university academic support centers, and peer study groups represent existing alternatives for learning support that MBA students may utilize.\",\n      \"rationale\": \"This is a general market assumption based on common academic practices, as no specific evidence was provided in the sources.\",\n      \"confidence\": \"low\"\n    },\n    {\n      \"evidence_status\": \"sourced_fact\",\n      \"source_ids\": [\"web-00ec92ece8e14231883ddb1c6047a8dd\", \"web-4c21a24af9ac4d20b5a44bf7a0119335\"],\n      \"topic\": \"University-Developed or Endorsed AI Solutions\",\n      \"finding\": \"Universities are actively developing and implementing AI policies, and some may develop or endorse their own AI learning tools, potentially requiring specific certifications for external solutions.\",\n      \"rationale\": \"Sources indicate that educational leaders are crafting AI policies and some states are moving towards university-supported certification of compliant AI tools, suggesting a potential for institutional competition or gatekeeping.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"evidence_status\": \"assumption\",\n      \"source_ids\": [],\n      \"topic\": \"Other EdTech AI Learning Platforms\",\n      \"finding\": \"Other EdTech companies are likely developing or have already developed AI-powered learning tools that could compete for the attention and resources of MBA students.\",\n      \"rationale\": \"This is an assumption based on the broader trend of AI integration in the education technology industry, as no specific competitors were identified in the provided sources.\",\n      \"confidence\": \"low\"\n    }\n  ],\n  \"unsupported_claims\": [\n    {\n      \"claim\": \"The precise unmet learning needs, frequency, and urgency of MBA students requiring additional learning support.\",\n      \"why_unsupported\": \"The user brief explicitly states these have not been supplied, and the provided web research does not offer specific data for MBA students.\",\n      \"needed_evidence\": [\"Detailed market research on MBA student learning challenges\", \"Surveys on MBA student demand for AI tutors\", \"Interviews with MBA students regarding academic support needs\"]\n    },\n    {\n      \"claim\": \"The willingness of MBA students to pay for an AI tutor service.\",\n      \"why_unsupported\": \"The user brief explicitly states this has not been supplied, and no pricing or willingness-to-pay data for MBA students is in the provided sources.\",\n      \"needed_evidence\": [\"Pricing sensitivity analysis for MBA students\", \"Market research on perceived value of AI tutoring for MBA programs\"]\n    },\n    {\n      \"claim\": \"Specific product features, delivery model, pedagogical approach, integrations, and differentiation for the AI Tutor.\",\n      \"why_unsupported\": \"The user brief explicitly states these have not been supplied, and the provided web research offers only general benefits of AI tutors (personalization, efficiency) without specific feature sets relevant to MBA students.\",\n      \"needed_evidence\": [\"User research on desired AI tutor features for MBA students\", \"Competitive analysis of existing AI learning tools\", \"Expert consultation on effective AI pedagogy for higher education\"]\n    },\n    {\n      \"claim\": \"Plausible commercial models, pricing, conversion rates, customer counts, costs, or margins for the AI Tutor.\",\n      \"why_unsupported\": \"The user brief explicitly states the business model has not been supplied, and no financial data is available in the provided sources.\",\n      \"needed_evidence\": [\"Market research on subscription models in higher education EdTech\", \"Financial modeling based on comparable services\", \"Cost analysis for AI development and deployment\"]\n    },\n    {\n      \"claim\": \"The specific market size for AI tutors targeting MBA students in the United States.\",\n      \"why_unsupported\": \"While the general US AI education market size is provided, it is not segmented for higher education or MBA students specifically.\",\n      \"needed_evidence\": [\"Market segmentation report for AI in higher education\", \"Demand forecasting for specialized AI learning tools for MBA programs\"]\n    },\n    {\n      \"claim\": \"Information regarding the legal position of such a service or potential institutional partnerships with MBA programs.\",\n      \"why_unsupported\": \"The user brief mentions legal position as unconfirmed, and the provided sources discuss general regulatory trends but not specific legal standing for a commercial AI tutor or partnership models.\",\n      \"needed_evidence\": [\"Legal review of AI in education regulations\", \"Research on university policies regarding third-party AI tools\", \"Analysis of potential partnership models with MBA institutions\"]\n    }\n  ],\n  \"needs_human_review\": [\n    \"Clarification on the specific unmet learning needs of MBA students in the United States.\",\n    \"Guidance on the desired core features and pedagogical approach for the AI Tutor.\",\n    \"Input on the preferred business model and pricing strategy.\",\n    \"Confirmation of the target customer's willingness to pay for such a service.\",\n    \"Strategy for addressing the low perception of AI benefits in education among the US public and the low adoption rate among higher education faculty.\",\n    \"Guidance on navigating the complex and evolving regulatory landscape for AI in US higher education, particularly concerning data privacy and academic integrity.\"\n  ]\n}",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null,
+            "part_metadata": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": null,
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "w4imapb7J-asvdIPupCQmQQ",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 3199,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 7923,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 7923
+      }
+    ],
+    "thoughts_token_count": 7776,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 18898,
+    "traffic_type": null
+  },
+  "model_status": null,
+  "automatic_function_calling_history": [],
+  "parsed": {
+    "evidence_notice": "All sourced findings are based on the provided 'Controlled Web Research Sources JSON'. Some sources have limitations such as unknown publication dates, unconfirmed jurisdictions, or unconfirmed source authority, which impact the confidence level of the findings. User brief statements are treated as hypotheses unless explicitly supported by external evidence.",
+    "analysis_summary": "The United States AI education market is experiencing significant growth, with a projected value of $39.83 billion by 2035. While AI tutors show promise for personalization and efficiency, particularly in K-12 education, there is a notable adoption gap among higher education faculty and a relatively low perception of AI's benefits in education among the general US public. The regulatory landscape for AI in education is rapidly evolving at both federal and state levels, focusing on governance, data privacy, academic integrity, and human oversight. Specific demand, willingness to pay, detailed problem statements, product features, and a defined business model for an AI tutor targeting MBA students in the US remain unconfirmed and require further research.",
+    "market_trends": [
+      {
+        "evidence_status": "sourced_fact",
+        "source_ids": [
+          "web-57da4247bdb54dd99b32029fe644c91b"
+        ],
+        "topic": "AI in Education Market Growth",
+        "finding": "The US AI education market is projected to grow from $2.73 billion to $39.83 billion by 2035, with a Compound Annual Growth Rate (CAGR) of 34.8%.",
+        "rationale": "Precedence Research data indicates substantial growth in the US AI education market, although this is a general market figure and not specific to higher education or MBA students.",
+        "confidence": "medium"
+      },
+      {
+        "evidence_status": "sourced_fact",
+        "source_ids": [
+          "web-57da4247bdb54dd99b32029fe644c91b",
+          "web-ba3fef6a51f946d1a50970f9ee82838f",
+          "web-00ec92ece8e14231883ddb1c6047a8dd",
+          "web-4bb0c35573164184b0269f72942c77e8",
+          "web-4c21a24af9ac4d20b5a44bf7a0119335",
+          "web-ed9a3af5fe2540aeb26f0694cfd28c16"
+        ],
+        "topic": "Evolving Regulatory Landscape for AI in Education",
+        "finding": "All 50 US states have introduced legislation on AI, and federal executive orders have established a national framework for AI in education. Educational leaders in higher education are actively crafting policies focusing on innovation, academic integrity, data privacy, and human oversight.",
+        "rationale": "Multiple sources confirm widespread legislative and policy development at both state and federal levels concerning AI in education, including specific guidance for higher education institutions.",
+        "confidence": "medium"
+      },
+      {
+        "evidence_status": "sourced_fact",
+        "source_ids": [
+          "web-9e74c3d345af4e698bd83b60aa894056",
+          "web-39e08b8d6d21405c8584d780b52bd6d0"
+        ],
+        "topic": "Increasing Demand for Personalized Education",
+        "finding": "There is a growing demand for more personalization within the educational system, a need that AI tutors are well-positioned to address by offering tailored learning experiences.",
+        "rationale": "Sources indicate a societal shift towards greater demand for personalization in education, and AI tutors are identified as a critical intervention to meet these demands, particularly in STEM education for high school students.",
+        "confidence": "low"
+      },
+      {
+        "evidence_status": "sourced_fact",
+        "source_ids": [
+          "web-9e74c3d345af4e698bd83b60aa894056"
+        ],
+        "topic": "Rapid Improvement of AI Tutor Technology",
+        "finding": "The underlying technology for AI tutors is improving at a rapid pace, leading to enhanced quality and the potential for AI tutors to become primary drivers of change in formal education.",
+        "rationale": "Observations from Stanford's Lean Launchpad class highlight the speed at which students can create compelling AI tutors and the rapid improvement in their quality.",
+        "confidence": "low"
+      }
+    ],
+    "customer_notes": [
+      {
+        "evidence_status": "sourced_fact",
+        "source_ids": [
+          "web-57da4247bdb54dd99b32029fe644c91b",
+          "web-236a31a2f5a04bcb8b4ae6d39dee9e37"
+        ],
+        "topic": "General Student AI Usage",
+        "finding": "Over half of US students aged 13-17 have used AI for research, and ChatGPT leads student usage at 66%, indicating a general familiarity and adoption of AI tools among students.",
+        "rationale": "Pew Research and other data show significant AI tool usage among K-12 and general student populations, suggesting a baseline comfort with AI for academic purposes.",
+        "confidence": "medium"
+      },
+      {
+        "evidence_status": "sourced_fact",
+        "source_ids": [
+          "web-236a31a2f5a04bcb8b4ae6d39dee9e37"
+        ],
+        "topic": "US Perception of AI in Education",
+        "finding": "Only 39% of respondents in the United States consider AI beneficial in education, which is significantly lower compared to many other countries.",
+        "rationale": "A global survey indicates a relatively low positive perception of AI in education within the US, which could impact adoption rates for new AI-powered learning tools.",
+        "confidence": "medium"
+      },
+      {
+        "evidence_status": "sourced_fact",
+        "source_ids": [
+          "web-236a31a2f5a04bcb8b4ae6d39dee9e37"
+        ],
+        "topic": "Higher Education Faculty AI Adoption Gap",
+        "finding": "Only 22% of higher education faculty regularly use generative AI, compared to 83% of K-12 teachers, revealing a major adoption gap within the higher education sector.",
+        "rationale": "This significant disparity suggests potential challenges in integrating AI tutors into the existing higher education environment and gaining faculty endorsement or support.",
+        "confidence": "medium"
+      },
+      {
+        "evidence_status": "sourced_fact",
+        "source_ids": [
+          "web-22a440c045674c219e988a462c13f36c"
+        ],
+        "topic": "Concerns about AI Misuse and Academic Integrity",
+        "finding": "Teachers express concerns about students using AI to cheat (78%) and have noticed an increase in plagiarism or AI misuse (66%), highlighting a need for clear guidelines and ethical considerations for AI tutor use.",
+        "rationale": "Teacher surveys indicate widespread worry regarding academic misconduct associated with AI tools, which is a critical factor for any AI-enabled educational solution.",
+        "confidence": "medium"
+      },
+      {
+        "evidence_status": "assumption",
+        "source_ids": [],
+        "topic": "MBA Student Specific Needs and Willingness to Pay",
+        "finding": "The precise unmet learning support needs, frequency, urgency, and willingness to pay among MBA students in the United States for an AI tutor are currently unknown.",
+        "rationale": "The user brief explicitly states that these details have not been supplied, and the provided web research does not offer specific data for MBA students.",
+        "confidence": "low"
+      }
+    ],
+    "competitor_assumptions": [
+      {
+        "evidence_status": "sourced_fact",
+        "source_ids": [
+          "web-236a31a2f5a04bcb8b4ae6d39dee9e37"
+        ],
+        "topic": "Existing General AI Tools as Substitutes",
+        "finding": "General-purpose AI tools like ChatGPT are already widely used by students (66% usage) and could serve as readily available, potentially free, substitutes for a dedicated AI tutor.",
+        "rationale": "The high adoption rate of ChatGPT among students suggests it is a de facto competitor for various academic support needs, even if not specifically designed as a tutor.",
+        "confidence": "medium"
+      },
+      {
+        "evidence_status": "assumption",
+        "source_ids": [],
+        "topic": "Traditional Academic Support Services",
+        "finding": "Traditional human tutoring services, university academic support centers, and peer study groups represent existing alternatives for learning support that MBA students may utilize.",
+        "rationale": "This is a general market assumption based on common academic practices, as no specific evidence was provided in the sources.",
+        "confidence": "low"
+      },
+      {
+        "evidence_status": "sourced_fact",
+        "source_ids": [
+          "web-00ec92ece8e14231883ddb1c6047a8dd",
+          "web-4c21a24af9ac4d20b5a44bf7a0119335"
+        ],
+        "topic": "University-Developed or Endorsed AI Solutions",
+        "finding": "Universities are actively developing and implementing AI policies, and some may develop or endorse their own AI learning tools, potentially requiring specific certifications for external solutions.",
+        "rationale": "Sources indicate that educational leaders are crafting AI policies and some states are moving towards university-supported certification of compliant AI tools, suggesting a potential for institutional competition or gatekeeping.",
+        "confidence": "medium"
+      },
+      {
+        "evidence_status": "assumption",
+        "source_ids": [],
+        "topic": "Other EdTech AI Learning Platforms",
+        "finding": "Other EdTech companies are likely developing or have already developed AI-powered learning tools that could compete for the attention and resources of MBA students.",
+        "rationale": "This is an assumption based on the broader trend of AI integration in the education technology industry, as no specific competitors were identified in the provided sources.",
+        "confidence": "low"
+      }
+    ],
+    "unsupported_claims": [
+      {
+        "claim": "The precise unmet learning needs, frequency, and urgency of MBA students requiring additional learning support.",
+        "why_unsupported": "The user brief explicitly states these have not been supplied, and the provided web research does not offer specific data for MBA students.",
+        "needed_evidence": [
+          "Detailed market research on MBA student learning challenges",
+          "Surveys on MBA student demand for AI tutors",
+          "Interviews with MBA students regarding academic support needs"
+        ]
+      },
+      {
+        "claim": "The willingness of MBA students to pay for an AI tutor service.",
+        "why_unsupported": "The user brief explicitly states this has not been supplied, and no pricing or willingness-to-pay data for MBA students is in the provided sources.",
+        "needed_evidence": [
+          "Pricing sensitivity analysis for MBA students",
+          "Market research on perceived value of AI tutoring for MBA programs"
+        ]
+      },
+      {
+        "claim": "Specific product features, delivery model, pedagogical approach, integrations, and differentiation for the AI Tutor.",
+        "why_unsupported": "The user brief explicitly states these have not been supplied, and the provided web research offers only general benefits of AI tutors (personalization, efficiency) without specific feature sets relevant to MBA students.",
+        "needed_evidence": [
+          "User research on desired AI tutor features for MBA students",
+          "Competitive analysis of existing AI learning tools",
+          "Expert consultation on effective AI pedagogy for higher education"
+        ]
+      },
+      {
+        "claim": "Plausible commercial models, pricing, conversion rates, customer counts, costs, or margins for the AI Tutor.",
+        "why_unsupported": "The user brief explicitly states the business model has not been supplied, and no financial data is available in the provided sources.",
+        "needed_evidence": [
+          "Market research on subscription models in higher education EdTech",
+          "Financial modeling based on comparable services",
+          "Cost analysis for AI development and deployment"
+        ]
+      },
+      {
+        "claim": "The specific market size for AI tutors targeting MBA students in the United States.",
+        "why_unsupported": "While the general US AI education market size is provided, it is not segmented for higher education or MBA students specifically.",
+        "needed_evidence": [
+          "Market segmentation report for AI in higher education",
+          "Demand forecasting for specialized AI learning tools for MBA programs"
+        ]
+      },
+      {
+        "claim": "Information regarding the legal position of such a service or potential institutional partnerships with MBA programs.",
+        "why_unsupported": "The user brief mentions legal position as unconfirmed, and the provided sources discuss general regulatory trends but not specific legal standing for a commercial AI tutor or partnership models.",
+        "needed_evidence": [
+          "Legal review of AI in education regulations",
+          "Research on university policies regarding third-party AI tools",
+          "Analysis of potential partnership models with MBA institutions"
+        ]
+      }
+    ],
+    "needs_human_review": [
+      "Clarification on the specific unmet learning needs of MBA students in the United States.",
+      "Guidance on the desired core features and pedagogical approach for the AI Tutor.",
+      "Input on the preferred business model and pricing strategy.",
+      "Confirmation of the target customer's willingness to pay for such a service.",
+      "Strategy for addressing the low perception of AI benefits in education among the US public and the low adoption rate among higher education faculty.",
+      "Guidance on navigating the complex and evolving regulatory landscape for AI in US higher education, particularly concerning data privacy and academic integrity."
+    ]
+  }
+}

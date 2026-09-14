@@ -1,0 +1,254 @@
+[
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/schedule.jsonl",
+    "sha256": "7c7825b6417c474401ae273234cfd74d61a5be6eacf44ad6c1c2115bd2e57f6d"
+  },
+  {
+    "path": "prompts/writer_agent.md",
+    "sha256": "dc1f118a26f768e2944757c1ab7aef6565278f09f886da59c469b621a654ab3f"
+  },
+  {
+    "path": "prompts/supervisor.md",
+    "sha256": "dbe9fe183401801fd4141c33cf505ab3b1926ee41da558b2dc3b9cc1977fcc9d"
+  },
+  {
+    "path": "prompts/strategy_agent.md",
+    "sha256": "7366f460d6764ac8c9a0d917a8f6bc5a121e7c61ebd2c78e606bcedc4996d046"
+  },
+  {
+    "path": "prompts/single_agent_proposal.md",
+    "sha256": "4ef6d8f1e5003685c93a2154cbe5345c3473285969fe63c7ef8f785d440a7d56"
+  },
+  {
+    "path": "prompts/section_writer.md",
+    "sha256": "1f28766a5f9c473208c396440db9028d5d050cf05b9f9d2b4b9ccc9949baad3e"
+  },
+  {
+    "path": "prompts/revision.md",
+    "sha256": "6ca880e31d7ccc516813e92d1b4f3859c1165b6792a29cfac76fe0b9bf78ac93"
+  },
+  {
+    "path": "prompts/research_agent.md",
+    "sha256": "098792035b65969f24b11f30d850c87e3b9387da417ef3981a4fe40c637eb1b2"
+  },
+  {
+    "path": "prompts/planner.md",
+    "sha256": "75b9f13a835ed41ade3695cb815b7fed9985dd69f5b2cc632c9dcb9f334ea43c"
+  },
+  {
+    "path": "prompts/finance_agent.md",
+    "sha256": "7faaba7bd0c5c352d64874f4a118847ae8e93f403f8fd4b1d1efb8d734121fd2"
+  },
+  {
+    "path": "prompts/critic_agent.md",
+    "sha256": "70534b3785389daf4c8f89a4fe57d3fdd8c19190e4a6b2fb064c7c515997cefd"
+  },
+  {
+    "path": "prompts/basic_critic.md",
+    "sha256": "91f98329ed003e7b26579b80a4d7b48f0a9c83e61846f903cf2277406816073f"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/plan.json",
+    "sha256": "e36f25a947fcdd45977cee9aad1ccbbbdd821f14ee47d230a535531db7c140f4"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/manifest.csv",
+    "sha256": "ca17d9ef86e48297a81d3d7a5b476f51bed967d02fe6f1ab17cc3f52f6a6c554"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/freeze.json",
+    "sha256": "fc9882f5eecf3c0034a1f04839a4c4ea63fa4d5a106b903b9b31f88ee5312a12"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-B/e4b92c963f544b6b950884b40a7aa8d9/result.json",
+    "sha256": "25ad6e70d31128f271769619dee8b80e17e325944e0da96e432c09df9f57b58c"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-D/4bbf0432c6a64657acb16e1bf2e065cb/result.json",
+    "sha256": "b383422c1e06e226b0fed6cfdfef3b47bfd40561a392bea4812c07b61f2541dc"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-B/e4b92c963f544b6b950884b40a7aa8d9/internal_export/proposal.md",
+    "sha256": "873410f05db8daa80ba643f6d7d35a178c4bf5bcc5243c1b980b45567b63f958"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-B/e4b92c963f544b6b950884b40a7aa8d9/internal_export/proposal.json",
+    "sha256": "6875207f7faaf739b7cf1981f4a0f5f82f323675050978ad8e08ef3ca6b45600"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-B/e4b92c963f544b6b950884b40a7aa8d9/internal_export/packet.json",
+    "sha256": "f755021b767a25be7bc5fb869461861007c3edbf0b8e95d446b5d61d419130ec"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-B/e4b92c963f544b6b950884b40a7aa8d9/internal_export/brief.json",
+    "sha256": "008c4c05685f0249bee329a12482de20e5f6909d1e343a4d01e9a614bbe11342"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-B/e4b92c963f544b6b950884b40a7aa8d9/events.jsonl",
+    "sha256": "eba76ca724e385ff885df094a1c08146ede4fa8723b17b627f146041ee5bcfbe"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-D/4bbf0432c6a64657acb16e1bf2e065cb/internal_export/proposal.md",
+    "sha256": "57492f51a3fb8702e8d02fd0cc246dc4efde7e3731094f36aabecc84b8a1e656"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-D/4bbf0432c6a64657acb16e1bf2e065cb/internal_export/proposal.json",
+    "sha256": "398afacbeb505f44eb7c8e98bf5f1c1bde42e142752457b0d98e5a1548959fa4"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-D/4bbf0432c6a64657acb16e1bf2e065cb/internal_export/packet.json",
+    "sha256": "dd9ea1dfc90676726c0e7ab6daff28d6a1ed900a8f6a3a1127cbc098bd92ff50"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-D/4bbf0432c6a64657acb16e1bf2e065cb/internal_export/brief.json",
+    "sha256": "fc95979992d3e0e524b24dacc00f50f231c1f189d2f645a24711c2f0b3abaf88"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-D/4bbf0432c6a64657acb16e1bf2e065cb/events.jsonl",
+    "sha256": "be8e579a044bbf49f1d983c18fe95cdb9a6ac3b88aaafa2895cacba111b72095"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-A/21e34889b3224e86ac276a14d5427909/result.json",
+    "sha256": "0b6c0a27125b0a4ffdfdb4d8e667039e1db5fdca8c8b6999daa86187a04313b8"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-C/23c5d190be0f42bb86c258bbf4b356de/result.json",
+    "sha256": "517c3819cf7ec9e43053e73ebbd3824d411df2ae8dbbf32c7c9347704a0e22b4"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-A/21e34889b3224e86ac276a14d5427909/internal_export/proposal.md",
+    "sha256": "873410f05db8daa80ba643f6d7d35a178c4bf5bcc5243c1b980b45567b63f958"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-A/21e34889b3224e86ac276a14d5427909/internal_export/proposal.json",
+    "sha256": "1b6a52edfa0ddee0fe4369d1318bb8209f83e8ada419b9a0c50576991fbd78f7"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-A/21e34889b3224e86ac276a14d5427909/internal_export/packet.json",
+    "sha256": "f755021b767a25be7bc5fb869461861007c3edbf0b8e95d446b5d61d419130ec"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-A/21e34889b3224e86ac276a14d5427909/internal_export/brief.json",
+    "sha256": "008c4c05685f0249bee329a12482de20e5f6909d1e343a4d01e9a614bbe11342"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-A/21e34889b3224e86ac276a14d5427909/events.jsonl",
+    "sha256": "5c7433fb43acd378b4bf813ad9db3aedd4d7e2179a01765a96941b92fe70de36"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-C/23c5d190be0f42bb86c258bbf4b356de/internal_export/proposal.md",
+    "sha256": "57492f51a3fb8702e8d02fd0cc246dc4efde7e3731094f36aabecc84b8a1e656"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-C/23c5d190be0f42bb86c258bbf4b356de/internal_export/proposal.json",
+    "sha256": "398afacbeb505f44eb7c8e98bf5f1c1bde42e142752457b0d98e5a1548959fa4"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-C/23c5d190be0f42bb86c258bbf4b356de/internal_export/packet.json",
+    "sha256": "dd9ea1dfc90676726c0e7ab6daff28d6a1ed900a8f6a3a1127cbc098bd92ff50"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-C/23c5d190be0f42bb86c258bbf4b356de/internal_export/brief.json",
+    "sha256": "fc95979992d3e0e524b24dacc00f50f231c1f189d2f645a24711c2f0b3abaf88"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-C/23c5d190be0f42bb86c258bbf4b356de/events.jsonl",
+    "sha256": "52bfc65bfbe81851af58c749f70bba43259c6f15499aac12809c474f5cac9dee"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-B/4c72dd81304046e7a2a4e1ea6b8b2384/result.json",
+    "sha256": "31980865e2166fe394b421bf0dc22fbe52a78d7880e5d71c05a282eae16ad355"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-A/0c8d196b7a0d49c68b3b664ad122aa68/result.json",
+    "sha256": "841962c9167d1a3e6ab81bbf8803277c61f7e1abea0dea4ad5c1f0bbca8a6e5f"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-B/4c72dd81304046e7a2a4e1ea6b8b2384/internal_export/proposal.md",
+    "sha256": "57492f51a3fb8702e8d02fd0cc246dc4efde7e3731094f36aabecc84b8a1e656"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-B/4c72dd81304046e7a2a4e1ea6b8b2384/internal_export/proposal.json",
+    "sha256": "398afacbeb505f44eb7c8e98bf5f1c1bde42e142752457b0d98e5a1548959fa4"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-B/4c72dd81304046e7a2a4e1ea6b8b2384/internal_export/packet.json",
+    "sha256": "dd9ea1dfc90676726c0e7ab6daff28d6a1ed900a8f6a3a1127cbc098bd92ff50"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-B/4c72dd81304046e7a2a4e1ea6b8b2384/internal_export/brief.json",
+    "sha256": "fc95979992d3e0e524b24dacc00f50f231c1f189d2f645a24711c2f0b3abaf88"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-B/4c72dd81304046e7a2a4e1ea6b8b2384/events.jsonl",
+    "sha256": "049f5aa5b8a06e4d1d71d210fdb58ad3eee331369e25d702060cf4e371a8f256"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-A/0c8d196b7a0d49c68b3b664ad122aa68/events.jsonl",
+    "sha256": "e6ac3151c044dca37bb2abb55b0c626f38768e856b70f4fb32021dfd02fdd2b3"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-C/3e7bf93bc1864ca599fba1536fb0e8db/result.json",
+    "sha256": "fe59b44e073e5e4429dea3060479852980a1198264845d75d232890a97e1a0d2"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-D/9728268bd43b49dba939bce482f9e8b8/result.json",
+    "sha256": "a17a7102f9ae36ca862a6ca077d4a9097fe1228e9eb3fbdaa600642b157a6548"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-A/0c8d196b7a0d49c68b3b664ad122aa68/internal_export/proposal.md",
+    "sha256": "1731102fd75d335e68dca8c1db45300bacd686d70e46b901b6cd154fdc459a9b"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-A/0c8d196b7a0d49c68b3b664ad122aa68/internal_export/proposal.json",
+    "sha256": "958d8b728734ba5954bcab3c972b1bd06c7a530f18c61f330ea0b0ae696d5001"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-A/0c8d196b7a0d49c68b3b664ad122aa68/internal_export/packet.json",
+    "sha256": "dd9ea1dfc90676726c0e7ab6daff28d6a1ed900a8f6a3a1127cbc098bd92ff50"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/intelligent_ring-A/0c8d196b7a0d49c68b3b664ad122aa68/internal_export/brief.json",
+    "sha256": "fc95979992d3e0e524b24dacc00f50f231c1f189d2f645a24711c2f0b3abaf88"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-D/9728268bd43b49dba939bce482f9e8b8/events.jsonl",
+    "sha256": "a7fc75aaf77706285e09bf0b478f069ee3d1c948e53a2f8b052913f67cdbdeed"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-C/3e7bf93bc1864ca599fba1536fb0e8db/events.jsonl",
+    "sha256": "3f5dc31ffc7729b95227a7bcc0ffcd09bd2ad0aa1ef98ef02117f2cdf2646a87"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-C/3e7bf93bc1864ca599fba1536fb0e8db/internal_export/proposal.md",
+    "sha256": "873410f05db8daa80ba643f6d7d35a178c4bf5bcc5243c1b980b45567b63f958"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-C/3e7bf93bc1864ca599fba1536fb0e8db/internal_export/proposal.json",
+    "sha256": "6875207f7faaf739b7cf1981f4a0f5f82f323675050978ad8e08ef3ca6b45600"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-C/3e7bf93bc1864ca599fba1536fb0e8db/internal_export/packet.json",
+    "sha256": "f755021b767a25be7bc5fb869461861007c3edbf0b8e95d446b5d61d419130ec"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-C/3e7bf93bc1864ca599fba1536fb0e8db/internal_export/brief.json",
+    "sha256": "008c4c05685f0249bee329a12482de20e5f6909d1e343a4d01e9a614bbe11342"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-D/9728268bd43b49dba939bce482f9e8b8/internal_export/proposal.md",
+    "sha256": "873410f05db8daa80ba643f6d7d35a178c4bf5bcc5243c1b980b45567b63f958"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-D/9728268bd43b49dba939bce482f9e8b8/internal_export/proposal.json",
+    "sha256": "6875207f7faaf739b7cf1981f4a0f5f82f323675050978ad8e08ef3ca6b45600"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-D/9728268bd43b49dba939bce482f9e8b8/internal_export/packet.json",
+    "sha256": "f755021b767a25be7bc5fb869461861007c3edbf0b8e95d446b5d61d419130ec"
+  },
+  {
+    "path": "docs/final_sprint/s4-v1/synthetic_rehearsal/runs/ai_education-D/9728268bd43b49dba939bce482f9e8b8/internal_export/brief.json",
+    "sha256": "008c4c05685f0249bee329a12482de20e5f6909d1e343a4d01e9a614bbe11342"
+  }
+]

@@ -1,0 +1,224 @@
+{
+  "model": "gemini-2.5-flash",
+  "contents": "# Role\n\nYou are the Finance Agent for Open Proposal Agent.\n\n# Objective\n\nCreate structured financial assumptions for the validated business brief. Produce revenue assumptions, cost assumptions, unit economics assumptions, and a break-even discussion that downstream Writer and Critic agents can use. Do not write the full proposal.\n\n# Inputs\n\nYou will receive a JSON object with:\n\n- `user_brief`, containing fields such as `company_or_product_name`, `industry`, `target_customer`, `problem`, `solution`, `business_model`, `geography`, `proposal_goal`, and optional context.\n- optional prior analysis packets, such as `research_analysis` and `strategy_analysis`, when available.\n\n# Allowed Actions\n\n- Frame revenue assumptions based on the provided business model and strategy context.\n- Frame cost assumptions such as product delivery, operations, customer acquisition, support, and fixed overhead.\n- Frame unit economics assumptions such as pricing, gross margin, CAC, retention, payback, or usage-based cost drivers.\n- Discuss break-even qualitatively by naming the assumptions that would determine it.\n- Mark confidence as `high`, `medium`, or `low` based only on the available input.\n- Put evidence-dependent financial claims into `unsupported_financial_claims`.\n- Add assumptions that need user confirmation to `needs_human_review`; keep the list to at most 8 items by merging related confirmation questions.\n\n# Forbidden Actions\n\n- Do not write a full business proposal.\n- Do not write proposal sections such as Executive Summary, Financial Assumptions, or Appendix.\n- Do not present numbers as accurate forecasts, guaranteed outcomes, investment advice, or verified projections.\n- Do not invent market size, revenue, customer counts, CAC, margin, growth rate, or break-even dates as facts.\n- Do not call tools, calculators, web research, RAG, databases, or external APIs.\n- Do not give legal, tax, securities, accounting, or investment advice.\n\n# Output Schema\n\nReturn valid JSON only. Do not wrap the JSON in Markdown.\n\nThe JSON must match this shape:\n\n```json\n{\n  \"analysis_summary\": \"string\",\n  \"revenue_assumptions\": [\n    {\n      \"topic\": \"string\",\n      \"assumption\": \"string\",\n      \"rationale\": \"string\",\n      \"confidence\": \"medium\",\n      \"needs_validation\": [\"string\"]\n    }\n  ],\n  \"cost_assumptions\": [\n    {\n      \"topic\": \"string\",\n      \"assumption\": \"string\",\n      \"rationale\": \"string\",\n      \"confidence\": \"medium\",\n      \"needs_validation\": [\"string\"]\n    }\n  ],\n  \"unit_economics_assumptions\": [\n    {\n      \"topic\": \"string\",\n      \"assumption\": \"string\",\n      \"rationale\": \"string\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\"string\"]\n    }\n  ],\n  \"break_even_discussion\": \"string\",\n  \"assumption_notice\": \"All financial figures are assumptions for planning discussion, not forecasts.\",\n  \"unsupported_financial_claims\": [\n    {\n      \"claim\": \"string\",\n      \"why_unsupported\": \"string\",\n      \"needed_evidence\": [\"string\"]\n    }\n  ],\n  \"needs_human_review\": [\"string\"]\n}\n```\n\n# Quality Criteria\n\n- Keep financial assumptions concise, practical, and grounded in the provided brief or analysis packets.\n- Clearly separate assumption framing from verified financial data.\n- Use cautious wording such as \"assume\", \"could\", \"would depend on\", and \"needs validation\".\n- Make the output useful for a later Writer Agent without giving it unverified financial facts disguised as certainty.\n- Preserve the Finance Agent boundary: finance assumptions only, not full proposal writing.\n\n# Failure Behavior\n\nIf the input lacks enough detail, still return a valid `FinanceAssumptions`. Use low confidence, add the uncertainty to `needs_human_review`, and place evidence-dependent statements in `unsupported_financial_claims` instead of inventing numbers.\n\n\n# Finance Input JSON\n\n```json\n{\n  \"user_brief\": {\n    \"company_or_product_name\": \"AI Tutor for MBA Students\",\n    \"industry\": \"AI-enabled higher education\",\n    \"target_customer\": \"MBA students in the United States\",\n    \"problem\": \"MBA students in the United States may need additional learning support; the precise unmet needs, frequency, urgency and willingness to pay have not been supplied and must be researched or labeled as assumptions.\",\n    \"solution\": \"An AI tutor for MBA students in the United States. Product features, delivery model, pedagogy, integrations and differentiation have not been supplied and must be researched or labeled as assumptions.\",\n    \"business_model\": \"Not supplied. Research plausible commercial models for the United States or state explicit assumptions; do not treat any price, conversion rate, customer count, cost or margin as user-confirmed.\",\n    \"geography\": \"United States only. Market analysis, regulation, competitors, go-to-market strategy and financial assumptions must be bounded to the United States; do not substitute another launch country.\",\n    \"proposal_goal\": \"请通过完整产品链路生成商业计划书，并评估美国市场的商业可行性、实施方案、风险和财务假设。\",\n    \"output_language\": \"zh-CN\",\n    \"additional_context\": \"Only the concept AI Tutor for MBA Students and the United States geographic scope were supplied. Do not treat market size, demand, competitors, pricing, costs, product features, pedagogy, legal position, institutional partnerships or financial outcomes as confirmed facts. Obtain United States-specific evidence dynamically where the product path supports research, cite only evidence actually supplied to the writer, and label unsupported values as explicit assumptions. Do not use a frozen case, case whitelist, prewritten evidence pack or manually supplied financial model. Produce substantive sections rather than chapter summaries. The system-owned final-output policy requires English regardless of the requested input language.\",\n    \"original_user_idea\": \"AI Tutor for MBA Students — United States\"\n  },\n  \"research_analysis\": {\n    \"evidence_notice\": \"Program provenance: user brief and unsourced findings are unverified hypotheses, not established facts. Only sourced_fact entries with eligible_external source IDs may be considered evidence candidates; their text must still support the claim. This is not independent fact verification.\",\n    \"analysis_summary\": \"The user brief outlines a concept for an AI Tutor for MBA students in the United States, addressing a perceived need for additional learning support. However, critical details regarding specific unmet needs, willingness to pay, product features, business model, and competitive landscape are not supplied and require further research or explicit assumptions. The provided web research offers some insights into the existence of human tutors for MBA-level subjects and the growing integration of AI into MBA curricula, suggesting a potential market for AI-powered educational tools. All findings are treated as hypotheses or assumptions due to the nature of the brief and the limitations of the provided web evidence.\",\n    \"market_trends\": [\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [\n          \"web-6374a2fd53764e0f9f6564049e224df1\"\n        ],\n        \"topic\": \"AI in Education and Tutoring\",\n        \"finding\": \"There is an emerging trend of AI companies developing AI tutoring systems, specifically for subjects like statistics, which are relevant to MBA curricula.\",\n        \"rationale\": \"xAI is actively hiring 'AI Tutors - Statistics Specialists' to enhance their AI technologies through high-quality inputs, labels, and annotations, indicating investment in AI-driven tutoring solutions. This suggests a broader industry movement towards AI-powered educational support.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [\n          \"web-f2353c3b3f524642a8791fe7b30f4b4b\",\n          \"web-5ea92ade43c64ff8a3bf7cd02d141c70\"\n        ],\n        \"topic\": \"Integration of AI into MBA Curricula\",\n        \"finding\": \"Universities in the United States are increasingly integrating Artificial Intelligence, analytics, and data-driven decision-making into their MBA programs.\",\n        \"rationale\": \"Northeastern University offers a STEM-designated AI MBA, and the University of Mount Union offers an MBA with a concentration in AI, both designed to equip future leaders with AI understanding and application skills. This trend suggests a growing familiarity and need for AI-related tools within the MBA student demographic.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"assumption\",\n        \"source_ids\": [],\n        \"topic\": \"Demand for Supplemental Learning Support\",\n        \"finding\": \"MBA students in the United States likely seek supplemental learning support for challenging subjects, creating a potential market for tutoring services.\",\n        \"rationale\": \"The existence of numerous human tutors offering services in MBA-relevant subjects (e.g., Statistics, Accounting, Economics, Finance, Operations Management) implies an underlying demand for additional academic assistance among students pursuing these degrees. The user brief also explicitly states that MBA students 'may need additional learning support'.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"customer_notes\": [\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [\n          \"web-65921ba135484ea0af97cb98d563d24a\",\n          \"web-530290197b4949b4837e916e467ca268\",\n          \"web-3cda0b88a7c748548fcd7f4008dce776\"\n        ],\n        \"topic\": \"Specific Subject Support Needs\",\n        \"finding\": \"MBA students in the United States may require tutoring support in subjects such as Mathematics, Statistics, Management in Information Systems, Accounting, Operations Management, Actuarial Sciences, Economics, and Finance.\",\n        \"rationale\": \"Multiple human tutors, including current MBA students, advertise professional tutoring services for these specific subjects, indicating common areas where MBA students seek assistance. This suggests these are pain points for the target customer.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"assumption\",\n        \"source_ids\": [],\n        \"topic\": \"Preference for Flexible and Accessible Tutoring\",\n        \"finding\": \"MBA students, often balancing studies with other commitments, may value flexible, on-demand, and potentially remote tutoring options.\",\n        \"rationale\": \"The prevalence of 'Online Statistics Tutor' and 'Remote Part-Time Math Tutor' roles in the job market and individual tutor profiles suggests a demand for accessible learning support that fits into varied schedules. An AI tutor could potentially meet this need for flexibility.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"assumption\",\n        \"source_ids\": [],\n        \"topic\": \"Willingness to Pay for Tutoring\",\n        \"finding\": \"MBA students are likely willing to pay for high-quality tutoring services, especially for critical or challenging subjects, though the precise price sensitivity is unknown.\",\n        \"rationale\": \"The existence of professional tutors charging hourly rates (e.g., $70/hr mentioned in one source for a private tutor) implies a market where students are accustomed to paying for supplemental education. However, the specific willingness to pay for an AI tutor versus a human tutor, or the perceived value, is an assumption.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"competitor_assumptions\": [\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [\n          \"web-65921ba135484ea0af97cb98d563d24a\",\n          \"web-530290197b4949b4837e916e467ca268\",\n          \"web-3cda0b88a7c748548fcd7f4008dce776\",\n          \"web-5fed7d7d1795460ca0d7968df829ad9c\"\n        ],\n        \"topic\": \"Existing Human Tutoring Services\",\n        \"finding\": \"Numerous individual human tutors and tutoring companies currently offer services to MBA students in the United States, covering a range of subjects.\",\n        \"rationale\": \"LinkedIn profiles and tutoring platforms show individuals (some with MBA backgrounds) and companies providing professional tutoring in subjects relevant to MBA curricula (e.g., Statistics, Economics, Accounting). These human tutors represent a direct substitute for an AI tutor.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [\n          \"web-6374a2fd53764e0f9f6564049e224df1\"\n        ],\n        \"topic\": \"Emerging AI Tutoring Solutions\",\n        \"finding\": \"Large AI companies, such as xAI, are developing their own AI tutoring capabilities, potentially becoming direct competitors or setting market expectations for AI-powered learning tools.\",\n        \"rationale\": \"xAI is actively hiring AI Tutors, indicating a strategic move into developing advanced AI for educational support. While not explicitly stated as an MBA-specific tutor, their focus on subjects like statistics suggests a broad application that could extend to higher education.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"assumption\",\n        \"source_ids\": [],\n        \"topic\": \"University-Provided Academic Support\",\n        \"finding\": \"MBA programs and universities likely offer their own academic support services, such as teaching assistants, writing centers, or peer tutoring, which serve as indirect competitors.\",\n        \"rationale\": \"It is a common practice for higher education institutions to provide academic resources to their students. One source mentions a 'Teaching Assistant' role at a university, which supports students in statistical data analysis. These services, while not AI-powered, address similar student needs.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"unsupported_claims\": [\n      {\n        \"claim\": \"The precise unmet needs, frequency, urgency, and willingness to pay of MBA students for additional learning support.\",\n        \"why_unsupported\": \"The user brief explicitly states these details have not been supplied. The provided web research indicates a general demand for tutoring in specific subjects but does not quantify these aspects.\",\n        \"needed_evidence\": [\n          \"Market research on MBA student pain points\",\n          \"Surveys on willingness to pay for AI tutoring\",\n          \"Demand analysis for specific MBA subjects\"\n        ]\n      },\n      {\n        \"claim\": \"Specific product features, delivery model, pedagogy, integrations, and differentiation of the AI Tutor.\",\n        \"why_unsupported\": \"The user brief explicitly states these details have not been supplied. The web research provides no information on the proposed solution's specifics.\",\n        \"needed_evidence\": [\n          \"Product development roadmap\",\n          \"User experience research\",\n          \"Competitive feature analysis\"\n        ]\n      },\n      {\n        \"claim\": \"The specific business model, including pricing, conversion rates, customer counts, costs, or margins.\",\n        \"why_unsupported\": \"The user brief explicitly states the business model has not been supplied and warns against treating any financial figures as user-confirmed. The web research does not provide this information.\",\n        \"needed_evidence\": [\n          \"Market pricing benchmarks for AI education tools\",\n          \"Cost analysis for AI development and operation\",\n          \"Financial modeling and projections\"\n        ]\n      },\n      {\n        \"claim\": \"The overall market size or demand for an AI Tutor for MBA students in the United States.\",\n        \"why_unsupported\": \"The user brief explicitly states not to treat market size or demand as confirmed facts. The web research indicates the existence of tutors and AI in education but does not quantify the market opportunity.\",\n        \"needed_evidence\": [\n          \"Market sizing reports for AI in higher education\",\n          \"Demand studies for MBA student support services\",\n          \"Enrollment statistics for US MBA programs\"\n        ]\n      }\n    ],\n    \"needs_human_review\": [\n      \"What specific subjects within the MBA curriculum are most challenging for students, and therefore most in need of AI tutoring support?\",\n      \"What is the perceived value and willingness to pay for an AI tutor compared to human tutors among MBA students?\",\n      \"What are the key features and pedagogical approaches that would differentiate an AI tutor for MBA students from existing solutions or general AI tools?\",\n      \"Are there any specific regulatory considerations or accreditation requirements for AI-enabled educational tools in the United States higher education sector?\",\n      \"What are the potential institutional partnership opportunities with MBA programs or universities for an AI tutor solution?\"\n    ]\n  },\n  \"strategy_analysis\": {\n    \"analysis_summary\": \"The concept for an AI Tutor for MBA students in the United States addresses a potential need for supplemental learning support. However, the user brief and subsequent research analysis highlight significant gaps in critical information, including precise unmet needs, willingness to pay, specific product features, and a defined business model. The analysis proceeds with strategic hypotheses for value proposition, business model, go-to-market, and moats, acknowledging that these are based on assumptions and require further validation. Existing human tutoring services and emerging AI solutions represent both competition and market validation for the general concept of educational support.\",\n    \"value_proposition\": [\n      {\n        \"topic\": \"Core Value Proposition\",\n        \"recommendation\": \"Provide flexible, on-demand, and specialized AI-powered learning support for challenging MBA subjects, enabling students to master complex topics efficiently and at their convenience.\",\n        \"rationale\": \"MBA students likely seek supplemental support in specific, challenging subjects (e.g., Statistics, Accounting, Finance) and value flexible, accessible tutoring options due to their demanding schedules. An AI tutor can address these needs by offering instant, tailored assistance.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"business_model_logic\": [\n      {\n        \"topic\": \"Revenue Model\",\n        \"recommendation\": \"Implement a subscription-based model with tiered access (e.g., basic, premium) or a pay-per-use model for specific, high-demand modules or intensive tutoring sessions.\",\n        \"rationale\": \"A subscription model offers predictable revenue and aligns with ongoing academic needs, while a pay-per-use option caters to specific, urgent requirements. The market for human tutors, with hourly rates, suggests a willingness to pay for targeted academic support.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"topic\": \"Pricing Strategy\",\n        \"recommendation\": \"Position pricing competitively against human tutors, offering a more affordable yet high-quality alternative, or a premium for advanced, highly specialized AI features and comprehensive support.\",\n        \"rationale\": \"Professional human tutors charge significant hourly rates (e.g., $70/hr), indicating a market for paid supplemental education. An AI solution can leverage cost efficiencies to provide value, potentially at a lower price point or with enhanced features justifying a premium.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"gtm_strategy\": [\n      {\n        \"topic\": \"Initial Customer Acquisition\",\n        \"recommendation\": \"Target MBA student communities directly through partnerships with business schools, online academic forums, and social media groups relevant to MBA studies in the United States.\",\n        \"rationale\": \"Direct engagement with universities could provide legitimacy and access to the target demographic. Online communities are common platforms where MBA students discuss academic challenges and seek learning resources.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"topic\": \"Product Messaging and Positioning\",\n        \"recommendation\": \"Emphasize convenience, subject-matter expertise (e.g., 'AI Statistics Tutor for MBA'), and the ability to supplement existing coursework rather than replace it.\",\n        \"rationale\": \"Research indicates specific subject support needs and a preference for flexible learning. Positioning the AI tutor as a supplementary tool can mitigate potential resistance from academic institutions and align with students' existing learning structures.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"moat_hypotheses\": [\n      {\n        \"topic\": \"Proprietary Data and Learning Loop\",\n        \"recommendation\": \"Develop a defensible moat through a continuously improving AI model trained on extensive, anonymized MBA-specific curriculum data and student interaction patterns, leading to superior pedagogical effectiveness.\",\n        \"rationale\": \"As more MBA students use the AI tutor, it gathers unique data on common misconceptions, effective explanations, and individual learning styles. This data can be used to refine the AI's capabilities, creating a self-reinforcing learning loop that is difficult for competitors to replicate.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"topic\": \"Deep Subject Matter Specialization\",\n        \"recommendation\": \"Build highly specialized AI modules for core, challenging MBA subjects (e.g., advanced statistics, financial modeling, operations management) that offer unparalleled depth, accuracy, and pedagogical relevance compared to generalist AI tools.\",\n        \"rationale\": \"The research indicates specific subject areas where MBA students seek assistance. Deep specialization in these critical areas creates a barrier to entry for competitors offering broader, less focused AI tutoring solutions, establishing the AI tutor as the authoritative resource.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"unsupported_market_data\": [\n      {\n        \"claim\": \"The precise unmet needs, frequency, urgency, and willingness to pay of MBA students for additional learning support.\",\n        \"why_unsupported\": \"The user brief explicitly states these details have not been supplied. The provided web research indicates a general demand for tutoring in specific subjects but does not quantify these aspects.\",\n        \"needed_evidence\": [\n          \"Market research on MBA student pain points\",\n          \"Surveys on willingness to pay for AI tutoring\",\n          \"Demand analysis for specific MBA subjects\"\n        ]\n      },\n      {\n        \"claim\": \"Specific product features, delivery model, pedagogy, integrations, and differentiation of the AI Tutor.\",\n        \"why_unsupported\": \"The user brief explicitly states these details have not been supplied. The web research provides no information on the proposed solution's specifics.\",\n        \"needed_evidence\": [\n          \"Product development roadmap\",\n          \"User experience research\",\n          \"Competitive feature analysis\"\n        ]\n      },\n      {\n        \"claim\": \"The specific business model, including pricing, conversion rates, customer counts, costs, or margins.\",\n        \"why_unsupported\": \"The user brief explicitly states the business model has not been supplied and warns against treating any financial figures as user-confirmed. The web research does not provide this information.\",\n        \"needed_evidence\": [\n          \"Market pricing benchmarks for AI education tools\",\n          \"Cost analysis for AI development and operation\",\n          \"Financial modeling and projections\"\n        ]\n      },\n      {\n        \"claim\": \"The overall market size or demand for an AI Tutor for MBA students in the United States.\",\n        \"why_unsupported\": \"The user brief explicitly states not to treat market size or demand as confirmed facts. The web research indicates the existence of tutors and AI in education but does not quantify the market opportunity.\",\n        \"needed_evidence\": [\n          \"Market sizing reports for AI in higher education\",\n          \"Demand studies for MBA student support services\",\n          \"Enrollment statistics for US MBA programs\"\n        ]\n      }\n    ],\n    \"needs_human_review\": [\n      \"What specific subjects within the MBA curriculum are most challenging for students, and therefore most in need of AI tutoring support?\",\n      \"What is the perceived value and willingness to pay for an AI tutor compared to human tutors among MBA students?\",\n      \"What are the key features and pedagogical approaches that would differentiate an AI tutor for MBA students from existing solutions or general AI tools?\",\n      \"Are there any specific regulatory considerations or accreditation requirements for AI-enabled educational tools in the United States higher education sector?\",\n      \"What are the potential institutional partnership opportunities with MBA programs or universities for an AI tutor solution?\"\n    ]\n  },\n  \"supervisor_task\": {\n    \"task_id\": \"finance_task\",\n    \"agent_role\": \"finance\",\n    \"objective\": \"Build cautious revenue, cost, unit-economics, and break-even assumptions with explicit validation gaps.\",\n    \"input_requirements\": [\n      \"user_brief\",\n      \"research_analysis\",\n      \"strategy_analysis\"\n    ],\n    \"expected_output\": \"A schema-validated FinanceAssumptions packet.\",\n    \"depends_on\": [\n      \"research_task\",\n      \"strategy_task\"\n    ]\n  },\n  \"evidence_catalog\": [\n    {\n      \"source_id\": \"web-6374a2fd53764e0f9f6564049e224df1\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-65921ba135484ea0af97cb98d563d24a\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-530290197b4949b4837e916e467ca268\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-5fed7d7d1795460ca0d7968df829ad9c\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-3cda0b88a7c748548fcd7f4008dce776\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-f2353c3b3f524642a8791fe7b30f4b4b\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-5ea92ade43c64ff8a3bf7cd02d141c70\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-51f4438a8ec64393960160428cf2a290\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-d94efe7695aa460f9c041e648487fe79\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-b8804864ec094b0dbd6398c940072821\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    }\n  ]\n}\n```\n# Shared financial calculation contract\nFinancial numbers are assumptions, not forecasts. For quantitative company projections populate financial_model with explicitly justified monthly scenarios. Never invent evidence or user confirmation. Restricted customer funds are separate from operating cash and revenue. Use {{fin:scenario_id.metric}} references, not independently written amounts/rates/unit counts in financial, business-model, go-to-market, funding and KPI text. The program calculates these metrics: units, price, variable_cost, fixed_cost, operating_cash, restricted_funds, revenue, gross_profit, cash_flow, gross_margin_pct, break_even_units, runway_months. If a required metric is not modeled or inputs are unavailable explicitly say needs validation, do not invent a number. When financial_model is null, keep projections qualitative. If the legacy runway_months field exists, return null; it is calculated from the first financial_model scenario. Explain negative cash flow as a deficit, never make it positive. Keep currency and period consistent with the referenced scenario.\n\n# Evidence provenance\nThe user brief is a user-provided hypothesis, not external evidence. Analysis packets contain model inferences, not independently verified facts. Framework/template RAG supports methods only, not market sizes, local law or demand. Only eligible_external sources may support jurisdiction-dependent sourced_fact claims and their actual text must directly support the claim. Unknown dates, weak authority or unconfirmed jurisdiction require qualification, evidence_status=\"needs_validation\", empty claim.source_ids and low confidence. Never put an evidence status into claim_type. Do not claim first/only/no competitors without comprehensive evidence.\n\n# Locked Financial Plan (program-owned)\n{\n  \"mode\": \"qualitative\",\n  \"reason\": \"Quantitative financial assumptions cannot be defensibly stated due to significant missing inputs. The user brief explicitly states that precise unmet needs, frequency, urgency, willingness to pay, specific product features, delivery model, pedagogy, integrations, differentiation, business model (including pricing, conversion rates, customer counts, costs, or margins), and overall market size/demand for an AI Tutor for MBA students in the United States have not been supplied. The provided research analysis confirms these as unsupported claims, and no concrete financial figures or benchmarks for an AI tutor (beyond human tutor hourly rates) were supplied to form explicit, defensible assumptions without fabricating precision. Therefore, a qualitative approach is necessary to highlight these critical information gaps.\",\n  \"financial_model\": null\n}\nThis locked plan overrides the general populate-financial_model and null-model guidance above. The effective model is the locked plan, not the narrative response field. \nReturn financial_model=null in the narrative response; the program attaches the locked model. Do not create, rename or change scenarios. No {{fin:...}} references or quantitative financial projections are permitted in qualitative mode. Unsupported metrics (including CAC, CLTV and funding allocation percentages) must remain qualitative. Use price and fixed_cost as calculation keys, not input field names price_per_unit or monthly_fixed_cost.\n\n\n# Schema List-Size Contract (generated automatically)\n\n- `cost_assumptions`: 1 to 6 items.\n- `*.needs_validation (3 fields)`: at most 5 items.\n- `financial_model.scenarios`: 1 to 4 items.\n- `needs_human_review`: at most 8 items.\n- `revenue_assumptions`: 1 to 6 items.\n- `unit_economics_assumptions`: 1 to 6 items.\n- `unsupported_financial_claims`: at most 8 items.\n- `unsupported_financial_claims[].needed_evidence`: 1 to 5 items.\n\nMerge duplicate or closely related entries to satisfy maximums. Do not silently truncate or remove essential dependencies.\n\n# Schema Enum Contract (generated automatically)\n\n- `*.confidence (3 fields)`: exactly one of \"high\", \"medium\", \"low\".\n\nThese lists are closed. Never invent a value that describes the surrounding section or field name; pick the closest listed member, or \"general\" when one is offered and nothing else fits.",
+  "config": {
+    "temperature": 0.2,
+    "max_output_tokens": 16384,
+    "response_mime_type": "application/json",
+    "response_schema": {
+      "properties": {
+        "financial_model": {
+          "anyOf": [
+            {
+              "properties": {
+                "scenarios": {
+                  "items": {
+                    "properties": {
+                      "scenario_id": {
+                        "type": "string"
+                      },
+                      "period_label": {
+                        "type": "string"
+                      },
+                      "currency": {
+                        "type": "string"
+                      },
+                      "unit_label": {
+                        "type": "string"
+                      },
+                      "monthly_units": {
+                        "type": "number"
+                      },
+                      "price_per_unit": {
+                        "type": "number"
+                      },
+                      "variable_cost_per_unit": {
+                        "type": "number"
+                      },
+                      "monthly_fixed_cost": {
+                        "type": "number"
+                      },
+                      "opening_operating_cash": {
+                        "type": "number"
+                      },
+                      "restricted_customer_funds": {
+                        "type": "number"
+                      },
+                      "assumption_basis": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "scenario_id",
+                      "period_label",
+                      "currency",
+                      "unit_label",
+                      "monthly_units",
+                      "price_per_unit",
+                      "variable_cost_per_unit",
+                      "monthly_fixed_cost",
+                      "opening_operating_cash",
+                      "restricted_customer_funds",
+                      "assumption_basis"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "scenarios"
+              ],
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "analysis_summary": {
+          "type": "string"
+        },
+        "revenue_assumptions": {
+          "items": {
+            "properties": {
+              "topic": {
+                "type": "string"
+              },
+              "assumption": {
+                "type": "string"
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "needs_validation": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "topic",
+              "assumption",
+              "rationale"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "cost_assumptions": {
+          "items": {
+            "properties": {
+              "topic": {
+                "type": "string"
+              },
+              "assumption": {
+                "type": "string"
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "needs_validation": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "topic",
+              "assumption",
+              "rationale"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "unit_economics_assumptions": {
+          "items": {
+            "properties": {
+              "topic": {
+                "type": "string"
+              },
+              "assumption": {
+                "type": "string"
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "string"
+              },
+              "needs_validation": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "topic",
+              "assumption",
+              "rationale"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "break_even_discussion": {
+          "type": "string"
+        },
+        "assumption_notice": {
+          "type": "string"
+        },
+        "unsupported_financial_claims": {
+          "items": {
+            "properties": {
+              "claim": {
+                "type": "string"
+              },
+              "why_unsupported": {
+                "type": "string"
+              },
+              "needed_evidence": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "claim",
+              "why_unsupported",
+              "needed_evidence"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "needs_human_review": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "analysis_summary",
+        "revenue_assumptions",
+        "cost_assumptions",
+        "unit_economics_assumptions",
+        "break_even_discussion",
+        "assumption_notice"
+      ],
+      "type": "object"
+    }
+  }
+}

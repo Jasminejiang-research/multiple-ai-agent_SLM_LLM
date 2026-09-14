@@ -1,0 +1,1112 @@
+EEEEE.EEEE..EE.E...............................EEEEEEEEEEEEEEEEEEEEEEEEE [ 63%]
+EEEE....EEEEEEEEEEEEEEEEEEEEEE..EEEE.EEE..                               [100%]
+=================================== ERRORS ====================================
+________ ERROR at setup of test_dry_run_exact_slots_no_calls_and_guard ________
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_____ ERROR at setup of test_rehearsal_pass_revision_routes_and_no_rerun ______
+
+tmp_path_factory = TempPathFactory(_given_basetemp=WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v...luggy._tracing.TagTracerSub object at 0x000001AFF3656090>, _basetemp=None, _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def rehearsal(tmp_path_factory):
+>       path=tmp_path_factory.mktemp("s4")/"rehearsal"
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_s4_evaluation.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\multiple-ai-agent_SLM_LLM\.venv\Lib\site-packages\_pytest\tmpdir.py:136: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\multiple-ai-agent_SLM_LLM\.venv\Lib\site-packages\_pytest\tmpdir.py:117: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+        ^^^^^^^^^^^^^^^^^^
+..\..\multiple-ai-agent_SLM_LLM\.venv\Lib\site-packages\_pytest\tmpdir.py:158: in getbasetemp
+    basetemp.mkdir(mode=0o700)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+__________ ERROR at setup of test_interrupted_dispatch_never_retried __________
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+______ ERROR at setup of test_reconcile_durable_result_without_replaying ______
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+__ ERROR at setup of test_torn_schedule_archived_and_active_lock_not_removed __
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+__ ERROR at setup of test_failure_preserves_denominators_and_no_success_time __
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+________ ERROR at setup of test_missing_log_does_not_infer_first_pass _________
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_duplicate_attempts_idempotent_and_conflicts_rejected _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+______ ERROR at setup of test_blind_pack_no_identity_and_human_defaults _______
+
+tmp_path_factory = TempPathFactory(_given_basetemp=WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v...luggy._tracing.TagTracerSub object at 0x000001AFF3656090>, _basetemp=None, _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def rehearsal(tmp_path_factory):
+>       path=tmp_path_factory.mktemp("s4")/"rehearsal"
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_s4_evaluation.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\multiple-ai-agent_SLM_LLM\.venv\Lib\site-packages\_pytest\tmpdir.py:136: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\multiple-ai-agent_SLM_LLM\.venv\Lib\site-packages\_pytest\tmpdir.py:117: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+        ^^^^^^^^^^^^^^^^^^
+..\..\multiple-ai-agent_SLM_LLM\.venv\Lib\site-packages\_pytest\tmpdir.py:158: in getbasetemp
+    basetemp.mkdir(mode=0o700)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+__________ ERROR at setup of test_export_trace_and_no_pseudo_quality __________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v...luggy._tracing.TagTracerSub object at 0x000001AFF3656090>, _basetemp=None, _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def rehearsal(tmp_path_factory):
+>       path=tmp_path_factory.mktemp("s4")/"rehearsal"
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_s4_evaluation.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\multiple-ai-agent_SLM_LLM\.venv\Lib\site-packages\_pytest\tmpdir.py:136: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\multiple-ai-agent_SLM_LLM\.venv\Lib\site-packages\_pytest\tmpdir.py:117: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+        ^^^^^^^^^^^^^^^^^^
+..\..\multiple-ai-agent_SLM_LLM\.venv\Lib\site-packages\_pytest\tmpdir.py:158: in getbasetemp
+    basetemp.mkdir(mode=0o700)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_____________________ ERROR at setup of test_cli_offline ______________________
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_______________ ERROR at setup of test_streamlit_readonly_path ________________
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+____ ERROR at setup of test_pass_routes_skip_every_revision[A-4-reviewed0] ____
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+____ ERROR at setup of test_pass_routes_skip_every_revision[B-8-reviewed1] ____
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+___ ERROR at setup of test_pass_routes_skip_every_revision[C-11-reviewed2] ____
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+___ ERROR at setup of test_pass_routes_skip_every_revision[D-11-reviewed3] ____
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[None-2-research-C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[None-2-research-D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[None-2-strategy-C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[None-2-strategy-D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[None-2-finance-C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[None-2-finance-D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[None-2-final-C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[None-2-final-D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[high-4-research-C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[high-4-research-D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[high-4-strategy-C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[high-4-strategy-D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[high-4-finance-C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[high-4-finance-D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[high-4-final-C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[high-4-final-D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[critical-4-research-C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[critical-4-research-D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[critical-4-strategy-C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[critical-4-strategy-D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[critical-4-finance-C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[critical-4-finance-D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[critical-4-final-C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_fail_routes_revise_once_and_keep_semantic_state[critical-4-final-D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+__________ ERROR at setup of test_b_final_failure_and_all_c_failures __________
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_budget_exhaustion_retains_expected_missing_handoffs[B] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_budget_exhaustion_retains_expected_missing_handoffs[C] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_budget_exhaustion_retains_expected_missing_handoffs[D] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+___ ERROR at setup of test_revision_cannot_reset_request_budget[research-2] ___
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+___ ERROR at setup of test_revision_cannot_reset_request_budget[strategy-4] ___
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+___ ERROR at setup of test_revision_cannot_reset_request_budget[finance-6] ____
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+____ ERROR at setup of test_revision_cannot_reset_request_budget[final-11] ____
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_one_structure_repair_keeps_logical_task_and_first_failure _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+___ ERROR at setup of test_second_bad_structure_stops_without_third_attempt ___
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_transport_retry_is_a_physical_attempt_not_structure_repair _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_bad_critic_reference_never_reaches_revision[source_ids] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_bad_critic_reference_never_reaches_revision[affected_claim_ids] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_zero_calls_if_reservation_or_prompt_cannot_fit[max_total_tokens] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_zero_calls_if_reservation_or_prompt_cannot_fit[max_prompt_chars] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_api_failure_is_durable_and_never_counted_as_zero_usage _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_________ ERROR at setup of test_cancel_before_dispatch_records_stop __________
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_clock_is_shared_across_batches_and_review[A-limits0] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_clock_is_shared_across_batches_and_review[C-limits1] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_clock_is_shared_across_batches_and_review[C-limits2] _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_local_abandoned_request_blocks_new_instances_and_runs _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+____ ERROR at setup of test_replay_deduplicates_and_keeps_unknown_dispatch ____
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_______ ERROR at setup of test_no_reinvoke_or_existing_output_overwrite _______
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_dispatch_start_is_durable_before_provider_and_usage_can_exceed_cap _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+__ ERROR at setup of test_cancellation_during_physical_wait_is_counted_once ___
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_revision_structure_repair_keeps_revision_attribution _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_sqlite_existing_json_columns_persist_events_and_versions _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+__ ERROR at setup of test_formal_execution_cannot_bypass_future_freeze_gates __
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+_ ERROR at setup of test_transport_retry_blocked_by_budget_is_not_an_actual_retry _
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+____ ERROR at setup of test_physical_worker_keeps_frozen_evidence_context _____
+
+self = WindowsPath('C:/Users/JasmineJiang/Projects/multiple_ai_agent/.s4-stage/tmp/s4-tests-v2')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage\\tmp\\s4-tests-v2'
+
+C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py:1311: FileNotFoundError
+=========================== short test summary info ===========================
+ERROR tests/test_s4_evaluation.py::test_dry_run_exact_slots_no_calls_and_guard
+ERROR tests/test_s4_evaluation.py::test_rehearsal_pass_revision_routes_and_no_rerun
+ERROR tests/test_s4_evaluation.py::test_interrupted_dispatch_never_retried - ...
+ERROR tests/test_s4_evaluation.py::test_reconcile_durable_result_without_replaying
+ERROR tests/test_s4_evaluation.py::test_torn_schedule_archived_and_active_lock_not_removed
+ERROR tests/test_s4_evaluation.py::test_failure_preserves_denominators_and_no_success_time
+ERROR tests/test_s4_evaluation.py::test_missing_log_does_not_infer_first_pass
+ERROR tests/test_s4_evaluation.py::test_duplicate_attempts_idempotent_and_conflicts_rejected
+ERROR tests/test_s4_evaluation.py::test_blind_pack_no_identity_and_human_defaults
+ERROR tests/test_s4_evaluation.py::test_export_trace_and_no_pseudo_quality - ...
+ERROR tests/test_s4_evaluation.py::test_cli_offline - FileNotFoundError: [Win...
+ERROR tests/test_s4_evaluation.py::test_streamlit_readonly_path - FileNotFoun...
+ERROR tests/test_s2_review.py::test_pass_routes_skip_every_revision[A-4-reviewed0]
+ERROR tests/test_s2_review.py::test_pass_routes_skip_every_revision[B-8-reviewed1]
+ERROR tests/test_s2_review.py::test_pass_routes_skip_every_revision[C-11-reviewed2]
+ERROR tests/test_s2_review.py::test_pass_routes_skip_every_revision[D-11-reviewed3]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[None-2-research-C]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[None-2-research-D]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[None-2-strategy-C]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[None-2-strategy-D]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[None-2-finance-C]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[None-2-finance-D]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[None-2-final-C]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[None-2-final-D]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[high-4-research-C]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[high-4-research-D]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[high-4-strategy-C]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[high-4-strategy-D]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[high-4-finance-C]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[high-4-finance-D]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[high-4-final-C]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[high-4-final-D]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[critical-4-research-C]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[critical-4-research-D]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[critical-4-strategy-C]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[critical-4-strategy-D]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[critical-4-finance-C]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[critical-4-finance-D]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[critical-4-final-C]
+ERROR tests/test_s2_review.py::test_fail_routes_revise_once_and_keep_semantic_state[critical-4-final-D]
+ERROR tests/test_s2_review.py::test_b_final_failure_and_all_c_failures - File...
+ERROR tests/test_s2_review.py::test_budget_exhaustion_retains_expected_missing_handoffs[B]
+ERROR tests/test_s2_review.py::test_budget_exhaustion_retains_expected_missing_handoffs[C]
+ERROR tests/test_s2_review.py::test_budget_exhaustion_retains_expected_missing_handoffs[D]
+ERROR tests/test_s2_review.py::test_revision_cannot_reset_request_budget[research-2]
+ERROR tests/test_s2_review.py::test_revision_cannot_reset_request_budget[strategy-4]
+ERROR tests/test_s2_review.py::test_revision_cannot_reset_request_budget[finance-6]
+ERROR tests/test_s2_review.py::test_revision_cannot_reset_request_budget[final-11]
+ERROR tests/test_s2_review.py::test_one_structure_repair_keeps_logical_task_and_first_failure
+ERROR tests/test_s2_review.py::test_second_bad_structure_stops_without_third_attempt
+ERROR tests/test_s2_review.py::test_transport_retry_is_a_physical_attempt_not_structure_repair
+ERROR tests/test_s2_review.py::test_bad_critic_reference_never_reaches_revision[source_ids]
+ERROR tests/test_s2_review.py::test_bad_critic_reference_never_reaches_revision[affected_claim_ids]
+ERROR tests/test_s2_review.py::test_zero_calls_if_reservation_or_prompt_cannot_fit[max_total_tokens]
+ERROR tests/test_s2_review.py::test_zero_calls_if_reservation_or_prompt_cannot_fit[max_prompt_chars]
+ERROR tests/test_s2_review.py::test_api_failure_is_durable_and_never_counted_as_zero_usage
+ERROR tests/test_s2_review.py::test_cancel_before_dispatch_records_stop - Fil...
+ERROR tests/test_s2_review.py::test_clock_is_shared_across_batches_and_review[A-limits0]
+ERROR tests/test_s2_review.py::test_clock_is_shared_across_batches_and_review[C-limits1]
+ERROR tests/test_s2_review.py::test_clock_is_shared_across_batches_and_review[C-limits2]
+ERROR tests/test_s2_review.py::test_local_abandoned_request_blocks_new_instances_and_runs
+ERROR tests/test_s2_review.py::test_replay_deduplicates_and_keeps_unknown_dispatch
+ERROR tests/test_s2_review.py::test_no_reinvoke_or_existing_output_overwrite
+ERROR tests/test_s2_review.py::test_dispatch_start_is_durable_before_provider_and_usage_can_exceed_cap
+ERROR tests/test_s2_review.py::test_cancellation_during_physical_wait_is_counted_once
+ERROR tests/test_s2_review.py::test_revision_structure_repair_keeps_revision_attribution
+ERROR tests/test_s2_review.py::test_sqlite_existing_json_columns_persist_events_and_versions
+ERROR tests/test_s2_review.py::test_formal_execution_cannot_bypass_future_freeze_gates
+ERROR tests/test_s2_review.py::test_transport_retry_blocked_by_budget_is_not_an_actual_retry
+ERROR tests/test_s2_review.py::test_physical_worker_keeps_frozen_evidence_context
+44 passed, 70 errors in 3.49s

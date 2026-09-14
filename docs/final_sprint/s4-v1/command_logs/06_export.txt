@@ -1,0 +1,27 @@
+{
+  "version": "s4-export-v1",
+  "kind": "formal_plan",
+  "planned_rows": 8,
+  "inputs": [],
+  "plan_sha256": "bd89b8b1a6993c1004bc623846c294370d87536a076fe7a31662b484d9fa6f44",
+  "schedule_sha256": null,
+  "human_source": null,
+  "human_files": {},
+  "figure_count": 0,
+  "quality_results_available": 0,
+  "outputs": {
+    "attempts.csv": "6a84ff0eb10e0bc8471a356452a45cce023d59df9b1684ebd7d0fc46bc1d57c4",
+    "condition_summary.csv": "9987132ba6fb45d117c1d8c51e8a00c9606cd81d35143fce40dad58121b1d30d",
+    "failure_analysis.csv": "245387a7a273ff55eb6cfaad8df6b4ed7f8311d8ea6078ccba2c42a0e4442074",
+    "handoffs.csv": "6a84ff0eb10e0bc8471a356452a45cce023d59df9b1684ebd7d0fc46bc1d57c4",
+    "hidden_repeat_consistency.csv": "d06462c8e2c9d1f13786b9cdac0861852940abde138c9def566b931c49725f24",
+    "logical_tasks.csv": "6a84ff0eb10e0bc8471a356452a45cce023d59df9b1684ebd7d0fc46bc1d57c4",
+    "nodes.csv": "6a84ff0eb10e0bc8471a356452a45cce023d59df9b1684ebd7d0fc46bc1d57c4",
+    "paired_cases.csv": "7575b2baa49fe39f55ec707a7ae78a14527529a3f3911a3b1a71eb97c07582f1",
+    "paired_summary.csv": "3109b50f5d8c398e7d76749070fbf10e0c26a1c2d3152d6c6e128457fdafa6d3",
+    "results_tables.md": "ffb3784dcffd045024752994485bef693c38a758fa51b203cfa01e6de327daa7",
+    "role_metrics.csv": "6a84ff0eb10e0bc8471a356452a45cce023d59df9b1684ebd7d0fc46bc1d57c4",
+    "route_trace.csv": "6a84ff0eb10e0bc8471a356452a45cce023d59df9b1684ebd7d0fc46bc1d57c4",
+    "run_metrics.csv": "245387a7a273ff55eb6cfaad8df6b4ed7f8311d8ea6078ccba2c42a0e4442074"
+  }
+}

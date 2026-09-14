@@ -1,0 +1,102 @@
+{
+  "observed_on": "2026-09-07",
+  "s6_real_provider_calls": 18,
+  "granite_calls": 18,
+  "granite_D_preflight_calls": 10,
+  "granite_best_effort_demo_calls": 8,
+  "gemini_calls": 0,
+  "formal_runs_started": 0,
+  "formal_runs_planned": 8,
+  "gemini_key_present": true,
+  "gemini_key_value_recorded": false,
+  "ollama_processes": [
+    {"pid": 18776, "name": "ollama", "ownership_by_s6": "not_owned_ollama_desktop_child", "action": "left_running"},
+    {"pid": 17860, "name": "ollama app", "ownership_by_s6": "not_owned_ollama_desktop_parent", "action": "left_running"}
+  ],
+  "lease_reconciliation": {
+    "active_lease_present": false,
+    "archive_path": "data/granite_endpoint_leases/archive/2026-09-07/s3-research-15m-v2_3258e23b_2fb24565_inflight_or_unknown.lease.json",
+    "archive_sha256": "c185cb7770cf89f12a168ed27c9d09c6000c9cb38df43198de8cac93bd6f475a",
+    "status_retained": "inflight_or_unknown",
+    "refund_applied": false,
+    "audit_path": "docs/final_sprint/s6-fast-generation-v1/PROCESS_LEASE_RECONCILIATION.json"
+  },
+  "D_preflight": {
+    "proposal_path": "docs/final_sprint/s6-fast-generation-v1/D_PREFLIGHT_PROPOSAL.json",
+    "authorization_path": "docs/final_sprint/s6-fast-generation-v1/D_PREFLIGHT_AUTHORIZATION.json",
+    "status": "authorized_executed_no_go",
+    "record_label": "nonformal_engineering_preflight_failure",
+    "formal_experiment_result": false,
+    "c_minus_d_comparison_eligible": false,
+    "case_id": "ai_education",
+    "max_seconds": 3600,
+    "max_requests": 18,
+    "max_total_tokens": 160000,
+    "max_output_tokens_per_call": 1800,
+    "actual_requests": 10,
+    "actual_known_prompt_tokens": 24738,
+    "actual_known_output_tokens": 6079,
+    "actual_charged_total_tokens": 30817,
+    "actual_active_seconds": 1233.531,
+    "phase_status": {"warmup": "passed", "context": "passed", "components": "failed", "smoke": "not_run"},
+    "outcome_path": "docs/final_sprint/s6-fast-generation-v1/D_PREFLIGHT_ATTEMPT_03.json",
+    "outcome_sha256": "988ffee8a1afc58b213b2a935ddb7fb32d8a5c95519f72021811409f37b4f879",
+    "raw_result_path": "docs/final_sprint/s6-fast-generation-v1/real_preflight_d_ai_education_03/probe/result.json",
+    "raw_result_sha256": "9a675099cc1dc0ff06bbcf8f61e0b9c551353e0fc7b3d94dc409ac0be639c6b9"
+  },
+  "best_effort_demo": {
+    "mode": "slm_best_effort_demo",
+    "status": "completed_best_effort_demo",
+    "quality_label": "LOW QUALITY / NON-FORMAL / NOT ELIGIBLE FOR C-D COMPARISON",
+    "case_id": "ai_education",
+    "model": "granite-h-micro-32k@eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+    "cpu_only": true,
+    "context_tokens": 32768,
+    "actual_requests": 8,
+    "actual_prompt_tokens": 4273,
+    "actual_output_tokens": 897,
+    "actual_total_tokens": 5170,
+    "actual_elapsed_seconds": 189.828,
+    "research_finish_reason": "length_saved",
+    "other_call_finish_reasons": "stop",
+    "critic_scores": {"research": 3, "strategy": 3, "finance": 2, "final": 0},
+    "section_count": 13,
+    "deterministic_finance_count": 21,
+    "formal_runs_started": 0,
+    "formal_eligible": false,
+    "c_minus_d_comparison_eligible": false,
+    "result_path": "docs/final_sprint/s6-fast-generation-v1/BEST_EFFORT_DEMO_RESULT.json",
+    "raw_result_path": "docs/final_sprint/s6-fast-generation-v1/real_best_effort_ai_education_01/demo/result.json",
+    "plan_path": "docs/final_sprint/s6-fast-generation-v1/real_best_effort_ai_education_01/demo/artifact/best_effort_plan.md"
+  },
+  "gemini_smoke_approval": {
+    "path": "docs/final_sprint/s6-fast-generation-v1/GEMINI_SMOKE_APPROVAL.json",
+    "status": "approved_but_not_executed_D_gate_failed",
+    "expected_calls": 14,
+    "absolute_max_calls": 54,
+    "absolute_max_total_tokens": 480000,
+    "absolute_max_cost_usd": 1.20
+  },
+  "preflight_state": "D_no_go_blocks_Gemini_joint_refreeze_and_formal_S5",
+  "reasons": [
+    "The authorized D preflight stayed within all cumulative hard limits, but all four compact component roles truncated at their frozen role output caps on both the initial and only repair calls.",
+    "The dependency gate prevented the complete D smoke and therefore prevented the already-approved Gemini A/B/C smokes and joint refreeze.",
+    "Changing output caps, model or experiment/budget scope is a major scope decision requiring user confirmation.",
+    "The independent best-effort product demo completed, but it is explicitly non-formal and cannot repair the failed D gate or enter C-D comparison."
+  ],
+  "cleanup_after_D": {
+    "project_owned_pid": 9660,
+    "project_owned_pid_alive": false,
+    "listener_11434_count": 0,
+    "active_lease_count": 0,
+    "status": "owned_process_tree_terminated"
+  },
+  "cleanup_after_best_effort_demo": {
+    "project_owned_pid": 16236,
+    "project_owned_pid_alive": false,
+    "listener_11434_count": 0,
+    "active_lease_count": 0,
+    "status": "owned_process_tree_terminated"
+  },
+  "actions_not_taken": ["no lease deletion", "no lease refund", "no Gemini call", "no joint refreeze", "no formal run", "no S5 entry", "no second best-effort demo"]
+}

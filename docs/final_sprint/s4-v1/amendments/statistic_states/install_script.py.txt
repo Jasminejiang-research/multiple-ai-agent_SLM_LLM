@@ -1,0 +1,23 @@
+"""Retain the first S4 installation and apply its final missing-state correction."""
+from pathlib import Path
+import shutil
+from evaluation.s4_io import read_json,write_json,file_hash
+from install_s4 import STAGE,TARGET,PACKAGE
+
+paths=["evaluation/s4_statistics.py","evaluation/s4_export.py","evaluation/s4_ui.py","tests/test_s4_evaluation.py"]
+receipt=read_json(TARGET/PACKAGE/"code_install_receipt.json")
+expected={r["path"]:r["after_sha256"] for r in receipt["files"]}
+for relative in paths:
+    if file_hash(TARGET/relative)!=expected[relative]:raise RuntimeError("target changed: "+relative)
+out=TARGET/PACKAGE/"amendments/statistic_states"
+out.mkdir(parents=True,exist_ok=False)
+records=[]
+for relative in paths:
+    shutil.copyfile(TARGET/relative,out/(relative.replace("/","__")+".before.txt"))
+    shutil.copyfile(STAGE/relative,TARGET/relative)
+    records.append(dict(path=relative,before_sha256=expected[relative],after_sha256=file_hash(TARGET/relative)))
+shutil.copyfile(STAGE/"s4_state_statistics_final.txt",out/"staged_validation.txt")
+shutil.copyfile(STAGE/"amend_s4_statistics.py",out/"install_script.py.txt")
+write_json(out/"receipt.json",dict(reason="Retain raw zero consumption for unrun slots while excluding not-run/partial metrics from complete paired comparisons and aggregate means.",
+    staged_tests="28 passed in 16.52s",files=records,model_calls=0,formal_runs_started=0,existing_raw_events_unchanged=True))
+print("Applied four verified S4 code/test updates; earlier versions retained under amendments/statistic_states.")

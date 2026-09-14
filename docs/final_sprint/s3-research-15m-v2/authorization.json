@@ -1,0 +1,25 @@
+{
+  "scope": "ai_education_research_20m",
+  "approved": true,
+  "user_instruction": "现在，我需要你简化 research 的输出，将其时长控制在20分钟之内",
+  "interpretation": "Continue the user-requested Research simplification using only the remaining previously approved 90-minute pool. One additional Research-only probe, at most 900 seconds; no reset, new pool, complete D or formal experiment.",
+  "approved_limits": {
+    "run_seconds": 900,
+    "node_seconds": 900,
+    "request_seconds": 900,
+    "max_output_tokens": 8192,
+    "max_requests": 36,
+    "max_total_tokens": 500000,
+    "max_prompt_chars": 90000
+  },
+  "research_effective_output_caps": {
+    "body": 640,
+    "grounding": 2304,
+    "single": 2304
+  },
+  "parent_authorization_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v2\\authorization.json",
+  "parent_authorization_sha256": "c6e41f8e85b2bb6fe80aa97fc390b38b4c90d34caabe1ccd2f0ca24bce928783",
+  "expected_model_digest": "eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+  "expected_ollama_version": "0.33.2",
+  "formal_eligible": false
+}

@@ -1,0 +1,115 @@
+{
+  "finalized_at_utc": "2026-09-07T09:08:01.642659+00:00",
+  "retained_code": "s3-reference-fix-v2",
+  "contract_version": "proposal-grounding-v3-frozen-reference-bounds",
+  "prompt_version": "grounded-generation-v3-explicit-anchors",
+  "changed_file_count": 13,
+  "new_files": 5,
+  "original_modified_files": 8,
+  "changes": [
+    {
+      "path": "evaluation/s2_fixtures.py",
+      "original_sha256": "37ed5fb6f3cc1bf2a23e874dffc2c4f616363943e00eeece02490277fb0e4496",
+      "original_backup": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-reference-fix-v1\\before\\evaluation\\s2_fixtures.py",
+      "retained_sha256": "5c07dba2d632051a9de73a38db84f107d354505372c90de3d0657da72b6f4e22"
+    },
+    {
+      "path": "schemas/contract_outputs.py",
+      "original_sha256": "454ece510c6ecd8f372fc70f9c7176899f13d29221662f1b74d76c96b5a7c911",
+      "original_backup": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-reference-fix-v1\\before\\schemas\\contract_outputs.py",
+      "retained_sha256": "c4f995c72f43260e5f5ca37847c7bb052ff3affbcea5fc69dabbe7367a9acfb3"
+    },
+    {
+      "path": "schemas/evidence.py",
+      "original_sha256": "bac43ef43dc74c16226f41ab0d3976d628635df3f5c34024d8d3bf1f93cc1ee9",
+      "original_backup": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-reference-fix-v1\\before\\schemas\\evidence.py",
+      "retained_sha256": "a78900f486238cf77d445a60146b3fcb72efa60d35bef471a21bca30b7adc824"
+    },
+    {
+      "path": "slm/tests/test_granite_s3.py",
+      "original_sha256": "6e2d972a43dc89849d859cb441bbfaa1a53bc9e95cdcf2e6375050fd1adef93f",
+      "original_backup": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-reference-fix-v1\\before\\slm\\tests\\test_granite_s3.py",
+      "retained_sha256": "b2f308f87978af60a69e58c8d293dbb20da3f3a429d97c16140211675d48b5b2"
+    },
+    {
+      "path": "tests/test_s1_contract.py",
+      "original_sha256": "842a50bd15462e9df5888af5bc3761a05f8246f7d148f605f3b7f008a43be29b",
+      "original_backup": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-reference-fix-v1\\before\\tests\\test_s1_contract.py",
+      "retained_sha256": "3b4a68b26b4e0bc0961540ef23a1705c7df141996598bf80856d39b1f42c7e1a"
+    },
+    {
+      "path": "workflow/contract_generation.py",
+      "original_sha256": "6efd236c5a057236d659adc0773a1d2a28de99da1d7a5a07ca5cb64b53976da5",
+      "original_backup": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-reference-fix-v1\\before\\workflow\\contract_generation.py",
+      "retained_sha256": "dbf661d0d2628924e8c93d5d4d6b904bf364bc93febe2181f4881572a5dce7e2"
+    },
+    {
+      "path": "workflow/generation_constraints.py",
+      "original_sha256": null,
+      "original_backup": null,
+      "retained_sha256": "0adff2ffdfd5c4cfc77aa0b86347ee1d2cf5603881812ba7c176c106e348014f"
+    },
+    {
+      "path": "tests/test_generation_constraints.py",
+      "original_sha256": null,
+      "original_backup": null,
+      "retained_sha256": "5c0c61c2f5a7cb0772c521d73ac9d49196ae3c7febdece43b0f6d7f378d88468"
+    },
+    {
+      "path": "slm/tests/test_reference_bounds.py",
+      "original_sha256": null,
+      "original_backup": null,
+      "retained_sha256": "1c2363233c4becfe8868c21d1678c236d8b195398b6ed44e31e22bb99440c01a"
+    },
+    {
+      "path": "tests/test_grounding_generation.py",
+      "original_sha256": null,
+      "original_backup": null,
+      "retained_sha256": "862dc00c3dfb87d55581dd8aa3e4fe73a51f2a8140bfcd403a713797f5eb1fec"
+    },
+    {
+      "path": "tests/test_s2_review.py",
+      "original_sha256": "7656ecba67865101333cd0a55325d8ba8c2dff18a5e62c0abc9508c84255cee7",
+      "original_backup": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-reference-fix-v2\\before\\tests\\test_s2_review.py",
+      "retained_sha256": "1b1e4d0b492d05d6f2b180fdd3750f13134628d272f9ce86738019c91aa90de8"
+    },
+    {
+      "path": "tests/test_s4_evaluation.py",
+      "original_sha256": "b164d985115e384d39f8707d15269a60baf895946fa690eba94bf205821ce3e3",
+      "original_backup": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-reference-fix-v2\\before\\tests\\test_s4_evaluation.py",
+      "retained_sha256": "44d424772f992b97216f3eaeea9984be20e0899a7f894405d856775d6d40a690"
+    },
+    {
+      "path": "workflow/grounding_generation.py",
+      "original_sha256": null,
+      "original_backup": null,
+      "retained_sha256": "164789ba770c766927fb66a5b85b38e2d262c6424df2e32b794e405d5a73d9cc"
+    }
+  ],
+  "retained_source_files_verified": 253,
+  "source_mismatches": [],
+  "original_backup_mismatches": [],
+  "historical_response_mismatches": [],
+  "carryover_mismatches": [],
+  "budget": {
+    "this_run_request_count": 3,
+    "this_run_charged_total_tokens": 17380,
+    "this_run_elapsed_seconds": 902.875,
+    "cumulative_request_count": 11,
+    "cumulative_charged_total_tokens": 71252,
+    "cumulative_elapsed_seconds": 4487.671000000002
+  },
+  "remaining": {
+    "requests": 25,
+    "tokens": 428748,
+    "seconds": 9912.328999999998
+  },
+  "public_config_sha256": "4e8bec9bd8f951c07268b2cedf78858e14194bb20168bba2bb197576ce8ae63f",
+  "complete_proposal_produced": false,
+  "full_d_started": false,
+  "formal_runs_started": 0,
+  "gemini_calls": 0,
+  "retained_full_regression": "673 passed, 25 deselected, 3 subtests passed in 120.30s",
+  "retained_post_restore_tests": "20 passed in 1.43s",
+  "unimplemented_proposal": "NEXT_STEP_PROPOSAL.md"
+}

@@ -1,0 +1,116 @@
+{
+  "recorded_at_utc": "2026-09-06T23:08:17.6113928Z",
+  "verified_updates": [
+    {
+      "path": "docs/final_sprint/s3-fix-v1/staged_validation.txt",
+      "before_sha256": null,
+      "after_sha256": "2876392da423c51ceb484a5dceffd000a61ed505dd41317c7904b9e2a19c47e0"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/reproduction_sources/run_fixed_warmup.ps1.txt",
+      "before_sha256": null,
+      "after_sha256": "9cbfe569f74e4c8d7c1bfb4f9475eed81f4c53bb12056a4ec8240838a536fb53"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/reproduction_sources/run_diagnostic.ps1.txt",
+      "before_sha256": null,
+      "after_sha256": "68a7dbb272f9bea56011a36dc639cf979088cceb15dd1ea94f7d46a2d9621cf8"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/reproduction_sources/replay_successful_request.py.txt",
+      "before_sha256": null,
+      "after_sha256": "8e8ca42c81a1068ff0234c3c621496cf2bdabf191a868a68ed911b2ff207eab2"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/reproduction_sources/README.md",
+      "before_sha256": null,
+      "after_sha256": "fe1c04f7062ad026da0b930b5db1cc39f626c0ec1f7b91a11adf3c5d44eef9d2"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/reproduction_sources/measure_output_envelope.py.txt",
+      "before_sha256": null,
+      "after_sha256": "e5f64b59d87461aae638fafddf2ff9040e604c11a63b3551b0a77663ab79ba5c"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/reproduction_sources/diagnose_granite.py.txt",
+      "before_sha256": null,
+      "after_sha256": "c4fd77012d0407db8cafe0fd56aa8cef15f6d981a1ff873d23b69d871c55b7c1"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/reproduction_sources/code_manifest.json.txt",
+      "before_sha256": null,
+      "after_sha256": "80a381dfc2b39b5ff290d6ab4f2ccb813463493810e1fb03237e0f7d03884631"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/reproduction_sources/build_fix_audit.py.txt",
+      "before_sha256": null,
+      "after_sha256": "d084c4bbd07f23fb36e7c5060d51c0cd3aa887411f0c44e346395c98d3af7898"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/PREVIOUS_STATUS.md",
+      "before_sha256": null,
+      "after_sha256": "e63bc777d42053c61c0f7c6a920d479800aef091172ab8d6ec1a7e8d555f9356"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/preservation_audit.json",
+      "before_sha256": null,
+      "after_sha256": "1563f4e2fc5ab01c4b781d8f8aa02f240e77dadb75c322254033cc427fb7dded"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/output_envelope_audit.json",
+      "before_sha256": null,
+      "after_sha256": "bbe3b01939d3c5c171b9add4ead0fc7c0bad83a3830df9681ec593c858946a76"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/HANDOFF.md",
+      "before_sha256": null,
+      "after_sha256": "9fccbea390a7752aaf8f09cbaae0b0413236fe774e5e361999c025bc4d8c9d3e"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/FINAL_STATUS.md",
+      "before_sha256": null,
+      "after_sha256": "d637364a0b4ba5eee568091908d2b63c6ff4be74fca10a8ea5d3d7cbcc94c67b"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/evidence_audit.json",
+      "before_sha256": null,
+      "after_sha256": "e7d1503e0828462d2edd4fbef56df99baa9418083b00ada05685bedb757b68f9"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/BUDGET_PROPOSAL.md",
+      "before_sha256": null,
+      "after_sha256": "9e1b51069ff65cc5294f1cc6aa3711ae7c19b98a185ca7b6ff0627af29ad1deb"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/before/slm__tests__test_granite_s3.py.txt",
+      "before_sha256": null,
+      "after_sha256": "3783292062472f5a49de15f5d593a7cd60d7552ba0229f00e5bd456ed7dddc94"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/before/slm__granite_provider.py.txt",
+      "before_sha256": null,
+      "after_sha256": "883bd5a87c61d55931e5f21b694abaf4af663b7011b9ded7726ba5c6cb3a3bc3"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/before/slm__granite_preflight.py.txt",
+      "before_sha256": null,
+      "after_sha256": "910180a6fcff454f4cdfaba1204deadef39b8f82d4d54d5e9bf6ec6c6c39d436"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/before/slm__granite_config.py.txt",
+      "before_sha256": null,
+      "after_sha256": "3c852687859d82bc054f1400a40ec1b717f46e3ccce4d372e96c75ec2b5dded5"
+    },
+    {
+      "path": "docs/final_sprint/s3-fix-v1/authority_audit.json",
+      "before_sha256": null,
+      "after_sha256": "85984e2cc0f89b9e1fadeb93dc2c0078398bdc1de02fcbd63f99a416e06881da"
+    },
+    {
+      "path": "docs/final_sprint_status.md",
+      "before_sha256": "e63bc777d42053c61c0f7c6a920d479800aef091172ab8d6ec1a7e8d555f9356",
+      "after_sha256": "d637364a0b4ba5eee568091908d2b63c6ff4be74fca10a8ea5d3d7cbcc94c67b"
+    }
+  ],
+  "next_package_started": false
+}

@@ -1,0 +1,17 @@
+{
+  "user_text": "AI Tutor for MBA Students — United States",
+  "brief": {
+    "company_or_product_name": "AI Tutor for MBA Students",
+    "industry": "AI-enabled higher education",
+    "target_customer": "MBA students in the United States",
+    "problem": "MBA students in the United States may need additional learning support; the precise unmet needs, frequency, urgency and willingness to pay have not been supplied and must be researched or labeled as assumptions.",
+    "solution": "An AI tutor for MBA students in the United States. Product features, delivery model, pedagogy, integrations and differentiation have not been supplied and must be researched or labeled as assumptions.",
+    "business_model": "Not supplied. Research plausible commercial models for the United States or state explicit assumptions; do not treat any price, conversion rate, customer count, cost or margin as user-confirmed.",
+    "geography": "United States only. Market analysis, regulation, competitors, go-to-market strategy and financial assumptions must be bounded to the United States; do not substitute another launch country.",
+    "proposal_goal": "请通过完整产品链路生成商业计划书，并评估美国市场的商业可行性、实施方案、风险和财务假设。",
+    "output_language": "zh-CN",
+    "additional_context": "Only the concept AI Tutor for MBA Students and the United States geographic scope were supplied. Do not treat market size, demand, competitors, pricing, costs, product features, pedagogy, legal position, institutional partnerships or financial outcomes as confirmed facts. Obtain United States-specific evidence dynamically where the product path supports research, cite only evidence actually supplied to the writer, and label unsupported values as explicit assumptions. Do not use a frozen case, case whitelist, prewritten evidence pack or manually supplied financial model. Produce substantive sections rather than chapter summaries. The system-owned final-output policy requires English regardless of the requested input language.",
+    "original_user_idea": "AI Tutor for MBA Students — United States"
+  },
+  "input_mapping_note": "This is a controlled rerun of mba-ai-tutor-input-v1-20260912.json. The only substantive case change is geography: the prior unspecified/global scope is replaced with United States only, and direct references to the target customer, problem, solution and goal are correspondingly bounded to that geography. All other case facts and numerical parameters remain unspecified. No external case research, frozen evidence, named competitors, pricing, costs or financial outcomes were supplied. The complete mandatory product field set is present, while unknown values remain explicit rather than invented."
+}

@@ -1,0 +1,444 @@
+{
+  "version": "s5-llm-only-dual-declared-lineage-authorization-v25",
+  "approved_at": "2026-09-08",
+  "approved": true,
+  "authorization_source": "The user manually authorized modifying this file and continuing the experiment after explicitly approving mirroring only already-selected frozen E## IDs and up to eight autonomous repair cycles within unchanged scope and budgets. Latest user explicitly authorizes excluding pre-v20 spend from the current unchanged ceilings; all lifetime history remains auditable.",
+  "inherits_authorization": [
+    "LLM_ONLY_S5_CONSERVATIVE_REPAIR_AUTHORIZATION.json",
+    "LLM_ONLY_S5_TERMINAL_PUNCTUATION_REPAIR_AUTHORIZATION.json",
+    "LLM_ONLY_S5_RECOMMENDATION_PREMISE_AUTHORIZATION.json",
+    "LLM_ONLY_S5_TEXT_EQUALS_CLAIM_AUTHORIZATION.json"
+  ],
+  "execution_branch": "llm_only_after_D_no_go",
+  "objective": "Produce complete business plans under the unchanged frozen experimental design and current user-authorized v20-start Gemini budget window, with all unresolved quality errors transparently retained and scored.",
+  "authorization_delta": "v26 preserves both an existing model-declared claim ID and a unique exact-text existing parent when pi is missing. Validate and conservatively retain obligations from BOTH existing ID and parent chains; ID precedence must not hide the parent. Do not infer semantic equivalence or correct q/premise, add evidence, or change any words. Prior bounded ID split and all repairs inherited. Current v20-start budget window is not reset again.",
+  "external_data_authorization": {
+    "approved": true,
+    "destination": "Google Gemini API",
+    "credential_source_variable": "GOOGLE_API_KEY",
+    "credential_selection": "Both supported local variables were present and byte-identical; GOOGLE_API_KEY remains fixed under Google SDK precedence, the unused variable is removed only from the executing process, and no value is recorded.",
+    "payload": [
+      "both frozen briefs",
+      "frozen evidence excerpts and short IDs",
+      "21 and 27 case-specific financial inputs and deterministic results"
+    ]
+  },
+  "prompt_change": {
+    "approved": true,
+    "prompt_version": "compact-generation-v13-s5-source-quality-scale",
+    "claim_id_min_chars": 3,
+    "claim_reason_max_chars": 200,
+    "recommendation_premise_required": true,
+    "text_equals_claim_required": true,
+    "mirror_selected_evidence_ids_inline": true,
+    "separate_bracket_token_per_selected_evidence_id": true,
+    "finance_gap_max_items": 3,
+    "exactly_one_object_per_named_main_array": true,
+    "research_named_main_arrays": [
+      "market",
+      "customer",
+      "competition"
+    ],
+    "strategy_named_main_arrays": [
+      "value",
+      "model",
+      "gtm",
+      "moat"
+    ],
+    "finance_named_main_arrays": [
+      "revenue",
+      "costs",
+      "economics"
+    ],
+    "financial_ids_only_in_structured_f": true,
+    "financial_ids_forbidden_in_text_and_claim_t": true,
+    "F_prefixed_financial_ids_forbidden_in_text_and_claim_t": true,
+    "source_quality_scale": "number from 0 through 1; never a 1-through-5 rating",
+    "citation_scope": "only E## values already selected in the same claim.e from the frozen role view",
+    "new_or_guessed_evidence_ids": false,
+    "preserved_response_mutation": "citation_tokens_only; no word or evidence-list mutation"
+  },
+  "schema_change": {
+    "approved": true,
+    "schema": "versioned Finance8Wire transport variant; canonical schemas unchanged",
+    "claim_reason_max_chars": 200,
+    "finance_note_claim_max_items": 8,
+    "previous_finance_note_claim_max_items": 3,
+    "canonical_finance_note_claim_max_items_unchanged": 8,
+    "variant_version": "compact-finance-claims-eight-v1-s5",
+    "changed": true
+  },
+  "mechanical_repair_change": {
+    "approved": true,
+    "version": "conservative-claim-repair-v11-s5-finance-assumption-notice",
+    "pad_short_claim_ids": true,
+    "downgrade_unsubstantiated_sourced_fact": true,
+    "normalize_invalid_sourced_fact_disposition": true,
+    "invalid_disposition_target": "assumption for assumption/projection; otherwise needs_validation",
+    "delete_terminal_punctuation_on_exact_parent_match": true,
+    "max_terminal_characters_deleted": 1,
+    "may_change_words": false,
+    "may_add_evidence_ids": false,
+    "may_delete_nonempty_evidence_ids": false,
+    "may_generate_or_copy_premise": false,
+    "may_mechanically_insert_inline_citations": true,
+    "mirror_only_selected_frozen_evidence_ids": true,
+    "remove_only_selected_frozen_financial_markers_from_prose": true,
+    "accepted_financial_marker_forms_for_removal": [
+      "[<selected frozen f ID>]",
+      "[F-<selected frozen f ID>]"
+    ],
+    "preserve_structured_financial_value_ids": true,
+    "normalize_integer_source_quality_scale_5_to_unit": true,
+    "source_quality_normalization_precondition": "type is exactly integer and 2 <= q <= 5",
+    "source_quality_normalization_formula": "q / 5",
+    "q_equals_1_unchanged": true,
+    "other_invalid_q_rejected": true,
+    "append_existing_same_parent_claim_text_only": true,
+    "preserve_original_body_verbatim": true,
+    "preserve_all_original_claims_and_order": true,
+    "may_duplicate_existing_same_parent_claim_text_into_body": true,
+    "may_author_or_infer_new_words": false,
+    "body_assembly_scope": "typed role note or proposal section only; after previous exact punctuation/citation/finance repairs; existing schema size limits still apply",
+    "unknown_or_unselected_bracket_markers_still_reject": true,
+    "split_compact_citation_bracket_lists": true,
+    "citation_format_precondition": "parent text equals claim.t; every mirrored E## already occurs in the same claim.e and in the frozen role-view evidence catalog; otherwise validation rejects",
+    "preserve_evidence_id_order": true,
+    "applies_only_to_config_version": "review-run-v26-s6-compact-gemini-8192-dual-declared-lineage",
+    "audit_event": "mechanical_repair_diff",
+    "invalid_numeric_source_recency_to_unknown": true,
+    "partition_finance_note_claims_without_deletion": true,
+    "partition_group_claim_limit": 8,
+    "partition_retains_existing_outer_note_limit": 2,
+    "partition_preserves_claim_order_and_all_nonclaim_fields": true,
+    "append_code_owned_financial_assumption_notice": true,
+    "code_owned_financial_disclosure": "Figures are scenario assumptions, not forecasts.",
+    "preserve_original_model_notice_verbatim": true,
+    "code_owned_policy_disclosure_is_only_new_notice_text": true
+  },
+  "generation_strategy_change": {
+    "approved": true,
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "thinking_budget": 1024,
+    "include_thoughts": false,
+    "max_output_tokens_unchanged": 8192
+  },
+  "runner_logic_repairs": {
+    "approved": true,
+    "lossless_view_compression_version": "lossless-default-view-v3-s5",
+    "lossless_claim_string_pool": "Identical repeated long claim t/d/p strings may use an explicit reversible string dictionary, only when the whole encoded view becomes shorter. Every original word and value must be recoverable exactly; no summaries or inferred shared values.",
+    "lossless_view_compression": "v26 only: remove Critic's duplicate upstream claim list while retaining the complete reviewed wire and capsule unresolved metadata; use an explicit default table to omit repeated default-valued claim keys, with lossless reconstruction tests. No non-default value, prose, claim, selected evidence or financial value may be removed. Writer upstream complete claim dictionaries may be encoded as explicit columns plus rows, retaining every value and order with exact reconstruction tests. The 26000-character gate and all token limits remain unchanged.",
+    "cumulative_budget_version": "s5-cumulative-physical-smoke-budget-v1",
+    "critic_patch_adapter_version": "compact-critic-patch-adapter-v1-s5",
+    "freeze_gate_expected_config_version": "review-run-v26-s6-compact-gemini-8192-dual-declared-lineage",
+    "cumulative_smoke_budget_basis": "Conservative reservation before every physical request; active epoch includes v20 and every later attempt. Lifetime, excluded-before-v20 and active totals remain separate and hash-verified.",
+    "unknown_usage_policy": "retain conservative reservation and stop further dispatch",
+    "critic_compact_field_to_canonical_path_mapping": "deterministic role-aware mapping of existing visible targets only",
+    "revision_claim_body_anchor_synchronization": "only a unique existing exact anchor; preserve all surrounding prose and original Critic issues",
+    "critic_adapter_current_config_version": "review-run-v26-s6-compact-gemini-8192-dual-declared-lineage",
+    "exact_text_parent_lineage_normalization": "v26 only: preserve a new claim ID and fill only an absent parent ID from a unique exact-text upstream match or the unique most-descendant match in an already recorded connected parent-ID chain",
+    "transitive_lineage_validation": "v26 only: follow existing explicit upstream parent_claim_id edges and enforce every reachable ancestor's source, evidence and unresolved-status obligations; reject disconnected ambiguity and cycles",
+    "lineage_words_and_evidence_unchanged": true,
+    "canonical_to_compact_citation_mapping": "v26 only: convert existing canonical inline source IDs to their already-selected frozen short evidence IDs in claim text and corresponding parent body; no newly selected evidence; roundtrip must preserve canonical text and anchors",
+    "canonical_citation_wire_adapter_version": "existing-anchor-citation-roundtrip-v1-s5",
+    "canonical_citation_alias_rule": "Repeated same-source claim citations with matching selected-anchor count map in existing anchor order. An existing parent-body source citation outside a claim span may use the first already-selected anchor of that SAME source as a transport alias only. All selected e/anchors and their order remain unchanged; expansion must restore the original canonical text exactly; no claim of additional excerpt support is inferred.",
+    "canonical_to_compact_citation_scope": "all upstream capsules, compact Critic artifacts and targeted revision views; unknown or unselected references remain rejected",
+    "hard_limits_unchanged": true,
+    "exact_same_text_lineage_identity_continuity": {
+      "approved": true,
+      "version": "explicit-same-text-lineage-identity-v1-s5",
+      "applies_only_to_config_version": "review-run-v26-s6-compact-gemini-8192-dual-declared-lineage",
+      "preserve_claim_ids_and_parent_ids": true,
+      "require_existing_explicit_connected_same_text_lineage": true,
+      "preserve_all_connected_prior_source_and_unresolved_obligations": true,
+      "disconnected_ambiguity_and_cycles_rejected": true,
+      "new_evidence_or_words": false
+    },
+    "claim_id_collision_normalization": {
+      "approved": true,
+      "version": "declared-upstream-claim-id-split-v1-s5",
+      "applies_only_to_config_version": "review-run-v26-s6-compact-gemini-8192-dual-declared-lineage",
+      "preserve_all_words_claims_order_and_selected_evidence": true,
+      "no_new_or_inferred_evidence": true,
+      "retain_existing_declared_upstream_lineage": true,
+      "ambiguous_or_unconnected_ids_rejected": true,
+      "operation_is_internal_id_normalization_only": true
+    },
+    "dual_declared_lineage": {
+      "approved": true,
+      "version": "dual-declared-exact-text-lineage-v1-s5",
+      "applies_only_to_config_version": "review-run-v26-s6-compact-gemini-8192-dual-declared-lineage",
+      "fill_missing_parent_from_unique_existing_exact_text": true,
+      "preserve_original_declared_claim_id": true,
+      "validate_both_declared_id_and_parent_ancestry": true,
+      "allow_monotone_none_to_unique_existing_parent_completion": true,
+      "conflicting_nonempty_parents_and_cycles_still_rejected": true,
+      "preserve_both_sources_and_unresolved_obligations": true,
+      "semantic_equivalence_inferred": false,
+      "words_or_evidence_added": false
+    }
+  },
+  "continuing_repair_authorization": {
+    "approved": true,
+    "maximum_autonomous_cycles": 8,
+    "renewed_by_latest_continue_message": true,
+    "renewed_cycle_start_experiment": "s5-llm-only-v15",
+    "fresh_directory_each_smoke": true,
+    "same_version_ABC_required": true
+  },
+  "contingent_quality_tolerance_authorization": {
+    "approved": true,
+    "requested_success_band_percent": [
+      80,
+      90
+    ],
+    "latest_user_priority": "Producing complete business plans is the highest project priority; approximately 10-20 percent erroneous or hallucinated model content is acceptable when transparently preserved and scored.",
+    "autonomous_critic_and_noncritical_gate_adjustment_approved": true,
+    "all_quality_errors_must_remain_visible_in_raw_outputs_and_evaluation": true,
+    "enabled_in_this_version": false,
+    "reason": "v23 retains both existing ID and exact-text-parent obligations without changing content or factual scoring; model quality errors and uncertainty remain recorded.",
+    "never_tolerated": [
+      "invented evidence",
+      "fabricated finance",
+      "missing required section",
+      "citation pollution"
+    ]
+  },
+  "output_change": {
+    "max_output_tokens_per_physical_response": 8192,
+    "applies_to_provider": "gemini",
+    "applies_to_conditions": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "preserve_previous_failed_smoke": true,
+  "previous_failed_smokes": [
+    {
+      "path": "docs/final_sprint/s5-llm-only-v1/smoke_summary.json",
+      "sha256": "15d891309b7ae1f0e842da08f36a0c4a442bb948d3921ca38e64729ccc3d861c",
+      "requests": 2,
+      "total_tokens": 9410,
+      "cost_usd": 0.0106792
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v2/smoke_summary.json",
+      "sha256": "3c5ca075127fed22d37b7d9ac6f9ab7dd5a2d79af1fe90685f361505fa04bb53",
+      "requests": 2,
+      "total_tokens": 22192,
+      "cost_usd": 0.0426342
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v3/smoke_summary.json",
+      "sha256": "0abdd4fc2b1d75a33bb35409da3b734e3a1ee9c378751f5ae00b78f82ef32bf4",
+      "requests": 1,
+      "total_tokens": 6818,
+      "cost_usd": 0.0105352
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v4/smoke_summary.json",
+      "sha256": "17050f2800535b43153ed0dca4045afa94dc506dd69e098a39b2d4162fc57619",
+      "requests": 1,
+      "total_tokens": 11358,
+      "cost_usd": 0.0213682
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v5/smoke_summary.json",
+      "sha256": "78bc862d1e8980f0f7926857acc2ac67f9dcc2dd68831747278c375a3d02320e",
+      "requests": 1,
+      "total_tokens": 6302,
+      "cost_usd": 0.0087282
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v6/smoke_summary.json",
+      "sha256": "ff2678ee227116996a17b036f8aba7aa20ec7d8e889501a0aa961d4a51a18917",
+      "requests": 1,
+      "total_tokens": 6201,
+      "cost_usd": 0.0083833
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v7/smoke_summary.json",
+      "sha256": "c83f44ed5181d0420048265509cc2ddc935093158edd2886adb5bf77b7edd874",
+      "requests": 1,
+      "total_tokens": 5796,
+      "cost_usd": 0.0073532
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v8/smoke_summary.json",
+      "sha256": "7d273c950155a0cca9df8b2932c48eb5d10a3656920ae4d93ac80039cf3e4f02",
+      "requests": 1,
+      "total_tokens": 5634,
+      "cost_usd": 0.006935
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v9/smoke_summary.json",
+      "sha256": "f8e9f0f227e67a5923eb68b2656d8020ed4472ce92ddd5535f7db913035e6c0a",
+      "requests": 1,
+      "total_tokens": 5994,
+      "cost_usd": 0.0077558
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v10/smoke_summary.json",
+      "sha256": "f6a8bca768a97dfa32d7a866120a455583f08e7c132be4bf490cb9534af71cc2",
+      "requests": 4,
+      "total_tokens": 18605,
+      "cost_usd": 0.0236831
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v11/smoke_summary.json",
+      "sha256": "765708af6f199ad6d5d7e2e7bf71456eb2b9b3c97d2ae000bc8aee9e2641b5d8",
+      "requests": 2,
+      "total_tokens": 9744,
+      "cost_usd": 0.0134238
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v12/smoke_summary.json",
+      "sha256": "1297e1cb726e5725f41e186726204e89cca70fce617710c68d597d7a576c4356",
+      "requests": 1,
+      "total_tokens": 5907,
+      "cost_usd": 0.0075097
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v13/smoke_summary.json",
+      "sha256": "c2a8c3eedc9da555c0da693be5aa163953920b23b9a9c4d0ce0bcea1933f907d",
+      "requests": 1,
+      "total_tokens": 6199,
+      "cost_usd": 0.0082639
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v14/smoke_summary.json",
+      "sha256": "3345b242c0e2bc164499cee875b8f4da75f9b4c00f48232269dce362a492bf7c",
+      "requests": 1,
+      "total_tokens": 6300,
+      "cost_usd": 0.0084636
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v15/smoke_summary.json",
+      "sha256": "831464eb3e594af1b358e2dcdcd895fc6df47887d7e2d661142ad0295f819523",
+      "requests": 2,
+      "total_tokens": 10283,
+      "cost_usd": 0.0145909
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v16/smoke_summary.json",
+      "sha256": "6cd16f5ea918204d00d2190d5e3be54ba5c5682a5743de943ff6cc05c2401276",
+      "requests": 4,
+      "total_tokens": 23031,
+      "cost_usd": 0.0295891
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v17/smoke_summary.json",
+      "sha256": "13c44c4f8e04a9a88d1ebb7d9d6df7a963b9b146bbc255e5dc04b416e8875bfd",
+      "requests": 4,
+      "total_tokens": 25001,
+      "cost_usd": 0.0337309
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v18/smoke_summary.json",
+      "sha256": "fbd26a4d602027419ec2c9b0f83780c5dde6ee9f4a90b4de7de726cf0c5dd917",
+      "requests": 4,
+      "total_tokens": 23173,
+      "cost_usd": 0.0292577
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v20/smoke_summary.json",
+      "sha256": "f70c40d6532a9eef691033a60b0965e83ff4ee1c9c53016831620fdafea6e74b",
+      "requests": 5,
+      "total_tokens": 29038,
+      "cost_usd": 0.0335802
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v21/smoke_summary.json",
+      "sha256": "5e6e26d6acc5117bd10152462dfcc2aaa576b8ad5ad494e13b2b95c3d3582326",
+      "requests": 6,
+      "total_tokens": 34227,
+      "cost_usd": 0.0412001
+    },
+    {
+      "path": "docs/final_sprint/s5-llm-only-v22/smoke_summary.json",
+      "sha256": "66747bf06b94252514b202641c4f92ce9a9d4b3fa4e3e517e06bffaf014a196e",
+      "requests": 5,
+      "total_tokens": 32053,
+      "cost_usd": 0.0379541
+    }
+  ],
+  "prior_nonformal_spend": {
+    "requests": 50,
+    "total_tokens": 303266,
+    "cost_usd": 0.4056194
+  },
+  "preserve_planned_rows": 8,
+  "formal_conditions": [
+    "A",
+    "B",
+    "C"
+  ],
+  "formal_run_count": 6,
+  "D_planned_rows": [
+    "ai_education-D",
+    "intelligent_ring-D"
+  ],
+  "D_row_state": "not_run_preflight_no_go",
+  "formal_Granite_calls": 0,
+  "best_effort_demo": {
+    "formal_eligible": false,
+    "c_minus_d_comparison_eligible": false
+  },
+  "confirmed_cases": {
+    "ai_education": {
+      "case_specific_financial_values": 21
+    },
+    "intelligent_ring": {
+      "case_specific_financial_values": 27
+    }
+  },
+  "comparison_policy": {
+    "reported": [
+      "B-A",
+      "C-B"
+    ],
+    "unavailable": {
+      "C-D": "D_preflight_no_go"
+    },
+    "success_subset_substitution": false
+  },
+  "combined_smoke_and_formal_max_tokens": 1440000,
+  "combined_smoke_and_formal_max_cost_usd": 3.6,
+  "paid_tools": false,
+  "repair_instruction_change": {
+    "approved": true,
+    "version": "compact-structure-repair-instruction-v1-s5",
+    "applies_only_to_config_version": "review-run-v26-s6-compact-gemini-8192-dual-declared-lineage",
+    "replacement_suffix": "Repair structure only; no added content or IDs.",
+    "preserve_base_and_role_instructions": true,
+    "hard_limit_chars": 500,
+    "maximum_structural_repairs_unchanged": 1,
+    "transport_retries_unchanged": 0
+  },
+  "previous_pre_dispatch_no_go": [
+    {
+      "path": "docs/final_sprint/s5-llm-only-v19/PRE_DISPATCH_NO_GO.json",
+      "sha256": "f30249b20d67ff5314b564e681361804a59b4c128f2f0a350bf0b88310a9b827",
+      "requests": 0,
+      "total_tokens": 0,
+      "cost_usd": 0
+    }
+  ],
+  "smoke_budget_epoch_authorization": {
+    "version": "s5-smoke-budget-epoch-v1",
+    "approved": true,
+    "starts_at_experiment_version": 20,
+    "preserve_lifetime_history": true,
+    "unchanged_hard_limits": {
+      "requests": 54,
+      "total_tokens": 480000,
+      "cost_usd": 1.2
+    },
+    "authorization_record": {
+      "path": "C:/Users/JasmineJiang/Projects/multiple-ai-agent_SLM_LLM/docs/final_sprint/s6-fast-generation-v1/LLM_ONLY_S5_V20_BUDGET_EPOCH_AUTHORIZATION.json",
+      "sha256": "3505db7d24c3bf729dbf54b29cbeff5313a56343a679a26d39716617ee924df7"
+    }
+  }
+}

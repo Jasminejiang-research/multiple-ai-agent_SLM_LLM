@@ -1,0 +1,146 @@
+{
+  "observed_at_utc": "2026-09-07T09:44:37.428004+00:00",
+  "phases": {
+    "native_schema_probe": {
+      "status": "not_started"
+    },
+    "research_probe": {
+      "status": "failed",
+      "error_type": "RunCancelled",
+      "error": "run cancellation requested",
+      "calls": [
+        {
+          "attempt_id": "022b0103-bc7e-4d1c-bdac-136e526091a2",
+          "role": "research",
+          "purpose": "generate",
+          "generation_stage": "body",
+          "status": "succeeded",
+          "elapsed_seconds": 230.1720000000205,
+          "prompt_tokens": 4353,
+          "output_tokens": 941,
+          "total_tokens": 5294,
+          "finish_reason": "stop",
+          "error_type": null
+        },
+        {
+          "attempt_id": "05c2b631-e57d-4cc4-8e11-d6266b67f39e",
+          "role": "research",
+          "purpose": "generate",
+          "generation_stage": "grounding",
+          "status": "cancelled",
+          "elapsed_seconds": 43.78100000001723,
+          "prompt_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null,
+          "finish_reason": null,
+          "error_type": "RunCancelled"
+        }
+      ]
+    },
+    "full_d": {
+      "status": "not_started"
+    }
+  },
+  "latest_sample": {
+    "elapsed_seconds": 290.3279999999795,
+    "ram_available_bytes": 2010853376,
+    "pagefile_delta_bytes": -7340032,
+    "time": "2026-09-07T09:41:38.041723+00:00"
+  },
+  "final": {
+    "status": "resource_stopped",
+    "complete_proposal_produced": false,
+    "proposal_directory": null,
+    "budget": {
+      "this_run_request_count": 2,
+      "this_run_charged_total_tokens": 120071,
+      "this_run_elapsed_seconds": 300.63999999995576,
+      "cumulative_request_count": 13,
+      "cumulative_charged_total_tokens": 191323,
+      "cumulative_elapsed_seconds": 4788.310999999958
+    },
+    "resources": {
+      "status": "failed",
+      "reason": "required_resource_telemetry_missing",
+      "sample_count": 37,
+      "sample_interval_seconds": 5.0,
+      "baseline": {
+        "ram_total_bytes": 16969424896,
+        "ram_available_bytes": 6984638464,
+        "pagefile_used_bytes": 405798912,
+        "gpu_used_bytes": 0,
+        "gpu_total_bytes": 2147483648,
+        "loaded_models": [],
+        "missing": {}
+      },
+      "maximum_observed_sample_gap_seconds": 17.625,
+      "min_available_ram_bytes": 2010853376,
+      "peak_ram_used_bytes": 14958571520,
+      "peak_gpu_used_bytes": 0,
+      "peak_pagefile_used_bytes": 409993216,
+      "peak_pagefile_delta_bytes": 4194304,
+      "missing_observations": [
+        {
+          "pagefile": "TimeoutExpired"
+        }
+      ]
+    },
+    "deadline_fired": false,
+    "http_requests": 2,
+    "server_stop": {
+      "status": "owned_process_tree_terminated",
+      "pid": 28216,
+      "lease_released": false,
+      "restart_requires_explicit_reconciliation": true
+    }
+  },
+  "server_tail": [
+    "slot print_timing: id  0 | task 947 | prompt processing, n_tokens =   1024, progress = 0.08, t =  41.00 s / 24.97 tokens per second",
+    "slot   operator(): id  0 | task 947 | cached n_tokens = 1024, memory_seq_rm [1024, end)"
+  ],
+  "attempts": [
+    {
+      "phase": "research_probe",
+      "attempt_id": "022b0103-bc7e-4d1c-bdac-136e526091a2",
+      "role": "research",
+      "purpose": "generate",
+      "generation_stage": "body",
+      "status": "succeeded",
+      "elapsed_seconds": 230.1720000000205,
+      "prompt_tokens": 4353,
+      "output_tokens": 941,
+      "total_tokens": 5294,
+      "finish_reason": "stop",
+      "error_type": null,
+      "raw_file": "01_research_generate.raw.txt",
+      "raw_sha256": "5e0d5b81e6b9ba5fb2b48b6759b76531fcf58e87a5e2db4cda84a208ec483929",
+      "detected_reference_score_issues": [],
+      "detected_grounding_issues": [],
+      "usage_file": "01_research_generate.usage.json",
+      "usage_sha256": "6044b790c170d439e99f4f718a08a94a5cb5f30047214bfe052823a13dde590c"
+    },
+    {
+      "phase": "research_probe",
+      "attempt_id": "05c2b631-e57d-4cc4-8e11-d6266b67f39e",
+      "role": "research",
+      "purpose": "generate",
+      "generation_stage": "grounding",
+      "status": "cancelled",
+      "elapsed_seconds": 43.78100000001723,
+      "prompt_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "finish_reason": null,
+      "error_type": "RunCancelled"
+    }
+  ],
+  "preservation": {
+    "installed_file_count": 256,
+    "installed_mismatches": [],
+    "backup_mismatches": [],
+    "runtime_file_count": 256,
+    "runtime_mismatches": [],
+    "prior_trial_evidence_unchanged": true,
+    "archive_sha256": "044b075c6a8257a335f25f2ee05cd638d4b0f0375158680ce1455be8c4656804"
+  }
+}

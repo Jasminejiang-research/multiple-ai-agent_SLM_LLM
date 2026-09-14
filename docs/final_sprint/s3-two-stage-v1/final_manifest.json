@@ -1,0 +1,47 @@
+{
+  "finalized_at_utc": "2026-09-07T09:45:55.792327+00:00",
+  "checks": {
+    "runtime_files": 256,
+    "changed_files": 16,
+    "historical_files": 2254,
+    "installed_mismatches": [],
+    "snapshot_mismatches": [],
+    "backup_mismatches": [],
+    "historical_mismatches": [],
+    "external_dependency_mismatches": []
+  },
+  "assembly_audit": "passed",
+  "budget": {
+    "this_run_request_count": 2,
+    "this_run_charged_total_tokens": 120071,
+    "this_run_elapsed_seconds": 300.63999999995576,
+    "cumulative_request_count": 13,
+    "cumulative_charged_total_tokens": 191323,
+    "cumulative_elapsed_seconds": 4788.310999999958
+  },
+  "remaining": {
+    "requests": 23,
+    "tokens": 308677,
+    "seconds": 9611.689000000042
+  },
+  "result_sha256": "b8f46b1edf66a5685cea1f28423387d6bedc88a9c6f0bf74869c84c7a468052a",
+  "runtime_archive_sha256": "044b075c6a8257a335f25f2ee05cd638d4b0f0375158680ce1455be8c4656804",
+  "public_budget_changed": false,
+  "cleanup": {
+    "observed_at_utc": "2026-09-07T09:44:32.1644760Z",
+    "model_process_count": 0,
+    "port_11434_listener_count": 0,
+    "active_lease_count": 0,
+    "archived_lease": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-two-stage-v1\\run_01\\audit\\terminated_unknown_request.lease.json",
+    "archived_lease_sha256": "811708bd94058a3b1da50cfa6dc5adc7e08ff262d4e7af627edc43c89368d602",
+    "request_outcome": "cancelled; provider token usage unavailable; original full reservation retained",
+    "reconciliation": "Verified no model process or endpoint listener; archived only the matching run/attempt lease without changing request outcome or retrying",
+    "post_stop_pagefile_query_succeeded": true,
+    "post_stop_pagefile_current_usage_mib": 366.0
+  },
+  "complete_proposal_produced": false,
+  "workflow_status": "resource_stopped",
+  "this_run_measured_tokens": 5294,
+  "usage_missing_calls": 1,
+  "retained_unknown_usage_charge": 114777
+}

@@ -1,0 +1,61 @@
+{
+  "status": "pending",
+  "plan_sha256": "652d2478a3ee76fae3dc6d9b27fd424527d3e9642ae841fb255df84bbbaa7664",
+  "approvals": {
+    "cases": "pending",
+    "common_budget": "deferred",
+    "D_preflight": "failed_no_go",
+    "gemini_quota_and_spend": "approved_for_bounded_nonformal_smokes_only",
+    "S1": "passed",
+    "S2": "passed",
+    "S4": "passed",
+    "S6": "implementation_passed_real_D_failed",
+    "best_effort_demo": "completed_but_excluded_nonformal_not_C-D_eligible",
+    "formal_execution": "not_authorized_in_S4"
+  },
+  "approval_records": {
+    "process_lease_reconciliation": {
+      "path": "docs/final_sprint/s6-fast-generation-v1/PROCESS_LEASE_RECONCILIATION.json",
+      "sha256": "1028bf16ac21c1c10ebdcc07874ca23d2e804472b114bbcd2912f37abc7016ea"
+    },
+    "D_preflight_proposal": {
+      "path": "docs/final_sprint/s6-fast-generation-v1/D_PREFLIGHT_PROPOSAL.json",
+      "sha256": "fa08cd572dc04ce758ad0ebcb492d39384383d0cfef9a605674247dac1a31c42",
+      "approved": true,
+      "authorization_path": "docs/final_sprint/s6-fast-generation-v1/D_PREFLIGHT_AUTHORIZATION.json",
+      "authorization_sha256": "bde417c859a34781d53672a3c7697d18221da40d3b8486ccf2dfb8002d63dd42"
+    },
+    "gemini_smoke_approval": {
+      "path": "docs/final_sprint/s6-fast-generation-v1/GEMINI_SMOKE_APPROVAL.json",
+      "sha256": "be3a8989f8d4650a1fb0632eded60f29d62d58a6e7f1e41ce9ef7e2a17f919dc",
+      "approved": true
+    },
+    "best_effort_demo": {
+      "path": "docs/final_sprint/s6-fast-generation-v1/BEST_EFFORT_DEMO_RESULT.json",
+      "status": "completed_best_effort_demo",
+      "formal_eligible": false,
+      "c_minus_d_comparison_eligible": false,
+      "clears_no_formal_gate": true
+    }
+  },
+  "configs": {},
+  "code_inventory": {},
+  "evidence_files": {},
+  "preflight_reports": {
+    "D": {
+      "status": "no_go",
+      "path": "docs/final_sprint/s6-fast-generation-v1/real_preflight_d_ai_education_03/probe/result.json",
+      "sha256": "9a675099cc1dc0ff06bbcf8f61e0b9c551353e0fc7b3d94dc409ac0be639c6b9",
+      "derived_accounting_path": "docs/final_sprint/s6-fast-generation-v1/D_PREFLIGHT_ATTEMPT_03.json"
+    }
+  },
+  "authority_files": {
+    "C:\\Users\\JasmineJiang\\Desktop\\s4\\hu-3.Intelligent System\\@final presentation\\sprint_plan_.md": "22963a09eae624c2c72e0a0d1e807cdf066255ee3e9f5abd5a21e19b820643c1",
+    "C:\\Users\\JasmineJiang\\Desktop\\s4\\hu-3.Intelligent System\\@final presentation\\@ai_agent_evaluation_metrics_spec_v2_fast_generation.md": "23407504f7bb9924529ec16f83df3d556d32dba1901d1354868306d1b087182a",
+    "C:\\Users\\JasmineJiang\\Desktop\\s4\\hu-3.Intelligent System\\@final presentation\\@multiple_ai_agent_optimization.md": "7e532ecd69e7ccb90a36e66dc2a84d6479b17ccb4e433eee745757a712a344bd"
+  },
+  "total_request_limit": null,
+  "total_token_limit": null,
+  "runtime_versions": {},
+  "model_metadata": {}
+}

@@ -1,0 +1,108 @@
+{
+  "critique_report": {
+    "overall_score": 4.0,
+    "issues": [
+      {
+        "section": "Problem",
+        "severity": "high",
+        "issue_type": "unclear_customer",
+        "description": "The proposal consistently states that the precise unmet needs, frequency, urgency, and willingness to pay of MBA students for an AI tutor are unquantified and unsupported. This fundamental lack of customer validation undermines the problem statement and value proposition.",
+        "suggested_fix": "Conduct primary market research (surveys, interviews, focus groups) with MBA students to validate specific pain points, desired features, and willingness to pay for an AI tutoring solution."
+      },
+      {
+        "section": "Market Opportunity",
+        "severity": "high",
+        "issue_type": "unsupported_market_claim",
+        "description": "The Total Addressable Market (TAM), Serviceable Available Market (SAM), and Serviceable Obtainable Market (SOM) for an AI Tutor for MBA students in the United States are unquantified and explicitly stated as unsupported assumptions.",
+        "suggested_fix": "Conduct comprehensive market sizing research and demand studies to quantify the potential market for AI tutoring among MBA students."
+      },
+      {
+        "section": "Solution",
+        "severity": "high",
+        "issue_type": "logic_gap",
+        "description": "Specific product features, the delivery model, and the unique pedagogical approach of the AI Tutor are currently undefined and presented as assumptions, making it difficult to assess the solution's viability and differentiation.",
+        "suggested_fix": "Develop a detailed product specification, including core features, user experience, and the unique pedagogical approach, informed by validated customer needs."
+      },
+      {
+        "section": "Financial Assumptions",
+        "severity": "high",
+        "issue_type": "financial_inconsistency",
+        "description": "Key financial metrics such as specific pricing tiers, conversion rates, customer counts, costs, margins, Customer Acquisition Cost (CAC), and Customer Lifetime Value (CLTV) are explicitly stated as undefined, unknown, or speculative, with no quantitative financial model provided.",
+        "suggested_fix": "Develop a preliminary financial model based on market research, including estimated pricing, customer acquisition costs, operational expenses, and projected revenue to assess financial viability and break-even points."
+      },
+      {
+        "section": "Go-to-Market Strategy",
+        "severity": "medium",
+        "issue_type": "weak_gtm",
+        "description": "The go-to-market strategy is based entirely on assumptions regarding engagement channels and lacks concrete customer acquisition logic, specific budgets, or expected conversion rates.",
+        "suggested_fix": "Refine the GTM strategy with specific channels, estimated costs, and a clear customer acquisition funnel, supported by market research on MBA student media consumption and academic resource discovery."
+      },
+      {
+        "section": "General",
+        "severity": "medium",
+        "issue_type": "missing_evidence",
+        "description": "Several claims marked 'needs_validation' or 'assumption' across the proposal, particularly regarding market trends, customer needs, and competitor benchmarks, rely on sources identified as 'unknown' quality (e.g., LinkedIn profiles).",
+        "suggested_fix": "Prioritize finding higher-quality, verifiable sources (e.g., academic reports, industry analyses, reputable news outlets) to support claims, even if they are still in the 'needs_validation' stage."
+      },
+      {
+        "section": "Risks and Mitigations",
+        "severity": "medium",
+        "issue_type": "logic_gap",
+        "description": "Potential regulatory considerations or accreditation requirements for AI-enabled educational tools in the US higher education sector are explicitly stated as unknown, posing an unquantified risk.",
+        "suggested_fix": "Research relevant educational technology regulations, accreditation standards, and data privacy laws that might apply to an AI tutoring service in the US higher education market."
+      }
+    ],
+    "must_fix_before_export": [
+      "Customer Validation Gap",
+      "Unquantified Market Opportunity",
+      "Vague Product Definition",
+      "Undefined Business Model & Financials"
+    ]
+  },
+  "current_step": "critic",
+  "product_acceptance": {
+    "policy": "product-per-agent-one-correction-v1",
+    "corrections_allowed_per_agent": 1,
+    "corrections": {
+      "finance": 1,
+      "writer": 1
+    },
+    "correction_events": [
+      {
+        "stage": "finance",
+        "reason": "Invalid FinanceAssumptions output: revenue_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures\nunit_economics_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "writer",
+        "reason": "Invalid ProposalDraftBatch1 output: ['target_customer']: ['target_customer']: target_customer: unknown source IDs ['web-3cda0b88a7c74848fcd7f4008dce776']; use exact provided IDs only; if evidence does not support the claim set evidence_status=\"needs_validation\" and clear claim.source_ids; never guess a replacement or change claim_type to an evidence status"
+      }
+    ],
+    "unresolved_issues": [
+      {
+        "stage": "finance",
+        "message": "Invalid FinanceAssumptions output: revenue_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures\nunit_economics_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "finance",
+        "message": "revenue_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures\nunit_economics_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "writer",
+        "message": "Invalid ProposalDraftBatch3 output: ['business_model']: business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "writer",
+        "message": "['business_model']: business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "writer",
+        "message": "business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "critic",
+        "message": "business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      }
+    ],
+    "status": "accepted_with_issues"
+  }
+}

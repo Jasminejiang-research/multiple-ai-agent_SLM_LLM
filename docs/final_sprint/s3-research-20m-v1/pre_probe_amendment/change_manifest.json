@@ -1,0 +1,50 @@
+{
+  "created_at_utc": "2026-09-07T13:47:24.232219+00:00",
+  "changes": [
+    {
+      "path": "agents/component_critic.py",
+      "before_sha256": "86bf4b8642d9bc32bc43935e7b34fc2f96ba00a5ca11446c02e39771722c2808",
+      "after_sha256": "821d04a600b83df93d6c434e6c92f99a5a2373f4f26df6e57844fc21f508e9df"
+    },
+    {
+      "path": "tests/test_brief_research_profile.py",
+      "before_sha256": null,
+      "after_sha256": "7a8df67e27fa515cdc7ea2f6a10c1404ecd8b6a50a4bab0c6982bdb1a8775d19"
+    },
+    {
+      "path": "tests/test_research_limits.py",
+      "before_sha256": null,
+      "after_sha256": "161cdd4674bbf44dfcc60abbd9c46c255ef9674db77d8e227356996eceae66d6"
+    },
+    {
+      "path": "workflow/contract_generation.py",
+      "before_sha256": "351aaaa36f83215f3bf65d85cfb754e3d25f4a334fff5179bab93a0a8a15f001",
+      "after_sha256": "00a9bd2502818b445728c55ce7675d5738ef42099ad97cfd038b040e5f5a4993"
+    },
+    {
+      "path": "workflow/generation_constraints.py",
+      "before_sha256": "72b9366a441cc14d744d050cb0418ad419b5b9c16627421a6a1f55708f1220d8",
+      "after_sha256": "09ac34e4b773ec193a548bf73b0e6887dfe91e814f8a8ed7d1a9a774e258e3af"
+    },
+    {
+      "path": "workflow/research_limits.py",
+      "before_sha256": null,
+      "after_sha256": "3263d90d39d546a5d13273a18fca7c240229f4d542cf1e50c505d0fd7b84f614"
+    },
+    {
+      "path": "workflow/research_profile.py",
+      "before_sha256": null,
+      "after_sha256": "8d65322dd8bd79494836325df059945b7b9035bf2114e1e966aead5637f9a01d"
+    },
+    {
+      "path": "workflow/review_runtime.py",
+      "before_sha256": "0872e5214abff5962aa2b74d44adaee187e1097c79eae49236b3a4cb7658c071",
+      "after_sha256": "d2db3b2d8cfed2823d0acb0b9dfb928d231638bc12f1c560877bd6209578d7ec"
+    },
+    {
+      "path": "workflow/two_stage_generation.py",
+      "before_sha256": "7de3479531fca2e45fd21538d1fbf6aecd04915564c0759bd2fb6ce7d37ac45c",
+      "after_sha256": "2773974e8eb387cbcfe18d67e86ec8de6918c0dac77474c226c49f1d3ee77c3a"
+    }
+  ]
+}

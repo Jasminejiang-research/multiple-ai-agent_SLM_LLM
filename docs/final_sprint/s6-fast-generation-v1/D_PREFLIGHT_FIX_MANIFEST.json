@@ -1,0 +1,46 @@
+{
+  "version": "s6-d-preflight-fix-manifest-v1",
+  "scope": "compact preflight adapter, shared cumulative hard-limit ledger, validated resume, and accounting display only",
+  "experiment_scope_changed": false,
+  "model_changed": false,
+  "budget_changed": false,
+  "config_path": "slm/configs/granite_preflight_compact_s6.json",
+  "config_sha256": "a42df429b55b1ff989b44b6e2abd242000782493c86f2287e729c48f72724d4f",
+  "before_directory": "docs/final_sprint/s6-fast-generation-v1/preflight_fix_stage2_before",
+  "before": {
+    "workflow/review_runtime.py": "f45c8b09ede4457ee7ed4901937eccb276d02b7a81f59503f96e61b9b5c300f4",
+    "workflow/review_graph.py": "d786ea870ea43828e7fb0b78bb93f52dfcf0e3079ba9f198c1d131f5ebaa1e07",
+    "slm/granite_preflight.py": "ce52a4815d94f0eab677f46eb3986789d6ccfa132b8c4f55da1d01322d514efd",
+    "slm/tests/test_granite_s3.py": "d2774665ff4a8981869d22f4e98229d33d8a1b4768a092d3ad3ccdb15045be62",
+    "docs/final_sprint/s6-fast-generation-v1/run_authorized_d_preflight.ps1": "bffcc2da7497f4ea29438948c1613093f8fc18955877c7bdfab9401942139654"
+  },
+  "after": {
+    "workflow/review_runtime.py": "472e46acae406e603d50ef8c20948ed5e572dbc0edcf99e935e947e7fab308fb",
+    "workflow/review_graph.py": "ef0ef13cb371e76ae249c319c986d32c7d61da64fc20c51f1e98ff72ff312b41",
+    "slm/granite_preflight.py": "19c81f5e751d4ec38ad901abc1a2cda8b87ddf5827262bd0e07f7265d83610b0",
+    "slm/tests/test_granite_s3.py": "68a69692688ac75f4f5bffa107f1c3146b871f23acc48b6cb1b96e493afc0c68",
+    "docs/final_sprint/s6-fast-generation-v1/run_authorized_d_preflight.ps1": "f6689fe5fd9d03b364b971780be82400d75a70fd0908abcda55f442fa9521bd5"
+  },
+  "validation": {
+    "targeted": {
+      "result": "64 passed in 6.09s",
+      "path": "docs/final_sprint/s6-fast-generation-v1/validation/preflight_fix_stage2_targeted_final.junit.xml",
+      "sha256": "0aef529274253a42e7c12c5ca6471c3899ded04425e8286859adcc2c143b733e"
+    },
+    "full": {
+      "result": "638 passed, 25 deselected, 3 subtests passed in 137.60s",
+      "path": "docs/final_sprint/s6-fast-generation-v1/validation/preflight_fix_stage2_full_final.junit.xml",
+      "sha256": "9b129438d564661575032f92218c8908a09a68d44e6947b0a5a31c80ac818bff"
+    }
+  },
+  "real_result": {
+    "status": "no_go",
+    "raw_path": "docs/final_sprint/s6-fast-generation-v1/real_preflight_d_ai_education_03/probe/result.json",
+    "raw_sha256": "9a675099cc1dc0ff06bbcf8f61e0b9c551353e0fc7b3d94dc409ac0be639c6b9",
+    "derived_accounting_path": "docs/final_sprint/s6-fast-generation-v1/D_PREFLIGHT_ATTEMPT_03.json",
+    "raw_evidence_modified_after_run": false
+  },
+  "formal_runs_started": 0,
+  "gemini_calls": 0,
+  "next_package_started": false
+}

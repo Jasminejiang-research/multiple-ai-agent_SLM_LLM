@@ -1,0 +1,804 @@
+{
+  "ReviewRunConfig": {
+    "additionalProperties": false,
+    "properties": {
+      "condition": {
+        "enum": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "title": "Condition",
+        "type": "string"
+      },
+      "run_kind": {
+        "enum": [
+          "formal",
+          "preflight",
+          "smoke",
+          "warmup",
+          "debug"
+        ],
+        "title": "Run Kind",
+        "type": "string"
+      },
+      "provider": {
+        "enum": [
+          "gemini",
+          "local",
+          "mock"
+        ],
+        "title": "Provider",
+        "type": "string"
+      },
+      "model_exact_id": {
+        "minLength": 1,
+        "title": "Model Exact Id",
+        "type": "string"
+      },
+      "model_config_version": {
+        "minLength": 1,
+        "title": "Model Config Version",
+        "type": "string"
+      },
+      "max_requests": {
+        "minimum": 1,
+        "title": "Max Requests",
+        "type": "integer"
+      },
+      "max_total_tokens": {
+        "minimum": 1,
+        "title": "Max Total Tokens",
+        "type": "integer"
+      },
+      "max_output_tokens": {
+        "minimum": 1,
+        "title": "Max Output Tokens",
+        "type": "integer"
+      },
+      "max_prompt_chars": {
+        "minimum": 1,
+        "title": "Max Prompt Chars",
+        "type": "integer"
+      },
+      "node_seconds": {
+        "default": 1200,
+        "exclusiveMinimum": 0,
+        "maximum": 1200,
+        "title": "Node Seconds",
+        "type": "number"
+      },
+      "run_seconds": {
+        "default": 5400,
+        "exclusiveMinimum": 0,
+        "maximum": 5400,
+        "title": "Run Seconds",
+        "type": "number"
+      },
+      "request_seconds": {
+        "exclusiveMinimum": 0,
+        "maximum": 1200,
+        "title": "Request Seconds",
+        "type": "number"
+      },
+      "transport_retries": {
+        "default": 0,
+        "maximum": 1,
+        "minimum": 0,
+        "title": "Transport Retries",
+        "type": "integer"
+      },
+      "temperature": {
+        "const": 0,
+        "default": 0,
+        "title": "Temperature",
+        "type": "integer"
+      },
+      "context_tokens": {
+        "const": 32768,
+        "default": 32768,
+        "title": "Context Tokens",
+        "type": "integer"
+      },
+      "config_version": {
+        "const": "review-run-v1-s2",
+        "default": "review-run-v1-s2",
+        "title": "Config Version",
+        "type": "string"
+      }
+    },
+    "required": [
+      "condition",
+      "run_kind",
+      "provider",
+      "model_exact_id",
+      "model_config_version",
+      "max_requests",
+      "max_total_tokens",
+      "max_output_tokens",
+      "max_prompt_chars",
+      "request_seconds"
+    ],
+    "title": "ReviewRunConfig",
+    "type": "object"
+  },
+  "ComponentCritiqueReport": {
+    "$defs": {
+      "ReviewIssue": {
+        "additionalProperties": false,
+        "properties": {
+          "issue_id": {
+            "minLength": 1,
+            "title": "Issue Id",
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              "critical"
+            ],
+            "title": "Severity",
+            "type": "string"
+          },
+          "criterion": {
+            "minLength": 1,
+            "title": "Criterion",
+            "type": "string"
+          },
+          "description": {
+            "minLength": 1,
+            "title": "Description",
+            "type": "string"
+          },
+          "suggested_fix": {
+            "minLength": 1,
+            "title": "Suggested Fix",
+            "type": "string"
+          },
+          "affected_claim_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Affected Claim Ids",
+            "type": "array"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Source Ids",
+            "type": "array"
+          },
+          "artifact_version": {
+            "maximum": 2,
+            "minimum": 1,
+            "title": "Artifact Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "issue_id",
+          "severity",
+          "criterion",
+          "description",
+          "suggested_fix",
+          "affected_claim_ids",
+          "source_ids",
+          "artifact_version"
+        ],
+        "title": "ReviewIssue",
+        "type": "object"
+      },
+      "ReviewMetric": {
+        "additionalProperties": false,
+        "properties": {
+          "criterion": {
+            "minLength": 1,
+            "title": "Criterion",
+            "type": "string"
+          },
+          "score": {
+            "maximum": 4,
+            "minimum": 0,
+            "title": "Score",
+            "type": "integer"
+          },
+          "rationale": {
+            "minLength": 1,
+            "title": "Rationale",
+            "type": "string"
+          },
+          "evidence_anchor": {
+            "minLength": 1,
+            "title": "Evidence Anchor",
+            "type": "string"
+          }
+        },
+        "required": [
+          "criterion",
+          "score",
+          "rationale",
+          "evidence_anchor"
+        ],
+        "title": "ReviewMetric",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "role": {
+        "enum": [
+          "research",
+          "strategy",
+          "finance",
+          "final"
+        ],
+        "title": "Role",
+        "type": "string"
+      },
+      "artifact_id": {
+        "minLength": 1,
+        "title": "Artifact Id",
+        "type": "string"
+      },
+      "artifact_version": {
+        "maximum": 2,
+        "minimum": 1,
+        "title": "Artifact Version",
+        "type": "integer"
+      },
+      "metrics": {
+        "items": {
+          "$ref": "#/$defs/ReviewMetric"
+        },
+        "title": "Metrics",
+        "type": "array"
+      },
+      "issues": {
+        "items": {
+          "$ref": "#/$defs/ReviewIssue"
+        },
+        "title": "Issues",
+        "type": "array"
+      }
+    },
+    "required": [
+      "role",
+      "artifact_id",
+      "artifact_version",
+      "metrics",
+      "issues"
+    ],
+    "title": "ComponentCritiqueReport",
+    "type": "object"
+  },
+  "CallEventPayload": {
+    "$defs": {
+      "ArtifactRef": {
+        "additionalProperties": false,
+        "properties": {
+          "artifact_id": {
+            "title": "Artifact Id",
+            "type": "string"
+          },
+          "artifact_version": {
+            "title": "Artifact Version",
+            "type": "integer"
+          },
+          "sha256": {
+            "title": "Sha256",
+            "type": "string"
+          }
+        },
+        "required": [
+          "artifact_id",
+          "artifact_version",
+          "sha256"
+        ],
+        "title": "ArtifactRef",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "run_id": {
+        "title": "Run Id",
+        "type": "string"
+      },
+      "planned_id": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Planned Id"
+      },
+      "run_kind": {
+        "enum": [
+          "formal",
+          "preflight",
+          "smoke",
+          "warmup",
+          "debug"
+        ],
+        "title": "Run Kind",
+        "type": "string"
+      },
+      "logical_task_id": {
+        "title": "Logical Task Id",
+        "type": "string"
+      },
+      "node_scope_id": {
+        "title": "Node Scope Id",
+        "type": "string"
+      },
+      "batch_id": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Batch Id"
+      },
+      "attempt_id": {
+        "title": "Attempt Id",
+        "type": "string"
+      },
+      "attempt_index": {
+        "minimum": 1,
+        "title": "Attempt Index",
+        "type": "integer"
+      },
+      "role": {
+        "title": "Role",
+        "type": "string"
+      },
+      "task_role": {
+        "title": "Task Role",
+        "type": "string"
+      },
+      "purpose": {
+        "enum": [
+          "generate",
+          "critic",
+          "revision",
+          "structure_repair"
+        ],
+        "title": "Purpose",
+        "type": "string"
+      },
+      "task_purpose": {
+        "enum": [
+          "generate",
+          "critic",
+          "revision"
+        ],
+        "title": "Task Purpose",
+        "type": "string"
+      },
+      "transport_retry_of": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Transport Retry Of"
+      },
+      "provider": {
+        "title": "Provider",
+        "type": "string"
+      },
+      "model_exact_id": {
+        "title": "Model Exact Id",
+        "type": "string"
+      },
+      "model_config_version": {
+        "title": "Model Config Version",
+        "type": "string"
+      },
+      "config_sha256": {
+        "title": "Config Sha256",
+        "type": "string"
+      },
+      "prompt_hash": {
+        "title": "Prompt Hash",
+        "type": "string"
+      },
+      "schema_hash": {
+        "title": "Schema Hash",
+        "type": "string"
+      },
+      "evidence_hash": {
+        "title": "Evidence Hash",
+        "type": "string"
+      },
+      "input_artifact_refs": {
+        "items": {
+          "$ref": "#/$defs/ArtifactRef"
+        },
+        "title": "Input Artifact Refs",
+        "type": "array"
+      },
+      "output_artifact_ref": {
+        "anyOf": [
+          {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Output Artifact Ref"
+      },
+      "started_at_utc": {
+        "title": "Started At Utc",
+        "type": "string"
+      },
+      "ended_at_utc": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Ended At Utc"
+      },
+      "elapsed_seconds": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Elapsed Seconds"
+      },
+      "status": {
+        "enum": [
+          "dispatching",
+          "succeeded",
+          "failed",
+          "timeout",
+          "cancelled",
+          "invalid_output",
+          "interrupted_unknown"
+        ],
+        "title": "Status",
+        "type": "string"
+      },
+      "error_type": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Error Type"
+      },
+      "usage_raw": {
+        "anyOf": [
+          {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Usage Raw"
+      },
+      "prompt_tokens": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Prompt Tokens"
+      },
+      "output_tokens": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Output Tokens"
+      },
+      "total_tokens": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Total Tokens"
+      },
+      "usage_missing_reason": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Usage Missing Reason"
+      },
+      "budget_before": {
+        "additionalProperties": true,
+        "title": "Budget Before",
+        "type": "object"
+      },
+      "budget_after": {
+        "additionalProperties": true,
+        "title": "Budget After",
+        "type": "object"
+      },
+      "reservation_tokens": {
+        "title": "Reservation Tokens",
+        "type": "integer"
+      },
+      "budget_token_charge": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Budget Token Charge"
+      },
+      "raw_output": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Raw Output"
+      },
+      "finish_reason": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Finish Reason"
+      }
+    },
+    "required": [
+      "run_id",
+      "planned_id",
+      "run_kind",
+      "logical_task_id",
+      "node_scope_id",
+      "batch_id",
+      "attempt_id",
+      "attempt_index",
+      "role",
+      "task_role",
+      "purpose",
+      "task_purpose",
+      "transport_retry_of",
+      "provider",
+      "model_exact_id",
+      "model_config_version",
+      "config_sha256",
+      "prompt_hash",
+      "schema_hash",
+      "evidence_hash",
+      "input_artifact_refs",
+      "output_artifact_ref",
+      "started_at_utc",
+      "ended_at_utc",
+      "elapsed_seconds",
+      "status",
+      "error_type",
+      "usage_raw",
+      "prompt_tokens",
+      "output_tokens",
+      "total_tokens",
+      "usage_missing_reason",
+      "budget_before",
+      "budget_after",
+      "reservation_tokens"
+    ],
+    "title": "CallEventPayload",
+    "type": "object"
+  },
+  "ExpectedHandoff": {
+    "$defs": {
+      "ArtifactRef": {
+        "additionalProperties": false,
+        "properties": {
+          "artifact_id": {
+            "title": "Artifact Id",
+            "type": "string"
+          },
+          "artifact_version": {
+            "title": "Artifact Version",
+            "type": "integer"
+          },
+          "sha256": {
+            "title": "Sha256",
+            "type": "string"
+          }
+        },
+        "required": [
+          "artifact_id",
+          "artifact_version",
+          "sha256"
+        ],
+        "title": "ArtifactRef",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "handoff_id": {
+        "title": "Handoff Id",
+        "type": "string"
+      },
+      "run_id": {
+        "title": "Run Id",
+        "type": "string"
+      },
+      "upstream_node": {
+        "title": "Upstream Node",
+        "type": "string"
+      },
+      "downstream_node": {
+        "title": "Downstream Node",
+        "type": "string"
+      },
+      "required_artifact_id": {
+        "title": "Required Artifact Id",
+        "type": "string"
+      },
+      "required_artifact_version": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Required Artifact Version"
+      },
+      "required_artifact_hash": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Required Artifact Hash"
+      },
+      "dependency_ids": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Dependency Ids",
+        "type": "array"
+      },
+      "branch_rule": {
+        "title": "Branch Rule",
+        "type": "string"
+      },
+      "expected": {
+        "title": "Expected",
+        "type": "boolean"
+      },
+      "status": {
+        "enum": [
+          "pending",
+          "succeeded",
+          "failed",
+          "missing",
+          "not_applicable"
+        ],
+        "title": "Status",
+        "type": "string"
+      },
+      "received_artifact_ref": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/ArtifactRef"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "occurred_at_utc": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Occurred At Utc"
+      },
+      "within_budget": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Within Budget"
+      },
+      "failure_reason": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Failure Reason"
+      }
+    },
+    "required": [
+      "handoff_id",
+      "run_id",
+      "upstream_node",
+      "downstream_node",
+      "required_artifact_id",
+      "required_artifact_version",
+      "required_artifact_hash",
+      "dependency_ids",
+      "branch_rule",
+      "expected",
+      "status",
+      "received_artifact_ref",
+      "occurred_at_utc",
+      "within_budget",
+      "failure_reason"
+    ],
+    "title": "ExpectedHandoff",
+    "type": "object"
+  }
+}

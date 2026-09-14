@@ -1,0 +1,113 @@
+{
+  "protocol_version": "final-sprint-protocol-v1.0-s0",
+  "interface_version": "final-sprint-interfaces-v1",
+  "formal_freeze_status": "pending",
+  "condition_order": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "case_ids": [
+    "ai_education",
+    "intelligent_ring"
+  ],
+  "planned_runs": 8,
+  "independent_cases": 2,
+  "academic_weights": [
+    0.25,
+    0.2,
+    0.15,
+    0.15,
+    0.15,
+    0.1
+  ],
+  "comparisons": [
+    [
+      "B",
+      "A"
+    ],
+    [
+      "C",
+      "B"
+    ],
+    [
+      "C",
+      "D"
+    ]
+  ],
+  "randomization_seed": 20260906,
+  "request_requirements": {
+    "A": {
+      "minimum": 4,
+      "all_semantic_revisions": 4,
+      "with_one_structure_repair_per_task": 8,
+      "including_one_transport_retry_per_attempt": 16
+    },
+    "B": {
+      "minimum": 8,
+      "all_semantic_revisions": 12,
+      "with_one_structure_repair_per_task": 24,
+      "including_one_transport_retry_per_attempt": 48
+    },
+    "C": {
+      "minimum": 11,
+      "all_semantic_revisions": 18,
+      "with_one_structure_repair_per_task": 36,
+      "including_one_transport_retry_per_attempt": 72
+    },
+    "D": {
+      "minimum": 11,
+      "all_semantic_revisions": 18,
+      "with_one_structure_repair_per_task": 36,
+      "including_one_transport_retry_per_attempt": 72
+    }
+  },
+  "common_context_tokens": 32768,
+  "common_temperature": 0,
+  "section_batch_sizes": [
+    4,
+    3,
+    3,
+    3
+  ],
+  "structure_repairs_per_logical_task": 1,
+  "semantic_revisions_per_eligible_role": 1,
+  "node_scope_seconds": 1200,
+  "multi_run_seconds": 5400,
+  "runtime_freeze": {
+    "code_snapshot_hash": null,
+    "prompt_version": null,
+    "schema_version": null,
+    "model_config_version": null,
+    "max_output_tokens": null,
+    "run_max_requests": null,
+    "run_max_total_tokens": null
+  },
+  "acceptance": {
+    "S1": "pending",
+    "S2": "pending",
+    "S3_D_preflight": "pending",
+    "S4": "pending"
+  },
+  "status_schema": {
+    "execution": [
+      "not_run",
+      "running",
+      "succeeded",
+      "failed",
+      "cancelled",
+      "interrupted_unknown"
+    ],
+    "terminal_contract": [
+      "not_checked",
+      "passed",
+      "failed"
+    ],
+    "scorable_output": [
+      "not_available",
+      "available",
+      "pending_review"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "identity": "d5e0246278919d8141710809a5373f7efc1e68b36ecaac25ea7bfca602f3eef7",
+  "payload": {
+    "policy": "product-per-agent-one-correction-v1",
+    "corrections_allowed_per_agent": 1,
+    "corrections": {
+      "research": 1,
+      "writer": 1
+    },
+    "correction_events": [
+      {
+        "stage": "research",
+        "reason": "Invalid ResearchAnalysis output: market_trends[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[1]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[2]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\nmarket_trends[3]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[1]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[2]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncustomer_notes[3]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncompetitor_assumptions[0]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead\ncompetitor_assumptions[2]: sourced_fact requires eligible_external sources; use needs_validation, clear source_ids, qualify finding and rationale instead"
+      },
+      {
+        "stage": "writer",
+        "reason": "Invalid ProposalDraftBatch3 output: ['go_to_market_strategy']: ['go_to_market_strategy']: go_to_market_strategy: web-236a31a2f5a04bcb8b4ae6d39dee9e37 is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status\ngo_to_market_strategy: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      }
+    ],
+    "unresolved_issues": [
+      {
+        "stage": "writer",
+        "message": "Invalid LocalRepair_ProposalDraftBatch3 output: ['go_to_market_strategy']: go_to_market_strategy: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "writer",
+        "message": "['go_to_market_strategy']: go_to_market_strategy: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "writer",
+        "message": "Invalid ProposalDraftBatch4 output: ['risks_and_mitigations']: ['risks_and_mitigations']: risks_and_mitigations: web-236a31a2f5a04bcb8b4ae6d39dee9e37 is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+      },
+      {
+        "stage": "writer",
+        "message": "['risks_and_mitigations']: ['risks_and_mitigations']: risks_and_mitigations: web-236a31a2f5a04bcb8b4ae6d39dee9e37 is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+      },
+      {
+        "stage": "writer",
+        "message": "['risks_and_mitigations']: risks_and_mitigations: web-236a31a2f5a04bcb8b4ae6d39dee9e37 is unverified, not verified local evidence for customer; set evidence_status=\"needs_validation\", clear claim.source_ids, and qualify the prose; do not change claim_type to an evidence status"
+      }
+    ],
+    "status": "accepted_with_issues"
+  },
+  "sha256": "d343b19246092c76a89829017b492e0d70c267af2ede03175e0efb8f6283f59d"
+}

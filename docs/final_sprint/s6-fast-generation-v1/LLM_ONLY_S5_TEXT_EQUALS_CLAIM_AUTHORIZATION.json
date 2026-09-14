@@ -1,0 +1,115 @@
+{
+  "version": "s5-llm-only-text-equals-claim-authorization-v10",
+  "approved_at": "2026-09-08",
+  "approved": true,
+  "authorization_source": "The user's continuing S5 authorization explicitly pre-approves prompt simplification and field-constraint clarification within unchanged scope and budgets.",
+  "inherits_authorization": [
+    "LLM_ONLY_S5_CONSERVATIVE_REPAIR_AUTHORIZATION.json",
+    "LLM_ONLY_S5_TERMINAL_PUNCTUATION_REPAIR_AUTHORIZATION.json",
+    "LLM_ONLY_S5_RECOMMENDATION_PREMISE_AUTHORIZATION.json"
+  ],
+  "execution_branch": "llm_only_after_D_no_go",
+  "objective": "Within unchanged token and actual-spend ceilings, make Gemini produce a strictly accepted, evidence-bounded, academically defensible business plan.",
+  "authorization_delta": "Preserved v7 output passed DTO repair but contained ten genuine paraphrases where claim.t was not an exact span of its parent section. Require each newly generated note or section text to equal its sole claim.t character-for-character. Do not rewrite, copy, or otherwise repair preserved output and do not weaken canonical validation.",
+  "external_data_authorization": {
+    "approved": true,
+    "destination": "Google Gemini API",
+    "credential_source_variable": "GOOGLE_API_KEY",
+    "credential_selection": "Both supported local variables were present and byte-identical; GOOGLE_API_KEY is fixed because it has Google SDK precedence, the unused variable is removed only from the executing process, and no value is recorded.",
+    "payload": ["both frozen briefs", "frozen evidence excerpts and short IDs", "21 and 27 case-specific financial inputs and deterministic results"]
+  },
+  "prompt_change": {
+    "approved": true,
+    "prompt_version": "compact-generation-v6-s5-text-equals-claim",
+    "claim_id_min_chars": 3,
+    "claim_reason_max_chars": 200,
+    "recommendation_premise_required": true,
+    "text_equals_claim_required": true,
+    "semantics_source": "existing frozen GroundedClaim exact-span validator",
+    "new_evidence_or_claim_content": false,
+    "preserved_response_mutation": false
+  },
+  "schema_change": {
+    "approved": true,
+    "schema": "ClaimWire",
+    "claim_reason_max_chars": 200,
+    "changed": false
+  },
+  "mechanical_repair_change": {
+    "approved": true,
+    "version": "conservative-claim-repair-v2-s5-terminal-punctuation",
+    "pad_short_claim_ids": true,
+    "downgrade_unsubstantiated_sourced_fact": true,
+    "delete_terminal_punctuation_on_exact_parent_match": true,
+    "max_terminal_characters_deleted": 1,
+    "may_change_words": false,
+    "may_add_evidence_ids": false,
+    "may_delete_nonempty_evidence_ids": false,
+    "may_generate_or_copy_premise": false,
+    "may_force_text_claim_equality": false,
+    "applies_only_to_config_version": "review-run-v11-s6-compact-gemini-8192-text-equals-claim",
+    "audit_event": "mechanical_repair_diff"
+  },
+  "generation_strategy_change": {
+    "approved": true,
+    "provider": "gemini",
+    "model": "gemini-2.5-flash",
+    "thinking_budget": 1024,
+    "include_thoughts": false,
+    "max_output_tokens_unchanged": 8192
+  },
+  "academic_defensibility": {
+    "strict_local_validation_retained": true,
+    "exact_span_validation_retained": true,
+    "recommendation_without_model_supplied_premise_rejected": true,
+    "frozen_evidence_ids_only": true,
+    "deterministic_case_specific_finance_retained": true,
+    "force_accept_invalid_output": false
+  },
+  "continuing_repair_authorization": {
+    "approved": true,
+    "minimum_preapproved_cycles": 8,
+    "after_cycle_8": "continue only inside the user's whitelist and unchanged hard ceilings",
+    "fresh_directory_each_smoke": true,
+    "same_version_ABC_required": true
+  },
+  "prohibited": [
+    "new, guessed, substituted or fabricated evidence",
+    "unsupported represented as sourced_fact",
+    "LLM-generated case-specific financial results",
+    "substantive deletion or rubric relaxation",
+    "overwriting or reclassifying v1+ failures",
+    "provider, model, case, objective, comparison, evaluation or budget changes",
+    "paid tools or formal Granite D"
+  ],
+  "output_change": {
+    "max_output_tokens_per_physical_response": 8192,
+    "applies_to_provider": "gemini",
+    "applies_to_conditions": ["A", "B", "C"]
+  },
+  "preserve_previous_failed_smoke": true,
+  "previous_failed_smokes": [
+    {"path": "docs/final_sprint/s5-llm-only-v1/smoke_summary.json", "sha256": "15d891309b7ae1f0e842da08f36a0c4a442bb948d3921ca38e64729ccc3d861c", "requests": 2, "total_tokens": 9410, "cost_usd": 0.0106792},
+    {"path": "docs/final_sprint/s5-llm-only-v2/smoke_summary.json", "sha256": "3c5ca075127fed22d37b7d9ac6f9ab7dd5a2d79af1fe90685f361505fa04bb53", "requests": 2, "total_tokens": 22192, "cost_usd": 0.0426342},
+    {"path": "docs/final_sprint/s5-llm-only-v3/smoke_summary.json", "sha256": "0abdd4fc2b1d75a33bb35409da3b734e3a1ee9c378751f5ae00b78f82ef32bf4", "requests": 1, "total_tokens": 6818, "cost_usd": 0.0105352},
+    {"path": "docs/final_sprint/s5-llm-only-v4/smoke_summary.json", "sha256": "17050f2800535b43153ed0dca4045afa94dc506dd69e098a39b2d4162fc57619", "requests": 1, "total_tokens": 11358, "cost_usd": 0.0213682},
+    {"path": "docs/final_sprint/s5-llm-only-v5/smoke_summary.json", "sha256": "78bc862d1e8980f0f7926857acc2ac67f9dcc2dd68831747278c375a3d02320e", "requests": 1, "total_tokens": 6302, "cost_usd": 0.0087282},
+    {"path": "docs/final_sprint/s5-llm-only-v6/smoke_summary.json", "sha256": "ff2678ee227116996a17b036f8aba7aa20ec7d8e889501a0aa961d4a51a18917", "requests": 1, "total_tokens": 6201, "cost_usd": 0.0083833},
+    {"path": "docs/final_sprint/s5-llm-only-v7/smoke_summary.json", "sha256": "c83f44ed5181d0420048265509cc2ddc935093158edd2886adb5bf77b7edd874", "requests": 1, "total_tokens": 5796, "cost_usd": 0.0073532}
+  ],
+  "prior_nonformal_spend": {"requests": 9, "total_tokens": 68077, "cost_usd": 0.1096815},
+  "preserve_planned_rows": 8,
+  "formal_conditions": ["A", "B", "C"],
+  "formal_run_count": 6,
+  "D_planned_rows": ["ai_education-D", "intelligent_ring-D"],
+  "D_row_state": "not_run_preflight_no_go",
+  "formal_Granite_calls": 0,
+  "best_effort_demo": {"formal_eligible": false, "c_minus_d_comparison_eligible": false},
+  "confirmed_cases": {"ai_education": {"case_specific_financial_values": 21}, "intelligent_ring": {"case_specific_financial_values": 27}},
+  "comparison_policy": {"reported": ["B-A", "C-B"], "unavailable": {"C-D": "D_preflight_no_go"}, "success_subset_substitution": false},
+  "smoke": {"case_id": "ai_education", "conditions": ["A", "B", "C"], "formal_eligible": false, "cumulative_max_requests": 54, "cumulative_max_total_tokens": 480000, "cumulative_max_cost_usd": 1.2, "paid_tools": false},
+  "formal": {"randomization_seed": 20260906, "preserve_original_row_order": true, "per_run": {"max_requests": 18, "max_total_tokens": 160000, "max_seconds": 3600}, "aggregate": {"max_requests": 108, "max_total_tokens": 960000, "max_cost_usd": 2.4}},
+  "combined_smoke_and_formal_max_tokens": 1440000,
+  "combined_smoke_and_formal_max_cost_usd": 3.6,
+  "paid_tools": false
+}

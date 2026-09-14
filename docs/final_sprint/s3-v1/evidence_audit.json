@@ -1,0 +1,413 @@
+{
+  "package": "S3",
+  "recorded_at_utc": "2026-09-06T22:21:02.920265+00:00",
+  "runs": [
+    {
+      "directory": "real_preflight_01",
+      "result": {
+        "package": "S3",
+        "status": "no_go",
+        "phases": {
+          "initialization": {
+            "status": "failed",
+            "error_type": "TypeError"
+          }
+        },
+        "model_calls": 0,
+        "formal_runs_started": 0,
+        "next_package_started": false,
+        "server_stop": {
+          "status": "termination_unconfirmed",
+          "error_type": "ValueError",
+          "pid": 11812,
+          "lease_released": false,
+          "restart_requires_explicit_reconciliation": true
+        }
+      }
+    },
+    {
+      "directory": "real_preflight_02",
+      "result": {
+        "package": "S3",
+        "status": "no_go",
+        "phases": {
+          "initialization": {
+            "status": "failed",
+            "error_type": "TypeError"
+          }
+        },
+        "model_calls": 0,
+        "formal_runs_started": 0,
+        "next_package_started": false,
+        "server_stop": {
+          "status": "owned_process_tree_terminated",
+          "pid": 7828,
+          "lease_released": false,
+          "restart_requires_explicit_reconciliation": true
+        }
+      }
+    },
+    {
+      "directory": "real_preflight_03",
+      "result": {
+        "package": "S3",
+        "status": "no_go",
+        "requested_phase": "all",
+        "phases": {
+          "warmup": {
+            "status": "passed",
+            "elapsed_seconds": 42.48399999999674,
+            "budget": {
+              "max_requests": 18,
+              "max_total_tokens": 160000,
+              "request_count": 1,
+              "retry_count": 0,
+              "remaining_requests": 17,
+              "remaining_tokens": 159659,
+              "exhausted": false,
+              "charged_total_tokens": 341,
+              "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+              "actual_prompt_tokens_known": 332,
+              "actual_output_tokens_known": 9,
+              "actual_total_tokens_known": 341,
+              "usage_missing_calls": 0,
+              "transport_retry_count": 0,
+              "structure_repair_request_count": 0,
+              "revision_request_count": 0,
+              "run_elapsed_seconds": 42.48399999999674,
+              "node_elapsed_seconds": null,
+              "node_scope_id": null
+            }
+          },
+          "context": {
+            "status": "failed",
+            "error_type": "ProviderFailure",
+            "elapsed_seconds": 486.34399999998277,
+            "budget": {
+              "max_requests": 18,
+              "max_total_tokens": 160000,
+              "request_count": 1,
+              "retry_count": 0,
+              "remaining_requests": 17,
+              "remaining_tokens": 95110,
+              "exhausted": false,
+              "charged_total_tokens": 64890,
+              "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+              "actual_prompt_tokens_known": 0,
+              "actual_output_tokens_known": 0,
+              "actual_total_tokens_known": 0,
+              "usage_missing_calls": 1,
+              "transport_retry_count": 0,
+              "structure_repair_request_count": 0,
+              "revision_request_count": 0,
+              "run_elapsed_seconds": 486.34399999998277,
+              "node_elapsed_seconds": 486.34399999998277,
+              "node_scope_id": "9faaf6e7-d6e8-4987-88ab-1d8b65c03d1b.context_probe"
+            },
+            "independent_probes_may_continue": false,
+            "context_metadata_missing_reason": "ConnectionError",
+            "allocated_context_tokens": null,
+            "measured_input_tokens": null,
+            "expected_input_tokens": null,
+            "token_count_delta": null,
+            "allocation_verified": false,
+            "full_input_acceptance_verified": false
+          },
+          "components": {
+            "status": "not_run",
+            "reason": "prior feasibility gate failed"
+          },
+          "smoke": {
+            "status": "not_run",
+            "reason": "prior feasibility gate failed"
+          }
+        },
+        "resources": {
+          "status": "passed",
+          "reason": null,
+          "sample_count": 87,
+          "sample_interval_seconds": 5.0,
+          "baseline": {
+            "ram_total_bytes": 16969424896,
+            "ram_available_bytes": 7099645952,
+            "pagefile_used_bytes": 550502400,
+            "gpu_used_bytes": 0,
+            "gpu_total_bytes": 2147483648,
+            "loaded_models": [],
+            "missing": {}
+          },
+          "maximum_observed_sample_gap_seconds": 8.10899999999674,
+          "min_available_ram_bytes": 4453490688,
+          "peak_ram_used_bytes": 12515934208,
+          "peak_gpu_used_bytes": 552599552,
+          "peak_pagefile_used_bytes": 550502400,
+          "peak_pagefile_delta_bytes": 0,
+          "missing_observations": [
+            {
+              "loaded_models": "ConnectionError"
+            }
+          ]
+        },
+        "metadata": {
+          "ollama_version": "0.33.2",
+          "model_digest": "eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+          "model_metadata": {
+            "name": "granite-h-micro-32k:latest",
+            "model": "granite-h-micro-32k:latest",
+            "modified_at": "2026-09-06T23:31:10.2530656+02:00",
+            "size": 1942571795,
+            "digest": "eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+            "details": {
+              "parent_model": "hf.co/ibm-granite/granite-4.0-h-micro-GGUF:Q4_K_M",
+              "format": "gguf",
+              "family": "granitehybrid",
+              "families": [
+                "granitehybrid"
+              ],
+              "parameter_size": "3.2B",
+              "quantization_level": "Q4_K_M",
+              "context_length": 1048576,
+              "embedding_length": 2048
+            },
+            "capabilities": [
+              "completion",
+              "tools"
+            ]
+          },
+          "parameters": {
+            "num_ctx": "32768",
+            "temperature": "0"
+          },
+          "model_info": {
+            "general.architecture": "granitehybrid",
+            "general.file_type": 15,
+            "general.license": "apache-2.0",
+            "general.parameter_count": 3191396096,
+            "general.quantization_version": 2,
+            "general.size_label": "3.2B",
+            "general.tags": null,
+            "general.type": "model",
+            "granitehybrid.attention.head_count": 32,
+            "granitehybrid.attention.head_count_kv": null,
+            "granitehybrid.attention.layer_norm_rms_epsilon": 1e-05,
+            "granitehybrid.attention.scale": 0.015625,
+            "granitehybrid.block_count": 40,
+            "granitehybrid.context_length": 1048576,
+            "granitehybrid.embedding_length": 2048,
+            "granitehybrid.embedding_scale": 12,
+            "granitehybrid.expert_count": 0,
+            "granitehybrid.expert_shared_feed_forward_length": 8192,
+            "granitehybrid.expert_used_count": 0,
+            "granitehybrid.feed_forward_length": 8192,
+            "granitehybrid.logit_scale": 8,
+            "granitehybrid.residual_scale": 0.22,
+            "granitehybrid.rope.dimension_count": 64,
+            "granitehybrid.rope.freq_base": 10000,
+            "granitehybrid.rope.scaling.finetuned": false,
+            "granitehybrid.ssm.conv_kernel": 4,
+            "granitehybrid.ssm.group_count": 1,
+            "granitehybrid.ssm.inner_size": 4096,
+            "granitehybrid.ssm.state_size": 128,
+            "granitehybrid.ssm.time_step_rank": 64,
+            "granitehybrid.vocab_size": 100352,
+            "tokenizer.ggml.add_bos_token": false,
+            "tokenizer.ggml.bos_token_id": 100257,
+            "tokenizer.ggml.eos_token_id": 100257,
+            "tokenizer.ggml.merges": null,
+            "tokenizer.ggml.model": "gpt2",
+            "tokenizer.ggml.padding_token_id": 100256,
+            "tokenizer.ggml.pre": "dbrx",
+            "tokenizer.ggml.token_type": null,
+            "tokenizer.ggml.tokens": null,
+            "tokenizer.ggml.unknown_token_id": 100269
+          },
+          "details": {
+            "parent_model": "hf.co/ibm-granite/granite-4.0-h-micro-GGUF:Q4_K_M",
+            "format": "gguf",
+            "family": "granitehybrid",
+            "families": [
+              "granitehybrid"
+            ],
+            "parameter_size": "3.2B",
+            "quantization_level": "Q4_K_M"
+          },
+          "loaded_models": [],
+          "context_status": "configured_not_yet_measured"
+        },
+        "config": {
+          "endpoint": "http://127.0.0.1:11434",
+          "model_alias": "granite-h-micro-32k",
+          "source_model": "hf.co/ibm-granite/granite-4.0-h-micro-GGUF:Q4_K_M",
+          "quantization": "Q4_K_M",
+          "context_tokens": 32768,
+          "model_config_version": "granite-h-micro-q4km-32k-s3-v1",
+          "max_requests": 18,
+          "max_total_tokens": 160000,
+          "max_output_tokens": 1024,
+          "max_prompt_chars": 90000,
+          "node_seconds": 1200.0,
+          "run_seconds": 5400.0,
+          "request_seconds": 1200.0,
+          "sample_seconds": 5.0,
+          "status": "preflight_candidate_not_frozen"
+        },
+        "model_calls": 2,
+        "formal_runs_started": 0,
+        "server_stop": {
+          "status": "owned_process_tree_terminated",
+          "pid": 28292,
+          "lease_released": false,
+          "restart_requires_explicit_reconciliation": true
+        },
+        "context_claim": "allocated 32768; measured accepted input is reported separately",
+        "input_status": "pending user approval; non-formal preflight only",
+        "next_package_started": false,
+        "next_action": "review feasibility evidence before dependent work"
+      }
+    }
+  ],
+  "attempts": [
+    {
+      "run": "real_preflight_03",
+      "phase": "context",
+      "role": "context_probe",
+      "purpose": "generate",
+      "status": "failed",
+      "error_type": "OllamaMissingCompletion",
+      "elapsed_seconds": 486.34399999998277,
+      "prompt_tokens": null,
+      "output_tokens": null,
+      "total_tokens": null,
+      "prefill_ns": null,
+      "generation_ns": null,
+      "prefill_tokens_per_second": null,
+      "prefill_rate_basis": null,
+      "generation_tokens_per_second": null,
+      "finish_reason": null,
+      "usage_missing_reason": "provider usage missing or incomplete; reservation retained where total is unknown",
+      "prompt_hash": "24fe032f159d0097966d738b3a784bff7fe1387f263a37bafc818f7b6f7b710d",
+      "schema_hash": "da69b8fda1ceaac7c331c1cab3c7e51bc19448a7063bf3138ff631acf5712e1f",
+      "raw_output_chars": null,
+      "event_path": "docs/final_sprint/s3-v1/real_preflight_03/context/events.jsonl"
+    },
+    {
+      "run": "real_preflight_03",
+      "phase": "warmup",
+      "role": "warmup",
+      "purpose": "generate",
+      "status": "succeeded",
+      "error_type": null,
+      "elapsed_seconds": 42.48399999999674,
+      "prompt_tokens": 332,
+      "output_tokens": 9,
+      "total_tokens": 341,
+      "prefill_ns": 21797817000,
+      "generation_ns": 850571000,
+      "prefill_tokens_per_second": 15.230882982456455,
+      "prefill_rate_basis": "all_input_tokens_cache_count_unavailable",
+      "generation_tokens_per_second": 10.581127266271716,
+      "finish_reason": "stop",
+      "usage_missing_reason": null,
+      "prompt_hash": "d9db75051fe2a7b8f0d9b1edca967f4c8bf18a5a1224243ec69f497040607987",
+      "schema_hash": "da69b8fda1ceaac7c331c1cab3c7e51bc19448a7063bf3138ff631acf5712e1f",
+      "raw_output_chars": 16,
+      "event_path": "docs/final_sprint/s3-v1/real_preflight_03/warmup/events.jsonl"
+    }
+  ],
+  "physical_model_calls": 2,
+  "known_prompt_tokens": 332,
+  "known_output_tokens": 9,
+  "attempts_with_missing_total_usage": 1,
+  "gemini_calls": 0,
+  "formal_runs_started": 0,
+  "formal_planned_count": 8,
+  "next_package_started": false,
+  "historical_files": [
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/data/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/data/app.db",
+      "sha256": "4b34295d7591afdd35c845af57fdfa78c6bfbc22a7174abf9d3ba1618a6d1e53",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-09_amazon_20260709_145830_613114.md",
+      "sha256": "05df1a582ad8a58f4f4d486908a2777348592a3619ec6bcdbf3f68a9b2a07da2",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-09_picnic_20260709_135307.md",
+      "sha256": "2d06ad96b844650adc672315545a08fa306c9f7028705204c13cacbf8486ba38",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-16_apple_20260716_222015_607708.md",
+      "sha256": "16557dd651287f87e32ebb6a94df6676b12ff8249e8ad2854442e05cccd51f9a",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-17_apple_20260717_071222_225614.md",
+      "sha256": "283ee05076a0c604731cae9fb851adc0eb50418e332b91563f122ee90dafbdf2",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-23_picnic_20260723_130748_072819.md",
+      "sha256": "971b1a3e8bd9dc694e374f557c42198f5612a4f57cf72082f62efcf484071c97",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-28_apple_20260728_162013_501427.md",
+      "sha256": "6f0f67fac960855a427e07d6d3eb85b303c7081a9cefb9c5619bb120aacc1d3d",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/2026-07-28_apple_20260728_170057_965025.md",
+      "sha256": "33fd7b0995345b514cb76d40b6149ad058bded8edc898bb2a0f4977436add6ea",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/picnic_fashion_20260708_211408.md",
+      "sha256": "a2231675d5e8e5f93c2dfa6b1553f9ed328145eb8e8c17e179aa5ce3ddebcc2c",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Projects/multiple_ai_agent/outputs/picnic_fashion_20260709_055540.md",
+      "sha256": "8b8a0c12e3eb0526bf5adfc3d95a6aff49acf211796207fdc5347aa6eb51f52f",
+      "unchanged": true
+    }
+  ],
+  "authority_documents": [
+    {
+      "path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/sprint_plan_.md",
+      "sha256": "42c3a1e4574335b720e268e6d05f05f4af53a98a1d0d533ee752e950784e2b8b",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/@ai_agent_evaluation_metrics_spec.md",
+      "sha256": "e16d7f74999c49cb120d9d3ee224b0bba9e23e86abfec15c0d7de4ae47dff005",
+      "unchanged": true
+    },
+    {
+      "path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/@multiple_ai_agent_optimization.md",
+      "sha256": "54d1b23a55543b882f55e8711da5326d7b9d3efb367755f1cee6442c6e4958c9",
+      "unchanged": true
+    }
+  ],
+  "code_sha256": {
+    "slm/granite_config.py": "3c852687859d82bc054f1400a40ec1b717f46e3ccce4d372e96c75ec2b5dded5",
+    "slm/granite_preflight.py": "910180a6fcff454f4cdfaba1204deadef39b8f82d4d54d5e9bf6ec6c6c39d436",
+    "slm/granite_provider.py": "883bd5a87c61d55931e5f21b694abaf4af663b7011b9ded7726ba5c6cb3a3bc3",
+    "slm/Modelfile.granite-h-micro-32k": "d350467edbc97aea40b0635904c63786b26dccf8021c3f41f2e816998ed765c5",
+    "slm/start_granite.ps1": "e95570021843b6a87cc57b2d58c99ffcc83d3074da720b12f33e62e2510e3d29",
+    "slm/owned_ollama.py": "0b50ce35fa184f31c7284237902369d46213d19674d487cdc00a4269c1ec56bd",
+    "slm/resource_monitor.py": "21a977a850b4f1256a7c8839f0f55fd7279df58335c5025a801add24a6876bf5"
+  }
+}

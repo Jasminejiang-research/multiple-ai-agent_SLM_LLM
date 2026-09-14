@@ -1,0 +1,4 @@
+{
+  "score": 3,
+  "issues": "1. Lack of specific details on AI capabilities and data sources used for personalized feedback.\n2. No mention of pricing strategy or revenue model for institutional buyers."
+}

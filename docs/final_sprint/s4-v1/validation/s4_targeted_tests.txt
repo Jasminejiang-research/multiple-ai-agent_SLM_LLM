@@ -1,0 +1,97 @@
+.F..F.F..F.............................................................. [ 63%]
+.....................................F....                               [100%]
+================================== FAILURES ===================================
+______________ test_rehearsal_pass_revision_routes_and_no_rerun _______________
+
+rehearsal = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-56/s40/rehearsal')
+
+    def test_rehearsal_pass_revision_routes_and_no_rerun(rehearsal):
+        before=(rehearsal/"schedule.jsonl").read_bytes()
+        output=execute(rehearsal,synthetic=True)
+        assert output["formal_runs_started"]==0
+>       assert sum(r["execution"]=="succeeded" for r in output["rows"])==8
+E       assert 5 == 8
+E        +  where 5 = sum(<generator object test_rehearsal_pass_revision_routes_and_no_rerun.<locals>.<genexpr> at 0x00000292DC7C9630>)
+
+tests\test_s4_evaluation.py:49: AssertionError
+___________ test_torn_schedule_archived_and_active_lock_not_removed ___________
+
+tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-56/test_torn_schedule_archived_an0')
+
+    def test_torn_schedule_archived_and_active_lock_not_removed(tmp_path):
+        path=tmp_path/"torn"
+        create_experiment(path,synthetic=True)
+        with (path/"schedule.jsonl").open("a") as stream:stream.write('{"event_id":')
+        assert reconcile(path)["journal_truncated"] is False
+        assert len(list(path.glob("schedule.torn.*.jsonl")))==1
+        import os
+        write_json(path/"runner.lock",dict(pid=os.getpid()))
+        with pytest.raises(ValueError,match="still exists"):
+>           reconcile(path,recover_dead_lock=True)
+
+tests\test_s4_evaluation.py:106: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+directory = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-56/test_torn_schedule_archived_an0/torn')
+recover_dead_lock = True
+
+    def reconcile(directory, *, recover_dead_lock=False):
+        directory = Path(directory)
+        lock = directory/"runner.lock"
+        if lock.exists():
+            if not recover_dead_lock:
+                raise ValueError("runner lock exists; explicit dead-process recovery required")
+            pid = read_json(lock)["pid"]
+            # Windows os.kill(pid, 0) is not a portable process liveness check.
+>           import psutil
+E           ModuleNotFoundError: No module named 'psutil'
+
+evaluation\s4_runner.py:147: ModuleNotFoundError
+___________ test_failure_preserves_denominators_and_no_success_time ___________
+
+tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-56/test_failure_preserves_denomin0')
+
+    def test_failure_preserves_denominators_and_no_success_time(tmp_path):
+        workflow,provider=setup_run(tmp_path,overrides={"max_requests":1})
+        result=workflow.run()
+        m=reduce_run(workflow.journal.directory,condition="C")
+        assert result["status"]=="budget_exhausted"
+        assert m["request_count"]==1
+        assert m["first_contract"]["denominator"]==2
+        assert m["first_contract"]["value"]==.5
+>       assert m["handoff"]["value"]<1
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: '<' not supported between instances of 'NoneType' and 'int'
+
+tests\test_s4_evaluation.py:130: TypeError
+_______________ test_blind_pack_no_identity_and_human_defaults ________________
+
+rehearsal = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-56/s40/rehearsal')
+tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-56/test_blind_pack_no_identity_an0')
+
+    def test_blind_pack_no_identity_and_human_defaults(rehearsal,tmp_path):
+        path=tmp_path/"blind"
+        audit=build_blind_pack(rehearsal,path)
+>       assert audit["canonical_outputs"]==8 and audit["hidden_repeats"]==2 and audit["rating_copies"]==10
+E       assert (5 == 8)
+
+tests\test_s4_evaluation.py:167: AssertionError
+___________ test_formal_execution_cannot_bypass_future_freeze_gates ___________
+
+tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-56/test_formal_execution_cannot_b0')
+
+    def test_formal_execution_cannot_bypass_future_freeze_gates(tmp_path):
+>       with pytest.raises(ValueError, match="formal experiment runner"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'formal experiment runner'
+E         Actual message: 'formal experiment requires S4/S5 freeze gates and a claimed planned row'
+
+tests\test_s2_review.py:404: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_s4_evaluation.py::test_rehearsal_pass_revision_routes_and_no_rerun
+FAILED tests/test_s4_evaluation.py::test_torn_schedule_archived_and_active_lock_not_removed
+FAILED tests/test_s4_evaluation.py::test_failure_preserves_denominators_and_no_success_time
+FAILED tests/test_s4_evaluation.py::test_blind_pack_no_identity_and_human_defaults
+FAILED tests/test_s2_review.py::test_formal_execution_cannot_bypass_future_freeze_gates
+5 failed, 109 passed in 38.38s

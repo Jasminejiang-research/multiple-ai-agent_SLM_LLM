@@ -1,0 +1,214 @@
+{
+  "audit_version": "complete-d-integrity-v1",
+  "source_run": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v2\\run_01\\probe",
+  "created_at_utc": "2026-09-07T13:36:57.598249+00:00",
+  "model_calls": 0,
+  "recorded_status": "resource_stopped",
+  "recorded_complete_d_passed": false,
+  "complete_d_verified": false,
+  "tasks": [
+    {
+      "logical_task_id": "research.v1",
+      "completed": false,
+      "body_and_full_catalog_verified": true,
+      "body_sha256": "fbdb4fc702f0ff81dfbd7c3ecf91202482949be8859934fc5fd3af92eeb7551e",
+      "body_spans": 26,
+      "evidence_spans": 48,
+      "state": "body_verified_grounding_incomplete"
+    }
+  ],
+  "artifacts": [],
+  "limits": "Structural, numerical and provenance verification only; semantic support and human Gold approval remain unassessed.",
+  "frozen_inputs": {
+    "packet_sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+    "brief_sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+    "snapshot_sources": 3,
+    "expected_financial_rows": 21
+  },
+  "accounting": {
+    "requests": 2,
+    "charged_total_tokens": 90917,
+    "known_token_subtotals": {
+      "prompt_tokens": 4291,
+      "output_tokens": 703,
+      "total_tokens": 4994
+    },
+    "unknown_usage_calls": [
+      {
+        "attempt_id": "ed35c676-08ab-4b6d-9b5a-462a557ab921",
+        "status": "cancelled",
+        "prompt_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "reservation_tokens": 85923,
+        "budget_token_charge": 85923,
+        "usage_missing_reason": "provider usage missing or incomplete; reservation retained where total is unknown"
+      }
+    ],
+    "unknown_values_preserved": true,
+    "expanded_assembly_text_counted_as_model_usage": false
+  },
+  "outcome": {
+    "terminal_contract_passed": false,
+    "inference_elapsed_seconds": 3578.2189999999828,
+    "wall_clock_limit_seconds": 5400.0,
+    "cleanup_elapsed_seconds": 6.469000000040978
+  },
+  "integrity_status": "passed",
+  "checks": [
+    {
+      "scope": "top_event_log_closed",
+      "passed": true
+    },
+    {
+      "scope": "top_result_matches_durable_event",
+      "passed": true
+    },
+    {
+      "scope": "manifest_frozen_inputs_and_prompt",
+      "passed": true
+    },
+    {
+      "scope": "full_event_log_closed",
+      "passed": true
+    },
+    {
+      "scope": "top_full_result_matches",
+      "passed": true
+    },
+    {
+      "scope": "full_result_matches_durable_event",
+      "passed": true
+    },
+    {
+      "scope": "real_nonformal_d_identity",
+      "passed": true
+    },
+    {
+      "scope": "task:research.v1",
+      "passed": true
+    },
+    {
+      "scope": "usage_accounting",
+      "passed": true
+    },
+    {
+      "scope": "terminal_deadline_cleanup",
+      "passed": true
+    },
+    {
+      "scope": "sources_unchanged_during_audit",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "source_sha256": {
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v2\\run_01\\probe\\result.json": {
+      "sha256": "2da32281d8d0ea01917ba5bef29496d79ee86ed2258be4ae05519fe531d61c5f",
+      "bytes": 32524
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\workflow\\two_stage_generation.py": {
+      "sha256": "7de3479531fca2e45fd21538d1fbf6aecd04915564c0759bd2fb6ce7d37ac45c",
+      "bytes": 21586
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\workflow\\contract_generation.py": {
+      "sha256": "351aaaa36f83215f3bf65d85cfb754e3d25f4a334fff5179bab93a0a8a15f001",
+      "bytes": 20323
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\workflow\\contract_context.py": {
+      "sha256": "fd9b301e07e0154ad0c1dde88355025eec8ad7e0de855426fcbffc8314108782",
+      "bytes": 13195
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\workflow\\grounding.py": {
+      "sha256": "63b10f2a9b2a6f99bf3d784c762c2a7390fd944b2813918b734db5c80b1c2c03",
+      "bytes": 12022
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\workflow\\finance_contract.py": {
+      "sha256": "1d0c642ec6c0e708afe086430aa5584cb4dd83dd02e8a1eb30d85a54c7d8be09",
+      "bytes": 11542
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\workflow\\generation_constraints.py": {
+      "sha256": "72b9366a441cc14d744d050cb0418ad419b5b9c16627421a6a1f55708f1220d8",
+      "bytes": 10813
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\workflow\\generation_batches.py": {
+      "sha256": "ed6391a1bb943305b52ee5949b0e9a1bf24f5a4631df640d083652541001c098",
+      "bytes": 7263
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\workflow\\review_events.py": {
+      "sha256": "8ec4e37b94f8ea2d2a1bbcdfe427a8c737abdd367a08c1861174e2e51986d26c",
+      "bytes": 4146
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\schemas\\contract_outputs.py": {
+      "sha256": "9f16ba0af9907183c0b1200af331faa76052da8da4ecc6e3aaecbc11d1d7a936",
+      "bytes": 4824
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\schemas\\evidence.py": {
+      "sha256": "a78900f486238cf77d445a60146b3fcb72efa60d35bef471a21bca30b7adc824",
+      "bytes": 8846
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\validation\\audit_complete_d.py": {
+      "sha256": "847fd102202f1a38f91a765ba9f2e964b8fafc8469d69487102c5043ded0d278",
+      "bytes": 25596
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\docs\\final_sprint\\s0-v1\\cases\\ai_education\\case.json": {
+      "sha256": "b5b48a4356d0007f84d445ee9dca9fcd3dd4a9da51086bcad9ba0ce79c5ff1d0",
+      "bytes": 477
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\docs\\final_sprint\\s0-v1\\cases\\ai_education\\brief.json": {
+      "sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+      "bytes": 5353
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\docs\\final_sprint\\s0-v1\\cases\\ai_education\\packet.json": {
+      "sha256": "cdba62bc126f232b1a9be7e340c8ec68706efc0473bfceddb262177d9ea82228",
+      "bytes": 8773
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\docs\\final_sprint\\s0-v1\\cases\\ai_education\\sources\\EDU-01.html": {
+      "sha256": "4610a0f39c00948b7f351c11fc515bb3191463e1d66f89c0380b523527c99fad",
+      "bytes": 22194
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\docs\\final_sprint\\s0-v1\\cases\\ai_education\\sources\\EDU-01.txt": {
+      "sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+      "bytes": 2074
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\docs\\final_sprint\\s0-v1\\cases\\ai_education\\sources\\EDU-02.html": {
+      "sha256": "bf48404477a10c46e90e57e6aa3273c8cc0b12c6efb0d0566f9f877363dfb6c7",
+      "bytes": 401081
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\docs\\final_sprint\\s0-v1\\cases\\ai_education\\sources\\EDU-02.txt": {
+      "sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+      "bytes": 37575
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\docs\\final_sprint\\s0-v1\\cases\\ai_education\\sources\\EDU-03.html": {
+      "sha256": "fbc7edd3eb3c00da33217503899b04417cc384bbbff84aa5fb28fa61a262dec8",
+      "bytes": 33458
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\runtime\\docs\\final_sprint\\s0-v1\\cases\\ai_education\\sources\\EDU-03.txt": {
+      "sha256": "1fc5afa18f74989ee9bd9208790148bf03dd8e84376b7afacca5ec4089e280c1",
+      "bytes": 3675
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v2\\run_01\\probe\\events.jsonl": {
+      "sha256": "757824896bd1ff2af101b812aa8c8b91e47060ba6e459d9ce23882261330b44a",
+      "bytes": 264538
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v2\\run_01\\probe\\full_d\\result.json": {
+      "sha256": "3caff10fa9844ec6e450a270cb8a8a4e35e04c8442e3b0f16588a695b7fe6dee",
+      "bytes": 26307
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v2\\run_01\\probe\\full_d\\events.jsonl": {
+      "sha256": "762fa24600c3b758e021dbcd7a06da9eac2ad962b21a9450015e6c0542fbf284",
+      "bytes": 178284
+    }
+  },
+  "reproduction": {
+    "executable": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+    "argv": [
+      "-B",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\validation\\audit_complete_d.py",
+      "--run",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v2\\run_01\\probe",
+      "--output",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-claim-id-fix-stage\\validation\\full_d_integrity_audit.json"
+    ]
+  }
+}

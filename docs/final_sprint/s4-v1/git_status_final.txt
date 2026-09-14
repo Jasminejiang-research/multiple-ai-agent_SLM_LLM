@@ -1,0 +1,58 @@
+ M agents/research.py
+ M app.py
+ M rag/knowledge_base.py
+ M rag/retriever.py
+ M slm/README.md
+ M slm/client.py
+ M slm/factories.py
+ M slm/schema_contract.py
+ M slm/tests/test_isolation.py
+ M tools/tavily_search.py
+ M tools/web_search.py
+ M workflow/gemini_schema.py
+ M workflow/generation_batches.py
+ M workflow/llm_client.py
+ M workflow/multi_agent_graph.py
+ M workflow/nodes.py
+ M workflow/state.py
+?? agents/component_critic.py
+?? docs/final_sprint/s0-v1/
+?? docs/final_sprint/s1-v1/
+?? docs/final_sprint/s2-v1/
+?? docs/final_sprint/s3-fix-v1/
+?? docs/final_sprint/s3-v1/
+?? docs/final_sprint/s4-v1/
+?? docs/final_sprint_status.md
+?? evaluation/
+?? schemas/contract_outputs.py
+?? schemas/evidence.py
+?? schemas/financial.py
+?? schemas/review.py
+?? schemas/review_events.py
+?? slm/Modelfile.granite-h-micro-32k
+?? slm/configs/
+?? slm/granite_config.py
+?? slm/granite_preflight.py
+?? slm/granite_provider.py
+?? slm/owned_ollama.py
+?? slm/resource_monitor.py
+?? slm/start_granite.ps1
+?? slm/tests/test_granite_s3.py
+?? slm/tests/test_s1_contract_adapters.py
+?? slm/tests/test_s2_contract_adapters.py
+?? tests/test_s0_preparation.py
+?? tests/test_s1_contract.py
+?? tests/test_s2_review.py
+?? tests/test_s4_evaluation.py
+?? workflow/contract_context.py
+?? workflow/contract_generation.py
+?? workflow/evidence_policy.py
+?? workflow/finance_contract.py
+?? workflow/grounding.py
+?? workflow/review_config.py
+?? workflow/review_events.py
+?? workflow/review_graph.py
+?? workflow/review_handoffs.py
+?? workflow/review_providers.py
+?? workflow/review_runtime.py
+?? workflow/schema_contract.py

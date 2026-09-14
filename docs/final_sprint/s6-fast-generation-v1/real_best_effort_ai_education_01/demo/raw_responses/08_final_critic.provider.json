@@ -1,0 +1,17 @@
+{
+  "model": "granite-h-micro-32k",
+  "created_at": "2026-09-07T20:26:34.7863041Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"score\": 0,\n  \"issues\": \"unsupported facts; unknown IDs\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 24854298700,
+  "load_duration": 2652200,
+  "prompt_eval_count": 915,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 23013597000,
+  "eval_count": 21,
+  "eval_duration": 1779088000
+}

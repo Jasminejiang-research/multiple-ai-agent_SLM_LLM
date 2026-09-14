@@ -1,0 +1,109 @@
+{
+  "target": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM",
+  "source": "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.s4-stage",
+  "files": [
+    {
+      "path": "app.py",
+      "before_sha256": "412b9a53620960ac8301e0baa86c7da46e10dd3f26069c02ce119536a5525ab6",
+      "after_sha256": "11401368ff243ce999ac0f91d3d4f98542d864c3127d7bf7e7d3192f605586a9",
+      "backup": "app.py.txt"
+    },
+    {
+      "path": "evaluation/s2_fixtures.py",
+      "before_sha256": "cd2e28bdb852493a07521551365fbff37aeea00561d28463dd7cd940c12a4a63",
+      "after_sha256": "37ed5fb6f3cc1bf2a23e874dffc2c4f616363943e00eeece02490277fb0e4496",
+      "backup": "evaluation__s2_fixtures.py.txt"
+    },
+    {
+      "path": "workflow/review_graph.py",
+      "before_sha256": "02163f97bf6ab321ea826e5def7babd524896664e80b8a87883ccd95aafdc0c4",
+      "after_sha256": "77fd114234e09f0c7107cd51a2d3ecaa870ae26ce9d2159e541d95c41c0a39ac",
+      "backup": "workflow__review_graph.py.txt"
+    },
+    {
+      "path": "workflow/review_runtime.py",
+      "before_sha256": "b2076ab33fffa91879458ec42050b4415c9930d848ae18e6163cdb735ce9af0c",
+      "after_sha256": "15a18562d9baf63f4a877f293fc27bc55c0631e77e36e4c1a364057261043a01",
+      "backup": "workflow__review_runtime.py.txt"
+    },
+    {
+      "path": "slm/tests/test_isolation.py",
+      "before_sha256": "96d8ce7ea2a270c28834fed260125ddecda90682866cb337ba16781b06d95801",
+      "after_sha256": "a1719fb4778cf85ef0a43f12c51bbf39d5c56624c5f89bcbdc1d1541a29da760",
+      "backup": "slm__tests__test_isolation.py.txt"
+    },
+    {
+      "path": "tests/test_s4_evaluation.py",
+      "before_sha256": null,
+      "after_sha256": "fa3bffbce47325572c6a95b2d424ac2449a6bcfa67ea2423a2eb722b2727f3f3",
+      "backup": null
+    },
+    {
+      "path": "evaluation/s4.py",
+      "before_sha256": null,
+      "after_sha256": "b5019c9c1dfa6ee65a395247fd10caac93d31755e4e3912c1a850d597e69c149",
+      "backup": null
+    },
+    {
+      "path": "evaluation/s4_audit.py",
+      "before_sha256": null,
+      "after_sha256": "53d38aab0c3ed989b8c8775796667c8d8b6e6958f9e4c1d82d0b25da7be42d86",
+      "backup": null
+    },
+    {
+      "path": "evaluation/s4_blind.py",
+      "before_sha256": null,
+      "after_sha256": "83c46d7f7a7b16de1e032aab006ed06abc392706ce0a7b3a59c5730c1d859b15",
+      "backup": null
+    },
+    {
+      "path": "evaluation/s4_export.py",
+      "before_sha256": null,
+      "after_sha256": "311ed6d541a077fc86149b10e6719299c1670a9df56a025c954a1a7340676d58",
+      "backup": null
+    },
+    {
+      "path": "evaluation/s4_io.py",
+      "before_sha256": null,
+      "after_sha256": "7375b67466b506c3d06dfcadc5e1854494231874769e10d8334a9c65a4e37968",
+      "backup": null
+    },
+    {
+      "path": "evaluation/s4_metrics.py",
+      "before_sha256": null,
+      "after_sha256": "4238747a1c2fa5a2ae4feb6498dfd8ca3212f02ff00379970a2b4c3d64ac4124",
+      "backup": null
+    },
+    {
+      "path": "evaluation/s4_resources.py",
+      "before_sha256": null,
+      "after_sha256": "ac43d50dcfa244739c1800f6ac0503b543f81bac3ec83b515ecc2076120d7b44",
+      "backup": null
+    },
+    {
+      "path": "evaluation/s4_runner.py",
+      "before_sha256": null,
+      "after_sha256": "9cde6e27880bb975a873959a9c2ad1978a1b550e02541eacbbb18ac86d61f89f",
+      "backup": null
+    },
+    {
+      "path": "evaluation/s4_statistics.py",
+      "before_sha256": null,
+      "after_sha256": "4091f1a931032e549f7a0b8d1531fe349cf1b77676b156ae4ab343bddb648dae",
+      "backup": null
+    },
+    {
+      "path": "evaluation/s4_ui.py",
+      "before_sha256": null,
+      "after_sha256": "6cf225042a14858b5389cc441031a517e09fd870dd945d4ebb6a27704953b8bd",
+      "backup": null
+    },
+    {
+      "path": "docs/final_sprint_status.md",
+      "before_sha256": "d637364a0b4ba5eee568091908d2b63c6ff4be74fca10a8ea5d3d7cbcc94c67b",
+      "after_sha256": "6212dc0f7e209eaedc06b555f0de500698c0a7a16123422d3152f13dfad810bf",
+      "backup": "docs__final_sprint_status.md.txt"
+    }
+  ],
+  "git_commit_created": false
+}

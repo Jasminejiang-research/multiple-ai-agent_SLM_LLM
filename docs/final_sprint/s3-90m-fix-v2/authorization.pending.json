@@ -1,0 +1,17 @@
+{
+  "scope": "ai_education_slm_independent_90m_validation",
+  "approved": false,
+  "approved_limits": {
+    "run_seconds": 5400.0,
+    "node_seconds": 5400.0,
+    "request_seconds": 5400.0,
+    "max_output_tokens": 8192,
+    "max_requests": 36,
+    "max_total_tokens": 500000,
+    "max_prompt_chars": 90000
+  },
+  "reason_pending": "Old aggregate four-hour allowance has only 4206.517 seconds remaining. A fresh independent validation allowance needs explicit confirmation; old usage remains recorded.",
+  "expected_model_digest": "eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+  "expected_ollama_version": "0.33.2",
+  "formal_eligible": false
+}

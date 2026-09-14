@@ -1,0 +1,26 @@
+{
+  "status": "failed",
+  "error_type": "WallClockExceeded",
+  "error": "shared node/run wall-clock budget exhausted",
+  "budget": {
+    "max_requests": 23,
+    "max_total_tokens": 308677,
+    "request_count": 3,
+    "retry_count": 0,
+    "remaining_requests": 20,
+    "remaining_tokens": 203431,
+    "exhausted": false,
+    "charged_total_tokens": 105246,
+    "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+    "actual_prompt_tokens_known": 15049,
+    "actual_output_tokens_known": 6978,
+    "actual_total_tokens_known": 22027,
+    "usage_missing_calls": 1,
+    "transport_retry_count": 0,
+    "structure_repair_request_count": 1,
+    "revision_request_count": 0,
+    "run_elapsed_seconds": 5398.469000000041,
+    "node_elapsed_seconds": null,
+    "node_scope_id": null
+  }
+}

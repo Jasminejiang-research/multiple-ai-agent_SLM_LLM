@@ -1,0 +1,288 @@
+{
+  "run_id": "071187d16dc24f518e45c8e9387754fd",
+  "status": "completed",
+  "error": null,
+  "workflow_version": "single-agent-common-contract-v3-s6-compact",
+  "condition": "A",
+  "mock_only": true,
+  "budget": {
+    "max_requests": 32,
+    "max_total_tokens": 20000000,
+    "request_count": 1,
+    "retry_count": 0,
+    "remaining_requests": 31,
+    "remaining_tokens": 19999985,
+    "exhausted": false,
+    "charged_total_tokens": 15,
+    "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+    "actual_prompt_tokens_known": 10,
+    "actual_output_tokens_known": 5,
+    "actual_total_tokens_known": 15,
+    "usage_missing_calls": 0,
+    "transport_retry_count": 0,
+    "structure_repair_request_count": 0,
+    "revision_request_count": 0,
+    "run_elapsed_seconds": 0.1089999999999236,
+    "node_elapsed_seconds": null,
+    "node_scope_id": null,
+    "node_role": null,
+    "node_effective_seconds": null,
+    "node_deadline_run_elapsed_seconds": null,
+    "effective_deadline_run_elapsed_seconds": 3600.0,
+    "effective_request_timeout_seconds": 10.0,
+    "research_profile_version": "research-minimal-v2",
+    "research_total_seconds": 1200,
+    "research_output_caps": {
+      "body": 640,
+      "grounding": 1800,
+      "single": 1800
+    },
+    "configured_max_output_tokens": 1800,
+    "effective_max_output_tokens": null
+  },
+  "terminal_contract_passed": true,
+  "terminal_contract_state": "passed",
+  "first_valid_plan_seconds": 0.1089999999999236,
+  "first_complete_contract_seconds": 0.07799999999997453,
+  "first_mvp30_material_seconds": 0.07799999999997453,
+  "mvp30_state": "reached",
+  "valid_plan60_state": "reached",
+  "artifact_class": "ValidPlan60",
+  "scorable_artifact_ref": {
+    "artifact_id": "single.effective",
+    "artifact_version": 1,
+    "sha256": "45c0e871593b7582732afa24ed0ad04f54e30cfefbbfc11fdd98f1d8999ef170"
+  },
+  "effective_artifacts": {
+    "single": {
+      "artifact_id": "single.effective",
+      "artifact_version": 1,
+      "sha256": "45c0e871593b7582732afa24ed0ad04f54e30cfefbbfc11fdd98f1d8999ef170"
+    }
+  },
+  "reports": {},
+  "gates": {},
+  "issues": [],
+  "needs_human_review": false,
+  "blocking": false,
+  "external_ready": false,
+  "external_readiness_reason": "human review/Gold approval not performed by S2",
+  "branches": {},
+  "route_trace": [
+    {
+      "node": "single.generate",
+      "status": "completed",
+      "route": null,
+      "budget": {
+        "max_requests": 32,
+        "max_total_tokens": 20000000,
+        "request_count": 1,
+        "retry_count": 0,
+        "remaining_requests": 31,
+        "remaining_tokens": 19999985,
+        "exhausted": false,
+        "charged_total_tokens": 15,
+        "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+        "actual_prompt_tokens_known": 10,
+        "actual_output_tokens_known": 5,
+        "actual_total_tokens_known": 15,
+        "usage_missing_calls": 0,
+        "transport_retry_count": 0,
+        "structure_repair_request_count": 0,
+        "revision_request_count": 0,
+        "run_elapsed_seconds": 0.07799999999997453,
+        "node_elapsed_seconds": 0.047000000000025466,
+        "node_scope_id": "071187d16dc24f518e45c8e9387754fd.single",
+        "node_role": "single",
+        "node_effective_seconds": 1200,
+        "node_deadline_run_elapsed_seconds": 1200.031,
+        "effective_deadline_run_elapsed_seconds": 1200.031,
+        "effective_request_timeout_seconds": 10.0,
+        "research_profile_version": "research-minimal-v2",
+        "research_total_seconds": 1200,
+        "research_output_caps": {
+          "body": 640,
+          "grounding": 1800,
+          "single": 1800
+        },
+        "configured_max_output_tokens": 1800,
+        "effective_max_output_tokens": null
+      }
+    },
+    {
+      "node": "single.effective",
+      "status": "completed",
+      "route": null,
+      "budget": {
+        "max_requests": 32,
+        "max_total_tokens": 20000000,
+        "request_count": 1,
+        "retry_count": 0,
+        "remaining_requests": 31,
+        "remaining_tokens": 19999985,
+        "exhausted": false,
+        "charged_total_tokens": 15,
+        "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+        "actual_prompt_tokens_known": 10,
+        "actual_output_tokens_known": 5,
+        "actual_total_tokens_known": 15,
+        "usage_missing_calls": 0,
+        "transport_retry_count": 0,
+        "structure_repair_request_count": 0,
+        "revision_request_count": 0,
+        "run_elapsed_seconds": 0.0929999999998472,
+        "node_elapsed_seconds": null,
+        "node_scope_id": null,
+        "node_role": null,
+        "node_effective_seconds": null,
+        "node_deadline_run_elapsed_seconds": null,
+        "effective_deadline_run_elapsed_seconds": 3600.0,
+        "effective_request_timeout_seconds": 10.0,
+        "research_profile_version": "research-minimal-v2",
+        "research_total_seconds": 1200,
+        "research_output_caps": {
+          "body": 640,
+          "grounding": 1800,
+          "single": 1800
+        },
+        "configured_max_output_tokens": 1800,
+        "effective_max_output_tokens": null
+      }
+    },
+    {
+      "node": "terminal",
+      "status": "completed",
+      "route": null,
+      "budget": {
+        "max_requests": 32,
+        "max_total_tokens": 20000000,
+        "request_count": 1,
+        "retry_count": 0,
+        "remaining_requests": 31,
+        "remaining_tokens": 19999985,
+        "exhausted": false,
+        "charged_total_tokens": 15,
+        "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+        "actual_prompt_tokens_known": 10,
+        "actual_output_tokens_known": 5,
+        "actual_total_tokens_known": 15,
+        "usage_missing_calls": 0,
+        "transport_retry_count": 0,
+        "structure_repair_request_count": 0,
+        "revision_request_count": 0,
+        "run_elapsed_seconds": 0.1089999999999236,
+        "node_elapsed_seconds": null,
+        "node_scope_id": null,
+        "node_role": null,
+        "node_effective_seconds": null,
+        "node_deadline_run_elapsed_seconds": null,
+        "effective_deadline_run_elapsed_seconds": 3600.0,
+        "effective_request_timeout_seconds": 10.0,
+        "research_profile_version": "research-minimal-v2",
+        "research_total_seconds": 1200,
+        "research_output_caps": {
+          "body": 640,
+          "grounding": 1800,
+          "single": 1800
+        },
+        "configured_max_output_tokens": 1800,
+        "effective_max_output_tokens": null
+      }
+    }
+  ],
+  "handoffs": [
+    {
+      "handoff_id": "frozen_inputs->single.generate:packet",
+      "run_id": "071187d16dc24f518e45c8e9387754fd",
+      "upstream_node": "frozen_inputs",
+      "downstream_node": "single.generate",
+      "required_artifact_id": "packet",
+      "required_artifact_version": 1,
+      "required_artifact_hash": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+      "dependency_ids": [
+        "packet"
+      ],
+      "branch_rule": "always",
+      "expected": true,
+      "status": "succeeded",
+      "received_artifact_ref": {
+        "artifact_id": "packet",
+        "artifact_version": 1,
+        "sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03"
+      },
+      "occurred_at_utc": "2026-09-07T18:47:58.934141+00:00",
+      "within_budget": true,
+      "failure_reason": null
+    },
+    {
+      "handoff_id": "frozen_inputs->single.generate:brief",
+      "run_id": "071187d16dc24f518e45c8e9387754fd",
+      "upstream_node": "frozen_inputs",
+      "downstream_node": "single.generate",
+      "required_artifact_id": "brief",
+      "required_artifact_version": 1,
+      "required_artifact_hash": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+      "dependency_ids": [
+        "brief"
+      ],
+      "branch_rule": "always",
+      "expected": true,
+      "status": "succeeded",
+      "received_artifact_ref": {
+        "artifact_id": "brief",
+        "artifact_version": 1,
+        "sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4"
+      },
+      "occurred_at_utc": "2026-09-07T18:47:58.934141+00:00",
+      "within_budget": true,
+      "failure_reason": null
+    },
+    {
+      "handoff_id": "single.generate->single.effective:single.initial",
+      "run_id": "071187d16dc24f518e45c8e9387754fd",
+      "upstream_node": "single.generate",
+      "downstream_node": "single.effective",
+      "required_artifact_id": "single.initial",
+      "required_artifact_version": 1,
+      "required_artifact_hash": "45c0e871593b7582732afa24ed0ad04f54e30cfefbbfc11fdd98f1d8999ef170",
+      "dependency_ids": [
+        "single.initial"
+      ],
+      "branch_rule": "always",
+      "expected": true,
+      "status": "succeeded",
+      "received_artifact_ref": {
+        "artifact_id": "single.initial",
+        "artifact_version": 1,
+        "sha256": "45c0e871593b7582732afa24ed0ad04f54e30cfefbbfc11fdd98f1d8999ef170"
+      },
+      "occurred_at_utc": "2026-09-07T18:47:58.979741+00:00",
+      "within_budget": true,
+      "failure_reason": null
+    },
+    {
+      "handoff_id": "single.effective->terminal:single.effective",
+      "run_id": "071187d16dc24f518e45c8e9387754fd",
+      "upstream_node": "single.effective",
+      "downstream_node": "terminal",
+      "required_artifact_id": "single.effective",
+      "required_artifact_version": 1,
+      "required_artifact_hash": "45c0e871593b7582732afa24ed0ad04f54e30cfefbbfc11fdd98f1d8999ef170",
+      "dependency_ids": [
+        "single.effective"
+      ],
+      "branch_rule": "always",
+      "expected": true,
+      "status": "succeeded",
+      "received_artifact_ref": {
+        "artifact_id": "single.effective",
+        "artifact_version": 1,
+        "sha256": "45c0e871593b7582732afa24ed0ad04f54e30cfefbbfc11fdd98f1d8999ef170"
+      },
+      "occurred_at_utc": "2026-09-07T18:47:58.994914+00:00",
+      "within_budget": true,
+      "failure_reason": null
+    }
+  ],
+  "collaboration_applicability": "not_applicable"
+}

@@ -1,0 +1,95 @@
+{
+  "supervisor_plan": {
+    "plan_summary": "Execute the fixed five specialist roles once in a finite, auditable dependency order.",
+    "tasks": [
+      {
+        "task_id": "research_task",
+        "agent_role": "research",
+        "objective": "Collect controlled market, customer, and competitor evidence while separating supported findings from assumptions.",
+        "input_requirements": [
+          "user_brief"
+        ],
+        "expected_output": "A schema-validated ResearchAnalysis packet and traceable Web sources.",
+        "depends_on": []
+      },
+      {
+        "task_id": "strategy_task",
+        "agent_role": "strategy",
+        "objective": "Develop evidence-aware positioning, business-model, go-to-market, and moat hypotheses from the validated inputs.",
+        "input_requirements": [
+          "user_brief",
+          "research_analysis"
+        ],
+        "expected_output": "A schema-validated StrategyAnalysis packet.",
+        "depends_on": [
+          "research_task"
+        ]
+      },
+      {
+        "task_id": "finance_task",
+        "agent_role": "finance",
+        "objective": "Build cautious revenue, cost, unit-economics, and break-even assumptions with explicit validation gaps.",
+        "input_requirements": [
+          "user_brief",
+          "research_analysis",
+          "strategy_analysis"
+        ],
+        "expected_output": "A schema-validated FinanceAssumptions packet.",
+        "depends_on": [
+          "research_task",
+          "strategy_task"
+        ]
+      },
+      {
+        "task_id": "writer_task",
+        "agent_role": "writer",
+        "objective": "Assemble the complete proposal from validated specialist packets and the dynamically supplied evidence whitelist.",
+        "input_requirements": [
+          "user_brief",
+          "research_analysis",
+          "strategy_analysis",
+          "finance_assumptions",
+          "web_sources",
+          "evidence_chunks"
+        ],
+        "expected_output": "A schema-validated, citation-checked ProposalDraft.",
+        "depends_on": [
+          "research_task",
+          "strategy_task",
+          "finance_task"
+        ]
+      },
+      {
+        "task_id": "critic_task",
+        "agent_role": "critic",
+        "objective": "Review the proposal for logic, financial consistency, evidence quality, and unresolved citation gaps without rewriting it.",
+        "input_requirements": [
+          "proposal_draft",
+          "source_metadata"
+        ],
+        "expected_output": "A schema-validated CritiqueReport.",
+        "depends_on": [
+          "writer_task"
+        ]
+      }
+    ],
+    "selected_agents": [
+      "research",
+      "strategy",
+      "finance",
+      "writer",
+      "critic"
+    ],
+    "skipped_agents": [],
+    "needs_human_review": []
+  },
+  "current_step": "supervisor",
+  "product_acceptance": {
+    "policy": "product-per-agent-one-correction-v1",
+    "corrections_allowed_per_agent": 1,
+    "corrections": {},
+    "correction_events": [],
+    "unresolved_issues": [],
+    "status": "accepted"
+  }
+}

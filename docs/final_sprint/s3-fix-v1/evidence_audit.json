@@ -1,0 +1,498 @@
+{
+  "package": "S3",
+  "scope": "audit_and_precise_repair",
+  "status": "runtime_mitigation_verified_budget_decision_pending",
+  "same_native_payload_except_num_gpu": true,
+  "compared_expected_input_tokens": 31344,
+  "compared_change": {
+    "options.num_gpu": "omitted (auto) -> 0 (CPU)"
+  },
+  "root_cause_boundary": "The failure is reproduced on mixed CPU/GPU inference and absent on the CPU-only control. This does not identify or fix a specific upstream kernel.",
+  "diagnostics": [
+    {
+      "run": "diagnostic_01_raw_short",
+      "mode": "raw-short",
+      "result": {
+        "status": "passed",
+        "elapsed_seconds": 10.34399999998277,
+        "budget": {
+          "max_requests": 18,
+          "max_total_tokens": 160000,
+          "request_count": 1,
+          "retry_count": 0,
+          "remaining_requests": 17,
+          "remaining_tokens": 159631,
+          "exhausted": false,
+          "charged_total_tokens": 369,
+          "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+          "actual_prompt_tokens_known": 363,
+          "actual_output_tokens_known": 6,
+          "actual_total_tokens_known": 369,
+          "usage_missing_calls": 0,
+          "transport_retry_count": 0,
+          "structure_repair_request_count": 0,
+          "revision_request_count": 0,
+          "run_elapsed_seconds": 10.34399999998277,
+          "node_elapsed_seconds": null,
+          "node_scope_id": null
+        }
+      },
+      "resources": {
+        "status": "passed",
+        "reason": null,
+        "sample_count": 3,
+        "sample_interval_seconds": 5.0,
+        "baseline": {
+          "ram_total_bytes": 16969424896,
+          "ram_available_bytes": 6969765888,
+          "pagefile_used_bytes": 505413632,
+          "gpu_used_bytes": 0,
+          "gpu_total_bytes": 2147483648,
+          "loaded_models": [],
+          "missing": {}
+        },
+        "maximum_observed_sample_gap_seconds": 8.640999999974156,
+        "min_available_ram_bytes": 4262662144,
+        "peak_ram_used_bytes": 12706762752,
+        "peak_gpu_used_bytes": 504365056,
+        "peak_pagefile_used_bytes": 505413632,
+        "peak_pagefile_delta_bytes": 0,
+        "missing_observations": []
+      },
+      "calls": 1,
+      "native_response": {
+        "http_status": 200,
+        "body": {
+          "model": "granite-h-micro-32k",
+          "created_at": "2026-09-06T22:28:53.5979821Z",
+          "response": "{\"ok\":true}",
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 10298502000,
+          "load_duration": 4393884400,
+          "prompt_eval_count": 363,
+          "prompt_eval_duration": 5455057000,
+          "eval_count": 6,
+          "eval_duration": 445148000
+        },
+        "mode": "raw-short",
+        "expected_prompt_tokens": 363
+      }
+    },
+    {
+      "run": "diagnostic_02_chat_long",
+      "mode": "chat-long",
+      "result": {
+        "status": "failed",
+        "error_type": "ProviderFailure",
+        "elapsed_seconds": 474.0460000000021,
+        "budget": {
+          "max_requests": 18,
+          "max_total_tokens": 160000,
+          "request_count": 1,
+          "retry_count": 0,
+          "remaining_requests": 17,
+          "remaining_tokens": 95110,
+          "exhausted": false,
+          "charged_total_tokens": 64890,
+          "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+          "actual_prompt_tokens_known": 0,
+          "actual_output_tokens_known": 0,
+          "actual_total_tokens_known": 0,
+          "usage_missing_calls": 1,
+          "transport_retry_count": 0,
+          "structure_repair_request_count": 0,
+          "revision_request_count": 0,
+          "run_elapsed_seconds": 474.06200000000536,
+          "node_elapsed_seconds": 474.0460000000021,
+          "node_scope_id": "b7841085-ce87-4bfa-af86-de9c08658221.diagnostic"
+        },
+        "independent_probes_may_continue": false
+      },
+      "resources": {
+        "status": "passed",
+        "reason": null,
+        "sample_count": 77,
+        "sample_interval_seconds": 5.0,
+        "baseline": {
+          "ram_total_bytes": 16969424896,
+          "ram_available_bytes": 7073890304,
+          "pagefile_used_bytes": 505413632,
+          "gpu_used_bytes": 0,
+          "gpu_total_bytes": 2147483648,
+          "loaded_models": [],
+          "missing": {}
+        },
+        "maximum_observed_sample_gap_seconds": 7.828000000008615,
+        "min_available_ram_bytes": 4407767040,
+        "peak_ram_used_bytes": 12561657856,
+        "peak_gpu_used_bytes": 552599552,
+        "peak_pagefile_used_bytes": 514850816,
+        "peak_pagefile_delta_bytes": 9437184,
+        "missing_observations": [
+          {
+            "loaded_models": "ConnectionError"
+          }
+        ]
+      },
+      "calls": 1,
+      "native_response": {
+        "http_status": 200,
+        "body": {
+          "model": "granite-h-micro-32k",
+          "created_at": "2026-09-06T22:37:20.531859Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n"
+          },
+          "done": false
+        },
+        "mode": "chat-long",
+        "expected_prompt_tokens": 31344
+      }
+    },
+    {
+      "run": "diagnostic_03_chat_4k",
+      "mode": "chat-4k",
+      "result": {
+        "status": "passed",
+        "elapsed_seconds": 49.953000000008615,
+        "budget": {
+          "max_requests": 18,
+          "max_total_tokens": 160000,
+          "request_count": 1,
+          "retry_count": 0,
+          "remaining_requests": 17,
+          "remaining_tokens": 155551,
+          "exhausted": false,
+          "charged_total_tokens": 4449,
+          "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+          "actual_prompt_tokens_known": 4440,
+          "actual_output_tokens_known": 9,
+          "actual_total_tokens_known": 4449,
+          "usage_missing_calls": 0,
+          "transport_retry_count": 0,
+          "structure_repair_request_count": 0,
+          "revision_request_count": 0,
+          "run_elapsed_seconds": 49.953000000008615,
+          "node_elapsed_seconds": null,
+          "node_scope_id": null
+        }
+      },
+      "resources": {
+        "status": "passed",
+        "reason": null,
+        "sample_count": 10,
+        "sample_interval_seconds": 5.0,
+        "baseline": {
+          "ram_total_bytes": 16969424896,
+          "ram_available_bytes": 7009263616,
+          "pagefile_used_bytes": 513802240,
+          "gpu_used_bytes": 0,
+          "gpu_total_bytes": 2147483648,
+          "loaded_models": [],
+          "missing": {}
+        },
+        "maximum_observed_sample_gap_seconds": 8.0,
+        "min_available_ram_bytes": 4303425536,
+        "peak_ram_used_bytes": 12665999360,
+        "peak_gpu_used_bytes": 550502400,
+        "peak_pagefile_used_bytes": 513802240,
+        "peak_pagefile_delta_bytes": 0,
+        "missing_observations": []
+      },
+      "calls": 1,
+      "native_response": {
+        "http_status": 200,
+        "body": {
+          "model": "granite-h-micro-32k",
+          "created_at": "2026-09-06T22:39:24.9742414Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"ok\": true\n}"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 49907160300,
+          "load_duration": 4347970800,
+          "prompt_eval_count": 4440,
+          "prompt_eval_duration": 44503840000,
+          "eval_count": 9,
+          "eval_duration": 1043710000
+        },
+        "mode": "chat-4k",
+        "expected_prompt_tokens": 4440
+      }
+    },
+    {
+      "run": "diagnostic_04_chat_long_cpu",
+      "mode": "chat-long-cpu",
+      "result": {
+        "status": "passed",
+        "elapsed_seconds": 1006.6719999999914,
+        "budget": {
+          "max_requests": 18,
+          "max_total_tokens": 160000,
+          "request_count": 1,
+          "retry_count": 0,
+          "remaining_requests": 17,
+          "remaining_tokens": 128639,
+          "exhausted": false,
+          "charged_total_tokens": 31361,
+          "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+          "actual_prompt_tokens_known": 31344,
+          "actual_output_tokens_known": 17,
+          "actual_total_tokens_known": 31361,
+          "usage_missing_calls": 0,
+          "transport_retry_count": 0,
+          "structure_repair_request_count": 0,
+          "revision_request_count": 0,
+          "run_elapsed_seconds": 1006.6719999999914,
+          "node_elapsed_seconds": null,
+          "node_scope_id": null
+        }
+      },
+      "resources": {
+        "status": "passed",
+        "reason": null,
+        "sample_count": 141,
+        "sample_interval_seconds": 5.0,
+        "baseline": {
+          "ram_total_bytes": 16969424896,
+          "ram_available_bytes": 7014739968,
+          "pagefile_used_bytes": 513802240,
+          "gpu_used_bytes": 0,
+          "gpu_total_bytes": 2147483648,
+          "loaded_models": [],
+          "missing": {}
+        },
+        "maximum_observed_sample_gap_seconds": 8.985000000015134,
+        "min_available_ram_bytes": 4357718016,
+        "peak_ram_used_bytes": 12611706880,
+        "peak_gpu_used_bytes": 0,
+        "peak_pagefile_used_bytes": 513802240,
+        "peak_pagefile_delta_bytes": 0,
+        "missing_observations": []
+      },
+      "calls": 1,
+      "native_response": {
+        "http_status": 200,
+        "body": {
+          "model": "granite-h-micro-32k",
+          "created_at": "2026-09-06T22:57:42.4771003Z",
+          "message": {
+            "role": "assistant",
+            "content": "{\n            \t\t \t\t\t  \"ok\"\n                 :\n\n\t\t\t\t\t\ttrue\n            \t\t \t\t\t  }"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 1006565490500,
+          "load_duration": 2110581800,
+          "prompt_eval_count": 31344,
+          "prompt_eval_duration": 1000076508000,
+          "eval_count": 17,
+          "eval_duration": 4313709000
+        },
+        "mode": "chat-long-cpu",
+        "expected_prompt_tokens": 31344
+      }
+    }
+  ],
+  "installed_warmup": {
+    "package": "S3",
+    "status": "phase_passed",
+    "requested_phase": "warmup",
+    "phases": {
+      "warmup": {
+        "status": "passed",
+        "elapsed_seconds": 12.437999999994645,
+        "budget": {
+          "max_requests": 18,
+          "max_total_tokens": 160000,
+          "request_count": 1,
+          "retry_count": 0,
+          "remaining_requests": 17,
+          "remaining_tokens": 159659,
+          "exhausted": false,
+          "charged_total_tokens": 341,
+          "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+          "actual_prompt_tokens_known": 332,
+          "actual_output_tokens_known": 9,
+          "actual_total_tokens_known": 341,
+          "usage_missing_calls": 0,
+          "transport_retry_count": 0,
+          "structure_repair_request_count": 0,
+          "revision_request_count": 0,
+          "run_elapsed_seconds": 12.437999999994645,
+          "node_elapsed_seconds": null,
+          "node_scope_id": null
+        }
+      }
+    },
+    "resources": {
+      "status": "passed",
+      "reason": null,
+      "sample_count": 4,
+      "sample_interval_seconds": 5.0,
+      "baseline": {
+        "ram_total_bytes": 16969424896,
+        "ram_available_bytes": 7141351424,
+        "pagefile_used_bytes": 508559360,
+        "gpu_used_bytes": 0,
+        "gpu_total_bytes": 2147483648,
+        "loaded_models": [],
+        "missing": {}
+      },
+      "maximum_observed_sample_gap_seconds": 7.39000000001397,
+      "min_available_ram_bytes": 4625420288,
+      "peak_ram_used_bytes": 12344004608,
+      "peak_gpu_used_bytes": 0,
+      "peak_pagefile_used_bytes": 508559360,
+      "peak_pagefile_delta_bytes": 0,
+      "missing_observations": []
+    },
+    "metadata": {
+      "ollama_version": "0.33.2",
+      "model_digest": "eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+      "model_metadata": {
+        "name": "granite-h-micro-32k:latest",
+        "model": "granite-h-micro-32k:latest",
+        "modified_at": "2026-09-06T23:31:10.2530656+02:00",
+        "size": 1942571795,
+        "digest": "eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+        "details": {
+          "parent_model": "hf.co/ibm-granite/granite-4.0-h-micro-GGUF:Q4_K_M",
+          "format": "gguf",
+          "family": "granitehybrid",
+          "families": [
+            "granitehybrid"
+          ],
+          "parameter_size": "3.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 1048576,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      },
+      "parameters": {
+        "num_ctx": "32768",
+        "temperature": "0"
+      },
+      "model_info": {
+        "general.architecture": "granitehybrid",
+        "general.file_type": 15,
+        "general.license": "apache-2.0",
+        "general.parameter_count": 3191396096,
+        "general.quantization_version": 2,
+        "general.size_label": "3.2B",
+        "general.tags": null,
+        "general.type": "model",
+        "granitehybrid.attention.head_count": 32,
+        "granitehybrid.attention.head_count_kv": null,
+        "granitehybrid.attention.layer_norm_rms_epsilon": 1e-05,
+        "granitehybrid.attention.scale": 0.015625,
+        "granitehybrid.block_count": 40,
+        "granitehybrid.context_length": 1048576,
+        "granitehybrid.embedding_length": 2048,
+        "granitehybrid.embedding_scale": 12,
+        "granitehybrid.expert_count": 0,
+        "granitehybrid.expert_shared_feed_forward_length": 8192,
+        "granitehybrid.expert_used_count": 0,
+        "granitehybrid.feed_forward_length": 8192,
+        "granitehybrid.logit_scale": 8,
+        "granitehybrid.residual_scale": 0.22,
+        "granitehybrid.rope.dimension_count": 64,
+        "granitehybrid.rope.freq_base": 10000,
+        "granitehybrid.rope.scaling.finetuned": false,
+        "granitehybrid.ssm.conv_kernel": 4,
+        "granitehybrid.ssm.group_count": 1,
+        "granitehybrid.ssm.inner_size": 4096,
+        "granitehybrid.ssm.state_size": 128,
+        "granitehybrid.ssm.time_step_rank": 64,
+        "granitehybrid.vocab_size": 100352,
+        "tokenizer.ggml.add_bos_token": false,
+        "tokenizer.ggml.bos_token_id": 100257,
+        "tokenizer.ggml.eos_token_id": 100257,
+        "tokenizer.ggml.merges": null,
+        "tokenizer.ggml.model": "gpt2",
+        "tokenizer.ggml.padding_token_id": 100256,
+        "tokenizer.ggml.pre": "dbrx",
+        "tokenizer.ggml.token_type": null,
+        "tokenizer.ggml.tokens": null,
+        "tokenizer.ggml.unknown_token_id": 100269
+      },
+      "details": {
+        "parent_model": "hf.co/ibm-granite/granite-4.0-h-micro-GGUF:Q4_K_M",
+        "format": "gguf",
+        "family": "granitehybrid",
+        "families": [
+          "granitehybrid"
+        ],
+        "parameter_size": "3.2B",
+        "quantization_level": "Q4_K_M"
+      },
+      "loaded_models": [],
+      "context_status": "configured_not_yet_measured"
+    },
+    "config": {
+      "endpoint": "http://127.0.0.1:11434",
+      "model_alias": "granite-h-micro-32k",
+      "source_model": "hf.co/ibm-granite/granite-4.0-h-micro-GGUF:Q4_K_M",
+      "quantization": "Q4_K_M",
+      "context_tokens": 32768,
+      "model_config_version": "granite-h-micro-q4km-32k-cpu-s3-v2",
+      "gpu_layers": 0,
+      "context_probe_mode": "chat",
+      "max_requests": 18,
+      "max_total_tokens": 160000,
+      "max_output_tokens": 1024,
+      "max_prompt_chars": 90000,
+      "node_seconds": 1200.0,
+      "run_seconds": 5400.0,
+      "request_seconds": 1200.0,
+      "sample_seconds": 5.0,
+      "status": "preflight_candidate_not_frozen"
+    },
+    "model_calls": 1,
+    "formal_runs_started": 0,
+    "server_stop": {
+      "status": "owned_process_tree_terminated",
+      "pid": 17032,
+      "lease_released": false,
+      "restart_requires_explicit_reconciliation": true
+    },
+    "context_claim": "allocated 32768; measured accepted input is reported separately",
+    "input_status": "pending user approval; non-formal preflight only",
+    "next_package_started": false,
+    "next_action": "review feasibility evidence before dependent work"
+  },
+  "installed_payload_replay": {
+    "kind": "offline_exact_native_request_replay",
+    "status": "passed",
+    "real_new_calls": 0,
+    "entire_native_payload_identical": true,
+    "expected_input_tokens": 31344,
+    "recorded_output_tokens": 17,
+    "recorded_response_validated": true,
+    "context_probe_token_count_delta": 0,
+    "source": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-fix-v1\\diagnostic_04_chat_long_cpu\\probe\\diagnostic\\events.jsonl",
+    "scope": "Proves the installed fix emits the already successful request; not a new real preflight or full D qualification."
+  },
+  "repair_real_calls": 5,
+  "gemini_calls": 0,
+  "formal_runs_started": 0,
+  "complete_proposal_produced": false,
+  "real_components": "not_run_budget_conflict",
+  "complete_d_smoke": "not_run_budget_conflict",
+  "budget_changed": false,
+  "next_package_started": false,
+  "timing_limitations": "CPU control included a brief offline 43-test run (8.08s) and tokenizer sizing. These timings are diagnostic observations, not isolated performance benchmarks.",
+  "verification": {
+    "staged_full_suite": "596 passed, 25 deselected, 3 subtests passed in 93.73s",
+    "installed_targeted_suite": "48 passed in 4.16s"
+  },
+  "dependencies": "No packages/runtime/model weights installed or upgraded in this repair."
+}

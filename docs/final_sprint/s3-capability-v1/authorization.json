@@ -1,0 +1,18 @@
+{
+  "scope": "ai_education_slm_nonformal_4h",
+  "approved": true,
+  "approved_limits": {
+    "run_seconds": 14400,
+    "node_seconds": 14400,
+    "request_seconds": 14400,
+    "max_output_tokens": 8192,
+    "max_requests": 36,
+    "max_total_tokens": 500000,
+    "max_prompt_chars": 90000
+  },
+  "time_limit_14400_explicitly_approved": true,
+  "remaining_decision": null,
+  "user_time_instruction": "用户批准AI教育SLM生成计划书的时间上限为4小时",
+  "user_confirmation": "确认，请你开始用SLM生成计划书。用户引用并确认：仅本次 SLM 测试采用单次输出8192 tokens、最多36次请求、累计50万tokens，各节点共享4小时总时限。正式 A–D 配置保持原值。",
+  "recorded_at_utc": "2026-09-07T06:22:39.9992774Z"
+}

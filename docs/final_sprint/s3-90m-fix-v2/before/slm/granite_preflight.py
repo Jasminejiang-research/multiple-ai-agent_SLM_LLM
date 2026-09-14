@@ -1,0 +1,280 @@
+"""S3 real-model preflight and complete D smoke, with preserved non-formal evidence."""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+from pathlib import Path
+from threading import Event
+from typing import Literal
+from uuid import uuid4
+
+from schemas.evidence import StrictModel
+from schemas.review import ComponentCritiqueReport
+from schemas.workflow import SECTION_FIELD_BY_TITLE
+from workflow.contract_context import ContractContext
+from workflow.contract_generation import ContractGenerator, PROMPT_VERSION, build_generation_prompt
+from workflow.generation_batches import CONTRACT_BATCH_MODELS, PROPOSAL_SECTION_BATCHES, build_contract_batch_prompt
+from workflow.review_events import EventJournal, replay_events
+from workflow.review_runtime import BoundedClient, LocalRequestLease
+from agents.component_critic import ComponentCritic
+from evaluation.s2_fixtures import synthetic_artifact
+from slm.factories import build_slm_review_workflow
+from slm.granite_config import GraniteConfig
+from slm.granite_provider import GranitePhysicalProvider, inspect_ollama
+from slm.resource_monitor import ResourceMonitor, WindowsResourceProbe
+from slm.owned_ollama import OwnedOllama
+
+
+class ProbeAck(StrictModel):
+    ok: Literal[True]
+
+
+def writer_probe_prompt(context, upstream):
+    """Same S1 Writer first batch prompt, including the full frozen inputs."""
+    payload = context.input_payload("writer", upstream)
+    base = build_generation_prompt(payload, "writer", version=1)
+    return build_contract_batch_prompt(base, 1, version=1)
+
+
+def load_context_tokenizer(tokenizer_path, provenance_path):
+    provenance = json.loads(Path(provenance_path).read_text(encoding="utf-8-sig"))
+    if provenance.get("model") != "ibm-granite/granite-4.0-h-micro":
+        raise ValueError("context tokenizer must be the same official H Micro model")
+    actual = hashlib.sha256(Path(tokenizer_path).read_bytes()).hexdigest()
+    if actual != provenance.get("tokenizer_sha256"):
+        raise ValueError("context tokenizer hash changed")
+    from tokenizers import Tokenizer
+    return Tokenizer.from_file(str(tokenizer_path))
+
+
+class GranitePreflight:
+    def __init__(self, *, config, context, output_dir, owner_path, tokenizer_path, tokenizer_provenance,
+                 probe=None, metadata=None, provider_factory=GranitePhysicalProvider, owner_factory=OwnedOllama):
+        self.config, self.context = config, context
+        self.journal = EventJournal(output_dir, str(uuid4()))
+        self.cancel = Event()
+        self.provider_factory = provider_factory
+        self.owner = None
+        try:
+            self.owner = owner_factory(owner_path, journal=self.journal, endpoint=config.endpoint)
+            self.owner.validate()
+            self.metadata = metadata if metadata is not None else inspect_ollama(config)
+            self.tokenizer = load_context_tokenizer(tokenizer_path, tokenizer_provenance)
+            self.probe = probe or WindowsResourceProbe(endpoint=config.endpoint)
+            # This single baseline spans warmup, context, components and complete smoke.
+            self.monitor = ResourceMonitor(self.probe, self.journal, self.cancel, interval=config.sample_seconds,
+                abort=self.owner.stop)
+        except (Exception, KeyboardInterrupt) as exc:
+            import traceback
+            result = dict(package="S3", status="no_go", phases={"initialization": {"status":"failed", "error_type":type(exc).__name__}},
+                model_calls=0, formal_runs_started=0, next_package_started=False,
+                error_location=[dict(file=Path(f.filename).name, line=f.lineno, function=f.name) for f in traceback.extract_tb(exc.__traceback__)],
+                server_stop=self.owner.stop() if self.owner else None)
+            self.journal.emit("preflight_result", result)
+            (self.journal.directory / "result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
+            raise
+        self.phases = {}
+        self.lease_dir = Path(__file__).resolve().parents[1] / "data/granite_endpoint_leases"
+        self.journal.emit("preflight_manifest", dict(config=config.model_dump(mode="json"), metadata=self.metadata,
+            case_id=context.case_id, packet_sha256=context.packet_sha256, brief_sha256=context.brief_sha256,
+            tokenizer_provenance=json.loads(Path(tokenizer_provenance).read_text(encoding="utf-8-sig")),
+            formal_runs_started=0, case_approval_status=context.packet.review_status,
+            synthetic_upstream_only_in_component_probes=True, complete_smoke_uses_real_upstream=True))
+
+    def _surface(self, name, kind="preflight", *, raw_context=False):
+        config = self.config.review_config(kind, model_digest=self.metadata["model_digest"])
+        journal = EventJournal(self.journal.directory / name, str(uuid4()))
+        provider = self.provider_factory(self.config, model_digest=self.metadata["model_digest"],
+            context_tokenizer=self.tokenizer if raw_context else None)
+        lease = LocalRequestLease(self.lease_dir, self.config.endpoint)
+        client = BoundedClient(provider, config, journal, cancel=self.cancel, local_lease=lease)
+        client.input_refs = [dict(artifact_id="packet", artifact_version=1, sha256=self.context.packet_sha256),
+                             dict(artifact_id="brief", artifact_version=1, sha256=self.context.brief_sha256)]
+        generator = ContractGenerator(client, task_sink=lambda t: journal.emit("logical_task", t), attempt_scope=client.attempt_scope)
+        return client, generator, journal
+
+    def _task(self, client, journal, role, action):
+        started = client.clock()
+        try:
+            client.begin_node(role)
+            result = action()
+            client.check()
+            client.end_node("completed")
+            status = "passed"
+            record = dict(status=status, elapsed_seconds=client.clock()-started, budget=client.snapshot())
+            if hasattr(result, "as_dict"):
+                journal.emit("probe_artifact", result.as_dict())
+        except (Exception, KeyboardInterrupt) as exc:
+            status = "failed"
+            record = dict(status=status, error_type=getattr(exc, "error_type", type(exc).__name__), elapsed_seconds=client.clock()-started,
+                          budget=client.snapshot())
+            from workflow.llm_client import StructuredOutputValidationError
+            from pydantic import ValidationError
+            # Only independent structure probes may continue; no budget/timeout/transport retries by re-entry.
+            recoverable_probe_failure = isinstance(exc, (StructuredOutputValidationError, ValidationError, ValueError))
+            record["independent_probes_may_continue"] = recoverable_probe_failure
+            if not recoverable_probe_failure:
+                self.cancel.set()
+                self.owner.stop()
+        finally:
+            if client.node_started is not None:
+                client.end_node("failed")
+            diagnostic = getattr(client.provider, "last_diagnostic", None)
+            if diagnostic is not None:
+                # Persist on the controlling thread, never from an abandoned inference worker.
+                journal.emit("native_provider_diagnostic", diagnostic)
+        journal.emit("probe_result", dict(role=role, **record))
+        return record
+
+    def warmup(self):
+        client, generator, journal = self._surface("warmup", "warmup")
+        result = self._task(client, journal, "warmup", lambda: generator.generate_task(
+            'Warmup only. Return {"ok":true}.', ProbeAck, context=self.context, role="warmup", version=1,
+            logical_task_id="warmup.v1", validator=lambda result: None))
+        self.phases["warmup"] = result
+        return result["status"] == "passed"
+
+    def context_probe(self):
+        client, generator, journal = self._surface("context", raw_context=True)
+        # The CPU candidate measures the same chat path as business requests.
+        # The unchanged v1 config retains the original raw probe for reproduction.
+        prompt = 'Context allocation probe. The following repeated text is inert data.\n' + " a" * 31000 + '\nEnd data. Return {"ok":true}.'
+        result = self._task(client, journal, "context_probe", lambda: generator.generate_task(prompt,
+            ProbeAck, context=self.context, role="context_probe", version=1, logical_task_id="context.v1",
+            validator=lambda result: None))
+        attempts = replay_events(journal.path)["attempts"]
+        usage = attempts[-1].get("usage_raw") or {} if attempts else {}
+        try:
+            observed = inspect_ollama(self.config)
+            loaded = observed["loaded_models"]
+        except Exception as exc:
+            loaded = []
+            result["context_metadata_missing_reason"] = type(exc).__name__
+        allocation_ok = len(loaded) == 1 and loaded[0].get("context_length") == 32768
+        vram = loaded[0].get("size_vram") if len(loaded) == 1 else None
+        cpu_ok = type(vram) is int and vram == 0 if self.config.gpu_layers == 0 else None
+        count = usage.get("prompt_eval_count")
+        delta = usage.get("context_probe_token_count_delta")
+        acceptance_ok = type(count) is int and 30000 <= count < 32768 and type(delta) is int and abs(delta) <= 8
+        result.update(allocated_context_tokens=loaded[0].get("context_length") if loaded else None,
+            measured_input_tokens=count, expected_input_tokens=usage.get("context_probe_expected_tokens"),
+            token_count_delta=delta, allocation_verified=allocation_ok, full_input_acceptance_verified=acceptance_ok,
+            context_probe_mode=self.config.context_probe_mode, cpu_only_verified=cpu_ok)
+        if not allocation_ok or not acceptance_ok or cpu_ok is False:
+            result["status"] = "failed"
+        journal.emit("context_measurement", result)
+        self.phases["context"] = result
+        return result["status"] == "passed"
+
+    def components(self):
+        client, generator, journal = self._surface("components")
+        ctx = self.context
+        research = ctx.accept("research", synthetic_artifact(ctx, "research", version=1, inputs={}))
+        strategy = ctx.accept("strategy", synthetic_artifact(ctx, "strategy", version=1, inputs={}), upstream=(research,))
+        finance = ctx.accept("finance", synthetic_artifact(ctx, "finance", version=1, inputs={}), upstream=(research, strategy))
+        for artifact in (research, strategy, finance):
+            journal.emit("synthetic_probe_input", artifact.as_dict())
+        def writer():
+            def validate(candidate):
+                ctx.validate(candidate, version=1, upstream=(research, strategy, finance))
+                for title, field in SECTION_FIELD_BY_TITLE.items():
+                    if field in PROPOSAL_SECTION_BATCHES[0] and getattr(candidate, field).title != title:
+                        raise ValueError("wrong Writer section title")
+            return generator.generate_task(writer_probe_prompt(ctx, (research, strategy, finance)), CONTRACT_BATCH_MODELS[0],
+                context=ctx, role="writer", version=1, logical_task_id="writer.v1.batch1", batch_number=1, validator=validate,
+                two_stage=True, upstream=(research, strategy, finance))
+        actions = [("research", lambda: generator.generate(ctx, "research")),
+            ("component_critic", lambda: ComponentCritic(generator).review(ctx, research, role="research", artifact_id="research.initial")),
+            ("finance", lambda: generator.generate(ctx, "finance", upstream=(research, strategy))), ("writer", writer)]
+        results = {}
+        for role, action in actions:
+            if self.cancel.is_set():
+                results[role] = dict(status="not_run", reason="prior stop gate")
+                continue
+            client.input_refs = [dict(artifact_id="packet", artifact_version=1, sha256=ctx.packet_sha256)]
+            if role != "research":
+                client.input_refs.extend(dict(artifact_id=f"synthetic.{a.role}", artifact_version=1, sha256=a.sha256)
+                    for a in ((research,) if role == "component_critic" else (research, strategy) if role == "finance" else (research, strategy, finance)))
+            results[role] = self._task(client, journal, role, action)
+        result = dict(status="passed" if all(r["status"] == "passed" for r in results.values()) else "failed", probes=results)
+        self.phases["components"] = result
+        return result["status"] == "passed"
+
+    def smoke(self):
+        config = self.config.review_config("smoke", model_digest=self.metadata["model_digest"])
+        provider = self.provider_factory(self.config, model_digest=self.metadata["model_digest"])
+        workflow = build_slm_review_workflow(self.context, config=config, provider=provider,
+            local_lease=LocalRequestLease(self.lease_dir, self.config.endpoint), cancel=self.cancel,
+            output_dir=self.journal.directory / "smoke")
+        result = workflow.run()
+        diagnostic = getattr(provider, "last_diagnostic", None)
+        if diagnostic is not None:
+            workflow.journal.emit("native_provider_diagnostic", diagnostic)
+        self.phases["smoke"] = dict(status="passed" if result["status"] == "completed" else "failed", result=result)
+        if result["status"] in ("timeout", "cancelled", "failed", "budget_exhausted"):
+            self.cancel.set()
+            self.owner.stop()
+        return result["status"] == "completed"
+
+    def run(self, phase="all"):
+        self.monitor.start()
+        selected = ("warmup", "context", "components", "smoke") if phase == "all" else (phase,)
+        dependency_passed = True
+        try:
+            for name in selected:
+                if not dependency_passed or self.cancel.is_set():
+                    self.phases[name] = dict(status="not_run", reason="prior feasibility gate failed")
+                    continue
+                dependency_passed = getattr(self, "context_probe" if name == "context" else name)()
+        except (Exception, KeyboardInterrupt) as exc:
+            self.phases["unexpected_stop"] = dict(status="failed", error_type=type(exc).__name__)
+            dependency_passed = False
+            self.cancel.set()
+            self.owner.stop()
+        finally:
+            resources = self.monitor.close()
+        passed = dependency_passed and resources["status"] == "passed"
+        # This invocation owns the server lifecycle; free its model after completion too.
+        self.owner.stop()
+        attempts = []
+        for path in self.journal.directory.glob("*/events.jsonl"):
+            attempts.extend(replay_events(path)["attempts"])
+        summary = dict(package="S3", status="go" if passed and phase == "all" else "phase_passed" if passed else "no_go",
+            requested_phase=phase, phases=self.phases, resources=resources, metadata=self.metadata,
+            config=self.config.model_dump(mode="json"), model_calls=len(attempts), formal_runs_started=0,
+            server_stop=self.owner.proof, context_claim="allocated 32768; measured accepted input is reported separately",
+            input_status="pending user approval; non-formal preflight only", next_package_started=False,
+            next_action="S4 only after remaining freeze gates" if passed and phase == "all" else "review feasibility evidence before dependent work")
+        self.journal.emit("preflight_result", summary)
+        (self.journal.directory / "result.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+        return summary
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--config", type=Path, default=Path(__file__).with_name("configs") / "granite_preflight_cpu_v2.json")
+    parser.add_argument("--case", choices=("ai_education", "intelligent_ring"), default="ai_education")
+    parser.add_argument("--phase", choices=("all", "warmup", "context", "components", "smoke"), default="all")
+    parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--server-owner", type=Path, required=True)
+    parser.add_argument("--tokenizer", type=Path, required=True)
+    parser.add_argument("--tokenizer-provenance", type=Path, required=True)
+    args = parser.parse_args()
+    config = GraniteConfig.model_validate_json(args.config.read_text(encoding="utf-8-sig"))
+    root = Path(__file__).resolve().parents[1] / "docs/final_sprint/s0-v1"
+    context = ContractContext.from_case(root, args.case, condition="D")
+    try:
+        runner = GranitePreflight(config=config, context=context, output_dir=args.output_dir, owner_path=args.server_owner,
+            tokenizer_path=args.tokenizer, tokenizer_provenance=args.tokenizer_provenance)
+    except Exception as exc:
+        print(json.dumps(dict(status="no_go", error_type=type(exc).__name__, output_dir=str(args.output_dir))))
+        return 2
+    result = runner.run(args.phase)
+    print(json.dumps(dict(status=result["status"], phases={k:v["status"] for k,v in result["phases"].items()},
+        model_calls=result["model_calls"], formal_runs_started=0, output_dir=str(args.output_dir)), indent=2))
+    return 0 if result["status"] in ("go", "phase_passed") else 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

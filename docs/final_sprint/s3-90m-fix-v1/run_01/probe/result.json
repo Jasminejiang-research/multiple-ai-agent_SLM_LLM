@@ -1,0 +1,89 @@
+{
+  "case_id": "ai_education",
+  "formal_eligible": false,
+  "formal_runs_started": 0,
+  "gemini_calls": 0,
+  "public_config_changed": false,
+  "complete_proposal_produced": false,
+  "phases": {
+    "native_schema_probe": {
+      "status": "not_run",
+      "reason": "Prior native bounds observed; actual two-stage Research exercises this wire schema"
+    },
+    "research_probe": {
+      "status": "failed",
+      "error_type": "WallClockExceeded",
+      "error": "shared node/run wall-clock budget exhausted",
+      "budget": {
+        "max_requests": 23,
+        "max_total_tokens": 308677,
+        "request_count": 3,
+        "retry_count": 0,
+        "remaining_requests": 20,
+        "remaining_tokens": 203431,
+        "exhausted": false,
+        "charged_total_tokens": 105246,
+        "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+        "actual_prompt_tokens_known": 15049,
+        "actual_output_tokens_known": 6978,
+        "actual_total_tokens_known": 22027,
+        "usage_missing_calls": 1,
+        "transport_retry_count": 0,
+        "structure_repair_request_count": 1,
+        "revision_request_count": 0,
+        "run_elapsed_seconds": 5398.469000000041,
+        "node_elapsed_seconds": null,
+        "node_scope_id": null
+      }
+    },
+    "full_d": {
+      "status": "not_run",
+      "reason": "native/Research prerequisite did not pass"
+    }
+  },
+  "per_plan_deadline_seconds": 5400.0,
+  "deadline_scope": "this fresh SLM recovery including Research prerequisite; separate from any LLM run",
+  "status": "failed",
+  "elapsed_seconds": 5405.1720000000205,
+  "budget": {
+    "this_run_request_count": 3,
+    "this_run_charged_total_tokens": 105246,
+    "this_run_elapsed_seconds": 5405.1720000000205,
+    "cumulative_request_count": 16,
+    "cumulative_charged_total_tokens": 296569,
+    "cumulative_elapsed_seconds": 10193.482999999978,
+    "this_run_time_limit_seconds": 5400.0,
+    "cumulative_time_limit_seconds": 14400
+  },
+  "resources": {
+    "status": "passed",
+    "reason": null,
+    "sample_count": 415,
+    "sample_interval_seconds": 5.0,
+    "baseline": {
+      "ram_total_bytes": 16969424896,
+      "ram_available_bytes": 5085536256,
+      "pagefile_used_bytes": 384397312,
+      "gpu_used_bytes": 0,
+      "gpu_total_bytes": 2147483648,
+      "loaded_models": [],
+      "missing": {}
+    },
+    "maximum_observed_sample_gap_seconds": 2423.4369999999763,
+    "min_available_ram_bytes": 1664577536,
+    "peak_ram_used_bytes": 15304847360,
+    "peak_gpu_used_bytes": 0,
+    "peak_pagefile_used_bytes": 407379968,
+    "peak_pagefile_delta_bytes": 22982656,
+    "missing_observations": []
+  },
+  "server_stop": {
+    "status": "owned_process_tree_terminated",
+    "pid": 16088,
+    "identity_method": "native_handle_and_persisted_identity",
+    "lease_released": false,
+    "restart_requires_explicit_reconciliation": true
+  },
+  "deadline_fired": false,
+  "http_requests": 3
+}

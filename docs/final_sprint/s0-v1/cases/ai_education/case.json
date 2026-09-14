@@ -1,0 +1,11 @@
+{
+  "case_id": "ai_education",
+  "case_version": "case-v1-s0",
+  "candidate_category": "ai_education",
+  "review_status": "pending",
+  "approval_record": null,
+  "brief_sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+  "packet_sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+  "proposed_by": "Codex; user has not approved names, complete brief, financial assumptions or evidence",
+  "formal_execution_allowed": false
+}

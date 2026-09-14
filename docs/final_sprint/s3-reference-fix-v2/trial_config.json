@@ -1,0 +1,19 @@
+{
+  "endpoint": "http://127.0.0.1:11434",
+  "model_alias": "granite-h-micro-32k",
+  "source_model": "hf.co/ibm-granite/granite-4.0-h-micro-GGUF:Q4_K_M",
+  "quantization": "Q4_K_M",
+  "context_tokens": 32768,
+  "model_config_version": "granite-h-micro-cpu-reference-fix-v2",
+  "gpu_layers": 0,
+  "context_probe_mode": "chat",
+  "max_requests": 36,
+  "max_total_tokens": 500000,
+  "max_output_tokens": 8192,
+  "max_prompt_chars": 90000,
+  "node_seconds": 14400.0,
+  "run_seconds": 14400.0,
+  "request_seconds": 14400.0,
+  "sample_seconds": 5.0,
+  "status": "nonformal_capability_trial"
+}

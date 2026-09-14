@@ -1,0 +1,181 @@
+{
+  "analysis_summary": "The analysis assesses market demand, customer profile, competitive landscape, and financial viability for an AI tutoring service targeted at MBA students in the US. It draws on evidence from the supplied packet, explicitly marking supported facts, assumptions, and evidence gaps. Confidence levels and evidence statuses are provided for each claim.",
+  "market_trends": [
+    {
+      "topic": "Adult MBA enrollment trends",
+      "finding": "Historical data on graduate degree completions (NCES) show a 16% increase in master's degrees from 2011-12 to 2021-22, but this does not directly translate to demand for an AI tutoring service as it includes broader business fields and does not reflect MBA-specific demand.",
+      "rationale": "The source (EDU-02) provides historical enrollment numbers but lacks MBA-specific data. The trend indicates growth in graduate education but cannot be assumed to validate demand for the proposed AI tutoring product.",
+      "claims": [
+        {
+          "claim_id": "market_trends_mba_enrollment",
+          "parent_claim_id": null,
+          "claim_text": "MBA enrollment is growing, but the source does not confirm MBA-specific demand for AI tutoring.",
+          "claim_type": "factual",
+          "claim_domain": "market_trends",
+          "evidence_status": "needs_validation",
+          "source_ids": ["EDU-02"],
+          "source_support": "partial",
+          "source_quality": 0.7,
+          "source_recency": 0.8,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "partial_support",
+          "content_anchor": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as business, management, marketing, and related support services, as well as culinary, entertainment, and personal services. NOTE: Data are for the 50 states and the District of Columbia. The fields shown are the five programs in which the largest numbers of master’s degrees were conferred in 2021–22. Of the master’s degrees conferred, 69 percent were concentrated in five fields of study: business (205,800 degrees, 23 percent) ...",
+          "source_anchors": [
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C1",
+              "line_start": 299,
+              "line_end": 299,
+              "snapshot_sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+              "quote": "Last Updated: May 2024"
+            },
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C2",
+              "line_start": 342,
+              "line_end": 342,
+              "snapshot_sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+              "quote": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as business, management, marketing, and related support services, as well as culinary, entertainment, and personal services."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "Understanding broader MBA enrollment trends is necessary but insufficient to assess demand for the AI tutoring service, which targets a specific segment within MBA students needing personalized case coaching.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "partial_support",
+      "confidence": "medium"
+    },
+    {
+      "topic": "Competitive landscape",
+      "finding": "Khanmigo is a known competitor in adjacent tutoring space, but its pricing and target audience are not directly comparable to the proposed MBA-specific AI tutoring service.",
+      "rationale": "The evidence (EDU-01) shows Khanmigo’s pricing and features, but it does not provide a direct comparison of MBA-specific demand or differentiation opportunities.",
+      "claims": [
+        {
+          "claim_id": "competitor_khanmigo",
+          "parent_claim_id": null,
+          "claim_text": "Khanmigo is a competitor in adjacent tutoring but not a direct substitute for MBA-specific case coaching.",
+          "claim_type": "factual",
+          "claim_domain": "competition",
+          "evidence_status": "sourced_fact",
+          "source_ids": ["EDU-01"],
+          "source_support": "direct",
+          "source_quality": 0.85,
+          "source_recency": 0.9,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 22,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you"
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "Identifying direct competitors helps assess differentiation and market positioning, but the comparison must focus on MBA-specific features and outcomes.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "directly_supported",
+      "confidence": "high"
+    }
+  ],
+  "customer_notes": [
+    {
+      "topic": "Target customer profile",
+      "finding": "The service targets US adults aged 18+ enrolled in or applying to MBA programs, with business-school instructors as potential institutional buyers.",
+      "rationale": "The brief specifies the target audience and potential buyers, providing a clear customer segment for analysis.",
+      "claims": [
+        {
+          "claim_id": "customer_profile",
+          "parent_claim_id": null,
+          "claim_text": "Target customers are US adults aged 18+ enrolled in or applying to MBA programs, with business-school instructors as potential institutional buyers.",
+          "claim_type": "factual",
+          "claim_domain": "customer_notes",
+          "evidence_status": "sourced_fact",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.0,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "target_customer",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "A precise definition of the target customer is essential for demand assessment and pricing strategy.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "no_evidence",
+      "confidence": "high"
+    }
+  ],
+  "competitor_assumptions": [
+    {
+      "topic": "Competitive differentiation",
+      "finding": "The service must differentiate from low-price broad tutoring platforms like Khanmigo, focusing on MBA-specific case coaching and personalized feedback.",
+      "rationale": "While Khanmigo offers tutoring, its pricing and features are not tailored to MBA students' needs, creating an opportunity for differentiation.",
+      "claims": [
+        {
+          "claim_id": "differentiation_mba",
+          "parent_claim_id": null,
+          "claim_text": "The AI tutoring service will differentiate by offering MBA-specific case coaching and personalized feedback, unlike Khanmigo’s broader tutoring model.",
+          "claim_type": "assumption",
+          "claim_domain": "competitor_assumptions",
+          "evidence_status": "assumption",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.6,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "unresolved",
+          "decision_critical": true,
+          "high_impact": true,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "differentiation_mba",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "Differentiation is critical for market entry and pricing strategy; however, the evidence does not provide concrete differentiation metrics.",
+          "artifact_version": 1
+        }
+      ],
+      "confidence_reason": "assumption_dominant",
+      "confidence": "medium"
+    }
+  ],
+  "needs_human_review": [
+    "Validate MBA enrollment demand with direct surveys or enrollment data.",
+    "Conduct competitive pricing analysis beyond Khanmigo.",
+    "Gather pilot user feedback on personalized case coaching efficacy.",
+    "Perform cost-benefit analysis with actual cost inputs from potential vendors."
+  ]
+}

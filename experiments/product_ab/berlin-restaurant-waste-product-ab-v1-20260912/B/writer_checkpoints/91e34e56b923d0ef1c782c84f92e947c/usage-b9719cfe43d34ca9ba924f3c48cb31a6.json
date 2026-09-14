@@ -1,0 +1,16 @@
+{
+  "identity": "367afb552f5750ceecab9e1f225259a7bc088da298e9f28a516f789d6c84573c",
+  "payload": {
+    "max_requests": 24,
+    "max_total_tokens": 420000,
+    "request_count": 10,
+    "retry_count": 1,
+    "prompt_tokens": 125173,
+    "output_tokens": 20959,
+    "total_tokens": 172856,
+    "remaining_requests": 14,
+    "remaining_tokens": 247144,
+    "exhausted": false
+  },
+  "sha256": "cbfae2eb098931c9fb04d7320e5d01a23225dc5cf59725565c432f43c04fb616"
+}

@@ -1,0 +1,237 @@
+{
+  "observed_at_utc": "2026-09-07T08:01:31.181354+00:00",
+  "phases": {
+    "native_schema_probe": {
+      "status": "passed",
+      "observed_entries": 2,
+      "distinct_entries": 1,
+      "calls": [
+        {
+          "attempt_id": "dff98e93-b9b6-4dca-b1b7-0f4a0f8e2bc0",
+          "role": "schema_probe",
+          "purpose": "generate",
+          "status": "succeeded",
+          "elapsed_seconds": 6.155999999988126,
+          "prompt_tokens": 53,
+          "output_tokens": 22,
+          "total_tokens": 75,
+          "finish_reason": "stop",
+          "error_type": null
+        }
+      ]
+    },
+    "research_probe": {
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "market_trends[0]: claim content anchor not found",
+      "calls": [
+        {
+          "attempt_id": "0282a3e7-602d-469c-b032-0de00b3daf5d",
+          "role": "research",
+          "purpose": "generate",
+          "status": "invalid_output",
+          "elapsed_seconds": 404.25,
+          "prompt_tokens": 4383,
+          "output_tokens": 2533,
+          "total_tokens": 6916,
+          "finish_reason": "stop",
+          "error_type": "StructuredOutputValidationError"
+        },
+        {
+          "attempt_id": "61c2129c-4f6f-49f4-881f-b0d0b8727529",
+          "role": "research",
+          "purpose": "structure_repair",
+          "status": "succeeded",
+          "elapsed_seconds": 292.0780000000086,
+          "prompt_tokens": 4748,
+          "output_tokens": 2222,
+          "total_tokens": 6970,
+          "finish_reason": "stop",
+          "error_type": null
+        }
+      ]
+    },
+    "full_d": {
+      "status": "not_started"
+    }
+  },
+  "latest_sample": {
+    "elapsed_seconds": 705.9690000000119,
+    "ram_available_bytes": 4222693376,
+    "pagefile_delta_bytes": 0,
+    "time": "2026-09-07T07:59:31.825427+00:00"
+  },
+  "final": {
+    "status": "failed",
+    "complete_proposal_produced": false,
+    "proposal_directory": null,
+    "budget": {
+      "this_run_request_count": 3,
+      "this_run_charged_total_tokens": 13961,
+      "this_run_elapsed_seconds": 709.9210000000021,
+      "cumulative_request_count": 5,
+      "cumulative_charged_total_tokens": 37864,
+      "cumulative_elapsed_seconds": 2831.1240000000107
+    },
+    "resources": {
+      "status": "passed",
+      "reason": null,
+      "sample_count": 99,
+      "sample_interval_seconds": 5.0,
+      "baseline": {
+        "ram_total_bytes": 16969424896,
+        "ram_available_bytes": 6908248064,
+        "pagefile_used_bytes": 413138944,
+        "gpu_used_bytes": 0,
+        "gpu_total_bytes": 2147483648,
+        "loaded_models": [],
+        "missing": {}
+      },
+      "maximum_observed_sample_gap_seconds": 8.703000000008615,
+      "min_available_ram_bytes": 3956609024,
+      "peak_ram_used_bytes": 13012815872,
+      "peak_gpu_used_bytes": 0,
+      "peak_pagefile_used_bytes": 420478976,
+      "peak_pagefile_delta_bytes": 7340032,
+      "missing_observations": []
+    },
+    "deadline_fired": false,
+    "http_requests": 3,
+    "server_stop": {
+      "status": "owned_process_tree_terminated",
+      "pid": 21776,
+      "lease_released": false,
+      "restart_requires_explicit_reconciliation": true
+    }
+  },
+  "server_tail": [
+    "slot      release: id  0 | task 2563 | stop processing: n_tokens = 6969, truncated = 0",
+    "srv  update_slots: all slots are idle"
+  ],
+  "attempts": [
+    {
+      "phase": "native_schema_probe",
+      "attempt_id": "dff98e93-b9b6-4dca-b1b7-0f4a0f8e2bc0",
+      "role": "schema_probe",
+      "purpose": "generate",
+      "status": "succeeded",
+      "elapsed_seconds": 6.155999999988126,
+      "prompt_tokens": 53,
+      "output_tokens": 22,
+      "total_tokens": 75,
+      "finish_reason": "stop",
+      "error_type": null,
+      "raw_file": "01_schema_probe_generate.raw.txt",
+      "raw_sha256": "25c5c7565aedd73f2d6414f8780d3bda78858d442db757fa5149aaddea7b2131",
+      "detected_reference_score_issues": [
+        {
+          "path": "$.financial_value_ids",
+          "problem": "invalid or repeated financial references",
+          "repeated": [
+            [
+              "starting_cash",
+              2
+            ]
+          ],
+          "unknown": [],
+          "observed_items": 2,
+          "maximum_items": 31,
+          "excerpt": [
+            "starting_cash",
+            "starting_cash"
+          ]
+        }
+      ],
+      "usage_file": "01_schema_probe_generate.usage.json",
+      "usage_sha256": "781d0e4a46949b3a34697959bbdd384c80c89ec11ec24276ca72d409a5508881"
+    },
+    {
+      "phase": "research_probe",
+      "attempt_id": "0282a3e7-602d-469c-b032-0de00b3daf5d",
+      "role": "research",
+      "purpose": "generate",
+      "status": "invalid_output",
+      "elapsed_seconds": 404.25,
+      "prompt_tokens": 4383,
+      "output_tokens": 2533,
+      "total_tokens": 6916,
+      "finish_reason": "stop",
+      "error_type": "StructuredOutputValidationError",
+      "raw_file": "02_research_generate.raw.txt",
+      "raw_sha256": "e21ff4496883ee9223d71b06d4ea1dd3acbc7f9017482850ed2180e94d766aa9",
+      "detected_reference_score_issues": [
+        {
+          "path": "$.market_trends[0].claims[0].financial_value_ids",
+          "problem": "invalid or repeated financial references",
+          "repeated": [
+            [
+              "fixed_operating_cost",
+              2
+            ],
+            [
+              "marketing_cost",
+              2
+            ]
+          ],
+          "unknown": [],
+          "observed_items": 31,
+          "maximum_items": 31,
+          "excerpt": [
+            "base.monthly_revenue",
+            "base.monthly_variable_cost",
+            "base.monthly_operating_result",
+            "base.ending_cash"
+          ]
+        },
+        {
+          "path": "$.customer_notes[0].claims[0].financial_value_ids",
+          "problem": "invalid or repeated financial references",
+          "repeated": [
+            [
+              "one_time_setup",
+              2
+            ]
+          ],
+          "unknown": [],
+          "observed_items": 29,
+          "maximum_items": 31,
+          "excerpt": [
+            "base.monthly_revenue",
+            "base.monthly_variable_cost",
+            "base.monthly_operating_result",
+            "base.ending_cash"
+          ]
+        }
+      ],
+      "usage_file": "02_research_generate.usage.json",
+      "usage_sha256": "09bd28aea934e2cbf244e904dcb388a8eb56d2a1a4cbf448252f645cd976e27d"
+    },
+    {
+      "phase": "research_probe",
+      "attempt_id": "61c2129c-4f6f-49f4-881f-b0d0b8727529",
+      "role": "research",
+      "purpose": "structure_repair",
+      "status": "succeeded",
+      "elapsed_seconds": 292.0780000000086,
+      "prompt_tokens": 4748,
+      "output_tokens": 2222,
+      "total_tokens": 6970,
+      "finish_reason": "stop",
+      "error_type": null,
+      "raw_file": "03_research_structure_repair.raw.txt",
+      "raw_sha256": "f59813001ca999cce3a7b5d6e303347bd2e6d5333dfc2dfa308deaf0f7f319e7",
+      "detected_reference_score_issues": [],
+      "usage_file": "03_research_structure_repair.usage.json",
+      "usage_sha256": "c46438d81fe3aacdb4fe0bfdcf3f0da80368811332bc6894f4597f8cabc78daf"
+    }
+  ],
+  "preservation": {
+    "installed_file_count": 251,
+    "installed_mismatches": [],
+    "backup_mismatches": [],
+    "runtime_file_count": 251,
+    "runtime_mismatches": [],
+    "prior_trial_evidence_unchanged": true,
+    "archive_sha256": "2e99794d7305283c3f6c6aba9c20aa7e534ccf589a93f7a98dd3b9fc9a85eabb"
+  }
+}

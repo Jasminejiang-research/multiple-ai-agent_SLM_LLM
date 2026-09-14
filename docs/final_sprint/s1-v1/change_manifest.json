@@ -1,0 +1,157 @@
+[
+  {
+    "path": "agents/research.py",
+    "before_sha256": "f5f2a8c62b79274cc3337395a7acd90e05e2e5b79f6321e9a8927021ff3ddbf8",
+    "after_sha256": "6805fd7a317f9c3449f05d78a7281b3872cb974aed69a71f96fae54f95c05bd4"
+  },
+  {
+    "path": "docs/final_sprint_status.md",
+    "before_sha256": "b50e322d873cc11228c0f0b64caf9bddf6993b1c4bd77bdc8244c4d73584aaa1",
+    "after_sha256": "9bc4ba9d5572cf48c3ae1ca720618e37354f5e273c1dd5a651ee3eba218a1946"
+  },
+  {
+    "path": "docs/final_sprint/s1-v1/examples/contract_audit.json",
+    "before_sha256": null,
+    "after_sha256": "32f8182ac8094985cafab750cea7b63d7ad7698c5ef457c5a3224354bfdd8658"
+  },
+  {
+    "path": "docs/final_sprint/s1-v1/examples/packet_example.json",
+    "before_sha256": null,
+    "after_sha256": "36927c1c73b27bc5c2b9868e75325ad6bf5bdfa5b88f9c0cc54ae9bd825fce50"
+  },
+  {
+    "path": "docs/final_sprint/s1-v1/examples/proposal_schema.json",
+    "before_sha256": null,
+    "after_sha256": "515dfc756d35fa1aa83032d7cbb2f058ea4d0849304e0a888573960a8efceaa1"
+  },
+  {
+    "path": "docs/final_sprint/s1-v1/HANDOFF.md",
+    "before_sha256": null,
+    "after_sha256": "913788f39640586eb931ff179b37af91b3618f559d89c06db74967644d44a51f"
+  },
+  {
+    "path": "docs/final_sprint/s1-v1/S0_STATUS_ARCHIVE.md",
+    "before_sha256": null,
+    "after_sha256": "b50e322d873cc11228c0f0b64caf9bddf6993b1c4bd77bdc8244c4d73584aaa1"
+  },
+  {
+    "path": "evaluation/s1.py",
+    "before_sha256": null,
+    "after_sha256": "d50627903a6d99a94c4930bcc261c7dfb4e92bf60cde7beb2fae4125eb7a7f51"
+  },
+  {
+    "path": "rag/knowledge_base.py",
+    "before_sha256": "91961cc36e5496ed4544764681bf5544347e7c86c53579dcd52b1ee99efc6687",
+    "after_sha256": "bb504c1c26c8757955e7fb93babadf303e1bb795067a7bbb8f372163a117e0bc"
+  },
+  {
+    "path": "rag/retriever.py",
+    "before_sha256": "599bbc001433da8ed3e1913ce9024c61b7307c224162a966984a3e2e9f910bfb",
+    "after_sha256": "a2c48994d2ec6d82ff9c6f9d6c0e0656cce752aa01165e708b6731f66e3cbbcf"
+  },
+  {
+    "path": "schemas/contract_outputs.py",
+    "before_sha256": null,
+    "after_sha256": "454ece510c6ecd8f372fc70f9c7176899f13d29221662f1b74d76c96b5a7c911"
+  },
+  {
+    "path": "schemas/evidence.py",
+    "before_sha256": null,
+    "after_sha256": "bac43ef43dc74c16226f41ab0d3976d628635df3f5c34024d8d3bf1f93cc1ee9"
+  },
+  {
+    "path": "schemas/financial.py",
+    "before_sha256": null,
+    "after_sha256": "6ff1f3cc87e0f597aa1771063b7a5700db525bbfdb77b75413ee4469ef742963"
+  },
+  {
+    "path": "slm/client.py",
+    "before_sha256": "139996f77d009e0b799e6b98e0bf1c3bca9b6f8ab8799ac3d80bc1ae1403ec19",
+    "after_sha256": "85576fe684d8ccabdee3f58737aa9bc3a34c7a8b997c91e60282e141b78a5b93"
+  },
+  {
+    "path": "slm/factories.py",
+    "before_sha256": "d9fa13e8f621dd5fe389d01cbbe22b048a3f05bb80b5284e3f61e75aa2c4985c",
+    "after_sha256": "860e1ae3467c4a8c76108997f9d6d13cf0aa49b58a48da8e83840bc2460ac304"
+  },
+  {
+    "path": "slm/schema_contract.py",
+    "before_sha256": "6efe39a8c71dbf4588d9a5c1a8c66805aa57ca3d852d43a067f649886396bd6b",
+    "after_sha256": "a5fa5343a88db6863ba1746659afcdf61a552a72f3bc14a5df697ac5d90ae23f"
+  },
+  {
+    "path": "slm/tests/test_s1_contract_adapters.py",
+    "before_sha256": null,
+    "after_sha256": "cf562412d54e36f30c1ddf4a54a257c5c26e2a6078d9847c86efd1225cc8b400"
+  },
+  {
+    "path": "tests/test_s1_contract.py",
+    "before_sha256": null,
+    "after_sha256": "842a50bd15462e9df5888af5bc3761a05f8246f7d148f605f3b7f008a43be29b"
+  },
+  {
+    "path": "tools/tavily_search.py",
+    "before_sha256": "0201733a43bfbaf69af9fe27319780e0dcac97b1830846eb69de369921365a99",
+    "after_sha256": "36d8499406b7dcb02645037df7498a8153342706355a863f010335928feb991e"
+  },
+  {
+    "path": "tools/web_search.py",
+    "before_sha256": "2f1cada8367532f81cf02656024d267030b7b0ecfff513d4082091466cf84901",
+    "after_sha256": "024b459e2ac12aa4add5d4ab87e42756c51bdd8555eb19b794af99604d61ed75"
+  },
+  {
+    "path": "workflow/contract_context.py",
+    "before_sha256": null,
+    "after_sha256": "fd9b301e07e0154ad0c1dde88355025eec8ad7e0de855426fcbffc8314108782"
+  },
+  {
+    "path": "workflow/contract_generation.py",
+    "before_sha256": null,
+    "after_sha256": "21d6b7642d54b8711390983e8af2d6ffedc51c01ab83543472a3c2703500b692"
+  },
+  {
+    "path": "workflow/evidence_policy.py",
+    "before_sha256": null,
+    "after_sha256": "138d28e8701ce4653ad9628b6f5ba9efb78f677fe989a5598cdafa2dc14a259c"
+  },
+  {
+    "path": "workflow/finance_contract.py",
+    "before_sha256": null,
+    "after_sha256": "1d0c642ec6c0e708afe086430aa5584cb4dd83dd02e8a1eb30d85a54c7d8be09"
+  },
+  {
+    "path": "workflow/gemini_schema.py",
+    "before_sha256": "00d0aef38f83a76a50034d3598fb289ea51300afc9b3c121b770db7d8f7b37e9",
+    "after_sha256": "46d3233b5691a3556e69a0eef8d8e75a5781b33263276660595055a4e6b9fd54"
+  },
+  {
+    "path": "workflow/generation_batches.py",
+    "before_sha256": "3f59369ed58ac7fa5d771d73940f0e3d1ce9aa655bd6899fa0da3fd749813ea2",
+    "after_sha256": "ed6391a1bb943305b52ee5949b0e9a1bf24f5a4631df640d083652541001c098"
+  },
+  {
+    "path": "workflow/grounding.py",
+    "before_sha256": null,
+    "after_sha256": "7791ae4554ba8a9d49841753c907fed06347e87bc8409fa934687124e4d5b5a1"
+  },
+  {
+    "path": "workflow/llm_client.py",
+    "before_sha256": "38963888de5d41dd7a046dd20210f6bffdd6f07f6f95b9e2717f07c1be9219c6",
+    "after_sha256": "8671afa0995f098d1641d2bfba5dbc871aa511ca61841f66a0f45a381de0a652"
+  },
+  {
+    "path": "workflow/nodes.py",
+    "before_sha256": "a060a998569f89d04b08dc3c7c90a67335d445651305ff9fce5ec945cef571e8",
+    "after_sha256": "9a34bf4809feba90d4970dea136a7f0d6ab8afc90aec9d06d0c1aa36c5e36cd6"
+  },
+  {
+    "path": "workflow/schema_contract.py",
+    "before_sha256": null,
+    "after_sha256": "6ff659ba1f4ab2e644a0b633801499ead6d45a4f38e62000fdf0e8f8ae9b7fef"
+  },
+  {
+    "path": "workflow/state.py",
+    "before_sha256": "ef581ec8c6a83d680007fac41664aa79d72cb470f78078c47a15168bef251f3e",
+    "after_sha256": "e1901aa08e62e89911139b7dfe9ef526acc6d44ab8886337b06006d7583a4e53"
+  }
+]

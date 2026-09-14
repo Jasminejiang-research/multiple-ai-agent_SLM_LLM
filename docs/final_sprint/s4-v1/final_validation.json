@@ -1,0 +1,32 @@
+{
+  "integration": {
+    "passed": 623,
+    "deselected": 25,
+    "subtests_passed": 3,
+    "seconds": 122.84
+  },
+  "supplemental_ui": {
+    "passed": 1,
+    "seconds": 9.02
+  },
+  "state_statistics": {
+    "passed": 28,
+    "seconds": 16.52
+  },
+  "installed_affected_suite": {
+    "passed": 82,
+    "seconds": 22.26
+  },
+  "formal_slots": 8,
+  "formal_started": 0,
+  "actual_model_calls": 0,
+  "synthetic_runs": 8,
+  "synthetic_attempts": 86,
+  "quality_scores_filled": 0,
+  "gold_verdicts_filled": 0,
+  "final_exports": [
+    "dry_export_final",
+    "synthetic_export_final"
+  ],
+  "note": "Full integration preceded final missing-state filtering; all affected S4/UI/SLM tests passed again on the final installed source."
+}

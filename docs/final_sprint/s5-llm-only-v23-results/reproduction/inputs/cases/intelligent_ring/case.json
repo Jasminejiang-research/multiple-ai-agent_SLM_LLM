@@ -1,0 +1,15 @@
+{
+  "case_id": "intelligent_ring",
+  "case_version": "case-v1-s0",
+  "candidate_category": "intelligent_ring",
+  "review_status": "approved",
+  "approval_record": {
+    "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v23\\scope_decision.json",
+    "scope": "complete_case_brief_evidence_and_case_specific_finance",
+    "case_specific_finance_count": 27
+  },
+  "brief_sha256": "dac67857282ea5b0452906799a5e5e4a307b040382f8931dd01338a4ff56a468",
+  "packet_sha256": "7deb2172fcb2ed46ab93f04d24285e094167c634f42abe006c343372f4463e6b",
+  "proposed_by": "Codex; explicitly confirmed by the user for this frozen LLM-only experiment",
+  "formal_execution_allowed": true
+}

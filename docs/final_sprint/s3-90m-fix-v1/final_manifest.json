@@ -1,0 +1,164 @@
+{
+  "recorded_at_utc": "2026-09-07T11:56:00.340819+00:00",
+  "result": {
+    "case_id": "ai_education",
+    "formal_eligible": false,
+    "formal_runs_started": 0,
+    "gemini_calls": 0,
+    "public_config_changed": false,
+    "complete_proposal_produced": false,
+    "phases": {
+      "native_schema_probe": {
+        "status": "not_run",
+        "reason": "Prior native bounds observed; actual two-stage Research exercises this wire schema"
+      },
+      "research_probe": {
+        "status": "failed",
+        "error_type": "WallClockExceeded",
+        "error": "shared node/run wall-clock budget exhausted",
+        "budget": {
+          "max_requests": 23,
+          "max_total_tokens": 308677,
+          "request_count": 3,
+          "retry_count": 0,
+          "remaining_requests": 20,
+          "remaining_tokens": 203431,
+          "exhausted": false,
+          "charged_total_tokens": 105246,
+          "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+          "actual_prompt_tokens_known": 15049,
+          "actual_output_tokens_known": 6978,
+          "actual_total_tokens_known": 22027,
+          "usage_missing_calls": 1,
+          "transport_retry_count": 0,
+          "structure_repair_request_count": 1,
+          "revision_request_count": 0,
+          "run_elapsed_seconds": 5398.469000000041,
+          "node_elapsed_seconds": null,
+          "node_scope_id": null
+        }
+      },
+      "full_d": {
+        "status": "not_run",
+        "reason": "native/Research prerequisite did not pass"
+      }
+    },
+    "per_plan_deadline_seconds": 5400.0,
+    "deadline_scope": "this fresh SLM recovery including Research prerequisite; separate from any LLM run",
+    "status": "failed",
+    "elapsed_seconds": 5405.1720000000205,
+    "budget": {
+      "this_run_request_count": 3,
+      "this_run_charged_total_tokens": 105246,
+      "this_run_elapsed_seconds": 5405.1720000000205,
+      "cumulative_request_count": 16,
+      "cumulative_charged_total_tokens": 296569,
+      "cumulative_elapsed_seconds": 10193.482999999978,
+      "this_run_time_limit_seconds": 5400.0,
+      "cumulative_time_limit_seconds": 14400
+    },
+    "resources": {
+      "status": "passed",
+      "reason": null,
+      "sample_count": 415,
+      "sample_interval_seconds": 5.0,
+      "baseline": {
+        "ram_total_bytes": 16969424896,
+        "ram_available_bytes": 5085536256,
+        "pagefile_used_bytes": 384397312,
+        "gpu_used_bytes": 0,
+        "gpu_total_bytes": 2147483648,
+        "loaded_models": [],
+        "missing": {}
+      },
+      "maximum_observed_sample_gap_seconds": 2423.4369999999763,
+      "min_available_ram_bytes": 1664577536,
+      "peak_ram_used_bytes": 15304847360,
+      "peak_gpu_used_bytes": 0,
+      "peak_pagefile_used_bytes": 407379968,
+      "peak_pagefile_delta_bytes": 22982656,
+      "missing_observations": []
+    },
+    "server_stop": {
+      "status": "owned_process_tree_terminated",
+      "pid": 16088,
+      "identity_method": "native_handle_and_persisted_identity",
+      "lease_released": false,
+      "restart_requires_explicit_reconciliation": true
+    },
+    "deadline_fired": false,
+    "http_requests": 3
+  },
+  "historical_files_checked": 2623,
+  "historical_mismatches": [],
+  "external_cleanup": {
+    "observed_at_utc": "2026-09-07T11:55:54.610628+00:00",
+    "model_processes": [],
+    "listeners": [],
+    "active_leases_after": 0,
+    "confirmed_owned_stop": {
+      "status": "owned_process_tree_terminated",
+      "pid": 16088,
+      "identity_method": "native_handle_and_persisted_identity",
+      "lease_released": false,
+      "restart_requires_explicit_reconciliation": true
+    },
+    "lease_archive": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v1\\run_01\\audit\\terminated_unknown_request.lease.json",
+    "lease_sha256": "ca868bdce2fad019eb0388051b7cfd3bfe40f8b6ba72e1e82585a2ad323cfea7",
+    "unknown_usage_remains_unknown": true,
+    "retained_unknown_token_reservation": 83219
+  },
+  "code_changes": [
+    {
+      "path": "slm/granite_preflight.py",
+      "before_sha256": "20664da0a9992678534f7dd9c1c94395b4ae94c9522a55742e6a9c21097ee9bb",
+      "after_sha256": "9a72287a8be6a11d23fd74dc55025e6092835c9c3b238e8e2755f9dd31bb7604"
+    },
+    {
+      "path": "slm/owned_ollama.py",
+      "before_sha256": "0b50ce35fa184f31c7284237902369d46213d19674d487cdc00a4269c1ec56bd",
+      "after_sha256": "978e533c2e73f11831d0c33d256fec58fd62339fe029507a9287c49858fc8f6d"
+    },
+    {
+      "path": "slm/resource_monitor.py",
+      "before_sha256": "21a977a850b4f1256a7c8839f0f55fd7279df58335c5025a801add24a6876bf5",
+      "after_sha256": "8317fdbd8647ad486deede45eeb36bf872f3fb76e621eb8d9db65e5214e5cb58"
+    },
+    {
+      "path": "slm/tests/test_owned_native_process.py",
+      "before_sha256": null,
+      "after_sha256": "d5109925affaadaf7755d740ea26a8cf07f2ea6fa86a75cca6222e10f50d6ce7"
+    },
+    {
+      "path": "slm/tests/test_windows_memory.py",
+      "before_sha256": null,
+      "after_sha256": "3d90d3e764c8b88a92be179f7869c27fc0618d9ab5d29c8674a4749664d4bfac"
+    },
+    {
+      "path": "slm/windows_memory.py",
+      "before_sha256": null,
+      "after_sha256": "36c39974b7a0e831d4a5b8471544f90b4722ebfadb263fab6d0ee400068c2eb7"
+    },
+    {
+      "path": "slm/windows_process.py",
+      "before_sha256": null,
+      "after_sha256": "37a7dc92ee011c9490ccba642f39c31e0b4f32e97980235a28afc0e72c0a414b"
+    },
+    {
+      "path": "tests/test_generation_efficiency.py",
+      "before_sha256": null,
+      "after_sha256": "f17331e8be4886ddc491e7a18af39a64429c42239bc69920fbd328a1071fb6f4"
+    },
+    {
+      "path": "workflow/contract_generation.py",
+      "before_sha256": "de5e495b2fa8e67d98e95123daff74557e7b523eb0d8ac2596da345e7f5e46f9",
+      "after_sha256": "d1338ca71e0df61b337d841684bfbdafb2a40eec0a783ed1b6e2a26ffbdd8d76"
+    },
+    {
+      "path": "workflow/two_stage_generation.py",
+      "before_sha256": "317e0cdbde00ce04e8a9849493e5e88b293c929c52b3af30e6196d411cabee21",
+      "after_sha256": "ac8f30fb059135167d7522e0fa49da7d286c73d3b6d078681bb38dfbfb06283e"
+    }
+  ],
+  "public_config_sha256": "4e8bec9bd8f951c07268b2cedf78858e14194bb20168bba2bb197576ce8ae63f"
+}

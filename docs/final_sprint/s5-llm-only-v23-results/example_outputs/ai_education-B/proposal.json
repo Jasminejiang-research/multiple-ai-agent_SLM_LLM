@@ -1,0 +1,935 @@
+{
+  "role": "writer",
+  "artifact_version": 1,
+  "case_id": "ai_education",
+  "packet_sha256": "a673664f362509f9d9ccd10c281fc279112bc491807add2489adb27000d0d10c",
+  "brief_sha256": "71adecf347d25bd8a349846f1f1cd97efe522fc45786b6f36552f0b3fbb7102d",
+  "contract_version": "proposal-grounding-v5-two-stage",
+  "payload": {
+    "title": "AI Tutor for MBA Students Pilot Proposal",
+    "global_source_ids": [
+      "EDU-02",
+      "EDU-01"
+    ],
+    "executive_summary": {
+      "title": "Executive Summary",
+      "content": "The proposed pilot tests if students need more timely, personalized business-case reasoning feedback.",
+      "key_claims": [
+        {
+          "claim_id": "CUS01",
+          "parent_claim_id": null,
+          "claim_text": "The proposed pilot tests if students need more timely, personalized business-case reasoning feedback.",
+          "claim_type": "assumption",
+          "claim_domain": "The core problem statement for the pilot is an unverified assumption about customer needs.",
+          "evidence_status": "assumption",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.7,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "The proposed pilot tests if students need more timely, personalized business-case reasoning feedback.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "The pilot's success hinges on validating this demand hypothesis.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "problem": {
+      "title": "Problem",
+      "content": "The pilot tests whether students need more timely, personalized business-case reasoning feedback.",
+      "key_claims": [
+        {
+          "claim_id": "CUS01__02",
+          "parent_claim_id": "CUS01",
+          "claim_text": "The pilot tests whether students need more timely, personalized business-case reasoning feedback.",
+          "claim_type": "assumption",
+          "claim_domain": "The core problem statement for the pilot is an unverified assumption about customer needs.",
+          "evidence_status": "assumption",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.7,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "The pilot tests whether students need more timely, personalized business-case reasoning feedback.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "The pilot's success hinges on validating this demand hypothesis.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "target_customer": {
+      "title": "Target Customer",
+      "content": "In 2021–22, 23 percent of master’s degrees (205,800) were in business, management, marketing [EDU-02].",
+      "key_claims": [
+        {
+          "claim_id": "MKT02",
+          "parent_claim_id": null,
+          "claim_text": "In 2021–22, 23 percent of master’s degrees (205,800) were in business, management, marketing [EDU-02].",
+          "claim_type": "factual",
+          "claim_domain": "This highlights the substantial portion of the master's degree market that is directly relevant to the target customer.",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-02"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "In 2021–22, 23 percent of master’s degrees (205,800) were in business, management, marketing [EDU-02].",
+          "source_anchors": [
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C2",
+              "line_start": 342,
+              "line_end": 354,
+              "snapshot_sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+              "quote": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as business, management, marketing, and related support services, as well as culinary, entertainment, and personal services.\nNOTE:\nData are for the 50 states and the District of Columbia. The fields shown are the five programs in which the largest numbers of master’s degrees were conferred in 2021–22. Data are for postsecondary institutions participating in Title IV federal financial aid programs and U.S. service academies. Data in this figure are based on the 2020 Classification of Instructional Programs. Some data have been revised from previously published figures. Figures are plotted based on unrounded data.\nSOURCE: U.S. Department of Education, National Center for Education Statistics, Integrated Postsecondary Education Data System (IPEDS), Completions component, Fall 2012 through Fall 2021 (final data) and Fall 2022 (provisional data). See Digest of Education Statistics 2023, table 323.10 and Digest of Education Statistics 2022, table 323.10.\nIn 2021–22, postsecondary institutions conferred 880,200 master’s degrees. Of the master’s degrees conferred, 69 percent were concentrated in five fields of study:\nbusiness3 (205,800 degrees, 23 percent)\neducation (151,700 degrees, 17 percent)\nhealth professions and related programs (147,000 degrees, 17 percent)\ncomputer and information sciences and support services (51,300 degrees, 6 percent)\npublic administration and social services (50,100 degrees, 6 percent)\nPrevious Finding\nNext Finding\nSelect Another Subgroup Characteristic"
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-02"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "market_opportunity": {
+      "title": "Market Opportunity",
+      "content": "Total master’s degrees conferred increased by 16 percent between 2011–12 and 2021–22 [EDU-02].",
+      "key_claims": [
+        {
+          "claim_id": "MKT01",
+          "parent_claim_id": null,
+          "claim_text": "Total master’s degrees conferred increased by 16 percent between 2011–12 and 2021–22 [EDU-02].",
+          "claim_type": "factual",
+          "claim_domain": "This indicates growth in the overall graduate degree market, which includes MBA students.",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-02"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "Total master’s degrees conferred increased by 16 percent between 2011–12 and 2021–22 [EDU-02].",
+          "source_anchors": [
+            {
+              "source_id": "EDU-02",
+              "chunk_id": "EDU-02-C1",
+              "line_start": 299,
+              "line_end": 305,
+              "snapshot_sha256": "77a5e89be05b54e137ef920e582abbf0a8f5d479f9ff785c992934df721bc56c",
+              "quote": "Last Updated: May 2024\n|\nSuggested citation\nDownload PDF\nDownload PDF\nBetween 2011–12 and 2021–22, the total number of master’s degrees conferred increased by 16 percent, from 756,000 to 880,200 degrees. During this time, the number of doctor’s degrees conferred increased 20 percent, from 170,200 to 203,900 degrees.\nIn 2021–22, postsecondary institutions in the United States1 conferred 1.1 million graduate degrees, an increase of 17 percent since 2011–12.2 These included 880,200 master’s degrees and 203,900 doctor’s degrees in 2021–22. For the purposes of this analysis, doctor’s degrees include Ph.D., Ed.D., and comparable degrees at the doctoral level, as well as such degrees as M.D., D.D.S., and J.D. that were previously classified as first-professional degrees. Health professions and related programs were among the top three most popular fields of study at both award levels, as was education."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-02"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "solution": {
+      "title": "Solution",
+      "content": "No content licenses for cases have been verified for the AI Tutor.",
+      "key_claims": [
+        {
+          "claim_id": "GAP01",
+          "parent_claim_id": null,
+          "claim_text": "No content licenses for cases have been verified for the AI Tutor.",
+          "claim_type": "factual",
+          "claim_domain": "The solution relies on licensed or openly reusable cases, but no licenses are confirmed.",
+          "evidence_status": "needs_validation",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.6,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "No content licenses for cases have been verified for the AI Tutor.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    },
+    "value_proposition": {
+      "title": "Value Proposition",
+      "content": "Differentiation from low-price broad tutoring is needed for an MBA-specific offering.",
+      "key_claims": [
+        {
+          "claim_id": "MOA01",
+          "parent_claim_id": null,
+          "claim_text": "Differentiation from low-price broad tutoring is needed for an MBA-specific offering.",
+          "claim_type": "recommendation",
+          "claim_domain": "To succeed, the AI Tutor must clearly distinguish itself from general education AI tools.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.7,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "Differentiation from low-price broad tutoring is needed for an MBA-specific offering.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "Focus on MBA-specific content and feedback quality.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "competitor_analysis": {
+      "title": "Competitor Analysis",
+      "content": "Khanmigo provides personalized tutoring and coaching for skills mastery and career advancement [EDU-01].",
+      "key_claims": [
+        {
+          "claim_id": "COM01",
+          "parent_claim_id": null,
+          "claim_text": "Khanmigo provides personalized tutoring and coaching for skills mastery and career advancement [EDU-01].",
+          "claim_type": "factual",
+          "claim_domain": "This demonstrates existing AI capabilities in personalized learning that could be adapted or benchmarked.",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.8,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "Khanmigo provides personalized tutoring and coaching for skills mastery and career advancement [EDU-01].",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "business_model": {
+      "title": "Business Model",
+      "content": "The base financial scenario for the AI Tutor is a direct monthly subscription.",
+      "key_claims": [
+        {
+          "claim_id": "REV01",
+          "parent_claim_id": null,
+          "claim_text": "The base financial scenario for the AI Tutor is a direct monthly subscription.",
+          "claim_type": "factual",
+          "claim_domain": "This is the primary revenue model for the pilot.",
+          "evidence_status": "unsupported",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "The base financial scenario for the AI Tutor is a direct monthly subscription.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    },
+    "go_to_market_strategy": {
+      "title": "Go-to-Market Strategy",
+      "content": "The subscription price is $19 per customer per month.",
+      "key_claims": [
+        {
+          "claim_id": "REV02",
+          "parent_claim_id": null,
+          "claim_text": "The subscription price is $19 per customer per month.",
+          "claim_type": "assumption",
+          "claim_domain": "This is the assumed price point for the direct monthly subscription.",
+          "evidence_status": "assumption",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "The subscription price is $19 per customer per month.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "This price point is an assumption for the financial model.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant"
+    },
+    "financial_assumptions": {
+      "title": "Financial Assumptions",
+      "content": "With 250 average paying users, monthly revenue is $4,750.00.",
+      "key_claims": [
+        {
+          "claim_id": "REV03",
+          "parent_claim_id": null,
+          "claim_text": "With 250 average paying users, monthly revenue is $4,750.00.",
+          "claim_type": "projection",
+          "claim_domain": "This is the projected monthly revenue based on the base user assumption and subscription price.",
+          "evidence_status": "assumption",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "medium",
+          "confidence_reason": "assumption_dominant",
+          "content_anchor": "With 250 average paying users, monthly revenue is $4,750.00.",
+          "source_anchors": [],
+          "financial_value_ids": [
+            "base.monthly_revenue"
+          ],
+          "premise": "This projection assumes 250 paying users at $19/month.",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "assumption_dominant",
+      "financial_values": [
+        {
+          "value_id": "low.monthly_revenue",
+          "value": "1900.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.low",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.monthly_variable_cost",
+          "value": "400.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.low",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.monthly_contribution",
+          "value": "1500.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.low",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.monthly_operating_result",
+          "value": "-6000.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "low.monthly_contribution",
+            "fixed_operating_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_operating_result",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.annual_cash_change",
+          "value": "-90000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "months",
+            "low.monthly_operating_result",
+            "one_time_setup"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.ending_cash",
+          "value": "30000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "low.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.break_even_users",
+          "value": "500",
+          "unit": "customers",
+          "currency": null,
+          "period": "monthly average over 12 months",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_operating_cost",
+            "marketing_cost",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/break_even_users",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_revenue",
+          "value": "4750.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.base",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_variable_cost",
+          "value": "1000.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.base",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_contribution",
+          "value": "3750.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.base",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_operating_result",
+          "value": "-3750.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "base.monthly_contribution",
+            "fixed_operating_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_operating_result",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.annual_cash_change",
+          "value": "-63000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "months",
+            "base.monthly_operating_result",
+            "one_time_setup"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.ending_cash",
+          "value": "57000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "base.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.break_even_users",
+          "value": "500",
+          "unit": "customers",
+          "currency": null,
+          "period": "monthly average over 12 months",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_operating_cost",
+            "marketing_cost",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/break_even_users",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_revenue",
+          "value": "9500.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.high",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_variable_cost",
+          "value": "2000.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.high",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_contribution",
+          "value": "7500.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.high",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_operating_result",
+          "value": "0.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "high.monthly_contribution",
+            "fixed_operating_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_operating_result",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.annual_cash_change",
+          "value": "-18000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "months",
+            "high.monthly_operating_result",
+            "one_time_setup"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.ending_cash",
+          "value": "102000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "high.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.break_even_users",
+          "value": "500",
+          "unit": "customers",
+          "currency": null,
+          "period": "monthly average over 12 months",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_operating_cost",
+            "marketing_cost",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/break_even_users",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        }
+      ]
+    },
+    "risks_and_mitigations": {
+      "title": "Risks and Mitigations",
+      "content": "No learning outcome studies have been verified for the AI Tutor.",
+      "key_claims": [
+        {
+          "claim_id": "GAP02",
+          "parent_claim_id": null,
+          "claim_text": "No learning outcome studies have been verified for the AI Tutor.",
+          "claim_type": "factual",
+          "claim_domain": "The effectiveness of the AI tutor in improving learning outcomes is unproven.",
+          "evidence_status": "needs_validation",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.6,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "No learning outcome studies have been verified for the AI Tutor.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    },
+    "implementation_roadmap": {
+      "title": "Implementation Roadmap",
+      "content": "No partnerships or revenue streams have been verified for the AI Tutor.",
+      "key_claims": [
+        {
+          "claim_id": "GAP03",
+          "parent_claim_id": null,
+          "claim_text": "No partnerships or revenue streams have been verified for the AI Tutor.",
+          "claim_type": "factual",
+          "claim_domain": "The project is in a concept stage without established business relationships or income.",
+          "evidence_status": "needs_validation",
+          "source_ids": [],
+          "source_support": "none",
+          "source_quality": 0.6,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "low",
+          "confidence_reason": "no_evidence",
+          "content_anchor": "No partnerships or revenue streams have been verified for the AI Tutor.",
+          "source_anchors": [],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [],
+      "confidence": "medium",
+      "confidence_reason": "partial_support"
+    },
+    "appendix": {
+      "title": "Appendix",
+      "content": "Khanmigo offers district-level tools including access for teachers and students and data [EDU-01].",
+      "key_claims": [
+        {
+          "claim_id": "COM02",
+          "parent_claim_id": null,
+          "claim_text": "Khanmigo offers district-level tools including access for teachers and students and data [EDU-01].",
+          "claim_type": "factual",
+          "claim_domain": "This shows a potential institutional sales model and features for broader educational integration.",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.8,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": false,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "Khanmigo offers district-level tools including access for teachers and students and data [EDU-01].",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C2",
+              "line_start": 44,
+              "line_end": 53,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "*Sales tax not included in Khanmigo pricing.\nKhanmigo District Tools\nRequest pricing\nEverything in Khanmigo for teachers, plus:\nKhanmigo access for teachers and students in your district\nDistrict and school data to drive instructional decisions\nCo-teaching support, automatic rostering, and single sign-on (SSO) through Clever SecureSync or ClassLink\nDedicated customer success manager\nTailored professional learning on AI\nRequest pricing"
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    }
+  },
+  "confidence_changes": [
+    {
+      "artifact_version": 1,
+      "location": "solution",
+      "previous": "low",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "business_model",
+      "previous": "low",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "risks_and_mitigations",
+      "previous": "low",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "implementation_roadmap",
+      "previous": "low",
+      "current": "medium",
+      "reason": "partial_support",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    }
+  ],
+  "pruned": false,
+  "unresolved_major": false,
+  "confidence_basis": "proposed_support_structurally_checked_not_human_gold"
+}

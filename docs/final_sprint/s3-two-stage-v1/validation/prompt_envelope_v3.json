@@ -1,0 +1,340 @@
+[
+  {
+    "case_id": "ai_education",
+    "synthetic": true,
+    "real_model_calls": 0,
+    "calls": [
+      {
+        "stage": "body",
+        "schema": "DraftContractResearchAnalysis",
+        "input_tokens": 4353,
+        "prompt_chars": 18576,
+        "input_plus_output": 12545,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractResearchAnalysisCaseBound",
+        "input_tokens": 7852,
+        "prompt_chars": 28178,
+        "input_plus_output": 16044,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "critic",
+        "schema": "ComponentCritiqueReportCaseBound",
+        "input_tokens": 8965,
+        "prompt_chars": 37116,
+        "input_plus_output": 17157,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "body",
+        "schema": "DraftContractStrategyAnalysis",
+        "input_tokens": 5874,
+        "prompt_chars": 24753,
+        "input_plus_output": 14066,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractStrategyAnalysisCaseBound",
+        "input_tokens": 9471,
+        "prompt_chars": 35236,
+        "input_plus_output": 17663,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "critic",
+        "schema": "ComponentCritiqueReportCaseBound",
+        "input_tokens": 9416,
+        "prompt_chars": 39017,
+        "input_plus_output": 17608,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "body",
+        "schema": "DraftContractFinanceAssumptionsCaseBound",
+        "input_tokens": 10464,
+        "prompt_chars": 43752,
+        "input_plus_output": 18656,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractFinanceAssumptionsCaseBound",
+        "input_tokens": 15724,
+        "prompt_chars": 61012,
+        "input_plus_output": 23916,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "critic",
+        "schema": "ComponentCritiqueReportCaseBound",
+        "input_tokens": 10978,
+        "prompt_chars": 45180,
+        "input_plus_output": 19170,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "body",
+        "schema": "DraftContractProposalBatch1",
+        "input_tokens": 13781,
+        "prompt_chars": 57273,
+        "input_plus_output": 21973,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractProposalBatch1CaseBound",
+        "input_tokens": 17474,
+        "prompt_chars": 67923,
+        "input_plus_output": 25666,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "body",
+        "schema": "DraftContractProposalBatch2",
+        "input_tokens": 13777,
+        "prompt_chars": 57245,
+        "input_plus_output": 21969,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractProposalBatch2CaseBound",
+        "input_tokens": 17148,
+        "prompt_chars": 66902,
+        "input_plus_output": 25340,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "body",
+        "schema": "DraftContractProposalBatch3CaseBound",
+        "input_tokens": 14026,
+        "prompt_chars": 58303,
+        "input_plus_output": 22218,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractProposalBatch3CaseBound",
+        "input_tokens": 19324,
+        "prompt_chars": 74640,
+        "input_plus_output": 27516,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "body",
+        "schema": "DraftContractProposalBatch4",
+        "input_tokens": 13788,
+        "prompt_chars": 57259,
+        "input_plus_output": 21980,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractProposalBatch4CaseBound",
+        "input_tokens": 16987,
+        "prompt_chars": 66958,
+        "input_plus_output": 25179,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "critic",
+        "schema": "ComponentCritiqueReportCaseBound",
+        "input_tokens": 15364,
+        "prompt_chars": 63278,
+        "input_plus_output": 23556,
+        "within_32k": true,
+        "within_90k_chars": true
+      }
+    ]
+  },
+  {
+    "case_id": "intelligent_ring",
+    "synthetic": true,
+    "real_model_calls": 0,
+    "calls": [
+      {
+        "stage": "body",
+        "schema": "DraftContractResearchAnalysis",
+        "input_tokens": 4859,
+        "prompt_chars": 21669,
+        "input_plus_output": 13051,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractResearchAnalysisCaseBound",
+        "input_tokens": 7504,
+        "prompt_chars": 29193,
+        "input_plus_output": 15696,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "critic",
+        "schema": "ComponentCritiqueReportCaseBound",
+        "input_tokens": 10754,
+        "prompt_chars": 46623,
+        "input_plus_output": 18946,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "body",
+        "schema": "DraftContractStrategyAnalysis",
+        "input_tokens": 6486,
+        "prompt_chars": 28675,
+        "input_plus_output": 14678,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractStrategyAnalysisCaseBound",
+        "input_tokens": 9339,
+        "prompt_chars": 37080,
+        "input_plus_output": 17531,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "critic",
+        "schema": "ComponentCritiqueReportCaseBound",
+        "input_tokens": 11245,
+        "prompt_chars": 48799,
+        "input_plus_output": 19437,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "body",
+        "schema": "DraftContractFinanceAssumptionsCaseBound",
+        "input_tokens": 12117,
+        "prompt_chars": 53169,
+        "input_plus_output": 20309,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractFinanceAssumptionsCaseBound",
+        "input_tokens": 17332,
+        "prompt_chars": 71429,
+        "input_plus_output": 25524,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "critic",
+        "schema": "ComponentCritiqueReportCaseBound",
+        "input_tokens": 13397,
+        "prompt_chars": 57771,
+        "input_plus_output": 21589,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "body",
+        "schema": "DraftContractProposalBatch1",
+        "input_tokens": 16173,
+        "prompt_chars": 70600,
+        "input_plus_output": 24365,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractProposalBatch1CaseBound",
+        "input_tokens": 19082,
+        "prompt_chars": 79184,
+        "input_plus_output": 27274,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "body",
+        "schema": "DraftContractProposalBatch2",
+        "input_tokens": 16169,
+        "prompt_chars": 70572,
+        "input_plus_output": 24361,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractProposalBatch2CaseBound",
+        "input_tokens": 18738,
+        "prompt_chars": 78160,
+        "input_plus_output": 26930,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "body",
+        "schema": "DraftContractProposalBatch3CaseBound",
+        "input_tokens": 16415,
+        "prompt_chars": 71633,
+        "input_plus_output": 24607,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractProposalBatch3CaseBound",
+        "input_tokens": 21205,
+        "prompt_chars": 88979,
+        "input_plus_output": 29397,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "body",
+        "schema": "DraftContractProposalBatch4",
+        "input_tokens": 16180,
+        "prompt_chars": 70586,
+        "input_plus_output": 24372,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "grounding",
+        "schema": "GroundingSelectionsContractProposalBatch4CaseBound",
+        "input_tokens": 18925,
+        "prompt_chars": 78216,
+        "input_plus_output": 27117,
+        "within_32k": true,
+        "within_90k_chars": true
+      },
+      {
+        "stage": "critic",
+        "schema": "ComponentCritiqueReportCaseBound",
+        "input_tokens": 18159,
+        "prompt_chars": 78643,
+        "input_plus_output": 26351,
+        "within_32k": true,
+        "within_90k_chars": true
+      }
+    ]
+  }
+]

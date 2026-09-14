@@ -1,0 +1,15 @@
+{
+  "version": "owned-native-process-v1",
+  "owner_sha256": "0bfe0af3138ff6dba9bc0928ff0a81e59d2f5e05f27c88a1a8c6192e2f222801",
+  "verified_process": {
+    "Name": "ollama.exe",
+    "CommandLine": "\"C:\\Users\\JasmineJiang\\AppData\\Local\\Programs\\Ollama\\ollama.exe\" serve",
+    "CreatedUtc": "2026-09-07T14:26:02.3386430Z",
+    "ListenerPids": 24092
+  },
+  "native_identity": {
+    "pid": 24092,
+    "creation_filetime": 134332647623386432,
+    "image_path": "C:\\Users\\JasmineJiang\\AppData\\Local\\Programs\\Ollama\\ollama.exe"
+  }
+}

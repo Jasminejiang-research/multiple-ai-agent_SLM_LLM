@@ -1,0 +1,29 @@
+{
+  "status": "pending",
+  "plan_sha256": "abfe41ea8db3938772538f8a64e41915cd0b03e4f388f1ebf9a3d15685734e79",
+  "approvals": {
+    "cases": "pending",
+    "common_budget": "deferred",
+    "D_preflight": "deferred",
+    "gemini_quota_and_spend": "pending",
+    "S1": "passed",
+    "S2": "passed",
+    "S4": "passed",
+    "S6": "pending",
+    "formal_execution": "not_authorized_in_S4"
+  },
+  "approval_records": {},
+  "configs": {},
+  "code_inventory": {},
+  "evidence_files": {},
+  "preflight_reports": {},
+  "authority_files": {
+    "C:\\Users\\JasmineJiang\\Desktop\\s4\\hu-3.Intelligent System\\@final presentation\\sprint_plan_.md": "22963a09eae624c2c72e0a0d1e807cdf066255ee3e9f5abd5a21e19b820643c1",
+    "C:\\Users\\JasmineJiang\\Desktop\\s4\\hu-3.Intelligent System\\@final presentation\\@ai_agent_evaluation_metrics_spec_v2_fast_generation.md": "23407504f7bb9924529ec16f83df3d556d32dba1901d1354868306d1b087182a",
+    "C:\\Users\\JasmineJiang\\Desktop\\s4\\hu-3.Intelligent System\\@final presentation\\@multiple_ai_agent_optimization.md": "7e532ecd69e7ccb90a36e66dc2a84d6479b17ccb4e433eee745757a712a344bd"
+  },
+  "total_request_limit": null,
+  "total_token_limit": null,
+  "runtime_versions": {},
+  "model_metadata": {}
+}

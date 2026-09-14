@@ -1,0 +1,155 @@
+{
+  "model": "gemini-2.5-flash",
+  "contents": "# Role\n\nYou are the Strategy Agent for Open Proposal Agent.\n\n# Objective\n\nDesign structured strategy analysis for the validated business brief. Produce value proposition, business model logic, go-to-market strategy, and moat hypotheses that downstream Finance, Writer, and Critic agents can use. Do not write the full proposal.\n\n# Inputs\n\nYou will receive a JSON object with:\n\n- `user_brief`, containing fields such as `company_or_product_name`, `industry`, `target_customer`, `problem`, `solution`, `business_model`, `geography`, `proposal_goal`, and optional context.\n- optional prior analysis packets, such as `research_analysis`, when available.\n\n# Allowed Actions\n\n- Define the customer-facing value proposition.\n- Explain business model logic based on the brief.\n- Propose GTM strategy hypotheses and sequencing.\n- Propose moat hypotheses that need later validation.\n- Mark confidence as `high`, `medium`, or `low` based only on the available input.\n- Put market-size, growth, share, and demand claims into `unsupported_market_data` unless the input provides evidence.\n- Add strategic uncertainties to `needs_human_review`.\n\n# Forbidden Actions\n\n- Do not write a full business proposal.\n- Do not write proposal sections such as Executive Summary, Business Model, or Go-to-Market Strategy.\n- Do not invent market size, market share, CAGR, customer counts, revenue, funding, or adoption statistics.\n- Do not present market data as verified unless it appears in the provided input with evidence.\n- Do not call tools, web research, RAG, databases, or external APIs.\n- Do not create financial projections or unit economics.\n- Do not give legal, tax, securities, or investment advice.\n\n# Output Schema\n\nReturn valid JSON only. Do not wrap the JSON in Markdown.\n\nThe JSON must match this shape:\n\n```json\n{\n  \"analysis_summary\": \"string\",\n  \"value_proposition\": [\n    {\n      \"topic\": \"string\",\n      \"recommendation\": \"string\",\n      \"rationale\": \"string\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"business_model_logic\": [\n    {\n      \"topic\": \"string\",\n      \"recommendation\": \"string\",\n      \"rationale\": \"string\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"gtm_strategy\": [\n    {\n      \"topic\": \"string\",\n      \"recommendation\": \"string\",\n      \"rationale\": \"string\",\n      \"confidence\": \"medium\"\n    }\n  ],\n  \"moat_hypotheses\": [\n    {\n      \"topic\": \"string\",\n      \"recommendation\": \"string\",\n      \"rationale\": \"string\",\n      \"confidence\": \"low\"\n    }\n  ],\n  \"unsupported_market_data\": [\n    {\n      \"claim\": \"string\",\n      \"why_unsupported\": \"string\",\n      \"needed_evidence\": [\"string\"]\n    }\n  ],\n  \"needs_human_review\": [\"string\"]\n}\n```\n\n# Quality Criteria\n\n- Keep recommendations concise, practical, and grounded in the provided brief or analysis packets.\n- Separate strategy logic from evidence-dependent market facts.\n- Treat moat and GTM ideas as hypotheses when evidence is missing.\n- Make the output useful for a later Writer Agent without giving it unverified facts disguised as certainty.\n- Preserve the Strategy Agent boundary: strategy analysis only, not finance, not full proposal writing.\n\n# Failure Behavior\n\nIf the input lacks enough detail, still return a valid `StrategyAnalysis`. Use low confidence, add the uncertainty to `needs_human_review`, and place evidence-dependent claims in `unsupported_market_data` instead of inventing facts.\n\n\n# Strategy Input JSON\n\n```json\n{\n  \"user_brief\": {\n    \"company_or_product_name\": \"Berlin Restaurant Ingredient Waste Forecasting SaaS\",\n    \"industry\": \"Restaurant operations software and food-waste forecasting\",\n    \"target_customer\": \"Restaurants in Berlin\",\n    \"problem\": \"Restaurants may need better forecasts to reduce ingredient waste. The scale, causes, current workflows, urgency and willingness to pay have not been supplied and must be researched or labeled as assumptions.\",\n    \"solution\": \"A conventional forecasting SaaS product for restaurant ingredient purchasing and waste reduction. Data inputs, forecast horizon, integration requirements, operating workflow and differentiation have not been supplied and must be researched or labeled as assumptions.\",\n    \"business_model\": \"SaaS. Pricing, contract term, sales model, implementation fees, customer counts, costs and margins were not supplied and must be researched or treated as explicit assumptions.\",\n    \"geography\": \"Berlin, Germany\",\n    \"proposal_goal\": \"请通过完整产品链路生成中文商业计划书，评估传统预测型 SaaS 的商业可行性、实施、风险和财务假设。\",\n    \"output_language\": \"zh-CN\",\n    \"additional_context\": \"Only the concept, Berlin restaurant scope, SaaS model, and preference for a traditional forecasting product were supplied. Do not preset or confirm market size, waste rates, customer demand, named competitors, prices, costs, forecast accuracy, integrations, legal conclusions, financial outcomes or partnerships. Research dynamically where the product path supports it; otherwise label assumptions. Favor commercially practical conventional forecasting and workflow integration rather than inventing advanced AI novelty. Cite only evidence actually supplied to the writer. Do not use a frozen case, case whitelist, prewritten evidence pack or manually supplied financial model. Produce substantive sections. Formal plans must be English and must exclude audit metadata; audit records must be separate.\",\n    \"original_user_idea\": \"柏林餐厅食材浪费预测 SaaS - 采用传统行业传统预测产品\"\n  },\n  \"research_analysis\": {\n    \"evidence_notice\": \"Program provenance: user brief and unsourced findings are unverified hypotheses, not established facts. Only sourced_fact entries with eligible_external source IDs may be considered evidence candidates; their text must still support the claim. This is not independent fact verification.\",\n    \"analysis_summary\": \"The proposed Berlin Restaurant Ingredient Waste Forecasting SaaS aims to address potential inefficiencies in ingredient management for restaurants in Berlin. The German and EU regulatory landscape indicates a strong push for food waste reduction, with mandatory targets for out-of-home catering. Berlin's dining sector also shows a growing trend towards sustainability and digital adoption, with some German chains already using AI for inventory forecasting. However, critical details such as the specific scale and causes of waste in Berlin restaurants, their current operational workflows, the urgency of the problem, and their willingness to pay for a SaaS solution remain unquantified and require further validation. The proposed solution's specific features, integration requirements, and business model specifics are also currently assumptions.\",\n    \"market_trends\": [\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"Food Waste Regulation and Targets\",\n        \"finding\": \"Evidence suggests that the German government and the EU have established mandatory targets for food waste reduction, including a 30% per capita reduction for out-of-home catering by 2030.\",\n        \"rationale\": \"Unverified sources indicate that the German government aims to combat food waste at all levels, with mandatory EU reduction targets applying to member states. For out-of-home catering, a 30% reduction per capita must be achieved. The EU Waste Framework Directive (revised 2025) reportedly focuses on food waste, setting common rules and mandatory reduction targets. Germany is said to generate approximately 10.8 million tonnes of food waste annually (as of 2022).\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"Sustainability and Ethical Dining in Berlin\",\n        \"finding\": \"Unverified information suggests Berlin's restaurant scene is experiencing a strong and increasing trend towards sustainability, ethical food choices, and awareness of food waste.\",\n        \"rationale\": \"Unverified sources suggest Berlin is a hub for plant-based dining, reportedly ranked second among the world’s most vegan-friendly cities, with vegan-friendly listings growing by 7% in 2024. The 'slow dining' movement in Berlin is described as emphasizing intention, food education, food waste, and strong relationships with local farmers to support ethical food choices and counter overproduction.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"Digital Adoption and Demand Forecasting\",\n        \"finding\": \"Unverified reports indicate accelerating digital adoption in the German foodservice market, with some mid-sized chains reportedly using AI for inventory forecasting. Operators are also encouraged to invest in demand forecasting to meet waste reduction targets.\",\n        \"rationale\": \"Unverified sources state that more than half of mid-sized chains in Germany are using AI for inventory forecasting. To comply with a reported 50% food waste reduction target by 2030, operators are suggested to invest in demand forecasting, portion optimization, and donation logistics.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"Tourism and Restaurant Demand\",\n        \"finding\": \"Unverified data suggests strong tourism in Germany, including Berlin, is driving robust demand for out-of-home consumption, which could potentially increase ingredient turnover.\",\n        \"rationale\": \"Unverified sources indicate strong tourism is driving restaurant foot traffic demand nationally, with peaks in Berlin. Germany reportedly recorded 433 million overnight stays between January and October 2024, signaling robust demand for out-of-home consumption.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"customer_notes\": [\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"Sustainability Focus\",\n        \"finding\": \"Unverified information suggests Berlin restaurants are increasingly conscious of food waste and sustainability, aligning with ethical food choices and local sourcing.\",\n        \"rationale\": \"Unverified sources indicate Berlin restaurants are building strong relationships with local farmers to support ethical food choices and counter food overproduction. The city's reported prominence as a vegan-friendly hub further suggests a general inclination towards sustainable practices.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"Cost and Investment Barriers\",\n        \"finding\": \"Unverified reports suggest smaller independent restaurants may face challenges in absorbing the upfront capital and training costs associated with new waste reduction strategies.\",\n        \"rationale\": \"Unverified sources state that smaller independent outlets may lack the scale to absorb upfront capital and training costs incurred by investing in procurement, menu engineering, and supplier audits to meet waste reduction benchmarks.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"assumption\",\n        \"source_ids\": [],\n        \"topic\": \"Willingness to Pay for Forecasting SaaS\",\n        \"finding\": \"Berlin restaurants' willingness to pay for a forecasting SaaS that demonstrably reduces ingredient waste and associated costs, and helps meet regulatory targets, is currently an assumption.\",\n        \"rationale\": \"The user brief explicitly states that willingness to pay has not been supplied and must be researched or labeled as assumptions. This is a logical inference based on the problem statement and market trends, but lacks direct evidence.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"assumption\",\n        \"source_ids\": [],\n        \"topic\": \"Current Workflows and Urgency\",\n        \"finding\": \"The specific current workflows for ingredient management and the perceived urgency among Berlin restaurants to adopt new forecasting solutions are currently unknown assumptions.\",\n        \"rationale\": \"The user brief explicitly states that current workflows and urgency have not been supplied and must be researched or labeled as assumptions.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"competitor_assumptions\": [\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"AI-powered Food Waste Monitoring Systems\",\n        \"finding\": \"Unverified reports indicate that AI-powered food waste monitoring systems are already in use in the German foodservice market, suggesting existing solutions for waste tracking and optimization.\",\n        \"rationale\": \"Unverified sources mention that Compass Group partnered with Winnow to install AI-powered food waste monitoring systems across the UK and Germany. This technology reportedly uses smart scales and image recognition to track discarded items, helping chefs optimize portioning and inventory.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"needs_validation\",\n        \"source_ids\": [],\n        \"topic\": \"General Gastro Waste Management Services\",\n        \"finding\": \"Unverified information suggests companies offer comprehensive gastro waste management services that handle disposal, recovery, and reuse of food waste for restaurants.\",\n        \"rationale\": \"Unverified sources indicate FCC Environment CEE provides professional gastro waste management, reportedly focusing on efficient disposal, legal compliance, sustainability goals, and cost-efficient operations, including recovery and reuse of kitchen leftovers.\",\n        \"confidence\": \"low\"\n      },\n      {\n        \"evidence_status\": \"assumption\",\n        \"source_ids\": [],\n        \"topic\": \"Internal Forecasting Methods\",\n        \"finding\": \"It is an assumption that many Berlin restaurants currently employ manual or rudimentary internal methods for ingredient purchasing and inventory management, which may be inefficient.\",\n        \"rationale\": \"The user brief identifies 'restaurants may need better forecasts to reduce ingredient waste' as the problem, implying current methods are suboptimal. This is an assumption without direct evidence of specific restaurant practices.\",\n        \"confidence\": \"low\"\n      }\n    ],\n    \"unsupported_claims\": [\n      {\n        \"claim\": \"The specific scale and causes of ingredient waste in Berlin restaurants.\",\n        \"why_unsupported\": \"The user brief explicitly states that the scale and causes of waste have not been supplied. While national food waste figures are available from unverified sources, specific data for Berlin restaurants and the underlying causes (e.g., over-ordering, poor storage, menu changes) are not provided.\",\n        \"needed_evidence\": [\n          \"Specific food waste statistics for Berlin restaurants\",\n          \"Common causes of ingredient waste in Berlin's foodservice sector\"\n        ]\n      },\n      {\n        \"claim\": \"The urgency and willingness of Berlin restaurants to pay for a forecasting SaaS.\",\n        \"why_unsupported\": \"The user brief explicitly states that urgency and willingness to pay have not been supplied. While regulatory pressure and sustainability trends from unverified sources suggest a need, the financial readiness and perceived urgency for a SaaS solution are not evidenced.\",\n        \"needed_evidence\": [\n          \"Market research on Berlin restaurant budget allocation for software\",\n          \"Surveys on perceived urgency of waste reduction solutions among Berlin restaurateurs\"\n        ]\n      },\n      {\n        \"claim\": \"Specific data inputs, forecast horizon, integration requirements, operating workflow, and differentiation of the proposed SaaS.\",\n        \"why_unsupported\": \"The user brief states these aspects of the solution have not been supplied and must be researched or labeled as assumptions. No external evidence was provided to define these specifics for the proposed SaaS.\",\n        \"needed_evidence\": [\n          \"Industry standards for restaurant forecasting SaaS features\",\n          \"Common integration points for restaurant software (POS, inventory systems)\",\n          \"User requirements for forecast horizon and workflow\"\n        ]\n      },\n      {\n        \"claim\": \"Pricing, contract term, sales model, implementation fees, customer counts, costs, and margins for the SaaS.\",\n        \"why_unsupported\": \"The user brief explicitly states these business model details were not supplied and must be researched or treated as explicit assumptions. No external evidence was provided to define these financial and operational specifics.\",\n        \"needed_evidence\": [\n          \"Pricing benchmarks for similar SaaS products in the German market\",\n          \"Typical SaaS contract terms and sales models for B2B software\",\n          \"Cost structures and margin expectations for software companies in the industry\"\n        ]\n      }\n    ],\n    \"needs_human_review\": [\n      \"Quantification of the specific financial impact of ingredient waste on Berlin restaurants.\",\n      \"Detailed understanding of existing ingredient purchasing and inventory management workflows in Berlin restaurants.\",\n      \"Identification of specific integration requirements for a conventional forecasting SaaS with common restaurant POS/inventory systems in Berlin.\",\n      \"Validation of the perceived urgency and budget allocation for waste reduction software among target customers.\",\n      \"Further research into local Berlin-specific competitors offering ingredient forecasting SaaS solutions.\",\n      \"Clarification on the exact definition of 'conventional forecasting product' to ensure alignment with market expectations and capabilities.\"\n    ]\n  },\n  \"supervisor_task\": {\n    \"task_id\": \"strategy_task\",\n    \"agent_role\": \"strategy\",\n    \"objective\": \"Develop evidence-aware positioning, business-model, go-to-market, and moat hypotheses from the validated inputs.\",\n    \"input_requirements\": [\n      \"user_brief\",\n      \"research_analysis\"\n    ],\n    \"expected_output\": \"A schema-validated StrategyAnalysis packet.\",\n    \"depends_on\": [\n      \"research_task\"\n    ]\n  },\n  \"evidence_catalog\": [\n    {\n      \"source_id\": \"web-e9510330572845d9aac35ca7e729fe09\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-b9d07e319b454e6aa36adc6b3f555ecf\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-c15f234c15bb4010bf09d9100b32da3f\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-7aeb3565e45f4d948ec6e095f1058443\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-22f60defaa1340e18b4ba186cfb1ddc2\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-ba0fa3909a5b4b38a6d853546eb780b5\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-66852f06b98d414f888d58b53bb0406f\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-bd383d1955ca4cc2a847ae4a1e7810e6\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-4543c70cb25c44ea80fc1d72e472cca2\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    },\n    {\n      \"source_id\": \"web-9facc20b6e0d46e190a34b223152035c\",\n      \"role\": \"unverified\",\n      \"limitations\": [\n        \"jurisdiction_not_confirmed\",\n        \"publication_date_unknown_or_future\",\n        \"source_authority_not_confirmed\"\n      ],\n      \"entailment\": \"must_still_be_checked_against_the_claim\"\n    }\n  ]\n}\n```\n# Evidence provenance\nThe user brief is a user-provided hypothesis, not external evidence. Analysis packets contain model inferences, not independently verified facts. Framework/template RAG supports methods only, not market sizes, local law or demand. Only eligible_external sources may support jurisdiction-dependent sourced_fact claims and their actual text must directly support the claim. Unknown dates, weak authority or unconfirmed jurisdiction require qualification, evidence_status=\"needs_validation\", empty claim.source_ids and low confidence. Never put an evidence status into claim_type. Do not claim first/only/no competitors without comprehensive evidence.\n\n\n# Schema List-Size Contract (generated automatically)\n\n- `business_model_logic`: 1 to 5 items.\n- `gtm_strategy`: 1 to 5 items.\n- `moat_hypotheses`: 1 to 5 items.\n- `needs_human_review`: at most 8 items.\n- `unsupported_market_data`: at most 8 items.\n- `unsupported_market_data[].needed_evidence`: 1 to 5 items.\n- `value_proposition`: 1 to 5 items.\n\nMerge duplicate or closely related entries to satisfy maximums. Do not silently truncate or remove essential dependencies.\n\n# Schema Enum Contract (generated automatically)\n\n- `*.confidence (4 fields)`: exactly one of \"high\", \"medium\", \"low\".\n\nThese lists are closed. Never invent a value that describes the surrounding section or field name; pick the closest listed member, or \"general\" when one is offered and nothing else fits.",
+  "config": {
+    "temperature": 0.2,
+    "max_output_tokens": 16384,
+    "response_mime_type": "application/json",
+    "response_schema": {
+      "properties": {
+        "analysis_summary": {
+          "type": "string"
+        },
+        "value_proposition": {
+          "items": {
+            "properties": {
+              "topic": {
+                "type": "string"
+              },
+              "recommendation": {
+                "type": "string"
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "topic",
+              "recommendation",
+              "rationale"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "business_model_logic": {
+          "items": {
+            "properties": {
+              "topic": {
+                "type": "string"
+              },
+              "recommendation": {
+                "type": "string"
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "topic",
+              "recommendation",
+              "rationale"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "gtm_strategy": {
+          "items": {
+            "properties": {
+              "topic": {
+                "type": "string"
+              },
+              "recommendation": {
+                "type": "string"
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "topic",
+              "recommendation",
+              "rationale"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "moat_hypotheses": {
+          "items": {
+            "properties": {
+              "topic": {
+                "type": "string"
+              },
+              "recommendation": {
+                "type": "string"
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "confidence": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "topic",
+              "recommendation",
+              "rationale"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "unsupported_market_data": {
+          "items": {
+            "properties": {
+              "claim": {
+                "type": "string"
+              },
+              "why_unsupported": {
+                "type": "string"
+              },
+              "needed_evidence": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "claim",
+              "why_unsupported",
+              "needed_evidence"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "needs_human_review": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "analysis_summary",
+        "value_proposition",
+        "business_model_logic",
+        "gtm_strategy",
+        "moat_hypotheses"
+      ],
+      "type": "object"
+    }
+  }
+}

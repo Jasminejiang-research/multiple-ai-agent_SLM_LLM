@@ -1,0 +1,55 @@
+COMMAND: python -B -m pip check
+No broken requirements found.
+EXIT: 0; expected: 0
+COMMAND: python -B -m pytest -q slm/tests/test_granite_s3.py -p no:cacheprovider
+....................................                                     [100%]
+36 passed in 3.46s
+EXIT: 0; expected: 0
+COMMAND: python -B -m evaluation.s0
+{
+  "status": "valid_preparation",
+  "errors": [],
+  "pending": [
+    "formal code/model/config freeze is pending",
+    "runtime freeze missing: code_snapshot_hash",
+    "runtime freeze missing: prompt_version",
+    "runtime freeze missing: schema_version",
+    "runtime freeze missing: model_config_version",
+    "runtime freeze missing: max_output_tokens",
+    "runtime freeze missing: run_max_requests",
+    "runtime freeze missing: run_max_total_tokens",
+    "acceptance pending: S1",
+    "acceptance pending: S2",
+    "acceptance pending: S3_D_preflight",
+    "acceptance pending: S4",
+    "ai_education: complete brief/evidence awaiting user review",
+    "intelligent_ring: complete brief/evidence awaiting user review"
+  ],
+  "formal_execution_allowed": false,
+  "require_frozen": false
+}
+EXIT: 0; expected: 0
+COMMAND: python -B -m evaluation.s0 --require-frozen
+{
+  "status": "valid_preparation",
+  "errors": [],
+  "pending": [
+    "formal code/model/config freeze is pending",
+    "runtime freeze missing: code_snapshot_hash",
+    "runtime freeze missing: prompt_version",
+    "runtime freeze missing: schema_version",
+    "runtime freeze missing: model_config_version",
+    "runtime freeze missing: max_output_tokens",
+    "runtime freeze missing: run_max_requests",
+    "runtime freeze missing: run_max_total_tokens",
+    "acceptance pending: S1",
+    "acceptance pending: S2",
+    "acceptance pending: S3_D_preflight",
+    "acceptance pending: S4",
+    "ai_education: complete brief/evidence awaiting user review",
+    "intelligent_ring: complete brief/evidence awaiting user review"
+  ],
+  "formal_execution_allowed": false,
+  "require_frozen": true
+}
+EXIT: 2; expected: 2

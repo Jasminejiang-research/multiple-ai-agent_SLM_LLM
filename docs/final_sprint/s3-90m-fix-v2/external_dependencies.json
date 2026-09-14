@@ -1,0 +1,10 @@
+[
+  {
+    "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\slm\\configs\\granite_preflight_cpu_v2.json",
+    "sha256": "4e8bec9bd8f951c07268b2cedf78858e14194bb20168bba2bb197576ce8ae63f"
+  },
+  {
+    "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\slm\\start_granite.ps1",
+    "sha256": "e95570021843b6a87cc57b2d58c99ffcc83d3074da720b12f33e62e2510e3d29"
+  }
+]

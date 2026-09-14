@@ -1,0 +1,17 @@
+{
+  "model": "granite-h-micro-32k",
+  "created_at": "2026-09-07T20:24:28.0834322Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\n  \"text\": \"Value: Personalized, timely business-case reasoning feedback for MBA students.\\nBusiness Model: AI-driven tutoring service for MBA students and potential institutional buyers (business schools).\\nGTM: Target US adults 18+ enrolled/applying to MBA programs; sell directly to students and pitch to business-school instructors.\\nMoat: Proprietary licensed/openly reusable cases and English-language AI coaching differentiate from competitors like Khanmigo.\\n}\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 18253540800,
+  "load_duration": 2901400,
+  "prompt_eval_count": 381,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 9415436000,
+  "eval_count": 96,
+  "eval_duration": 8778150000
+}

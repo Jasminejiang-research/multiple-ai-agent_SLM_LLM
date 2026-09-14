@@ -1,0 +1,307 @@
+{
+  "observed_at_utc": "2026-09-07T08:29:45.774027+00:00",
+  "phases": {
+    "native_schema_probe": {
+      "status": "passed",
+      "observed_entries": 2,
+      "distinct_entries": 1,
+      "calls": [
+        {
+          "attempt_id": "edf30e40-277f-445f-8f46-18d97c5ef12a",
+          "role": "schema_probe",
+          "purpose": "generate",
+          "status": "succeeded",
+          "elapsed_seconds": 5.171999999991385,
+          "prompt_tokens": 53,
+          "output_tokens": 22,
+          "total_tokens": 75,
+          "finish_reason": "stop",
+          "error_type": null
+        }
+      ]
+    },
+    "research_probe": {
+      "status": "failed",
+      "error_type": "ValueError",
+      "error": "market_trends[0]: claim content anchor not found",
+      "calls": [
+        {
+          "attempt_id": "8c3770ce-763e-4700-87f8-237bdc87a295",
+          "role": "research",
+          "purpose": "generate",
+          "status": "invalid_output",
+          "elapsed_seconds": 397.2820000000065,
+          "prompt_tokens": 5369,
+          "output_tokens": 2178,
+          "total_tokens": 7547,
+          "finish_reason": "stop",
+          "error_type": "StructuredOutputValidationError"
+        },
+        {
+          "attempt_id": "ff544941-fd24-43fd-a735-e0f2ad638f08",
+          "role": "research",
+          "purpose": "structure_repair",
+          "status": "succeeded",
+          "elapsed_seconds": 343.9219999999914,
+          "prompt_tokens": 5904,
+          "output_tokens": 2482,
+          "total_tokens": 8386,
+          "finish_reason": "stop",
+          "error_type": null
+        }
+      ]
+    },
+    "full_d": {
+      "status": "not_started"
+    }
+  },
+  "latest_sample": {
+    "elapsed_seconds": 749.7029999999795,
+    "ram_available_bytes": 4400685056,
+    "pagefile_delta_bytes": 2097152,
+    "time": "2026-09-07T08:28:06.275288+00:00"
+  },
+  "final": {
+    "status": "failed",
+    "complete_proposal_produced": false,
+    "proposal_directory": null,
+    "budget": {
+      "this_run_request_count": 3,
+      "this_run_charged_total_tokens": 16008,
+      "this_run_elapsed_seconds": 753.6719999999914,
+      "cumulative_request_count": 8,
+      "cumulative_charged_total_tokens": 53872,
+      "cumulative_elapsed_seconds": 3584.796000000002
+    },
+    "resources": {
+      "status": "passed",
+      "reason": null,
+      "sample_count": 105,
+      "sample_interval_seconds": 5.0,
+      "baseline": {
+        "ram_total_bytes": 16969424896,
+        "ram_available_bytes": 6717329408,
+        "pagefile_used_bytes": 404750336,
+        "gpu_used_bytes": 0,
+        "gpu_total_bytes": 2147483648,
+        "loaded_models": [],
+        "missing": {}
+      },
+      "maximum_observed_sample_gap_seconds": 7.937999999994645,
+      "min_available_ram_bytes": 4061503488,
+      "peak_ram_used_bytes": 12907921408,
+      "peak_gpu_used_bytes": 0,
+      "peak_pagefile_used_bytes": 413138944,
+      "peak_pagefile_delta_bytes": 8388608,
+      "missing_observations": []
+    },
+    "deadline_fired": false,
+    "http_requests": 3,
+    "server_stop": {
+      "status": "owned_process_tree_terminated",
+      "pid": 21316,
+      "lease_released": false,
+      "restart_requires_explicit_reconciliation": true
+    }
+  },
+  "server_tail": [
+    "slot      release: id  0 | task 2209 | stop processing: n_tokens = 8385, truncated = 0",
+    "srv  update_slots: all slots are idle"
+  ],
+  "attempts": [
+    {
+      "phase": "native_schema_probe",
+      "attempt_id": "edf30e40-277f-445f-8f46-18d97c5ef12a",
+      "role": "schema_probe",
+      "purpose": "generate",
+      "status": "succeeded",
+      "elapsed_seconds": 5.171999999991385,
+      "prompt_tokens": 53,
+      "output_tokens": 22,
+      "total_tokens": 75,
+      "finish_reason": "stop",
+      "error_type": null,
+      "raw_file": "01_schema_probe_generate.raw.txt",
+      "raw_sha256": "25c5c7565aedd73f2d6414f8780d3bda78858d442db757fa5149aaddea7b2131",
+      "detected_reference_score_issues": [
+        {
+          "path": "$.financial_value_ids",
+          "problem": "invalid or repeated financial references",
+          "repeated": [
+            [
+              "starting_cash",
+              2
+            ]
+          ],
+          "unknown": [],
+          "observed_items": 2,
+          "maximum_items": 31,
+          "excerpt": [
+            "starting_cash",
+            "starting_cash"
+          ]
+        }
+      ],
+      "detected_grounding_issues": [],
+      "usage_file": "01_schema_probe_generate.usage.json",
+      "usage_sha256": "9e6ca6d9923cf02cda0a979a59a3049fd13905becb27972878f7a4fb49a325e0"
+    },
+    {
+      "phase": "research_probe",
+      "attempt_id": "8c3770ce-763e-4700-87f8-237bdc87a295",
+      "role": "research",
+      "purpose": "generate",
+      "status": "invalid_output",
+      "elapsed_seconds": 397.2820000000065,
+      "prompt_tokens": 5369,
+      "output_tokens": 2178,
+      "total_tokens": 7547,
+      "finish_reason": "stop",
+      "error_type": "StructuredOutputValidationError",
+      "raw_file": "02_research_generate.raw.txt",
+      "raw_sha256": "f7020dd3d067606a510a097e254f7ac7f0a11da01b7eedad88491dbdeab7a0ea",
+      "detected_reference_score_issues": [],
+      "detected_grounding_issues": [
+        {
+          "path": "$.market_trends[0].claims[0].content_anchor",
+          "problem": "content anchor not present in parent prose",
+          "observed": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as business, management, marketing, and related ",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "Historical data on graduate degree completions (NCES) show a 16% increase in master's degrees from 2011-12 to 2021-22, b"
+        },
+        {
+          "path": "$.market_trends[1].claims[0].content_anchor",
+          "problem": "content anchor not present in parent prose",
+          "observed": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "Khanmigo is a known competitor in adjacent tutoring space, but its pricing and target audience are not directly comparab"
+        },
+        {
+          "path": "$.customer_notes[0].claims[0].content_anchor",
+          "problem": "content anchor not present in parent prose",
+          "observed": "target_customer",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "The service targets US adults aged 18+ enrolled in or applying to MBA programs, with business-school instructors as pote"
+        },
+        {
+          "path": "$.competitor_assumptions[0].claims[0].content_anchor",
+          "problem": "content anchor not present in parent prose",
+          "observed": "differentiation_mba",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "The service must differentiate from low-price broad tutoring platforms like Khanmigo, focusing on MBA-specific case coac"
+        }
+      ],
+      "usage_file": "02_research_generate.usage.json",
+      "usage_sha256": "2000b555796184b70b1b9d8628f7cb9803d6ff51891010502f7663d4513687df"
+    },
+    {
+      "phase": "research_probe",
+      "attempt_id": "ff544941-fd24-43fd-a735-e0f2ad638f08",
+      "role": "research",
+      "purpose": "structure_repair",
+      "status": "succeeded",
+      "elapsed_seconds": 343.9219999999914,
+      "prompt_tokens": 5904,
+      "output_tokens": 2482,
+      "total_tokens": 8386,
+      "finish_reason": "stop",
+      "error_type": null,
+      "raw_file": "03_research_structure_repair.raw.txt",
+      "raw_sha256": "9262cbb005c251d7da6f2c60cc2f4aebb2e62f440f681c815a3a4b08a7c73d65",
+      "detected_reference_score_issues": [],
+      "detected_grounding_issues": [
+        {
+          "path": "$.market_trends[0].claims[0].content_anchor",
+          "problem": "content anchor not present in parent prose",
+          "observed": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as business, management, marketing, and related ",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "Historical data shows a 16% increase in master's degrees from 2011-12 to 2021-22, but this does not directly indicate de"
+        },
+        {
+          "path": "$.market_trends[0].claims[0].source_anchors[1].quote",
+          "problem": "quote not found verbatim at supplied frozen lines",
+          "observed": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as busin",
+          "frozen_excerpt": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as business, management, marketing, and related support services, as well as culinary, entertainment, and pe"
+        },
+        {
+          "path": "$.market_trends[1].claims[0].content_anchor",
+          "problem": "content anchor not present in parent prose",
+          "observed": "differentiation_mba",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "Khanmigo is a known competitor in adjacent tutoring space, but its pricing and target audience are not directly comparab"
+        },
+        {
+          "path": "$.customer_notes[0].claims[0].content_anchor",
+          "problem": "content anchor not present in parent prose",
+          "observed": "target_customer",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "The service targets US adults aged 18+ enrolled in or applying to MBA programs, with business-school instructors as pote"
+        },
+        {
+          "path": "$.customer_notes[0].claims[0].source_anchors[1].quote",
+          "problem": "quote not found verbatim at supplied frozen lines",
+          "observed": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as busin",
+          "frozen_excerpt": "1 In order to be consistent with the definition of “business” for bachelor’s degree data, “business” is defined as business, management, marketing, and related support services, as well as culinary, entertainment, and pe"
+        },
+        {
+          "path": "$.competitor_assumptions[0].claims[0].content_anchor",
+          "problem": "content anchor not present in parent prose",
+          "observed": "differentiation_mba",
+          "parent_fields": [
+            "finding",
+            "recommendation",
+            "assumption",
+            "rationale"
+          ],
+          "legal_exact_example": "The service must differentiate from Khanmigo by offering MBA-specific case coaching and personalized feedback."
+        }
+      ],
+      "usage_file": "03_research_structure_repair.usage.json",
+      "usage_sha256": "d43ca6fcb721873dd7fa550a857d819e1621a6b758c05d3221eef996c42bf43d"
+    }
+  ],
+  "preservation": {
+    "installed_file_count": 253,
+    "installed_mismatches": [],
+    "backup_mismatches": [],
+    "runtime_file_count": 253,
+    "runtime_mismatches": [],
+    "prior_trial_evidence_unchanged": true,
+    "archive_sha256": "9f84226395c2af55b3a58af660885f7d2e76d60cbaeab38bf98ab2f0fe91f612"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "recorded_at_utc": "2026-09-06T22:21:05.6240570Z",
+  "remaining_ollama_processes": [],
+  "endpoint_reachable": false,
+  "quarantined_leases": [
+    {
+      "Name": "2fb24565ac96fa6667ae7aac126b1d1c01bd9ec999315b419e6010a19e5d9461.lease.json",
+      "Length": 137
+    }
+  ]
+}

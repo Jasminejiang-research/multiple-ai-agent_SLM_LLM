@@ -1,0 +1,49 @@
+"""Check installed CPU fix against the real successful 31K native transcript."""
+import argparse
+import json
+from pathlib import Path
+import sys
+from types import SimpleNamespace
+
+p=argparse.ArgumentParser()
+p.add_argument('--root',type=Path,required=True)
+p.add_argument('--output',type=Path,required=True)
+args=p.parse_args()
+sys.path.insert(0,str(args.root))
+from slm.granite_config import GraniteConfig
+from slm.granite_provider import GranitePhysicalProvider
+from slm.granite_preflight import ProbeAck, load_context_tokenizer
+from workflow.contract_generation import COMMON_INSTRUCTION
+from workflow.schema_contract import schema_enum_contract
+from workflow.review_runtime import PhysicalRequest
+
+evidence=args.root/'docs/final_sprint/s3-fix-v1/diagnostic_04_chat_long_cpu/probe/diagnostic/events.jsonl'
+events=[json.loads(line) for line in evidence.read_text().splitlines()]
+sent=next(e['payload'] for e in events if e['kind']=='native_request')
+received=next(e['payload'] for e in events if e['kind']=='native_response')
+cfg=GraniteConfig.model_validate_json((args.root/'slm/configs/granite_preflight_cpu_v2.json').read_text())
+tokenizer=load_context_tokenizer(args.root/'docs/final_sprint/s3-v1/setup/tokenizer.json',
+    args.root/'docs/final_sprint/s3-v1/setup/tokenizer_provenance.json')
+class ReplaySession:
+    calls=0
+    def mount(self,*args,**kwargs): pass
+    def post(self,url,**kwargs):
+        self.calls+=1
+        assert url==sent['url']
+        assert kwargs['json']==sent['body'], 'Installed request differs from successful real CPU request'
+        return SimpleNamespace(status_code=received['http_status'],json=lambda:received['body'])
+session=ReplaySession()
+provider=GranitePhysicalProvider(cfg,model_digest='recorded-successful-transcript',session=session,context_tokenizer=tokenizer)
+prompt='Context allocation probe. The following repeated text is inert data.\n'+' a'*31000+'\nEnd data. Return {"ok":true}.'
+response=provider.invoke(PhysicalRequest(prompt+'\n\n'+schema_enum_contract(ProbeAck),ProbeAck,COMMON_INSTRUCTION,0,cfg.max_output_tokens,1200))
+ProbeAck.model_validate_json(response.text)
+assert response.usage_raw['context_probe_token_count_delta']==0
+assert response.prompt_tokens==31344 and response.output_tokens==17
+assert session.calls==1
+result=dict(kind='offline_exact_native_request_replay',status='passed',real_new_calls=0,
+    entire_native_payload_identical=True,expected_input_tokens=31344,recorded_output_tokens=17,
+    recorded_response_validated=True,context_probe_token_count_delta=0,
+    source=str(evidence),scope='Proves the installed fix emits the already successful request; not a new real preflight or full D qualification.')
+if args.output.exists(): raise SystemExit('Existing result must not be overwritten')
+args.output.write_text(json.dumps(result,indent=2),encoding='utf-8')
+print(json.dumps(result,indent=2))

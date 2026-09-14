@@ -1,0 +1,38 @@
+{
+  "version": "s6-best-effort-demo-authorization-v1",
+  "authorized_at": "2026-09-07",
+  "approved": true,
+  "mode": "slm_best_effort_demo",
+  "formal_eligible": false,
+  "c_minus_d_comparison_eligible": false,
+  "user_instruction": "请继续处理S6，但不要进入S5。将本次D结果完整记录为非正式工程预检失败/no_go；新增独立slm_best_effort_demo模式；保留Research、Strategy、Finance、Writer及各级Critic，Critic失败、超时或低分不阻止继续生成与导出；使用极短输出、固定13章、冻结短ID、assumption/unsupported、确定性case-specific财务值；截断时保存已有内容并以信息不足，待验证补齐；先离线测试；授权一次AI education Granite CPU/32K产品演示，最长1800秒、最多10次物理请求、总计80000 tokens、无GPU和付费服务；正式实验保持0/8。",
+  "scope": {
+    "case_id": "ai_education",
+    "provider": "local",
+    "model_exact_id": "granite-h-micro-32k@eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+    "context_tokens": 32768,
+    "gpu_layers": 0,
+    "paid_services": false,
+    "formal_runs": 0
+  },
+  "hard_limits": {
+    "run_seconds": 1800,
+    "max_physical_requests": 10,
+    "max_total_tokens": 80000
+  },
+  "config_path": "slm/configs/granite_best_effort_demo_v1.json",
+  "config_sha256": "dc689a7ddf8fcf58f625468fb126abf3bb2d5349a93532bd62aa85ee81815340",
+  "required_prior_D_record": {
+    "path": "docs/final_sprint/s6-fast-generation-v1/D_PREFLIGHT_ATTEMPT_03.json",
+    "sha256": "951480b3c5d35988c24c7e8ee7918d16db6392bfa1dfa32768273eebcadc7f2f",
+    "status": "no_go",
+    "classification": "nonformal_engineering_preflight_failure"
+  },
+  "prohibitions": [
+    "Do not treat the demo as A, B, C, or D",
+    "Do not include the demo in C-D comparison or formal metrics",
+    "Do not start S5",
+    "Do not use GPU, cloud models, search, or paid services",
+    "Do not reset, delete, or refund prior usage or lease evidence"
+  ]
+}

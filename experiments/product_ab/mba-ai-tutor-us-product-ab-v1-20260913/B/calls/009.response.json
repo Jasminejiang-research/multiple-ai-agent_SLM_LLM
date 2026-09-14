@@ -1,0 +1,273 @@
+{
+  "sdk_http_response": {
+    "headers": {
+      "x-gemini-service-tier": "standard",
+      "content-type": "application/json; charset=UTF-8",
+      "vary": "Origin, X-Origin, Referer",
+      "content-encoding": "gzip",
+      "date": "Sun, 13 Sep 2026 11:30:01 GMT",
+      "server": "scaffolding on HTTPServer2",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "server-timing": "gfet4t7; dur=21223",
+      "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+      "transfer-encoding": "chunked"
+    },
+    "body": null
+  },
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "media_resolution": null,
+            "code_execution_result": null,
+            "executable_code": null,
+            "file_data": null,
+            "function_call": null,
+            "function_response": null,
+            "inline_data": null,
+            "text": "{\n  \"financial_model\": null,\n  \"analysis_summary\": \"The financial assumptions for the AI Tutor for MBA Students are currently qualitative due to the absence of specific financial data, business model details, and market research on MBA student willingness to pay or specific cost drivers. The analysis relies on general industry trends and strategic recommendations, acknowledging that all quantitative figures would be speculative without further validation. Key areas requiring immediate research include pricing strategy, customer acquisition costs, operational expenses, and the overall market size for this specific niche within the US higher education sector.\",\n  \"revenue_assumptions\": [\n    {\n      \"topic\": \"Revenue Model\",\n      \"assumption\": \"The primary revenue model is assumed to be a direct-to-consumer (D2C) subscription-based service for individual MBA students in the United States, potentially with tiered pricing based on features or usage levels.\",\n      \"rationale\": \"This model is a common approach for EdTech services and was suggested in the strategy analysis. However, the specific pricing, conversion rates, and customer acquisition volumes are currently unsupplied.\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\n        \"Confirmation of the preferred business model (D2C vs. B2B or hybrid)\",\n        \"Specific pricing tiers and monthly subscription rates\",\n        \"Estimated customer acquisition volume and conversion rates\"\n      ]\n    },\n    {\n      \"topic\": \"Institutional Partnerships Revenue\",\n      \"assumption\": \"A secondary revenue stream could emerge from B2B partnerships with MBA programs or universities, where the AI tutor is licensed or integrated as an endorsed supplementary resource.\",\n      \"rationale\": \"The strategy analysis suggests investigating institutional partnerships for legitimacy and distribution. However, the feasibility, pricing models for institutions, and potential revenue share are entirely unconfirmed.\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\n        \"Feasibility and structure of B2B partnership models\",\n        \"Pricing models for institutional licenses or integrations\",\n        \"Projected adoption rates by universities\"\n      ]\n    },\n    {\n      \"topic\": \"Customer Acquisition & Growth\",\n      \"assumption\": \"Initial customer acquisition will primarily target individual MBA students through digital channels and academic forums, with growth dependent on effective marketing and positive word-of-mouth.\",\n      \"rationale\": \"The go-to-market strategy suggests direct engagement. However, specific customer acquisition costs (CAC), conversion rates, and the overall addressable market size for MBA students are unknown.\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\n        \"Detailed customer acquisition strategy and associated costs\",\n        \"Market size and penetration rates for MBA students\",\n        \"Projected customer growth trajectory\"\n      ]\n    }\n  ],\n  \"cost_assumptions\": [\n    {\n      \"topic\": \"AI Development & Maintenance Costs\",\n      \"assumption\": \"Significant investment will be required for the initial development, ongoing enhancement, and maintenance of the AI tutor's core technology, including large language model (LLM) integration, specialized pedagogical algorithms, and infrastructure.\",\n      \"rationale\": \"Developing a high-quality, specialized AI tutor is inherently R&D intensive. Specific cost breakdowns for development, infrastructure, and ongoing maintenance are unsupplied.\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\n        \"Detailed budget for AI development and infrastructure\",\n        \"Ongoing operational costs for AI model hosting and maintenance\",\n        \"Cost of content creation and curriculum integration\"\n      ]\n    },\n    {\n      \"topic\": \"Operational & Support Costs\",\n      \"assumption\": \"Operational costs will include customer support, platform hosting, data storage, and administrative overhead. Human oversight for academic integrity and quality assurance will also be a key cost component.\",\n      \"rationale\": \"Any SaaS product requires operational support. The strategy analysis highlights the importance of academic integrity and human oversight, implying associated costs. Specific staffing, tooling, and infrastructure costs are unknown.\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\n        \"Staffing plan and associated salary costs for operations and support\",\n        \"Estimated costs for customer support tools and services\",\n        \"Detailed breakdown of platform hosting and data management expenses\"\n      ]\n    },\n    {\n      \"topic\": \"Marketing & Customer Acquisition Costs (CAC)\",\n      \"assumption\": \"Costs will be incurred for marketing campaigns, digital advertising, and sales efforts to reach and convert MBA students, both individually and potentially through institutional channels.\",\n      \"rationale\": \"Customer acquisition is essential for growth. The go-to-market strategy suggests direct marketing. However, specific marketing budgets, channel costs, and CAC targets are unsupplied.\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\n        \"Marketing budget allocation across different channels\",\n        \"Target Customer Acquisition Cost (CAC)\",\n        \"Sales and business development costs for institutional partnerships\"\n      ]\n    },\n    {\n      \"topic\": \"Regulatory & Compliance Costs\",\n      \"assumption\": \"Ongoing costs will be associated with monitoring and ensuring compliance with evolving federal and state regulations concerning AI in education, data privacy (e.g., FERPA), and academic integrity in the United States.\",\n      \"rationale\": \"The research analysis highlights a rapidly evolving regulatory landscape. Compliance will require legal counsel, policy implementation, and potential certification efforts. Specific costs are unknown.\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\n        \"Legal and compliance consulting fees\",\n        \"Costs associated with data privacy and security measures\",\n        \"Potential costs for university certifications or endorsements\"\n      ]\n    }\n  ],\n  \"unit_economics_assumptions\": [\n    {\n      \"topic\": \"Pricing Strategy\",\n      \"assumption\": \"The price per unit (monthly subscription fee) for the AI Tutor will need to be competitive with existing academic support alternatives and reflect the perceived value of personalized, MBA-specific learning assistance.\",\n      \"rationale\": \"The business model is unsupplied, and MBA student willingness to pay is unknown. Pricing will be a critical determinant of revenue and must be validated through market research.\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\n        \"Market research on MBA student willingness to pay for AI tutoring\",\n        \"Competitive pricing analysis of alternative learning support services\",\n        \"Value proposition assessment to justify pricing\"\n      ]\n    },\n    {\n      \"topic\": \"Gross Margin\",\n      \"assumption\": \"The gross margin per unit will depend on the monthly subscription price and the variable costs associated with serving each active user, such as AI inference costs, content licensing, and direct customer support.\",\n      \"rationale\": \"Without defined pricing or variable costs, the gross margin is entirely speculative. It is a critical metric for profitability and scalability.\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\n        \"Detailed breakdown of variable costs per active user\",\n        \"Target gross margin percentage\",\n        \"Impact of usage patterns on variable costs\"\n      ]\n    },\n    {\n      \"topic\": \"Customer Acquisition Cost (CAC)\",\n      \"assumption\": \"The Customer Acquisition Cost (CAC) will be influenced by the chosen marketing channels, the effectiveness of campaigns, and the conversion rates from prospects to paying subscribers.\",\n      \"rationale\": \"The go-to-market strategy is qualitative, and specific marketing budgets are unknown. The CAC will be a key driver of profitability and requires validation.\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\n        \"Target CAC for individual MBA students\",\n        \"Breakdown of marketing and sales expenses per acquired customer\",\n        \"Impact of brand perception on CAC\"\n      ]\n    },\n    {\n      \"topic\": \"Customer Lifetime Value (LTV) & Retention\",\n      \"assumption\": \"Customer Lifetime Value (LTV) will be determined by the average subscription duration (retention rate) and the average revenue per user (ARPU) over that period. High retention will be crucial given the likely high CAC.\",\n      \"rationale\": \"Retention rates for MBA students are unknown, and the ARPU is dependent on the unconfirmed pricing strategy. LTV is essential for assessing the viability of the business model.\",\n      \"confidence\": \"low\",\n      \"needs_validation\": [\n        \"Expected monthly or annual customer churn rate\",\n        \"Average subscription duration for MBA students\",\n        \"Strategies to maximize customer retention\"\n      ]\n    }\n  ],\n  \"break_even_discussion\": \"Achieving break-even for the AI Tutor for MBA Students would depend on a critical balance of several key financial assumptions. The primary drivers would be the volume of paying MBA student subscribers, the monthly subscription price, the variable cost associated with serving each student (e.g., AI inference costs, direct support), and the total monthly fixed costs (e.g., AI development, operational overhead, marketing, compliance). A higher number of subscribers at a competitive price, coupled with efficient variable costs and controlled fixed expenses, would accelerate reaching break-even. Conversely, low adoption rates, aggressive pricing pressure, high variable costs, or significant fixed overheads would extend the time to profitability. The break-even point is highly sensitive to the initial investment in AI development and the effectiveness of customer acquisition efforts.\",\n  \"assumption_notice\": \"All financial figures are assumptions for planning discussion, not forecasts.\",\n  \"unsupported_financial_claims\": [\n    {\n      \"claim\": \"The willingness of MBA students to pay for an AI tutor service.\",\n      \"why_unsupported\": \"The user brief explicitly states this has not been supplied, and no pricing or willingness-to-pay data for MBA students is in the provided sources.\",\n      \"needed_evidence\": [\n        \"Pricing sensitivity analysis for MBA students\",\n        \"Market research on perceived value of AI tutoring for MBA programs\"\n      ]\n    },\n    {\n      \"claim\": \"Plausible commercial models, pricing, conversion rates, customer counts, costs, or margins for the AI Tutor.\",\n      \"why_unsupported\": \"The user brief explicitly states the business model has not been supplied, and no financial data is available in the provided sources.\",\n      \"needed_evidence\": [\n        \"Market research on subscription models in higher education EdTech\",\n        \"Financial modeling based on comparable services\",\n        \"Cost analysis for AI development and deployment\"\n      ]\n    },\n    {\n      \"claim\": \"The specific market size for AI tutors targeting MBA students in the United States.\",\n      \"why_unsupported\": \"While the general US AI education market size is provided, it is not segmented for higher education or MBA students specifically.\",\n      \"needed_evidence\": [\n        \"Market segmentation report for AI in higher education\",\n        \"Demand forecasting for specialized AI learning tools for MBA programs\"\n      ]\n    },\n    {\n      \"claim\": \"The precise unmet learning needs, frequency, and urgency of MBA students requiring additional learning support.\",\n      \"why_unsupported\": \"The user brief explicitly states these have not been supplied, and the provided web research does not offer specific data for MBA students. This impacts demand and thus potential revenue.\",\n      \"needed_evidence\": [\n        \"Detailed market research on MBA student learning challenges\",\n        \"Surveys on MBA student demand for AI tutors\",\n        \"Interviews with MBA students regarding academic support needs\"\n      ]\n    },\n    {\n      \"claim\": \"Specific product features, delivery model, pedagogical approach, integrations, and differentiation for the AI Tutor.\",\n      \"why_unsupported\": \"The user brief explicitly states these have not been supplied. These details directly impact development costs, value proposition, and thus pricing potential.\",\n      \"needed_evidence\": [\n        \"User research on desired AI tutor features for MBA students\",\n        \"Competitive analysis of existing AI learning tools\",\n        \"Expert consultation on effective AI pedagogy for higher education\"\n      ]\n    },\n    {\n      \"claim\": \"Information regarding the legal position of such a service or potential institutional partnerships with MBA programs.\",\n      \"why_unsupported\": \"The user brief mentions legal position as unconfirmed, and the provided sources discuss general regulatory trends but not specific legal standing for a commercial AI tutor or partnership models. This impacts potential revenue streams and compliance costs.\",\n      \"needed_evidence\": [\n        \"Legal review of AI in education regulations\",\n        \"Research on university policies regarding third-party AI tools\",\n        \"Analysis of potential partnership models with MBA institutions\"\n      ]\n    }\n  ],\n  \"needs_human_review\": [\n    \"Confirmation of the preferred business model (D2C subscription, B2B institutional licensing, or hybrid) and specific pricing strategy.\",\n    \"Input on the target customer's willingness to pay for an AI tutor service for MBA students.\",\n    \"Guidance on the desired core features, pedagogical approach, and differentiation for the AI Tutor, which will inform development costs and value.\",\n    \"Detailed estimates for key cost drivers, including AI development, operational overhead, and customer acquisition costs.\",\n    \"Strategy for addressing the low perception of AI benefits in education among the US public and the low adoption rate among higher education faculty, impacting customer acquisition.\",\n    \"Guidance on navigating the complex and evolving regulatory landscape for AI in US higher education, particularly concerning data privacy and academic integrity, which will affect compliance costs and partnership potential.\"\n  ]\n}",
+            "thought": null,
+            "thought_signature": null,
+            "video_metadata": null,
+            "tool_call": null,
+            "tool_response": null,
+            "part_metadata": null
+          }
+        ],
+        "role": "model"
+      },
+      "citation_metadata": null,
+      "finish_message": null,
+      "token_count": null,
+      "finish_reason": "STOP",
+      "grounding_metadata": null,
+      "avg_logprobs": null,
+      "index": 0,
+      "logprobs_result": null,
+      "safety_ratings": null,
+      "url_context_metadata": null
+    }
+  ],
+  "create_time": null,
+  "model_version": "gemini-2.5-flash",
+  "prompt_feedback": null,
+  "response_id": "JImmatehMrjyvdIP4aW5mAg",
+  "usage_metadata": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 2884,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 8524,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 8524
+      }
+    ],
+    "thoughts_token_count": 1605,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 13013,
+    "traffic_type": null
+  },
+  "model_status": null,
+  "automatic_function_calling_history": [],
+  "parsed": {
+    "financial_model": null,
+    "analysis_summary": "The financial assumptions for the AI Tutor for MBA Students are currently qualitative due to the absence of specific financial data, business model details, and market research on MBA student willingness to pay or specific cost drivers. The analysis relies on general industry trends and strategic recommendations, acknowledging that all quantitative figures would be speculative without further validation. Key areas requiring immediate research include pricing strategy, customer acquisition costs, operational expenses, and the overall market size for this specific niche within the US higher education sector.",
+    "revenue_assumptions": [
+      {
+        "topic": "Revenue Model",
+        "assumption": "The primary revenue model is assumed to be a direct-to-consumer (D2C) subscription-based service for individual MBA students in the United States, potentially with tiered pricing based on features or usage levels.",
+        "rationale": "This model is a common approach for EdTech services and was suggested in the strategy analysis. However, the specific pricing, conversion rates, and customer acquisition volumes are currently unsupplied.",
+        "confidence": "low",
+        "needs_validation": [
+          "Confirmation of the preferred business model (D2C vs. B2B or hybrid)",
+          "Specific pricing tiers and monthly subscription rates",
+          "Estimated customer acquisition volume and conversion rates"
+        ]
+      },
+      {
+        "topic": "Institutional Partnerships Revenue",
+        "assumption": "A secondary revenue stream could emerge from B2B partnerships with MBA programs or universities, where the AI tutor is licensed or integrated as an endorsed supplementary resource.",
+        "rationale": "The strategy analysis suggests investigating institutional partnerships for legitimacy and distribution. However, the feasibility, pricing models for institutions, and potential revenue share are entirely unconfirmed.",
+        "confidence": "low",
+        "needs_validation": [
+          "Feasibility and structure of B2B partnership models",
+          "Pricing models for institutional licenses or integrations",
+          "Projected adoption rates by universities"
+        ]
+      },
+      {
+        "topic": "Customer Acquisition & Growth",
+        "assumption": "Initial customer acquisition will primarily target individual MBA students through digital channels and academic forums, with growth dependent on effective marketing and positive word-of-mouth.",
+        "rationale": "The go-to-market strategy suggests direct engagement. However, specific customer acquisition costs (CAC), conversion rates, and the overall addressable market size for MBA students are unknown.",
+        "confidence": "low",
+        "needs_validation": [
+          "Detailed customer acquisition strategy and associated costs",
+          "Market size and penetration rates for MBA students",
+          "Projected customer growth trajectory"
+        ]
+      }
+    ],
+    "cost_assumptions": [
+      {
+        "topic": "AI Development & Maintenance Costs",
+        "assumption": "Significant investment will be required for the initial development, ongoing enhancement, and maintenance of the AI tutor's core technology, including large language model (LLM) integration, specialized pedagogical algorithms, and infrastructure.",
+        "rationale": "Developing a high-quality, specialized AI tutor is inherently R&D intensive. Specific cost breakdowns for development, infrastructure, and ongoing maintenance are unsupplied.",
+        "confidence": "low",
+        "needs_validation": [
+          "Detailed budget for AI development and infrastructure",
+          "Ongoing operational costs for AI model hosting and maintenance",
+          "Cost of content creation and curriculum integration"
+        ]
+      },
+      {
+        "topic": "Operational & Support Costs",
+        "assumption": "Operational costs will include customer support, platform hosting, data storage, and administrative overhead. Human oversight for academic integrity and quality assurance will also be a key cost component.",
+        "rationale": "Any SaaS product requires operational support. The strategy analysis highlights the importance of academic integrity and human oversight, implying associated costs. Specific staffing, tooling, and infrastructure costs are unknown.",
+        "confidence": "low",
+        "needs_validation": [
+          "Staffing plan and associated salary costs for operations and support",
+          "Estimated costs for customer support tools and services",
+          "Detailed breakdown of platform hosting and data management expenses"
+        ]
+      },
+      {
+        "topic": "Marketing & Customer Acquisition Costs (CAC)",
+        "assumption": "Costs will be incurred for marketing campaigns, digital advertising, and sales efforts to reach and convert MBA students, both individually and potentially through institutional channels.",
+        "rationale": "Customer acquisition is essential for growth. The go-to-market strategy suggests direct marketing. However, specific marketing budgets, channel costs, and CAC targets are unsupplied.",
+        "confidence": "low",
+        "needs_validation": [
+          "Marketing budget allocation across different channels",
+          "Target Customer Acquisition Cost (CAC)",
+          "Sales and business development costs for institutional partnerships"
+        ]
+      },
+      {
+        "topic": "Regulatory & Compliance Costs",
+        "assumption": "Ongoing costs will be associated with monitoring and ensuring compliance with evolving federal and state regulations concerning AI in education, data privacy (e.g., FERPA), and academic integrity in the United States.",
+        "rationale": "The research analysis highlights a rapidly evolving regulatory landscape. Compliance will require legal counsel, policy implementation, and potential certification efforts. Specific costs are unknown.",
+        "confidence": "low",
+        "needs_validation": [
+          "Legal and compliance consulting fees",
+          "Costs associated with data privacy and security measures",
+          "Potential costs for university certifications or endorsements"
+        ]
+      }
+    ],
+    "unit_economics_assumptions": [
+      {
+        "topic": "Pricing Strategy",
+        "assumption": "The price per unit (monthly subscription fee) for the AI Tutor will need to be competitive with existing academic support alternatives and reflect the perceived value of personalized, MBA-specific learning assistance.",
+        "rationale": "The business model is unsupplied, and MBA student willingness to pay is unknown. Pricing will be a critical determinant of revenue and must be validated through market research.",
+        "confidence": "low",
+        "needs_validation": [
+          "Market research on MBA student willingness to pay for AI tutoring",
+          "Competitive pricing analysis of alternative learning support services",
+          "Value proposition assessment to justify pricing"
+        ]
+      },
+      {
+        "topic": "Gross Margin",
+        "assumption": "The gross margin per unit will depend on the monthly subscription price and the variable costs associated with serving each active user, such as AI inference costs, content licensing, and direct customer support.",
+        "rationale": "Without defined pricing or variable costs, the gross margin is entirely speculative. It is a critical metric for profitability and scalability.",
+        "confidence": "low",
+        "needs_validation": [
+          "Detailed breakdown of variable costs per active user",
+          "Target gross margin percentage",
+          "Impact of usage patterns on variable costs"
+        ]
+      },
+      {
+        "topic": "Customer Acquisition Cost (CAC)",
+        "assumption": "The Customer Acquisition Cost (CAC) will be influenced by the chosen marketing channels, the effectiveness of campaigns, and the conversion rates from prospects to paying subscribers.",
+        "rationale": "The go-to-market strategy is qualitative, and specific marketing budgets are unknown. The CAC will be a key driver of profitability and requires validation.",
+        "confidence": "low",
+        "needs_validation": [
+          "Target CAC for individual MBA students",
+          "Breakdown of marketing and sales expenses per acquired customer",
+          "Impact of brand perception on CAC"
+        ]
+      },
+      {
+        "topic": "Customer Lifetime Value (LTV) & Retention",
+        "assumption": "Customer Lifetime Value (LTV) will be determined by the average subscription duration (retention rate) and the average revenue per user (ARPU) over that period. High retention will be crucial given the likely high CAC.",
+        "rationale": "Retention rates for MBA students are unknown, and the ARPU is dependent on the unconfirmed pricing strategy. LTV is essential for assessing the viability of the business model.",
+        "confidence": "low",
+        "needs_validation": [
+          "Expected monthly or annual customer churn rate",
+          "Average subscription duration for MBA students",
+          "Strategies to maximize customer retention"
+        ]
+      }
+    ],
+    "break_even_discussion": "Achieving break-even for the AI Tutor for MBA Students would depend on a critical balance of several key financial assumptions. The primary drivers would be the volume of paying MBA student subscribers, the monthly subscription price, the variable cost associated with serving each student (e.g., AI inference costs, direct support), and the total monthly fixed costs (e.g., AI development, operational overhead, marketing, compliance). A higher number of subscribers at a competitive price, coupled with efficient variable costs and controlled fixed expenses, would accelerate reaching break-even. Conversely, low adoption rates, aggressive pricing pressure, high variable costs, or significant fixed overheads would extend the time to profitability. The break-even point is highly sensitive to the initial investment in AI development and the effectiveness of customer acquisition efforts.",
+    "assumption_notice": "All financial figures are assumptions for planning discussion, not forecasts.",
+    "unsupported_financial_claims": [
+      {
+        "claim": "The willingness of MBA students to pay for an AI tutor service.",
+        "why_unsupported": "The user brief explicitly states this has not been supplied, and no pricing or willingness-to-pay data for MBA students is in the provided sources.",
+        "needed_evidence": [
+          "Pricing sensitivity analysis for MBA students",
+          "Market research on perceived value of AI tutoring for MBA programs"
+        ]
+      },
+      {
+        "claim": "Plausible commercial models, pricing, conversion rates, customer counts, costs, or margins for the AI Tutor.",
+        "why_unsupported": "The user brief explicitly states the business model has not been supplied, and no financial data is available in the provided sources.",
+        "needed_evidence": [
+          "Market research on subscription models in higher education EdTech",
+          "Financial modeling based on comparable services",
+          "Cost analysis for AI development and deployment"
+        ]
+      },
+      {
+        "claim": "The specific market size for AI tutors targeting MBA students in the United States.",
+        "why_unsupported": "While the general US AI education market size is provided, it is not segmented for higher education or MBA students specifically.",
+        "needed_evidence": [
+          "Market segmentation report for AI in higher education",
+          "Demand forecasting for specialized AI learning tools for MBA programs"
+        ]
+      },
+      {
+        "claim": "The precise unmet learning needs, frequency, and urgency of MBA students requiring additional learning support.",
+        "why_unsupported": "The user brief explicitly states these have not been supplied, and the provided web research does not offer specific data for MBA students. This impacts demand and thus potential revenue.",
+        "needed_evidence": [
+          "Detailed market research on MBA student learning challenges",
+          "Surveys on MBA student demand for AI tutors",
+          "Interviews with MBA students regarding academic support needs"
+        ]
+      },
+      {
+        "claim": "Specific product features, delivery model, pedagogical approach, integrations, and differentiation for the AI Tutor.",
+        "why_unsupported": "The user brief explicitly states these have not been supplied. These details directly impact development costs, value proposition, and thus pricing potential.",
+        "needed_evidence": [
+          "User research on desired AI tutor features for MBA students",
+          "Competitive analysis of existing AI learning tools",
+          "Expert consultation on effective AI pedagogy for higher education"
+        ]
+      },
+      {
+        "claim": "Information regarding the legal position of such a service or potential institutional partnerships with MBA programs.",
+        "why_unsupported": "The user brief mentions legal position as unconfirmed, and the provided sources discuss general regulatory trends but not specific legal standing for a commercial AI tutor or partnership models. This impacts potential revenue streams and compliance costs.",
+        "needed_evidence": [
+          "Legal review of AI in education regulations",
+          "Research on university policies regarding third-party AI tools",
+          "Analysis of potential partnership models with MBA institutions"
+        ]
+      }
+    ],
+    "needs_human_review": [
+      "Confirmation of the preferred business model (D2C subscription, B2B institutional licensing, or hybrid) and specific pricing strategy.",
+      "Input on the target customer's willingness to pay for an AI tutor service for MBA students.",
+      "Guidance on the desired core features, pedagogical approach, and differentiation for the AI Tutor, which will inform development costs and value.",
+      "Detailed estimates for key cost drivers, including AI development, operational overhead, and customer acquisition costs.",
+      "Strategy for addressing the low perception of AI benefits in education among the US public and the low adoption rate among higher education faculty, impacting customer acquisition.",
+      "Guidance on navigating the complex and evolving regulatory landscape for AI in US higher education, particularly concerning data privacy and academic integrity, which will affect compliance costs and partnership potential."
+    ]
+  }
+}

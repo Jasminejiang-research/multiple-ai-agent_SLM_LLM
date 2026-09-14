@@ -1,0 +1,7 @@
+{
+  "model": "ibm-granite/granite-4.0-h-micro",
+  "revision": "d5f01a3ea75f088947be3aae039f4ad52837dfde",
+  "tokenizer_url": "https://huggingface.co/ibm-granite/granite-4.0-h-micro/resolve/d5f01a3ea75f088947be3aae039f4ad52837dfde/tokenizer.json",
+  "tokenizer_sha256": "e2bad66439538cb4d5a7580680932432ed9ece9d3b8577e675512bdf11599253",
+  "downloaded_at_utc": "2026-09-06T21:31:28.3178743Z"
+}

@@ -1,0 +1,107 @@
+{
+  "version": "s6-best-effort-demo-result-v1",
+  "recorded_on": "2026-09-07",
+  "mode": "slm_best_effort_demo",
+  "status": "completed_best_effort_demo",
+  "quality_label": "LOW QUALITY / NON-FORMAL / NOT ELIGIBLE FOR C-D COMPARISON",
+  "formal_condition": null,
+  "formal_eligible": false,
+  "c_minus_d_comparison_eligible": false,
+  "formal_runs_started": 0,
+  "next_package_started": false,
+  "scope": {
+    "case_id": "ai_education",
+    "provider": "local",
+    "model_exact_id": "granite-h-micro-32k@eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+    "context_tokens": 32768,
+    "gpu_layers": 0,
+    "paid_services": false
+  },
+  "authorized_limits": {
+    "run_seconds": 1800,
+    "max_physical_requests": 10,
+    "max_total_tokens": 80000
+  },
+  "actual": {
+    "elapsed_seconds": 189.828,
+    "physical_requests": 8,
+    "transport_retries": 0,
+    "prompt_tokens": 4273,
+    "output_tokens": 897,
+    "total_tokens": 5170,
+    "missing_usage_calls": 0,
+    "within_all_hard_limits": true
+  },
+  "calls": [
+    {"role": "research", "provider_status": "invalid_output", "saved_status": "truncated_saved", "finish_reason": "length", "prompt_tokens": 816, "output_tokens": 128, "total_tokens": 944, "elapsed_seconds": 31.562},
+    {"role": "research_critic", "provider_status": "succeeded", "saved_status": "completed", "finish_reason": "stop", "prompt_tokens": 277, "output_tokens": 42, "total_tokens": 319, "elapsed_seconds": 10.703},
+    {"role": "strategy", "provider_status": "succeeded", "saved_status": "completed", "finish_reason": "stop", "prompt_tokens": 381, "output_tokens": 96, "total_tokens": 477, "elapsed_seconds": 18.266},
+    {"role": "strategy_critic", "provider_status": "succeeded", "saved_status": "completed", "finish_reason": "stop", "prompt_tokens": 243, "output_tokens": 47, "total_tokens": 290, "elapsed_seconds": 10.578},
+    {"role": "finance", "provider_status": "succeeded", "saved_status": "completed", "finish_reason": "stop", "prompt_tokens": 745, "output_tokens": 91, "total_tokens": 836, "elapsed_seconds": 26.641},
+    {"role": "finance_critic", "provider_status": "succeeded", "saved_status": "completed", "finish_reason": "stop", "prompt_tokens": 237, "output_tokens": 61, "total_tokens": 298, "elapsed_seconds": 11.468},
+    {"role": "writer", "provider_status": "succeeded", "saved_status": "completed", "finish_reason": "stop", "prompt_tokens": 659, "output_tokens": 411, "total_tokens": 1070, "elapsed_seconds": 53.016},
+    {"role": "final_critic", "provider_status": "succeeded", "saved_status": "completed", "finish_reason": "stop", "prompt_tokens": 915, "output_tokens": 21, "total_tokens": 936, "elapsed_seconds": 24.875}
+  ],
+  "critic_results": [
+    {"role": "research_critic", "score": 3, "issues": "Target enrollment status needs more precision; the alternative description lacks a supporting evidence ID.", "advisory_only": true, "blocked_continuation": false},
+    {"role": "strategy_critic", "score": 3, "issues": "AI capabilities and data sources lack detail; pricing or revenue model is not stated.", "advisory_only": true, "blocked_continuation": false},
+    {"role": "finance_critic", "score": 2, "issues": "It treated deterministic scenario values as unsupported and questioned the break-even value; these values remain assumption inputs/calculations, not evidence-backed forecasts.", "advisory_only": true, "blocked_continuation": false},
+    {"role": "final_critic", "score": 0, "issues": "unsupported facts; unknown IDs", "advisory_only": true, "blocked_continuation": false}
+  ],
+  "artifact": {
+    "section_count": 13,
+    "missing_section_count": 0,
+    "assumption_unsupported_markers": 12,
+    "display_short_ids": [],
+    "display_unknown_ids": [],
+    "deterministic_finance_count": 21,
+    "markdown_path": "docs/final_sprint/s6-fast-generation-v1/real_best_effort_ai_education_01/demo/artifact/best_effort_plan.md",
+    "markdown_sha256": "cf22fa9331ffa3aa88b64871c09f640dfc7fe3cdb45e27bacca55cdcf12cf8f6",
+    "json_path": "docs/final_sprint/s6-fast-generation-v1/real_best_effort_ai_education_01/demo/artifact/best_effort_plan.json",
+    "json_sha256": "aed76c348e045fa7c36443633165762752e1740d45308a0195abd9e184f48e75"
+  },
+  "resources": {
+    "status": "passed",
+    "sample_count": 38,
+    "sample_interval_seconds": 5.0,
+    "maximum_observed_sample_gap_seconds": 5.172,
+    "minimum_available_ram_bytes": 5440462848,
+    "peak_ram_used_bytes": 11528962048,
+    "peak_pagefile_delta_bytes": 1544192,
+    "peak_observed_gpu_used_bytes_including_baseline": 9437184,
+    "model_size_vram_bytes": 0,
+    "missing_observations": []
+  },
+  "cleanup": {
+    "owned_pid": 16236,
+    "owned_process_alive_after": false,
+    "server_stop": "owned_process_tree_terminated",
+    "listener_11434_count_after": 0,
+    "active_lease_count_after": 0,
+    "lease_deleted": false,
+    "lease_refund_applied": false
+  },
+  "offline_tests": {
+    "targeted": {"result": "21 passed in 4.58s", "junit_path": "docs/final_sprint/s6-fast-generation-v1/validation/best_effort_targeted_final.junit.xml", "sha256": "dd631e46fcb05727325b5bb34766b957623b0ac8ddcb31c924a0b0114af3e44a"},
+    "full": {"result": "638 passed, 25 deselected, 3 subtests passed in 133.32s", "junit_cases": 641, "junit_path": "docs/final_sprint/s6-fast-generation-v1/validation/best_effort_full_01.junit.xml", "sha256": "3e507456f348b102dab7aa7318b4914862ddd2be3fcf43dfe41b0868a54bd533"}
+  },
+  "evidence": {
+    "events_path": "docs/final_sprint/s6-fast-generation-v1/real_best_effort_ai_education_01/demo/events.jsonl",
+    "events_sha256": "617a0a2b69bf82fc8bb04f9501a7ede179114bb0521b7e82448dd5797f9384b9",
+    "raw_result_path": "docs/final_sprint/s6-fast-generation-v1/real_best_effort_ai_education_01/demo/result.json",
+    "raw_result_sha256": "34253b64dd9388db82d26adb69a327dd6e5c9ed807c1e6b86835d88fb0c31d9b",
+    "raw_response_directory": "docs/final_sprint/s6-fast-generation-v1/real_best_effort_ai_education_01/demo/raw_responses",
+    "raw_response_file_count": 16,
+    "server_owner_path": "docs/final_sprint/s6-fast-generation-v1/real_best_effort_ai_education_01/server/server_owner.json",
+    "server_owner_sha256": "545ca1bc2c6681c53e07c19ab9da1ce9888b200221afd24cd47f06e0213c50d6"
+  },
+  "d_preflight_preserved": {
+    "status": "no_go",
+    "record_label": "nonformal_engineering_preflight_failure",
+    "record_path": "docs/final_sprint/s6-fast-generation-v1/D_PREFLIGHT_ATTEMPT_03.json",
+    "record_sha256_after_classification_clarification": "988ffee8a1afc58b213b2a935ddb7fb32d8a5c95519f72021811409f37b4f879",
+    "record_sha256_checked_before_demo": "951480b3c5d35988c24c7e8ee7918d16db6392bfa1dfa32768273eebcadc7f2f",
+    "immutable_raw_result_path": "docs/final_sprint/s6-fast-generation-v1/real_preflight_d_ai_education_03/probe/result.json",
+    "immutable_raw_result_sha256": "9a675099cc1dc0ff06bbcf8f61e0b9c551353e0fc7b3d94dc409ac0be639c6b9"
+  }
+}

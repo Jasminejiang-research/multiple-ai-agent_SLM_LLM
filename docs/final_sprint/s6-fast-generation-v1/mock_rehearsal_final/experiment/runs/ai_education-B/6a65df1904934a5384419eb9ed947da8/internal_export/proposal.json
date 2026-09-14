@@ -1,0 +1,1225 @@
+{
+  "role": "writer",
+  "artifact_version": 1,
+  "case_id": "ai_education",
+  "packet_sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+  "brief_sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+  "contract_version": "proposal-grounding-v5-two-stage",
+  "payload": {
+    "title": "SYNTHETIC S2 engineering fixture; not a model result",
+    "global_source_ids": [
+      "EDU-01"
+    ],
+    "executive_summary": {
+      "title": "Executive Summary",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "problem": {
+      "title": "Problem",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "target_customer": {
+      "title": "Target Customer",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "market_opportunity": {
+      "title": "Market Opportunity",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "solution": {
+      "title": "Solution",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "value_proposition": {
+      "title": "Value Proposition",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "competitor_analysis": {
+      "title": "Competitor Analysis",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "business_model": {
+      "title": "Business Model",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "go_to_market_strategy": {
+      "title": "Go-to-Market Strategy",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "financial_assumptions": {
+      "title": "Financial Assumptions",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported",
+      "financial_values": [
+        {
+          "value_id": "low.monthly_revenue",
+          "value": "1900.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.low",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.monthly_variable_cost",
+          "value": "400.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.low",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.monthly_contribution",
+          "value": "1500.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.low",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.monthly_operating_result",
+          "value": "-6000.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "low.monthly_contribution",
+            "fixed_operating_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_operating_result",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.annual_cash_change",
+          "value": "-90000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "months",
+            "low.monthly_operating_result",
+            "one_time_setup"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.ending_cash",
+          "value": "30000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "low.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "low.break_even_users",
+          "value": "500",
+          "unit": "customers",
+          "currency": null,
+          "period": "monthly average over 12 months",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_operating_cost",
+            "marketing_cost",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/break_even_users",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_revenue",
+          "value": "4750.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.base",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_variable_cost",
+          "value": "1000.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.base",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_contribution",
+          "value": "3750.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.base",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.monthly_operating_result",
+          "value": "-3750.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "base.monthly_contribution",
+            "fixed_operating_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_operating_result",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.annual_cash_change",
+          "value": "-63000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "months",
+            "base.monthly_operating_result",
+            "one_time_setup"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.ending_cash",
+          "value": "57000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "base.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "base.break_even_users",
+          "value": "500",
+          "unit": "customers",
+          "currency": null,
+          "period": "monthly average over 12 months",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_operating_cost",
+            "marketing_cost",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/break_even_users",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_revenue",
+          "value": "9500.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.high",
+            "subscription_price"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_revenue",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_variable_cost",
+          "value": "2000.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.high",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_variable_cost",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_contribution",
+          "value": "7500.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "average_paying_users.high",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_contribution",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.monthly_operating_result",
+          "value": "0.00",
+          "unit": "USD/month",
+          "currency": "USD",
+          "period": "month",
+          "origin": "calculated_result",
+          "input_ids": [
+            "high.monthly_contribution",
+            "fixed_operating_cost",
+            "marketing_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/monthly_operating_result",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.annual_cash_change",
+          "value": "-18000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "months",
+            "high.monthly_operating_result",
+            "one_time_setup"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/annual_cash_change",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.ending_cash",
+          "value": "102000.00",
+          "unit": "USD",
+          "currency": "USD",
+          "period": "year_1",
+          "origin": "calculated_result",
+          "input_ids": [
+            "starting_cash",
+            "high.annual_cash_change"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/ending_cash",
+          "rounding_policy": "money_2dp_half_up",
+          "status": "value",
+          "reason": null
+        },
+        {
+          "value_id": "high.break_even_users",
+          "value": "500",
+          "unit": "customers",
+          "currency": null,
+          "period": "monthly average over 12 months",
+          "origin": "calculated_result",
+          "input_ids": [
+            "fixed_operating_cost",
+            "marketing_cost",
+            "subscription_price",
+            "variable_cost"
+          ],
+          "source_ids": [],
+          "formula_id": "s0-case-formulas-v1/ai_education/break_even_users",
+          "rounding_policy": "integer_exact",
+          "status": "value",
+          "reason": null
+        }
+      ]
+    },
+    "risks_and_mitigations": {
+      "title": "Risks and Mitigations",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "implementation_roadmap": {
+      "title": "Implementation Roadmap",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    },
+    "appendix": {
+      "title": "Appendix",
+      "content": "The archived source includes the quoted pricing excerpt. [EDU-01] Synthetic engineering fixture only.",
+      "key_claims": [
+        {
+          "claim_id": "research.pricing",
+          "parent_claim_id": null,
+          "claim_text": "The archived source includes the quoted pricing excerpt.",
+          "claim_type": "factual",
+          "claim_domain": "competitor",
+          "evidence_status": "sourced_fact",
+          "source_ids": [
+            "EDU-01"
+          ],
+          "source_support": "direct",
+          "source_quality": 0.9,
+          "source_recency": null,
+          "support_assessed_by": "model_proposed",
+          "critic_status": "not_reviewed",
+          "decision_critical": true,
+          "high_impact": false,
+          "conflict": false,
+          "pruned": false,
+          "major_issue": false,
+          "confidence": "high",
+          "confidence_reason": "directly_supported",
+          "content_anchor": "The archived source includes the quoted pricing excerpt.",
+          "source_anchors": [
+            {
+              "source_id": "EDU-01",
+              "chunk_id": "EDU-01-C1",
+              "line_start": 22,
+              "line_end": 32,
+              "snapshot_sha256": "3ba7b605f33ac8d94f437a7d447df31b4378b947d3ec92845f1dd83be2022c00",
+              "quote": "For you\n$4/month\n$44/year\nSave $4 w/ annual\nMaster skills with personalized tutoring on Khan Academy's world-class content.\nWrite and debate with guided prompts and immediate feedback.\nAdvance in your career with coaching.\nHone coding skills with real-time feedback.\nAccess your chat history.\nSelect plan\n*Sales tax not included in Khanmigo pricing."
+            }
+          ],
+          "financial_value_ids": [],
+          "premise": "",
+          "artifact_version": 1
+        }
+      ],
+      "source_ids": [
+        "EDU-01"
+      ],
+      "confidence": "high",
+      "confidence_reason": "directly_supported"
+    }
+  },
+  "confidence_changes": [
+    {
+      "artifact_version": 1,
+      "location": "executive_summary",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "executive_summary.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "problem",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "problem.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "target_customer",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "target_customer.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "market_opportunity",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "market_opportunity.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "solution",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "solution.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "value_proposition",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "value_proposition.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "competitor_analysis",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "competitor_analysis.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "business_model",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "business_model.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "go_to_market_strategy",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "go_to_market_strategy.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "financial_assumptions",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "financial_assumptions.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "risks_and_mitigations",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "risks_and_mitigations.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "implementation_roadmap",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "implementation_roadmap.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "appendix",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    },
+    {
+      "artifact_version": 1,
+      "location": "appendix.key_claims[0]",
+      "previous": "low",
+      "current": "high",
+      "reason": "directly_supported",
+      "basis": "proposed_support_structurally_checked_not_human_gold"
+    }
+  ],
+  "pruned": false,
+  "unresolved_major": false,
+  "confidence_basis": "proposed_support_structurally_checked_not_human_gold"
+}

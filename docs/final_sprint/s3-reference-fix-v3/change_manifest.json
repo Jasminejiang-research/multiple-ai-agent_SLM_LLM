@@ -1,0 +1,32 @@
+{
+  "changes": [
+    {
+      "path": "schemas/contract_outputs.py",
+      "before_sha256": "c4f995c72f43260e5f5ca37847c7bb052ff3affbcea5fc69dabbe7367a9acfb3",
+      "after_sha256": "0545610ed036d86c31e6ae2fdaef7378132d4334ee26b2cf0689e4df3a20cf9c"
+    },
+    {
+      "path": "schemas/evidence.py",
+      "before_sha256": "a78900f486238cf77d445a60146b3fcb72efa60d35bef471a21bca30b7adc824",
+      "after_sha256": "2ee9c3db9f48cbf31bfeefccd643720487aef941e58a075499bc8a0e4c4f2610"
+    },
+    {
+      "path": "tests/test_parent_text_alias.py",
+      "before_sha256": null,
+      "after_sha256": "a77268397991d5cc772067d43dea6691f362e57b60dd437122cfc7d26b9e0e6a"
+    },
+    {
+      "path": "workflow/contract_generation.py",
+      "before_sha256": "dbf661d0d2628924e8c93d5d4d6b904bf364bc93febe2181f4881572a5dce7e2",
+      "after_sha256": "bff17cdb43031b974bcb6c04bb2f2a47200ed16e0414d64d9ccefb892b9b9e3f"
+    },
+    {
+      "path": "workflow/grounding_generation.py",
+      "before_sha256": "164789ba770c766927fb66a5b85b38e2d262c6424df2e32b794e405d5a73d9cc",
+      "after_sha256": "ec68ba6c91556cb7d39d0fe55066ed225ce5891e1904c514f4e10c6afde807a6"
+    }
+  ],
+  "baseline_file_count": 253,
+  "prior_version": "s3-reference-fix-v2",
+  "public_budget_config_changed": false
+}

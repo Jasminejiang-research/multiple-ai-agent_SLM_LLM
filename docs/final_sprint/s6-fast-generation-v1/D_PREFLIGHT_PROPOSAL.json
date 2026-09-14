@@ -1,0 +1,57 @@
+{
+  "version": "s6-d-preflight-proposal-v1",
+  "status": "proposed_awaiting_explicit_user_authorization",
+  "formal_eligible": false,
+  "case_id": "ai_education",
+  "condition": "D",
+  "provider": "local",
+  "model_exact_id": "granite-h-micro-32k@eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+  "model_config_version": "granite-h-micro-q4km-32k-cpu-s6-compact-v1",
+  "protocol_version": "compact-json-wire-v1-s6",
+  "prompt_version": "compact-generation-v1-s6",
+  "context_tokens": 32768,
+  "temperature": 0,
+  "hard_limits": {
+    "run_seconds_including_cleanup": 3600,
+    "max_requests": 18,
+    "max_total_tokens": 160000,
+    "max_output_tokens_per_request": 1800,
+    "max_prompt_chars_per_request": 26000,
+    "transport_retries": 0
+  },
+  "effective_role_output_caps": {
+    "research": 450,
+    "research_critic": 180,
+    "strategy": 500,
+    "strategy_critic": 180,
+    "finance": 600,
+    "finance_critic": 180,
+    "writer": 1800,
+    "final_critic": 250,
+    "revision": 300
+  },
+  "accounting": {
+    "basis": "physical requests and provider-reported total tokens; retained reservation when usage is unknown",
+    "unknown_usage_refunded": false,
+    "prior_historical_usage_reset": false,
+    "formal_eight_slot_budget_consumed": false
+  },
+  "inputs": {
+    "finance_rows": 21,
+    "finance_basis": "user-confirmed case-specific frozen formulas",
+    "candidate_config_path": "slm/configs/granite_preflight_compact_s6.json",
+    "candidate_config_sha256": "a42df429b55b1ff989b44b6e2abd242000782493c86f2287e729c48f72724d4f",
+    "protocol_manifest_path": "docs/final_sprint/s6-fast-generation-v1/PROTOCOL_MANIFEST.json",
+    "protocol_manifest_sha256": "acb4b429f83bc99daacb7e2be17bd94ba4e8cfa949eac52b8b09cd05cee1471b"
+  },
+  "stop_conditions": [
+    "3600-second run deadline including cleanup",
+    "18 physical requests attempted",
+    "160000 charged or conservatively reserved total tokens",
+    "resource or endpoint-isolation hard gate",
+    "second structure repair for any applicable logical task",
+    "second semantic revision for any applicable role",
+    "model, protocol, input, context, or limit mismatch"
+  ],
+  "approval_boundary": "No real Granite call is authorized by this proposal alone. Any endpoint conflict or model/budget change requires user confirmation."
+}

@@ -1,0 +1,74 @@
+"""Install only the reviewed S4 files into the user-named repository, with backups."""
+import argparse
+import json
+from pathlib import Path
+import shutil
+
+STAGE=Path(__file__).resolve().parent
+TARGET=Path("C:/Users/JasmineJiang/Projects/multiple-ai-agent_SLM_LLM").resolve()
+PACKAGE=Path("docs/final_sprint/s4-v1")
+CODE=["app.py","evaluation/s2_fixtures.py","workflow/review_graph.py","workflow/review_runtime.py",
+      "slm/tests/test_isolation.py","tests/test_s4_evaluation.py",
+      *[p.relative_to(STAGE).as_posix() for p in sorted((STAGE/"evaluation").glob("s4*.py"))]]
+
+
+def digest(path):
+    import hashlib
+    with Path(path).open("rb") as stream:return hashlib.file_digest(stream,"sha256").hexdigest()
+
+
+def write(path,data):
+    path.parent.mkdir(parents=True,exist_ok=True)
+    with path.open("x",encoding="utf-8") as stream:json.dump(data,stream,ensure_ascii=False,indent=2)
+
+
+def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument("action",choices=("install","verify"))
+    args=parser.parse_args()
+    baseline=json.loads((STAGE/"s4_before_inventory.json").read_text(encoding="utf-8-sig"))
+    old={row["path"]:row["sha256"] for row in baseline}
+    selected=[*CODE,"docs/final_sprint_status.md"]
+    for relative in selected:
+        path=(TARGET/relative).resolve()
+        if not path.is_relative_to(TARGET):raise RuntimeError("path outside target repository")
+    if args.action=="verify":
+        changed=[]
+        for path,expected in old.items():
+            if path in selected:continue
+            if not (TARGET/path).is_file() or digest(TARGET/path)!=expected:changed.append(path)
+        installed=[dict(path=path,sha256=digest(TARGET/path),matches_stage=digest(TARGET/path)==digest(STAGE/path)) for path in selected]
+        result=dict(unchanged_original_files_checked=len(old)-sum(p in old for p in selected),
+            unexpected_changes=changed,installed_files=installed,
+            public_budget_config_unchanged=digest(TARGET/"slm/configs/granite_preflight_cpu_v2.json")==old["slm/configs/granite_preflight_cpu_v2.json"],
+            formal_runs_started=0,actual_model_calls=0,no_git_commit_or_history_cleanup=True,
+            exclusions=".git, .venv, caches, and .env files; these were not changed by the installer")
+        write(TARGET/PACKAGE/"preservation_audit.json",result)
+        if changed or not all(r["matches_stage"] for r in installed):raise RuntimeError("preservation mismatch")
+        print(json.dumps({k:v for k,v in result.items() if k!="installed_files"},indent=2))
+        return
+    if (TARGET/PACKAGE).exists():raise RuntimeError("S4 destination already exists; do not overwrite")
+    # Check every inventoried original before making the first target write.
+    changed=[path for path,expected in old.items() if not (TARGET/path).is_file() or digest(TARGET/path)!=expected]
+    collisions=[path for path in selected if path not in old and (TARGET/path).exists()]
+    if changed or collisions:raise RuntimeError("target changed since baseline: "+repr(changed+collisions))
+    backups=STAGE/PACKAGE/"before"
+    backups.mkdir(exist_ok=False)
+    receipt=[]
+    for relative in selected:
+        target=TARGET/relative
+        backup=None
+        if target.exists():
+            backup=relative.replace("/","__")+".txt"
+            shutil.copyfile(target,backups/backup)
+        receipt.append(dict(path=relative,before_sha256=old.get(relative),after_sha256=digest(STAGE/relative),backup=backup))
+    write(STAGE/PACKAGE/"code_install_receipt.json",dict(target=str(TARGET),source=str(STAGE),files=receipt,git_commit_created=False))
+    shutil.copyfile(STAGE/"s4_before_inventory.json",STAGE/PACKAGE/"before_inventory.json")
+    for relative in selected:
+        (TARGET/relative).parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(STAGE/relative,TARGET/relative)
+    shutil.copytree(STAGE/PACKAGE,TARGET/PACKAGE)
+    print(f"Installed {len(selected)} reviewed S4 code/status files plus new versioned evidence directory; no existing artifact directory replaced.")
+
+
+if __name__=="__main__":main()

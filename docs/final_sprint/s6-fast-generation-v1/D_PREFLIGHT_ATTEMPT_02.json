@@ -1,0 +1,35 @@
+{
+  "version": "s6-d-preflight-attempt-v1",
+  "attempt": 2,
+  "status": "no_go",
+  "classification": "pre_dispatch_compact_component_protocol_adapter_failure",
+  "model_calls": 2,
+  "requests": 2,
+  "known_prompt_tokens": 12960,
+  "known_output_tokens": 19,
+  "charged_total_tokens": 12979,
+  "active_elapsed_seconds": 353.25,
+  "formal_runs_started": 0,
+  "phases": {
+    "warmup": "passed",
+    "context": "passed",
+    "components": "failed_before_component_provider_dispatch",
+    "smoke": "not_run"
+  },
+  "context_evidence": {
+    "allocated_context_tokens": 32768,
+    "measured_input_tokens": 12905,
+    "expected_input_tokens": 12905,
+    "token_count_delta": 0,
+    "cpu_only_verified": true,
+    "full_prompt_chars": 25936
+  },
+  "resource_status": "passed",
+  "server_stop": "owned_process_tree_terminated",
+  "active_lease_after": false,
+  "endpoint_listener_after": false,
+  "result_path": "docs/final_sprint/s6-fast-generation-v1/real_preflight_d_ai_education_02/probe/result.json",
+  "result_sha256": "5c89d1811c2f6a664b06ee09ad329912c703e12eb077b60db0804465fe02a5db",
+  "preservation": "Attempt 2 remains immutable. Its two successful calls and elapsed time were restored into attempt 3's cumulative hard-limit ledger.",
+  "resume_basis": "Warmup and context passed. Components failed before any component dispatch because the preflight adapter omitted the compact protocol; smoke never started. The repair retained the same authorized model, case, protocol and hard limits."
+}

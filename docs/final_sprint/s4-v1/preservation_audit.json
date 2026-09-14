@@ -1,0 +1,96 @@
+{
+  "unchanged_original_files_checked": 373,
+  "unexpected_changes": [],
+  "installed_files": [
+    {
+      "path": "app.py",
+      "sha256": "11401368ff243ce999ac0f91d3d4f98542d864c3127d7bf7e7d3192f605586a9",
+      "matches_stage": true
+    },
+    {
+      "path": "evaluation/s2_fixtures.py",
+      "sha256": "37ed5fb6f3cc1bf2a23e874dffc2c4f616363943e00eeece02490277fb0e4496",
+      "matches_stage": true
+    },
+    {
+      "path": "workflow/review_graph.py",
+      "sha256": "77fd114234e09f0c7107cd51a2d3ecaa870ae26ce9d2159e541d95c41c0a39ac",
+      "matches_stage": true
+    },
+    {
+      "path": "workflow/review_runtime.py",
+      "sha256": "15a18562d9baf63f4a877f293fc27bc55c0631e77e36e4c1a364057261043a01",
+      "matches_stage": true
+    },
+    {
+      "path": "slm/tests/test_isolation.py",
+      "sha256": "a1719fb4778cf85ef0a43f12c51bbf39d5c56624c5f89bcbdc1d1541a29da760",
+      "matches_stage": true
+    },
+    {
+      "path": "tests/test_s4_evaluation.py",
+      "sha256": "b164d985115e384d39f8707d15269a60baf895946fa690eba94bf205821ce3e3",
+      "matches_stage": true
+    },
+    {
+      "path": "evaluation/s4.py",
+      "sha256": "b5019c9c1dfa6ee65a395247fd10caac93d31755e4e3912c1a850d597e69c149",
+      "matches_stage": true
+    },
+    {
+      "path": "evaluation/s4_audit.py",
+      "sha256": "53d38aab0c3ed989b8c8775796667c8d8b6e6958f9e4c1d82d0b25da7be42d86",
+      "matches_stage": true
+    },
+    {
+      "path": "evaluation/s4_blind.py",
+      "sha256": "83c46d7f7a7b16de1e032aab006ed06abc392706ce0a7b3a59c5730c1d859b15",
+      "matches_stage": true
+    },
+    {
+      "path": "evaluation/s4_export.py",
+      "sha256": "0ad433200f7063994019fb7dd0a7e694f0cc9f6bd8a4b5271db3984dea0914ab",
+      "matches_stage": true
+    },
+    {
+      "path": "evaluation/s4_io.py",
+      "sha256": "7375b67466b506c3d06dfcadc5e1854494231874769e10d8334a9c65a4e37968",
+      "matches_stage": true
+    },
+    {
+      "path": "evaluation/s4_metrics.py",
+      "sha256": "4238747a1c2fa5a2ae4feb6498dfd8ca3212f02ff00379970a2b4c3d64ac4124",
+      "matches_stage": true
+    },
+    {
+      "path": "evaluation/s4_resources.py",
+      "sha256": "ac43d50dcfa244739c1800f6ac0503b543f81bac3ec83b515ecc2076120d7b44",
+      "matches_stage": true
+    },
+    {
+      "path": "evaluation/s4_runner.py",
+      "sha256": "9cde6e27880bb975a873959a9c2ad1978a1b550e02541eacbbb18ac86d61f89f",
+      "matches_stage": true
+    },
+    {
+      "path": "evaluation/s4_statistics.py",
+      "sha256": "7c2321da33886b095ae3d758fc4e10d04e3928399a0c623831d87b19559a4bf5",
+      "matches_stage": true
+    },
+    {
+      "path": "evaluation/s4_ui.py",
+      "sha256": "a354f58e934ef9a414223e24c22b8c969751951f03827c776634bbed2ecc61c2",
+      "matches_stage": true
+    },
+    {
+      "path": "docs/final_sprint_status.md",
+      "sha256": "1b2bc7e6684f74cae3d78d991efd92afa6deeb21c83f2d4a16a053082a01e5c8",
+      "matches_stage": true
+    }
+  ],
+  "public_budget_config_unchanged": true,
+  "formal_runs_started": 0,
+  "actual_model_calls": 0,
+  "no_git_commit_or_history_cleanup": true,
+  "exclusions": ".git, .venv, caches, and .env files; these were not changed by the installer"
+}

@@ -1,0 +1,49 @@
+{
+  "analysis_summary": "Based on the provided frozen evidence packet, the analysis assesses the market potential, customer needs, competitive landscape, and financial requirements for an AI tutoring service targeted at MBA students in the US. The analysis identifies evidence gaps and outlines the key assumptions and projections needed for a staged launch and investor-facing proposal. The conclusions are conditional on obtaining verified data for critical evidence gaps.",
+  "market_trends": [
+    {
+      "topic": "MBA enrollment trends",
+      "finding": "Historical data shows a steady increase in master's degrees conferred, including business degrees, from 756,000 in 2011-12 to 880,200 in 2021-22, representing a 16% rise. However, this does not directly translate to addressable demand for the proposed AI tutoring service as it does not account for enrollment or addressable demand within the MBA cohort.",
+      "rationale": "The source (EDU-02) provides historical graduate degree completions but lacks information on MBA-specific enrollment trends and addressable demand. The increase in total graduate degrees does not equate to the potential customer base for the targeted AI service."
+    },
+    {
+      "topic": "Adult education market",
+      "finding": "The US Department of Education's IPEDS data indicates a total of 1.1 million graduate degrees conferred between 2011-12 and 2021-22, with business degrees comprising 23% of the total. This suggests a sizable adult education market, but the data does not differentiate between MBA students and other graduate programs, nor does it provide insights into the demand for personalized tutoring services.",
+      "rationale": "While the data confirms the size of the adult education market, it does not specifically address the demand for AI-driven tutoring for MBA students. The broader market context does not directly inform the viability of the proposed service."
+    }
+  ],
+  "customer_notes": [
+    {
+      "topic": "Target customer profile",
+      "finding": "The pilot targets US adults aged 18+ enrolled in or applying to MBA programs, with business-school instructors as potential institutional buyers. This demographic represents a niche segment within the broader adult education market, focusing on professional development and career advancement.",
+      "rationale": "The source brief explicitly defines the target customer as US adults enrolled in or applying to MBA programs, providing a clear and focused customer profile for the AI tutoring service."
+    },
+    {
+      "topic": "Competitor landscape",
+      "finding": "Khanmigo is identified as a competitor in adjacent tutoring, offering personalized coaching and guided prompts. However, it is not demonstrated to be an MBA-specific substitute, indicating a potential differentiation opportunity for the proposed service.",
+      "rationale": "The competitor assumption (EDU-01) highlights Khanmigo as a relevant competitor, but its lack of MBA-specific offering suggests a gap that the proposed service could exploit."
+    }
+  ],
+  "competitor_assumptions": [
+    {
+      "topic": "Differentiation from low-price broad tutoring",
+      "finding": "The service must differentiate from low-price competitors like Khanmigo by offering MBA-specific case-coaching, guided questions, evidence-aware feedback, and practice with licensed or openly reusable cases. This differentiation is critical for attracting MBA students and institutional buyers.",
+      "rationale": "The business model and proposal goal emphasize the need for a differentiated offering beyond generic tutoring services. The competitor assumption (EDU-01) underscores the importance of addressing this differentiation gap."
+    },
+    {
+      "topic": "Potential institutional buyers",
+      "finding": "Business-school instructors are identified as potential institutional buyers, suggesting a channel for institutional licensing beyond individual subscriptions. This opens a potential revenue stream but requires further validation of institutional interest and willingness to pay.",
+      "rationale": "The target customer profile (customer_notes) highlights instructors as potential buyers, indicating a possible avenue for institutional licensing that could supplement direct subscriptions."
+    }
+  ],
+  "needs_human_review": [
+    "Verification of MBA enrollment trends and addressable demand",
+    "Quantification of willingness-to-pay among MBA students",
+    "Validation of competitive differentiation beyond generic tutoring",
+    "Assessment of institutional licensing potential and pricing",
+    "Identification of content licensing requirements and costs",
+    "Determining the minimum viable product (MVP) scope and features",
+    "Establishing measurable pilot criteria and success metrics",
+    "Developing a comprehensive go-to-market strategy for institutional buyers"
+  ]
+}

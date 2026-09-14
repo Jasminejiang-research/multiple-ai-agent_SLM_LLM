@@ -1,0 +1,15 @@
+{
+  "case_id": "ai_education",
+  "case_version": "case-v1-s0",
+  "candidate_category": "ai_education",
+  "review_status": "approved",
+  "approval_record": {
+    "path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s5-llm-only-v23\\scope_decision.json",
+    "scope": "complete_case_brief_evidence_and_case_specific_finance",
+    "case_specific_finance_count": 21
+  },
+  "brief_sha256": "71adecf347d25bd8a349846f1f1cd97efe522fc45786b6f36552f0b3fbb7102d",
+  "packet_sha256": "a673664f362509f9d9ccd10c281fc279112bc491807add2489adb27000d0d10c",
+  "proposed_by": "Codex; explicitly confirmed by the user for this frozen LLM-only experiment",
+  "formal_execution_allowed": true
+}

@@ -1,0 +1,14 @@
+Date: 2026-09-06
+Workspace: C:/Users/JasmineJiang/Projects/multiple-ai-agent_SLM_LLM
+Interpreter: .venv/Scripts/python.exe (Python 3.12.10; independent new environment)
+Command: .venv/Scripts/python.exe -m pip check
+No broken requirements found.
+Command: .venv/Scripts/python.exe -m pytest -q tests slm/tests
+
+........................................................................ [ 19%]
+..................................................................... [ 38%]
+........................................................................ [ 58%]
+........................................................................ [ 78%]
+........................................................................ [ 98%]
+.....                                                                    [100%]
+362 passed, 25 deselected, 3 subtests passed in 62.60s (0:01:02)

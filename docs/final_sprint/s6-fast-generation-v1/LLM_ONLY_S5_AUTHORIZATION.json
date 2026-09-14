@@ -1,0 +1,54 @@
+{
+  "version": "s6-llm-only-s5-authorization-v1",
+  "approved_at": "2026-09-07",
+  "approved": true,
+  "execution_branch": "llm_only_after_D_no_go",
+  "preserve_planned_rows": 8,
+  "formal_conditions": ["A", "B", "C"],
+  "formal_run_count": 6,
+  "D_planned_rows": ["ai_education-D", "intelligent_ring-D"],
+  "D_row_state": "not_run_preflight_no_go",
+  "formal_Granite_calls": 0,
+  "best_effort_demo": {
+    "formal_eligible": false,
+    "c_minus_d_comparison_eligible": false
+  },
+  "confirmed_cases": {
+    "ai_education": {"case_specific_financial_values": 21},
+    "intelligent_ring": {"case_specific_financial_values": 27}
+  },
+  "comparison_policy": {
+    "reported": ["B-A", "C-B"],
+    "unavailable": {"C-D": "D_preflight_no_go"},
+    "success_subset_substitution": false
+  },
+  "smoke": {
+    "case_id": "ai_education",
+    "conditions": ["A", "B", "C"],
+    "formal_eligible": false,
+    "max_requests": 54,
+    "max_total_tokens": 480000,
+    "max_cost_usd": 1.20,
+    "paid_tools": false
+  },
+  "formal": {
+    "randomization_seed": 20260906,
+    "preserve_original_row_order": true,
+    "per_run": {"max_requests": 18, "max_total_tokens": 160000, "max_seconds": 3600},
+    "aggregate": {"max_requests": 108, "max_total_tokens": 960000, "max_cost_usd": 2.40},
+    "rerun_failed_or_unknown": false,
+    "overwrite_results": false
+  },
+  "combined_smoke_and_formal_max_cost_usd": 3.60,
+  "stop_conditions": [
+    "Any A/B/C smoke fails",
+    "Any post-smoke change is required to code, prompt, wire, schema, or evaluation rules",
+    "A request, token, time, formal-cost, smoke-cost, or combined-cost hard limit would be exceeded"
+  ],
+  "post_run_outputs": [
+    "automatic metrics",
+    "anonymous rating packet",
+    "unjudged shared Gold Ledger candidates"
+  ],
+  "user_instruction": "保留8个planned rows；D两行固定not_run_preflight_no_go；正式只运行A/B/C六行；仅报告B-A和C-B，C-D unavailable；确认两个case及21/27财务值；先做AI education A/B/C smoke，通过且无需任何代码/prompt/wire/schema/评价修改后冻结并按原随机顺序运行六次；smoke 54请求/480000 tokens/$1.20，正式每run 18/160000/3600、总108/960000/$2.40，合计$3.60；无付费工具；失败不重跑不覆盖。"
+}

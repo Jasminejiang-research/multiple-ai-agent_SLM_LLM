@@ -1,0 +1,150 @@
+Skip to main content
+Oura Member Care
+We're committed to guiding, supporting, and making sure you feel cared for.
+Oura Member Care
+Account & Membership
+My Account & Oura Membership
+Articles in this topic
+Create and Manage an Oura Account
+Oura Membership
+Activating a Prepaid Oura Membership
+Using the My Orders Portal
+Start Over with New Account
+Oura on the Web
+Oura Membership
+Last updated: September 1, 2026
+Oura Membership gives you deeper access to accurate data and information about your body, allowing you to make more informed decisions and lead a healthier life. For new members, your first month of membership comes with your ring purchase.
+Oura Membership and Oura Ring work hand-in-hand, empowering you to prioritize your long-term health goals and build healthy habits that will last a lifetime. With an active membership, you can track numerous biometrics and receive personalized insights from Oura to help you understand what your body needs.
+Oura Membership only applies to Gen3 and newer.
+Visit the Membership Hub for help with common membership questions, like viewing your plan, updating your payment method, editing account info, or exporting your data.
+To view Membership Hub:
+Select the menu in the upper-left corner of the app's "Today" screen
+Select "Settings"
+Scroll to "Account"
+Select "Manage membership"
+FAQs
+What Is Included in Oura Membership?
+Where Is Oura Membership Available?
+How Much Does Oura Membership Cost?
+What Payment Methods Are Accepted for Oura Membership?
+How Do I Activate My Membership?
+Where Can I Manage or Cancel My Oura Membership?
+Can I Transfer My Oura Membership to a New Ring?
+How Do I Renew My Oura Membership?
+Can I Use My Oura Ring Without an Oura Membership?
+Will I Lose My Oura Data if I Cancel My Membership?
+Do I Have to Pay for a Gift Recipient's Oura Membership?
+What Is Lifetime Membership?
+More Information
+What Is Included in Oura Membership?
+Oura Membership provides access to all of Oura's features and data and personal guidance.
+Active Oura Membership includes:
+Detailed sleep analysis
+24/7 heart rate tracking (Daytime, Nighttime, Activity)
+Integration with third-party health and wellness apps like Strava
+Advanced temperature monitoring
+Blood Oxygen Sensing (SpO2)
+Daytime Stress
+Dynamic activity goals with Automatic Activity Detection
+Heart Health (Cardiovascular Age, Cardio Capacity (VO2 Max))
+Metabolic Health (Glucose Tracking, Meals)
+Oura Labs
+Resilience
+Weekly, monthly, quarterly, yearly, and anniversary reports
+Women's Health (Cycle Insights, Pregnancy Insights)
+Where Is Oura Membership Available?
+Oura Membership is available in monthly and annual plans. Membership and in-app features are only available in supported countries, and require UPI (India only) or a credit card with a billing address from a supported country.
+How Much Does Oura Membership Cost?
+Oura Membership is available for $5.99/month and $69.99/year in the US, and 5.99 €/month and 69.99 €/year in the European Union. All other membership pricing varies by region and currency. Any applicable taxes are calculated based on your local tax laws and regulations. You can see country-specific pricing in Membership Hub.
+New members receive one included month of Oura Membership. Oura Membership is tied to your Oura account, not your physical Oura Ring. If you purchase an additional ring with an existing Oura account, you will not receive another complimentary month of Oura Membership.
+If you would like to change the currency for your Oura Membership payments (e.g., from USD to CAD), you will need to cancel your membership and renew it on your next billing date in Membership Hub. You will continue to have the full Oura App experience through the end of your current billing cycle, and all of your data will be in your app once you renew.
+What Payment Methods Are Accepted for Oura Membership?
+You can pay using PayPal or a Visa, Mastercard, American Express, or Discover credit card. You can also add HSA and FSA cards in Membership Hub.
+Oura gift cards; financing options; and buy now, pay later methods can't be used to pay for monthly or annual Oura Membership fees.
+Payment Restrictions by Country
+Available payment methods can vary by country and currency.
+In Chile, Colombia, Hong Kong, Malaysia, Saudi Arabia, Singapore, South Korea, Thailand, and the UAE, supported payment methods are limited to Maestro, Mastercard, and Visa.
+In India, supported payment method is limited to UPI AutoPay.
+How Do I Activate My Oura Membership?
+When setting up your ring, you will be guided through the membership sign-up process. You will create an Oura account using your email address, select either a monthly or annual ongoing plan, and add your preferred payment method. New members receive one complimentary month of membership, which begins as soon as your ring is paired with the Oura App. This complimentary month cannot be paused or restarted once it begins, and your payment method won't be charged until the month is over. After that point, your account will be auto-billed either once a month or once a year, depending on the type of plan you selected. You can change or cancel your membership plan at any time.
+The email address that you use to set up your Oura account can be different from the one used to purchase your ring. If your ring was ordered with a prepaid membership, the prepaid period will automatically be applied to the first Oura account created during setup. Once applied, a prepaid membership can't be transferred to another account.
+To check the email address connected to your Oura Membership, go to the menu in the upper-left corner of the Oura App's home screen. Select Settings, and you'll find your email listed under Account.
+Add-ons, such as a prepaid membership, can only be applied to an active Oura account with a payment method set up. Don't worry—your payment method won't be charged until your prepaid period ends. This includes the first complimentary month, followed by 12 months of prepaid membership.
+All features of the Oura App are available during the complimentary period except for Body Clock, Chronotypes, and monthly, yearly, or Oura anniversary reports. These features require more than 30 days of Oura data.
+Where Can I Manage or Cancel My Oura Membership?
+You can manage your Oura Membership through the Oura App:
+Tap the menu in the upper-left corner of the app's home screen
+Tap Settings
+Scroll to "Account"
+Tap Manage membership
+You can also manage your Oura Membership by directly visiting Membership Hub. In the Membership Hub, you'll see:
+Current plan: Your membership status, current plan, and next payment date. You can also switch between monthly and annual plans
+Billing information: Payment details, billing address, and past billing cycles and invoices
+Security and privacy settings:
+Some members can add a passkey to sign into their Oura account. Available passkeys (examples: facial recognition, fingerprint, PIN, or password) will depend on the type of device (Android, iOS or desktop) used to open Membership Hub
+Oura Account email: View and update the email associated with your Oura Membership
+Export data
+Cancel membership
+Changing Your Oura Membership Plan
+Plan changes take effect at the end of your current billing cycle:
+If you switch from monthly to annual, annual billing takes effect when your current month ends
+If you switch from annual to monthly, monthly billing takes effect after the remainder of your annual plan is done
+Canceling Your Oura Membership
+If you cancel your Oura Membership before your complimentary month of membership ends, you won't be charged
+If you cancel a monthly or annual plan after your complimentary month, you'll have access for the remainder of your billing period
+Partial refunds aren't available for canceled prepaid or annual membership plans after your complimentary month of membership ends
+You can confirm cancellation in Membership Hub. It will show your membership has been cancelled and give you the option to renew
+If you're receiving your membership through your organization, and your membership is about to end, you'll receive an email and a notification in Membership Hub.
+Select the “Continue membership” button in the email or the notification to add a payment method in Membership Hub.
+Can I Transfer My Oura Membership to a New Ring?
+Since your Oura Membership is linked to your Oura account, if you upgrade or replace your ring, your membership will automatically transfer as soon as you pair the new ring with your Oura App.
+Regardless of the type of membership you have, your Oura Membership will continue to work seamlessly with a new ring.
+How Do I Renew My Oura Membership?
+If you have a payment method on file, it will be charged automatically at the start of each billing cycle, and your membership will continue—there's no need to manually renew.
+If you want to renew a canceled Oura Membership, you can do so after the end of your complimentary month or current billing cycle.
+There is no option to "pause" an Oura Membership.
+Can I Use My Oura Ring Without an Oura Membership?
+Oura Membership unlocks the full potential of the Oura App, allowing you to access detailed insights and personalized guidance. Without an active membership, you'll only be able to see your three daily Oura scores (Readiness, Activity, and Sleep), ring battery, basic profile information, app settings, and the Explore content. Without an active membership, you cannot access the Oura API, but you can still download your personal data through the Membership Hub.
+Gen2 users do not require an Oura Membership and will not be charged membership fees. We'll continue to support the Gen2 ring with routine software and firmware updates for the foreseeable future. However, due to hardware differences, many new features introduced in later generation rings are not compatible with Gen2.
+If you're a Gen2 user interested in upgrading to a newer generation ring, keep in mind that you'll need to sign up for a monthly or annual Oura Membership. With Oura Membership, you'll get access to advanced insights, enhanced tracking, and a range of new features designed to give you a deeper understanding of your health and wellness.
+Will I Lose My Oura Data If I Cancel My Membership?
+No. If you cancel your membership, and do not delete your account, all of your Oura data and account information will remain securely saved under our privacy policy. Once you re-enroll in Oura Membership, your data and account information will immediately be accessible again.
+Even without a membership, you can export all of your Oura data in CSV format through the Membership Hub.
+Can I Gift an Oura Membership?
+You can include a prepaid annual Oura Membership plan with any new Oura Ring purchase from the Oura online store. If you gift an Oura Ring with a prepaid membership plan, the giftee will still receive a complimentary month of Oura Membership.
+When the giftee pairs their Oura Ring to the Oura App, they will be asked to provide payment details to enroll in Oura Membership. However, the giftee won't be billed until after the prepaid period.
+What Is a Lifetime Membership?
+There currently is no option to purchase or upgrade to a Lifetime Membership.
+Some Gen3 members have a Lifetime Membership due to a limited-time promotion offered in previous years. If you have a Lifetime Membership, your Oura Membership remains free as long as you keep the same active Oura account. You can check your membership plan by going to Settings > Account > Manage Membership.
+Lifetime Memberships cannot be gifted, transferred, or sold to another member. Since your membership is tied to your Oura account, all benefits will seamlessly transfer to any new or replacement ring, including upgrades to a newer generation ring, once you pair it with the Oura App.
+More Information
+How to Gift an Oura Ring
+Change Account Email Address
+Still need help?
+Chat Support
+Available to chat 24/7
+Phone Support
+Available by appointment
+Oura
+Schedule a Phone Call
+First Name
+Last Name
+Email Address
+Reason for Call
+Note: Some requests may need further investigation and can't be fully resolved over the phone.
+Continue
+Scheduled Call Canceled
+Your call has been canceled, Click OK to close this window, or Reschedule to book another call.
+OKReschedule
+Receive articles, tips, and offers from Oura
+We care about protecting your data.
+Read more in our Privacy Policy.
+We care about protecting your data. Read more in our Privacy Policy.
+Terms & Conditions
+Privacy Policy
+Accessibility
+IP Notice
+Security Center
+© 2026 Oura Health Oy. All rights reserved. ŌURA, OURA, and Ō are trademarks of Oura Health Oy and may not be used without permission.
+English
+Oura Membership | Oura Member Care

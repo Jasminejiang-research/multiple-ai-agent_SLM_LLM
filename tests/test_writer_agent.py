@@ -1,0 +1,558 @@
+"""Unit tests for the Writer Agent (Sprint 7.6)."""
+
+from __future__ import annotations
+
+import unittest
+from datetime import datetime, timezone
+
+from agents.base import AgentLogEvent
+from agents.writer import (
+    WriterAgent,
+    build_writer_citation_patch_prompt,
+    build_writer_prompt,
+)
+from rag.retriever import EvidenceChunk
+from rag.citation_checker import collect_proposal_citation_failures
+from schemas.agent_outputs import (
+    FinanceAssumptions,
+    ResearchAnalysis,
+    StrategyAnalysis,
+    WriterInput,
+)
+from schemas.workflow import (
+    PROPOSAL_SECTION_FIELD_NAMES,
+    PROPOSAL_SECTION_TITLES,
+    ProposalDraft,
+    RevisedProposalPatch,
+)
+from workflow.llm_client import (
+    PromptBudgetExceededError,
+    StructuredOutputValidationError,
+)
+
+
+def _writer_input() -> WriterInput:
+    """Return valid research, strategy, and finance packets for the Writer."""
+    finding = {
+        "topic": "Personalized coaching need",
+        "finding": "The brief suggests students need more personalized coaching support.",
+        "rationale": "The stated problem is a lack of tailored business case guidance.",
+        "confidence": "medium",
+    }
+    insight = {
+        "topic": "Focused coaching workflow",
+        "recommendation": "Position the product around personalized proposal feedback.",
+        "rationale": "This directly addresses the coaching gap described in the research packet.",
+        "confidence": "medium",
+    }
+    finance_assumption = {
+        "topic": "Subscription revenue",
+        "assumption": "Subscriptions could provide recurring revenue if willingness to pay is validated.",
+        "rationale": "The supplied strategy identifies subscription as one possible model.",
+        "confidence": "low",
+        "needs_validation": ["Pricing tests"],
+    }
+
+    return WriterInput(
+        research_analysis=ResearchAnalysis(
+            analysis_summary="Research findings remain hypotheses until evidence is collected.",
+            market_trends=[finding],
+            customer_notes=[finding],
+            competitor_assumptions=[finding],
+            unsupported_claims=[
+                {
+                    "claim": "AI coaching demand is growing rapidly.",
+                    "why_unsupported": "No adoption data or external source was supplied.",
+                    "needed_evidence": ["Recent adoption research"],
+                }
+            ],
+            needs_human_review=["Confirm the first customer segment."],
+        ),
+        strategy_analysis=StrategyAnalysis(
+            analysis_summary="The strategy emphasizes focused coaching and cautious validation.",
+            value_proposition=[insight],
+            business_model_logic=[insight],
+            gtm_strategy=[{**insight, "confidence": "low"}],
+            moat_hypotheses=[{**insight, "confidence": "low"}],
+            unsupported_market_data=[],
+            needs_human_review=["Confirm the initial acquisition channel."],
+        ),
+        finance_assumptions=FinanceAssumptions(
+            analysis_summary="Financial logic is preliminary and requires validation.",
+            revenue_assumptions=[finance_assumption],
+            cost_assumptions=[finance_assumption],
+            unit_economics_assumptions=[finance_assumption],
+            break_even_discussion=(
+                "Break-even would depend on validated pricing, retention, acquisition, "
+                "and product delivery costs."
+            ),
+            assumption_notice="All financial figures are assumptions, not forecasts.",
+            unsupported_financial_claims=[],
+            needs_human_review=["Validate pricing and delivery costs."],
+        ),
+        web_sources=[
+            {
+                "source_id": "web-market-research",
+                "agent_name": "Market Research Agent",
+                "query": "AI education market research",
+                "retrieved_at": datetime(2026, 7, 25, tzinfo=timezone.utc),
+                "title": "AI Education Market Report",
+                "url": "https://example.com/ai-education-market",
+                "publisher": "Example Research",
+                "published_date": "2026-07-01",
+                "summary": "Recent market evidence for AI-assisted education.",
+                "relevance_score": 0.9,
+                "source_quality": "research_org",
+                "stale": False,
+            }
+        ],
+        evidence_chunks=[
+            EvidenceChunk(
+                source_id="framework-unit-economics",
+                text="Unit economics should state CAC, LTV, margin, and payback assumptions.",
+                score=0.91,
+                metadata={
+                    "file_name": "unit_economics.md",
+                    "chunk_id": "unit-economics-1",
+                    "quote": "Unit economics should state CAC, LTV, margin, and payback assumptions.",
+                    "matched_sections": ["Financial Assumptions"],
+                    "published_date": "2020-01-01",
+                    "stale": True,
+                },
+            )
+        ],
+    )
+
+
+def _proposal_json() -> str:
+    """Return a valid ProposalDraft JSON payload for the fake Writer LLM."""
+    proposal_data: dict[str, object] = {
+        "title": "AI Tutor for MBA Students Proposal"
+    }
+    for title, field_name in zip(
+        PROPOSAL_SECTION_TITLES,
+        PROPOSAL_SECTION_FIELD_NAMES,
+        strict=True,
+    ):
+        confidence = (
+            "low"
+            if title
+            in {
+                "Market Opportunity",
+                "Competitor Analysis",
+                "Go-to-Market Strategy",
+                "Financial Assumptions",
+            }
+            else "medium"
+        )
+        proposal_data[field_name] = {
+            "title": title,
+            "content": (
+                f"This {title} section uses only the supplied analysis packets. "
+                + (
+                    "Unit economics should disclose CAC, LTV, margin, and payback "
+                    "assumptions [framework-unit-economics]."
+                    if title == "Financial Assumptions"
+                    else "Any uncertain statement remains an assumption that requires validation."
+                )
+            ),
+            "key_claims": [
+                (
+                    "Unit economics inputs require explicit assumptions "
+                    "[framework-unit-economics]."
+                    if title == "Financial Assumptions"
+                    else f"The {title} reasoning comes from supplied analysis."
+                )
+            ],
+            "source_ids": (
+                ["framework-unit-economics"]
+                if title == "Financial Assumptions"
+                else []
+            ),
+            "confidence": confidence,
+        }
+    return ProposalDraft.model_validate(proposal_data).model_dump_json()
+
+
+def _proposal_with_missing_citations(
+    *section_names: str,
+) -> ProposalDraft:
+    """Return a proposal whose selected sections need citation repair."""
+    proposal_payload = ProposalDraft.model_validate_json(
+        _proposal_json()
+    ).model_dump()
+    for section_name in section_names:
+        section = proposal_payload[section_name]
+        section.update(
+            content=(
+                "The supplied research supports this customer claim, but the "
+                "sentence omits its exact inline marker."
+            ),
+            key_claims=[
+                {
+                    "text": "The supplied research supports this customer claim.",
+                    "claim_type": "customer",
+                    "evidence_status": "sourced_fact",
+                    "source_ids": ["web-market-research"],
+                    "content_anchor": (
+                        "The supplied research supports this customer claim."
+                    ),
+                }
+            ],
+            source_ids=["web-market-research"],
+            confidence="high",
+        )
+    return ProposalDraft.model_validate(proposal_payload)
+
+
+class FakeWriterLLM:
+    """Mock Writer LLM that records its prompt and returns fixed JSON."""
+
+    def __init__(self, response: str) -> None:
+        """Store a canned response for the fake LLM."""
+        self.response = response
+        self.prompts: list[str] = []
+
+    def generate_json(self, prompt: str) -> str:
+        """Record the prompt and return the canned response."""
+        self.prompts.append(prompt)
+        return self.response
+
+
+class ValidatorAwareWriterLLM(FakeWriterLLM):
+    """Exercise Writer's shared schema-plus-citation retry boundary."""
+
+    def __init__(self, response: str) -> None:
+        super().__init__(response)
+        self.validator_calls = 0
+
+    def generate_json_validated(self, prompt: str, output_validator: object) -> str:
+        self.prompts.append(prompt)
+        self.validator_calls += 1
+        assert callable(output_validator)
+        output_validator(ProposalDraft.model_validate_json(self.response))
+        return self.response
+
+
+class BatchedWriterLLM:
+    """Return the requested subset of one complete valid proposal."""
+
+    def __init__(self, response: str) -> None:
+        self.proposal = ProposalDraft.model_validate_json(response)
+        self.calls: list[tuple[str, type]] = []
+
+    def generate_json_for_schema(
+        self,
+        prompt: str,
+        schema: type,
+        output_validator: object | None = None,
+    ) -> str:
+        self.calls.append((prompt, schema))
+        if schema is RevisedProposalPatch:
+            raise StructuredOutputValidationError(
+                "Citation patch remained invalid after correction."
+            )
+        proposal_payload = self.proposal.model_dump()
+        batch = schema.model_validate(
+            {
+                field_name: proposal_payload[field_name]
+                for field_name in schema.model_fields
+            }
+        )
+        if output_validator is not None:
+            assert callable(output_validator)
+            output_validator(batch)
+        return batch.model_dump_json()
+
+
+class PromptBudgetBatchedWriterLLM(BatchedWriterLLM):
+    """Simulate a locally rejected citation patch after valid Writer batches."""
+
+    def generate_json_for_schema(
+        self,
+        prompt: str,
+        schema: type,
+        output_validator: object | None = None,
+    ) -> str:
+        if schema is RevisedProposalPatch:
+            self.calls.append((prompt, schema))
+            raise PromptBudgetExceededError("citation patch exceeded prompt budget")
+        return super().generate_json_for_schema(
+            prompt,
+            schema,
+            output_validator,
+        )
+
+
+class RepairingBatchedWriterLLM(BatchedWriterLLM):
+    """Return one safe replacement for each requested failed section."""
+
+    def __init__(self, response: str, patch_sections: list[str]) -> None:
+        super().__init__(response)
+        self.patch_sections = iter(patch_sections)
+
+    def generate_json_for_schema(
+        self,
+        prompt: str,
+        schema: type,
+        output_validator: object | None = None,
+    ) -> str:
+        if schema is not RevisedProposalPatch:
+            return super().generate_json_for_schema(
+                prompt,
+                schema,
+                output_validator,
+            )
+
+        self.calls.append((prompt, schema))
+        section_name = next(self.patch_sections)
+        replacement = getattr(self.proposal, section_name).model_dump()
+        for claim in replacement["key_claims"]:
+            claim["evidence_status"] = "needs_validation"
+            claim["source_ids"] = []
+        replacement["confidence"] = "low"
+        patch = RevisedProposalPatch.model_validate(
+            {
+                "sections": [
+                    {
+                        "section": section_name,
+                        "replacement": replacement,
+                    }
+                ]
+            }
+        )
+        if output_validator is not None:
+            assert callable(output_validator)
+            output_validator(patch)
+        return patch.model_dump_json()
+
+
+class WriterAgentTests(unittest.TestCase):
+    """Tests for Writer input validation, prompt boundaries, and output parsing."""
+
+    def test_build_writer_prompt_includes_all_packets_and_fact_boundaries(self) -> None:
+        """The prompt includes analysis, evidence, and source boundaries."""
+        prompt = build_writer_prompt(_writer_input())
+
+        self.assertIn('"research_analysis"', prompt)
+        self.assertIn('"strategy_analysis"', prompt)
+        self.assertIn('"finance_assumptions"', prompt)
+        self.assertIn('"web_sources"', prompt)
+        self.assertIn('"evidence_chunks"', prompt)
+        self.assertIn("web-market-research", prompt)
+        self.assertIn("framework-unit-economics", prompt)
+        self.assertIn("Do not add facts", prompt)
+        self.assertIn("exact source marker `[source_id]`", prompt)
+        self.assertIn("confidence` to `low`", prompt)
+        self.assertIn("metadata.stale", prompt)
+        self.assertIn("state its publication date", prompt)
+        self.assertIn("top-level `global_source_ids`", prompt)
+        self.assertIn("every section's `key_claims` to at most 8 items", prompt)
+
+    def test_writer_agent_returns_validated_proposal_draft(self) -> None:
+        """The Writer parses mock JSON into a logged, 13-section proposal."""
+        events: list[AgentLogEvent] = []
+        llm = FakeWriterLLM(_proposal_json())
+        agent = WriterAgent(llm_client=llm, log_hook=events.append)
+
+        proposal = agent.run(_writer_input())
+
+        self.assertIsInstance(proposal, ProposalDraft)
+        self.assertEqual(len(llm.prompts), 1)
+        self.assertEqual(proposal.financial_assumptions.confidence, "low")
+        self.assertEqual(
+            proposal.financial_assumptions.source_ids,
+            ["framework-unit-economics"],
+        )
+        self.assertEqual(
+            proposal.global_source_ids,
+            ["framework-unit-economics"],
+        )
+        self.assertEqual(proposal.market_opportunity.source_ids, [])
+        self.assertEqual([event.event_type for event in events], ["started", "completed"])
+
+    def test_writer_uses_dynamic_source_and_citation_validator(self) -> None:
+        llm = ValidatorAwareWriterLLM(_proposal_json())
+
+        proposal = WriterAgent(llm_client=llm).run(_writer_input())
+
+        self.assertIsInstance(proposal, ProposalDraft)
+        self.assertEqual(llm.validator_calls, 1)
+        self.assertEqual(len(llm.prompts), 1)
+
+    def test_writer_uses_four_generation_batches_when_supported(self) -> None:
+        llm = BatchedWriterLLM(_proposal_json())
+
+        proposal = WriterAgent(llm_client=llm).run(_writer_input())
+
+        self.assertIsInstance(proposal, ProposalDraft)
+        self.assertEqual(len(llm.calls), 4)
+        self.assertEqual(
+            [schema.__name__ for _, schema in llm.calls],
+            [
+                "ProposalDraftBatch1",
+                "ProposalDraftBatch2",
+                "ProposalDraftBatch3",
+                "ProposalDraftBatch4",
+            ],
+        )
+        self.assertTrue(
+            all(
+                "Authoritative Section Batch Override" in prompt
+                for prompt, _ in llm.calls
+            )
+        )
+        self.assertEqual(
+            proposal.global_source_ids,
+            ["framework-unit-economics"],
+        )
+
+    def test_writer_rejects_invalid_batch_before_later_batches(self) -> None:
+        llm = BatchedWriterLLM(
+            _proposal_with_missing_citations("problem").model_dump_json()
+        )
+
+        with self.assertRaisesRegex(ValueError, "sourced_fact claims"):
+            WriterAgent(llm_client=llm).run(_writer_input())
+        self.assertEqual(len(llm.calls), 1)
+        self.assertIsNot(llm.calls[0][1], RevisedProposalPatch)
+
+    def test_writer_patch_prompt_excludes_full_writer_input(self) -> None:
+        proposal = _proposal_with_missing_citations("problem")
+        failures = collect_proposal_citation_failures(
+            proposal,
+            allowed_source_ids={
+                "framework-unit-economics",
+                "web-market-research",
+            },
+        )
+
+        prompt = build_writer_citation_patch_prompt(
+            _writer_input(),
+            proposal,
+            failures,
+        )
+
+        self.assertNotIn("# Writer Input JSON", prompt)
+        self.assertNotIn('"research_analysis"', prompt)
+        self.assertNotIn("https://example.com", prompt)
+        self.assertIn('"source_id":"web-market-research"', prompt)
+        self.assertIn("Recent market evidence for AI-assisted education.", prompt)
+        self.assertIn('"problem":', prompt)
+        self.assertNotIn('"solution":', prompt)
+        self.assertLess(len(prompt), 10_000)
+
+    def test_writer_does_not_defer_batch_faults_to_final_patches(self) -> None:
+        generated = _proposal_with_missing_citations(
+            "problem",
+            "solution",
+        )
+        llm = RepairingBatchedWriterLLM(
+            generated.model_dump_json(),
+            ["problem", "solution"],
+        )
+
+        with self.assertRaisesRegex(ValueError, "sourced_fact claims"):
+            WriterAgent(llm_client=llm).run(_writer_input())
+
+        patch_prompts = [
+            prompt
+            for prompt, schema in llm.calls
+            if schema is RevisedProposalPatch
+        ]
+        self.assertEqual(patch_prompts, [])
+        self.assertEqual(len(llm.calls), 1)
+
+    def test_invalid_batch_stops_before_budget_limited_final_patch(self) -> None:
+        llm = PromptBudgetBatchedWriterLLM(
+            _proposal_with_missing_citations("problem").model_dump_json()
+        )
+
+        with self.assertRaisesRegex(ValueError, "sourced_fact claims"):
+            WriterAgent(llm_client=llm).run(_writer_input())
+        self.assertEqual(len(llm.calls), 1)
+
+    def test_writer_rejects_missing_analysis_packet(self) -> None:
+        """The Writer requires research, strategy, and finance packets."""
+        invalid_input = _writer_input().model_dump()
+        invalid_input.pop("finance_assumptions")
+
+        with self.assertRaisesRegex(ValueError, "Invalid WriterInput"):
+            build_writer_prompt(invalid_input)
+
+    def test_writer_rejects_source_id_absent_from_evidence(self) -> None:
+        """The Writer cannot invent a citation outside its evidence packet."""
+        proposal_data = ProposalDraft.model_validate_json(_proposal_json()).model_dump()
+        proposal_data["market_opportunity"]["source_ids"] = ["invented-source"]
+        llm = FakeWriterLLM(ProposalDraft.model_validate(proposal_data).model_dump_json())
+        agent = WriterAgent(llm_client=llm)
+
+        with self.assertRaisesRegex(ValueError, "unknown source IDs"):
+            agent.run(_writer_input())
+
+    def test_writer_accepts_source_id_from_controlled_web_sources(self) -> None:
+        """A web source passed through WriterInput belongs to the citation allowlist."""
+        proposal_data = ProposalDraft.model_validate_json(_proposal_json()).model_dump()
+        proposal_data["executive_summary"].update(
+            content=(
+                "The supplied market research supports the opportunity framing "
+                "[web-market-research] while uncertainty remains explicit."
+            ),
+            key_claims=[
+                "Market evidence supports the opportunity [web-market-research]."
+            ],
+            source_ids=["web-market-research"],
+        )
+        llm = FakeWriterLLM(
+            ProposalDraft.model_validate(proposal_data).model_dump_json()
+        )
+
+        proposal = WriterAgent(llm_client=llm).run(_writer_input())
+
+        self.assertIn("web-market-research", proposal.global_source_ids)
+
+    def test_writer_supports_web_only_mode_and_marks_unsupported_sections_low(
+        self,
+    ) -> None:
+        """Missing RAG evidence degrades safely instead of stopping the run."""
+        input_payload = _writer_input().model_dump()
+        input_payload["evidence_chunks"] = []
+        writer_input = WriterInput.model_validate(input_payload)
+        proposal_payload = ProposalDraft.model_validate_json(
+            _proposal_json()
+        ).model_dump()
+        for field_name in PROPOSAL_SECTION_FIELD_NAMES:
+            section = proposal_payload[field_name]
+            section["source_ids"] = []
+            section["content"] = section["content"].replace(
+                " [framework-unit-economics]",
+                "",
+            )
+            for claim in section["key_claims"]:
+                claim["text"] = claim["text"].replace(
+                    " [framework-unit-economics]",
+                    "",
+                )
+                claim["content_anchor"] = claim["content_anchor"].replace(
+                    " [framework-unit-economics]",
+                    "",
+                )
+                claim["source_ids"] = []
+        llm = FakeWriterLLM(
+            ProposalDraft.model_validate(proposal_payload).model_dump_json()
+        )
+
+        proposal = WriterAgent(llm_client=llm).run(writer_input)
+
+        self.assertEqual(writer_input.evidence_mode, "web_only")
+        self.assertTrue(writer_input.low_confidence_required)
+        self.assertTrue(
+            all(
+                getattr(proposal, field_name).confidence == "low"
+                for field_name in PROPOSAL_SECTION_FIELD_NAMES
+            )
+        )
+        self.assertIn('"evidence_mode": "web_only"', llm.prompts[0])
+
+if __name__ == "__main__":
+    unittest.main()

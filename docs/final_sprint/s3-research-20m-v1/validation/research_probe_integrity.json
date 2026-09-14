@@ -1,0 +1,388 @@
+{
+  "audit_version": "research-probe-integrity-v1",
+  "created_at_utc": "2026-09-07T14:15:06.814550+00:00",
+  "source_run": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\run_01\\probe",
+  "target_repository": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM",
+  "model_calls": 0,
+  "recorded_status": "failed",
+  "recorded_research_probe_passed": false,
+  "research_artifact_verified": false,
+  "research_probe_verified": false,
+  "critic_verified": false,
+  "complete_d_verified": false,
+  "complete_proposal_verified": false,
+  "limits": "Structural/canonical provenance audit. Semantic source support and human Gold approval are not assessed. Research generation only; this does not certify its production Critic/revision or downstream plan.",
+  "installed_sources": {
+    "files_per_root": 272,
+    "roots": [
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\runtime",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-research-20m-stage\\runtime"
+    ],
+    "unchanged": true,
+    "coverage": "Existing inventoried files; new run files are allowed and not silently added to history."
+  },
+  "history": {
+    "files_per_root": 3279,
+    "roots": [
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM"
+    ],
+    "unchanged": true,
+    "coverage": "Existing inventoried files; new run files are allowed and not silently added to history."
+  },
+  "physical_attempts": [
+    {
+      "attempt_id": "0891a3fc-f552-4f0b-b98c-81856676eafa",
+      "logical_task_id": "research.v1",
+      "generation_stage": "body",
+      "purpose": "generate",
+      "status": "succeeded",
+      "error_type": null,
+      "started_at_utc": "2026-09-07T13:59:42.686920+00:00",
+      "ended_at_utc": "2026-09-07T14:02:33.189777+00:00",
+      "elapsed_seconds": 170.5,
+      "finish_reason": "stop",
+      "prompt_tokens": 4255,
+      "output_tokens": 385,
+      "total_tokens": 4640,
+      "budget_token_charge": 4640,
+      "usage_missing_reason": null
+    },
+    {
+      "attempt_id": "f7143d90-ed8e-49a0-adca-df2266909a67",
+      "logical_task_id": "research.v1",
+      "generation_stage": "grounding",
+      "purpose": "generate",
+      "status": "succeeded",
+      "error_type": null,
+      "started_at_utc": "2026-09-07T14:02:33.305749+00:00",
+      "ended_at_utc": "2026-09-07T14:08:25.188522+00:00",
+      "elapsed_seconds": 351.875,
+      "finish_reason": "stop",
+      "prompt_tokens": 8522,
+      "output_tokens": 1330,
+      "total_tokens": 9852,
+      "budget_token_charge": 9852,
+      "usage_missing_reason": null
+    },
+    {
+      "attempt_id": "e9c7dc10-1f84-4d85-bebb-4f0bbe1f903e",
+      "logical_task_id": "research.v1",
+      "generation_stage": "grounding",
+      "purpose": "structure_repair",
+      "status": "succeeded",
+      "error_type": null,
+      "started_at_utc": "2026-09-07T14:08:25.233700+00:00",
+      "ended_at_utc": "2026-09-07T14:13:14.354892+00:00",
+      "elapsed_seconds": 289.125,
+      "finish_reason": "stop",
+      "prompt_tokens": 8708,
+      "output_tokens": 1372,
+      "total_tokens": 10080,
+      "budget_token_charge": 10080,
+      "usage_missing_reason": null
+    }
+  ],
+  "manifest": {
+    "prompt_version": "grounded-generation-v8-brief-research",
+    "contract_version": "proposal-grounding-v5-two-stage",
+    "research_profile_version": "research-brief-v1",
+    "packet_sha256": "2d05d0f5be08ec4f89f36b6db2af77137f700938a87684c74f2f29b744af4b03",
+    "brief_sha256": "368668bc82bb639cfb0af64cbe0a0fb6536195f5f2a49e0069f4e1f7bac6e4a4",
+    "expected_financial_rows_downstream": 21,
+    "model_metadata": {
+      "ollama_version": "0.33.2",
+      "model_digest": "eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+      "model_metadata": {
+        "name": "granite-h-micro-32k:latest",
+        "model": "granite-h-micro-32k:latest",
+        "modified_at": "2026-09-06T23:31:10.2530656+02:00",
+        "size": 1942571795,
+        "digest": "eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+        "details": {
+          "parent_model": "hf.co/ibm-granite/granite-4.0-h-micro-GGUF:Q4_K_M",
+          "format": "gguf",
+          "family": "granitehybrid",
+          "families": [
+            "granitehybrid"
+          ],
+          "parameter_size": "3.2B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 1048576,
+          "embedding_length": 2048
+        },
+        "capabilities": [
+          "completion",
+          "tools"
+        ]
+      },
+      "parameters": {
+        "num_ctx": "32768",
+        "temperature": "0"
+      },
+      "model_info": {
+        "general.architecture": "granitehybrid",
+        "general.file_type": 15,
+        "general.license": "apache-2.0",
+        "general.parameter_count": 3191396096,
+        "general.quantization_version": 2,
+        "general.size_label": "3.2B",
+        "general.tags": null,
+        "general.type": "model",
+        "granitehybrid.attention.head_count": 32,
+        "granitehybrid.attention.head_count_kv": null,
+        "granitehybrid.attention.layer_norm_rms_epsilon": 1e-05,
+        "granitehybrid.attention.scale": 0.015625,
+        "granitehybrid.block_count": 40,
+        "granitehybrid.context_length": 1048576,
+        "granitehybrid.embedding_length": 2048,
+        "granitehybrid.embedding_scale": 12,
+        "granitehybrid.expert_count": 0,
+        "granitehybrid.expert_shared_feed_forward_length": 8192,
+        "granitehybrid.expert_used_count": 0,
+        "granitehybrid.feed_forward_length": 8192,
+        "granitehybrid.logit_scale": 8,
+        "granitehybrid.residual_scale": 0.22,
+        "granitehybrid.rope.dimension_count": 64,
+        "granitehybrid.rope.freq_base": 10000,
+        "granitehybrid.rope.scaling.finetuned": false,
+        "granitehybrid.ssm.conv_kernel": 4,
+        "granitehybrid.ssm.group_count": 1,
+        "granitehybrid.ssm.inner_size": 4096,
+        "granitehybrid.ssm.state_size": 128,
+        "granitehybrid.ssm.time_step_rank": 64,
+        "granitehybrid.vocab_size": 100352,
+        "tokenizer.ggml.add_bos_token": false,
+        "tokenizer.ggml.bos_token_id": 100257,
+        "tokenizer.ggml.eos_token_id": 100257,
+        "tokenizer.ggml.merges": null,
+        "tokenizer.ggml.model": "gpt2",
+        "tokenizer.ggml.padding_token_id": 100256,
+        "tokenizer.ggml.pre": "dbrx",
+        "tokenizer.ggml.token_type": null,
+        "tokenizer.ggml.tokens": null,
+        "tokenizer.ggml.unknown_token_id": 100269
+      },
+      "details": {
+        "parent_model": "hf.co/ibm-granite/granite-4.0-h-micro-GGUF:Q4_K_M",
+        "format": "gguf",
+        "family": "granitehybrid",
+        "families": [
+          "granitehybrid"
+        ],
+        "parameter_size": "3.2B",
+        "quantization_level": "Q4_K_M"
+      },
+      "loaded_models": [],
+      "context_status": "configured_not_yet_measured"
+    }
+  },
+  "tasks": [
+    {
+      "logical_task_id": "research.v1",
+      "completed": false,
+      "logical_attempt_count": 3,
+      "state": "accepted_body_grounding_incomplete",
+      "body_sha256": "2e8e76ede314874fcd706df0877aac758f31300b1a1678632003a6e3ab8a15ef",
+      "body_spans": 10,
+      "evidence_spans": 48,
+      "complete_candidate_catalog_preserved": true
+    }
+  ],
+  "artifact": {
+    "produced": false,
+    "state": "honest_failed_probe_without_artifact"
+  },
+  "accounting": {
+    "physical_calls": 3,
+    "http_requests": 3,
+    "charged_total_tokens": 24572,
+    "known_usage": {
+      "actual_prompt_tokens_known": 21485,
+      "actual_output_tokens_known": 3087,
+      "actual_total_tokens_known": 24572,
+      "usage_missing_calls": 0
+    },
+    "unknown_usage_calls": [],
+    "pool_cumulative": {
+      "request_count": 5,
+      "charged_total_tokens": 115489,
+      "elapsed_seconds": 4401.4220000000205,
+      "known_usage": {
+        "actual_prompt_tokens_known": 25776,
+        "actual_output_tokens_known": 3790,
+        "actual_total_tokens_known": 29566,
+        "usage_missing_calls": 1
+      }
+    },
+    "all_history_cumulative": {
+      "request_count": 21,
+      "charged_total_tokens": 412058,
+      "elapsed_seconds": 14594.904999999999,
+      "known_usage_before_current_pool": null,
+      "known_usage_note": "Only current-pool known subtotals are available; older unknown usage is retained in charges."
+    },
+    "pool_remaining": {
+      "request_count": 31,
+      "charged_total_tokens": 384511,
+      "elapsed_seconds": 998.5779999999795
+    },
+    "assembly_tokens_counted_as_model_output": false,
+    "unknown_reservations_retained": true
+  },
+  "cleanup": {
+    "server_stop": {
+      "status": "owned_process_tree_terminated",
+      "pid": 27568,
+      "identity_method": "native_handle_and_persisted_identity",
+      "lease_released": false,
+      "restart_requires_explicit_reconciliation": true
+    },
+    "power_cleanup": "released",
+    "resource_status": "passed",
+    "certification": "Persisted exact-owner cleanup evidence; no new process query or termination is performed."
+  },
+  "outcome": {
+    "recorded_pass": false,
+    "inference_seconds": 814.7339999999967,
+    "cleanup_seconds": 2.0,
+    "elapsed_seconds": 816.7339999999967,
+    "limit_seconds": 1200.0,
+    "deadline_fired": false
+  },
+  "integrity_status": "passed",
+  "checks": [
+    {
+      "scope": "272_current_sources_unchanged",
+      "passed": true
+    },
+    {
+      "scope": "3279_historical_files_unchanged",
+      "passed": true
+    },
+    {
+      "scope": "installed_runner_helpers_unchanged",
+      "passed": true
+    },
+    {
+      "scope": "public_config_and_launcher_unchanged",
+      "passed": true
+    },
+    {
+      "scope": "closed_event_dispatch_ledger",
+      "passed": true
+    },
+    {
+      "scope": "durable_result_matches_file",
+      "passed": true
+    },
+    {
+      "scope": "research_only_scope",
+      "passed": true
+    },
+    {
+      "scope": "frozen_case_and_snapshots",
+      "passed": true
+    },
+    {
+      "scope": "manifest_authorization_and_deadlines",
+      "passed": true
+    },
+    {
+      "scope": "two_stage_raw_catalog_assembly_context",
+      "passed": true
+    },
+    {
+      "scope": "saved_research_artifact",
+      "passed": true
+    },
+    {
+      "scope": "physical_usage_and_inherited_pool",
+      "passed": true
+    },
+    {
+      "scope": "owned_cleanup_and_resources",
+      "passed": true
+    },
+    {
+      "scope": "component_terminal_duration",
+      "passed": true
+    },
+    {
+      "scope": "read_sources_unchanged_during_audit",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "source_sha256": {
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\run_01\\probe\\result.json": {
+      "sha256": "fad1180433a4e151a1824aabd05de32b06378928ce48d28c7302f59e3ae1e808",
+      "bytes": 7038
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-research-20m-stage\\validation\\audit_research_probe.py": {
+      "sha256": "05a704b57c28b4eb52705a5eb84835ce16aa48fd649d31fb4479d4a8f4e515ce",
+      "bytes": 31769
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\runtime_manifest.json": {
+      "sha256": "521fc3ffa29a00e06e4c8610374e6e9acdfe2dd35193a008fb1e4b4370ed6f26",
+      "bytes": 44430
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\history_inventory.json": {
+      "sha256": "e9dad60af8cce9871975453c1c0da6f28daef007acf4765f9bd348b006ea4de7",
+      "bytes": 627266
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\helper_manifest.json": {
+      "sha256": "72cb185eb7a9093c4eda3c6530901486a44a179bcfa969566037278d45d8882c",
+      "bytes": 852
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\external_dependencies.json": {
+      "sha256": "69c7b0b131d70f906a590e56a8d9739662a89e71a359b8ba4d201e3b81538d49",
+      "bytes": 412
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\run_01\\probe\\events.jsonl": {
+      "sha256": "dfdfc27d10b7d4e9527f555faed56e69e4cca05d6943e61d57a2521e67d256bf",
+      "bytes": 295144
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\authorization.json": {
+      "sha256": "60a712d3a6f555117c386d2820ffcefaf09119de7bba9ce86270baede2cd9759",
+      "bytes": 1152
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v2\\authorization.json": {
+      "sha256": "c6e41f8e85b2bb6fe80aa97fc390b38b4c90d34caabe1ccd2f0ca24bce928783",
+      "bytes": 905
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\trial_config.json": {
+      "sha256": "b2d11cf6e20281767b6d2fa839c0cf1a8c508329dbe1f02c4d1e7e0c0e5a77ad",
+      "bytes": 599
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\budget_carryover.json": {
+      "sha256": "5967196a3a390ee1b467f9568b42c4fc64895b233d35aa0429d6669fe3e8002b",
+      "bytes": 229
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v2\\run_01\\probe\\result.json": {
+      "sha256": "2da32281d8d0ea01917ba5bef29496d79ee86ed2258be4ae05519fe531d61c5f",
+      "bytes": 32524
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\run_01\\server\\server_owner.json": {
+      "sha256": "c103314f007707948724d9163593e104dd3baa94a327cd6d4d73d12d3685e9e1",
+      "bytes": 219
+    },
+    "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\run_01\\server\\server_owner.json.native_identity.json": {
+      "sha256": "b15b9455b0766c571983cb54d942ec923cb13a579fe14c16f4d8558ca1ba6e3a",
+      "bytes": 558
+    }
+  },
+  "reproduction": {
+    "executable": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\.venv\\Scripts\\python.exe",
+    "argv": [
+      "-B",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-research-20m-stage\\validation\\audit_research_probe.py",
+      "--run",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-research-20m-v1\\run_01\\probe",
+      "--shared-repo",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM",
+      "--output",
+      "C:\\Users\\JasmineJiang\\Projects\\multiple_ai_agent\\.slm-research-20m-stage\\validation\\research_probe_integrity.json"
+    ]
+  }
+}

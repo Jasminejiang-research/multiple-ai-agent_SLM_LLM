@@ -1,0 +1,516 @@
+{
+  "mode": "slm_best_effort_demo",
+  "status": "completed_best_effort_demo",
+  "quality_label": "LOW QUALITY / NON-FORMAL / NOT ELIGIBLE FOR C-D COMPARISON",
+  "formal_condition": null,
+  "formal_eligible": false,
+  "c_minus_d_comparison_eligible": false,
+  "case_id": "ai_education",
+  "model_calls": 8,
+  "formal_runs_started": 0,
+  "hard_stop_reason": null,
+  "budget": {
+    "max_requests": 10,
+    "max_total_tokens": 80000,
+    "request_count": 8,
+    "retry_count": 0,
+    "prompt_tokens": 4273,
+    "output_tokens": 897,
+    "total_tokens": 5170,
+    "remaining_requests": 2,
+    "remaining_tokens": 74830,
+    "exhausted": false
+  },
+  "elapsed_seconds": 189.82799999999952,
+  "known_usage": {
+    "prompt_tokens": 4273,
+    "output_tokens": 897,
+    "total_tokens": 5170,
+    "missing_usage_calls": 0
+  },
+  "role_steps": [
+    {
+      "role": "research",
+      "status": "truncated_saved",
+      "model_call": true,
+      "error_type": "StructuredOutputValidationError",
+      "score": null,
+      "issues": null,
+      "text": "Market: US adults aged 18+ enrolled in or applying to MBA programs; potential institutional buyers are business-school instructors. [EDU-01-C1, EDU-02-C1, EDU-02-C2, EDU-03-C1]\nCustomer: Business graduate students seeking timely, personalized business-case reasoning feedback. [EDU-01-C1, EDU-02-C1, EDU-02-C2, EDU-03-C1]\nAlternative: Khanmigo AI tutoring service with personalized coaching, district tools, and professional learning. [EDU-01",
+      "raw": {
+        "text_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\01_research.txt",
+        "text_sha256": "7e30f5f9a687e4b36ba4fa54a25b09d43a282320f92e5224b9229a7ff6091de4",
+        "provider_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\01_research.provider.json",
+        "provider_sha256": "a5b68f3edbb12f8c4e68e9b71c3e26a91740f1989ef8e27d2d87582b1f53db65"
+      },
+      "advisory_only": false,
+      "blocks_generation": false,
+      "budget": {
+        "max_requests": 10,
+        "max_total_tokens": 80000,
+        "request_count": 1,
+        "retry_count": 0,
+        "prompt_tokens": 816,
+        "output_tokens": 128,
+        "total_tokens": 944,
+        "remaining_requests": 9,
+        "remaining_tokens": 79056,
+        "exhausted": false
+      }
+    },
+    {
+      "role": "research_critic",
+      "status": "completed",
+      "model_call": true,
+      "error_type": null,
+      "score": 3,
+      "issues": "1. Target definition could be more precise about the specific enrollment status of US adults. 2. Alternative description lacks supporting evidence ID.",
+      "text": null,
+      "raw": {
+        "text_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\02_research_critic.txt",
+        "text_sha256": "d996a288685662a5159ad6ee386cfcb88553e1e9b2b4b65c2e27f739d67c839e",
+        "provider_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\02_research_critic.provider.json",
+        "provider_sha256": "f10b6f598048f189b15fb965c4ff44b1c3477d4002fd8745a72a5a906ebbc6b8"
+      },
+      "advisory_only": true,
+      "blocks_generation": false,
+      "budget": {
+        "max_requests": 10,
+        "max_total_tokens": 80000,
+        "request_count": 2,
+        "retry_count": 0,
+        "prompt_tokens": 1093,
+        "output_tokens": 170,
+        "total_tokens": 1263,
+        "remaining_requests": 8,
+        "remaining_tokens": 78737,
+        "exhausted": false
+      }
+    },
+    {
+      "role": "strategy",
+      "status": "completed",
+      "model_call": true,
+      "error_type": null,
+      "score": null,
+      "issues": null,
+      "text": "Value: Personalized, timely business-case reasoning feedback for MBA students.\nBusiness Model: AI-driven tutoring service for MBA students and potential institutional buyers (business schools).\nGTM: Target US adults 18+ enrolled/applying to MBA programs; sell directly to students and pitch to business-school instructors.\nMoat: Proprietary licensed/openly reusable cases and English-language AI coaching differentiate from competitors like Khanmigo.\n}",
+      "raw": {
+        "text_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\03_strategy.txt",
+        "text_sha256": "34b74a02754a0410c75c8f677de359e26e641602f8b3a823e6dc813153025c08",
+        "provider_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\03_strategy.provider.json",
+        "provider_sha256": "2bf050ba4a4b11f07edf98aa4762594191c198ca49ff8f92a5d0a7d0e7d05f20"
+      },
+      "advisory_only": false,
+      "blocks_generation": false,
+      "budget": {
+        "max_requests": 10,
+        "max_total_tokens": 80000,
+        "request_count": 3,
+        "retry_count": 0,
+        "prompt_tokens": 1474,
+        "output_tokens": 266,
+        "total_tokens": 1740,
+        "remaining_requests": 7,
+        "remaining_tokens": 78260,
+        "exhausted": false
+      }
+    },
+    {
+      "role": "strategy_critic",
+      "status": "completed",
+      "model_call": true,
+      "error_type": null,
+      "score": 3,
+      "issues": "1. Lack of specific details on AI capabilities and data sources used for personalized feedback.\n2. No mention of pricing strategy or revenue model for institutional buyers.",
+      "text": null,
+      "raw": {
+        "text_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\04_strategy_critic.txt",
+        "text_sha256": "fa3e1c441f72ca93d3f3dd980e111210f89180174351d3d0e5a7ec2c56c066ad",
+        "provider_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\04_strategy_critic.provider.json",
+        "provider_sha256": "6d83868b96f82edc7f3de661a35a3e5dd89920464e0714bb1c80217fa5d0aefe"
+      },
+      "advisory_only": true,
+      "blocks_generation": false,
+      "budget": {
+        "max_requests": 10,
+        "max_total_tokens": 80000,
+        "request_count": 4,
+        "retry_count": 0,
+        "prompt_tokens": 1717,
+        "output_tokens": 313,
+        "total_tokens": 2030,
+        "remaining_requests": 6,
+        "remaining_tokens": 77970,
+        "exhausted": false
+      }
+    },
+    {
+      "role": "finance",
+      "status": "completed",
+      "model_call": true,
+      "error_type": null,
+      "score": null,
+      "issues": null,
+      "text": "Scenario meaning: The pilot tests if AI Tutor can provide more timely, personalized business-case reasoning feedback than existing study methods for MBA students. Risk: Uncertainty around adoption, cost-effectiveness, and learning impact. Decision: Based on low-end deterministic values, the pilot may not be financially viable (monthly loss of $6,000, ending cash of $30,000, break-even at 500 users).",
+      "raw": {
+        "text_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\05_finance.txt",
+        "text_sha256": "b08a6233112c58cb2882442f29fca7c69d1ba7a8fccb82e353d8bc4770275e6a",
+        "provider_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\05_finance.provider.json",
+        "provider_sha256": "dfd4e4e78be3ad7e7423e86d643da6831bc6829adb26e7bea42716b03e8abc89"
+      },
+      "advisory_only": false,
+      "blocks_generation": false,
+      "budget": {
+        "max_requests": 10,
+        "max_total_tokens": 80000,
+        "request_count": 5,
+        "retry_count": 0,
+        "prompt_tokens": 2462,
+        "output_tokens": 404,
+        "total_tokens": 2866,
+        "remaining_requests": 5,
+        "remaining_tokens": 77134,
+        "exhausted": false
+      }
+    },
+    {
+      "role": "finance_critic",
+      "status": "completed",
+      "model_call": true,
+      "error_type": null,
+      "score": 2,
+      "issues": "1. Unsupported financial values: Monthly loss of $6,000 and ending cash of $30,000 are not substantiated with evidence IDs. 2. Unverified claim: Break-even at 500 users lacks supporting data.",
+      "text": null,
+      "raw": {
+        "text_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\06_finance_critic.txt",
+        "text_sha256": "1e8b4d0d500de81cd596dcd2fc9a5b31390528e92aa0c93ac8867cd4d5c17c26",
+        "provider_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\06_finance_critic.provider.json",
+        "provider_sha256": "ca0866fdd810d2e2a72771394cb8bfb7b8c4c42d16d335dc43398e1fca302d1f"
+      },
+      "advisory_only": true,
+      "blocks_generation": false,
+      "budget": {
+        "max_requests": 10,
+        "max_total_tokens": 80000,
+        "request_count": 6,
+        "retry_count": 0,
+        "prompt_tokens": 2699,
+        "output_tokens": 465,
+        "total_tokens": 3164,
+        "remaining_requests": 4,
+        "remaining_tokens": 76836,
+        "exhausted": false
+      }
+    },
+    {
+      "role": "writer",
+      "status": "completed",
+      "model_call": true,
+      "error_type": null,
+      "score": null,
+      "issues": null,
+      "text": "[SECTION: Executive Summary] The pilot tests if AI Tutor can provide more timely, personalized business-case reasoning feedback than existing study methods for MBA students.\n[SECTION: Problem] The proposed pilot tests a demand hypothesis that students need more timely, personalized business-case reasoning feedback.\n[SECTION: Target Customer] Business graduate students seeking timely, personalized business-case reasoning feedback; business-school instructors are potential institutional buyers.\n[SECTION: Market Opportunity] US adults aged 18+ enrolled/applying to MBA programs; potential institutional buyers are business-school instructors.\n[SECTION: Solution] An English-language AI case-coaching service with guided questions, evidence-aware feedback, and practice with licensed or openly reusable cases.\n[SECTION: Value Proposition] Personalized, timely business-case reasoning feedback for MBA students.\n[SECTION: Competitor Analysis] Competitor: Khanmigo AI tutoring service with personalized coaching, district tools, and professional learning.\n[SECTION: Business Model] AI-driven tutoring service for MBA students and potential institutional buyers (business schools).\n[SECTION: Go-to-Market Strategy] Target US adults 18+ enrolled/applying to MBA programs; sell directly to students and pitch to business-school instructors.\n[SECTION: Financial Assumptions] Scenario meaning: The pilot tests if AI Tutor can provide more timely, personalized business-case reasoning feedback than existing study methods for MBA students. Risk: Uncertainty around adoption, cost-effectiveness, and learning impact. Decision: Based on low-end deterministic values, the pilot may not be financially viable (monthly loss of $6,000, ending cash of $30,000, break-even at 500 users).\n[SECTION: Risks and Mitigations] Uncertainty around adoption, cost-effectiveness, and learning impact. Mitigation: Conduct pilot to validate demand hypothesis and refine business model.\n[SECTION: Implementation Roadmap] Conduct pilot, validate demand hypothesis, refine business model, scale if successful.\n[SECTION: Appendix] None",
+      "raw": {
+        "text_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\07_writer.txt",
+        "text_sha256": "43c7ed2658ed5d839ea7d1d832e387f48b49acb0fe26c485c38b17aa069d0d25",
+        "provider_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\07_writer.provider.json",
+        "provider_sha256": "e0efa78df39ffda00a14baaeb83afbc41c0072ac0664b114efd04b54dfb31182"
+      },
+      "advisory_only": false,
+      "blocks_generation": false,
+      "budget": {
+        "max_requests": 10,
+        "max_total_tokens": 80000,
+        "request_count": 7,
+        "retry_count": 0,
+        "prompt_tokens": 3358,
+        "output_tokens": 876,
+        "total_tokens": 4234,
+        "remaining_requests": 3,
+        "remaining_tokens": 75766,
+        "exhausted": false
+      }
+    },
+    {
+      "role": "final_critic",
+      "status": "completed",
+      "model_call": true,
+      "error_type": null,
+      "score": 0,
+      "issues": "unsupported facts; unknown IDs",
+      "text": null,
+      "raw": {
+        "text_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\08_final_critic.txt",
+        "text_sha256": "3e67f11028f1e1115698f37621daecd01442232958064d6c33bae1e5830210f0",
+        "provider_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\08_final_critic.provider.json",
+        "provider_sha256": "b910ebf5b5c03f4c3c8f71aed5a6d699a282dd17a751c64d42a1a153d0982d61"
+      },
+      "advisory_only": true,
+      "blocks_generation": false,
+      "budget": {
+        "max_requests": 10,
+        "max_total_tokens": 80000,
+        "request_count": 8,
+        "retry_count": 0,
+        "prompt_tokens": 4273,
+        "output_tokens": 897,
+        "total_tokens": 5170,
+        "remaining_requests": 2,
+        "remaining_tokens": 74830,
+        "exhausted": false
+      }
+    }
+  ],
+  "critic_results": [
+    {
+      "role": "research_critic",
+      "status": "completed",
+      "model_call": true,
+      "error_type": null,
+      "score": 3,
+      "issues": "1. Target definition could be more precise about the specific enrollment status of US adults. 2. Alternative description lacks supporting evidence ID.",
+      "text": null,
+      "raw": {
+        "text_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\02_research_critic.txt",
+        "text_sha256": "d996a288685662a5159ad6ee386cfcb88553e1e9b2b4b65c2e27f739d67c839e",
+        "provider_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\02_research_critic.provider.json",
+        "provider_sha256": "f10b6f598048f189b15fb965c4ff44b1c3477d4002fd8745a72a5a906ebbc6b8"
+      },
+      "advisory_only": true,
+      "blocks_generation": false,
+      "budget": {
+        "max_requests": 10,
+        "max_total_tokens": 80000,
+        "request_count": 2,
+        "retry_count": 0,
+        "prompt_tokens": 1093,
+        "output_tokens": 170,
+        "total_tokens": 1263,
+        "remaining_requests": 8,
+        "remaining_tokens": 78737,
+        "exhausted": false
+      }
+    },
+    {
+      "role": "strategy_critic",
+      "status": "completed",
+      "model_call": true,
+      "error_type": null,
+      "score": 3,
+      "issues": "1. Lack of specific details on AI capabilities and data sources used for personalized feedback.\n2. No mention of pricing strategy or revenue model for institutional buyers.",
+      "text": null,
+      "raw": {
+        "text_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\04_strategy_critic.txt",
+        "text_sha256": "fa3e1c441f72ca93d3f3dd980e111210f89180174351d3d0e5a7ec2c56c066ad",
+        "provider_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\04_strategy_critic.provider.json",
+        "provider_sha256": "6d83868b96f82edc7f3de661a35a3e5dd89920464e0714bb1c80217fa5d0aefe"
+      },
+      "advisory_only": true,
+      "blocks_generation": false,
+      "budget": {
+        "max_requests": 10,
+        "max_total_tokens": 80000,
+        "request_count": 4,
+        "retry_count": 0,
+        "prompt_tokens": 1717,
+        "output_tokens": 313,
+        "total_tokens": 2030,
+        "remaining_requests": 6,
+        "remaining_tokens": 77970,
+        "exhausted": false
+      }
+    },
+    {
+      "role": "finance_critic",
+      "status": "completed",
+      "model_call": true,
+      "error_type": null,
+      "score": 2,
+      "issues": "1. Unsupported financial values: Monthly loss of $6,000 and ending cash of $30,000 are not substantiated with evidence IDs. 2. Unverified claim: Break-even at 500 users lacks supporting data.",
+      "text": null,
+      "raw": {
+        "text_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\06_finance_critic.txt",
+        "text_sha256": "1e8b4d0d500de81cd596dcd2fc9a5b31390528e92aa0c93ac8867cd4d5c17c26",
+        "provider_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\06_finance_critic.provider.json",
+        "provider_sha256": "ca0866fdd810d2e2a72771394cb8bfb7b8c4c42d16d335dc43398e1fca302d1f"
+      },
+      "advisory_only": true,
+      "blocks_generation": false,
+      "budget": {
+        "max_requests": 10,
+        "max_total_tokens": 80000,
+        "request_count": 6,
+        "retry_count": 0,
+        "prompt_tokens": 2699,
+        "output_tokens": 465,
+        "total_tokens": 3164,
+        "remaining_requests": 4,
+        "remaining_tokens": 76836,
+        "exhausted": false
+      }
+    },
+    {
+      "role": "final_critic",
+      "status": "completed",
+      "model_call": true,
+      "error_type": null,
+      "score": 0,
+      "issues": "unsupported facts; unknown IDs",
+      "text": null,
+      "raw": {
+        "text_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\08_final_critic.txt",
+        "text_sha256": "3e67f11028f1e1115698f37621daecd01442232958064d6c33bae1e5830210f0",
+        "provider_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\raw_responses\\08_final_critic.provider.json",
+        "provider_sha256": "b910ebf5b5c03f4c3c8f71aed5a6d699a282dd17a751c64d42a1a153d0982d61"
+      },
+      "advisory_only": true,
+      "blocks_generation": false,
+      "budget": {
+        "max_requests": 10,
+        "max_total_tokens": 80000,
+        "request_count": 8,
+        "retry_count": 0,
+        "prompt_tokens": 4273,
+        "output_tokens": 897,
+        "total_tokens": 5170,
+        "remaining_requests": 2,
+        "remaining_tokens": 74830,
+        "exhausted": false
+      }
+    }
+  ],
+  "artifact": {
+    "markdown_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\artifact\\best_effort_plan.md",
+    "markdown_sha256": "cf22fa9331ffa3aa88b64871c09f640dfc7fe3cdb45e27bacca55cdcf12cf8f6",
+    "json_path": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s6-fast-generation-v1\\real_best_effort_ai_education_01\\demo\\artifact\\best_effort_plan.json",
+    "json_sha256": "aed76c348e045fa7c36443633165762752e1740d45308a0195abd9e184f48e75",
+    "section_count": 13,
+    "missing_sections": [],
+    "deterministic_finance_count": 21
+  },
+  "resources": {
+    "status": "passed",
+    "reason": null,
+    "sample_count": 38,
+    "sample_interval_seconds": 5.0,
+    "baseline": {
+      "ram_total_bytes": 16969424896,
+      "ram_available_bytes": 8974856192,
+      "pagefile_used_bytes": 14868480,
+      "gpu_used_bytes": 9437184,
+      "gpu_total_bytes": 2147483648,
+      "loaded_models": [],
+      "missing": {}
+    },
+    "maximum_observed_sample_gap_seconds": 5.17200000000048,
+    "maximum_allowed_sample_gap_seconds": 15.0,
+    "observation_gap_count": 0,
+    "observation_gaps": [],
+    "min_available_ram_bytes": 5440462848,
+    "peak_ram_used_bytes": 11528962048,
+    "peak_gpu_used_bytes": 9437184,
+    "peak_pagefile_used_bytes": 16412672,
+    "peak_pagefile_delta_bytes": 1544192,
+    "missing_observations": []
+  },
+  "metadata": {
+    "ollama_version": "0.33.3",
+    "model_digest": "eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+    "model_metadata": {
+      "name": "granite-h-micro-32k:latest",
+      "model": "granite-h-micro-32k:latest",
+      "modified_at": "2026-09-06T23:31:10.2530656+02:00",
+      "size": 1942571795,
+      "digest": "eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+      "details": {
+        "parent_model": "hf.co/ibm-granite/granite-4.0-h-micro-GGUF:Q4_K_M",
+        "format": "gguf",
+        "family": "granitehybrid",
+        "families": [
+          "granitehybrid"
+        ],
+        "parameter_size": "3.2B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 1048576,
+        "embedding_length": 2048
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    },
+    "parameters": {
+      "num_ctx": "32768",
+      "temperature": "0"
+    },
+    "model_info": {
+      "general.architecture": "granitehybrid",
+      "general.file_type": 15,
+      "general.license": "apache-2.0",
+      "general.parameter_count": 3191396096,
+      "general.quantization_version": 2,
+      "general.size_label": "3.2B",
+      "general.tags": null,
+      "general.type": "model",
+      "granitehybrid.attention.head_count": 32,
+      "granitehybrid.attention.head_count_kv": null,
+      "granitehybrid.attention.layer_norm_rms_epsilon": 1e-05,
+      "granitehybrid.attention.scale": 0.015625,
+      "granitehybrid.block_count": 40,
+      "granitehybrid.context_length": 1048576,
+      "granitehybrid.embedding_length": 2048,
+      "granitehybrid.embedding_scale": 12,
+      "granitehybrid.expert_count": 0,
+      "granitehybrid.expert_shared_feed_forward_length": 8192,
+      "granitehybrid.expert_used_count": 0,
+      "granitehybrid.feed_forward_length": 8192,
+      "granitehybrid.logit_scale": 8,
+      "granitehybrid.residual_scale": 0.22,
+      "granitehybrid.rope.dimension_count": 64,
+      "granitehybrid.rope.freq_base": 10000,
+      "granitehybrid.rope.scaling.finetuned": false,
+      "granitehybrid.ssm.conv_kernel": 4,
+      "granitehybrid.ssm.group_count": 1,
+      "granitehybrid.ssm.inner_size": 4096,
+      "granitehybrid.ssm.state_size": 128,
+      "granitehybrid.ssm.time_step_rank": 64,
+      "granitehybrid.vocab_size": 100352,
+      "tokenizer.ggml.add_bos_token": false,
+      "tokenizer.ggml.bos_token_id": 100257,
+      "tokenizer.ggml.eos_token_id": 100257,
+      "tokenizer.ggml.merges": null,
+      "tokenizer.ggml.model": "gpt2",
+      "tokenizer.ggml.padding_token_id": 100256,
+      "tokenizer.ggml.pre": "dbrx",
+      "tokenizer.ggml.token_type": null,
+      "tokenizer.ggml.tokens": null,
+      "tokenizer.ggml.unknown_token_id": 100269
+    },
+    "details": {
+      "parent_model": "hf.co/ibm-granite/granite-4.0-h-micro-GGUF:Q4_K_M",
+      "format": "gguf",
+      "family": "granitehybrid",
+      "families": [
+        "granitehybrid"
+      ],
+      "parameter_size": "3.2B",
+      "quantization_level": "Q4_K_M"
+    },
+    "loaded_models": [],
+    "context_status": "configured_not_yet_measured"
+  },
+  "server_stop": {
+    "status": "owned_process_tree_terminated",
+    "pid": 16236,
+    "identity_method": "native_handle_and_persisted_identity",
+    "lease_released": false,
+    "restart_requires_explicit_reconciliation": true
+  },
+  "warnings": [
+    "LOW QUALITY / NON-FORMAL / NOT ELIGIBLE FOR C-D COMPARISON",
+    "Critic scores are advisory and did not gate continuation or export.",
+    "Missing sections use a fixed placeholder; no content is invented by the assembler."
+  ],
+  "next_package_started": false
+}

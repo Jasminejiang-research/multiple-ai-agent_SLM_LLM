@@ -1,0 +1,21 @@
+{
+  "scope": "ai_education_slm_nonformal_90m_recovery",
+  "approved": true,
+  "approved_limits": {
+    "run_seconds": 5400.0,
+    "node_seconds": 5400.0,
+    "request_seconds": 5400.0,
+    "max_output_tokens": 8192,
+    "max_requests": 36,
+    "max_total_tokens": 500000,
+    "max_prompt_chars": 90000,
+    "cumulative_trial_seconds": 14400
+  },
+  "user_instruction": "我需要你为我诊断 - 定位 - 修复这个问题，我能够接受的LLM 和 SLM生成一份完整的计划书的所需最长时间长度为 1.5 hours - 注意：是各自1.5h，而不是加总 1.5h",
+  "interpretation": "Each fresh plan has an independent 5400-second cap. This SLM recovery includes its Research prerequisite within that cap. Previous cumulative request/token/4h allowance remains charged; no reset or increase. No Gemini calls or formal S5 rows authorized by this helper.",
+  "approved_two_stage_scope": "Uniform A-D body then grounded-claim selection; strict complete canonical contract and one shared structure repair remain.",
+  "previous_authorization_path": "prior_authorization.json",
+  "recorded_at_utc": "2026-09-07T10:05:07.255154+00:00",
+  "expected_model_digest": "eec81a822241037c5d8e47a870b3d26423bfa1b010e02fcdf1b5f9f2de5c3b2b",
+  "expected_ollama_version": "0.33.2"
+}

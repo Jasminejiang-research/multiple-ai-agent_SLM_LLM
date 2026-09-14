@@ -1,0 +1,45 @@
+{
+  "identity": "addc77f59ad169d919796b0751cb12ebdc31144c290747fb0fab98f9bcbb9f6d",
+  "payload": {
+    "policy": "product-per-agent-one-correction-v1",
+    "corrections_allowed_per_agent": 1,
+    "corrections": {
+      "finance": 1,
+      "writer": 1
+    },
+    "correction_events": [
+      {
+        "stage": "finance",
+        "reason": "Invalid FinanceAssumptions output: revenue_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures\nunit_economics_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "writer",
+        "reason": "Invalid ProposalDraftBatch1 output: ['target_customer']: ['target_customer']: target_customer: unknown source IDs ['web-3cda0b88a7c74848fcd7f4008dce776']; use exact provided IDs only; if evidence does not support the claim set evidence_status=\"needs_validation\" and clear claim.source_ids; never guess a replacement or change claim_type to an evidence status"
+      }
+    ],
+    "unresolved_issues": [
+      {
+        "stage": "finance",
+        "message": "Invalid FinanceAssumptions output: revenue_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures\nunit_economics_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "finance",
+        "message": "revenue_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures\nunit_economics_assumptions: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "writer",
+        "message": "Invalid ProposalDraftBatch3 output: ['business_model']: business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "writer",
+        "message": "['business_model']: business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      },
+      {
+        "stage": "writer",
+        "message": "business_model: numeric financial projections must use financial_model assumptions and {{fin:scenario_id.metric}} references, not independent prose amounts; if inputs are unknown use qualitative uncertainty instead of inventing figures"
+      }
+    ],
+    "status": "accepted_with_issues"
+  },
+  "sha256": "86aab1e409cc920f2f12d1a4d07a6ac8210d4934624b65dbb6f6d5486a5fe2f2"
+}

@@ -1,0 +1,88 @@
+{
+  "case_id": "ai_education",
+  "formal_eligible": false,
+  "formal_runs_started": 0,
+  "gemini_calls": 0,
+  "public_config_changed": false,
+  "complete_proposal_produced": false,
+  "phases": {
+    "native_schema_probe": {
+      "status": "not_run",
+      "reason": "Prior native bounds observed; actual two-stage Research exercises this wire schema"
+    },
+    "research_probe": {
+      "status": "failed",
+      "error_type": "RunCancelled",
+      "error": "run cancellation requested",
+      "budget": {
+        "max_requests": 25,
+        "max_total_tokens": 428748,
+        "request_count": 2,
+        "retry_count": 0,
+        "remaining_requests": 23,
+        "remaining_tokens": 308677,
+        "exhausted": false,
+        "charged_total_tokens": 120071,
+        "token_counter_basis": "budget_charge_actual_or_retained_estimate",
+        "actual_prompt_tokens_known": 4353,
+        "actual_output_tokens_known": 941,
+        "actual_total_tokens_known": 5294,
+        "usage_missing_calls": 1,
+        "transport_retry_count": 0,
+        "structure_repair_request_count": 0,
+        "revision_request_count": 0,
+        "run_elapsed_seconds": 274.31300000002375,
+        "node_elapsed_seconds": null,
+        "node_scope_id": null
+      }
+    },
+    "full_d": {
+      "status": "not_run",
+      "reason": "native/Research prerequisite did not pass"
+    }
+  },
+  "status": "resource_stopped",
+  "elapsed_seconds": 300.63999999995576,
+  "budget": {
+    "this_run_request_count": 2,
+    "this_run_charged_total_tokens": 120071,
+    "this_run_elapsed_seconds": 300.63999999995576,
+    "cumulative_request_count": 13,
+    "cumulative_charged_total_tokens": 191323,
+    "cumulative_elapsed_seconds": 4788.310999999958
+  },
+  "resources": {
+    "status": "failed",
+    "reason": "required_resource_telemetry_missing",
+    "sample_count": 37,
+    "sample_interval_seconds": 5.0,
+    "baseline": {
+      "ram_total_bytes": 16969424896,
+      "ram_available_bytes": 6984638464,
+      "pagefile_used_bytes": 405798912,
+      "gpu_used_bytes": 0,
+      "gpu_total_bytes": 2147483648,
+      "loaded_models": [],
+      "missing": {}
+    },
+    "maximum_observed_sample_gap_seconds": 17.625,
+    "min_available_ram_bytes": 2010853376,
+    "peak_ram_used_bytes": 14958571520,
+    "peak_gpu_used_bytes": 0,
+    "peak_pagefile_used_bytes": 409993216,
+    "peak_pagefile_delta_bytes": 4194304,
+    "missing_observations": [
+      {
+        "pagefile": "TimeoutExpired"
+      }
+    ]
+  },
+  "server_stop": {
+    "status": "owned_process_tree_terminated",
+    "pid": 28216,
+    "lease_released": false,
+    "restart_requires_explicit_reconciliation": true
+  },
+  "deadline_fired": false,
+  "http_requests": 2
+}

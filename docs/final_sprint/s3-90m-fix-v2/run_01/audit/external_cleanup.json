@@ -1,0 +1,19 @@
+{
+  "observed_at_utc": "2026-09-07T13:24:38.616808+00:00",
+  "listeners": [],
+  "model_processes": [],
+  "active_leases_after": 0,
+  "confirmed_owned_stop": {
+    "status": "owned_process_tree_terminated",
+    "pid": 21440,
+    "identity_method": "native_handle_and_persisted_identity",
+    "lease_released": false,
+    "restart_requires_explicit_reconciliation": true
+  },
+  "lease_archive": "C:\\Users\\JasmineJiang\\Projects\\multiple-ai-agent_SLM_LLM\\docs\\final_sprint\\s3-90m-fix-v2\\run_01\\audit\\terminated_unknown_request.lease.json",
+  "lease_sha256": "029e829ee3a0d55f17e6d9b45569bde61327a17f6d976f6b0849701df409c817",
+  "retained_unknown_token_reservation": 85923,
+  "user_confirmed_interruption": "你的测试被我手动中断，因为我预告SLM生成一份完整的计划书将会超过90分钟",
+  "technical_stop_reason": "resource_observation_gap",
+  "maximum_sample_gap_seconds": 2048.0779999999795
+}

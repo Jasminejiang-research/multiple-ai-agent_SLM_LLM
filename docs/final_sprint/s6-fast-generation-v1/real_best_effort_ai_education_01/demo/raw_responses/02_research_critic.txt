@@ -1,0 +1,4 @@
+{
+  "score": 3,
+  "issues": "1. Target definition could be more precise about the specific enrollment status of US adults. 2. Alternative description lacks supporting evidence ID."
+}

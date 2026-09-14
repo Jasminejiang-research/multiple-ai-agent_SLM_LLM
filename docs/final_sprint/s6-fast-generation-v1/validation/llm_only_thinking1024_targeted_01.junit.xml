@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="63" skipped="0" tests="137" time="33.489" timestamp="2026-09-07T23:47:44.972761+02:00" hostname="LAPTOP-LGS2RLRG"><testcase classname="tests.test_s5_llm_only" name="test_frozen_abc_config_matches_approved_per_run_limits" time="0.001" /><testcase classname="tests.test_s5_llm_only" name="test_gemini_8192_manifest_raises_every_effective_role_cap_without_wire_change" time="0.019" /><testcase classname="tests.test_s5_llm_only" name="test_minimal_prompt_keeps_strict_schema_and_brevity_contract" time="0.001" /><testcase classname="tests.test_s5_llm_only" name="test_cost_accounting_includes_non_candidate_tokens_at_output_rate" time="0.001" /><testcase classname="tests.test_s5_llm_only" name="test_prepare_preserves_eight_rows_and_seals_D_without_formal_start" time="0.310" /><testcase classname="tests.test_s5_llm_only" name="test_prepare_does_not_bypass_smoke_or_frozen_inventory_gates" time="0.283" /><testcase classname="tests.test_s5_llm_only" name="test_llm_only_pairing_reports_only_authorized_comparisons" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[0-0-research]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[0-0-strategy]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[0-0-finance]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[0-0-final]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[1-2.5-research]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[1-2.5-strategy]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[1-2.5-finance]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[1-2.5-final]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[2-5-research]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[2-5-strategy]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[2-5-finance]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[2-5-final]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[3-7.5-research]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[3-7.5-strategy]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[3-7.5-finance]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[3-7.5-final]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[4-10-research]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[4-10-strategy]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[4-10-finance]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_score_is_computed_on_fixed_scale[4-10-final]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_review_rejects_bad_or_legacy_scores[missing]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_review_rejects_bad_or_legacy_scores[duplicate]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_review_rejects_bad_or_legacy_scores[unknown]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_review_rejects_bad_or_legacy_scores[negative]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_review_rejects_bad_or_legacy_scores[too_high]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_review_rejects_bad_or_legacy_scores[float]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_review_rejects_bad_or_legacy_scores[bool]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_review_rejects_bad_or_legacy_scores[string]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_review_rejects_bad_or_legacy_scores[overall]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_review_rejects_bad_or_legacy_scores[issue_duplicate]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_review_rejects_bad_or_legacy_scores[issue_version]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_pass_routes_skip_every_revision[A-8-reviewed0]" time="0.104"><failure message="AssertionError: {'node': 'single.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_pass_routes_skip_every_re0')
+condition = 'A', expected_calls = 8, reviewed = ()
+
+    @pytest.mark.parametrize("condition,expected_calls,reviewed", [("A", 8, ()), ("B", 15, ("final",)),
+        ("C", 18, ("research", "strategy", "finance", "final")), ("D", 18, ("research", "strategy", "finance", "final"))])
+    def test_pass_routes_skip_every_revision(tmp_path, condition, expected_calls, reviewed):
+        workflow, provider = setup_run(tmp_path, condition=condition)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'single.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:70: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_pass_routes_skip_every_revision[B-15-reviewed1]" time="0.133"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_pass_routes_skip_every_re1')
+condition = 'B', expected_calls = 15, reviewed = ('final',)
+
+    @pytest.mark.parametrize("condition,expected_calls,reviewed", [("A", 8, ()), ("B", 15, ("final",)),
+        ("C", 18, ("research", "strategy", "finance", "final")), ("D", 18, ("research", "strategy", "finance", "final"))])
+    def test_pass_routes_skip_every_revision(tmp_path, condition, expected_calls, reviewed):
+        workflow, provider = setup_run(tmp_path, condition=condition)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:70: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_pass_routes_skip_every_revision[C-18-reviewed2]" time="0.130"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_pass_routes_skip_every_re2')
+condition = 'C', expected_calls = 18
+reviewed = ('research', 'strategy', 'finance', 'final')
+
+    @pytest.mark.parametrize("condition,expected_calls,reviewed", [("A", 8, ()), ("B", 15, ("final",)),
+        ("C", 18, ("research", "strategy", "finance", "final")), ("D", 18, ("research", "strategy", "finance", "final"))])
+    def test_pass_routes_skip_every_revision(tmp_path, condition, expected_calls, reviewed):
+        workflow, provider = setup_run(tmp_path, condition=condition)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:70: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_pass_routes_skip_every_revision[D-18-reviewed3]" time="0.226"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_pass_routes_skip_every_re3')
+condition = 'D', expected_calls = 18
+reviewed = ('research', 'strategy', 'finance', 'final')
+
+    @pytest.mark.parametrize("condition,expected_calls,reviewed", [("A", 8, ()), ("B", 15, ("final",)),
+        ("C", 18, ("research", "strategy", "finance", "final")), ("D", 18, ("research", "strategy", "finance", "final"))])
+    def test_pass_routes_skip_every_revision(tmp_path, condition, expected_calls, reviewed):
+        workflow, provider = setup_run(tmp_path, condition=condition)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:70: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[high-4-research-C]" time="0.152"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a0')
+condition = 'C', role = 'research', severity = 'high', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[high-4-research-D]" time="0.148"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a1')
+condition = 'D', role = 'research', severity = 'high', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[high-4-strategy-C]" time="0.138"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a2')
+condition = 'C', role = 'strategy', severity = 'high', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[high-4-strategy-D]" time="0.257"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a3')
+condition = 'D', role = 'strategy', severity = 'high', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[high-4-finance-C]" time="0.156"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a4')
+condition = 'C', role = 'finance', severity = 'high', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[high-4-finance-D]" time="0.159"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a5')
+condition = 'D', role = 'finance', severity = 'high', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[high-4-final-C]" time="0.149"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a6')
+condition = 'C', role = 'final', severity = 'high', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[high-4-final-D]" time="0.150"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a7')
+condition = 'D', role = 'final', severity = 'high', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[critical-4-research-C]" time="0.151"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a8')
+condition = 'C', role = 'research', severity = 'critical', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[critical-4-research-D]" time="0.151"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a9')
+condition = 'D', role = 'research', severity = 'critical', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[critical-4-strategy-C]" time="0.157"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a10')
+condition = 'C', role = 'strategy', severity = 'critical', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[critical-4-strategy-D]" time="0.157"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a11')
+condition = 'D', role = 'strategy', severity = 'critical', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[critical-4-finance-C]" time="0.131"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a12')
+condition = 'C', role = 'finance', severity = 'critical', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[critical-4-finance-D]" time="0.139"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a13')
+condition = 'D', role = 'finance', severity = 'critical', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[critical-4-final-C]" time="0.147"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a14')
+condition = 'C', role = 'final', severity = 'critical', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_fail_routes_revise_once_and_keep_semantic_state[critical-4-final-D]" time="0.143"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_fail_routes_revise_once_a15')
+condition = 'D', role = 'final', severity = 'critical', score = 4
+
+    @pytest.mark.parametrize("condition", ["C", "D"])
+    @pytest.mark.parametrize("role", METRICS)
+    @pytest.mark.parametrize("severity,score", [("high", 4), ("critical", 4)])
+    def test_fail_routes_revise_once_and_keep_semantic_state(tmp_path, condition, role, severity, score):
+        workflow, provider = setup_run(tmp_path, condition=condition, fail_roles=[role], severity=severity, score=score)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:88: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_b_final_failure_and_all_c_failures" time="0.098"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_b_final_failure_and_all_c0')
+
+    def test_b_final_failure_and_all_c_failures(tmp_path):
+        for condition in ("B", "C"):
+            workflow, provider = setup_run(tmp_path / condition, condition=condition,
+                fail_roles=METRICS, severity="critical")
+            result = workflow.run()
+&gt;           assert result["status"] == "completed", result["error"]
+E           AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E           assert 'failed' == 'completed'
+E             
+E             - completed
+E             + failed
+
+tests\test_s2_review.py:117: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_gate_does_not_accept_second_review[research]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_gate_does_not_accept_second_review[strategy]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_gate_does_not_accept_second_review[finance]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_gate_does_not_accept_second_review[final]" time="0.001" /><testcase classname="tests.test_s2_review" name="test_budget_exhaustion_retains_expected_missing_handoffs[B]" time="0.101"><failure message="assert 0 == 1&#10; +  where 0 = len([])&#10; +    where [] = calls(&lt;workflow.review_graph.ReviewWorkflow object at 0x000001A4C1AE5450&gt;)">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_budget_exhaustion_retains0')
+condition = 'B'
+
+    @pytest.mark.parametrize("condition", ["B", "C", "D"])
+    def test_budget_exhaustion_retains_expected_missing_handoffs(tmp_path, condition):
+        workflow, provider = setup_run(tmp_path, condition=condition, overrides={"max_requests": 1})
+        base_ids = set(workflow.handoffs.rows)
+        result = workflow.run()
+        assert result["status"] == "budget_exhausted"
+&gt;       assert len(provider.calls) == len(calls(workflow)) == result["budget"]["request_count"] == 1
+E       assert 0 == 1
+E        +  where 0 = len([])
+E        +    where [] = calls(&lt;workflow.review_graph.ReviewWorkflow object at 0x000001A4C1AE5450&gt;)
+
+tests\test_s2_review.py:135: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_budget_exhaustion_retains_expected_missing_handoffs[C]" time="0.136"><failure message="assert 0 == 1&#10; +  where 0 = len([])&#10; +    where [] = calls(&lt;workflow.review_graph.ReviewWorkflow object at 0x000001A4C1AE5F90&gt;)">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_budget_exhaustion_retains1')
+condition = 'C'
+
+    @pytest.mark.parametrize("condition", ["B", "C", "D"])
+    def test_budget_exhaustion_retains_expected_missing_handoffs(tmp_path, condition):
+        workflow, provider = setup_run(tmp_path, condition=condition, overrides={"max_requests": 1})
+        base_ids = set(workflow.handoffs.rows)
+        result = workflow.run()
+        assert result["status"] == "budget_exhausted"
+&gt;       assert len(provider.calls) == len(calls(workflow)) == result["budget"]["request_count"] == 1
+E       assert 0 == 1
+E        +  where 0 = len([])
+E        +    where [] = calls(&lt;workflow.review_graph.ReviewWorkflow object at 0x000001A4C1AE5F90&gt;)
+
+tests\test_s2_review.py:135: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_budget_exhaustion_retains_expected_missing_handoffs[D]" time="0.142"><failure message="assert 0 == 1&#10; +  where 0 = len([])&#10; +    where [] = calls(&lt;workflow.review_graph.ReviewWorkflow object at 0x000001A4C1AE5E50&gt;)">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_budget_exhaustion_retains2')
+condition = 'D'
+
+    @pytest.mark.parametrize("condition", ["B", "C", "D"])
+    def test_budget_exhaustion_retains_expected_missing_handoffs(tmp_path, condition):
+        workflow, provider = setup_run(tmp_path, condition=condition, overrides={"max_requests": 1})
+        base_ids = set(workflow.handoffs.rows)
+        result = workflow.run()
+        assert result["status"] == "budget_exhausted"
+&gt;       assert len(provider.calls) == len(calls(workflow)) == result["budget"]["request_count"] == 1
+E       assert 0 == 1
+E        +  where 0 = len([])
+E        +    where [] = calls(&lt;workflow.review_graph.ReviewWorkflow object at 0x000001A4C1AE5E50&gt;)
+
+tests\test_s2_review.py:135: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_revision_cannot_reset_request_budget[research-3]" time="0.215"><failure message="AssertionError: assert 'failed' == 'budget_exhausted'&#10;  &#10;  - budget_exhausted&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_revision_cannot_reset_req0')
+role = 'research', limit = 3
+
+    @pytest.mark.parametrize("role,limit", [("research", 3), ("strategy", 6), ("finance", 9), ("final", 18)])
+    def test_revision_cannot_reset_request_budget(tmp_path, role, limit):
+        workflow, provider = setup_run(tmp_path, fail_roles=[role], overrides={"max_requests": limit})
+        result = workflow.run()
+&gt;       assert result["status"] == "budget_exhausted"
+E       AssertionError: assert 'failed' == 'budget_exhausted'
+E         
+E         - budget_exhausted
+E         + failed
+
+tests\test_s2_review.py:145: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_revision_cannot_reset_request_budget[strategy-6]" time="0.138"><failure message="AssertionError: assert 'failed' == 'budget_exhausted'&#10;  &#10;  - budget_exhausted&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_revision_cannot_reset_req1')
+role = 'strategy', limit = 6
+
+    @pytest.mark.parametrize("role,limit", [("research", 3), ("strategy", 6), ("finance", 9), ("final", 18)])
+    def test_revision_cannot_reset_request_budget(tmp_path, role, limit):
+        workflow, provider = setup_run(tmp_path, fail_roles=[role], overrides={"max_requests": limit})
+        result = workflow.run()
+&gt;       assert result["status"] == "budget_exhausted"
+E       AssertionError: assert 'failed' == 'budget_exhausted'
+E         
+E         - budget_exhausted
+E         + failed
+
+tests\test_s2_review.py:145: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_revision_cannot_reset_request_budget[finance-9]" time="0.130"><failure message="AssertionError: assert 'failed' == 'budget_exhausted'&#10;  &#10;  - budget_exhausted&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_revision_cannot_reset_req2')
+role = 'finance', limit = 9
+
+    @pytest.mark.parametrize("role,limit", [("research", 3), ("strategy", 6), ("finance", 9), ("final", 18)])
+    def test_revision_cannot_reset_request_budget(tmp_path, role, limit):
+        workflow, provider = setup_run(tmp_path, fail_roles=[role], overrides={"max_requests": limit})
+        result = workflow.run()
+&gt;       assert result["status"] == "budget_exhausted"
+E       AssertionError: assert 'failed' == 'budget_exhausted'
+E         
+E         - budget_exhausted
+E         + failed
+
+tests\test_s2_review.py:145: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_revision_cannot_reset_request_budget[final-18]" time="0.146"><failure message="AssertionError: assert 'failed' == 'budget_exhausted'&#10;  &#10;  - budget_exhausted&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_revision_cannot_reset_req3')
+role = 'final', limit = 18
+
+    @pytest.mark.parametrize("role,limit", [("research", 3), ("strategy", 6), ("finance", 9), ("final", 18)])
+    def test_revision_cannot_reset_request_budget(tmp_path, role, limit):
+        workflow, provider = setup_run(tmp_path, fail_roles=[role], overrides={"max_requests": limit})
+        result = workflow.run()
+&gt;       assert result["status"] == "budget_exhausted"
+E       AssertionError: assert 'failed' == 'budget_exhausted'
+E         
+E         - budget_exhausted
+E         + failed
+
+tests\test_s2_review.py:145: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_one_structure_repair_keeps_logical_task_and_first_failure" time="0.133"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_one_structure_repair_keep0')
+
+    def test_one_structure_repair_keeps_logical_task_and_first_failure(tmp_path):
+        def bad_first(req, index):
+            if index == 1: return PhysicalResponse("{broken", None)
+        workflow, provider = setup_run(tmp_path, before=bad_first)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:158: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_second_bad_structure_stops_without_third_attempt" time="0.141"><failure message="AssertionError: assert ('failed' == 'failed'&#10;  &#10;    failed and 0 == 2)&#10; +  where 0 = len([])&#10; +    where [] = &lt;evaluation.s2_fixtures.SyntheticProvider object at 0x000001A4C1C97F50&gt;.calls">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_second_bad_structure_stop0')
+
+    def test_second_bad_structure_stops_without_third_attempt(tmp_path):
+        workflow, provider = setup_run(tmp_path, before=lambda req, index: PhysicalResponse("{}"))
+        result = workflow.run()
+&gt;       assert result["status"] == "failed" and len(provider.calls) == 2
+E       AssertionError: assert ('failed' == 'failed'
+E         
+E           failed and 0 == 2)
+E        +  where 0 = len([])
+E        +    where [] = &lt;evaluation.s2_fixtures.SyntheticProvider object at 0x000001A4C1C97F50&gt;.calls
+
+tests\test_s2_review.py:172: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_transport_retry_is_a_physical_attempt_not_structure_repair" time="0.130"><failure message="AssertionError: assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_transport_retry_is_a_phys0')
+
+    def test_transport_retry_is_a_physical_attempt_not_structure_repair(tmp_path):
+        def fail(req, index):
+            if index == 1: raise ProviderFailure("Synthetic503", retryable=True, request_finished=True)
+        workflow, provider = setup_run(tmp_path, before=fail, overrides={"transport_retries": 1})
+&gt;       assert workflow.run()["status"] == "completed"
+E       AssertionError: assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:180: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_bad_critic_reference_never_reaches_revision[source_ids]" time="0.129"><failure message="assert 0 == 3&#10; +  where 0 = len([])&#10; +    where [] = &lt;evaluation.s2_fixtures.SyntheticProvider object at 0x000001A4C1CA5850&gt;.calls">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_bad_critic_reference_neve0')
+source_field = 'source_ids'
+
+    @pytest.mark.parametrize("source_field", ["source_ids", "affected_claim_ids"])
+    def test_bad_critic_reference_never_reaches_revision(tmp_path, source_field):
+        def fail(req, index):
+            if issubclass(req.schema, ComponentCritiqueReport):
+                data = synthetic_report("research", severity="critical")
+                data["issues"][0][source_field] = ["invented"]
+                return PhysicalResponse(json.dumps(data), {}, 10, 5, 15)
+        workflow, provider = setup_run(tmp_path, before=fail)
+        result = workflow.run()
+        assert result["status"] == "failed"
+        assert not any(c["task_purpose"] == "revision" for c in calls(workflow))
+&gt;       assert len(provider.calls) == (3 if source_field == "source_ids" else 4)
+E       assert 0 == 3
+E        +  where 0 = len([])
+E        +    where [] = &lt;evaluation.s2_fixtures.SyntheticProvider object at 0x000001A4C1CA5850&gt;.calls
+
+tests\test_s2_review.py:201: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_bad_critic_reference_never_reaches_revision[affected_claim_ids]" time="0.143"><failure message="assert 0 == 4&#10; +  where 0 = len([])&#10; +    where [] = &lt;evaluation.s2_fixtures.SyntheticProvider object at 0x000001A4C1F478D0&gt;.calls">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_bad_critic_reference_neve1')
+source_field = 'affected_claim_ids'
+
+    @pytest.mark.parametrize("source_field", ["source_ids", "affected_claim_ids"])
+    def test_bad_critic_reference_never_reaches_revision(tmp_path, source_field):
+        def fail(req, index):
+            if issubclass(req.schema, ComponentCritiqueReport):
+                data = synthetic_report("research", severity="critical")
+                data["issues"][0][source_field] = ["invented"]
+                return PhysicalResponse(json.dumps(data), {}, 10, 5, 15)
+        workflow, provider = setup_run(tmp_path, before=fail)
+        result = workflow.run()
+        assert result["status"] == "failed"
+        assert not any(c["task_purpose"] == "revision" for c in calls(workflow))
+&gt;       assert len(provider.calls) == (3 if source_field == "source_ids" else 4)
+E       assert 0 == 4
+E        +  where 0 = len([])
+E        +    where [] = &lt;evaluation.s2_fixtures.SyntheticProvider object at 0x000001A4C1F478D0&gt;.calls
+
+tests\test_s2_review.py:201: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_zero_calls_if_reservation_or_prompt_cannot_fit[max_total_tokens]" time="0.146" /><testcase classname="tests.test_s2_review" name="test_zero_calls_if_reservation_or_prompt_cannot_fit[max_prompt_chars]" time="0.146" /><testcase classname="tests.test_s2_review" name="test_api_failure_is_durable_and_never_counted_as_zero_usage" time="0.160"><failure message="AssertionError: assert ('failed' == 'failed'&#10;  &#10;    failed and 0 == 1)&#10; +  where 0 = len([])&#10; +    where [] = &lt;evaluation.s2_fixtures.SyntheticProvider object at 0x000001A4C1B784D0&gt;.calls">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_api_failure_is_durable_an0')
+
+    def test_api_failure_is_durable_and_never_counted_as_zero_usage(tmp_path):
+        def fail(req, index): raise ProviderFailure("SyntheticAPIError")
+        workflow, provider = setup_run(tmp_path, before=fail)
+        result = workflow.run()
+&gt;       assert result["status"] == "failed" and len(provider.calls) == 1
+E       AssertionError: assert ('failed' == 'failed'
+E         
+E           failed and 0 == 1)
+E        +  where 0 = len([])
+E        +    where [] = &lt;evaluation.s2_fixtures.SyntheticProvider object at 0x000001A4C1B784D0&gt;.calls
+
+tests\test_s2_review.py:217: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_cancel_before_dispatch_records_stop" time="0.133" /><testcase classname="tests.test_s2_review" name="test_clock_is_shared_across_batches_and_review[A-limits0]" time="0.051"><failure message="AssertionError: assert 'failed' == 'timeout'&#10;  &#10;  - timeout&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_clock_is_shared_across_ba0')
+condition = 'A', limits = {'node_seconds': 0.8, 'run_seconds': 10}
+
+    @pytest.mark.parametrize("condition,limits", [("A", dict(node_seconds=.8, run_seconds=10)),
+        ("C", dict(node_seconds=.8, run_seconds=10)), ("C", dict(node_seconds=10, run_seconds=.8))])
+    def test_clock_is_shared_across_batches_and_review(tmp_path, condition, limits):
+        elapsed = [0.0]
+        def tick(req, index): elapsed[0] += .5
+        workflow, provider = setup_run(tmp_path, condition=condition, before=tick,
+            overrides=limits, clock=lambda: elapsed[0])
+        result = workflow.run()
+&gt;       assert result["status"] == "timeout"
+E       AssertionError: assert 'failed' == 'timeout'
+E         
+E         - timeout
+E         + failed
+
+tests\test_s2_review.py:240: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_clock_is_shared_across_batches_and_review[C-limits1]" time="0.155"><failure message="AssertionError: assert 'failed' == 'timeout'&#10;  &#10;  - timeout&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_clock_is_shared_across_ba1')
+condition = 'C', limits = {'node_seconds': 0.8, 'run_seconds': 10}
+
+    @pytest.mark.parametrize("condition,limits", [("A", dict(node_seconds=.8, run_seconds=10)),
+        ("C", dict(node_seconds=.8, run_seconds=10)), ("C", dict(node_seconds=10, run_seconds=.8))])
+    def test_clock_is_shared_across_batches_and_review(tmp_path, condition, limits):
+        elapsed = [0.0]
+        def tick(req, index): elapsed[0] += .5
+        workflow, provider = setup_run(tmp_path, condition=condition, before=tick,
+            overrides=limits, clock=lambda: elapsed[0])
+        result = workflow.run()
+&gt;       assert result["status"] == "timeout"
+E       AssertionError: assert 'failed' == 'timeout'
+E         
+E         - timeout
+E         + failed
+
+tests\test_s2_review.py:240: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_clock_is_shared_across_batches_and_review[C-limits2]" time="0.144"><failure message="AssertionError: assert 'failed' == 'timeout'&#10;  &#10;  - timeout&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_clock_is_shared_across_ba2')
+condition = 'C', limits = {'node_seconds': 10, 'run_seconds': 0.8}
+
+    @pytest.mark.parametrize("condition,limits", [("A", dict(node_seconds=.8, run_seconds=10)),
+        ("C", dict(node_seconds=.8, run_seconds=10)), ("C", dict(node_seconds=10, run_seconds=.8))])
+    def test_clock_is_shared_across_batches_and_review(tmp_path, condition, limits):
+        elapsed = [0.0]
+        def tick(req, index): elapsed[0] += .5
+        workflow, provider = setup_run(tmp_path, condition=condition, before=tick,
+            overrides=limits, clock=lambda: elapsed[0])
+        result = workflow.run()
+&gt;       assert result["status"] == "timeout"
+E       AssertionError: assert 'failed' == 'timeout'
+E         
+E         - timeout
+E         + failed
+
+tests\test_s2_review.py:240: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_local_abandoned_request_blocks_new_instances_and_runs" time="0.152"><failure message="AssertionError: assert ('failed' == 'timeout'&#10;  &#10;  - timeout&#10;  + failed)">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_local_abandoned_request_b0')
+
+    def test_local_abandoned_request_blocks_new_instances_and_runs(tmp_path):
+        done = Event()
+        def slow(req, index):
+            done.wait(2)
+        lease_dir = tmp_path / "leases"
+        lease = LocalRequestLease(lease_dir, "synthetic-local-endpoint")
+        workflow, provider = setup_run(tmp_path / "first", condition="D", provider_kind="local", before=slow,
+            overrides={"request_seconds": .05}, local_lease=lease)
+        try:
+            result = workflow.run()
+&gt;           assert result["status"] == "timeout" and lease.path.exists()
+E           AssertionError: assert ('failed' == 'timeout'
+E             
+E             - timeout
+E             + failed)
+
+tests\test_s2_review.py:255: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_replay_deduplicates_and_keeps_unknown_dispatch" time="0.138"><failure message="IndexError: list index out of range">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_replay_deduplicates_and_k0')
+
+    def test_replay_deduplicates_and_keeps_unknown_dispatch(tmp_path):
+        workflow, _ = setup_run(tmp_path / "sample")
+        workflow.run()
+&gt;       data = calls(workflow)[0]
+               ^^^^^^^^^^^^^^^^^^
+E       IndexError: list index out of range
+
+tests\test_s2_review.py:268: IndexError</failure></testcase><testcase classname="tests.test_s2_review" name="test_no_reinvoke_or_existing_output_overwrite" time="0.142" /><testcase classname="tests.test_s2_review" name="test_provider_schema_prepares_without_network" time="0.003" /><testcase classname="tests.test_s2_review" name="test_mixed_score_is_not_rounded_before_gate" time="0.001" /><testcase classname="tests.test_s2_review" name="test_low_score_without_high_issue_is_diagnostic_only" time="0.131"><failure message="AssertionError: assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_low_score_without_high_is0')
+
+    def test_low_score_without_high_issue_is_diagnostic_only(tmp_path):
+        workflow, provider = setup_run(tmp_path, condition="C", fail_roles=["research"],
+            severity=None, score=0)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed"
+E       AssertionError: assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:308: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_dispatch_start_is_durable_before_provider_and_usage_can_exceed_cap" time="0.145"><failure message="AssertionError: assert ('failed' == 'budget_exhausted'&#10;  &#10;  - budget_exhausted&#10;  + failed)">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_dispatch_start_is_durable0')
+
+    def test_dispatch_start_is_durable_before_provider_and_usage_can_exceed_cap(tmp_path):
+        holder = {}
+        def observe(req, index):
+            live = replay_events(holder["workflow"].journal.path)["attempts"]
+            assert len(live) == index and live[-1]["status"] == "interrupted_unknown"
+            data = synthetic_report("research")
+            return PhysicalResponse(json.dumps(data), dict(total=30_000_000), 10, 5, 30_000_000)
+        workflow, provider = setup_run(tmp_path, before=observe)
+        holder["workflow"] = workflow
+        result = workflow.run()
+        # Schema is also wrong, but the token cap still blocks any repair request.
+&gt;       assert result["status"] == "budget_exhausted" and len(provider.calls) == 1
+E       AssertionError: assert ('failed' == 'budget_exhausted'
+E         
+E         - budget_exhausted
+E         + failed)
+
+tests\test_s2_review.py:325: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_cancellation_during_physical_wait_is_counted_once" time="0.154"><failure message="AssertionError: assert ('failed' == 'cancelled'&#10;  &#10;  - cancelled&#10;  + failed)">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_cancellation_during_physi0')
+
+    def test_cancellation_during_physical_wait_is_counted_once(tmp_path):
+        cancel = Event()
+        def stop(req, index):
+            cancel.set()
+        workflow, provider = setup_run(tmp_path, before=stop, cancel=cancel)
+        result = workflow.run()
+&gt;       assert result["status"] == "cancelled" and len(provider.calls) == 1
+E       AssertionError: assert ('failed' == 'cancelled'
+E         
+E         - cancelled
+E         + failed)
+
+tests\test_s2_review.py:336: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_revision_structure_repair_keeps_revision_attribution" time="0.154"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_revision_structure_repair0')
+
+    def test_revision_structure_repair_keeps_revision_attribution(tmp_path):
+        seen = []
+        def corrupt(req, index):
+            data = request_payload(req.prompt)
+            if data.get("previous_artifact") and not seen:
+                seen.append(True)
+                return PhysicalResponse("{bad", None)
+        workflow, _ = setup_run(tmp_path, fail_roles=["research"], before=corrupt)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:349: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_sqlite_existing_json_columns_persist_events_and_versions" time="2.687"><failure message="AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}&#10;assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_sqlite_existing_json_colu0')
+
+    def test_sqlite_existing_json_columns_persist_events_and_versions(tmp_path):
+        from contextlib import contextmanager
+        from sqlalchemy import create_engine
+        from sqlalchemy.orm import sessionmaker
+        from storage.db import Base
+        from storage.repositories import get_run
+        engine = create_engine(f"sqlite:///{(tmp_path / 's2.db').as_posix()}")
+        Base.metadata.create_all(engine)
+        factory = sessionmaker(bind=engine)
+        @contextmanager
+        def sessions():
+            with factory() as session:
+                yield session
+        workflow, _ = setup_run(tmp_path, condition="B", fail_roles=["final"], session_factory=sessions)
+        result = workflow.run()
+&gt;       assert result["status"] == "completed", result["error"]
+E       AssertionError: {'node': 'research.generate', 'error_type': 'ValidationError', 'status': 'failed'}
+E       assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s2_review.py:374: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_gemini_adapter_makes_one_sdk_call_with_remaining_timeout_and_raw_usage" time="0.006" /><testcase classname="tests.test_s2_review" name="test_formal_execution_cannot_bypass_future_freeze_gates" time="0.009" /><testcase classname="tests.test_s2_review" name="test_transport_retry_blocked_by_budget_is_not_an_actual_retry" time="0.137"><failure message="assert 0 == 1&#10; +  where 0 = len([])&#10; +    where [] = &lt;evaluation.s2_fixtures.SyntheticProvider object at 0x000001A4C2DBA3D0&gt;.calls">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_transport_retry_blocked_b0')
+
+    def test_transport_retry_blocked_by_budget_is_not_an_actual_retry(tmp_path):
+        def fail(req, index): raise ProviderFailure("Synthetic503", retryable=True, request_finished=True)
+        workflow, provider = setup_run(tmp_path, before=fail, overrides={"max_requests": 1, "transport_retries": 1})
+        result = workflow.run()
+        assert result["status"] == "budget_exhausted"
+&gt;       assert len(provider.calls) == result["budget"]["request_count"] == 1
+E       assert 0 == 1
+E        +  where 0 = len([])
+E        +    where [] = &lt;evaluation.s2_fixtures.SyntheticProvider object at 0x000001A4C2DBA3D0&gt;.calls
+
+tests\test_s2_review.py:427: AssertionError</failure></testcase><testcase classname="tests.test_s2_review" name="test_physical_worker_keeps_frozen_evidence_context" time="0.132"><failure message="AssertionError: assert ('failed' == 'failed'&#10;  &#10;    failed and 0 == 1)&#10; +  where 0 = len([])&#10; +    where [] = &lt;evaluation.s2_fixtures.SyntheticProvider object at 0x000001A4C2DB8A50&gt;.calls">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_physical_worker_keeps_fro0')
+
+    def test_physical_worker_keeps_frozen_evidence_context(tmp_path):
+        from tools.web_search import search_web
+        def unexpected_search(req, index): search_web("must be blocked before provider search")
+        workflow, provider = setup_run(tmp_path, before=unexpected_search)
+        result = workflow.run()
+&gt;       assert result["status"] == "failed" and len(provider.calls) == 1
+E       AssertionError: assert ('failed' == 'failed'
+E         
+E           failed and 0 == 1)
+E        +  where 0 = len([])
+E        +    where [] = &lt;evaluation.s2_fixtures.SyntheticProvider object at 0x000001A4C2DB8A50&gt;.calls
+
+tests\test_s2_review.py:436: AssertionError</failure></testcase><testcase classname="tests.test_s6_compact_protocol" name="test_case_specific_finance_rows_are_frozen[ai_education-21]" time="0.006" /><testcase classname="tests.test_s6_compact_protocol" name="test_case_specific_finance_rows_are_frozen[intelligent_ring-27]" time="0.006" /><testcase classname="tests.test_s6_compact_protocol" name="test_instruction_and_wire_schema_snapshots" time="0.015" /><testcase classname="tests.test_s6_compact_protocol" name="test_dto_canonical_roundtrip_and_fixed_sections[ai_education]" time="0.013" /><testcase classname="tests.test_s6_compact_protocol" name="test_dto_canonical_roundtrip_and_fixed_sections[intelligent_ring]" time="0.024" /><testcase classname="tests.test_s6_compact_protocol" name="test_short_evidence_and_finance_ids_are_closed" time="0.009" /><testcase classname="tests.test_s6_compact_protocol" name="test_mechanical_repair_is_bounded_and_auditable" time="0.001" /><testcase classname="tests.test_s6_compact_protocol" name="test_patch_cannot_exceed_critic_targets_or_repeat_revision" time="0.008" /><testcase classname="tests.test_s6_compact_protocol" name="test_compact_pass_paths_and_c_d_hash_equivalence" time="0.180"><failure message="AssertionError: assert ('failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed)">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_compact_pass_paths_and_c_0')
+
+    def test_compact_pass_paths_and_c_d_hash_equivalence(tmp_path):
+        runs = {}
+        for condition in ("C", "D"):
+            _, provider, workflow, result = compact_run(tmp_path, condition=condition)
+&gt;           assert result["status"] == "completed" and len(provider.calls) == 8
+E           AssertionError: assert ('failed' == 'completed'
+E             
+E             - completed
+E             + failed)
+
+tests\test_s6_compact_protocol.py:127: AssertionError</failure></testcase><testcase classname="tests.test_s6_compact_protocol" name="test_each_high_issue_revises_once_without_second_critic" time="0.175"><failure message="AssertionError: assert ('failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed)">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_each_high_issue_revises_o0')
+
+    def test_each_high_issue_revises_once_without_second_critic(tmp_path):
+        _, provider, workflow, result = compact_run(tmp_path, fail_roles=METRICS)
+&gt;       assert result["status"] == "completed" and len(provider.calls) == 12
+E       AssertionError: assert ('failed' == 'completed'
+E         
+E         - completed
+E         + failed)
+
+tests\test_s6_compact_protocol.py:142: AssertionError</failure></testcase><testcase classname="tests.test_s6_compact_protocol" name="test_low_and_medium_issues_are_retained_without_revision[low]" time="0.275"><failure message="AssertionError: assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_low_and_medium_issues_are0')
+severity = 'low'
+
+    @pytest.mark.parametrize("severity", ["low", "medium"])
+    def test_low_and_medium_issues_are_retained_without_revision(tmp_path, severity):
+        _, _, _, result = compact_run(tmp_path, fail_roles=["research"], severity=severity)
+&gt;       assert result["status"] == "completed"
+E       AssertionError: assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s6_compact_protocol.py:156: AssertionError</failure></testcase><testcase classname="tests.test_s6_compact_protocol" name="test_low_and_medium_issues_are_retained_without_revision[medium]" time="0.177"><failure message="AssertionError: assert 'failed' == 'completed'&#10;  &#10;  - completed&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_low_and_medium_issues_are1')
+severity = 'medium'
+
+    @pytest.mark.parametrize("severity", ["low", "medium"])
+    def test_low_and_medium_issues_are_retained_without_revision(tmp_path, severity):
+        _, _, _, result = compact_run(tmp_path, fail_roles=["research"], severity=severity)
+&gt;       assert result["status"] == "completed"
+E       AssertionError: assert 'failed' == 'completed'
+E         
+E         - completed
+E         + failed
+
+tests\test_s6_compact_protocol.py:156: AssertionError</failure></testcase><testcase classname="tests.test_s6_compact_protocol" name="test_compact_config_does_not_silently_migrate_legacy" time="0.001" /><testcase classname="tests.test_s4_evaluation" name="test_dry_run_exact_slots_no_calls_and_guard" time="0.085" /><testcase classname="tests.test_s4_evaluation" name="test_rehearsal_pass_revision_routes_and_no_rerun" time="1.149"><failure message="assert 0 == 8&#10; +  where 0 = sum(&lt;generator object test_rehearsal_pass_revision_routes_and_no_rerun.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001A4C2381080&gt;)">rehearsal = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/s40/rehearsal')
+
+    def test_rehearsal_pass_revision_routes_and_no_rerun(rehearsal):
+        before=(rehearsal/"schedule.jsonl").read_bytes()
+        output=execute(rehearsal,synthetic=True)
+        assert output["formal_runs_started"]==0
+&gt;       assert sum(r["execution"]=="succeeded" for r in output["rows"])==8
+E       assert 0 == 8
+E        +  where 0 = sum(&lt;generator object test_rehearsal_pass_revision_routes_and_no_rerun.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001A4C2381080&gt;)
+
+tests\test_s4_evaluation.py:49: AssertionError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_interrupted_dispatch_never_retried" time="0.047" /><testcase classname="tests.test_s4_evaluation" name="test_reconcile_durable_result_without_replaying" time="0.098"><failure message="AssertionError: assert 'failed' == 'succeeded'&#10;  &#10;  - succeeded&#10;  + failed">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_reconcile_durable_result_0')
+
+    def test_reconcile_durable_result_without_replaying(tmp_path):
+        from evaluation.s4_runner import synthetic_executor
+        path=tmp_path/"crash_after_result"
+        create_experiment(path,synthetic=True)
+        def crash(*args):
+            synthetic_executor(*args)
+            raise RuntimeError("crash before manifest projection")
+        with pytest.raises(RuntimeError):execute(path,synthetic=True,executor=crash)
+&gt;       assert reconcile(path)["rows"][0]["execution"]=="succeeded"
+E       AssertionError: assert 'failed' == 'succeeded'
+E         
+E         - succeeded
+E         + failed
+
+tests\test_s4_evaluation.py:92: AssertionError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_torn_schedule_archived_and_active_lock_not_removed" time="0.032" /><testcase classname="tests.test_s4_evaluation" name="test_usage_thinking_is_not_double_counted" time="0.001" /><testcase classname="tests.test_s4_evaluation" name="test_failure_preserves_denominators_and_no_success_time" time="0.146"><failure message="assert 0 == 1">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_failure_preserves_denomin0')
+
+    def test_failure_preserves_denominators_and_no_success_time(tmp_path):
+        workflow,provider=setup_run(tmp_path,overrides={"max_requests":1})
+        result=workflow.run()
+        m=reduce_run(workflow.journal.directory,condition="C")
+        assert result["status"]=="budget_exhausted"
+&gt;       assert m["request_count"]==1
+E       assert 0 == 1
+
+tests\test_s4_evaluation.py:129: AssertionError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_missing_log_does_not_infer_first_pass" time="0.056"><failure message="AssertionError: assert ('not_applicable' == 'missing'&#10;  &#10;  - missing&#10;  + not_applicable)">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_missing_log_does_not_infe0')
+
+    def test_missing_log_does_not_infer_first_pass(tmp_path):
+        workflow,_=setup_run(tmp_path,condition="A")
+        workflow.run()
+        path=workflow.journal.path
+        records=[json.loads(line) for line in path.read_text().splitlines()]
+        records=[e for e in records if e["kind"]!="logical_task"]
+        path.write_text("\n".join(json.dumps(e) for e in records)+"\n")
+        m=reduce_run(path.parent,condition="A")
+&gt;       assert m["first_contract"]["state"]=="missing" and m["first_contract"]["value"] is None
+E       AssertionError: assert ('not_applicable' == 'missing'
+E         
+E         - missing
+E         + not_applicable)
+
+tests\test_s4_evaluation.py:146: AssertionError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_duplicate_attempts_idempotent_and_conflicts_rejected" time="0.055"><failure message="assert 0 == 8">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_duplicate_attempts_idempo0')
+
+    def test_duplicate_attempts_idempotent_and_conflicts_rejected(tmp_path):
+        workflow,_=setup_run(tmp_path,condition="A")
+        workflow.run()
+        path=workflow.journal.path
+        original=reduce_run(path.parent,condition="A")
+        text=path.read_text()
+        path.write_text(text+text)
+&gt;       assert reduce_run(path.parent,condition="A")["request_count"]==8
+E       assert 0 == 8
+
+tests\test_s4_evaluation.py:156: AssertionError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_blind_pack_no_identity_and_human_defaults" time="0.043"><failure message="assert (0 == 8)">rehearsal = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/s40/rehearsal')
+tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_blind_pack_no_identity_an0')
+
+    def test_blind_pack_no_identity_and_human_defaults(rehearsal,tmp_path):
+        path=tmp_path/"blind"
+        audit=build_blind_pack(rehearsal,path)
+&gt;       assert audit["canonical_outputs"]==8 and audit["hidden_repeats"]==2 and audit["rating_copies"]==10
+E       assert (0 == 8)
+
+tests\test_s4_evaluation.py:169: AssertionError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_gold_three_denominators_partial_and_correct_assumptions" time="0.001" /><testcase classname="tests.test_s4_evaluation" name="test_statistics_weights_pairs_and_equal_case_ratios" time="0.001" /><testcase classname="tests.test_s4_evaluation" name="test_export_trace_and_no_pseudo_quality" time="2.341" /><testcase classname="tests.test_s4_evaluation" name="test_cli_offline" time="0.101" /><testcase classname="tests.test_s4_evaluation" name="test_ui_sqlite_new_events_not_collapsed_and_legacy_unchanged" time="0.041" /><testcase classname="tests.test_s4_evaluation" name="test_streamlit_readonly_path" time="11.157"><failure message="RuntimeError: AppTest script run timed out after 3(s)">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_streamlit_readonly_path0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001A4C45F6C40&gt;
+
+    def test_streamlit_readonly_path(tmp_path,monkeypatch):
+        from streamlit.testing.v1 import AppTest
+        path=tmp_path/"ui"
+        create_experiment(path)
+&gt;       app=AppTest.from_string("from evaluation.s4_ui import render_experiment_panel\nimport streamlit as st\nrender_experiment_panel(st)").run()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_s4_evaluation.py:266: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\testing\v1\app_test.py:428: in run
+    return self._tree.run(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\testing\v1\element_tree.py:2426: in run
+    return self._runner._run(widget_states, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\testing\v1\app_test.py:372: in _run
+    self._tree = script_runner.run(
+..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\testing\v1\local_script_runner.py:147: in run
+    require_widgets_deltas(self, timeout)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+runner = LocalScriptRunner(forward_msg_queue=&lt;streamlit.runtime.forward_msg_queue.ForwardMsgQueue object at 0x000001A4C52B4590&gt;...opilot"
+  installed_agents: "cursor"
+}
+}, {}, {'client_state': page_script_hash: "2b8d0252ba81820369912e9222067607"
+}])
+timeout = 3
+
+    def require_widgets_deltas(runner: LocalScriptRunner, timeout: float = 3) -&gt; None:
+        """Wait for the given ScriptRunner to emit a completion event. If the timeout
+        is reached, the runner will be shutdown and an error will be thrown.
+        """
+    
+        t0 = time.time()
+        while time.time() - t0 &lt; timeout:
+            time.sleep(0.001)
+            if runner.script_stopped():
+                return
+    
+        # If we get here, the runner hasn't yet completed before our
+        # timeout. Create an error string for debugging.
+        err_string = f"AppTest script run timed out after {timeout}(s)"
+    
+        # Shutdown the runner before throwing an error, so that the script
+        # doesn't hang forever.
+        runner.request_stop()
+        runner.join()
+    
+&gt;       raise RuntimeError(err_string)
+E       RuntimeError: AppTest script run timed out after 3(s)
+
+..\..\AppData\Local\Programs\Python\Python313\Lib\site-packages\streamlit\testing\v1\local_script_runner.py:195: RuntimeError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_failed_final_review_keeps_scorable_artifact" time="0.138"><failure message="AssertionError: assert ('failed' == 'failed'&#10;  &#10;    failed and None)">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_failed_final_review_keeps0')
+
+    def test_failed_final_review_keeps_scorable_artifact(tmp_path):
+        from workflow.review_runtime import ProviderFailure
+        from schemas.review import ComponentCritiqueReport
+        def fail_review(request,count):
+            if issubclass(request.schema, ComponentCritiqueReport):
+                raise ProviderFailure("synthetic_api_failure",request_finished=True)
+        workflow,_=setup_run(tmp_path,condition="B",before=fail_review)
+        result=workflow.run()
+&gt;       assert result["status"]=="failed" and result["scorable_artifact_ref"]
+E       AssertionError: assert ('failed' == 'failed'
+E         
+E           failed and None)
+
+tests\test_s4_evaluation.py:281: AssertionError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_terminal_export_failure_is_distinct_from_scorability" time="0.060"><failure message="assert None is not None">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_terminal_export_failure_i0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001A4D5BF2690&gt;
+
+    def test_terminal_export_failure_is_distinct_from_scorability(tmp_path,monkeypatch):
+        workflow,_=setup_run(tmp_path,condition="A")
+        def fail_export(*a):raise OSError("synthetic disk full")
+        monkeypatch.setattr(workflow.context,"export",fail_export)
+        result=workflow.run()
+&gt;       assert result["scorable_artifact_ref"] is not None
+E       assert None is not None
+
+tests\test_s4_evaluation.py:296: AssertionError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_live_lock_and_changed_matrix_block_dispatch" time="0.036" /><testcase classname="tests.test_s4_evaluation" name="test_full_rating_import_release_gold_and_no_duplicate_sample" time="0.068"><failure message="AssertionError: assert 0 == 8&#10; +  where 0 = len([])&#10; +    where [] = read_csv((WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_full_rating_import_releas0/rated') / 'reviewer/coverage.csv'))">rehearsal = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/s40/rehearsal')
+tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_full_rating_import_releas0')
+
+    def test_full_rating_import_release_gold_and_no_duplicate_sample(rehearsal,tmp_path):
+        path=tmp_path/"rated"
+        build_blind_pack(rehearsal,path)
+        ratings=read_csv(path/"reviewer/ratings.csv")
+        for row in ratings:
+            row.update(reviewer="synthetic fixture reviewer",reviewed_at="fixture")
+            for i in range(1,7):
+                row[f"AQ{i}"]="3"
+                row[f"AQ{i}_rationale"]="Synthetic unit test only"
+        write_csv(path/"reviewer/ratings.csv",ratings)
+        release_gold(path)
+&gt;       assert len(read_csv(path/"reviewer/coverage.csv"))==8
+E       AssertionError: assert 0 == 8
+E        +  where 0 = len([])
+E        +    where [] = read_csv((WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_full_rating_import_releas0/rated') / 'reviewer/coverage.csv'))
+
+tests\test_s4_evaluation.py:326: AssertionError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_blind_identity_removal_and_unknown_claim_detection" time="0.002" /><testcase classname="tests.test_s4_evaluation" name="test_partial_telemetry_and_revision_resource_attribution" time="0.144"><failure message="assert 0 == 8">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_partial_telemetry_and_rev0')
+
+    def test_partial_telemetry_and_revision_resource_attribution(tmp_path):
+        workflow,_=setup_run(tmp_path,condition="B",fail_roles=("final",))
+        workflow.run()
+        for s in (dict(ram_total_bytes=100,ram_available_bytes=30,gpu_used_bytes=5,pagefile_used_bytes=10),
+                  dict(ram_total_bytes=100,ram_available_bytes=20,gpu_used_bytes=None,pagefile_used_bytes=None)):
+            workflow.journal.emit("telemetry",s)
+        m=reduce_run(workflow.journal.directory,condition="B")
+        assert m["peak_ram_bytes"]==80 and m["peak_ram_bytes_state"]=="observed"
+        assert m["peak_vram_bytes"]==5 and m["peak_vram_bytes_state"]=="partial"
+        revision=next(r for r in m["roles"] if r["role"]=="Revision")
+&gt;       assert revision["request_count"]==8
+E       assert 0 == 8
+
+tests\test_s4_evaluation.py:353: AssertionError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_resume_keeps_canonical_failure_immutable" time="0.332" /><testcase classname="tests.test_s4_evaluation" name="test_actual_streamlit_legacy_and_s4_navigation" time="0.142" /><testcase classname="tests.test_s4_evaluation" name="test_late_resource_failure_cannot_become_completed" time="0.130" /><testcase classname="tests.test_s4_evaluation" name="test_per_attempt_diagnostic_keeps_legacy_phase_event_separate" time="0.169"><failure message="assert 0 == 1&#10; +  where 0 = len([])">tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_per_attempt_diagnostic_ke0')
+
+    def test_per_attempt_diagnostic_keeps_legacy_phase_event_separate(tmp_path):
+        from workflow.review_runtime import ProviderFailure
+        def fail(request,count):
+            provider.last_diagnostic={"http_status":200,"response":{"done":False,"message":{"content":"{\\n"}}}
+            raise ProviderFailure("FixturePartialResponse",request_finished=True)
+        workflow,provider=setup_run(tmp_path,before=fail)
+        workflow.run()
+        m=reduce_run(workflow.journal.directory,condition="C")
+        diagnostics=[e["payload"] for e in m["events"] if e["kind"]=="physical_provider_diagnostic"]
+&gt;       assert len(diagnostics)==1
+E       assert 0 == 1
+E        +  where 0 = len([])
+
+tests\test_s4_evaluation.py:413: AssertionError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_streamlit_reviewed_nodes_issues_and_offline_figure" time="0.103"><failure message="AssertionError: assert ElementList()&#10; +  where ElementList() = AppTest(\n    _script_path='C:\\Users\\JASMIN~1\\AppData\\Local\\Temp\\tmp6x6zwkye\\b4cc0023acb20368c1f342a07300a97b',\n...SpecialBlock(\n            type='sidebar'\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).warning">rehearsal = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/s40/rehearsal')
+tmp_path = WindowsPath('C:/Users/JasmineJiang/AppData/Local/Temp/pytest-of-JasmineJiang/pytest-136/test_streamlit_reviewed_nodes_0')
+
+    def test_streamlit_reviewed_nodes_issues_and_offline_figure(rehearsal,tmp_path):
+        from streamlit.testing.v1 import AppTest
+        charts=tmp_path/"charts"
+        charts.mkdir()
+        write_json(charts/"tokens.vl.json",{"$schema":"https://vega.github.io/schema/vega-lite/v6.json",
+            "data":{"values":[{"condition":"C","value":15}]},"mark":"point","encoding":{"x":{"field":"condition","type":"nominal"},"y":{"field":"value","type":"quantitative"}}})
+        app=AppTest.from_string("from evaluation.s4_ui import render_experiment_panel\nimport streamlit as st\nrender_experiment_panel(st)").run()
+        app.text_input(key="s4_directory").set_value(str(rehearsal)).run()
+        app.selectbox(key="s4_slot").set_value("intelligent_ring-C").run()
+        app.text_input(key="s4_figures").set_value(str(charts)).run()
+        assert not app.exception
+&gt;       assert app.warning
+E       AssertionError: assert ElementList()
+E        +  where ElementList() = AppTest(\n    _script_path='C:\\Users\\JASMIN~1\\AppData\\Local\\Temp\\tmp6x6zwkye\\b4cc0023acb20368c1f342a07300a97b',\n...SpecialBlock(\n            type='sidebar'\n        ),\n        2: SpecialBlock(\n            type='event'\n        )\n    }\n).warning
+
+tests\test_s4_evaluation.py:429: AssertionError</failure></testcase><testcase classname="tests.test_s4_evaluation" name="test_not_run_zero_consumption_and_partial_peaks_are_not_complete_pairs" time="0.029" /></testsuite></testsuites>

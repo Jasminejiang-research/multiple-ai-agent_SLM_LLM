@@ -1,0 +1,3 @@
+{
+  "text": "Value: Personalized, timely business-case reasoning feedback for MBA students.\nBusiness Model: AI-driven tutoring service for MBA students and potential institutional buyers (business schools).\nGTM: Target US adults 18+ enrolled/applying to MBA programs; sell directly to students and pitch to business-school instructors.\nMoat: Proprietary licensed/openly reusable cases and English-language AI coaching differentiate from competitors like Khanmigo.\n}"
+}

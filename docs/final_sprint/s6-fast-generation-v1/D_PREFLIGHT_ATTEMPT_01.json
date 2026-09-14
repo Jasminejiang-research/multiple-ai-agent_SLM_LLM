@@ -1,0 +1,25 @@
+{
+  "version": "s6-d-preflight-attempt-v1",
+  "attempt": 1,
+  "status": "no_go",
+  "classification": "pre_dispatch_compact_preflight_adapter_failure",
+  "error_type": "KeyError",
+  "error": "'warmup'",
+  "model_calls": 0,
+  "requests": 0,
+  "charged_total_tokens": 0,
+  "formal_runs_started": 0,
+  "phases": {
+    "warmup": "failed",
+    "context": "not_run",
+    "components": "not_run",
+    "smoke": "not_run"
+  },
+  "resource_status": "passed",
+  "server_stop": "owned_process_tree_terminated",
+  "active_lease_after": false,
+  "endpoint_listener_after": false,
+  "result_path": "docs/final_sprint/s6-fast-generation-v1/real_preflight_d_ai_education_01/probe/result.json",
+  "preservation": "Attempt 1 remains immutable and is not overwritten by a retry.",
+  "retry_basis": "No provider dispatch, request, or token charge occurred. The bounded retry follows a tested compatibility fix and retains the same authorized model, case, protocol, and hard limits."
+}

@@ -1,0 +1,37 @@
+{
+  "package": "s6-fast-generation-v1",
+  "date": "2026-09-07",
+  "authorities": [
+    {"path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/sprint_plan_.md", "sha256": "22963a09eae624c2c72e0a0d1e807cdf066255ee3e9f5abd5a21e19b820643c1", "bytes": 32761},
+    {"path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/@ai_agent_evaluation_metrics_spec_v2_fast_generation.md", "sha256": "23407504f7bb9924529ec16f83df3d556d32dba1901d1354868306d1b087182a", "bytes": 24522},
+    {"path": "C:/Users/JasmineJiang/Desktop/s4/hu-3.Intelligent System/@final presentation/@multiple_ai_agent_optimization.md", "sha256": "7e532ecd69e7ccb90a36e66dc2a84d6479b17ccb4e433eee745757a712a344bd", "bytes": 72002}
+  ],
+  "implementation": [
+    {"path": "schemas/compact_wire.py", "sha256": "c890b896e8606f47e6f7e48f43976954be0e7c9cb2cda25c9443ff2a91bb7301", "bytes": 7949},
+    {"path": "workflow/compact_protocol.py", "sha256": "d63bed0890b58f2b374fa398e32ec3e63034305fcb0d8a0b752e3214a6539552", "bytes": 36848},
+    {"path": "schemas/review.py", "sha256": "3b7646d0e51dbfdfea963de889ca43ab846ab51fc17a440438944278c4f45dba", "bytes": 4365},
+    {"path": "schemas/review_events.py", "sha256": "ebb48ed7517fd15d695a529c550a35bc870969168df9ac505ed6e79d5466090a", "bytes": 2895},
+    {"path": "workflow/review_config.py", "sha256": "592771147d6ad7f65331e66b420e12f048ba1be44cb5e14843f5bc185996b57f", "bytes": 2945},
+    {"path": "workflow/review_runtime.py", "sha256": "7947f0aebb9e27091fdfcf7ae26c181c8fd4a42fe799bf5391a217b079791801", "bytes": 22112},
+    {"path": "workflow/contract_generation.py", "sha256": "662489ec1a15fdb4d05e59ca3a936e5e51becaa2d757e6f985cfe1ec6b3b1364", "bytes": 30381},
+    {"path": "agents/component_critic.py", "sha256": "f2ee1b1e5e7b3eac74ae542dad653ea5822ac09b7d0335a6d55a94023a5b2426", "bytes": 3680},
+    {"path": "workflow/review_graph.py", "sha256": "d786ea870ea43828e7fb0b78bb93f52dfcf0e3079ba9f198c1d131f5ebaa1e07", "bytes": 22674},
+    {"path": "evaluation/s2_fixtures.py", "sha256": "b78c767abde0f45e83c7d9a1d10e7696b06b01cd6951c7d46e2deb9878684b94", "bytes": 9623},
+    {"path": "slm/granite_config.py", "sha256": "9a823d86bf59b3c3aa5e32b5c275ae1079001a0083c4b00adb3cf5afc5cba900", "bytes": 3164},
+    {"path": "slm/configs/granite_preflight_compact_s6.json", "sha256": "a42df429b55b1ff989b44b6e2abd242000782493c86f2287e729c48f72724d4f", "bytes": 633},
+    {"path": "evaluation/s4_runner.py", "sha256": "df3c1100b824d137d09ad586247b4daedde19660a7d520caee688c8e6248a14b", "bytes": 27690},
+    {"path": "evaluation/s4_metrics.py", "sha256": "25993e4de7ac841d909092cbe4bb0142a181f1a0eae49aee07ba619d9b255719", "bytes": 13587},
+    {"path": "evaluation/s4_export.py", "sha256": "64dff7e8db3083bcfec6299d174a485c7b46497b3683798d5d1b81174859af35", "bytes": 14144},
+    {"path": "evaluation/s4_ui.py", "sha256": "163af0ea338cdbfd0ba4bfd62a3fc58909c9d4eb54b711bbc23bf8bb809744b9", "bytes": 4974},
+    {"path": "tests/test_s2_review.py", "sha256": "86e378837a6ee56badb720c2e1562d156dbe971c095249694d7bbfbdbf61b168", "bytes": 22652},
+    {"path": "tests/test_s4_evaluation.py", "sha256": "0a7aaf57e22072fd03b6d07de8b7ef2135370712c912509f377414306d7f4ef5", "bytes": 22651},
+    {"path": "tests/test_s6_compact_protocol.py", "sha256": "3ba622c704ab5f44b4e04d8a346e587759cac262715b51531cc1204e79a70d24", "bytes": 9355}
+  ],
+  "validation_logs": [
+    {"path": "validation/s6_acceptance_final.junit.xml", "sha256": "5f099690b19158d2545da1ff597418251b38ff96cb63d23ac1ac4dfd9072b1e5", "bytes": 1961},
+    {"path": "validation/full_final.junit.xml", "sha256": "137269716f74b74abe4571ad32db4b347b4c6022fcbfd32a47a5a71bc71515c6", "bytes": 85282},
+    {"path": "mock_rehearsal_final/export/provenance.json", "sha256": "e5812c9b68ee22b9fbf9c460f125074a8cf612f56fccdeef0f9a1dc8b0040455", "bytes": 3438},
+    {"path": "mock_rehearsal_final/export/attempts.csv", "sha256": "4711abf70d98f042af0f25eec5e02b32be24111cf16ca6f72160b7e95ca1dcf2", "bytes": 306508},
+    {"path": "mock_rehearsal_final/export/run_metrics.csv", "sha256": "88d558c134625841b72c51d720388a587b08ac3ab56c38435dcb35657c93f1cb", "bytes": 8294}
+  ]
+}

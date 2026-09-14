@@ -1,0 +1,92 @@
+# Python virtual environments (must be first)
+.venv
+.venv/
+**/.venv/
+venv/
+venv
+**/venv/
+env/
+ENV/
+pyvenv.cfg
+
+# Python bytecode & cache
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+**/*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Project outputs
+outputs/
+data/*.db
+
+# Testing & linting caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+.hypothesis/
+
+# IDE & editor
+.idea/
+.vscode/
+.claude/
+.claude/settings.local.json
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temporary files
+*.log
+*.tmp
+*.temp
+.cache/
+tmp/
+temp/
+
+# Run-artifact snapshots & model files (safety net)
+# docs/final_sprint/*/runtime/ and runtime_source.zip are verbatim copies of the
+# source tree; tokenizer.json is a model artifact (~7 MB). Delete them rather
+# than relying on these rules alone.
+docs/final_sprint/*/runtime/
+**/runtime_source.zip
+**/tokenizer.json
+*.zip
+*.bin
+*.gguf
+*.safetensors
+
+# --- Optional: A/B experiment call-level logs ---
+# The per-request LLM logs under experiments/ are several MB of process data.
+# Conclusion files (results.json, METRICS.json, RUN_REPORT.md, manifest.json)
+# stay tracked either way. Uncomment if the paper does not need call-level
+# reproducibility evidence.
+# experiments/**/calls/
+# experiments/**/writer_checkpoints/
+# experiments/**/rejections/

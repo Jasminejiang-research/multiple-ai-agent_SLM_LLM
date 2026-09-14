@@ -1,0 +1,73 @@
+{
+  "version": "s5-llm-only-gemini-8192-authorization-v2",
+  "approved_at": "2026-09-07",
+  "approved": true,
+  "execution_branch": "llm_only_after_D_no_go",
+  "authorization_delta": "After the preserved v1 A smoke failed because Gemini thoughts consumed the 1800 response cap, the user approved raising each Gemini A/B/C physical-response max_output_tokens to 8192 and continuing S5.",
+  "output_change": {
+    "max_output_tokens_per_physical_response": 8192,
+    "applies_to_provider": "gemini",
+    "applies_to_conditions": ["A", "B", "C"],
+    "prompt_changed": false,
+    "wire_changed": false,
+    "schema_changed": false,
+    "evaluation_rules_changed": false
+  },
+  "preserve_previous_failed_smoke": true,
+  "previous_failed_smoke": {
+    "path": "docs/final_sprint/s5-llm-only-v1/smoke_summary.json",
+    "sha256": "15d891309b7ae1f0e842da08f36a0c4a442bb948d3921ca38e64729ccc3d861c",
+    "requests": 2,
+    "total_tokens": 9410,
+    "cost_usd": 0.0106792,
+    "formal_eligible": false,
+    "overwrite": false
+  },
+  "preserve_planned_rows": 8,
+  "formal_conditions": ["A", "B", "C"],
+  "formal_run_count": 6,
+  "D_planned_rows": ["ai_education-D", "intelligent_ring-D"],
+  "D_row_state": "not_run_preflight_no_go",
+  "formal_Granite_calls": 0,
+  "best_effort_demo": {
+    "formal_eligible": false,
+    "c_minus_d_comparison_eligible": false
+  },
+  "confirmed_cases": {
+    "ai_education": {"case_specific_financial_values": 21},
+    "intelligent_ring": {"case_specific_financial_values": 27}
+  },
+  "comparison_policy": {
+    "reported": ["B-A", "C-B"],
+    "unavailable": {"C-D": "D_preflight_no_go"},
+    "success_subset_substitution": false
+  },
+  "smoke": {
+    "case_id": "ai_education",
+    "conditions": ["A", "B", "C"],
+    "formal_eligible": false,
+    "max_requests": 54,
+    "max_total_tokens": 480000,
+    "max_cost_usd": 1.2,
+    "paid_tools": false,
+    "rerun_policy": "fresh_v2_only; never overwrite v1"
+  },
+  "formal": {
+    "randomization_seed": 20260906,
+    "preserve_original_row_order": true,
+    "per_run": {"max_requests": 18, "max_total_tokens": 160000, "max_seconds": 3600},
+    "aggregate": {"max_requests": 108, "max_total_tokens": 960000, "max_cost_usd": 2.4},
+    "rerun_failed_or_unknown": false,
+    "overwrite_results": false
+  },
+  "combined_smoke_and_formal_max_tokens": 1440000,
+  "combined_smoke_and_formal_max_cost_usd": 3.6,
+  "prior_failed_smoke_cost_included_in_combined_usd_enforcement": true,
+  "stop_conditions": [
+    "Any fresh A/B/C smoke fails",
+    "Any post-smoke change is required to code, prompt, wire, schema, configuration, or evaluation rules",
+    "A request, token, time, formal-cost, smoke-cost, or combined-cost hard limit would be exceeded"
+  ],
+  "post_run_outputs": ["automatic metrics", "anonymous rating packet", "unjudged shared Gold Ledger candidates"],
+  "user_approval": "批准, 请继续实验S5."
+}
