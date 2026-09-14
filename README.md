@@ -1,4 +1,4 @@
-# Structured Proposal Generation with LLM and SLM Runtimes
+# Multiple AI Agent for Business-Plan Generation withGenerative AI
 
 This repository implements a research-oriented system for generating structured business proposals with cloud-hosted large language models (LLMs) and configurable small language model (SLM) runtimes. The product scope contains executed LLM pathways **A** and **B**, together with the complete SLM integration and preserved engineering evidence for planned condition **D**. Condition D reached real-model preflight but failed its feasibility gate; it was not executed as a formal, scored experiment.
 
